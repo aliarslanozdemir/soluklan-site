@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seans raporunu okumak — Soluklan</title>
+<meta name="description" content="Rapordaki her satırın ne anlama geldiği ve düşük çıkan bir ölçüm için ne yapman gerektiği.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Seans raporunu okumak — Soluklan">
+<meta property="og:description" content="Rapordaki her satırın ne anlama geldiği ve düşük çıkan bir ölçüm için ne yapman gerektiği.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/">Ana sayfa<i class="cizgi"></i></a>
+      <a href="/rehber/" aria-current="page">Rehber<i class="cizgi"></i></a>
+      <a href="/destek.html">Destek<i class="cizgi"></i></a>
+      <a href="/gizlilik.html">Gizlilik<i class="cizgi"></i></a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/rehber/konu/nasil-kullanilir.html">NASIL KULLANILIR</a></p>
+    <h1>Seans raporunu okumak</h1>
+    <p class="lede">Rapordaki her satırın ne anlama geldiği ve düşük çıkan bir ölçüm için ne yapman gerektiği.</p>
+    <p class="updated">7 dakikalık okuma</p>
+<p>Seans bitince gelen ekranın üstünde bir puan var, altında birkaç cümle. <strong>Ayrıntılı incele</strong>'ye basınca asıl bilgi açılıyor. Sırayla gidelim.</p>
+<h2>Üstteki puan</h2>
+<p>Yüz üzerinden. Yedi ayrı ölçümün ağırlıklı ortalaması.</p>
+<p>Bu sayı nefesinin "doğru" olup olmadığını ölçmüyor. Ölçtüğü tek şey <strong>ekrandaki tempoya ne kadar uyduğun</strong>. Düşük puan alıp çok iyi hissetmek de mümkün, tersi de.</p>
+<p>Mikrofonsuz seans yaptıysan puan hesaplanmıyor.</p>
+<h2>Ölçümler</h2>
+<p><strong>Süre.</strong> Ne kadar yaptığın ve ne kadar planladığın. Yarıda bıraktıysan burada görünüyor.</p>
+<p><strong>Tur sayısı.</strong> Kaç tam döngü tamamladın.</p>
+<p><strong>Duyulan veriş.</strong> "3 (hedef 4, zamanında 3)" gibi. Birinci sayı kaç veriş duyulduğu, ikincisi kaç veriş beklendiği, üçüncüsü bunların kaçının doğru zamanda geldiği.</p>
+<p>Duyulan veriş hedeften azsa iki sebebi olabilir: ya gerçekten bir turu kaçırdın ya da verişin duyulmayacak kadar sessizdi. İkincisini ayırt etmek için aşağıdaki teknik satırlara bak.</p>
+<p><strong>Duyulan alış.</strong> Alış verişten çok daha sessiz, duyulmaması olağan. Puandaki payı küçük.</p>
+<p><strong>Tutuş.</strong> Tutuş fazı olan tekniklerde kaç turda hava kaçmadı. Kaçak varsa çoğu zaman sebep tutuşu kilitlemeye çalışmak.</p>
+<p><strong>Tura yeniden başlama.</strong> Seans sırasında kaç kez tura baştan başladın.</p>
+<h2>Teknik satırlar</h2>
+<p>Bunlar İleri düzey arayüzde tam olarak görünüyor.</p>
+<p><strong>Alış seviyesi.</strong> Alışının kendi sessizliğine göre kaç desibel yükseldiği. Sıfıra yakınsa alış hiç duyulmamış demek.</p>
+<p><strong>Veriş tepe seviyesi.</strong> Verişinin en yüksek noktası ve odanın gürültü tabanı. "Tabanın 20 dB üstü (taban -66 dBFS)" gibi.</p>
+<p>Burası en işe yarar satır. <strong>Fark 10 dB'nin altındaysa</strong> verişin duyulmayacak kadar sessiz kalıyor demektir: cihazı yaklaştır. <strong>Fark 40 dB'yi geçiyorsa</strong> nefesi zorluyorsun demektir: bırak, itme.</p>
+<p><strong>Veriş içi dalgalanma.</strong> Veriş boyunca sesin ne kadar oynadığı. Küçük sayı düzgün bir veriş, büyük sayı kesik kesik ya da hırıltılı bir veriş demek.</p>
+<h2>Bileşenler</h2>
+<p>Puanı oluşturan yedi ölçüm, her biri yüz üzerinden. Hangisinin düşük olduğuna bakmak, ne üzerinde çalışacağını söylüyor.</p>
+<p><strong>Ritme uyum düşükse</strong> verişlerin daireden geç ya da erken başlıyor. Çözüm: dairenin küçülmeye başladığı anı bekle, saymaya çalışma.</p>
+<p><strong>Duyulan verişler düşükse</strong> ya bazı turları kaçırdın ya verişin duyulmuyor.</p>
+<p><strong>Veriş süresi düşükse</strong> verişin hedeften kısa ya da uzun. En sık sebebi baştan hızlı boşaltmak: ilk saniyede az ver, kalanını sona yay.</p>
+<p><strong>Verişin düzlüğü düşükse</strong> ses kesik kesik çıkıyor. Nefesi tek parça bırak.</p>
+<p><strong>Nefes sesi düşükse</strong> ya çok sessiz ya çok gürültülü veriyorsun. Yukarıdaki tepe seviyesi satırı hangisi olduğunu söylüyor.</p>
+<p><strong>Tamamlama düşükse</strong> seansı bitirmemişsin. Bir dahakine daha kısa bir süre seç.</p>
+<h2>Öneriler</h2>
+<p>Raporun altındaki cümleler ölçümlerden çıkıyor, rastgele değil. Aynı sorun birkaç seans üst üste çıkıyorsa üzerinde çalışmaya değer.</p>
+<p>Seansı birkaç kez duraklattıysan bununla ilgili ayrı bir not da çıkıyor.</p>
+<h2>Basit arayüzde ne görünüyor</h2>
+<p>Arayüz kademen Basit'se rapor tek bir cümleye iniyor. Bütün ölçümleri görmek istersen Ayarlar'dan <strong>Arayüz</strong>'ü Standart ya da İleri düzey yap.</p>
+    <p class="geri"><a href="/rehber/konu/nasil-kullanilir.html">&#8592; Nasıl kullanılır</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>Bunları da okuyabilirsin</h2><ul><li><a href="/rehber/uygulamadan-en-cok-verimi-almak.html"><strong>Uygulamadan en çok verimi almak</strong><span>Aynı uygulamayı iki kişi çok farklı verimle kullanıyor. Farkı yaratan on şey ve hepsinin nasıl yapıldığı.</span></a></li><li><a href="/rehber/ilk-seansin.html"><strong>İlk seansın: baştan sona</strong><span>Uygulamayı ilk açtığından ilk raporunu okuduğuna kadar her adım. Ne soruluyor, neden soruluyor ve nerede ne yapman gerekiyor.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/rehber/">Rehber</a>
+      <a href="/gizlilik.html">Gizlilik</a>
+      <a href="/destek.html">Destek</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,26 +1,434 @@
 <!doctype html>
-<html lang="tr"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Soluklan</title><link rel="stylesheet" href="style.css">
-<meta name="description" content="Soluklan — nefes ritmini takip eden rahatlama ve odaklanma egzersizi uygulaması."></head>
-<body><div class="wrap">
-<header><div class="logo">S</div><div><h1>Soluklan</h1><div class="sub">Nefesini dinleyen nefes koçu</div></div></header>
-<nav><a href="index.html">Soluklan</a> <a href="gizlilik.html" style="color:var(--muted)">Gizlilik</a> <a href="destek.html" style="color:var(--muted)">Destek</a></nav>
-<div class="card">
-<p><strong>Soluklan</strong>, nefesini gerçekten duyan bir nefes egzersizi uygulamasıdır. Daire büyürken al, küçülürken ver; uygulama mikrofonla ritmini takip eder ve seans sonunda ne kadar uyduğunu tek tek gösterir.</p>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soluklan — nefesini duyan nefes egzersizi uygulaması</title>
+<meta name="description" content="Mikrofonla nefes ritmini takip eden, seansını puanlayan iPhone ve iPad uygulaması. Rahatlama ve odaklanma egzersizi.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Soluklan — nefesini duyan nefes egzersizi uygulaması">
+<meta property="og:description" content="Mikrofonla nefes ritmini takip eden, seansını puanlayan iPhone ve iPad uygulaması. Rahatlama ve odaklanma egzersizi.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/" aria-current="page">Ana sayfa<i class="cizgi"></i></a>
+      <a href="/rehber/">Rehber<i class="cizgi"></i></a>
+      <a href="/destek.html">Destek<i class="cizgi"></i></a>
+      <a href="/gizlilik.html">Gizlilik<i class="cizgi"></i></a>
+    </nav>
+  </div>
+</header>
+<main>
+<div class="slaytlar">
+
+<section class="slayt hero" id="giris">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">İPHONE VE İPAD İÇİN</p>
+      <h1>Nefesini <em>duyan</em> bir nefes uygulaması.</h1>
+      <p class="lede">Çoğu uygulama zamanlayıcı çalıştırır. Soluklan mikrofonla verişini ve alışını dinler, ritme ne kadar uyduğunu seans sonunda tek tek gösterir.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://apps.apple.com/tr/app/id6801880838">App Store'dan indir</a>
+        <a class="btn btn-ghost" href="/rehber/">Rehbere göz at</a>
+      </div>
+      <p class="small" style="margin-top:1.25rem">Rahatlama ve odaklanma egzersizi. Tıbbi tanı, tedavi ya da tavsiye sunmaz.</p>
+    </div>
+    <figure class="ring" style="margin:0">
+      <i></i><i></i><i></i><b></b>
+      <figcaption>5,5 saniye al · 5,5 saniye ver</figcaption>
+    </figure>
+  </div>
+  <a class="kaydir" href="#olcum" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt vurgu-sahne" id="olcum">
+  <div class="prose">
+    <p class="eyebrow" style="justify-content:center">ÖLÇÜLEN ŞEY</p>
+    <h2>Nefesini duymayan bir uygulama sadece bir zamanlayıcıdır.</h2>
+    <p>Soluklan her turda verişinin ne zaman başladığını, ne kadar sürdüğünü ve sesinin ne kadar düzgün olduğunu ölçüyor. Seans bittiğinde elinde bir his değil, bir ölçüm oluyor.</p>
+<figure class="cizim dalga">
+  <svg viewBox="0 0 640 230" role="img" aria-label="Nefes sesinin ölçümü: gürültü tabanı, eşik çizgisi ve dört veriş tepesi">
+    <defs>
+      <linearGradient id="dg" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--breath)"/><stop offset="1" stop-color="var(--glow)"/>
+      </linearGradient>
+    </defs>
+    <line class="taban" x1="20" y1="186" x2="620" y2="186"/>
+    <line class="esik" x1="20" y1="126" x2="620" y2="126"/>
+    <text class="etiket" x="24" y="118">eşik</text>
+    <text class="etiket" x="24" y="204">gürültü tabanı</text>
+    <path class="ses" d="M20 186 L60 186 Q70 184 78 180 Q92 172 100 186 L118 186
+      Q150 186 158 96 Q166 60 176 96 Q188 186 210 186 L250 186
+      Q262 184 270 179 Q284 170 292 186 L308 186
+      Q340 186 348 88 Q356 52 366 88 Q378 186 400 186 L440 186
+      Q452 184 460 179 Q474 170 482 186 L498 186
+      Q530 186 538 104 Q546 68 556 104 Q568 186 590 186 L620 186"/>
+    <g class="veris-isaret">
+      <circle cx="167" cy="70" r="4"/><circle cx="357" cy="62" r="4"/><circle cx="547" cy="78" r="4"/>
+    </g>
+    <text class="etiket vurgu" x="150" y="46">veriş</text>
+  </svg>
+  <figcaption>Uygulama ses dosyası tutmuyor. Elinde yalnız bu çizgi var: her yirmi milisaniyede bir ölçülen ses düzeyi. Eşik odanın sessizliğine göre kuruluyor.</figcaption>
+</figure>
+  </div>
+  <a class="kaydir" href="#nasil" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt gorsel-sahne" id="nasil">
+  <div class="wrap ikili">
+   <div>
+    <p class="eyebrow">NASIL ÇALIŞIYOR</p>
+    <h2>Dinler, ölçer, söyler.</h2>
+    <ol class="steps" style="margin-top:2rem">
+      <li>
+        <div>
+          <h3>Daireyi izlersin</h3>
+          <p>Büyürken al, küçülürken ver. Teknik ne diyorsa daire onu yapar: tutuş varsa bekler, uzun veriş varsa yavaş küçülür.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Mikrofon nefesini duyar</h3>
+          <p>Sesten yalnız anlık ses düzeyi hesaplanır. Hangi turda geciktin, verişin ne kadar sürdü, sesi ne kadar düzgündü, tutuşta hava kaçtı mı — hepsi ölçülür.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Seans sonunda rapor gelir</h3>
+          <p>Yüz üzerinden bir puan, kısa bir başlık, iyi yaptığın yanlar ve birkaç somut öneri. İstersen bütün ölçümleri açıp tek tek okursun.</p>
+        </div>
+      </li>
+    </ol>
+   </div>
+   <figure class="cizim puan">
+  <svg viewBox="0 0 220 220" role="img" aria-label="Seans puanı halkası: yedi bileşen">
+    <defs>
+      <linearGradient id="pg" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--breath)"/><stop offset="1" stop-color="var(--glow)"/>
+      </linearGradient>
+    </defs>
+    <circle class="iz" cx="110" cy="110" r="86"/>
+    <circle class="dolu" cx="110" cy="110" r="86"/>
+    <text class="sayi" x="110" y="110">84</text>
+  </svg>
+  <figcaption>Puan tek bir ölçüm değil: ritme uyum, duyulan verişler, veriş süresi, alış, nefes sesi, verişin düzlüğü ve tamamlama birlikte hesaplanıyor.</figcaption>
+</figure>
+  </div>
+  <a class="kaydir" href="#teknikler" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt gorsel-sahne" id="teknikler">
+  <div class="wrap ikili">
+   <div>
+    <p class="eyebrow">TEKNİKLER</p>
+    <h2>On altı teknik, hepsi bilinen yöntemler.</h2>
+    <p class="lede">Koherent, Kutu, Üçgen, Derin ve Yavaş, Uzun Veriş, Fizyolojik İç Çekiş, 4-7-8, Büzük Dudak, Enerji, Arı, Okyanus, Dönüşümlü Burun, Sol Burun, Sağ Burun, Serinleten ve Kapalabhati.</p>
+    <p>Her birinin ne işe yaradığı, nasıl yapıldığı, sık yapılan hataları ve tek turluk uygulamalı bir denemesi var. Kanıtın zayıf olduğu yerlerde bunu açıkça yazıyoruz.</p>
+    
+    <p><a href="/rehber/konu/teknikler.html">Tekniklerin tamamı &#8594;</a></p>
+   </div>
+   <figure class="cizim ritim">
+  <ul>
+    <li>
+      <span class="ad">Koherent</span>
+      <span class="serit"><i class="al" style="flex:5.5"></i><i class="ver" style="flex:5.5"></i></span>
+      <span class="deger">5,5 · 5,5</span>
+    </li>
+    <li>
+      <span class="ad">Kutu</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:4"></i><i class="ver" style="flex:4"></i><i class="tut" style="flex:4"></i></span>
+      <span class="deger">4 · 4 · 4 · 4</span>
+    </li>
+    <li>
+      <span class="ad">Uzun Veriş</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:4"></i><i class="ver" style="flex:8"></i></span>
+      <span class="deger">4 · 4 · 8</span>
+    </li>
+    <li>
+      <span class="ad">4-7-8</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:7"></i><i class="ver" style="flex:8"></i></span>
+      <span class="deger">4 · 7 · 8</span>
+    </li>
+    <li>
+      <span class="ad">İç Çekiş</span>
+      <span class="serit"><i class="al" style="flex:2"></i><i class="tut" style="flex:1"></i><i class="al" style="flex:1.5"></i><i class="ver" style="flex:6"></i></span>
+      <span class="deger">2 · 1 · 1,5 · 6</span>
+    </li>
+  </ul>
+  <p class="anahtar"><span class="al"></span> alış <span class="tut"></span> tutuş <span class="ver"></span> veriş</p>
+</figure>
+  </div>
+  <a class="kaydir" href="#programlar" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt vurgu-sahne gorsel-sahne" id="programlar">
+  <div class="prose">
+    <p class="eyebrow" style="justify-content:center">PROGRAMLAR</p>
+    <h2>Tek seansın etkisi başka, bir ayın etkisi başka.</h2>
+    <p>Program kurduğunda her gün aynı tekniği aynı sürede yaparsın. Uygulama kaçıncı gündesin takip eder, kaçırmaya başlarsan uyarır. Bitince gün gün ne olduğunu döker: hangi günler aksadı, puanların nasıl gitti, hangi öneriler tekrarlandı.</p>
+<figure class="cizim takvim">
+  <div class="gunler" aria-hidden="true">
+    <span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="bos"></span><span class="dolu"></span>
+    <span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span>
+    <span class="dolu"></span><span class="dolu"></span><span class="bugun"></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <figcaption>Yirmi sekiz gün, günde beş dakika. Dolu günler yapılanlar, boş kalan gün aksayan. Bugün on yedinci gün.</figcaption>
+</figure>
+  </div>
+  <a class="kaydir" href="#aliskanlik" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt" id="aliskanlik">
+  <div class="wrap">
+    <p class="eyebrow">SÜRDÜRMEK</p>
+    <h2>Alışkanlık kurmayı kolaylaştırır.</h2>
+    <ul class="cards" style="margin-top:2rem">
+      <li class="card">
+        <h3>Seri ve kilometre taşları</h3>
+        <p>Üst üste kaç gün yaptığın takvimde işaretlenir. Hazır duraklar dışında kendi durağını da koyabilirsin.</p>
+      </li>
+      <li class="card">
+        <h3>Sana göre öneri</h3>
+        <p>Önerilen süre tek bir sayı değil, deneyimine ve son seanslarına göre değişen bir aralık. Teknik sırası da bugün ne yaptığına göre değişir.</p>
+      </li>
+      <li class="card">
+        <h3>Hatırlatıcılar senin elinde</h3>
+        <p>Hangi gün hangi saatte, günde en fazla kaç bildirim, sessiz saatler, tatil modu ve kendi yazdığın metinler.</p>
+      </li>
+    </ul>
+    <p style="margin-top:1.5rem"><a href="/rehber/konu/nasil-kullanilir.html">Ayrıntılı bilgi &#8594;</a></p>
+  </div>
+  <a class="kaydir" href="#platform" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt" id="gorunum">
+  <div class="wrap" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">GÖRÜNÜM</p>
+    <h2>Gün geçtikçe uygulama da değişiyor.</h2>
+    <p class="lede" style="margin-inline:auto;max-width:52ch">Zemin gün doğumundan batımına açık ve ferah, akşam sıcak turuncu, gece koyu ve yıldızlı. Güneşin saatleri cihazında hesaplanıyor — konum izni istenmiyor.</p>
+
+    <div class="gun-yolu" aria-hidden="true">
+      <svg viewBox="0 0 900 130" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="yay-g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--line)" stop-opacity="0"/>
+            <stop offset=".18" stop-color="var(--line)" stop-opacity="1"/>
+            <stop offset=".82" stop-color="var(--line)" stop-opacity="1"/>
+            <stop offset="1" stop-color="var(--line)" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="gunes-g"><stop offset="0" stop-color="#FFF6DC"/><stop offset=".6" stop-color="#FFC94F"/><stop offset="1" stop-color="#F0A038"/></radialGradient>
+        </defs>
+        <path class="yay" d="M20 126 Q450 -10 880 126"/>
+        <circle class="gunes" r="13" cx="0" cy="0"/>
+      </svg>
+    </div>
+
+    <ul class="temalar">
+      <li class="tema gunduz"><span class="pencere"></span><b>Gündüz</b></li>
+      <li class="tema aksam"><span class="pencere"></span><b>Akşam</b></li>
+      <li class="tema gece"><span class="pencere"><i class="kayan"></i></span><b>Gece</b></li>
+      <li class="tema kis"><span class="pencere"><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i></span><b>Kış</b></li>
+      <li class="tema ilkbahar"><span class="pencere"><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i></span><b>İlkbahar</b></li>
+      <li class="tema sonbahar"><span class="pencere"><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i></span><b>Sonbahar</b></li>
+    </ul>
+
+    <p class="small" style="margin-top:2rem">Yaz için ayrı bir zemin, yılbaşı ve bayram gibi özel günler için de ayrı görünümler var. Mevsim takvimden geliyor, internete bakılmıyor.</p>
+  </div>
+  <a class="kaydir" href="#platform" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt gorsel-sahne" id="platform">
+  <div class="prose" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">PLATFORM DESTEĞİ</p>
+    <h2>Telefonda da tablette de tam boy.</h2>
+    <p class="lede">Aynı uygulama, iPhone ve iPad'de kendi ölçüsüne göre kuruluyor. Tablette daire ekranın hakkını veriyor, raporlar geniş düzende açılıyor, yazılar ve boşluklar büyüyor.</p>
+    <div class="sahne3b">
+      <figure class="cihaz3b tablet">
+        <div class="govde">
+          <span class="kamera"></span>
+          <div class="ekran"><img src="/assets/gorseller/tablet-home.png" alt="Soluklan iPad'de: geniş düzende ana ekran" loading="lazy" width="827" height="1200"><span class="parlama"></span></div>
+        </div>
+      </figure>
+      <figure class="cihaz3b telefon">
+        <div class="govde">
+          <span class="ada"></span>
+          <div class="ekran"><img src="/assets/gorseller/telefon-sure_bandi.png" alt="Soluklan iPhone'da: süre kaydırıcısı ve önerilen aralık" loading="lazy" width="900" height="1950"><span class="parlama"></span></div>
+        </div>
+      </figure>
+    </div>
+    <p class="cihaz-adlari">iPad · iPhone</p>
+    <p class="small" style="margin-top:.9rem;margin-bottom:2.5rem">iOS 17 ve üzeri. Widget'lar, Canlı Etkinlik ve Dynamic Island desteklenen cihazlarda çalışır.</p>
+  </div>
+  <a class="kaydir" href="#rehber" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt" id="rehber">
+  <div class="prose">
+    <p class="eyebrow">REHBER</p>
+    <h2>Uygulamayı sonuna kadar kullan.</h2>
+    <p class="lede">Uygulamadan alacağın verimi yükseltmek için yazılmış kırk yazı.</p>
+    <p>İlk seansını nasıl yaparsın, raporunu nasıl okursun, nefesin duyulmuyorsa ne yaparsın, program nasıl kurulur, alışkanlık nasıl oturur. Her özelliğin ne işe yaradığı ve her tekniğin nasıl yapıldığı tek tek yazılı.</p>
+    <p><a href="/rehber/">Rehbere git &#8594;</a></p>
+  </div>
+  <a class="kaydir" href="#gizlilik" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt vurgu-sahne" id="gizlilik">
+  <div class="prose">
+    <p class="eyebrow" style="justify-content:center">GİZLİLİK</p>
+    <h2>Ses kaydedilmez.</h2>
+    <p>Mikrofon yalnız seans sırasında çalışır ve sesten yalnız anlık ses düzeyi hesaplanır. Seans özetlerin cihazında kalır. Reklam yok, izleme yok, üçüncü taraf analiz aracı yok.</p>
+    <p><a href="/gizlilik.html">Gizlilik politikası &#8594;</a></p>
+  </div>
+  <a class="kaydir" href="#kapanis" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt kapanis" id="kapanis">
+  <div class="parcaciklar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="prose">
+    <figure class="ring kucuk" style="margin:0 auto 2rem"><i></i><i></i><i></i><b></b></figure>
+    <h2>Bir seans iki dakika.</h2>
+    <p class="lede">Başlamak için bundan fazlası gerekmiyor.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-primary" href="https://apps.apple.com/tr/app/id6801880838">App Store'dan indir</a>
+    </div>
+    <div class="note" style="margin-top:2.5rem;text-align:start">
+      <p><strong>Soluklan tıbbi bir uygulama değildir.</strong> Tanı koymaz, tedavi etmez. Baş dönmesi, nefes darlığı ya da rahatsızlık hissedersen seansı bırak ve normal nefesine dön. Astım, kalp rahatsızlığı, hamilelik gibi durumlarda egzersizlere başlamadan önce hekimine danış.</p>
+    </div>
+  </div>
+</section>
+
 </div>
-<h2>Öne çıkanlar</h2>
-<ul>
-<li>Mikrofonla nefes takibi ve 100 üzerinden seans puanı</li>
-<li>On bir teknik: Koherent, Kutu, Üçgen, 4-7-8, Uzun Veriş, Fizyolojik İç Çekiş, Arı Nefesi ve diğerleri</li>
-<li>Her teknik için anlatım, sık yapılan hatalar ve tek turluk uygulamalı deneme</li>
-<li>Günlük seri, başarımlar, kişisel özet ve seans geçmişi</li>
-<li>Ana ekran ve kilit ekranı widget'ları, seans sırasında Canlı Etkinlik</li>
-<li>Güne, mevsime ve özel günlere göre değişen görünüm</li>
-</ul>
-<h2>Gizlilik</h2>
-<p>Ses kaydedilmez, mikrofon yalnız seans sırasında çalışır. Seans özetlerin cihazında kalır ve kendi iCloud hesabında eşitlenir. Reklam ve izleme yoktur. Ayrıntı için <a href="gizlilik.html">gizlilik politikası</a>.</p>
-<h2>Yardım</h2>
-<p>Soru ve önerilerin için <a href="destek.html">destek sayfası</a> ya da <a href="mailto:hakan@tall.tr">hakan@tall.tr</a>.</p>
-<footer>Soluklan · iOS · <a href="mailto:hakan@tall.tr">hakan@tall.tr</a><br>Bu uygulama tıbbi tanı, tedavi ya da tavsiye sunmaz.</footer>
-</div></body></html>
+
+<script>
+/* Aşağı ok: sayfa o slaytta bir süre durunca beliriyor, kaydırınca kayboluyor. */
+/* Sayfa içi bağlantılar yumuşak kaysın (kendiliğinden yumuşak kaydırma kapalı: sayfa
+   değişiminde "yukarı kaydırma" gibi görünüyordu). */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  var hedef = document.querySelector(a.getAttribute('href'));
+  if (!hedef) return;
+  e.preventDefault();
+  var yumusak = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  hedef.scrollIntoView({ behavior: yumusak ? 'smooth' : 'auto', block: 'start' });
+});
+
+(function () {
+  var BEKLEME = 3500;
+  var oklar = document.querySelectorAll('.kaydir');
+  if (!oklar.length) return;
+  var sayaclar = new WeakMap();
+
+  function gizle(ok) { ok.classList.remove('gorunur'); }
+
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      var ok = g.target.querySelector(':scope > .kaydir');
+      if (!ok) return;
+      clearTimeout(sayaclar.get(ok));
+      if (g.isIntersecting && g.intersectionRatio > 0.6) {
+        sayaclar.set(ok, setTimeout(function () { ok.classList.add('gorunur'); }, BEKLEME));
+      } else {
+        gizle(ok);
+      }
+    });
+  }, { threshold: [0, 0.6, 1] });
+
+  document.querySelectorAll('.slayt').forEach(function (s) { izleyici.observe(s); });
+
+  var kaydirmaSayac;
+  window.addEventListener('scroll', function () {
+    oklar.forEach(gizle);
+    clearTimeout(kaydirmaSayac);
+    kaydirmaSayac = setTimeout(function () {
+      document.querySelectorAll('.slayt').forEach(function (s) {
+        var k = s.getBoundingClientRect();
+        var ok = s.querySelector(':scope > .kaydir');
+        if (ok && k.top < window.innerHeight * 0.4 && k.bottom > window.innerHeight * 0.6) {
+          clearTimeout(sayaclar.get(ok));
+          sayaclar.set(ok, setTimeout(function () { ok.classList.add('gorunur'); }, BEKLEME));
+        }
+      });
+    }, 120);
+  }, { passive: true });
+})();
+</script>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/rehber/">Rehber</a>
+      <a href="/gizlilik.html">Gizlilik</a>
+      <a href="/destek.html">Destek</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+</script>
+</body>
+</html>

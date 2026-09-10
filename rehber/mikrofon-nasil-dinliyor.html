@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mikrofon nefesi nasıl duyuyor — Soluklan</title>
+<meta name="description" content="Ses kaydedilmiyorsa uygulama nefesi nasıl ölçüyor? Gürültü tabanı, ortama göre değişen eşik ve bir verişin başlangıcıyla bitişinin nasıl bulunduğu.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Mikrofon nefesi nasıl duyuyor — Soluklan">
+<meta property="og:description" content="Ses kaydedilmiyorsa uygulama nefesi nasıl ölçüyor? Gürültü tabanı, ortama göre değişen eşik ve bir verişin başlangıcıyla bitişinin nasıl bulunduğu.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/">Ana sayfa<i class="cizgi"></i></a>
+      <a href="/rehber/" aria-current="page">Rehber<i class="cizgi"></i></a>
+      <a href="/destek.html">Destek<i class="cizgi"></i></a>
+      <a href="/gizlilik.html">Gizlilik<i class="cizgi"></i></a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/rehber/konu/perde-arkasi.html">PERDE ARKASI</a></p>
+    <h1>Mikrofon nefesi nasıl duyuyor</h1>
+    <p class="lede">Ses kaydedilmiyorsa uygulama nefesi nasıl ölçüyor? Gürültü tabanı, ortama göre değişen eşik ve bir verişin başlangıcıyla bitişinin nasıl bulunduğu.</p>
+    <p class="updated">6 dakikalık okuma</p>
+<p>Uygulama sesi kaydetmiyor. Mikrofondan gelen ses akışı diske hiç yazılmıyor; her yirmi milisaniyede bir o anki <strong>ses şiddeti</strong> hesaplanıyor ve geriye yalnız bu sayı kalıyor. Yani uygulamanın elinde bir ses dosyası değil, bir sayı dizisi var: yükselip alçalan bir çizgi.</p>
+<p>Bütün ölçüm bu çizgi üzerinden yapılıyor.</p>
+<h2>Önce sessizlik ölçülüyor</h2>
+<p>Seans başlarken üç saniyelik bir dinleme var. Bu sürede odanın <strong>gürültü tabanı</strong> ölçülüyor: buzdolabının uğultusu, dışarıdaki trafik, cihazın kendi elektronik gürültüsü.</p>
+<p>Ortalama alınmıyor, o üç saniyenin <strong>en sessiz anlarına</strong> bakılıyor. Sebebi şu: kalibrasyon sırasında telefonu masaya koyman ya da birinin öksürmesi ortalamayı yukarı çekiyor ve bütün seans boyunca eşik yanlış kalıyordu. Gerçek bir kayıtta bu on dört desibellik hataya yol açmıştı.</p>
+<p>Taban seans boyunca da güncelleniyor. Ortam sessizleşirse eşik aşağı iniyor, gürültü artarsa yukarı çıkıyor — ama sınırlı ölçüde, yoksa gürültülü bir ortamda uygulama kendi kendine sağırlaşır.</p>
+<h2>Eşik mutlak değil, tabana göre</h2>
+<p>Bir sesin "veriş" sayılması için belli bir desibeli aşması gerekmiyor. <strong>Tabanın belli bir miktar üstüne</strong> çıkması gerekiyor. Sessiz bir odada bu eşik alçak, gürültülü bir kafede yüksek.</p>
+<p>Eşiğin ne kadar üstünde olacağı tekniğe göre değişiyor. Ağızdan verilen bir nefes (uzun veriş, büzük dudak) yüksek çıkıyor. Burundan verilen sakin bir nefes (koherent, kutu) çok daha alçak. Tek burun deliğinden verilen nefes hepsinin en alçağı. Her teknik kendi eşiğiyle dinleniyor, hepsine aynı çubuğu koymak burun tekniklerini duyulmaz yapardı.</p>
+<h2>Bir verişin başı ve sonu</h2>
+<p>Ham ses şiddeti çok titrek, doğrudan kullanılamıyor. Önce yumuşatılıyor — her yeni ölçüm bir öncekiyle karıştırılıyor, böylece tek bir tıkırtı verişe dönüşmüyor.</p>
+<p>Yumuşatılmış çizgi eşiği geçtiğinde veriş başlıyor. Bitmesi için iki koşuldan biri yetiyor: çizgi eşiğin altına inip orada üçte bir saniye kalmalı, ya da verişin kendi tepesinden belli bir miktar aşağı düşmeli. İkinci koşul olmasa duyulur bir alış verişi uzatıyor, iki nefes tek nefes gibi ölçülüyordu.</p>
+<p>Çok kısa olaylar atılıyor. Bunun için yumuşatılmış çizgiye değil ham ölçüme bakılıyor: yumuşatma kısa bir tıkırtıyı uzatıyor ve olduğundan uzun gösteriyor.</p>
+<h2>Sessiz oda ve tablet meselesi</h2>
+<p>Eşiklerin tabana göre olması çoğu durumda işe yarıyor ama bir tuzağı var: taban gerçekten çok düşükse, göreli eşik aşırı hassaslaşıyor ve odadaki her çıtırtı veriş sayılabiliyor. Bu yüzden tabanın inebileceği bir alt sınır var.</p>
+<p>Bu sınır bir süre gereğinden yüksekti. Bir tablet kaydında gerçek gürültü tabanı çok daha aşağıda ölçüldü; sınır tabanı olduğundan yüksek varsaydığı için verişin payı eriyor ve hiçbir şey duyulmuyordu. Kişi tabletin bir karış önünde nefes verirken uygulama "cihazı yaklaştır" diyordu.</p>
+<p>Sınır yirmi bir gerçek kayıtla yeniden tarandı ve indirildi: yakalanan veriş sayısı arttı, yanlış algılama sayısı değişmedi. Bu tür kararlar tahminle değil, elimizdeki kayıtlarla veriliyor — ses örneği paylaşımının tek işi bu.</p>
+<h2>Hızlı nefesler ayrı iş</h2>
+<p>Bu yöntemin bir sınırı var: bir verişin bittiğini anlamak için ondan sonra kısa bir sessizlik gerekiyor. Saniyede birden hızlı nefes verilen bir teknikte o sessizlik hiç oluşmuyor.</p>
+<p>O yüzden Kapalabhati ayrı bir yolla ölçülüyor. Verişleri tek tek ayırmaya çalışmak yerine ses çizgisinin <strong>tepe yaptığı anlar</strong> sayılıyor, aralarındaki düzenliliğe bakılıyor. Sayaç, bir tepe kapandıktan sonra çizginin eşiğin altına inmesini bekliyor — bu koşul olmadan her verişi iki kez sayıyordu.</p>
+    <p class="geri"><a href="/rehber/konu/perde-arkasi.html">&#8592; Perde arkası</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>Bunları da okuyabilirsin</h2><ul><li><a href="/rehber/kaniti-nasil-okuyoruz.html"><strong>Kanıtı nasıl okuyoruz</strong><span>Nefes çalışmalarının çoğu küçük, kontrolsüz ve kısa. Uygulamada hangi cümleyi neye dayanarak yazdığımız ve neyi bilerek yazmadığımız.</span></a></li><li><a href="/rehber/puan-nasil-hesaplaniyor.html"><strong>Bir seans nasıl puanlanıyor</strong><span>Yüz üzerinden verilen sayı yedi ayrı ölçümün ağırlıklı ortalaması. Hangi ölçüm ne kadar ağırlık taşıyor, neden öyle ve puanın söylemediği ne var.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/rehber/">Rehber</a>
+      <a href="/gizlilik.html">Gizlilik</a>
+      <a href="/destek.html">Destek</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+</script>
+</body>
+</html>

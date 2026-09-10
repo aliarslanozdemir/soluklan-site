@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uygulamada üçüncü taraf yok — Soluklan</title>
+<meta name="description" content="Reklam ağı, analiz aracı, çökme raporlayıcı, hazır arayüz kütüphanesi — hiçbiri yok. Bunun ne anlama geldiği ve neye mal olduğu.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Uygulamada üçüncü taraf yok — Soluklan">
+<meta property="og:description" content="Reklam ağı, analiz aracı, çökme raporlayıcı, hazır arayüz kütüphanesi — hiçbiri yok. Bunun ne anlama geldiği ve neye mal olduğu.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/">Ana sayfa<i class="cizgi"></i></a>
+      <a href="/rehber/" aria-current="page">Rehber<i class="cizgi"></i></a>
+      <a href="/destek.html">Destek<i class="cizgi"></i></a>
+      <a href="/gizlilik.html">Gizlilik<i class="cizgi"></i></a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/rehber/konu/perde-arkasi.html">PERDE ARKASI</a></p>
+    <h1>Uygulamada üçüncü taraf yok</h1>
+    <p class="lede">Reklam ağı, analiz aracı, çökme raporlayıcı, hazır arayüz kütüphanesi — hiçbiri yok. Bunun ne anlama geldiği ve neye mal olduğu.</p>
+    <p class="updated">4 dakikalık okuma</p>
+<p>Çoğu iOS uygulaması içinde onlarca üçüncü taraf paket taşıyor: analiz araçları, reklam ağları, çökme raporlayıcılar, hazır arayüz kütüphaneleri.</p>
+<p>Soluklan'da bunların <strong>hiçbiri yok.</strong></p>
+<h2>Ne yok</h2>
+<p><strong>Reklam ağı yok.</strong> Uygulamada reklam gösterilmiyor ve reklam kimliği okunmuyor.</p>
+<p><strong>Analiz aracı yok.</strong> Hangi ekrana kaç kez girdiğini, hangi düğmeye bastığını, uygulamada ne kadar kaldığını izleyen bir araç bulunmuyor.</p>
+<p><strong>Çökme raporlayıcı yok.</strong> Uygulama çökerse bize otomatik bir rapor gitmiyor. Yalnız Apple'ın kendi sistemi üzerinden, senin cihaz ayarlarında izin verdiğin ölçüde bilgi geliyor.</p>
+<p><strong>Hazır kütüphane yok.</strong> Arayüz, ses işleme, çizimler, animasyonlar — hepsi Apple'ın kendi çatısıyla yazıldı.</p>
+<h2>Ne var</h2>
+<p>Uygulamanın ağ kullandığı iki yer var, ikisi de Apple'ın altyapısı:</p>
+<p><strong>iCloud.</strong> Seans geçmişin senin kendi hesabında eşitleniyor. Bu alana geliştirici olarak erişimimiz yok.</p>
+<p><strong>Anonim paylaşım.</strong> Sen açtıysan seans özetleri ve — ayrı izin verdiysen — ara sıra bir ses örneği geliyor. Bunlar Apple'ın CloudKit altyapısında duruyor.</p>
+<p>Bunların dışında uygulama hiçbir sunucuya bağlanmıyor. Bildirimler bile cihazda planlanıyor: bildirim göndermek için bir sunucumuz yok.</p>
+<h2>Neye mal oluyor</h2>
+<p>Bu tercihin bedeli var, saklamayalım.</p>
+<p><strong>Daha az bilgi.</strong> Hangi özelliğin kullanıldığını, insanların nerede takıldığını, hangi ekranda vazgeçtiğini bilmiyoruz. Anonim paylaşımı açan kullanıcıların seans özetleri elimizdeki tek veri.</p>
+<p><strong>Daha yavaş hata bulma.</strong> Bir çökme olduğunda bunu ancak biri söylerse ya da Apple'ın raporlarında görürsek anlıyoruz.</p>
+<p><strong>Daha çok iş.</strong> Hazır bir kütüphaneyle bir günde yapılacak şey birkaç günde yazılıyor.</p>
+<h2>Neden yine de böyle</h2>
+<p>Uygulamanın işi nefesini dinlemek. Nefes sesi mikrofondan geçen bir veri ve bu verinin bulunduğu bir uygulamaya üçüncü taraf paketler koymak, o paketlerin ne yaptığına güvenmek demek.</p>
+<p>Gizlilik metninde "reklam yok, izleme yok, üçüncü taraf analiz aracı yok" yazıyorsa bunun kod tarafında karşılığı olması gerekiyor. Cümleyi yazmak kolay, cümleyi doğru tutmak paket eklememekle oluyor.</p>
+<h2>Nasıl doğrularsın</h2>
+<p>Bir uygulamanın hangi verileri topladığı App Store'daki gizlilik etiketinde yazıyor. Ayrıca iOS'un Ayarlar → Gizlilik ve Güvenlik → <strong>Uygulama Gizlilik Raporu</strong> özelliğini açarsan hangi uygulamanın hangi alan adlarına bağlandığını kendi cihazında görebilirsin.</p>
+    <p class="geri"><a href="/rehber/konu/perde-arkasi.html">&#8592; Perde arkası</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>Bunları da okuyabilirsin</h2><ul><li><a href="/rehber/kaniti-nasil-okuyoruz.html"><strong>Kanıtı nasıl okuyoruz</strong><span>Nefes çalışmalarının çoğu küçük, kontrolsüz ve kısa. Uygulamada hangi cümleyi neye dayanarak yazdığımız ve neyi bilerek yazmadığımız.</span></a></li><li><a href="/rehber/puan-nasil-hesaplaniyor.html"><strong>Bir seans nasıl puanlanıyor</strong><span>Yüz üzerinden verilen sayı yedi ayrı ölçümün ağırlıklı ortalaması. Hangi ölçüm ne kadar ağırlık taşıyor, neden öyle ve puanın söylemediği ne var.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/rehber/">Rehber</a>
+      <a href="/gizlilik.html">Gizlilik</a>
+      <a href="/destek.html">Destek</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+</script>
+</body>
+</html>
