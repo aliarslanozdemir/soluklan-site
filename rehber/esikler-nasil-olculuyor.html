@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eşikler gerçek kayıtlarla nasıl ölçülüyor — Soluklan</title>
+<meta name="description" content="Hangi sesin "veriş" sayılacağı tahminle değil, kullanıcılardan gelen gerçek ses örnekleriyle belirleniyor. Bu işin nasıl yürüdüğü.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Eşikler gerçek kayıtlarla nasıl ölçülüyor — Soluklan">
+<meta property="og:description" content="Hangi sesin "veriş" sayılacağı tahminle değil, kullanıcılardan gelen gerçek ses örnekleriyle belirleniyor. Bu işin nasıl yürüdüğü.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/">Ana sayfa<i class="cizgi"></i></a>
+      <a href="/rehber/" aria-current="page">Rehber<i class="cizgi"></i></a>
+      <a href="/destek.html">Destek<i class="cizgi"></i></a>
+      <a href="/gizlilik.html">Gizlilik<i class="cizgi"></i></a>
+    </nav>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/rehber/konu/perde-arkasi.html">PERDE ARKASI</a></p>
+    <h1>Eşikler gerçek kayıtlarla nasıl ölçülüyor</h1>
+    <p class="lede">Hangi sesin "veriş" sayılacağı tahminle değil, kullanıcılardan gelen gerçek ses örnekleriyle belirleniyor. Bu işin nasıl yürüdüğü.</p>
+    <p class="updated">5 dakikalık okuma</p>
+<p>Uygulamanın bir sesi veriş sayması için o sesin odanın sessizliğinden belli bir miktar yüksek olması gerekiyor. Peki o "belli miktar" nereden geliyor?</p>
+<p>Başta tahminden. Sonra ölçümden.</p>
+<h2>Neden tahminle başlıyor</h2>
+<p>Yeni bir teknik eklendiğinde elimizde o tekniğin tek bir kaydı bile olmuyor. Eşik, benzer tekniklerden devralınıyor: ağızdan verilen bir teknik varsa aynı ailedeki başka bir ağız tekniğinin değeri, burundan verilen bir teknikse burun ailesininki.</p>
+<p>Bu tahmin genelde kabaca doğru oluyor ama tam değil. Uygulamanın metni bunu saklamıyor — kaynağı olmayan değerlerde "ilk değerler, veri gelince ölçülecek" diye yazıyor.</p>
+<h2>Ölçüm nasıl yapılıyor</h2>
+<p>Anonim paylaşımı ve ses örneği paylaşımını açan kullanıcılardan ara sıra bir seansın sesi geliyor. Yanında da o seansın raporu ve ham zaman bilgisi: hedef verişlerin hangi saniyelerde beklendiği, uygulamanın hangi anlarda veriş algıladığı, gürültü tabanının kaç olduğu.</p>
+<p>Bu ikisi bir arada olunca ölçüm mümkün hâle geliyor. Ses dosyası uygulamanın kendi algılama kodundan geçiriliyor — aynı kod, aynı hesap — ama eşik değeri değiştirilerek. Sonra soruluyor: <strong>hangi eşikte kaç hedef veriş yakalandı ve kaç tane yanlış algılama oldu?</strong></p>
+<p>Sonuç bir tablo oluyor:</p>
+<div class="scroll-x"><table><thead><tr><th>eşik</th><th>yakalanan veriş</th><th>fazladan olay</th></tr></thead><tbody><tr><td>şimdiki</td><td>32/61</td><td>74</td></tr><tr><td>biraz alçak</td><td>35/61</td><td>74</td></tr><tr><td>daha alçak</td><td>35/61</td><td>74</td></tr></tbody></table></div>
+<p>Yakalama artıyor, yanlış algılama artmıyorsa eşik indiriliyor. İkisi birden artıyorsa dokunulmuyor.</p>
+<h2>Gerçek bir örnek</h2>
+<p>Uygulamada gürültü tabanının inebileceği bir alt sınır var: çok sessiz odalarda eşiklerin aşırı hassaslaşmasını engelliyor.</p>
+<p>Bir tablet kaydında gerçek gürültü tabanı bu sınırdan çok daha aşağıda ölçüldü. Sınır tabanı olduğundan yüksek varsaydığı için verişin payı eriyor ve hiçbir şey duyulmuyordu — kişi tabletin bir karış önünde nefes verirken uygulama "cihazı yaklaştır" diyordu.</p>
+<p>Yirmi bir gerçek kayıtla tarandı, sınır indirildi: yakalanan veriş sayısı arttı, yanlış algılama sayısı değişmedi. O seans tek başına dörtte sıfırdan dörtte ikiye çıktı.</p>
+<p>Bu tür bir düzeltme tahminle bulunamıyor. Kayıt olmadan sorunun varlığından bile haberimiz olmazdı.</p>
+<h2>Ses örneği paylaşımının tek işi bu</h2>
+<p>Gönderilen ses yalnız bunun için dinleniyor: nefes algılamasının doğruluğunu ölçmek. Başka bir amaçla kullanılmıyor, üçüncü taraflara verilmiyor, gönderildikten sonra cihazından siliniyor.</p>
+<p>Kapalıysa hiçbir seansta ses kaydedilmiyor. Uygulama bu izin olmadan da tamamen çalışıyor — yalnız yeni tekniklerin eşikleri daha uzun süre tahmin olarak kalıyor.</p>
+<h2>Hâlâ ölçülmemiş olanlar</h2>
+<p>Yazının yazıldığı tarihte bazı tekniklerin eşikleri hâlâ ilk değerleriyle çalışıyor: yeterli kayıt birikmedi. Bunlar biriktikçe aynı tarama yeniden yapılıyor ve değerler güncelleniyor.</p>
+<p>Yani uygulamanın ölçüm doğruluğu, kullananlarla birlikte artıyor.</p>
+    <p class="geri"><a href="/rehber/konu/perde-arkasi.html">&#8592; Perde arkası</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>Bunları da okuyabilirsin</h2><ul><li><a href="/rehber/kaniti-nasil-okuyoruz.html"><strong>Kanıtı nasıl okuyoruz</strong><span>Nefes çalışmalarının çoğu küçük, kontrolsüz ve kısa. Uygulamada hangi cümleyi neye dayanarak yazdığımız ve neyi bilerek yazmadığımız.</span></a></li><li><a href="/rehber/puan-nasil-hesaplaniyor.html"><strong>Bir seans nasıl puanlanıyor</strong><span>Yüz üzerinden verilen sayı yedi ayrı ölçümün ağırlıklı ortalaması. Hangi ölçüm ne kadar ağırlık taşıyor, neden öyle ve puanın söylemediği ne var.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/rehber/">Rehber</a>
+      <a href="/gizlilik.html">Gizlilik</a>
+      <a href="/destek.html">Destek</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+</script>
+</body>
+</html>
