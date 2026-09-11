@@ -920,12 +920,7 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 .tema.kis .kar:nth-child(7) { left: 78%; animation-delay: -6s;   }
 .tema.kis .kar:nth-child(8) { left: 88%; animation-delay: -7s;   width: 4px; height: 4px; }
 .tema.kis .kar:nth-child(9) { left: 96%; animation-delay: -8s;   }
-@keyframes kar-yag {
-  0%   { top: -8%;  transform: translateX(0);     opacity: 0; }
-  8%   { opacity: .95; }
-  92%  { opacity: .85; }
-  100% { top: 106%; transform: translateX(-12px); opacity: 0; }
-}
+
 
 /* Bahar ve sonbahar: çizilmiş yaprak. Eskiden yuvarlatılmış bir kutuydu, kaba duruyordu;
    artık maskeyle çizilen bir yaprak biçimi (Ali). */
@@ -948,14 +943,7 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 .tema .yaprak:nth-child(6) { left: 74%; animation-delay: -6.9s;  }
 .tema .yaprak:nth-child(7) { left: 85%; animation-delay: -8.3s;  }
 .tema .yaprak:nth-child(8) { left: 94%; animation-delay: -9.7s;  }
-@keyframes yaprak-suzul {
-  0%   { top: -8%;  transform: translateX(0)      rotate(0);      opacity: 0; }
-  8%   { opacity: 1; }
-  35%  {             transform: translateX(-9px)  rotate(140deg); }
-  65%  {             transform: translateX(7px)   rotate(250deg); }
-  92%  { opacity: .9; }
-  100% { top: 106%; transform: translateX(-4px)  rotate(400deg); opacity: 0; }
-}
+
 
 @media (prefers-reduced-motion: reduce) {
   .tema .kar, .tema .yaprak, .tema .kayan { animation: none; }
@@ -1122,3 +1110,62 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 .tema.kis .kar:nth-child(3n+1) { animation-duration: 8.4s; }
 .tema.kis .kar:nth-child(3n+2) { animation-duration: 9.6s; }
 .tema.kis .kar:nth-child(3n+3) { animation-duration: 10.3s; }
+
+/* ======================================================================
+   Süzülme hareketi de uygulamadan alındı (Theme.swift, `ParticleLayer`).
+   Orada iniş çizgisel, yatay kayma sinüs (`sin(t*0.4+faz)`), takla sürekli
+   (`rot = t*0.45`) ve şeklin genişliği `|cos|` ile daralıp açılıyor —
+   taçyaprakta 0,45'in, yaprakta 0,25'in altına inmiyor. Aynı oranlar burada
+   da kullanılıyor; tek fark süre, çünkü kutu ekrandan çok daha kısa.
+   ====================================================================== */
+@keyframes yaprak-suzul {
+  0.00% { top: -8.00%; transform: translateX(0.00px) rotate(0.0deg) scaleX(1.000); opacity: 0; }
+  7.69% { top: 0.77%; transform: translateX(5.11px) rotate(31.8deg) scaleX(0.716); opacity: 1; }
+  15.38% { top: 9.54%; transform: translateX(8.42px) rotate(63.7deg) scaleX(0.450); opacity: 1; }
+  23.08% { top: 18.31%; transform: translateX(8.74px) rotate(95.5deg) scaleX(0.681); opacity: 1; }
+  30.77% { top: 27.08%; transform: translateX(5.97px) rotate(127.4deg) scaleX(0.999); opacity: 1; }
+  38.46% { top: 35.85%; transform: translateX(1.08px) rotate(159.2deg) scaleX(0.749); opacity: 1; }
+  46.15% { top: 44.62%; transform: translateX(-4.18px) rotate(191.1deg) scaleX(0.450); opacity: 1; }
+  53.85% { top: 53.38%; transform: translateX(-7.97px) rotate(222.9deg) scaleX(0.645); opacity: 1; }
+  61.54% { top: 62.15%; transform: translateX(-8.93px) rotate(254.8deg) scaleX(0.995); opacity: 1; }
+  69.23% { top: 70.92%; transform: translateX(-6.74px) rotate(286.6deg) scaleX(0.780); opacity: 1; }
+  76.92% { top: 79.69%; transform: translateX(-2.15px) rotate(318.5deg) scaleX(0.450); opacity: 1; }
+  84.62% { top: 88.46%; transform: translateX(3.19px) rotate(350.3deg) scaleX(0.607); opacity: 1; }
+  92.31% { top: 97.23%; transform: translateX(7.41px) rotate(382.2deg) scaleX(0.990); opacity: .9; }
+  100.00% { top: 106.00%; transform: translateX(9.00px) rotate(414.0deg) scaleX(0.809); opacity: 0; }
+}
+
+@keyframes sonyaprak-suzul {
+  0.00% { top: -8.00%; transform: translateX(0.00px) rotate(0.0deg) scaleX(1.000); opacity: 0; }
+  7.69% { top: 0.77%; transform: translateX(4.22px) rotate(36.0deg) scaleX(0.607); opacity: 1; }
+  15.38% { top: 9.54%; transform: translateX(7.17px) rotate(72.0deg) scaleX(0.263); opacity: 1; }
+  23.08% { top: 18.31%; transform: translateX(7.96px) rotate(108.0deg) scaleX(0.926); opacity: 1; }
+  30.77% { top: 27.08%; transform: translateX(6.36px) rotate(144.0deg) scaleX(0.862); opacity: 1; }
+  38.46% { top: 35.85%; transform: translateX(2.84px) rotate(180.0deg) scaleX(0.250); opacity: 1; }
+  46.15% { top: 44.62%; transform: translateX(-1.54px) rotate(216.0deg) scaleX(0.716); opacity: 1; }
+  53.85% { top: 53.38%; transform: translateX(-5.45px) rotate(252.0deg) scaleX(0.990); opacity: 1; }
+  61.54% { top: 62.15%; transform: translateX(-7.72px) rotate(288.0deg) scaleX(0.486); opacity: 1; }
+  69.23% { top: 70.92%; transform: translateX(-7.67px) rotate(324.0deg) scaleX(0.399); opacity: 1; }
+  76.92% { top: 79.69%; transform: translateX(-5.30px) rotate(360.0deg) scaleX(0.971); opacity: 1; }
+  84.62% { top: 88.46%; transform: translateX(-1.35px) rotate(396.0deg) scaleX(0.780); opacity: 1; }
+  92.31% { top: 97.23%; transform: translateX(3.02px) rotate(432.0deg) scaleX(0.250); opacity: .9; }
+  100.00% { top: 106.00%; transform: translateX(6.47px) rotate(468.0deg) scaleX(0.809); opacity: 0; }
+}
+
+@keyframes kar-yag {
+  0.00% { top: -8.00%; transform: translateX(0.00px); opacity: 0; }
+  7.69% { top: 0.77%; transform: translateX(3.69px); opacity: 1; }
+  15.38% { top: 9.54%; transform: translateX(6.27px); opacity: 1; }
+  23.08% { top: 18.31%; transform: translateX(6.97px); opacity: 1; }
+  30.77% { top: 27.08%; transform: translateX(5.56px); opacity: 1; }
+  38.46% { top: 35.85%; transform: translateX(2.48px); opacity: 1; }
+  46.15% { top: 44.62%; transform: translateX(-1.34px); opacity: 1; }
+  53.85% { top: 53.38%; transform: translateX(-4.77px); opacity: 1; }
+  61.54% { top: 62.15%; transform: translateX(-6.75px); opacity: 1; }
+  69.23% { top: 70.92%; transform: translateX(-6.71px); opacity: 1; }
+  76.92% { top: 79.69%; transform: translateX(-4.64px); opacity: 1; }
+  84.62% { top: 88.46%; transform: translateX(-1.18px); opacity: 1; }
+  92.31% { top: 97.23%; transform: translateX(2.64px); opacity: .85; }
+  100.00% { top: 106.00%; transform: translateX(5.66px); opacity: 0; }
+}
+.tema.sonbahar .yaprak { animation-name: sonyaprak-suzul; }
