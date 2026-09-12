@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="x-default" href="https://soluklan.app/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/soluklan.css?v=2c2042b1">
+<link rel="stylesheet" href="/assets/soluklan.css?v=619d5265">
 </head>
 <body>
 <header class="site">
@@ -396,6 +396,52 @@ document.addEventListener('click', function (e) {
     }, 120);
   }, { passive: true });
 })();
+
+/* Mouse wheel: one notch, one slide — but with a smooth transition.
+   With `scroll-snap-type: mandatory`, one wheel notch produces a large, abrupt delta and
+   the browser looked like it was teleporting to the slide. A trackpad produces small
+   deltas, so native snap already feels right there; only **large** deltas are taken over
+   and small ones are left to the browser. It never engages on touch devices. */
+(function () {
+  var kok = document.documentElement;
+  if (!document.querySelector('.slaytlar')) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var kilit = false;
+
+  function duraklar() {
+    var d = [].slice.call(document.querySelectorAll('.slayt'));
+    var alt = document.querySelector('footer.site');
+    if (alt) d.push(alt);
+    return d;
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) return;                                   // zoom
+    var buyuk = e.deltaMode !== 0 || Math.abs(e.deltaY) >= 50;
+    if (!buyuk) return;                                      // trackpad: native snap
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    if (kilit) { e.preventDefault(); return; }
+
+    var hedefler = duraklar();
+    var y = window.scrollY;
+    var simdi = 0;
+    hedefler.forEach(function (h, i) { if (h.offsetTop <= y + 4) simdi = i; });
+    var sonraki = hedefler[simdi + (e.deltaY > 0 ? 1 : -1)];
+    if (!sonraki) return;                                    // at the ends, leave it to the browser
+
+    e.preventDefault();
+    kilit = true;
+    kok.classList.add('kaydiriyor');                         // keep snap out of the way
+    var sonMu = sonraki.tagName === 'FOOTER';
+    sonraki.scrollIntoView({ behavior: 'smooth', block: sonMu ? 'end' : 'start' });
+    setTimeout(function () {
+      kilit = false;
+      kok.classList.remove('kaydiriyor');
+    }, 640);
+  }, { passive: false });
+})();
 </script>
 
 </main>
@@ -452,28 +498,23 @@ document.addEventListener('click', function (e) {
   });
 })();
 
-/* Üst menü: aşağı kaydırınca çekiliyor, yukarı kaydırınca geri geliyor. Sayfanın en
-   üstündeyken her zaman açık. (Ali, 11 Eylül 2026) */
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
 (function () {
   var kok = document.documentElement;
-  var sonY = window.scrollY, birikim = 0, bekleyen = false;
-  var ESIK = 60;                 // küçük titremeler menüyü oynatmasın
+  var bekleyen = false;
   function bak() {
     bekleyen = false;
-    var y = Math.max(0, window.scrollY);
-    var fark = y - sonY;
-    sonY = y;
-    if (y < 120) { kok.classList.remove('menu-gizli'); birikim = 0; return; }
-    if ((fark > 0) !== (birikim > 0)) birikim = 0;
-    birikim += fark;
-    if (birikim > ESIK) { kok.classList.add('menu-gizli'); birikim = 0; }
-    else if (birikim < -ESIK) { kok.classList.remove('menu-gizli'); birikim = 0; }
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
   }
   window.addEventListener('scroll', function () {
     if (bekleyen) return;
     bekleyen = true;
     requestAnimationFrame(bak);
   }, { passive: true });
+  bak();
 })();
 
 /* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
