@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/paylasilan-veriyle-ne-yapiyoruz.html">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+<link rel="stylesheet" href="/assets/soluklan.css?v=2c2042b1">
 </head>
 <body>
 <header class="site">
@@ -58,13 +58,13 @@
 <p>There are two separate switches under Settings → Privacy: the <strong>anonymous usage summary</strong> and the <strong>occasional audio sample</strong>. Both arrive off, both are asked about separately, and both can be turned off whenever you like. If you didn't turn them on, nothing in this article happens on your device.</p>
 <p>If you did, here is what becomes of a record, step by step.</p>
 <h2>What arrives</h2>
-<p>With the anonymous summary on, this is what comes when a session ends: the technique, the length, the score and the report's numerical values — exhales heard, average exhale length, rhythm match, peak sound level, noise floor and so on. Alongside them, the device type and the app version.</p>
-<p>What doesn't come: your name, your email address, your identity, your location, your <strong>health answers</strong> from the intake, and your age. These never leave your device.</p>
+<p>With the anonymous summary on, this is what comes when a session ends: the technique, the length, the score and the report's numerical values — exhales heard, average exhale length, rhythm match, peak sound level, <a href="/en/guide/how-the-microphone-listens.html">noise floor</a> and so on. Alongside them, the device type and the app version.</p>
+<p>What doesn't come: your name, your email address, your identity, your location, your <strong>health answers</strong> from the <a href="/en/guide/your-first-session.html">intake</a>, and your age. These never leave your device.</p>
 <p>The audio sample is a separate permission. With it on, the audio of at most five sessions a day is sent in compressed form and <strong>deleted from the device the moment it is sent</strong>. With the permission off, no audio is written to disk in any session.</p>
 <h2>What we do</h2>
 <p>As records build up we ask one question: <strong>is what the app says true?</strong></p>
 <p><strong>We look for contradictions.</strong> Numbers that don't agree within the same session are the quickest clue. A report saying "every exhale was heard" while the same session shows an average exhale length of zero means something is wrong somewhere. We scan for these inconsistencies between measurements.</p>
-<p><strong>We look at the distribution.</strong> When a value clusters outside what we expect, that is usually a threshold error. A real example: exhale peak levels were coming out systematically low on one family of devices — it turned out that on tablets the microphone sits on the device's far edge.</p>
+<p><strong>We look at the distribution.</strong> When a value clusters outside what we expect, that is usually a <a href="/en/guide/measuring-the-thresholds.html">threshold</a> error. A real example: exhale peak levels were coming out systematically low on one family of devices — it turned out that on tablets the microphone sits on the device's far edge.</p>
 <p><strong>We compare against the audio sample.</strong> When we have both the sound itself and the numbers the app produced for it, we can measure whether the detection is genuinely right: is there really an exhale where the app said "exhale", and did it miss any breaths. That is the audio sample's only job.</p>
 <p><strong>We fix it and test again.</strong> For every error we find, a test is written first — one that reproduces the error, based on the real recording we have. Then the fix is made. If the test passes, the change goes into the next release; if it doesn't, the fix was wrong.</p>
 <h2>What we don't do</h2>

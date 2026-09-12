@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+<link rel="stylesheet" href="/assets/soluklan.css?v=2c2042b1">
 </head>
 <body>
 <header class="site">
@@ -61,14 +61,14 @@
 <p>Yeni bir teknik eklendiğinde elimizde o tekniğin tek bir kaydı bile olmuyor. Eşik, benzer tekniklerden devralınıyor: ağızdan verilen bir teknik varsa aynı ailedeki başka bir ağız tekniğinin değeri, burundan verilen bir teknikse burun ailesininki.</p>
 <p>Bu tahmin genelde kabaca doğru oluyor ama tam değil. Uygulamanın metni bunu saklamıyor — kaynağı olmayan değerlerde "ilk değerler, veri gelince ölçülecek" diye yazıyor.</p>
 <h2>Ölçüm nasıl yapılıyor</h2>
-<p>Anonim paylaşımı ve ses örneği paylaşımını açan kullanıcılardan ara sıra bir seansın sesi geliyor. Yanında da o seansın raporu ve ham zaman bilgisi: hedef verişlerin hangi saniyelerde beklendiği, uygulamanın hangi anlarda veriş algıladığı, gürültü tabanının kaç olduğu.</p>
+<p>Anonim paylaşımı ve <a href="/rehber/paylasilan-veriyle-ne-yapiyoruz.html">ses örneği</a> paylaşımını açan kullanıcılardan ara sıra bir seansın sesi geliyor. Yanında da o seansın raporu ve ham zaman bilgisi: hedef verişlerin hangi saniyelerde beklendiği, uygulamanın hangi anlarda veriş algıladığı, gürültü tabanının kaç olduğu.</p>
 <p>Bu ikisi bir arada olunca ölçüm mümkün hâle geliyor. Ses dosyası uygulamanın kendi algılama kodundan geçiriliyor — aynı kod, aynı hesap — ama eşik değeri değiştirilerek. Sonra soruluyor: <strong>hangi eşikte kaç hedef veriş yakalandı ve kaç tane yanlış algılama oldu?</strong></p>
 <p>Sonuç bir tablo oluyor:</p>
 <div class="scroll-x"><table><thead><tr><th>eşik</th><th>yakalanan veriş</th><th>fazladan olay</th></tr></thead><tbody><tr><td>şimdiki</td><td>32/61</td><td>74</td></tr><tr><td>biraz alçak</td><td>35/61</td><td>74</td></tr><tr><td>daha alçak</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>Yakalama artıyor, yanlış algılama artmıyorsa eşik indiriliyor. İkisi birden artıyorsa dokunulmuyor.</p>
 <h2>Gerçek bir örnek</h2>
 <p>Uygulamada gürültü tabanının inebileceği bir alt sınır var: çok sessiz odalarda eşiklerin aşırı hassaslaşmasını engelliyor.</p>
-<p>Bir tablet kaydında gerçek gürültü tabanı bu sınırdan çok daha aşağıda ölçüldü. Sınır tabanı olduğundan yüksek varsaydığı için verişin payı eriyor ve hiçbir şey duyulmuyordu — kişi tabletin bir karış önünde nefes verirken uygulama "cihazı yaklaştır" diyordu.</p>
+<p>Bir tablet kaydında gerçek <a href="/rehber/mikrofon-nasil-dinliyor.html">gürültü tabanı</a> bu sınırdan çok daha aşağıda ölçüldü. Sınır tabanı olduğundan yüksek varsaydığı için verişin payı eriyor ve hiçbir şey duyulmuyordu — kişi tabletin bir karış önünde nefes verirken uygulama "cihazı yaklaştır" diyordu.</p>
 <p>Yirmi bir gerçek kayıtla tarandı, sınır indirildi: yakalanan veriş sayısı arttı, yanlış algılama sayısı değişmedi. O seans tek başına dörtte sıfırdan dörtte ikiye çıktı.</p>
 <p>Bu tür bir düzeltme tahminle bulunamıyor. Kayıt olmadan sorunun varlığından bile haberimiz olmazdı.</p>
 <h2>Ses örneği paylaşımının tek işi bu</h2>

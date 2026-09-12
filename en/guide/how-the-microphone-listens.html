@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+<link rel="stylesheet" href="/assets/soluklan.css?v=2c2042b1">
 </head>
 <body>
 <header class="site">
@@ -59,7 +59,7 @@
 <p>Every measurement is made from that line.</p>
 <h2>Silence is measured first</h2>
 <p>There is a three-second listen at the start of a session. In that time the room's <strong>noise floor</strong> is measured: the hum of the fridge, traffic outside, the device's own electronic noise.</p>
-<p>It isn't an average — it looks at the <strong>quietest moments</strong> of those three seconds. The reason: putting the phone down on a table during calibration, or someone coughing, pulls the average up and leaves the threshold wrong for the whole session. In one real recording this caused a fourteen-decibel error.</p>
+<p>It isn't an average — it looks at the <strong>quietest moments</strong> of those three seconds. The reason: putting the phone down on a table during calibration, or someone coughing, pulls the average up and leaves the <a href="/en/guide/measuring-the-thresholds.html">threshold</a> wrong for the whole session. In one real recording this caused a fourteen-decibel error.</p>
 <p>The floor is updated during the session too. If the room goes quieter the threshold comes down; if noise rises it goes up — but only within limits, otherwise the app would deafen itself in a noisy room.</p>
 <h2>The threshold isn't absolute, it is relative to the floor</h2>
 <p>For a sound to count as an "exhale" it doesn't have to pass a particular decibel level. It has to rise <strong>a certain amount above the floor</strong>. In a quiet room that threshold is low; in a noisy café it is high.</p>
@@ -71,10 +71,10 @@
 <h2>The quiet room and the tablet problem</h2>
 <p>Thresholds being relative to the floor works in most cases, but it has a trap: if the floor really is very low, the relative threshold becomes over-sensitive and every creak in the room can count as an exhale. So there is a lower bound on how far the floor can go.</p>
 <p>That bound was too high for a while. In one tablet recording the real noise floor measured far lower; because the bound assumed the floor was higher than it was, the exhale's margin melted away and nothing was heard at all. Someone breathing out a hand's width from the tablet was being told to "bring the device closer".</p>
-<p>The bound was rescanned against twenty-one real recordings and lowered: the number of exhales caught went up and the number of false detections didn't change. Decisions like this are made from the recordings we have, not from guesswork — that is the only job audio sample sharing does.</p>
+<p>The bound was rescanned against twenty-one real recordings and lowered: the number of exhales caught went up and the number of false detections didn't change. Decisions like this are made from the recordings we have, not from guesswork — that is the only job <a href="/en/guide/what-we-do-with-shared-data.html">audio sample</a> sharing does.</p>
 <h2>Fast breathing is a separate job</h2>
 <p>This method has a limit: telling that an exhale has ended needs a short silence afterwards. In a technique breathing out faster than once a second, that silence never appears.</p>
-<p>So Kapalabhati is measured a different way. Rather than trying to separate the exhales one by one, the app counts the <strong>moments when the sound line peaks</strong> and looks at how regular the gaps are. The counter waits for the line to fall below the threshold after a peak closes — without that condition it was counting every exhale twice.</p>
+<p>So <a href="/en/guide/kapalabhati.html">Kapalabhati</a> is measured a different way. Rather than trying to separate the exhales one by one, the app counts the <strong>moments when the sound line peaks</strong> and looks at how regular the gaps are. The counter waits for the line to fall below the threshold after a peak closes — without that condition it was counting every exhale twice.</p>
     <p class="geri"><a href="/en/guide/topic/behind-the-scenes.html">&#8592; Behind the scenes</a></p>
   </div>
 </article>
