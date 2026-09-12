@@ -86,6 +86,7 @@
    bağlantılar ana sayfadaki küçük betikle yumuşatılıyor. */
 html { -webkit-text-size-adjust: 100%; }
 
+html { overflow-x: clip; }          /* yatay kaydırmayı kapatır, dikey kaydırmaya dokunmaz */
 body {
   margin: 0;
   background: var(--bg);
@@ -146,7 +147,7 @@ header.site { position: sticky; }
   .dil-sec .kure { width: 1.2rem; height: 1.2rem; }
 }
 nav.site { margin-inline-start: auto; display: flex; gap: clamp(.75rem, 2vw, 1.5rem); font-size: .95rem; }
-nav.site a { position: relative; color: var(--ink-2); text-decoration: none; padding: .35rem 0 .45rem; transition: color .18s ease; }
+nav.site a { position: relative; color: var(--ink-2); text-decoration: none; padding: .35rem 0 .45rem; transition: color .18s ease; white-space: nowrap; }
 nav.site a:hover, nav.site a:focus-visible { color: var(--ink); }
 nav.site a[aria-current="page"] { color: var(--ink); }
 nav.site { position: relative; }
@@ -443,17 +444,27 @@ details.sss-tumu > .faq { margin-top: .5rem; }
 
 /* Kaydırma kabı sayfanın kendisi: `scroll-snap-type` `.slaytlar`ta işe yaramıyordu, çünkü
    o kutunun kendi kaydırması yok. Yalnız ana sayfada geçerli olsun diye `:has()` ile. */
-html:has(.slaytlar) { scroll-snap-type: y mandatory; }
+/* `mandatory` + `scroll-snap-stop: always` iki yerde birden batıyordu: telefonda her
+   savurma tek slaytta kilitleniyor, farede tekerleğin tek tıkı büyük bir delta ürettiği
+   için slayt **bir anda** atlıyordu (Ali, 12 Eylül 2026 — "touchpadle düzgün, tekerlekle
+   atlıyor"). `proximity` ile kaydırma serbest akıyor, parmak/tekerlek durduğunda en yakın
+   slayta yumuşakça oturuyor. */
+html:has(.slaytlar) { scroll-snap-type: y proximity; }
 /* Ok'a basınca yapılan yumuşak kaydırma boyunca snap kapalı: açıkken kaydırmayı yarıda
    kesip geri çekiyordu (telefonda görülen hata, 11 Eylül 2026). */
 html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
+/* Alt bilgi slayt değil, o yüzden snap noktası yoktu: sayfa sonuna inince en son slayta
+   geri çekiliyordu ve alt bilgiye bakılamıyordu (Ali, 12 Eylül 2026). Kendi durağı oldu. */
+html:has(.slaytlar) footer.site { scroll-snap-align: end; }
 .slayt {
   min-height: 100svh;
   display: grid;
-  align-content: center;
+  /* `safe center`: içerik slayttan uzunsa ortalama iki yöne birden taşıyor ve alt taraf
+     ok'un ayrılmış alanına giriyordu — ok bazen yazının içinde kalıyordu (Ali, 12 Eylül
+     2026). `safe` ile taşma yalnız aşağı doğru oluyor, ok'un yeri hep aynı kalıyor. */
+  align-content: safe center;
   position: relative;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   padding-block: clamp(4rem, 9vh, 6rem) clamp(5.5rem, 12vh, 8rem);
   border-top: 0;
 }
@@ -471,7 +482,7 @@ html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
 
 /* --- Aşağı ok: sade, renksiz, yarı saydam, inip çıkıyor --- */
 .kaydir {
-  position: absolute; inset-inline: 0; bottom: clamp(1.5rem, 4vh, 2.75rem);
+  position: absolute; inset-inline: 0; bottom: clamp(1.5rem, 4vh, 2.75rem); z-index: 3;
   margin-inline: auto; width: 2.75rem; height: 2.75rem;
   display: grid; place-items: center;
   color: currentColor; opacity: 0; pointer-events: none;
@@ -823,26 +834,33 @@ html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
    Hepsi CSS ve SVG; dışarıdan görsel indirilmiyor.
    ====================================================================== */
 
-/* --- Yavaşça gezinen renkli ışıklar --- */
+/* --- Yavaşça gezinen renkli ışıklar ---
+   Eskiden her slaytın kendi ışık çifti vardı: süreleri farklı olduğu için slayt
+   sınırlarında parlaklık atlıyordu ("zemin tek parça değil, eklenmiş gibi" — Ali,
+   12 Eylül 2026) ve `inset: -10% -20%` ile yanlara taşıp telefonda yatay kaydırma
+   açıyordu. Artık sayfanın arkasında **tek** sabit katman var: dikişsiz ve taşmasız. */
 .slayt { isolation: isolate; }
-.slayt::after {
-  content: ""; position: absolute; inset: -10% -20%; z-index: -1; pointer-events: none;
+html:has(.slaytlar) body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
-    radial-gradient(40% 44% at 20% 24%, color-mix(in srgb, var(--breath) 13%, transparent), transparent 72%),
-    radial-gradient(40% 44% at 80% 76%, color-mix(in srgb, var(--glow) 11%, transparent), transparent 72%);
-  opacity: .9;
+    radial-gradient(46% 38% at 18% 22%, color-mix(in srgb, var(--breath) 13%, transparent), transparent 70%),
+    radial-gradient(46% 38% at 82% 74%, color-mix(in srgb, var(--glow) 11%, transparent), transparent 70%);
   will-change: transform;
-  animation: isik-gez 34s ease-in-out infinite alternate;
+  animation: isik-gez 38s ease-in-out infinite alternate;
 }
-.slayt:nth-child(2n)::after { animation-duration: 41s; animation-delay: -8s; }
-.slayt:nth-child(3n)::after { animation-duration: 47s; animation-delay: -16s; }
 @keyframes isik-gez {
   0%   { transform: translate3d(0, 0, 0) scale(1); }
-  50%  { transform: translate3d(2.5%, -2%, 0) scale(1.07); }
+  50%  { transform: translate3d(2.5%, -2%, 0) scale(1.06); }
   100% { transform: translate3d(-2%, 2.5%, 0) scale(1.03); }
 }
-@media (prefers-reduced-motion: reduce) { .slayt::after { animation: none; } }
-.vurgu-sahne::after { opacity: 1; transform: scale(1.1); }
+@media (prefers-reduced-motion: reduce) { html:has(.slaytlar) body::before { animation: none; } }
+/* Vurgu sahnelerinde ışık güçleniyor. Kenarlara varmadan söndüğü için dikiş oluşmuyor
+   ve `inset: 0` olduğu için slaytın dışına taşmıyor. */
+.vurgu-sahne::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: radial-gradient(58% 48% at 50% 50%,
+    color-mix(in srgb, var(--glow) 9%, transparent), transparent 72%);
+}
 
 /* --- Gün kavisi: gündüz → akşam → gece --- */
 .gun-kavisi { max-width: 34rem; margin: 2.5rem auto 0; }
@@ -1111,11 +1129,17 @@ html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
   .cihaz3b.tablet.beliren { transform: rotateY(17deg) rotateX(5deg) rotateZ(-1.5deg) translateZ(-30px); }
   .cihaz3b.telefon.beliren { transform: rotateY(-13deg) rotateX(4deg) rotateZ(2deg) translateZ(60px); }
 }
+/* Telefonda cihazlar küçücük kalıyor ve ekran görüntüleri okunmuyordu (Ali, 12 Eylül
+   2026). Dar ekranda eğim kalkıyor, cihazlar büyüyor ve bindirme azalıyor: iki ekran da
+   karşıdan ve okunur duruyor. */
 @media (max-width: 40rem) {
-  .sahne3b { gap: 0; }
-  .cihaz3b.tablet { width: 58%; }
-  .cihaz3b.telefon { width: 32%; margin-inline-start: -2rem; }
+  .sahne3b { gap: 0; perspective: none; align-items: flex-end; }
+  .cihaz3b { transform: none !important; }
+  .cihaz3b.tablet { width: 62%; }
+  .cihaz3b.telefon { width: 38%; margin-inline-start: -1.25rem; margin-bottom: 0; }
   .cihaz3b figcaption { font-size: .75rem; margin-top: .7rem; }
+  .cihaz3b.telefon .govde::before,
+  .cihaz3b.telefon .govde::after { display: none; }   /* yan düğmeler bu boyutta lekeye dönüşüyor */
 }
 .cihaz-adlari { margin-top: 1.35rem; font-family: var(--data); font-size: .8rem; color: var(--ink-3); letter-spacing: .06em; }
 

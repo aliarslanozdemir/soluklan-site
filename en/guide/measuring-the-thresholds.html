@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+<link rel="stylesheet" href="/assets/soluklan.css?v=2c2042b1">
 </head>
 <body>
 <header class="site">
@@ -61,7 +61,7 @@
 <p>When a new technique is added, we don't have a single recording of it. The threshold is taken over from similar techniques: for a technique breathed out through the mouth, the value of another mouth technique in the same family; for a nasal one, the nasal family's.</p>
 <p>That guess is usually roughly right but not exact. The app's text doesn't hide it — where a value has no source, it says "initial values, to be measured when data arrives".</p>
 <h2>How the measurement is done</h2>
-<p>From users who turn on anonymous sharing and audio sample sharing, the audio of a session arrives now and then. With it comes that session's report and raw timing: at which seconds the target exhales were expected, at which moments the app detected an exhale, and what the noise floor was.</p>
+<p>From users who turn on anonymous sharing and <a href="/en/guide/what-we-do-with-shared-data.html">audio sample</a> sharing, the audio of a session arrives now and then. With it comes that session's report and raw timing: at which seconds the target exhales were expected, at which moments the app detected an exhale, and what the <a href="/en/guide/how-the-microphone-listens.html">noise floor</a> was.</p>
 <p>With those two together the measurement becomes possible. The audio file is run through the app's own detection code — the same code, the same arithmetic — but with the threshold changed. Then the question: <strong>at which threshold were how many target exhales caught, and how many false detections occurred?</strong></p>
 <p>The result is a table:</p>
 <div class="scroll-x"><table><thead><tr><th>threshold</th><th>exhales caught</th><th>extra events</th></tr></thead><tbody><tr><td>current</td><td>32/61</td><td>74</td></tr><tr><td>slightly lower</td><td>35/61</td><td>74</td></tr><tr><td>lower still</td><td>35/61</td><td>74</td></tr></tbody></table></div>
