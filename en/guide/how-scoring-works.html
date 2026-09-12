@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a session is scored — Soluklan</title>
+<meta name="description" content="The number out of a hundred is a weighted average of seven separate measurements. How much weight each carries, why, and what the score doesn't tell you.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="How a session is scored — Soluklan">
+<meta property="og:description" content="The number out of a hundred is a weighted average of seven separate measurements. How much weight each carries, why, and what the score doesn't tell you.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/puan-nasil-hesaplaniyor.html">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-scoring-works.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/puan-nasil-hesaplaniyor.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/en/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/en/">Home<i class="cizgi"></i></a>
+      <a href="/en/guide/" aria-current="page">Guide<i class="cizgi"></i></a>
+      <a href="/en/support.html">Support<i class="cizgi"></i></a>
+      <a href="/en/privacy.html">Privacy<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/rehber/puan-nasil-hesaplaniyor.html" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/guide/how-scoring-works.html" hreflang="en" lang="en" aria-current="true">English</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/en/guide/topic/behind-the-scenes.html">BEHIND THE SCENES</a></p>
+    <h1>How a session is scored</h1>
+    <p class="lede">The number out of a hundred is a weighted average of seven separate measurements. How much weight each carries, why, and what the score doesn't tell you.</p>
+    <p class="updated">7 min read</p>
+<p>The number on screen when a session ends doesn't measure one thing. There are seven separate measurements, each with its own weight, and on top of that a multiplier that affects them all.</p>
+<h2>The seven measurements</h2>
+<p><strong>Rhythm match.</strong> The gap between the moment the circle starts shrinking and the moment your exhale starts. Measured separately for each cycle, then averaged. This is the heaviest component, because it is the app's real job: settling your breath into a pace.</p>
+<p><strong>Exhales heard.</strong> How many of your target exhales were heard, and how many of those were genuinely near the target. Both are measured, because looking at the first alone would mislead: someone breathing out at random intervals would "catch" every target. An average that rewards both is taken: if one is low, the result comes out low.</p>
+<p><strong>Exhale length.</strong> How close the exhale is to the target length. Against a three-second target, breathing out for two seconds counts as the same amount of deviation as five.</p>
+<p><strong>Inhale and inhale length.</strong> The inhale is far quieter than the exhale, so it is measured separately with lower thresholds. Not hearing the inhale at all doesn't sink the score by itself: some people's nasal inhale really is silent.</p>
+<p><strong>Breath volume.</strong> How far the exhale rises above the noise floor. Both too quiet and too loud are penalised. Too loud isn't a good sign: it means forcing the breath, pushing instead of letting go.</p>
+<p><strong>Exhale smoothness.</strong> How much the sound level varies through the exhale. A steady "ffff" gives a small deviation; a broken or rasping exhale gives a large one.</p>
+<p><strong>Holds.</strong> In techniques with a hold phase, whether a sound was heard in that window. If it was, air escaped.</p>
+<p><strong>Completion.</strong> How much of the session you did.</p>
+<h2>The weights and the rhythm multiplier</h2>
+<p>The weights are fixed: rhythm match takes the largest share, followed by exhales heard and exhale length, with the inhale-related components carrying the smallest share.</p>
+<p>On top of the weighted average there is one more multiplier. If most of the exhales fell outside the target, the whole score is lowered proportionally: a session that never caught the rhythm can get at most half marks even if its other measurements are good. The reason is simple — a well-formed breath outside the circle is a well-formed breath, but not that session's breath.</p>
+<h2>Above ninety-three is written as a hundred</h2>
+<p>When the raw score passes ninety-three, the screen shows a hundred. That is a decision about presentation: writing ninety-six for someone who scored ninety-six was belittling a session that was, in fact, close to flawless.</p>
+<p>There is one exception. If any component has fallen below seventy, no rounding happens and the real score is written. The reason is consistency: a session where every exhale lasted half the target isn't a "hundred" even if the average comes out high. Writing "your exhales are short" in one part of the report while a hundred sits at the top would be the app contradicting itself.</p>
+<h2>What the score doesn't tell you</h2>
+<p>This number is not a measure of health. It doesn't measure whether your breathing is "correct", whether the exercise did you good, or whether you relaxed. The only thing it measures is how closely you followed the pace on screen.</p>
+<p>It is possible to get a low score and feel very good. It is possible to get a high score and feel nothing. Both are normal — the number is a feedback tool, not a grade.</p>
+<p>There is also the microphone's limit: the app measures the <strong>sound</strong> of your breath, not the breath itself. Someone who breathes out very quietly, sits far from the microphone or is in a noisy room can score lower than what they actually did. The technical measurements in the report exist so you can see this: the noise floor and the exhale peak level are written there.</p>
+    <p class="geri"><a href="/en/guide/topic/behind-the-scenes.html">&#8592; Behind the scenes</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>You might also read</h2><ul><li><a href="/en/guide/how-we-read-the-evidence.html"><strong>How we read the evidence</strong><span>Most breathing studies are small, uncontrolled and short. What each sentence in the app rests on, and what we deliberately don&#x27;t write.</span></a></li><li><a href="/en/guide/how-the-microphone-listens.html"><strong>How the microphone hears your breath</strong><span>If audio isn&#x27;t recorded, how does the app measure your breath? The noise floor, a threshold that moves with the room, and how the start and end of an exhale are found.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/en/guide/">Guide</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/support.html">Support</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: aşağı kaydırınca çekiliyor, yukarı kaydırınca geri geliyor. Sayfanın en
+   üstündeyken her zaman açık. (Ali, 11 Eylül 2026) */
+(function () {
+  var kok = document.documentElement;
+  var sonY = window.scrollY, birikim = 0, bekleyen = false;
+  var ESIK = 60;                 // küçük titremeler menüyü oynatmasın
+  function bak() {
+    bekleyen = false;
+    var y = Math.max(0, window.scrollY);
+    var fark = y - sonY;
+    sonY = y;
+    if (y < 120) { kok.classList.remove('menu-gizli'); birikim = 0; return; }
+    if ((fark > 0) !== (birikim > 0)) birikim = 0;
+    birikim += fark;
+    if (birikim > ESIK) { kok.classList.add('menu-gizli'); birikim = 0; }
+    else if (birikim < -ESIK) { kok.classList.remove('menu-gizli'); birikim = 0; }
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>

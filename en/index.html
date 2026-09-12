@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soluklan — the breathing app that hears your breath</title>
+<meta name="description" content="An iPhone and iPad app that follows your breathing rhythm through the microphone and scores your session. A relaxation and focus exercise.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Soluklan — the breathing app that hears your breath">
+<meta property="og:description" content="An iPhone and iPad app that follows your breathing rhythm through the microphone and scores your session. A relaxation and focus exercise.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/en/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/en/" aria-current="page">Home<i class="cizgi"></i></a>
+      <a href="/en/guide/">Guide<i class="cizgi"></i></a>
+      <a href="/en/support.html">Support<i class="cizgi"></i></a>
+      <a href="/en/privacy.html">Privacy<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/" hreflang="en" lang="en" aria-current="true">English</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<div class="slaytlar">
+
+<section class="slayt hero" id="giris">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">FOR IPHONE AND IPAD</p>
+      <h1>An app that <em>hears</em> your breath.</h1>
+      <p class="lede">Most apps run a timer. Soluklan listens to your exhale and your inhale through the microphone, and shows you cycle by cycle how closely you kept to the rhythm.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6801880838">Download on the App Store</a>
+        <a class="btn btn-ghost" href="/en/guide/">Browse the guide</a>
+      </div>
+      <p class="small" style="margin-top:1.25rem">A relaxation and focus exercise. It does not offer medical diagnosis, treatment or advice.</p>
+    </div>
+    <figure class="ring" style="margin:0">
+      <i></i><i></i><i></i><b></b>
+      <figcaption>5.5 seconds in · 5.5 seconds out</figcaption>
+    </figure>
+  </div>
+  <a class="kaydir" href="#olcum" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt vurgu-sahne" id="olcum">
+  <div class="prose beliren">
+    <p class="eyebrow" style="justify-content:center">WHAT IS MEASURED</p>
+    <h2>An app that can't hear your breath is only a timer.</h2>
+    <p>In every cycle Soluklan measures when your exhale began, how long it lasted and how steady its sound was. When the session ends you are left with a measurement, not an impression.</p>
+<figure class="cizim dalga beliren gorsel">
+  <svg viewBox="0 0 640 230" role="img" aria-label="Measuring the sound of a breath: noise floor, threshold line and four exhale peaks">
+    <defs>
+      <linearGradient id="dg" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--breath)"/><stop offset="1" stop-color="var(--glow)"/>
+      </linearGradient>
+    </defs>
+    <line class="taban" x1="20" y1="186" x2="620" y2="186"/>
+    <line class="esik" x1="20" y1="126" x2="620" y2="126"/>
+    <text class="etiket" x="24" y="118">threshold</text>
+    <text class="etiket" x="24" y="204">noise floor</text>
+    <path class="ses" d="M20 186 L60 186 Q70 184 78 180 Q92 172 100 186 L118 186
+      Q150 186 158 96 Q166 60 176 96 Q188 186 210 186 L250 186
+      Q262 184 270 179 Q284 170 292 186 L308 186
+      Q340 186 348 88 Q356 52 366 88 Q378 186 400 186 L440 186
+      Q452 184 460 179 Q474 170 482 186 L498 186
+      Q530 186 538 104 Q546 68 556 104 Q568 186 590 186 L620 186"/>
+    <g class="veris-isaret">
+      <circle cx="167" cy="70" r="4"/><circle cx="357" cy="62" r="4"/><circle cx="547" cy="78" r="4"/>
+    </g>
+    <text class="etiket vurgu" x="150" y="46">exhale</text>
+  </svg>
+  <figcaption>The app keeps no audio file. All it has is this line: the sound level, measured every twenty milliseconds. The threshold is set from how quiet the room is.</figcaption>
+</figure>
+  </div>
+  <a class="kaydir" href="#nasil" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt gorsel-sahne" id="nasil">
+  <div class="wrap ikili">
+   <div>
+    <p class="eyebrow">HOW IT WORKS</p>
+    <h2>It listens, measures and tells you.</h2>
+    <ol class="steps" style="margin-top:2rem">
+      <li>
+        <div>
+          <h3>You follow the circle</h3>
+          <p>Breathe in as it grows, out as it shrinks. The circle does whatever the technique says: it waits if there is a hold, and shrinks slowly if the exhale is long.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>The microphone hears your breath</h3>
+          <p>Only the instant sound level is worked out from the audio. Which cycle you were late on, how long your exhale lasted, how steady its sound was, whether air escaped during a hold — all of it is measured.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>A report arrives at the end</h3>
+          <p>A score out of a hundred, a short headline, what you did well and a few concrete suggestions. If you want, you can open every measurement and read them one by one.</p>
+        </div>
+      </li>
+    </ol>
+   </div>
+   <figure class="cizim puan beliren gorsel">
+  <svg viewBox="0 0 220 220" role="img" aria-label="Session score ring: seven components">
+    <defs>
+      <linearGradient id="pg" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--breath)"/><stop offset="1" stop-color="var(--glow)"/>
+      </linearGradient>
+    </defs>
+    <circle class="iz" cx="110" cy="110" r="86"/>
+    <circle class="dolu" cx="110" cy="110" r="86"/>
+    <text class="sayi" x="110" y="110">84</text>
+  </svg>
+  <figcaption>The score isn't a single measurement: rhythm match, exhales heard, exhale length, inhale, breath volume, how smooth the exhale was and completion are worked out together.</figcaption>
+</figure>
+  </div>
+  <a class="kaydir" href="#teknikler" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt gorsel-sahne" id="teknikler">
+  <div class="wrap ikili">
+   <div>
+    <p class="eyebrow">TECHNIQUES</p>
+    <h2>Sixteen techniques, all well-known methods.</h2>
+    <p class="lede">Coherent, Box, Triangle, Deep and Slow, Extended Exhale, Physiological Sigh, 4-7-8, Pursed Lip, Energizing, Humming Bee, Ocean, Alternate Nostril, Left Nostril, Right Nostril, Cooling and Kapalabhati.</p>
+    <p>Each one comes with what it is good for, how to do it, the mistakes people make and a single guided round to try. Where the evidence is thin, we say so plainly.</p>
+
+    <p><a href="/en/guide/topic/techniques.html">All the techniques &#8594;</a></p>
+   </div>
+   <figure class="cizim ritim beliren gorsel">
+  <ul>
+    <li>
+      <span class="ad">Coherent</span>
+      <span class="serit"><i class="al" style="flex:5.5"></i><i class="ver" style="flex:5.5"></i></span>
+      <span class="deger">5.5 · 5.5</span>
+    </li>
+    <li>
+      <span class="ad">Box</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:4"></i><i class="ver" style="flex:4"></i><i class="tut" style="flex:4"></i></span>
+      <span class="deger">4 · 4 · 4 · 4</span>
+    </li>
+    <li>
+      <span class="ad">Extended Exhale</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:4"></i><i class="ver" style="flex:8"></i></span>
+      <span class="deger">4 · 4 · 8</span>
+    </li>
+    <li>
+      <span class="ad">4-7-8</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:7"></i><i class="ver" style="flex:8"></i></span>
+      <span class="deger">4 · 7 · 8</span>
+    </li>
+    <li>
+      <span class="ad">Sigh</span>
+      <span class="serit"><i class="al" style="flex:2"></i><i class="tut" style="flex:1"></i><i class="al" style="flex:1.5"></i><i class="ver" style="flex:6"></i></span>
+      <span class="deger">2 · 1 · 1.5 · 6</span>
+    </li>
+  </ul>
+  <p class="anahtar"><span class="al"></span> inhale <span class="tut"></span> hold <span class="ver"></span> exhale</p>
+</figure>
+  </div>
+  <a class="kaydir" href="#programlar" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt vurgu-sahne gorsel-sahne" id="programlar">
+  <div class="prose beliren">
+    <p class="eyebrow" style="justify-content:center">PROGRAMS</p>
+    <h2>One session is one thing; a month is another.</h2>
+    <p>Set up a program and you do the same technique for the same length every day. The app keeps track of which day you are on and warns you if you start missing. When it ends it lays out day by day what happened: which days slipped, how your scores moved, which suggestions kept coming back.</p>
+<figure class="cizim takvim beliren gorsel">
+  <div class="gunler" aria-hidden="true">
+    <span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="bos"></span><span class="dolu"></span>
+    <span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span>
+    <span class="dolu"></span><span class="dolu"></span><span class="bugun"></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <figcaption>Twenty-eight days, five minutes a day. Filled days are the ones you did, the empty one slipped. Today is day seventeen.</figcaption>
+</figure>
+  </div>
+  <a class="kaydir" href="#aliskanlik" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt" id="aliskanlik">
+  <div class="wrap beliren">
+    <p class="eyebrow">KEEPING IT UP</p>
+    <h2>It makes the habit easier.</h2>
+    <ul class="cards" style="margin-top:2rem">
+      <li class="card kart-bagli beliren">
+        <h3><a href="/en/guide/streak-and-milestones.html">Streak and milestones</a></h3>
+        <p>How many days in a row you practised is marked on the calendar. There are stops along the way — three days, a week, two weeks, a month — and the app celebrates each one you reach. Next to these ready-made stops you can set your own: say “forty days” and that gets marked on the calendar too.</p>
+      </li>
+      <li class="card kart-bagli beliren">
+        <h3><a href="/en/guide/how-suggestions-work.html">Suggestions made for you</a></h3>
+        <p>The suggested length isn't a single number but a range that moves with your experience and your recent sessions. The order of the techniques changes with what you have already done today.</p>
+      </li>
+      <li class="card kart-bagli beliren">
+        <h3><a href="/en/guide/reminders-and-notifications.html">Reminders are yours to set</a></h3>
+        <p>Which day at which time, how many a day at most, quiet hours, holiday mode and reminder texts you write yourself.</p>
+      </li>
+    </ul>
+    <p style="margin-top:1.5rem"><a href="/en/guide/topic/how-to-use-it.html">More detail &#8594;</a></p>
+  </div>
+  <a class="kaydir" href="#platform" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt" id="gorunum">
+  <div class="wrap beliren" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">THE LOOK</p>
+    <h2>The app changes as the day goes by.</h2>
+    <p class="lede" style="margin-inline:auto;max-width:52ch">The background is light and open from sunrise to sunset, warm orange in the evening, dark and starry at night. Sunrise and sunset are worked out on your device — no location permission is asked for.</p>
+
+    <div class="gun-yolu" aria-hidden="true">
+      <svg viewBox="0 0 900 130" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="yay-g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--line)" stop-opacity="0"/>
+            <stop offset=".18" stop-color="var(--line)" stop-opacity="1"/>
+            <stop offset=".82" stop-color="var(--line)" stop-opacity="1"/>
+            <stop offset="1" stop-color="var(--line)" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="gunes-g"><stop offset="0" stop-color="#FFF6DC"/><stop offset=".6" stop-color="#FFC94F"/><stop offset="1" stop-color="#F0A038"/></radialGradient>
+        </defs>
+        <path class="yay" d="M20 126 Q450 -10 880 126"/>
+        <circle class="gunes" r="13" cx="0" cy="0"/>
+      </svg>
+    </div>
+
+    <ul class="temalar">
+      <li class="tema gunduz"><span class="pencere"></span><b>Day</b></li>
+      <li class="tema aksam"><span class="pencere"></span><b>Evening</b></li>
+      <li class="tema gece"><span class="pencere"><i class="kayan"></i></span><b>Night</b></li>
+      <li class="tema kis"><span class="pencere"><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i></span><b>Winter</b></li>
+      <li class="tema ilkbahar"><span class="pencere"><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i></span><b>Spring</b></li>
+      <li class="tema sonbahar"><span class="pencere"><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i></span><b>Autumn</b></li>
+    </ul>
+
+    <p class="small" style="margin-top:2rem">Summer has a background of its own, and special days like New Year get their own looks. The season comes from the calendar; nothing is fetched from the internet.</p>
+  </div>
+  <a class="kaydir" href="#platform" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt gorsel-sahne" id="platform">
+  <div class="prose beliren" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">PLATFORM SUPPORT</p>
+    <h2>Full size on the phone and on the tablet.</h2>
+    <p class="lede">If you like a big screen, there is a tablet version too. The same app lays itself out to fit both iPhone and iPad. All your data syncs between the two devices: your session history, your streak, your achievements and your settings travel in your own iCloud account, so a session you did on the phone is marked on the tablet as well.</p>
+    <div class="sahne3b">
+      <figure class="cihaz3b tablet beliren">
+        <div class="govde">
+          <span class="kamera"></span>
+          <div class="ekran"><img src="/assets/gorseller/tablet-home.png" alt="Soluklan on iPad: the home screen in a wide layout" loading="lazy" width="827" height="1200"><span class="parlama"></span></div>
+        </div>
+      </figure>
+      <figure class="cihaz3b telefon beliren">
+        <div class="govde">
+          <span class="ada"></span>
+          <div class="ekran"><img src="/assets/gorseller/telefon-sure_bandi.png" alt="Soluklan on iPhone: the length slider and the suggested range" loading="lazy" width="414" height="900"><span class="parlama"></span></div>
+        </div>
+      </figure>
+    </div>
+    <p class="cihaz-adlari">iPad · iPhone</p>
+    <p class="small" style="margin-top:.9rem;margin-bottom:2.5rem">iOS 17 and later. Widgets, Live Activity and the Dynamic Island work on the devices that support them.</p>
+  </div>
+  <a class="kaydir" href="#rehber" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt" id="rehber">
+  <div class="prose beliren">
+    <p class="eyebrow">GUIDE</p>
+    <h2>Use the app to the full.</h2>
+    <p class="lede">Forty articles written to help you get more out of it.</p>
+    <p>How to do your first session, how to read your report, what to do if your breath isn't being heard, how to set up a program, how the habit settles in. What every feature does and how every technique is performed, written out one by one.</p>
+    <p><a href="/en/guide/">Go to the guide &#8594;</a></p>
+  </div>
+  <a class="kaydir" href="#gizlilik" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt vurgu-sahne" id="gizlilik">
+  <div class="prose beliren">
+    <p class="eyebrow" style="justify-content:center">PRIVACY</p>
+    <h2>Audio is never recorded.</h2>
+    <p>The microphone runs only during a session and only the instant sound level is worked out from it. Your session summaries stay on your device. No ads, no tracking, no third-party analytics.</p>
+    <p><a href="/en/privacy.html">Privacy policy &#8594;</a></p>
+  </div>
+  <a class="kaydir" href="#kapanis" aria-label="Scroll down"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+</section>
+
+<section class="slayt kapanis" id="kapanis">
+  <div class="parcaciklar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="prose">
+    <figure class="ring kucuk" style="margin:0 auto 2rem"><i></i><i></i><i></i><b></b></figure>
+    <h2>A session is two minutes.</h2>
+    <p class="lede">You don't need more than that to start.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6801880838">Download on the App Store</a>
+    </div>
+    <div class="note" style="margin-top:2.5rem;text-align:start">
+      <p><strong>Soluklan is not a medical app.</strong> It does not diagnose or treat. If you feel dizzy, short of breath or unwell, stop the session and go back to your normal breathing. With asthma, a heart condition, pregnancy or similar, talk to your doctor before starting any exercise.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+<script>
+/* The down arrow appears after a pause on a slide and hides on scroll. */
+/* In-page links scroll smoothly (automatic smooth scrolling is off: on page
+   changes it looked like the page was jumping upwards). */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  var hedef = document.querySelector(a.getAttribute('href'));
+  if (!hedef) return;
+  e.preventDefault();
+  var yumusak = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* On phones, tapping the arrow scrolled a little then bounced back: smooth scrolling
+     and `scroll-snap-type: y mandatory` fight each other — snap pulls the scroll back to
+     the nearest slide before the motion finishes. Snap is switched off for the duration of
+     the scroll and switched back on when it ends. */
+  var kok = document.documentElement;
+  kok.classList.add('kaydiriyor');
+  hedef.scrollIntoView({ behavior: yumusak ? 'smooth' : 'auto', block: 'start' });
+  var bitti = function () { kok.classList.remove('kaydiriyor'); };
+  if ('onscrollend' in window) {
+    window.addEventListener('scrollend', bitti, { once: true });
+    setTimeout(bitti, 1200);            // safety net if scrollend never fires
+  } else {
+    setTimeout(bitti, 900);
+  }
+});
+
+(function () {
+  var BEKLEME = 3500;
+  var oklar = document.querySelectorAll('.kaydir');
+  if (!oklar.length) return;
+  var sayaclar = new WeakMap();
+
+  function gizle(ok) { ok.classList.remove('gorunur'); }
+
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      var ok = g.target.querySelector(':scope > .kaydir');
+      if (!ok) return;
+      clearTimeout(sayaclar.get(ok));
+      if (g.isIntersecting && g.intersectionRatio > 0.6) {
+        sayaclar.set(ok, setTimeout(function () { ok.classList.add('gorunur'); }, BEKLEME));
+      } else {
+        gizle(ok);
+      }
+    });
+  }, { threshold: [0, 0.6, 1] });
+
+  document.querySelectorAll('.slayt').forEach(function (s) { izleyici.observe(s); });
+
+  var kaydirmaSayac;
+  window.addEventListener('scroll', function () {
+    oklar.forEach(gizle);
+    clearTimeout(kaydirmaSayac);
+    kaydirmaSayac = setTimeout(function () {
+      document.querySelectorAll('.slayt').forEach(function (s) {
+        var k = s.getBoundingClientRect();
+        var ok = s.querySelector(':scope > .kaydir');
+        if (ok && k.top < window.innerHeight * 0.4 && k.bottom > window.innerHeight * 0.6) {
+          clearTimeout(sayaclar.get(ok));
+          sayaclar.set(ok, setTimeout(function () { ok.classList.add('gorunur'); }, BEKLEME));
+        }
+      });
+    }, 120);
+  }, { passive: true });
+})();
+</script>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/en/guide/">Guide</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/support.html">Support</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: aşağı kaydırınca çekiliyor, yukarı kaydırınca geri geliyor. Sayfanın en
+   üstündeyken her zaman açık. (Ali, 11 Eylül 2026) */
+(function () {
+  var kok = document.documentElement;
+  var sonY = window.scrollY, birikim = 0, bekleyen = false;
+  var ESIK = 60;                 // küçük titremeler menüyü oynatmasın
+  function bak() {
+    bekleyen = false;
+    var y = Math.max(0, window.scrollY);
+    var fark = y - sonY;
+    sonY = y;
+    if (y < 120) { kok.classList.remove('menu-gizli'); birikim = 0; return; }
+    if ((fark > 0) !== (birikim > 0)) birikim = 0;
+    birikim += fark;
+    if (birikim > ESIK) { kok.classList.add('menu-gizli'); birikim = 0; }
+    else if (birikim < -ESIK) { kok.classList.remove('menu-gizli'); birikim = 0; }
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>
