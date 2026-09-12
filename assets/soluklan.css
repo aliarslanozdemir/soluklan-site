@@ -108,11 +108,19 @@ header.site {
 header.site .wrap { display: flex; align-items: center; gap: 1rem; min-height: 4.9rem; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: inherit; font-family: var(--display); font-weight: 600; letter-spacing: -.01em; font-size: 1.2rem; }
 .brand svg { width: 2.4rem; height: 2.4rem; display: block; }
-/* Aşağı kaydırırken menü çekiliyor, yukarı kaydırınca geri geliyor: okurken yer kaplamasın
-   ama bir el hareketiyle geri gelsin (Ali, 11 Eylül 2026). */
-header.site { transition: transform .28s cubic-bezier(.32,.72,0,1); will-change: transform; }
-html.menu-gizli header.site { transform: translateY(-102%); }
-@media (prefers-reduced-motion: reduce) { header.site { transition: none; } }
+/* Aşağı kaydırınca menü **küçülüyor**, yukarı dönünce büyüyor. Önce tamamen gizleniyordu
+   ama yukarı kaydırınca geri gelmiyordu (yön birikimine bakan mantık sunum sayfasındaki
+   sıçramalı kaydırmada şaşıyordu) ve Ali gizlenmesinden vazgeçti: tek eşik, tek sınıf. */
+header.site .wrap,
+.brand, .brand svg, nav.site { transition: all .24s cubic-bezier(.32,.72,0,1); }
+html.menu-kucuk header.site .wrap { min-height: 3.35rem; }
+html.menu-kucuk .brand { font-size: 1.02rem; gap: .55rem; }
+html.menu-kucuk .brand svg { width: 1.8rem; height: 1.8rem; }
+html.menu-kucuk nav.site { font-size: .88rem; }
+html.menu-kucuk .dil-sec > summary { width: 1.95rem; height: 1.95rem; }
+@media (prefers-reduced-motion: reduce) {
+  header.site .wrap, .brand, .brand svg, nav.site { transition: none; }
+}
 /* Üstte ince bir marka çizgisi */
 header.site::before { content: ""; position: absolute; inset-inline: 0; top: 0; height: 2px; background: var(--gradient); opacity: .9; }
 header.site { position: sticky; }
@@ -444,12 +452,11 @@ details.sss-tumu > .faq { margin-top: .5rem; }
 
 /* Kaydırma kabı sayfanın kendisi: `scroll-snap-type` `.slaytlar`ta işe yaramıyordu, çünkü
    o kutunun kendi kaydırması yok. Yalnız ana sayfada geçerli olsun diye `:has()` ile. */
-/* `mandatory` + `scroll-snap-stop: always` iki yerde birden batıyordu: telefonda her
-   savurma tek slaytta kilitleniyor, farede tekerleğin tek tıkı büyük bir delta ürettiği
-   için slayt **bir anda** atlıyordu (Ali, 12 Eylül 2026 — "touchpadle düzgün, tekerlekle
-   atlıyor"). `proximity` ile kaydırma serbest akıyor, parmak/tekerlek durduğunda en yakın
-   slayta yumuşakça oturuyor. */
-html:has(.slaytlar) { scroll-snap-type: y proximity; }
+/* Slayt düzeni: her kaydırma bir slayta oturuyor. Bir ara `proximity`ye çekilmişti,
+   sunum hissi kayboldu (Ali, 12 Eylül 2026) — `mandatory` geri geldi. Tekerleğin sert
+   atlaması snap'in değil, farenin tek tıkta büyük delta üretmesinin sonucuydu; o
+   ana sayfadaki betikte ele alınıyor (yumuşak, tek slaytlık geçiş). */
+html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 /* Ok'a basınca yapılan yumuşak kaydırma boyunca snap kapalı: açıkken kaydırmayı yarıda
    kesip geri çekiyordu (telefonda görülen hata, 11 Eylül 2026). */
 html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
@@ -465,6 +472,8 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
   align-content: safe center;
   position: relative;
   scroll-snap-align: start;
+  /* Fare ve izleme yüzeyinde slayt atlanamıyor: sunum sırası korunuyor. */
+  scroll-snap-stop: always;
   padding-block: clamp(4rem, 9vh, 6rem) clamp(5.5rem, 12vh, 8rem);
   border-top: 0;
 }
@@ -473,6 +482,13 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
 .kapanis { text-align: center; }
 .kapanis .ring.kucuk { width: min(100%, 11rem); }
 .kapanis .ring figcaption { display: none; }
+
+/* Telefonda `scroll-snap-stop: always` her savurmayı tek slaytta kilitliyor ve gezinmek
+   yoruyordu. Dokunmatikte kalkıyor: savurma birkaç slayt geçebiliyor ama yine **bir
+   slayta** oturuyor — sunum hissi duruyor, hareket serbestleşiyor. */
+@media (pointer: coarse) {
+  .slayt { scroll-snap-stop: normal; }
+}
 
 /* İçerik ekrana sığmıyorsa slayt düzeni okumayı zorlaştırır: kapanıyor. */
 @media (max-height: 40rem) {

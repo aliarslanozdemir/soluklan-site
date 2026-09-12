@@ -16,7 +16,7 @@
 <link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/seri-ve-kilometre-taslari.html">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
-<link rel="stylesheet" href="/assets/soluklan.css?v=2c2042b1">
+<link rel="stylesheet" href="/assets/soluklan.css?v=619d5265">
 </head>
 <body>
 <header class="site">
@@ -137,28 +137,23 @@
   });
 })();
 
-/* Üst menü: aşağı kaydırınca çekiliyor, yukarı kaydırınca geri geliyor. Sayfanın en
-   üstündeyken her zaman açık. (Ali, 11 Eylül 2026) */
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
 (function () {
   var kok = document.documentElement;
-  var sonY = window.scrollY, birikim = 0, bekleyen = false;
-  var ESIK = 60;                 // küçük titremeler menüyü oynatmasın
+  var bekleyen = false;
   function bak() {
     bekleyen = false;
-    var y = Math.max(0, window.scrollY);
-    var fark = y - sonY;
-    sonY = y;
-    if (y < 120) { kok.classList.remove('menu-gizli'); birikim = 0; return; }
-    if ((fark > 0) !== (birikim > 0)) birikim = 0;
-    birikim += fark;
-    if (birikim > ESIK) { kok.classList.add('menu-gizli'); birikim = 0; }
-    else if (birikim < -ESIK) { kok.classList.remove('menu-gizli'); birikim = 0; }
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
   }
   window.addEventListener('scroll', function () {
     if (bekleyen) return;
     bekleyen = true;
     requestAnimationFrame(bak);
   }, { passive: true });
+  bak();
 })();
 
 /* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
