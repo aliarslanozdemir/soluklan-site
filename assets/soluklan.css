@@ -104,9 +104,14 @@ header.site {
   backdrop-filter: saturate(140%) blur(12px);
   border-bottom: 1px solid var(--line-soft);
 }
-header.site .wrap { display: flex; align-items: center; gap: 1rem; min-height: 4rem; }
-.brand { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; color: inherit; font-family: var(--display); font-weight: 600; letter-spacing: -.01em; }
-.brand svg { width: 1.75rem; height: 1.75rem; display: block; }
+header.site .wrap { display: flex; align-items: center; gap: 1rem; min-height: 4.9rem; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: inherit; font-family: var(--display); font-weight: 600; letter-spacing: -.01em; font-size: 1.2rem; }
+.brand svg { width: 2.4rem; height: 2.4rem; display: block; }
+/* Aşağı kaydırırken menü çekiliyor, yukarı kaydırınca geri geliyor: okurken yer kaplamasın
+   ama bir el hareketiyle geri gelsin (Ali, 11 Eylül 2026). */
+header.site { transition: transform .28s cubic-bezier(.32,.72,0,1); will-change: transform; }
+html.menu-gizli header.site { transform: translateY(-102%); }
+@media (prefers-reduced-motion: reduce) { header.site { transition: none; } }
 /* Üstte ince bir marka çizgisi */
 header.site::before { content: ""; position: absolute; inset-inline: 0; top: 0; height: 2px; background: var(--gradient); opacity: .9; }
 header.site { position: sticky; }
@@ -270,9 +275,53 @@ strong { font-weight: 650; }
   list-style: none; display: flex; align-items: center; gap: .75rem;
 }
 .faq summary::-webkit-details-marker { display: none; }
-.faq summary::after { content: "+"; margin-inline-start: auto; color: var(--glow); font-size: 1.25rem; line-height: 1; }
-.faq details[open] summary::after { content: "–"; }
+/* İşaret çizgilerden: açılınca artı dönüp eksiye iniyor (Ali, 11 Eylül 2026) */
+.faq summary::after {
+  content: ""; margin-inline-start: auto; flex: 0 0 auto;
+  width: 13px; height: 13px; position: relative;
+  background:
+    linear-gradient(var(--glow), var(--glow)) center/100% 2px no-repeat,
+    linear-gradient(var(--glow), var(--glow)) center/2px 100% no-repeat;
+  transition: transform .28s cubic-bezier(.32,.72,0,1), background-size .28s ease;
+}
+.faq details[open] summary::after { transform: rotate(180deg); background-size: 100% 2px, 0 100%; }
+.faq summary:hover { color: var(--ink); }
+.faq details { transition: border-color .25s ease, background-color .25s ease; }
+.faq details[open] { border-color: color-mix(in srgb, var(--breath) 38%, var(--line-soft)); }
+/* Açılma yumuşak: gövde sıfır yükseklikten kendi boyuna açılıyor (grid satırı hilesi,
+   `height: auto`ya geçiş yapılamıyor). */
+.faq .body-kap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .32s cubic-bezier(.32,.72,0,1); }
+.faq details[open] .body-kap { grid-template-rows: 1fr; }
+.faq .body-kap > .body { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) {
+  .faq summary::after, .faq .body-kap { transition: none; }
+}
 .faq .body { padding: 0 1.25rem 1.25rem; color: var(--ink-2); }
+
+/* "Tümünü gör": ortada, düğme gibi. Basılınca kayboluyor; açılan listenin altındaki
+   ok hepsini kapatıyor (Ali, 11 Eylül 2026). */
+details.sss-tumu { margin-top: 1rem; }
+details.sss-tumu > summary {
+  cursor: pointer; list-style: none; width: fit-content; margin-inline: auto;
+  padding: .6rem 1.4rem; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--ink-2);
+  font-family: var(--display); font-weight: 600; font-size: .95rem;
+  transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+details.sss-tumu > summary::-webkit-details-marker { display: none; }
+details.sss-tumu > summary::after { content: ""; }
+details.sss-tumu > summary:hover { border-color: var(--breath); color: var(--ink); }
+details.sss-tumu[open] > summary { display: none; }
+details.sss-tumu > .faq { margin-top: .5rem; }
+.sss-kapat {
+  display: flex; align-items: center; justify-content: center;
+  width: 2.75rem; height: 2.75rem; margin: 1rem auto 0; padding: 0;
+  border-radius: 999px; border: 1px solid var(--line); background: transparent;
+  color: var(--ink-2); cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+.sss-kapat:hover { border-color: var(--breath); color: var(--ink); }
+.sss-kapat svg { width: 1.35rem; height: 1.35rem; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .faq .body p:last-child { margin-bottom: 0; }
 
 /* --- Makale --- */
@@ -366,6 +415,9 @@ strong { font-weight: 650; }
 /* Kaydırma kabı sayfanın kendisi: `scroll-snap-type` `.slaytlar`ta işe yaramıyordu, çünkü
    o kutunun kendi kaydırması yok. Yalnız ana sayfada geçerli olsun diye `:has()` ile. */
 html:has(.slaytlar) { scroll-snap-type: y mandatory; }
+/* Ok'a basınca yapılan yumuşak kaydırma boyunca snap kapalı: açıkken kaydırmayı yarıda
+   kesip geri çekiyordu (telefonda görülen hata, 11 Eylül 2026). */
+html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
 .slayt {
   min-height: 100svh;
   display: grid;
@@ -406,32 +458,31 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 }
 @media (prefers-reduced-motion: reduce) { .kaydir.gorunur svg { animation: none; } }
 
+/* --- Kaydırdıkça ortaya çıkma ---------------------------------------------------
+   Yazılar ve öğeler görünmez başlıyor, ekrana girince beliriyor ve **bir daha
+   kaybolmuyor** (Ali, 11 Eylül 2026). Eskiden kaydırmaya bağlı (`view()`) animasyonla
+   yapılıyordu; o, geri kaydırınca yazıyı yeniden siliyordu. Şimdi bir kere görülen
+   öğeye `.belirdi` konuyor ve orada kalıyor. Sınıfı JS koyuyor; JS çalışmazsa
+   `.beliren` hiç eklenmediği için her şey normal görünür. */
+.beliren { opacity: 0; transform: translate3d(0, 26px, 0); }
+.beliren.belirdi {
+  opacity: 1; transform: none;
+  transition: opacity .62s cubic-bezier(.22,.7,.2,1), transform .62s cubic-bezier(.22,.7,.2,1);
+}
+/* Sıradaki öğeler azar azar gecikiyor: hepsi birden zıplamasın */
+.beliren.belirdi:nth-child(2) { transition-delay: .08s; }
+.beliren.belirdi:nth-child(3) { transition-delay: .16s; }
+.beliren.belirdi:nth-child(4) { transition-delay: .24s; }
+/* Görseller yazıdan başka türlü geliyor: aşağıdan değil, hafifçe büyüyerek */
+.beliren.gorsel { transform: scale(.94); }
+.beliren.gorsel.belirdi { transform: none; transition-duration: .8s; }
+@media (prefers-reduced-motion: reduce) {
+  .beliren { opacity: 1; transform: none; }
+}
+
 /* --- Kaydırmaya bağlı açılma --- */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .slayt:not(.hero) > .wrap, .slayt:not(.hero) > .prose {
-      animation: slayt-gir linear both;
-      animation-timeline: view();
-      animation-range: entry 5% entry 95%;
-    }
-    @keyframes slayt-gir {
-      from { opacity: 0; transform: translate3d(0, 42px, 0); }
-      to   { opacity: 1; transform: none; }
-    }
-
-    /* Kartlar ve adımlar sırayla */
-    .slayt:not(.hero) .cards > li, .slayt:not(.hero) .steps > li {
-      animation: oge-gir linear both;
-      animation-timeline: view();
-      animation-range: entry 8% entry 100%;
-    }
-    .slayt:not(.hero) .cards > li:nth-child(2n), .slayt:not(.hero) .steps > li:nth-child(2n) { animation-range: entry 14% entry 100%; }
-    .slayt:not(.hero) .cards > li:nth-child(3n), .slayt:not(.hero) .steps > li:nth-child(3n) { animation-range: entry 20% entry 100%; }
-    @keyframes oge-gir {
-      from { opacity: 0; transform: translate3d(0, 26px, 0); }
-      to   { opacity: 1; transform: none; }
-    }
-
     /* Slayt yukarı çıkarken geride kalıyor */
     .slayt > .wrap, .slayt > .prose {
       animation-composition: replace;
@@ -454,18 +505,6 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
     }
     @keyframes zemin-ac { from { opacity: .6; } to { opacity: 1; } }
 
-    /* Nefes halkası girerken büyüyor. **İlk slayt hariç:** sayfa açıldığında ekranda olan
-       ama alt tarafta duran öğeler, kaydırmaya bağlı animasyonda "başlangıç" durumunda
-       kalıyor ve saydam görünüyorlar (telefonda halka hiç görünmüyordu, 10 Eylül 2026). */
-    .slayt:not(.hero) .ring {
-      animation: halka-gir linear both;
-      animation-timeline: view();
-      animation-range: entry 5% entry 95%;
-    }
-    @keyframes halka-gir {
-      from { opacity: 0; transform: scale(.82); }
-      to   { opacity: 1; transform: none; }
-    }
   }
 }
 
@@ -496,7 +535,9 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 
 /* --- Dar ekran: menü --- */
 @media (max-width: 34rem) {
-  header.site .wrap { min-height: 3.5rem; gap: .5rem; }
+  header.site .wrap { min-height: 4.2rem; gap: .6rem; }
+  .brand { font-size: 1.05rem; gap: .55rem; }
+  .brand svg { width: 2rem; height: 2rem; }
   .brand { font-size: .95rem; gap: .45rem; }
   .brand svg { width: 1.4rem; height: 1.4rem; }
   nav.site { gap: .9rem; font-size: .85rem; }
@@ -534,11 +575,13 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
   .hero .wrap { position: relative; }
   .hero .ring {
     position: absolute; inset: 0; margin: auto;
-    width: min(118%, 27rem); z-index: 0; opacity: .5; pointer-events: none;
+    width: min(118%, 27rem); z-index: 0; opacity: .16; pointer-events: none;
   }
   /* Dolu top yazının üstüne binip okumayı zorlaştırıyordu: telefonda yalnız halkalar kalıyor */
   .hero .ring b { display: none; }
-  .hero .ring i { border-width: 1px; }
+  /* Renksiz ve çok saydam: halka yazının arkasında bir doku olarak kalıyor, desen gibi
+     görünüp okumayı bölmüyordu (Ali, 11 Eylül 2026). */
+  .hero .ring i { border-width: 1px; border-color: var(--line-soft) !important; }
   .hero .ring figcaption { display: none; }
   .hero .wrap > div { position: relative; z-index: 1; }
 }
@@ -1008,9 +1051,12 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 .cihaz3b.telefon { width: clamp(8rem, 20vw, 12.5rem); margin-inline-start: clamp(-3rem, -5vw, -1.5rem); margin-bottom: -1.5rem; transform: rotateY(-13deg) rotateX(4deg) rotateZ(2deg) translateZ(60px); }
 .cihaz3b.telefon .govde { padding: 2.6%; border-radius: clamp(1.5rem, 3.4vw, 2.3rem); }
 .cihaz3b.telefon .ekran { border-radius: clamp(1.1rem, 2.6vw, 1.8rem); }
+/* Ada gerçek iPhone oranlarında: ekran görüntüsündeki saat ve pil ikonlarıyla aynı hizada
+   durması gerekiyor. Eski ölçü (26% × 2,1%) çok ince ve aşağıdaydı, durum çubuğunun üstüne
+   binen ince bir çubuk gibi görünüyordu (Ali, 11 Eylül 2026). */
 .cihaz3b.telefon .ada {
-  position: absolute; z-index: 2; top: 3.5%; left: 50%; transform: translateX(-50%);
-  width: 26%; height: 2.1%; min-height: 6px; border-radius: 999px;
+  position: absolute; z-index: 2; top: 1.6%; left: 50%; transform: translateX(-50%);
+  width: 30%; height: 3.9%; min-height: 11px; border-radius: 999px;
   background: #05070b; box-shadow: 0 0 0 1px rgba(255,255,255,.06);
 }
 /* Yan düğmeler */
@@ -1022,20 +1068,19 @@ html:has(.slaytlar) { scroll-snap-type: y mandatory; }
 .cihaz3b.telefon .govde::before { top: 22%; height: 7%; }
 .cihaz3b.telefon .govde::after  { top: 32%; height: 11%; }
 
-/* Kaydırdıkça eğim hafifçe düzeliyor: fotoğraf canlanıyor hissi */
-@supports (animation-timeline: view()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .cihaz3b.tablet { animation: tablet-dogrul linear both; animation-timeline: view(); animation-range: entry 5% entry 100%; }
-    .cihaz3b.telefon { animation: telefon-dogrul linear both; animation-timeline: view(); animation-range: entry 5% entry 100%; }
-    @keyframes tablet-dogrul {
-      from { opacity: 0; transform: rotateY(26deg) rotateX(8deg) rotateZ(-3deg) translate3d(30px, 30px, -60px); }
-      to   { opacity: 1; transform: rotateY(17deg) rotateX(5deg) rotateZ(-1.5deg) translateZ(-30px); }
-    }
-    @keyframes telefon-dogrul {
-      from { opacity: 0; transform: rotateY(-22deg) rotateX(7deg) rotateZ(4deg) translate3d(-24px, 34px, 20px); }
-      to   { opacity: 1; transform: rotateY(-13deg) rotateX(4deg) rotateZ(2deg) translateZ(60px); }
-    }
-  }
+/* Cihazlar ekrana girince eğimleri düzelerek yerine oturuyor — ve **orada kalıyor**.
+   Eskiden kaydırmaya bağlıydı (`view()`), geri kaydırınca yeniden eğiliyorlardı
+   (Ali, 11 Eylül 2026). */
+.cihaz3b.beliren { opacity: 0; }
+.cihaz3b.tablet.beliren { transform: rotateY(26deg) rotateX(8deg) rotateZ(-3deg) translate3d(30px, 30px, -60px); }
+.cihaz3b.telefon.beliren { transform: rotateY(-22deg) rotateX(7deg) rotateZ(4deg) translate3d(-24px, 34px, 20px); }
+.cihaz3b.beliren.belirdi { opacity: 1; transition: opacity .9s ease, transform .9s cubic-bezier(.22,.7,.2,1); }
+.cihaz3b.tablet.beliren.belirdi { transform: rotateY(17deg) rotateX(5deg) rotateZ(-1.5deg) translateZ(-30px); }
+.cihaz3b.telefon.beliren.belirdi { transform: rotateY(-13deg) rotateX(4deg) rotateZ(2deg) translateZ(60px); transition-delay: .12s; }
+@media (prefers-reduced-motion: reduce) {
+  .cihaz3b.beliren { opacity: 1; }
+  .cihaz3b.tablet.beliren { transform: rotateY(17deg) rotateX(5deg) rotateZ(-1.5deg) translateZ(-30px); }
+  .cihaz3b.telefon.beliren { transform: rotateY(-13deg) rotateX(4deg) rotateZ(2deg) translateZ(60px); }
 }
 @media (max-width: 40rem) {
   .sahne3b { gap: 0; }
