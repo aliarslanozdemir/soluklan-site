@@ -116,6 +116,35 @@ html.menu-gizli header.site { transform: translateY(-102%); }
 header.site::before { content: ""; position: absolute; inset-inline: 0; top: 0; height: 2px; background: var(--gradient); opacity: .9; }
 header.site { position: sticky; }
 .brand .stem { stroke: var(--ink); }
+/* --- Dil seçici: küre simgesi, basınca altta iki seçenek (Ali, 12 Eylül 2026) --- */
+.dil-sec { position: relative; margin-inline-start: 1.1rem; }
+.dil-sec > summary {
+  list-style: none; cursor: pointer; display: grid; place-items: center;
+  width: 2.2rem; height: 2.2rem; border-radius: 999px;
+  color: var(--ink-2); transition: color .18s ease, background .18s ease;
+}
+.dil-sec > summary::-webkit-details-marker { display: none; }
+.dil-sec > summary:hover, .dil-sec[open] > summary { color: var(--ink); background: var(--bg-2); }
+.dil-sec > summary:focus-visible { outline: 2px solid var(--breath); outline-offset: 2px; }
+.dil-sec .kure { width: 1.35rem; height: 1.35rem; display: block; }
+.dil-liste {
+  position: absolute; inset-inline-end: 0; top: calc(100% + .55rem); z-index: 30;
+  min-width: 8.5rem; padding: .35rem; display: grid; gap: .15rem;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; box-shadow: 0 12px 30px rgba(0, 0, 0, .22);
+}
+.dil-liste a {
+  display: block; padding: .45rem .7rem; border-radius: 8px;
+  color: var(--ink-2); text-decoration: none; font-size: .92rem; white-space: nowrap;
+}
+.dil-liste a:hover { background: var(--bg-2); color: var(--ink); }
+.dil-liste a[aria-current] { color: var(--ink); font-weight: 600; }
+.dil-liste a[aria-current]::after { content: " ·"; color: var(--breath); }
+@media (max-width: 40rem) {
+  .dil-sec { margin-inline-start: .55rem; }
+  .dil-sec > summary { width: 1.9rem; height: 1.9rem; }
+  .dil-sec .kure { width: 1.2rem; height: 1.2rem; }
+}
 nav.site { margin-inline-start: auto; display: flex; gap: clamp(.75rem, 2vw, 1.5rem); font-size: .95rem; }
 nav.site a { position: relative; color: var(--ink-2); text-decoration: none; padding: .35rem 0 .45rem; transition: color .18s ease; }
 nav.site a:hover, nav.site a:focus-visible { color: var(--ink); }

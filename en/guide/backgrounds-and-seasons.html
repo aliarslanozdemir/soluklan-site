@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backgrounds, seasons and the time of day — Soluklan</title>
+<meta name="description" content="The background changing through the day isn't decoration. How it is worked out, why it asks for no location data, and what appears when.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Backgrounds, seasons and the time of day — Soluklan">
+<meta property="og:description" content="The background changing through the day isn't decoration. How it is worked out, why it asks for no location data, and what appears when.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/zemin-ve-mevsimler.html">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/backgrounds-and-seasons.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/zemin-ve-mevsimler.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=a407d917">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/en/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/en/">Home<i class="cizgi"></i></a>
+      <a href="/en/guide/" aria-current="page">Guide<i class="cizgi"></i></a>
+      <a href="/en/support.html">Support<i class="cizgi"></i></a>
+      <a href="/en/privacy.html">Privacy<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/rehber/zemin-ve-mevsimler.html" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/guide/backgrounds-and-seasons.html" hreflang="en" lang="en" aria-current="true">English</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/en/guide/topic/behind-the-scenes.html">BEHIND THE SCENES</a></p>
+    <h1>Backgrounds, seasons and the time of day</h1>
+    <p class="lede">The background changing through the day isn't decoration. How it is worked out, why it asks for no location data, and what appears when.</p>
+    <p class="updated">4 min read</p>
+<p>Open the app in the morning and the background is light and open; in the late afternoon it is warm orange; at night it is dark and starry. Snow falls in winter and leaves drift down in spring.</p>
+<p>Here is what sits behind that.</p>
+<h2>Why it exists</h2>
+<p>Two reasons. The first is that it tells you what time of day it is the moment you open the app — breathing practice is tied to the time of day, and the app already changes its suggestions with the hour. The background is the visible side of that.</p>
+<p>The second is simpler: an app you open every day doesn't have to look the same every day.</p>
+<h2>The sun's hours are worked out on the device</h2>
+<p>Sunrise and sunset aren't fixed hours; they shift with the season. The app works them out.</p>
+<p><strong>It asks for no location permission.</strong> The calculation is made from the device's time zone; GPS and location services are never touched. That means giving up a little accuracy — a few minutes of drift is possible — but there is no good reason for a breathing app to ask for your location.</p>
+<h2>The times of day</h2>
+<p><strong>Day.</strong> From sunrise to sunset, light and open.</p>
+<p><strong>Evening.</strong> Around sunset, warm orange tones.</p>
+<p><strong>Night.</strong> A dark background and stars. Some of the stars fade and brighten faster than others, and a few are faintly coloured.</p>
+<h2>The seasons</h2>
+<p><strong>Winter.</strong> Snowflakes. A background in cold blue tones.</p>
+<p><strong>Spring.</strong> Falling blossom petals.</p>
+<p><strong>Summer.</strong> A calm background leaning towards green.</p>
+<p><strong>Autumn.</strong> Yellow and red leaves.</p>
+<p>The season comes from the calendar date, not from the weather — the app doesn't look at the internet.</p>
+<h2>Special days</h2>
+<p>A few special days like New Year get their own backgrounds. These come and go by date, by themselves.</p>
+<h2>Light and dark themes</h2>
+<p>On top of all this there is a theme choice: <strong>Settings → Appearance.</strong> You can follow the system setting, or always use the light or dark theme.</p>
+<p>In the dark theme the night background stays close to its default; in the light theme the day background stays light even at night.</p>
+<h2>Reduce motion</h2>
+<p>If iOS's reduce motion setting is on, the snow, leaves and star movements stop. The background colours stay; the motion goes.</p>
+<p>The same setting also affects the animations in the session circle and on this site.</p>
+<h2>Does it drain the battery</h2>
+<p>The background animations are drawn only while the app is in the foreground, at a low frame rate, and never in the background. During a session, when the circle is on screen, priority goes to that anyway.</p>
+    <p class="geri"><a href="/en/guide/topic/behind-the-scenes.html">&#8592; Behind the scenes</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>You might also read</h2><ul><li><a href="/en/guide/how-scoring-works.html"><strong>How a session is scored</strong><span>The number out of a hundred is a weighted average of seven separate measurements. How much weight each carries, why, and what the score doesn&#x27;t tell you.</span></a></li><li><a href="/en/guide/how-we-read-the-evidence.html"><strong>How we read the evidence</strong><span>Most breathing studies are small, uncontrolled and short. What each sentence in the app rests on, and what we deliberately don&#x27;t write.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/en/guide/">Guide</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/support.html">Support</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: aşağı kaydırınca çekiliyor, yukarı kaydırınca geri geliyor. Sayfanın en
+   üstündeyken her zaman açık. (Ali, 11 Eylül 2026) */
+(function () {
+  var kok = document.documentElement;
+  var sonY = window.scrollY, birikim = 0, bekleyen = false;
+  var ESIK = 60;                 // küçük titremeler menüyü oynatmasın
+  function bak() {
+    bekleyen = false;
+    var y = Math.max(0, window.scrollY);
+    var fark = y - sonY;
+    sonY = y;
+    if (y < 120) { kok.classList.remove('menu-gizli'); birikim = 0; return; }
+    if ((fark > 0) !== (birikim > 0)) birikim = 0;
+    birikim += fark;
+    if (birikim > ESIK) { kok.classList.add('menu-gizli'); birikim = 0; }
+    else if (birikim < -ESIK) { kok.classList.remove('menu-gizli'); birikim = 0; }
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>
