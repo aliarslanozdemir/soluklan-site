@@ -528,11 +528,48 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
 .beliren.belirdi:nth-child(2) { transition-delay: .08s; }
 .beliren.belirdi:nth-child(3) { transition-delay: .16s; }
 .beliren.belirdi:nth-child(4) { transition-delay: .24s; }
+
+/* --- Yazı blokları satır satır beliriyor -----------------------------------------
+   Eskiden bütün yazı kutusu tek parça açılıyordu: hareket görsellerde kalıyor, asıl
+   odak olan yazı düz geliyordu (Ali, 12 Eylül 2026). Artık kutunun **çocukları** tek
+   tek geliyor — üstten hafifçe yükselerek ve bulanıklıktan netleşerek, sırayla.
+   Kendi `.beliren`i olan çocuklar (görseller, cihazlar, kartlar) dışarıda: onların
+   kendi hareketi var. */
+.prose.beliren, .wrap.beliren { opacity: 1; transform: none; }
+.prose.beliren > *:not(.beliren):not(.cards):not(.sahne3b),
+.wrap.beliren > *:not(.beliren):not(.cards):not(.sahne3b) {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  filter: blur(7px);
+}
+.prose.beliren.belirdi > *:not(.beliren):not(.cards):not(.sahne3b),
+.wrap.beliren.belirdi > *:not(.beliren):not(.cards):not(.sahne3b) {
+  opacity: 1; transform: none; filter: blur(0);
+  transition: opacity .66s cubic-bezier(.22,.7,.2,1),
+              transform .66s cubic-bezier(.22,.7,.2,1),
+              filter .66s cubic-bezier(.22,.7,.2,1);
+}
+.prose.beliren.belirdi > :nth-child(1),
+.wrap.beliren.belirdi > :nth-child(1) { transition-delay: 0s; }
+.prose.beliren.belirdi > :nth-child(2),
+.wrap.beliren.belirdi > :nth-child(2) { transition-delay: .09s; }
+.prose.beliren.belirdi > :nth-child(3),
+.wrap.beliren.belirdi > :nth-child(3) { transition-delay: .18s; }
+.prose.beliren.belirdi > :nth-child(4),
+.wrap.beliren.belirdi > :nth-child(4) { transition-delay: .27s; }
+.prose.beliren.belirdi > :nth-child(5),
+.wrap.beliren.belirdi > :nth-child(5) { transition-delay: .36s; }
+.prose.beliren.belirdi > :nth-child(n+6),
+.wrap.beliren.belirdi > :nth-child(n+6) { transition-delay: .44s; }
+/* Başlık biraz daha uzaktan ve biraz daha yavaş geliyor: slaytın ağırlık merkezi o. */
+.prose.beliren > h2, .wrap.beliren > h2 { transform: translate3d(0, 30px, 0); filter: blur(10px); }
+.prose.beliren.belirdi > h2, .wrap.beliren.belirdi > h2 { transition-duration: .8s; }
 /* Görseller yazıdan başka türlü geliyor: aşağıdan değil, hafifçe büyüyerek */
 .beliren.gorsel { transform: scale(.94); }
 .beliren.gorsel.belirdi { transform: none; transition-duration: .8s; }
 @media (prefers-reduced-motion: reduce) {
   .beliren { opacity: 1; transform: none; }
+  .prose.beliren > *, .wrap.beliren > * { opacity: 1; transform: none; filter: none; }
 }
 
 /* --- Kaydırmaya bağlı açılma --- */
@@ -1116,6 +1153,9 @@ html:has(.slaytlar) body::before {
 /* Ada gerçek iPhone oranlarında: ekran görüntüsündeki saat ve pil ikonlarıyla aynı hizada
    durması gerekiyor. Eski ölçü (26% × 2,1%) çok ince ve aşağıdaydı, durum çubuğunun üstüne
    binen ince bir çubuk gibi görünüyordu (Ali, 11 Eylül 2026). */
+/* Durum çubuğu görüntüden kırpıldığı için ada, uygulamanın başlık satırının üstüne
+   biniyordu. Yukarı alındı ve inceltildi: ekranın üst kenarına oturuyor, yazıyı
+   örtmüyor (Ali, 12 Eylül 2026). */
 .cihaz3b.telefon .ada {
   position: absolute; z-index: 2; top: 1.6%; left: 50%; transform: translateX(-50%);
   width: 30%; height: 3.9%; min-height: 11px; border-radius: 999px;
