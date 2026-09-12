@@ -86,7 +86,6 @@
    bağlantılar ana sayfadaki küçük betikle yumuşatılıyor. */
 html { -webkit-text-size-adjust: 100%; }
 
-html { overflow-x: clip; }          /* yatay kaydırmayı kapatır, dikey kaydırmaya dokunmaz */
 body {
   margin: 0;
   background: var(--bg);
