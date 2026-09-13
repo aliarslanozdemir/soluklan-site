@@ -16,8 +16,18 @@ docs/destek.md             → site/destek.html
                            → build/site-onizleme.html (tek dosya, paylaşmak için)
 
 site/assets/soluklan.css   ← ortak tasarım katmanı (elle yazılır)
-site/assets/favicon.svg    ← logo işareti
+site/assets/favicon.svg    ← logo işareti, **simgelerin tek kaynağı**
 site/CNAME                 ← soluklan.app
+```
+
+`scripts/site_build.py` ayrıca şunları üretiyor: `site/robots.txt`, `site/site.webmanifest`,
+`site/llms.txt` ve `site/.nojekyll`.
+
+Simgeler ayrı bir betikle, `favicon.svg`den üretiliyor — logo değişirse tek komut yeter:
+
+```
+python3 scripts/site_ikonlar.py   → favicon.ico (kökte), favicon-16/32/48.png,
+                                    icon-180/192/512.png, assets/og.png
 ```
 
 Üretmek için:
@@ -63,6 +73,17 @@ için `docs/` altındaki markdown dosyasını düzenle, sonra betiği çalışt�
 
 Aynı betik `build/site-onizleme.html` de üretiyor: üç sayfa tek dosyada, CSS gömülü — paylaşmak
 ve göz atmak için.
+
+## Denetim
+
+```
+python3 scripts/site_denet.py
+```
+
+Bağlantıları, simge dosyalarını, `canonical`/`og:image`/hreflang etiketlerini, yapısal
+verinin geçerli JSON olduğunu ve site haritasının sayfalarla örtüştüğünü sınar. Bunların
+hiçbiri gözle görülmüyor: `canonical` düşse ya da `/favicon.ico` 404 verse sayfa normal
+açılıyor, hata yalnız arama sonucunda haftalar sonra çıkıyor.
 
 ## Yayına alma
 
