@@ -3,7 +3,8 @@
     <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
     <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
   </defs>
+  <rect width="100" height="100" rx="22" fill="#FFFFFF"/>
   <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
   <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
-  <path d="M50 14 V72" stroke="#0F1E33" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+  <path d="M50 14 V72" stroke="#2C3E52" stroke-width="3" stroke-linecap="round" stroke-opacity=".9"/>
 </svg>
