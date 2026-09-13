@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo oye el micrófono tu respiración — Soluklan</title>
+<meta name="description" content="Si no se graba sonido, ¿cómo mide la app tu respiración? El suelo de ruido, un umbral que se mueve con la habitación, y cómo se encuentran el principio y el final de una espiración.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Cómo oye el micrófono tu respiración — Soluklan">
+<meta property="og:description" content="Si no se graba sonido, ¿cómo mide la app tu respiración? El suelo de ruido, un umbral que se mueve con la habitación, y cómo se encuentran el principio y el final de una espiración.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-the-microphone-listens.html">
+<link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-das-mikrofon-hoert.html">
+<link rel="alternate" hreflang="fr" href="https://soluklan.app/fr/guide/comment-le-micro-ecoute.html">
+<link rel="alternate" hreflang="es" href="https://soluklan.app/es/guia/como-escucha-el-microfono.html">
+<link rel="alternate" hreflang="it" href="https://soluklan.app/it/guida/come-ascolta-il-microfono.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=3aa5d051">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/es/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/es/">Inicio<i class="cizgi"></i></a>
+      <a href="/es/guia/" aria-current="page">Guía<i class="cizgi"></i></a>
+      <a href="/es/ayuda.html">Ayuda<i class="cizgi"></i></a>
+      <a href="/es/privacidad.html">Privacidad<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/rehber/mikrofon-nasil-dinliyor.html" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/guide/how-the-microphone-listens.html" hreflang="en" lang="en">English</a>
+        <a href="/de/ratgeber/wie-das-mikrofon-hoert.html" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/guide/comment-le-micro-ecoute.html" hreflang="fr" lang="fr">Français</a>
+        <a href="/es/guia/como-escucha-el-microfono.html" hreflang="es" lang="es" aria-current="true">Español</a>
+        <a href="/it/guida/come-ascolta-il-microfono.html" hreflang="it" lang="it">Italiano</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/es/guia/tema/entre-bastidores.html">ENTRE BASTIDORES</a></p>
+    <h1>Cómo oye el micrófono tu respiración</h1>
+    <p class="lede">Si no se graba sonido, ¿cómo mide la app tu respiración? El suelo de ruido, un umbral que se mueve con la habitación, y cómo se encuentran el principio y el final de una espiración.</p>
+    <p class="updated">6 min de lectura</p>
+<p>La app no graba sonido. El flujo que viene del micrófono no se escribe nunca en el disco; cada veinte milisegundos se calcula el <strong>nivel sonoro</strong> de ese instante y solo se guarda ese número. Así que lo que la app tiene no es un archivo de audio sino una serie de números: una curva que sube y baja.</p>
+<p>Todas las medidas se hacen a partir de esa curva.</p>
+<h2>El silencio se mide primero</h2>
+<p>Hay una escucha de tres segundos al principio de una sesión. En ese tiempo se mide el <strong>suelo de ruido</strong> de la habitación: el zumbido de la nevera, el tráfico de fuera, el ruido electrónico del propio dispositivo.</p>
+<p>No es una media: se miran los <strong>momentos más silenciosos</strong> de esos tres segundos. La razón: dejar el teléfono sobre una mesa durante el calibrado, o que alguien tosa, tira la media hacia arriba y deja mal el <a href="/es/guia/medir-los-umbrales.html">umbral</a> durante toda la sesión. En una grabación real eso causó un error de catorce decibelios.</p>
+<p>El suelo también se actualiza durante la sesión. Si la habitación se queda más tranquila, el umbral baja; si sube el ruido, sube, pero solo dentro de unos límites, porque si no la app se quedaría sorda en una habitación ruidosa.</p>
+<h2>El umbral no es absoluto, es relativo al suelo</h2>
+<p>Para que un sonido cuente como «espiración» no tiene que pasar de un nivel de decibelios concreto. Tiene que elevarse <strong>una cierta cantidad por encima del suelo</strong>. En una habitación tranquila ese umbral es bajo; en una cafetería ruidosa es alto.</p>
+<p>Cuánto por encima del suelo depende de la técnica. Una espiración por la boca (espiración prolongada, labios fruncidos) sale fuerte. Una espiración tranquila por la nariz (coherente, cuadrada) es mucho más baja. Una respiración por una sola fosa nasal es la más baja de todas. Cada técnica se escucha con su propio umbral; medirlas todas con la misma vara dejaría inaudibles las técnicas nasales.</p>
+<h2>El principio y el final de una espiración</h2>
+<p>El nivel sonoro bruto tiembla demasiado para usarlo tal cual. Primero se suaviza: cada medida nueva se mezcla con la anterior, para que un simple clic no se convierta en una espiración.</p>
+<p>La espiración empieza cuando la curva suavizada cruza el umbral. Para que termine basta con una de dos condiciones: que la curva baje del umbral y se quede ahí un tercio de segundo, o que caiga una cierta cantidad desde el pico de la propia espiración. Sin la segunda condición, una inspiración audible alargaría la espiración y dos respiraciones se medirían como una.</p>
+<p>Los sucesos muy cortos se descartan. Para eso se usa la medida bruta en vez de la curva suavizada: el suavizado estira un clic breve y lo hace parecer más largo de lo que fue.</p>
+<h2>La habitación silenciosa y el problema de la tableta</h2>
+<p>Que los umbrales sean relativos al suelo funciona en la mayoría de los casos, pero tiene una trampa: si el suelo es de verdad muy bajo, el umbral relativo se vuelve demasiado sensible y cada crujido de la habitación puede contar como una espiración. Por eso hay un límite inferior al valor que puede tomar el suelo.</p>
+<p>Ese límite estuvo demasiado alto durante un tiempo. En una grabación hecha en tableta, el suelo de ruido real medía muy por debajo; como el límite suponía el suelo más alto de lo que era, el margen de la espiración se fundía y no se oía nada. A alguien que espiraba a un palmo de la tableta se le decía «acerca el dispositivo».</p>
+<p>El límite se volvió a barrer con veintiuna grabaciones reales y se bajó: el número de espiraciones cazadas subió y el de detecciones falsas no cambió. Decisiones así se toman a partir de las grabaciones que tenemos, no a ojo: ese es el único trabajo del compartir <a href="/es/guia/que-hacemos-con-los-datos-compartidos.html">muestra de audio</a>.</p>
+<h2>La respiración rápida es otro trabajo</h2>
+<p>Este método tiene un límite: saber que una espiración ha terminado necesita un silencio corto después. En una técnica que espira más de una vez por segundo, ese silencio no aparece nunca.</p>
+<p>Por eso el <a href="/es/guia/kapalabhati.html">Kapalabhati</a> se mide de otra manera. En vez de intentar separar las espiraciones una a una, la app cuenta los <strong>instantes en que la curva del sonido hace un pico</strong> y mira lo regulares que son los huecos. El contador espera a que la curva baje del umbral después de cerrarse un pico: sin esa condición contaba cada espiración dos veces.</p>
+    <p class="geri"><a href="/es/guia/tema/entre-bastidores.html">&#8592; Entre bastidores</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>También puedes leer</h2><ul><li><a href="/es/guia/como-leemos-las-pruebas.html"><strong>Cómo leemos las pruebas</strong><span>La mayoría de los estudios sobre respiración son pequeños, sin control y cortos. En qué se apoya cada frase de la app y qué no escribimos a propósito.</span></a></li><li><a href="/es/guia/como-se-calcula-la-puntuacion.html"><strong>Cómo se puntúa una sesión</strong><span>El número sobre cien es una media ponderada de siete medidas distintas. Cuánto pesa cada una, por qué, y qué no te dice la puntuación.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/es/guia/">Guía</a>
+      <a href="/es/privacidad.html">Privacidad</a>
+      <a href="/es/ayuda.html">Ayuda</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
+(function () {
+  var kok = document.documentElement;
+  var bekleyen = false;
+  function bak() {
+    bekleyen = false;
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+  bak();
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>
