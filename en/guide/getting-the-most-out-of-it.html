@@ -42,6 +42,22 @@
 <link rel="stylesheet" href="/assets/soluklan.css?v=3aa5d051">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Getting the most out of the app","description":"Two people use the same app and get very different results from it. The ten things that make the difference, and how to do each of them.","url":"https://soluklan.app/en/guide/getting-the-most-out-of-it.html","inLanguage":"en","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/en/guide/getting-the-most-out-of-it.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"How to use it","dateModified":"2026-09-12T16:08:14+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/en/guide/"},{"@type":"ListItem","position":2,"name":"How to use it","item":"https://soluklan.app/en/guide/topic/how-to-use-it.html"},{"@type":"ListItem","position":3,"name":"Getting the most out of the app","item":"https://soluklan.app/en/guide/getting-the-most-out-of-it.html"}]}</script>
+<script>
+(function () {
+  var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it" };
+  if (location.pathname !== "/") return;          // yönlendirme yalnız kökte
+  try { if (localStorage.getItem("soluklan-dil")) return; } catch (e) { return; }
+  var istekler = navigator.languages || [navigator.language || ""];
+  var hedef = "";
+  for (var i = 0; i < istekler.length && !hedef; i++) {
+    var k = (istekler[i] || "").slice(0, 2).toLowerCase();
+    if (kokler.hasOwnProperty(k)) hedef = k;
+  }
+  if (!hedef) hedef = "en";
+  if (hedef === "tr") return;                     // kök zaten Türkçe
+  location.replace(kokler[hedef] + "/" + location.search + location.hash);
+})();
+</script>
 </head>
 <body>
 <header class="site">
@@ -174,6 +190,35 @@
     clearTimeout(zamanlayici);
     zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
   });
+})();
+
+/* Dil seçici: kullanıcının kendi dili listenin başında durur ve seçtiği dil hatırlanır.
+   Sıralama betikle yapılıyor çünkü sayfa statik: aynı HTML herkese gidiyor, "en üstte olan"
+   ise kişiye göre değişiyor. Seçim `localStorage`a yazılınca kökteki yönlendirme de bir daha
+   karışmıyor — kullanıcı kararını bir kez veriyor (Ali, 13 Eylül 2026). */
+(function () {
+  var liste = document.querySelector('.dil-liste');
+  if (!liste) return;
+  var baglar = [].slice.call(liste.querySelectorAll('a'));
+
+  baglar.forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('soluklan-dil', a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+
+  var tercih = '';
+  try { tercih = localStorage.getItem('soluklan-dil') || ''; } catch (e) {}
+  if (!tercih) {
+    var istekler = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < istekler.length && !tercih; i++) {
+      var k = (istekler[i] || '').slice(0, 2).toLowerCase();
+      if (baglar.some(function (a) { return a.getAttribute('hreflang') === k; })) tercih = k;
+    }
+  }
+  if (!tercih) return;
+  var ilk = baglar.filter(function (a) { return a.getAttribute('hreflang') === tercih; })[0];
+  if (ilk && ilk !== baglar[0]) liste.insertBefore(ilk, liste.firstChild);
 })();
 
 /* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
