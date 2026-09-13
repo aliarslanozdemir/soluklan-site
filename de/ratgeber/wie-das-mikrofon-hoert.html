@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wie das Mikrofon deinen Atem hört — Soluklan</title>
+<meta name="description" content="Wenn kein Ton aufgenommen wird, wie misst die App dann deinen Atem? Das Grundrauschen, eine Schwelle, die sich mit dem Raum bewegt, und wie Anfang und Ende einer Ausatmung gefunden werden.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Wie das Mikrofon deinen Atem hört — Soluklan">
+<meta property="og:description" content="Wenn kein Ton aufgenommen wird, wie misst die App dann deinen Atem? Das Grundrauschen, eine Schwelle, die sich mit dem Raum bewegt, und wie Anfang und Ende einer Ausatmung gefunden werden.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-the-microphone-listens.html">
+<link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-das-mikrofon-hoert.html">
+<link rel="alternate" hreflang="fr" href="https://soluklan.app/fr/guide/comment-le-micro-ecoute.html">
+<link rel="alternate" hreflang="es" href="https://soluklan.app/es/guia/como-escucha-el-microfono.html">
+<link rel="alternate" hreflang="it" href="https://soluklan.app/it/guida/come-ascolta-il-microfono.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=3aa5d051">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/de/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/de/">Start<i class="cizgi"></i></a>
+      <a href="/de/ratgeber/" aria-current="page">Ratgeber<i class="cizgi"></i></a>
+      <a href="/de/hilfe.html">Hilfe<i class="cizgi"></i></a>
+      <a href="/de/datenschutz.html">Datenschutz<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/rehber/mikrofon-nasil-dinliyor.html" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/guide/how-the-microphone-listens.html" hreflang="en" lang="en">English</a>
+        <a href="/de/ratgeber/wie-das-mikrofon-hoert.html" hreflang="de" lang="de" aria-current="true">Deutsch</a>
+        <a href="/fr/guide/comment-le-micro-ecoute.html" hreflang="fr" lang="fr">Français</a>
+        <a href="/es/guia/como-escucha-el-microfono.html" hreflang="es" lang="es">Español</a>
+        <a href="/it/guida/come-ascolta-il-microfono.html" hreflang="it" lang="it">Italiano</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/de/ratgeber/thema/hinter-den-kulissen.html">HINTER DEN KULISSEN</a></p>
+    <h1>Wie das Mikrofon deinen Atem hört</h1>
+    <p class="lede">Wenn kein Ton aufgenommen wird, wie misst die App dann deinen Atem? Das Grundrauschen, eine Schwelle, die sich mit dem Raum bewegt, und wie Anfang und Ende einer Ausatmung gefunden werden.</p>
+    <p class="updated">6 Min. Lesezeit</p>
+<p>Die App nimmt keinen Ton auf. Der Strom vom Mikrofon wird nie auf die Festplatte geschrieben; alle zwanzig Millisekunden wird der <strong>Schallpegel</strong> in diesem Augenblick errechnet, und nur diese Zahl bleibt. Was die App hält, ist also keine Audiodatei, sondern eine Zahlenreihe: eine Linie, die steigt und fällt.</p>
+<p>Jede Messung entsteht aus dieser Linie.</p>
+<h2>Zuerst wird die Stille gemessen</h2>
+<p>Am Anfang einer Sitzung wird drei Sekunden lang gehört. In dieser Zeit wird das <strong>Grundrauschen</strong> des Raums gemessen: das Brummen des Kühlschranks, der Verkehr draußen, das elektronische Eigenrauschen des Geräts.</p>
+<p>Es ist kein Mittelwert — geschaut wird auf die <strong>stillsten Momente</strong> dieser drei Sekunden. Der Grund: das Telefon während der Kalibrierung auf den Tisch zu legen oder jemandes Husten zieht den Mittelwert hoch und lässt die <a href="/de/ratgeber/wie-die-schwellen-gemessen-werden.html">Schwelle</a> für die ganze Sitzung falsch stehen. In einer echten Aufnahme verursachte das einen Fehler von vierzehn Dezibel.</p>
+<p>Das Grundrauschen wird auch während der Sitzung nachgeführt. Wird der Raum stiller, sinkt die Schwelle; steigt der Lärm, steigt sie — aber nur in Grenzen, sonst würde sich die App in einem lauten Raum selbst taub stellen.</p>
+<h2>Die Schwelle ist nicht absolut, sie liegt über dem Grundrauschen</h2>
+<p>Damit ein Ton als „Ausatmung“ zählt, muss er keinen bestimmten Dezibelwert überschreiten. Er muss <strong>einen bestimmten Betrag über dem Grundrauschen</strong> liegen. In einem stillen Raum ist diese Schwelle niedrig; in einem lauten Café hoch.</p>
+<p>Wie weit über dem Grundrauschen, hängt von der Technik ab. Eine Ausatmung durch den Mund (langer Ausatem, Lippenbremse) kommt laut heraus. Eine ruhige Ausatmung durch die Nase (kohärent, Box) ist viel leiser. Ein Atemzug durch ein einzelnes Nasenloch ist am leisesten von allen. Jede Technik wird mit ihrer eigenen Schwelle gehört; alle an denselben Maßstab zu legen würde die Nasentechniken unhörbar machen.</p>
+<h2>Anfang und Ende einer Ausatmung</h2>
+<p>Der rohe Schallpegel ist zu zappelig, um ihn direkt zu benutzen. Er wird zuerst geglättet — jede neue Messung wird mit der vorigen verrechnet, damit ein einzelnes Klicken nicht zu einer Ausatmung wird.</p>
+<p>Die Ausatmung beginnt, wenn die geglättete Linie die Schwelle überschreitet. Damit sie endet, genügt eine von zwei Bedingungen: die Linie fällt unter die Schwelle und bleibt eine Drittelsekunde dort, oder sie fällt einen bestimmten Betrag von der eigenen Spitze der Ausatmung ab. Ohne die zweite Bedingung würde eine hörbare Einatmung die Ausatmung verlängern und zwei Atemzüge würden als einer gemessen.</p>
+<p>Sehr kurze Ereignisse werden verworfen. Dafür wird die rohe Messung statt der geglätteten Linie benutzt: das Glätten zieht ein kurzes Klicken in die Länge und lässt es länger aussehen, als es war.</p>
+<h2>Der stille Raum und das Tablet-Problem</h2>
+<p>Dass die Schwellen über dem Grundrauschen liegen, funktioniert in den meisten Fällen, hat aber eine Falle: ist das Grundrauschen wirklich sehr niedrig, wird die relative Schwelle überempfindlich und jedes Knarren im Raum kann als Ausatmung zählen. Deshalb gibt es eine Untergrenze dafür, wie weit das Grundrauschen sinken darf.</p>
+<p>Diese Grenze lag eine Zeit lang zu hoch. In einer Tablet-Aufnahme wurde das echte Grundrauschen weit niedriger gemessen; weil die Grenze annahm, das Grundrauschen liege höher, als es lag, schmolz der Abstand der Ausatmung weg und es wurde überhaupt nichts gehört. Jemandem, der eine Handbreit vom Tablet entfernt ausatmete, wurde gesagt, er solle „das Gerät näher halten“.</p>
+<p>Die Grenze wurde an einundzwanzig echten Aufnahmen neu geprüft und gesenkt: die Zahl der erfassten Ausatmungen stieg, die Zahl der Fehlerkennungen blieb gleich. Solche Entscheidungen treffen wir aus den Aufnahmen, die wir haben, nicht aus Vermutungen — das ist die einzige Aufgabe des Teilens von <a href="/de/ratgeber/was-wir-mit-geteilten-daten-machen.html">Tonproben</a>.</p>
+<h2>Schnelles Atmen ist eine eigene Aufgabe</h2>
+<p>Diese Methode hat eine Grenze: zu erkennen, dass eine Ausatmung zu Ende ist, braucht danach eine kurze Stille. Bei einer Technik, die schneller als einmal pro Sekunde ausatmet, kommt diese Stille nie.</p>
+<p>Deshalb wird <a href="/de/ratgeber/kapalabhati.html">Kapalabhati</a> anders gemessen. Statt die Ausatmungen einzeln zu trennen, zählt die App die <strong>Momente, in denen die Tonlinie Spitzen bildet</strong>, und schaut, wie regelmäßig die Abstände sind. Der Zähler wartet darauf, dass die Linie nach einer abgeschlossenen Spitze unter die Schwelle fällt — ohne diese Bedingung zählte er jede Ausatmung doppelt.</p>
+    <p class="geri"><a href="/de/ratgeber/thema/hinter-den-kulissen.html">&#8592; Hinter den Kulissen</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>Das könnte dich auch interessieren</h2><ul><li><a href="/de/ratgeber/wie-bewertet-wird.html"><strong>Wie eine Sitzung bewertet wird</strong><span>Die Zahl von hundert ist ein gewichteter Mittelwert aus sieben getrennten Messungen. Wie viel jede wiegt, warum, und was die Punktzahl dir nicht sagt.</span></a></li><li><a href="/de/ratgeber/wie-wir-die-studienlage-lesen.html"><strong>Wie wir die Studienlage lesen</strong><span>Die meisten Atemstudien sind klein, unkontrolliert und kurz. Worauf jeder Satz in der App beruht und was wir bewusst nicht schreiben.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/de/ratgeber/">Ratgeber</a>
+      <a href="/de/datenschutz.html">Datenschutz</a>
+      <a href="/de/hilfe.html">Hilfe</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
+(function () {
+  var kok = document.documentElement;
+  var bekleyen = false;
+  function bak() {
+    bekleyen = false;
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+  bak();
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>

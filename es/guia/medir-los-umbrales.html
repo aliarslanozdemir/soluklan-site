@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo se miden los umbrales con grabaciones reales — Soluklan</title>
+<meta name="description" content="Lo que cuenta como «espiración» no se decide a ojo sino a partir de muestras de audio reales enviadas por usuarios. Cómo funciona ese trabajo.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Cómo se miden los umbrales con grabaciones reales — Soluklan">
+<meta property="og:description" content="Lo que cuenta como «espiración» no se decide a ojo sino a partir de muestras de audio reales enviadas por usuarios. Cómo funciona ese trabajo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/measuring-the-thresholds.html">
+<link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html">
+<link rel="alternate" hreflang="fr" href="https://soluklan.app/fr/guide/mesurer-les-seuils.html">
+<link rel="alternate" hreflang="es" href="https://soluklan.app/es/guia/medir-los-umbrales.html">
+<link rel="alternate" hreflang="it" href="https://soluklan.app/it/guida/misurare-le-soglie.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=3aa5d051">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/es/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/es/">Inicio<i class="cizgi"></i></a>
+      <a href="/es/guia/" aria-current="page">Guía<i class="cizgi"></i></a>
+      <a href="/es/ayuda.html">Ayuda<i class="cizgi"></i></a>
+      <a href="/es/privacidad.html">Privacidad<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/rehber/esikler-nasil-olculuyor.html" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/guide/measuring-the-thresholds.html" hreflang="en" lang="en">English</a>
+        <a href="/de/ratgeber/wie-die-schwellen-gemessen-werden.html" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/guide/mesurer-les-seuils.html" hreflang="fr" lang="fr">Français</a>
+        <a href="/es/guia/medir-los-umbrales.html" hreflang="es" lang="es" aria-current="true">Español</a>
+        <a href="/it/guida/misurare-le-soglie.html" hreflang="it" lang="it">Italiano</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/es/guia/tema/entre-bastidores.html">ENTRE BASTIDORES</a></p>
+    <h1>Cómo se miden los umbrales con grabaciones reales</h1>
+    <p class="lede">Lo que cuenta como «espiración» no se decide a ojo sino a partir de muestras de audio reales enviadas por usuarios. Cómo funciona ese trabajo.</p>
+    <p class="updated">5 min de lectura</p>
+<p>Para que la app cuente un sonido como espiración, ese sonido tiene que estar una cierta cantidad por encima del silencio de la habitación. ¿De dónde sale esa «cierta cantidad»?</p>
+<p>De una estimación al principio. De una medición después.</p>
+<h2>Por qué empieza con una estimación</h2>
+<p>Cuando se añade una técnica nueva no tenemos ni una sola grabación suya. El umbral se toma de técnicas parecidas: para una técnica espirada por la boca, el valor de otra técnica bucal de la misma familia; para una nasal, el de la familia nasal.</p>
+<p>Esa estimación suele estar más o menos bien, pero no exacta. El texto de la app no lo esconde: donde un valor no tiene fuente, dice «valores iniciales, a medir cuando lleguen datos».</p>
+<h2>Cómo se hace la medición</h2>
+<p>De los usuarios que activan el compartir anónimo y el compartir <a href="/es/guia/que-hacemos-con-los-datos-compartidos.html">muestra de audio</a> llega de vez en cuando el sonido de una sesión. Con él llegan el informe de esa sesión y su cronología en bruto: en qué segundos se esperaban las espiraciones objetivo, en qué momentos la app detectó una espiración y cuál era el <a href="/es/guia/como-escucha-el-microfono.html">suelo de ruido</a>.</p>
+<p>Con las dos cosas juntas la medición se hace posible. El archivo de audio se pasa de nuevo por el código de detección de la app —el mismo código, la misma aritmética— pero con el umbral cambiado. Y entonces la pregunta: <strong>¿con qué umbral se cazaron cuántas espiraciones objetivo, y cuántas detecciones falsas aparecieron?</strong></p>
+<p>El resultado es una tabla:</p>
+<div class="scroll-x"><table><thead><tr><th>umbral</th><th>espiraciones cazadas</th><th>sucesos de más</th></tr></thead><tbody><tr><td>actual</td><td>32/61</td><td>74</td></tr><tr><td>algo más bajo</td><td>35/61</td><td>74</td></tr><tr><td>más bajo todavía</td><td>35/61</td><td>74</td></tr></tbody></table></div>
+<p>Si las capturas suben y las detecciones falsas no, el umbral se baja. Si suben las dos, se deja como está.</p>
+<h2>Un ejemplo real</h2>
+<p>La app tiene un límite inferior al valor que puede tomar el suelo de ruido: impide que los umbrales se vuelvan demasiado sensibles en habitaciones muy silenciosas.</p>
+<p>En una grabación hecha en tableta, el suelo de ruido real medía muy por debajo de ese límite. Como el límite suponía el suelo más alto de lo que era, el margen de la espiración se fundía y no se oía nada: a alguien que espiraba a un palmo de la tableta se le decía «acerca el dispositivo».</p>
+<p>Se barrió con veintiuna grabaciones reales y el límite se bajó: el número de espiraciones cazadas subió y el de detecciones falsas no cambió. Aquella sesión sola pasó de cero sobre cuatro a dos sobre cuatro.</p>
+<p>Una corrección así no se encuentra a ojo. Sin la grabación ni siquiera habríamos sabido que el problema existía.</p>
+<h2>Este es el único trabajo del compartir muestra de audio</h2>
+<p>El sonido que se envía se escucha para esto y para nada más: medir la exactitud de la detección de la respiración. No se usa para ningún otro fin, no se le da a terceros y se borra de tu dispositivo una vez enviado.</p>
+<p>Si está desactivado, nunca se graba sonido en ninguna sesión. La app funciona perfectamente sin este permiso: los umbrales de las técnicas nuevas simplemente se quedan en estimaciones más tiempo.</p>
+<h2>Todavía sin medir</h2>
+<p>Cuando se escriben estas líneas, los umbrales de algunas técnicas siguen funcionando con sus valores iniciales: no se han acumulado suficientes grabaciones. A medida que lleguen, se repite el mismo barrido y los valores se actualizan.</p>
+<p>Así que la exactitud de medida de la app crece junto con la gente que la usa.</p>
+    <p class="geri"><a href="/es/guia/tema/entre-bastidores.html">&#8592; Entre bastidores</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>También puedes leer</h2><ul><li><a href="/es/guia/como-leemos-las-pruebas.html"><strong>Cómo leemos las pruebas</strong><span>La mayoría de los estudios sobre respiración son pequeños, sin control y cortos. En qué se apoya cada frase de la app y qué no escribimos a propósito.</span></a></li><li><a href="/es/guia/como-se-calcula-la-puntuacion.html"><strong>Cómo se puntúa una sesión</strong><span>El número sobre cien es una media ponderada de siete medidas distintas. Cuánto pesa cada una, por qué, y qué no te dice la puntuación.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/es/guia/">Guía</a>
+      <a href="/es/privacidad.html">Privacidad</a>
+      <a href="/es/ayuda.html">Ayuda</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
+(function () {
+  var kok = document.documentElement;
+  var bekleyen = false;
+  function bak() {
+    bekleyen = false;
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+  bak();
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>

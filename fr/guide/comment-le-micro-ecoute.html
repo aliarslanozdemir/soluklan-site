@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comment le micro entend ton souffle — Soluklan</title>
+<meta name="description" content="Si le son n’est pas enregistré, comment l’app mesure-t-elle ton souffle ? Le plancher de bruit, un seuil qui bouge avec la pièce, et comment le début et la fin d’une expiration sont trouvés.">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Comment le micro entend ton souffle — Soluklan">
+<meta property="og:description" content="Si le son n’est pas enregistré, comment l’app mesure-t-elle ton souffle ? Le plancher de bruit, un seuil qui bouge avec la pièce, et comment le début et la fin d’une expiration sont trouvés.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-the-microphone-listens.html">
+<link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-das-mikrofon-hoert.html">
+<link rel="alternate" hreflang="fr" href="https://soluklan.app/fr/guide/comment-le-micro-ecoute.html">
+<link rel="alternate" hreflang="es" href="https://soluklan.app/es/guia/como-escucha-el-microfono.html">
+<link rel="alternate" hreflang="it" href="https://soluklan.app/it/guida/come-ascolta-il-microfono.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css?v=3aa5d051">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/fr/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/fr/">Accueil<i class="cizgi"></i></a>
+      <a href="/fr/guide/" aria-current="page">Guide<i class="cizgi"></i></a>
+      <a href="/fr/aide.html">Aide<i class="cizgi"></i></a>
+      <a href="/fr/confidentialite.html">Confidentialité<i class="cizgi"></i></a>
+    </nav>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/rehber/mikrofon-nasil-dinliyor.html" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/guide/how-the-microphone-listens.html" hreflang="en" lang="en">English</a>
+        <a href="/de/ratgeber/wie-das-mikrofon-hoert.html" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/guide/comment-le-micro-ecoute.html" hreflang="fr" lang="fr" aria-current="true">Français</a>
+        <a href="/es/guia/como-escucha-el-microfono.html" hreflang="es" lang="es">Español</a>
+        <a href="/it/guida/come-ascolta-il-microfono.html" hreflang="it" lang="it">Italiano</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<article class="yazi">
+  <div class="prose">
+    <p class="eyebrow"><a href="/fr/guide/sujet/dans-les-coulisses.html">DANS LES COULISSES</a></p>
+    <h1>Comment le micro entend ton souffle</h1>
+    <p class="lede">Si le son n’est pas enregistré, comment l’app mesure-t-elle ton souffle ? Le plancher de bruit, un seuil qui bouge avec la pièce, et comment le début et la fin d’une expiration sont trouvés.</p>
+    <p class="updated">6 min de lecture</p>
+<p>L’app n’enregistre pas de son. Le flux venant du micro n’est jamais écrit sur le disque ; toutes les vingt millisecondes, le <strong>niveau sonore</strong> de cet instant est calculé, et seul ce nombre est conservé. Ce que l’app détient n’est donc pas un fichier audio mais une suite de nombres : une courbe qui monte et qui descend.</p>
+<p>Toutes les mesures sont faites à partir de cette courbe.</p>
+<h2>Le silence est mesuré d’abord</h2>
+<p>Il y a une écoute de trois secondes au début d’une séance. Pendant ce temps, le <strong>plancher de bruit</strong> de la pièce est mesuré : le ronflement du frigo, la circulation dehors, le bruit électronique de l’appareil lui-même.</p>
+<p>Ce n’est pas une moyenne — on regarde les <strong>moments les plus silencieux</strong> de ces trois secondes. La raison : poser le téléphone sur une table pendant l’étalonnage, ou quelqu’un qui tousse, tire la moyenne vers le haut et laisse le <a href="/fr/guide/mesurer-les-seuils.html">seuil</a> faux pour toute la séance. Dans un enregistrement réel, cela a causé une erreur de quatorze décibels.</p>
+<p>Le plancher est aussi mis à jour pendant la séance. Si la pièce devient plus calme, le seuil descend ; si le bruit monte, il monte — mais seulement dans des limites, sinon l’app se rendrait sourde dans une pièce bruyante.</p>
+<h2>Le seuil n’est pas absolu, il est relatif au plancher</h2>
+<p>Pour qu’un son compte comme une « expiration », il n’a pas à dépasser un niveau de décibels précis. Il doit s’élever <strong>d’une certaine quantité au-dessus du plancher</strong>. Dans une pièce calme ce seuil est bas ; dans un café bruyant il est haut.</p>
+<p>De combien au-dessus du plancher, cela dépend de la technique. Une expiration par la bouche (expiration allongée, lèvres pincées) sort forte. Une expiration calme par le nez (cohérente, carrée) est bien plus basse. Une respiration par une seule narine est la plus basse de toutes. Chaque technique est écoutée avec son propre seuil ; les tenir toutes à la même barre rendrait les techniques nasales inaudibles.</p>
+<h2>Le début et la fin d’une expiration</h2>
+<p>Le niveau sonore brut est trop tremblant pour être utilisé tel quel. Il est d’abord lissé — chaque nouvelle mesure est mêlée à la précédente, pour qu’un simple clic ne devienne pas une expiration.</p>
+<p>L’expiration commence quand la courbe lissée franchit le seuil. Pour qu’elle se termine, l’une des deux conditions suffit : la courbe descend sous le seuil et y reste un tiers de seconde, ou elle chute d’une certaine quantité depuis le pic de l’expiration elle-même. Sans la seconde condition, une inspiration audible prolongerait l’expiration et deux souffles seraient mesurés comme un seul.</p>
+<p>Les événements très courts sont écartés. Pour cela on se sert de la mesure brute plutôt que de la courbe lissée : le lissage étire un clic bref et le fait paraître plus long qu’il n’était.</p>
+<h2>La pièce silencieuse et le problème de la tablette</h2>
+<p>Que les seuils soient relatifs au plancher fonctionne dans la plupart des cas, mais cela comporte un piège : si le plancher est vraiment très bas, le seuil relatif devient trop sensible et chaque craquement de la pièce peut compter comme une expiration. Il y a donc une borne basse sur la valeur que le plancher peut prendre.</p>
+<p>Cette borne a longtemps été trop haute. Dans un enregistrement sur tablette, le vrai plancher de bruit mesurait bien plus bas ; comme la borne supposait le plancher plus haut qu’il n’était, la marge de l’expiration fondait et rien n’était entendu du tout. On disait à quelqu’un qui expirait à une main de la tablette de « rapprocher l’appareil ».</p>
+<p>La borne a été rebalayée sur vingt et un enregistrements réels puis abaissée : le nombre d’expirations attrapées a monté et le nombre de fausses détections n’a pas changé. Des décisions comme celle-là se prennent à partir des enregistrements que nous avons, pas au jugé — c’est le seul travail que fait le partage d’<a href="/fr/guide/ce-que-nous-faisons-des-donnees-partagees.html">échantillon audio</a>.</p>
+<h2>La respiration rapide est un travail à part</h2>
+<p>Cette méthode a une limite : savoir qu’une expiration s’est terminée demande un court silence après elle. Dans une technique qui expire plus d’une fois par seconde, ce silence n’apparaît jamais.</p>
+<p><a href="/fr/guide/kapalabhati.html">Kapalabhati</a> est donc mesurée autrement. Plutôt que d’essayer de séparer les expirations une à une, l’app compte les <strong>instants où la courbe du son fait un pic</strong> et regarde la régularité des écarts. Le compteur attend que la courbe redescende sous le seuil après la fermeture d’un pic — sans cette condition, il comptait chaque expiration deux fois.</p>
+    <p class="geri"><a href="/fr/guide/sujet/dans-les-coulisses.html">&#8592; Dans les coulisses</a></p>
+  </div>
+</article>
+<section class="ilgili"><div class="prose"><h2>À lire aussi</h2><ul><li><a href="/fr/guide/comment-le-score-est-calcule.html"><strong>Comment une séance est notée</strong><span>Le nombre sur cent est une moyenne pondérée de sept mesures distinctes. Le poids de chacune, pourquoi, et ce que le score ne te dit pas.</span></a></li><li><a href="/fr/guide/comment-nous-lisons-les-preuves.html"><strong>Comment nous lisons les preuves</strong><span>La plupart des études sur la respiration sont petites, sans contrôle et courtes. Sur quoi repose chaque phrase de l’app, et ce que nous n’écrivons délibérément pas.</span></a></li></ul></div></section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/fr/guide/">Guide</a>
+      <a href="/fr/confidentialite.html">Confidentialité</a>
+      <a href="/fr/aide.html">Aide</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
+(function () {
+  var kok = document.documentElement;
+  var bekleyen = false;
+  function bak() {
+    bekleyen = false;
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+  bak();
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>
