@@ -42,6 +42,22 @@
 <link rel="stylesheet" href="/assets/soluklan.css?v=3aa5d051">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Leer el informe de tu sesión","description":"Qué significa cada línea del informe y qué hacer con una medida que ha salido baja.","url":"https://soluklan.app/es/guia/leer-el-informe.html","inLanguage":"es","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/es/guia/leer-el-informe.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Cómo se usa","dateModified":"2026-09-13T21:26:56+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guía","item":"https://soluklan.app/es/guia/"},{"@type":"ListItem","position":2,"name":"Cómo se usa","item":"https://soluklan.app/es/guia/tema/como-se-usa.html"},{"@type":"ListItem","position":3,"name":"Leer el informe de tu sesión","item":"https://soluklan.app/es/guia/leer-el-informe.html"}]}</script>
+<script>
+(function () {
+  var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it" };
+  if (location.pathname !== "/") return;          // yönlendirme yalnız kökte
+  try { if (localStorage.getItem("soluklan-dil")) return; } catch (e) { return; }
+  var istekler = navigator.languages || [navigator.language || ""];
+  var hedef = "";
+  for (var i = 0; i < istekler.length && !hedef; i++) {
+    var k = (istekler[i] || "").slice(0, 2).toLowerCase();
+    if (kokler.hasOwnProperty(k)) hedef = k;
+  }
+  if (!hedef) hedef = "en";
+  if (hedef === "tr") return;                     // kök zaten Türkçe
+  location.replace(kokler[hedef] + "/" + location.search + location.hash);
+})();
+</script>
 </head>
 <body>
 <header class="site">
@@ -171,6 +187,35 @@
     clearTimeout(zamanlayici);
     zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
   });
+})();
+
+/* Dil seçici: kullanıcının kendi dili listenin başında durur ve seçtiği dil hatırlanır.
+   Sıralama betikle yapılıyor çünkü sayfa statik: aynı HTML herkese gidiyor, "en üstte olan"
+   ise kişiye göre değişiyor. Seçim `localStorage`a yazılınca kökteki yönlendirme de bir daha
+   karışmıyor — kullanıcı kararını bir kez veriyor (Ali, 13 Eylül 2026). */
+(function () {
+  var liste = document.querySelector('.dil-liste');
+  if (!liste) return;
+  var baglar = [].slice.call(liste.querySelectorAll('a'));
+
+  baglar.forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('soluklan-dil', a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+
+  var tercih = '';
+  try { tercih = localStorage.getItem('soluklan-dil') || ''; } catch (e) {}
+  if (!tercih) {
+    var istekler = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < istekler.length && !tercih; i++) {
+      var k = (istekler[i] || '').slice(0, 2).toLowerCase();
+      if (baglar.some(function (a) { return a.getAttribute('hreflang') === k; })) tercih = k;
+    }
+  }
+  if (!tercih) return;
+  var ilk = baglar.filter(function (a) { return a.getAttribute('hreflang') === tercih; })[0];
+  if (ilk && ilk !== baglar[0]) liste.insertBefore(ilk, liste.firstChild);
 })();
 
 /* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
