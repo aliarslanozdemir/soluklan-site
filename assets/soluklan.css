@@ -1410,12 +1410,12 @@ html:has(.slaytlar) body::before {
    temposu gerçek zamanlı dönüyor: yazı "dört al, yedi tut, sekiz ver" diyor,
    halka bunun ne demek olduğunu gösteriyor.
    --------------------------------------------------------------------------- */
-.ritim {
+.tempo {
   display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;
   margin: 1.75rem 0 2rem; padding: 1.1rem 1.25rem;
   border: 1px solid var(--line); border-radius: 18px; background: var(--bg-2);
 }
-.ritim-daire {
+.tempo-daire {
   position: relative; flex: none;
   width: 96px; height: 96px; border-radius: 50%;
   display: grid; place-items: center;
@@ -1423,23 +1423,134 @@ html:has(.slaytlar) body::before {
   transform: scale(.55);
   transition: transform .2s linear;
 }
-.ritim-faz {
+.tempo-faz {
   font-family: var(--display); font-weight: 700; font-size: .95rem;
   letter-spacing: .01em; text-align: center; line-height: 1.15;
   white-space: pre-line;          /* faz adı ve kalan saniye alt alta */
   font-variant-numeric: tabular-nums;
 }
-.ritim-yan { flex: 1 1 12rem; min-width: 0; }
-.ritim-baslik { margin: 0 0 .5rem; font-weight: 600; }
-.ritim-tempo { font-family: var(--data); color: var(--ink-2); font-weight: 400; font-size: .9em; }
-.ritim-dugme {
+.tempo-yan { flex: 1 1 12rem; min-width: 0; }
+.tempo-baslik { margin: 0 0 .5rem; font-weight: 600; }
+.tempo-tempo { font-family: var(--data); color: var(--ink-2); font-weight: 400; font-size: .9em; }
+.tempo-dugme {
   font: inherit; font-size: .9rem; cursor: pointer;
   padding: .45rem 1.1rem; border-radius: 999px;
   border: 1px solid var(--breath); background: var(--breath); color: #fff;
 }
-.ritim-dugme[aria-pressed="true"] { background: transparent; color: var(--breath); }
-.ritim-not { margin: .5rem 0 0; }
+.tempo-dugme[aria-pressed="true"] { background: transparent; color: var(--breath); }
+.tempo-not { margin: .5rem 0 0; }
 /* Hareket azaltılmışsa halka büyüyüp küçülmüyor; faz adı ve sayaç yine değişiyor */
 @media (prefers-reduced-motion: reduce) {
-  .ritim-daire { transition: none; transform: scale(.8) !important; }
+  .tempo-daire { transition: none; transform: scale(.8) !important; }
 }
+
+/* ---------------------------------------------------------------------------
+   "Burada dene" — ana sayfada teknik ve süre seçip sayfada gerçek bir tur
+   çalıştırma. Hesap, ölçüm ve kayıt yok: yalnız daire ve tempo.
+   --------------------------------------------------------------------------- */
+.dene {
+  margin-top: 2rem; padding: clamp(1.1rem, 3vw, 1.6rem);
+  border: 1px solid var(--line); border-radius: 20px;
+  background: var(--card); box-shadow: var(--shadow);
+}
+.dene-ust { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+.dene-daire {
+  flex: none; width: 132px; height: 132px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--gradient); color: #fff;
+  transform: scale(.55); transition: transform .2s linear;
+}
+.dene-faz {
+  font-family: var(--display); font-weight: 700; font-size: 1.05rem;
+  text-align: center; line-height: 1.15; white-space: pre-line;
+  font-variant-numeric: tabular-nums;
+}
+.dene-yan { flex: 1 1 15rem; min-width: 0; }
+.dene-yan h3 { margin: 0 0 .25rem; font-size: 1.15rem; }
+.dene-yan p { margin: .25rem 0; }
+.dene-durum {
+  font-family: var(--data); font-size: .85rem; color: var(--ink-2);
+  min-height: 1.3em; font-variant-numeric: tabular-nums;
+}
+.dene-dugme {
+  font: inherit; font-size: .95rem; cursor: pointer; margin-top: .35rem;
+  padding: .5rem 1.4rem; border-radius: 999px;
+  border: 1px solid var(--breath); background: var(--breath); color: #fff;
+}
+.dene-dugme[aria-pressed="true"] { background: transparent; color: var(--breath); }
+
+.dene-secim { display: flex; gap: .45rem; flex-wrap: wrap; margin-top: 1.1rem; }
+.dene-teknikler { padding-top: 1rem; border-top: 1px solid var(--line-soft); }
+.dene-secim button {
+  font: inherit; font-size: .82rem; cursor: pointer; line-height: 1.25;
+  display: flex; flex-direction: column; align-items: flex-start; gap: .1rem;
+  padding: .4rem .75rem; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--bg-2); color: var(--ink);
+}
+.dene-secim button span { font-family: var(--data); font-size: .72rem; color: var(--ink-3); }
+.dene-secim button[aria-pressed="true"] {
+  border-color: var(--breath); background: color-mix(in srgb, var(--breath) 10%, transparent);
+}
+.dene-secim button[aria-pressed="true"] span { color: var(--breath); }
+.dene-sureler button { flex-direction: row; border-radius: 999px; }
+@media (prefers-reduced-motion: reduce) {
+  .dene-daire { transition: none; transform: scale(.8) !important; }
+}
+
+/* ---------------------------------------------------------------------------
+   Site içi arama. Menü öğelerinin sağında, dil seçicinin solunda bir büyüteç;
+   basınca ortada bir katman açılıyor. İndeks (arama.json) yalnız ilk açılışta
+   indiriliyor — sayfa yükünü artırmasın.
+   --------------------------------------------------------------------------- */
+.ara-ac {
+  display: grid; place-items: center; cursor: pointer;
+  width: 2.1rem; height: 2.1rem; margin-left: .35rem;
+  border: 0; border-radius: 999px; background: transparent; color: var(--ink-2);
+}
+.ara-ac:hover { background: var(--bg-2); color: var(--ink); }
+.ara-ac svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; }
+
+.ara-katman {
+  position: fixed; inset: 0; z-index: 60;
+  display: flex; justify-content: center;
+  padding: clamp(1rem, 6vh, 4.5rem) 1rem 1rem;
+  background: color-mix(in srgb, var(--ink) 45%, transparent);
+  backdrop-filter: blur(3px);
+}
+.ara-katman[hidden] { display: none; }
+.ara-kutu {
+  width: min(44rem, 100%); max-height: 100%;
+  display: flex; flex-direction: column;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 18px; box-shadow: 0 24px 60px rgba(15,30,51,.25); overflow: hidden;
+}
+.ara-ust { display: flex; align-items: center; gap: .5rem; padding: .8rem 1rem; border-bottom: 1px solid var(--line-soft); }
+.ara-ust svg { width: 1.15rem; height: 1.15rem; flex: none; fill: none; stroke: var(--ink-3); stroke-width: 2; stroke-linecap: round; }
+.ara-girdi {
+  font: inherit; font-size: 1.05rem; flex: 1 1 auto; min-width: 0;
+  border: 0; background: transparent; color: var(--ink); outline: none;
+}
+.ara-kapat {
+  font: inherit; font-size: .82rem; cursor: pointer; flex: none;
+  padding: .3rem .7rem; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg-2); color: var(--ink-2);
+}
+.ara-sayac { padding: .5rem 1rem 0; font-size: .8rem; color: var(--ink-3); }
+.ara-liste { list-style: none; margin: 0; padding: .5rem; overflow-y: auto; }
+.ara-liste li { margin: 0; }
+.ara-liste a {
+  display: block; padding: .6rem .75rem; border-radius: 12px;
+  color: inherit; text-decoration: none;
+}
+.ara-liste a:hover, .ara-liste a:focus-visible, .ara-liste li[aria-selected="true"] a {
+  background: var(--bg-2); outline: none;
+}
+.ara-tur {
+  font-size: .7rem; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--breath); font-weight: 600;
+}
+.ara-baslik { display: block; font-weight: 600; margin: .1rem 0; }
+.ara-parca { display: block; font-size: .85rem; color: var(--ink-2); }
+.ara-parca mark { background: color-mix(in srgb, var(--breath) 22%, transparent); color: inherit; border-radius: 3px; }
+.ara-bos { padding: 1.5rem 1rem; color: var(--ink-2); text-align: center; }
+@media (prefers-reduced-motion: reduce) { .ara-katman { backdrop-filter: none; } }
