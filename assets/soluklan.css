@@ -497,7 +497,9 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
 
 /* --- Aşağı ok: sade, renksiz, yarı saydam, inip çıkıyor --- */
 .kaydir {
-  position: absolute; inset-inline: 0; bottom: clamp(1.5rem, 4vh, 2.75rem); z-index: 3;
+  /* Ekrana sabit: slayt içeriği uzun olunca slaytın dibi ekranın dışına taşıyor ve
+     `absolute` ok'u oraya götürüyordu (Ali, 14 Eylül 2026). */
+  position: fixed; inset-inline: 0; bottom: clamp(1.5rem, 4vh, 2.75rem); z-index: 3;
   margin-inline: auto; width: 2.75rem; height: 2.75rem;
   display: grid; place-items: center;
   color: currentColor; opacity: 0; pointer-events: none;
