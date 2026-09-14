@@ -1406,43 +1406,48 @@ html:has(.slaytlar) body::before {
 @media (prefers-reduced-motion: reduce) { .puan-yay { transition: none; } }
 
 /* ---------------------------------------------------------------------------
-   Ritim halkası — teknik yazılarının başında. Oynat'a basınca o tekniğin
-   temposu gerçek zamanlı dönüyor: yazı "dört al, yedi tut, sekiz ver" diyor,
-   halka bunun ne demek olduğunu gösteriyor.
+   Tempo şeridi — teknik yazılarının başında, "ritmi gör".
+   Şerit bir döngünün tamamı: parçaların genişliği fazların süresiyle orantılı,
+   üstünde ilerleyen bir işaret. Daire yerine şerit, çünkü döngünün oranları ve
+   Kapalabhati gibi yirmi beş darbeli bir tempo ancak böyle görünüyor.
    --------------------------------------------------------------------------- */
 .tempo {
-  display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;
   margin: 1.75rem 0 2rem; padding: 1.1rem 1.25rem;
   border: 1px solid var(--line); border-radius: 18px; background: var(--bg-2);
 }
-.tempo-daire {
-  position: relative; flex: none;
-  width: 96px; height: 96px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--gradient); color: #fff;
-  transform: scale(.55);
-  transition: transform .2s linear;
-}
-.tempo-faz {
-  font-family: var(--display); font-weight: 700; font-size: .95rem;
-  letter-spacing: .01em; text-align: center; line-height: 1.15;
-  white-space: pre-line;          /* faz adı ve kalan saniye alt alta */
-  font-variant-numeric: tabular-nums;
-}
-.tempo-yan { flex: 1 1 12rem; min-width: 0; }
-.tempo-baslik { margin: 0 0 .5rem; font-weight: 600; }
-.tempo-tempo { font-family: var(--data); color: var(--ink-2); font-weight: 400; font-size: .9em; }
+.tempo-ust { display: flex; gap: 1rem; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.tempo-baslik { margin: 0; font-weight: 600; }
+.tempo-deger { font-family: var(--data); color: var(--ink-2); font-weight: 400; font-size: .9em; }
 .tempo-dugme {
-  font: inherit; font-size: .9rem; cursor: pointer;
-  padding: .45rem 1.1rem; border-radius: 999px;
+  font: inherit; font-size: .9rem; cursor: pointer; flex: none;
+  padding: .4rem 1.05rem; border-radius: 999px;
   border: 1px solid var(--breath); background: var(--breath); color: #fff;
 }
 .tempo-dugme[aria-pressed="true"] { background: transparent; color: var(--breath); }
-.tempo-not { margin: .5rem 0 0; }
-/* Hareket azaltılmışsa halka büyüyüp küçülmüyor; faz adı ve sayaç yine değişiyor */
-@media (prefers-reduced-motion: reduce) {
-  .tempo-daire { transition: none; transform: scale(.8) !important; }
+
+.tempo-serit {
+  position: relative; display: flex; gap: 1px;
+  height: 1.6rem; margin: .9rem 0 .5rem;
+  border-radius: 10px; overflow: hidden; background: var(--line-soft);
 }
+.tempo-serit i { display: block; min-width: 1px; }
+.tempo-serit .al  { background: var(--breath); }
+.tempo-serit .tut { background: color-mix(in srgb, var(--ink-3) 45%, transparent); }
+.tempo-serit .ver { background: var(--glow); }
+/* İşaret: şeridin üstünde soldan sağa kayan ince bir çizgi */
+.tempo-isaret {
+  position: absolute; top: -2px; bottom: -2px; left: 0; width: 3px;
+  background: var(--ink); border-radius: 2px; opacity: 0;
+  box-shadow: 0 0 0 2px var(--bg-2);
+  transform: translateX(0);
+}
+.tempo.calisiyor .tempo-isaret { opacity: 1; }
+.tempo-faz {
+  margin: 0; min-height: 1.4em;
+  font-family: var(--display); font-weight: 600; font-variant-numeric: tabular-nums;
+}
+.tempo-not { margin: .35rem 0 0; }
+@media (prefers-reduced-motion: reduce) { .tempo-isaret { transition: none; } }
 
 /* ---------------------------------------------------------------------------
    "Burada dene" — ana sayfada teknik ve süre seçip sayfada gerçek bir tur
@@ -1512,14 +1517,16 @@ html:has(.slaytlar) body::before {
 
 .ara-katman {
   position: fixed; inset: 0; z-index: 60;
-  display: flex; justify-content: center;
-  padding: clamp(1rem, 6vh, 4.5rem) 1rem 1rem;
+  /* `align-items: flex-start`: kutu içeriğe göre boylanıyor. Varsayılan `stretch` iken
+     hiçbir şey yazılmamışken bile ekranı boydan boya kaplıyordu (Ali, 14 Eylül 2026). */
+  display: flex; justify-content: center; align-items: flex-start;
+  padding: clamp(1rem, 8vh, 5rem) 1rem 1rem;
   background: color-mix(in srgb, var(--ink) 45%, transparent);
   backdrop-filter: blur(3px);
 }
 .ara-katman[hidden] { display: none; }
 .ara-kutu {
-  width: min(44rem, 100%); max-height: 100%;
+  width: min(36rem, 100%); max-height: min(70vh, 40rem);
   display: flex; flex-direction: column;
   background: var(--card); border: 1px solid var(--line);
   border-radius: 18px; box-shadow: 0 24px 60px rgba(15,30,51,.25); overflow: hidden;
@@ -1535,8 +1542,11 @@ html:has(.slaytlar) body::before {
   padding: .3rem .7rem; border-radius: 999px;
   border: 1px solid var(--line); background: var(--bg-2); color: var(--ink-2);
 }
+/* Boşken hiç yer kaplamasın: kutu yalnız arama çubuğu kadar kalıyor */
 .ara-sayac { padding: .5rem 1rem 0; font-size: .8rem; color: var(--ink-3); }
+.ara-sayac:empty { display: none; }
 .ara-liste { list-style: none; margin: 0; padding: .5rem; overflow-y: auto; }
+.ara-liste:empty { display: none; }
 .ara-liste li { margin: 0; }
 .ara-liste a {
   display: block; padding: .6rem .75rem; border-radius: 12px;
@@ -1554,3 +1564,16 @@ html:has(.slaytlar) body::before {
 .ara-parca mark { background: color-mix(in srgb, var(--breath) 22%, transparent); color: inherit; border-radius: 3px; }
 .ara-bos { padding: 1.5rem 1rem; color: var(--ink-2); text-align: center; }
 @media (prefers-reduced-motion: reduce) { .ara-katman { backdrop-filter: none; } }
+
+/* Arama katmanının içinde "ritmi gör": sonuçta araca basınca sayfaya gitmek yerine
+   aracın kendisi açılıyor ve hangi tekniğin ritminin görüleceği yine aynı kutudan
+   aranıyor (Ali, 14 Eylül 2026). */
+/* Araç kartı içeriğe göre boylanıyor, kısalan yalnız liste olsun */
+.ara-arac-kap { flex: none; padding: .75rem 1rem .25rem; }
+.ara-arac-kap .tempo { margin: 0; }
+.ara-liste { flex: 1 1 auto; min-height: 0; }
+.ara-geri {
+  font: inherit; font-size: .82rem; cursor: pointer; flex: none; white-space: nowrap;
+  padding: .35rem .7rem; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--bg-2); color: var(--ink-2);
+}

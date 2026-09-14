@@ -39,7 +39,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=d1095ea0">
+<link rel="stylesheet" href="/assets/soluklan.css?v=c43c8369">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Cosa c’è nella schermata di sessione","description":"Il cerchio, l’etichetta di fase, l’onda sonora, il contatore e il menu di pausa. A cosa serve ogni cosa che vedi durante una sessione.","url":"https://soluklan.app/it/guida/la-schermata-di-sessione.html","inLanguage":"it","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/it/guida/la-schermata-di-sessione.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Come si usa","dateModified":"2026-09-13T21:26:56+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guida","item":"https://soluklan.app/it/guida/"},{"@type":"ListItem","position":2,"name":"Come si usa","item":"https://soluklan.app/it/guida/argomento/come-si-usa.html"},{"@type":"ListItem","position":3,"name":"Cosa c’è nella schermata di sessione","item":"https://soluklan.app/it/guida/la-schermata-di-sessione.html"}]}</script>
 <script>
@@ -83,7 +83,9 @@
     <button type="button" class="ara-ac" aria-label="Cerca" title="Cerca"
             data-indeks="/it/arama.json" data-baslik="Cerca nel sito" data-ipucu="Scrivi una parola, una frase o un argomento"
             data-yok="Nessun risultato" data-kapat="Chiudi" data-sonuc="%s risultati"
-            data-yazi="articolo" data-soru="domanda" data-sayfa="pagina" data-arac="strumento">
+            data-yazi="articolo" data-soru="domanda" data-sayfa="pagina" data-arac="strumento"
+            data-geri="Indietro" data-teknik="Cerca una tecnica"
+            data-baslat="Avvia" data-durdur="Ferma">
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
     </button>
     <details class="dil-sec">
@@ -210,27 +212,52 @@
       .normalize('NFD').replace(/[̀-ͯ]/g, '');
   }
 
+  function kutuHtml() {
+    return '<div class="ara-ust">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>' +
+      '<input class="ara-girdi" type="search" autocomplete="off" spellcheck="false" placeholder="' +
+      m.ipucu + '" aria-label="' + m.baslik + '">' +
+      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
+      '</div><p class="ara-sayac"></p><ul class="ara-liste"></ul>';
+  }
+
+  /* Kutu içeriği araç modunda değişip geri dönebildiği için girdiler her seferinde
+     yeniden bağlanıyor. */
+  function bagla() {
+    girdi = katman.querySelector('.ara-girdi');
+    liste = katman.querySelector('.ara-liste');
+    sayac = katman.querySelector('.ara-sayac');
+    if (aracTempo) { aracTempo.dur(); aracTempo = null; }
+    girdi.addEventListener('input', function () { secili = -1; ara(); });
+    girdi.addEventListener('keydown', gezin);
+    girdi.focus();
+    ara();
+  }
+
   function kur() {
     katman = document.createElement('div');
     katman.className = 'ara-katman';
     katman.hidden = true;
-    katman.innerHTML =
-      '<div class="ara-kutu" role="dialog" aria-modal="true" aria-label="' + m.baslik + '">' +
-      '<div class="ara-ust">' +
-      '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>' +
-      '<input class="ara-girdi" type="search" autocomplete="off" spellcheck="false" placeholder="' + m.ipucu + '" aria-label="' + m.baslik + '">' +
-      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
-      '</div><p class="ara-sayac"></p><ul class="ara-liste"></ul></div>';
+    katman.innerHTML = '<div class="ara-kutu" role="dialog" aria-modal="true" aria-label="' +
+                       m.baslik + '">' + kutuHtml() + '</div>';
     document.body.appendChild(katman);
-    girdi = katman.querySelector('.ara-girdi');
-    liste = katman.querySelector('.ara-liste');
-    sayac = katman.querySelector('.ara-sayac');
+    bagla();
 
     katman.addEventListener('click', function (e) {
-      if (e.target === katman || e.target.closest('.ara-kapat')) kapat();
+      if (e.target === katman || e.target.closest('.ara-kapat')) return kapat();
+      if (e.target.closest('.ara-geri')) { katman.querySelector('.ara-kutu').innerHTML = kutuHtml(); bagla(); return; }
+      var t = e.target.closest('[data-teknik]');
+      if (t) { e.preventDefault(); return aracSec(+t.dataset.teknik); }
+      var a = e.target.closest('[data-arac]');
+      if (a) {
+        e.preventDefault();
+        var kayit = (kayitlar || []).filter(function (k) { return k.x === a.dataset.arac; })[0];
+        if (kayit) aracGoster(kayit);
+      }
     });
-    girdi.addEventListener('input', function () { secili = -1; ara(); });
-    girdi.addEventListener('keydown', function (e) {
+  }
+
+  function gezin(e) {
       var ogeler = liste.querySelectorAll('li');
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
@@ -244,7 +271,6 @@
         var hedef = ogeler[secili < 0 ? 0 : secili];
         if (hedef) { e.preventDefault(); hedef.querySelector('a').click(); }
       }
-    });
   }
 
   function kapat() {
@@ -304,10 +330,70 @@
     liste.innerHTML = bulunan.map(function (x) {
       var k = x.k;
       var alinti = parca(k.o, kelimeler[0]) || parca(k.g, kelimeler[0]) || '';
-      return '<li><a href="' + k.u + '"><span class="ara-tur">' + (m[k.t] || '') + '</span>' +
+      return '<li><a href="' + k.u + '"' + (k.x ? ' data-arac="' + k.x + '"' : '') +
+             '><span class="ara-tur">' + (m[k.t] || '') + '</span>' +
              '<span class="ara-baslik">' + k.b.replace(/</g, '&lt;') + '</span>' +
              (alinti ? '<span class="ara-parca">' + alinti + '</span>' : '') + '</a></li>';
     }).join('');
+  }
+
+  /* "Ritmi gör" sonucuna basılınca sayfaya gitmek yerine aracın kendisi burada açılıyor;
+     hangi tekniğin ritmi görüleceği yine aynı kutudan aranıyor (Ali, 14 Eylül 2026). */
+  var aracVeri = null, aracGirdi, aracListe, aracSerit, aracTempo;
+
+  /* Şerit HTML'i: `data-fazlar` burada değil, DOM üzerinden atanıyor — JSON tırnakları
+     dizge içinde kaçırmaya çalışmak kırılgan (14 Eylül 2026). */
+  function seritHtml(t) {
+    var parcalar = t.fazlar.map(function (f) {
+      return '<i class="' + f.tur + '" style="flex:' + f.sn + '"></i>';
+    }).join('');
+    return '<div class="tempo">' +
+      '<div class="tempo-ust"><p class="tempo-baslik">' + t.ad +
+      ' <span class="tempo-deger">' + t.tempo + '</span></p>' +
+      '<button type="button" class="tempo-dugme" data-oynat="' + m.baslat +
+      '" data-durdur="' + m.durdur + '">' + m.baslat + '</button></div>' +
+      '<div class="tempo-serit"><span class="tempo-isaret"></span>' + parcalar + '</div>' +
+      '<p class="tempo-faz"></p></div>';
+  }
+
+  function aracListesi() {
+    var soru = sadelestir(aracGirdi.value).trim();
+    var uyan = aracVeri.filter(function (t) {
+      return !soru || sadelestir(t.ad).indexOf(soru) >= 0 || sadelestir(t.tempo).indexOf(soru) >= 0;
+    });
+    aracListe.innerHTML = uyan.map(function (t, i) {
+      return '<li><a href="#" data-teknik="' + aracVeri.indexOf(t) + '">' +
+             '<span class="ara-baslik">' + t.ad + '</span>' +
+             '<span class="ara-parca">' + t.tempo + '</span></a></li>';
+    }).join('') || '<li class="ara-bos">' + m.yok + '</li>';
+  }
+
+  function aracGoster(k) {
+    aracVeri = k.d || [];
+    katman.querySelector('.ara-kutu').innerHTML =
+      '<div class="ara-ust">' +
+      '<button type="button" class="ara-geri">&#8592; ' + m.geri + '</button>' +
+      '<input class="ara-girdi" type="search" autocomplete="off" placeholder="' + m.teknik + '" aria-label="' + m.teknik + '">' +
+      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
+      '</div><div class="ara-arac-kap"></div><ul class="ara-liste"></ul>';
+    aracGirdi = katman.querySelector('.ara-girdi');
+    aracListe = katman.querySelector('.ara-liste');
+    aracSerit = katman.querySelector('.ara-arac-kap');
+    aracGirdi.addEventListener('input', aracListesi);
+    aracListesi();
+    aracSec(0);
+    aracGirdi.focus();
+  }
+
+  function aracSec(i) {
+    var t = aracVeri[i];
+    if (!t) return;
+    if (aracTempo) aracTempo.dur();
+    aracSerit.innerHTML = seritHtml(t);
+    var el = aracSerit.querySelector('.tempo');
+    el.dataset.fazlar = JSON.stringify(t.fazlar);
+    el.dataset.toplam = t.fazlar.reduce(function (a, f) { return a + f.sn; }, 0);
+    aracTempo = window.SoluklanTempo(el);
   }
 
   function acKatman() {
@@ -345,8 +431,8 @@
   var durum = kap.querySelector('.dene-durum');
   var dugme = kap.querySelector('.dene-dugme');
   var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var secili = 0, dakika = 2;
-  var calisiyor = false, indeks = 0, basladi = 0, bitis = 0, tur = 0, kare = 0, son = 0.55;
+  var secili = 0;
+  var calisiyor = false, indeks = 0, basladi = 0, acilis = 0, tur = 0, kare = 0, son = 0.55;
 
   function fazlar() { return teknikler[secili].fazlar; }
 
@@ -363,7 +449,6 @@
   }
 
   function ciz(t) {
-    if (t >= bitis) return bitir();
     var liste = fazlar();
     var faz = liste[indeks];
     var gecen = (t - basladi) / 1000;
@@ -378,30 +463,27 @@
     var oran = Math.min(1, gecen / faz.sn);
     yazi.textContent = faz.ad + '\n' + Math.max(0, Math.ceil(faz.sn - gecen));
     daire.style.transform = 'scale(' + boy(faz, oran).toFixed(3) + ')';
-    durum.textContent = sure((bitis - t) / 1000);
+    durum.textContent = sure((t - acilis) / 1000);
     kare = requestAnimationFrame(ciz);
   }
 
-  function bitir() {
+  /* Süre seçimi yok (Ali, 14 Eylül 2026): Başlat'a basılınca dönüyor, Durdur'a basılınca
+     duruyor ve kaç tur yapıldığı yazıyor. Seçilecek bir şey azaldıkça pano da sadeleşti. */
+  function dur() {
     calisiyor = false;
     cancelAnimationFrame(kare);
     dugme.textContent = dugme.dataset.basla;
     dugme.setAttribute('aria-pressed', 'false');
     yazi.textContent = '';
     daire.style.transform = 'scale(.55)';
-    durum.textContent = kap.dataset.bitti.replace('%s', tur);
-  }
-
-  function dur() {
-    bitir();
-    durum.textContent = kap.dataset.hazir;
+    durum.textContent = tur ? kap.dataset.bitti.replace('%s', tur) : kap.dataset.hazir;
   }
 
   function basla() {
     calisiyor = true;
     indeks = 0; tur = 0; son = 0.55;
     basladi = performance.now();
-    bitis = basladi + dakika * 60000;
+    acilis = basladi;
     dugme.textContent = dugme.dataset.durdur;
     dugme.setAttribute('aria-pressed', 'true');
     kare = requestAnimationFrame(ciz);
@@ -417,12 +499,6 @@
       kap.querySelectorAll('[data-teknik]').forEach(function (x) {
         x.setAttribute('aria-pressed', String(x === b));
       });
-    } else if (b.dataset.dk !== undefined) {
-      if (calisiyor) dur();
-      dakika = +b.dataset.dk;
-      kap.querySelectorAll('[data-dk]').forEach(function (x) {
-        x.setAttribute('aria-pressed', String(x === b));
-      });
     }
   });
 
@@ -431,62 +507,50 @@
   });
 })();
 
-/* Ritim halkası: teknik yazısının başında o tekniğin temposu. Alışta büyüyor, verişte
-   küçülüyor, tutuşta duruyor — uygulamadaki dairenin aynısı. Ses yok, arka planda
-   çalışmıyor: sekme gizlenince duruyor (Ali, 13 Eylül 2026). */
-(function () {
-  var kap = document.querySelector('.tempo');
-  if (!kap) return;
+/* Tempo şeridi: bir döngünün tamamı şeritte, üstünde ilerleyen bir işaret. Ses yok,
+   sekme gizlenince duruyor. Daire yerine şerit (Ali, 14 Eylül 2026).
+
+   Kurucu global: aynı şerit hem teknik yazısında hem arama kutusunun içindeki "ritmi gör"
+   aracında kullanılıyor, mantık iki yere kopyalanmasın. */
+window.SoluklanTempo = function (kap) {
   var fazlar;
   try { fazlar = JSON.parse(kap.dataset.fazlar); } catch (e) { return; }
   if (!fazlar || !fazlar.length) return;
 
-  var daire = kap.querySelector('.tempo-daire');
+  var toplam = +kap.dataset.toplam || fazlar.reduce(function (a, f) { return a + f.sn; }, 0);
+  var serit = kap.querySelector('.tempo-serit');
+  var isaret = kap.querySelector('.tempo-isaret');
   var yazi = kap.querySelector('.tempo-faz');
   var dugme = kap.querySelector('.tempo-dugme');
-  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var calisiyor = false, indeks = 0, basladi = 0, kare = 0;
-
-  var son = 0.55;
+  if (!serit || !isaret || !yazi || !dugme) return;
+  var calisiyor = false, basladi = 0, kare = 0;
 
   function ciz(t) {
-    var faz = fazlar[indeks];
-    var gecen = (t - basladi) / 1000;
-    if (gecen >= faz.sn) {
-      son = hedefBoy(faz, 1);
-      indeks = (indeks + 1) % fazlar.length;
-      basladi = t;
-      gecen = 0;
-      faz = fazlar[indeks];
+    var gecen = ((t - basladi) / 1000) % toplam;
+    isaret.style.transform = 'translateX(' + (gecen / toplam * serit.clientWidth).toFixed(1) + 'px)';
+    var birikim = 0, faz = fazlar[0];
+    for (var i = 0; i < fazlar.length; i++) {
+      if (gecen < birikim + fazlar[i].sn) { faz = fazlar[i]; break; }
+      birikim += fazlar[i].sn;
     }
-    var oran = Math.min(1, gecen / faz.sn);
-    var kalan = Math.max(0, Math.ceil(faz.sn - gecen));
-    yazi.textContent = faz.ad + '\n' + kalan;
-    daire.style.transform = 'scale(' + hedefBoy(faz, oran).toFixed(3) + ')';
+    yazi.textContent = faz.ad + ' ' + Math.max(0, Math.ceil(birikim + faz.sn - gecen));
     if (calisiyor) kare = requestAnimationFrame(ciz);
-  }
-
-  function hedefBoy(faz, oran) {
-    if (azalt) return 0.8;
-    if (faz.tur === 'al') return 0.55 + 0.45 * oran;
-    if (faz.tur === 'ver') return 1 - 0.45 * oran;
-    return son;
   }
 
   function dur() {
     calisiyor = false;
     cancelAnimationFrame(kare);
+    kap.classList.remove('calisiyor');
     dugme.textContent = dugme.dataset.oynat;
     dugme.setAttribute('aria-pressed', 'false');
     yazi.textContent = '';
-    daire.style.transform = 'scale(.55)';
-    indeks = 0; son = 0.55;
+    isaret.style.transform = 'translateX(0)';
   }
 
   dugme.addEventListener('click', function () {
     if (calisiyor) return dur();
     calisiyor = true;
-    indeks = 0; son = 0.55;
+    kap.classList.add('calisiyor');
     basladi = performance.now();
     dugme.textContent = dugme.dataset.durdur;
     dugme.setAttribute('aria-pressed', 'true');
@@ -496,6 +560,12 @@
   document.addEventListener('visibilitychange', function () {
     if (document.hidden && calisiyor) dur();
   });
+  return { dur: dur };
+};
+
+(function () {
+  var kap = document.querySelector('.tempo');
+  if (kap) window.SoluklanTempo(kap);
 })();
 
 /* Puan panosu: kaydırıcılar oynayınca puanın nasıl kurulduğu görünüyor.
