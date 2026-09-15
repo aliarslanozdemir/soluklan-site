@@ -534,7 +534,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/en/privacy.html</loc><lastmod>2026-09-13</lastmod>
+  <url><loc>https://soluklan.app/en/privacy.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -787,7 +787,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/en/guide/managing-your-data.html</loc><lastmod>2026-09-13</lastmod>
+  <url><loc>https://soluklan.app/en/guide/managing-your-data.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idarat-bayanatik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-daten-verwalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/managing-your-data.html"/>
@@ -952,7 +952,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kilitli-teknikleri-acmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiesuo-huxifa.html"/>
   </url>
-  <url><loc>https://soluklan.app/en/guide/what-we-do-with-shared-data.html</loc><lastmod>2026-09-13</lastmod>
+  <url><loc>https://soluklan.app/en/guide/what-we-do-with-shared-data.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/was-wir-mit-geteilten-daten-machen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/what-we-do-with-shared-data.html"/>
@@ -3006,7 +3006,7 @@
   </url>
   <url><loc>https://soluklan.app/it/guida/argomento/tecniche.html</loc>
   </url>
-  <url><loc>https://soluklan.app/ar/</loc>
+  <url><loc>https://soluklan.app/ar/</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/"/>
@@ -3017,7 +3017,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/</loc>
+  <url><loc>https://soluklan.app/ar/dalil/</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/"/>
@@ -3028,7 +3028,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dam.html</loc>
+  <url><loc>https://soluklan.app/ar/dam.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dam.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/hilfe.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/support.html"/>
@@ -3039,7 +3039,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/khususiya.html</loc>
+  <url><loc>https://soluklan.app/ar/khususiya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -3050,7 +3050,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/gizlilik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/yinsi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/4-7-8.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/4-7-8.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/4-7-8.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/vier-sieben-acht.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/four-seven-eight.html"/>
@@ -3061,7 +3061,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/dort-yedi-sekiz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/4-7-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/mehr-aus-der-app-herausholen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/getting-the-most-out-of-it.html"/>
@@ -3072,7 +3072,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uygulamadan-en-cok-verimi-almak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/al-amiq-al-batee.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/al-amiq-al-batee.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-amiq-al-batee.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/tief-und-langsam.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/deep-and-slow.html"/>
@@ -3083,7 +3083,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/derin-ve-yavas.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shen-er-man.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/was-wir-mit-geteilten-daten-machen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/what-we-do-with-shared-data.html"/>
@@ -3094,7 +3094,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/paylasilan-veriyle-ne-yapiyoruz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fenxiang-de-shuju.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/al-khalfiyat-wal-fusul.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/al-khalfiyat-wal-fusul.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-khalfiyat-wal-fusul.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/hintergruende-und-jahreszeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/backgrounds-and-seasons.html"/>
@@ -3105,7 +3105,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/zemin-ve-mevsimler.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/beijing-yu-jijie.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/al-widget-wan-nashat-al-mubashir.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/al-widget-wan-nashat-al-mubashir.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-widget-wan-nashat-al-mubashir.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/widgets-und-live-aktivitaet.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/widgets-and-live-activity.html"/>
@@ -3116,7 +3116,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/widget-ve-canli-etkinlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xiao-zujian.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/an-nafas-al-mubarrid.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/an-nafas-al-mubarrid.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/an-nafas-al-mubarrid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kuehlender-atem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/cooling-breath.html"/>
@@ -3127,7 +3127,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/serinleten-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/qingliang-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/verlauf-uebersichten-erfolge.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/history-summaries-achievements.html"/>
@@ -3138,7 +3138,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ozetler-ve-basarimlar.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/serie-und-meilensteine.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/streak-and-milestones.html"/>
@@ -3149,7 +3149,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/seri-ve-kilometre-taslari.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/lianxu-tianshu.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/ash-shifah-al-maqbuda.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/ash-shifah-al-maqbuda.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ash-shifah-al-maqbuda.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/lippenbremse.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/pursed-lip-breathing.html"/>
@@ -3160,7 +3160,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/buzuk-dudak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/suochun-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tadhkirat-wal-ishaarat.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tadhkirat-wal-ishaarat.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tadhkirat-wal-ishaarat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/reminders-and-notifications.html"/>
@@ -3171,7 +3171,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/hatirlaticilar.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/box-atmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/box-breathing.html"/>
@@ -3182,7 +3182,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kutu-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xiangshi-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-mutanawib.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-mutanawib.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-mutanawib.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wechselatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/alternate-nostril-breathing.html"/>
@@ -3193,7 +3193,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/donusumlu-burun.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiaoti-bikong.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/dreiecksatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/triangle-breathing.html"/>
@@ -3204,7 +3204,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ucgen-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/sanjiao-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kohaerente-atmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/coherent-breathing.html"/>
@@ -3215,7 +3215,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/koherent-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/gongzhen-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tanahhud-al-fisyuluji.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tanahhud-al-fisyuluji.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanahhud-al-fisyuluji.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/physiologischer-seufzer.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/physiological-sigh.html"/>
@@ -3226,7 +3226,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/fizyolojik-ic-cekis.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shenglixing-tanxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/sich-in-der-app-zurechtfinden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/getting-around-the-app.html"/>
@@ -3237,7 +3237,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uygulamada-gezinmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/app-daohang.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/welche-technik-wann.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/which-technique-when.html"/>
@@ -3248,7 +3248,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/hangi-teknik-ne-zaman.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/az-zafir-at-taweel.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/az-zafir-at-taweel.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/az-zafir-at-taweel.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/langer-ausatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/extended-exhale.html"/>
@@ -3259,7 +3259,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uzun-veris.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/chang-huqi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/bina-al-ada.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/bina-al-ada.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/bina-al-ada.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/die-gewohnheit-aufbauen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/building-the-habit.html"/>
@@ -3270,7 +3270,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/aliskanlik-kurmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yangcheng-xiguan.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/fath-at-tamarin-al-muqfala.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/fath-at-tamarin-al-muqfala.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/fath-at-tamarin-al-muqfala.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/techniken-freischalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/unlocking-techniques.html"/>
@@ -3281,7 +3281,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kilitli-teknikleri-acmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiesuo-huxifa.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/idad-barnamij.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/idad-barnamij.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idad-barnamij.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/ein-programm-einrichten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/setting-up-a-program.html"/>
@@ -3292,7 +3292,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/program-kurmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jianli-jihua.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/idarat-bayanatik.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/idarat-bayanatik.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idarat-bayanatik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-daten-verwalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/managing-your-data.html"/>
@@ -3303,7 +3303,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/verilerini-yonetmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/guanli-shuju.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/atem-wird-nicht-gehoert.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/breath-not-heard.html"/>
@@ -3314,7 +3314,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/nefesin-duyulmuyorsa.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/ijad-iqaaik.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/ijad-iqaaik.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ijad-iqaaik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/dein-eigenes-tempo-finden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/finding-your-pace.html"/>
@@ -3325,7 +3325,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kendi-temponu-bulmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/ziji-de-jiezou.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/technik-und-dauer-waehlen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/technique-and-length.html"/>
@@ -3336,7 +3336,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/teknik-ve-sure-secmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xuan-huxifa-he-shichang.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/jalsatuk-al-ula.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/jalsatuk-al-ula.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/jalsatuk-al-ula.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-erste-sitzung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/your-first-session.html"/>
@@ -3347,7 +3347,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ilk-seansin.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/diyici-lianxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/kapalabhati.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/kapalabhati.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/kapalabhati.html"/>
@@ -3358,7 +3358,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/kayfa-naqra-ad-dalil.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/kayfa-naqra-ad-dalil.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-naqra-ad-dalil.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-wir-die-studienlage-lesen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-we-read-the-evidence.html"/>
@@ -3369,7 +3369,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kaniti-nasil-okuyoruz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/zenme-du-zhengju.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/kayfa-tuhsab-ad-daraja.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/kayfa-tuhsab-ad-daraja.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-tuhsab-ad-daraja.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-bewertet-wird.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-scoring-works.html"/>
@@ -3380,7 +3380,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/puan-nasil-hesaplaniyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fenshu-zenme-suan.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/kayfa-yasma-al-mikrofon.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/kayfa-yasma-al-mikrofon.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-yasma-al-mikrofon.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-das-mikrofon-hoert.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-the-microphone-listens.html"/>
@@ -3391,7 +3391,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/maikefeng-zenme-ting.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/la-kod-min-taraf-thalith.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/la-kod-min-taraf-thalith.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/la-kod-min-taraf-thalith.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kein-fremder-code.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/no-third-party-code.html"/>
@@ -3402,7 +3402,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ucuncu-taraf-yok.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/meiyou-disanfang-daima.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/min-ayna-tati-al-iqtirahat.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/min-ayna-tati-al-iqtirahat.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/min-ayna-tati-al-iqtirahat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wovon-vorschlaege-abhaengen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-suggestions-work.html"/>
@@ -3413,7 +3413,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/sana-ne-onerildigi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jianyi-cong-nali-lai.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/oberflaechen-stufen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/interface-levels.html"/>
@@ -3424,7 +3424,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/arayuz-kademeleri.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiemian-cengji.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/nafas-al-muhit.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/nafas-al-muhit.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-al-muhit.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/ozeanatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/ocean-breath.html"/>
@@ -3435,7 +3435,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/okyanus-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/haiyang-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/nafas-an-nahla.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/nafas-an-nahla.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-an-nahla.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/bienenatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/humming-bee-breath.html"/>
@@ -3446,7 +3446,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ari-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fengming-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/nafas-at-taqa.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/nafas-at-taqa.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-at-taqa.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/energieatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/energizing-breath.html"/>
@@ -3457,7 +3457,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/enerji-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/tishen-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/qiraat-at-taqrir.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/qiraat-at-taqrir.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/qiraat-at-taqrir.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/den-bericht-lesen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/reading-the-report.html"/>
@@ -3468,7 +3468,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/raporu-okumak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/du-baogao.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/qiyas-al-atabat.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/qiyas-al-atabat.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/qiyas-al-atabat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/measuring-the-thresholds.html"/>
@@ -3479,7 +3479,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/shashat-al-jalsa.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/shashat-al-jalsa.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/shashat-al-jalsa.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/der-sitzungsbildschirm.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/the-session-screen.html"/>
@@ -3490,7 +3490,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/seans-ekrani.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/lianxi-jiemian.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/dalil/tanaffus-fathat-wahida.html</loc>
+  <url><loc>https://soluklan.app/ar/dalil/tanaffus-fathat-wahida.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/tanaffus-fathat-wahida.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/einzelne-nasenlochatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/single-nostril-breathing.html"/>
@@ -3507,7 +3507,7 @@
   </url>
   <url><loc>https://soluklan.app/ar/dalil/mawdu/khalf-al-kawalis.html</loc>
   </url>
-  <url><loc>https://soluklan.app/zh/</loc>
+  <url><loc>https://soluklan.app/zh/</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/"/>
@@ -3518,7 +3518,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/"/>
@@ -3529,7 +3529,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhichi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhichi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dam.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/hilfe.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/support.html"/>
@@ -3540,7 +3540,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/yinsi.html</loc>
+  <url><loc>https://soluklan.app/zh/yinsi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -3551,7 +3551,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/gizlilik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/yinsi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/4-7-8.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/4-7-8.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/4-7-8.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/vier-sieben-acht.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/four-seven-eight.html"/>
@@ -3562,7 +3562,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/dort-yedi-sekiz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/4-7-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/app-daohang.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/app-daohang.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/sich-in-der-app-zurechtfinden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/getting-around-the-app.html"/>
@@ -3573,7 +3573,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uygulamada-gezinmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/app-daohang.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/beijing-yu-jijie.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/beijing-yu-jijie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-khalfiyat-wal-fusul.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/hintergruende-und-jahreszeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/backgrounds-and-seasons.html"/>
@@ -3584,7 +3584,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/zemin-ve-mevsimler.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/beijing-yu-jijie.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/chang-huqi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/chang-huqi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/az-zafir-at-taweel.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/langer-ausatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/extended-exhale.html"/>
@@ -3595,7 +3595,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uzun-veris.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/chang-huqi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/dan-bikong-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/dan-bikong-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/tanaffus-fathat-wahida.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/einzelne-nasenlochatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/single-nostril-breathing.html"/>
@@ -3606,7 +3606,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/tek-burun-nefesleri.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/dan-bikong-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/diyici-lianxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/diyici-lianxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/jalsatuk-al-ula.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-erste-sitzung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/your-first-session.html"/>
@@ -3617,7 +3617,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ilk-seansin.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/diyici-lianxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/du-baogao.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/du-baogao.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/qiraat-at-taqrir.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/den-bericht-lesen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/reading-the-report.html"/>
@@ -3628,7 +3628,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/raporu-okumak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/du-baogao.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/fengming-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/fengming-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-an-nahla.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/bienenatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/humming-bee-breath.html"/>
@@ -3639,7 +3639,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ari-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fengming-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/fenshu-zenme-suan.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/fenshu-zenme-suan.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-tuhsab-ad-daraja.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-bewertet-wird.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-scoring-works.html"/>
@@ -3650,7 +3650,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/puan-nasil-hesaplaniyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fenshu-zenme-suan.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/fenxiang-de-shuju.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/fenxiang-de-shuju.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/was-wir-mit-geteilten-daten-machen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/what-we-do-with-shared-data.html"/>
@@ -3661,7 +3661,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/paylasilan-veriyle-ne-yapiyoruz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fenxiang-de-shuju.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/gongzhen-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/gongzhen-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kohaerente-atmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/coherent-breathing.html"/>
@@ -3672,7 +3672,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/koherent-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/gongzhen-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/guanli-shuju.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/guanli-shuju.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idarat-bayanatik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-daten-verwalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/managing-your-data.html"/>
@@ -3683,7 +3683,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/verilerini-yonetmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/guanli-shuju.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/haiyang-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/haiyang-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-al-muhit.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/ozeanatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/ocean-breath.html"/>
@@ -3694,7 +3694,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/okyanus-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/haiyang-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/atem-wird-nicht-gehoert.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/breath-not-heard.html"/>
@@ -3705,7 +3705,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/nefesin-duyulmuyorsa.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/jianli-jihua.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/jianli-jihua.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idad-barnamij.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/ein-programm-einrichten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/setting-up-a-program.html"/>
@@ -3716,7 +3716,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/program-kurmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jianli-jihua.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/jianyi-cong-nali-lai.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/jianyi-cong-nali-lai.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/min-ayna-tati-al-iqtirahat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wovon-vorschlaege-abhaengen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-suggestions-work.html"/>
@@ -3727,7 +3727,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/sana-ne-onerildigi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jianyi-cong-nali-lai.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/jiaoti-bikong.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/jiaoti-bikong.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-mutanawib.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wechselatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/alternate-nostril-breathing.html"/>
@@ -3738,7 +3738,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/donusumlu-burun.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiaoti-bikong.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/jiemian-cengji.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/jiemian-cengji.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/oberflaechen-stufen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/interface-levels.html"/>
@@ -3749,7 +3749,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/arayuz-kademeleri.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiemian-cengji.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/jiesuo-huxifa.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/jiesuo-huxifa.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/fath-at-tamarin-al-muqfala.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/techniken-freischalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/unlocking-techniques.html"/>
@@ -3760,7 +3760,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kilitli-teknikleri-acmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiesuo-huxifa.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/verlauf-uebersichten-erfolge.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/history-summaries-achievements.html"/>
@@ -3771,7 +3771,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ozetler-ve-basarimlar.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/lianxi-jiemian.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/lianxi-jiemian.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/shashat-al-jalsa.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/der-sitzungsbildschirm.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/the-session-screen.html"/>
@@ -3782,7 +3782,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/seans-ekrani.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/lianxi-jiemian.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/lianxu-tianshu.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/lianxu-tianshu.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/serie-und-meilensteine.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/streak-and-milestones.html"/>
@@ -3793,7 +3793,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/seri-ve-kilometre-taslari.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/lianxu-tianshu.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/maikefeng-zenme-ting.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/maikefeng-zenme-ting.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-yasma-al-mikrofon.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-das-mikrofon-hoert.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-the-microphone-listens.html"/>
@@ -3804,7 +3804,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/maikefeng-zenme-ting.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/meiyou-disanfang-daima.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/meiyou-disanfang-daima.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/la-kod-min-taraf-thalith.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kein-fremder-code.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/no-third-party-code.html"/>
@@ -3815,7 +3815,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ucuncu-taraf-yok.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/meiyou-disanfang-daima.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/qingliang-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/qingliang-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/an-nafas-al-mubarrid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kuehlender-atem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/cooling-breath.html"/>
@@ -3826,7 +3826,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/serinleten-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/qingliang-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/sanjiao-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/sanjiao-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/dreiecksatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/triangle-breathing.html"/>
@@ -3837,7 +3837,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ucgen-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/sanjiao-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/shen-er-man.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/shen-er-man.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-amiq-al-batee.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/tief-und-langsam.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/deep-and-slow.html"/>
@@ -3848,7 +3848,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/derin-ve-yavas.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shen-er-man.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/kapalabhati.html"/>
@@ -3859,7 +3859,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/shenglixing-tanxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/shenglixing-tanxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanahhud-al-fisyuluji.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/physiologischer-seufzer.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/physiological-sigh.html"/>
@@ -3870,7 +3870,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/fizyolojik-ic-cekis.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shenglixing-tanxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/welche-technik-wann.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/which-technique-when.html"/>
@@ -3881,7 +3881,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/hangi-teknik-ne-zaman.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/suochun-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/suochun-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ash-shifah-al-maqbuda.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/lippenbremse.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/pursed-lip-breathing.html"/>
@@ -3892,7 +3892,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/buzuk-dudak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/suochun-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/tishen-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/tishen-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-at-taqa.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/energieatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/energizing-breath.html"/>
@@ -3903,7 +3903,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/enerji-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/tishen-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tadhkirat-wal-ishaarat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/reminders-and-notifications.html"/>
@@ -3914,7 +3914,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/hatirlaticilar.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/xiangshi-huxi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/xiangshi-huxi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/box-atmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/box-breathing.html"/>
@@ -3925,7 +3925,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kutu-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xiangshi-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/xiao-zujian.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/xiao-zujian.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-widget-wan-nashat-al-mubashir.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/widgets-und-live-aktivitaet.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/widgets-and-live-activity.html"/>
@@ -3936,7 +3936,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/widget-ve-canli-etkinlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xiao-zujian.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/xuan-huxifa-he-shichang.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/xuan-huxifa-he-shichang.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/technik-und-dauer-waehlen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/technique-and-length.html"/>
@@ -3947,7 +3947,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/teknik-ve-sure-secmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xuan-huxifa-he-shichang.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/yangcheng-xiguan.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/yangcheng-xiguan.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/bina-al-ada.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/die-gewohnheit-aufbauen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/building-the-habit.html"/>
@@ -3958,7 +3958,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/aliskanlik-kurmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yangcheng-xiguan.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/mehr-aus-der-app-herausholen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/getting-the-most-out-of-it.html"/>
@@ -3969,7 +3969,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uygulamadan-en-cok-verimi-almak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/qiyas-al-atabat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/measuring-the-thresholds.html"/>
@@ -3980,7 +3980,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/zenme-du-zhengju.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/zenme-du-zhengju.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-naqra-ad-dalil.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-wir-die-studienlage-lesen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-we-read-the-evidence.html"/>
@@ -3991,7 +3991,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kaniti-nasil-okuyoruz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/zenme-du-zhengju.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/zhinan/ziji-de-jiezou.html</loc>
+  <url><loc>https://soluklan.app/zh/zhinan/ziji-de-jiezou.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ijad-iqaaik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/dein-eigenes-tempo-finden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/finding-your-pace.html"/>
@@ -4008,7 +4008,7 @@
   </url>
   <url><loc>https://soluklan.app/zh/zhinan/zhuti/zenme-yong.html</loc>
   </url>
-  <url><loc>https://soluklan.app/ru/</loc>
+  <url><loc>https://soluklan.app/ru/</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/"/>
@@ -4019,7 +4019,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/"/>
@@ -4030,7 +4030,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/"/>
   </url>
-  <url><loc>https://soluklan.app/ru/podderzhka.html</loc>
+  <url><loc>https://soluklan.app/ru/podderzhka.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dam.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/hilfe.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/support.html"/>
@@ -4041,7 +4041,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/konfidencialnost.html</loc>
+  <url><loc>https://soluklan.app/ru/konfidencialnost.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -4052,7 +4052,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/gizlilik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/yinsi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/4-7-8.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/4-7-8.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/4-7-8.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/vier-sieben-acht.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/four-seven-eight.html"/>
@@ -4063,7 +4063,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/dort-yedi-sekiz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/4-7-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/bodryashchee-dyhanie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/bodryashchee-dyhanie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-at-taqa.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/energieatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/energizing-breath.html"/>
@@ -4074,7 +4074,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/enerji-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/tishen-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/chto-my-delaem-s-dannymi.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/chto-my-delaem-s-dannymi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/was-wir-mit-geteilten-daten-machen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/what-we-do-with-shared-data.html"/>
@@ -4085,7 +4085,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/paylasilan-veriyle-ne-yapiyoruz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fenxiang-de-shuju.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/dolgiy-vydoh.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/dolgiy-vydoh.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/az-zafir-at-taweel.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/langer-ausatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/extended-exhale.html"/>
@@ -4096,7 +4096,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uzun-veris.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/chang-huqi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/dyhanie-ne-slyshno.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/dyhanie-ne-slyshno.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/atem-wird-nicht-gehoert.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/breath-not-heard.html"/>
@@ -4107,7 +4107,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/nefesin-duyulmuyorsa.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/dyhanie-pchely.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/dyhanie-pchely.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-an-nahla.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/bienenatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/humming-bee-breath.html"/>
@@ -4118,7 +4118,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ari-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fengming-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/ekran-sessii.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/ekran-sessii.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/shashat-al-jalsa.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/der-sitzungsbildschirm.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/the-session-screen.html"/>
@@ -4129,7 +4129,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/seans-ekrani.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/lianxi-jiemian.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/fiziologicheskiy-vzdoh.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/fiziologicheskiy-vzdoh.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanahhud-al-fisyuluji.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/physiologischer-seufzer.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/physiological-sigh.html"/>
@@ -4140,7 +4140,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/fizyolojik-ic-cekis.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shenglixing-tanxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/fony-i-sezony.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/fony-i-sezony.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-khalfiyat-wal-fusul.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/hintergruende-und-jahreszeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/backgrounds-and-seasons.html"/>
@@ -4151,7 +4151,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/zemin-ve-mevsimler.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/beijing-yu-jijie.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/gluboko-i-medlenno.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/gluboko-i-medlenno.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-amiq-al-batee.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/tief-und-langsam.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/deep-and-slow.html"/>
@@ -4162,7 +4162,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/derin-ve-yavas.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shen-er-man.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/istoriya-svodki-dostizheniya.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/istoriya-svodki-dostizheniya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/verlauf-uebersichten-erfolge.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/history-summaries-achievements.html"/>
@@ -4173,7 +4173,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ozetler-ve-basarimlar.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-chitat-otchyot.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-chitat-otchyot.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/qiraat-at-taqrir.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/den-bericht-lesen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/reading-the-report.html"/>
@@ -4184,7 +4184,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/raporu-okumak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/du-baogao.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/qiyas-al-atabat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/measuring-the-thresholds.html"/>
@@ -4195,7 +4195,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/esikler-nasil-olculuyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-my-chitaem-issledovaniya.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-my-chitaem-issledovaniya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-naqra-ad-dalil.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-wir-die-studienlage-lesen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-we-read-the-evidence.html"/>
@@ -4206,7 +4206,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kaniti-nasil-okuyoruz.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/zenme-du-zhengju.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-nastroit-programmu.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-nastroit-programmu.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idad-barnamij.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/ein-programm-einrichten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/setting-up-a-program.html"/>
@@ -4217,7 +4217,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/program-kurmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jianli-jihua.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-otkryvayutsya-tekhniki.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-otkryvayutsya-tekhniki.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/fath-at-tamarin-al-muqfala.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/techniken-freischalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/unlocking-techniques.html"/>
@@ -4228,7 +4228,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kilitli-teknikleri-acmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiesuo-huxifa.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-schitaetsya-ocenka.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-schitaetsya-ocenka.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-tuhsab-ad-daraja.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-bewertet-wird.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-scoring-works.html"/>
@@ -4239,7 +4239,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/puan-nasil-hesaplaniyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/fenshu-zenme-suan.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-slushaet-mikrofon.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-slushaet-mikrofon.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kayfa-yasma-al-mikrofon.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wie-das-mikrofon-hoert.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-the-microphone-listens.html"/>
@@ -4250,7 +4250,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/mikrofon-nasil-dinliyor.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/maikefeng-zenme-ting.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-ustroeno-prilozhenie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-ustroeno-prilozhenie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/sich-in-der-app-zurechtfinden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/getting-around-the-app.html"/>
@@ -4261,7 +4261,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uygulamada-gezinmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/app-daohang.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-zakrepit-privychku.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kak-zakrepit-privychku.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/bina-al-ada.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/die-gewohnheit-aufbauen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/building-the-habit.html"/>
@@ -4272,7 +4272,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/aliskanlik-kurmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yangcheng-xiguan.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kakaya-tekhnika-kogda.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kakaya-tekhnika-kogda.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/welche-technik-wann.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/which-technique-when.html"/>
@@ -4283,7 +4283,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/hangi-teknik-ne-zaman.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kapalabhati.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kapalabhati.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/kapalabhati.html"/>
@@ -4294,7 +4294,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kapalabhati.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kogerentnoe-dyhanie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kogerentnoe-dyhanie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kohaerente-atmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/coherent-breathing.html"/>
@@ -4305,7 +4305,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/koherent-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/gongzhen-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/kvadratnoe-dyhanie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/kvadratnoe-dyhanie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/box-atmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/box-breathing.html"/>
@@ -4316,7 +4316,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kutu-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xiangshi-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/maksimum-ot-prilozheniya.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/maksimum-ot-prilozheniya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/mehr-aus-der-app-herausholen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/getting-the-most-out-of-it.html"/>
@@ -4327,7 +4327,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/uygulamadan-en-cok-verimi-almak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tadhkirat-wal-ishaarat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/reminders-and-notifications.html"/>
@@ -4338,7 +4338,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/hatirlaticilar.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/net-chuzhogo-koda.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/net-chuzhogo-koda.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/la-kod-min-taraf-thalith.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kein-fremder-code.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/no-third-party-code.html"/>
@@ -4349,7 +4349,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ucuncu-taraf-yok.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/meiyou-disanfang-daima.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/odna-nozdrya.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/odna-nozdrya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/tanaffus-fathat-wahida.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/einzelne-nasenlochatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/single-nostril-breathing.html"/>
@@ -4360,7 +4360,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/tek-burun-nefesleri.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/dan-bikong-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/ohlazhdayushchee-dyhanie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/ohlazhdayushchee-dyhanie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/an-nafas-al-mubarrid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/kuehlender-atem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/cooling-breath.html"/>
@@ -4371,7 +4371,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/serinleten-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/qingliang-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/okeanicheskoe-dyhanie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/okeanicheskoe-dyhanie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-al-muhit.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/ozeanatem.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/ocean-breath.html"/>
@@ -4382,7 +4382,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/okyanus-nefesi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/haiyang-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/otkuda-berutsya-sovety.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/otkuda-berutsya-sovety.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/min-ayna-tati-al-iqtirahat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wovon-vorschlaege-abhaengen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/how-suggestions-work.html"/>
@@ -4393,7 +4393,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/sana-ne-onerildigi.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jianyi-cong-nali-lai.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/pervaya-sessiya.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/pervaya-sessiya.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/jalsatuk-al-ula.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-erste-sitzung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/your-first-session.html"/>
@@ -4404,7 +4404,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ilk-seansin.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/diyici-lianxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/poperemennye-nozdri.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/poperemennye-nozdri.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-mutanawib.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/wechselatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/alternate-nostril-breathing.html"/>
@@ -4415,7 +4415,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/donusumlu-burun.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiaoti-bikong.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/seriya-i-vekhi.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/seriya-i-vekhi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/serie-und-meilensteine.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/streak-and-milestones.html"/>
@@ -4426,7 +4426,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/seri-ve-kilometre-taslari.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/lianxu-tianshu.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/svoy-temp.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/svoy-temp.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ijad-iqaaik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/dein-eigenes-tempo-finden.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/finding-your-pace.html"/>
@@ -4437,7 +4437,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/kendi-temponu-bulmak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/ziji-de-jiezou.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/szhatye-guby.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/szhatye-guby.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ash-shifah-al-maqbuda.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/lippenbremse.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/pursed-lip-breathing.html"/>
@@ -4448,7 +4448,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/buzuk-dudak.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/suochun-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/treugolnoe-dyhanie.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/treugolnoe-dyhanie.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/dreiecksatmung.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/triangle-breathing.html"/>
@@ -4459,7 +4459,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/ucgen-nefes.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/sanjiao-huxi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/upravlenie-dannymi.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/upravlenie-dannymi.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/idarat-bayanatik.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/deine-daten-verwalten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/managing-your-data.html"/>
@@ -4470,7 +4470,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/verilerini-yonetmek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/guanli-shuju.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/urovni-interfeysa.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/urovni-interfeysa.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/oberflaechen-stufen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/interface-levels.html"/>
@@ -4481,7 +4481,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/arayuz-kademeleri.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/jiemian-cengji.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/vidzhety.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/vidzhety.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/al-widget-wan-nashat-al-mubashir.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/widgets-und-live-aktivitaet.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/widgets-and-live-activity.html"/>
@@ -4492,7 +4492,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/rehber/widget-ve-canli-etkinlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhinan/xiao-zujian.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/rukovodstvo/vybor-tekhniki-i-dliny.html</loc>
+  <url><loc>https://soluklan.app/ru/rukovodstvo/vybor-tekhniki-i-dliny.html</loc><lastmod>2026-09-15</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/ratgeber/technik-und-dauer-waehlen.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/guide/technique-and-length.html"/>
