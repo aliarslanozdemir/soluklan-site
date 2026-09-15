@@ -1,0 +1,1116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soluklan — تطبيق التنفّس الذي يسمع نفَسك</title>
+<meta name="description" content="تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.">
+<link rel="canonical" href="https://soluklan.app/ar/">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta property="og:title" content="Soluklan — تطبيق التنفّس الذي يسمع نفَسك">
+<meta property="og:description" content="تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soluklan.app/ar/">
+<meta property="og:site_name" content="Soluklan">
+<meta property="og:image" content="https://soluklan.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Soluklan — تطبيق التنفّس الذي يسمع نفَسك">
+<meta name="twitter:description" content="تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.">
+<meta name="twitter:image" content="https://soluklan.app/assets/og.png">
+<link rel="alternate" hreflang="tr" href="https://soluklan.app/">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/">
+<link rel="alternate" hreflang="de" href="https://soluklan.app/de/">
+<link rel="alternate" hreflang="fr" href="https://soluklan.app/fr/">
+<link rel="alternate" hreflang="es" href="https://soluklan.app/es/">
+<link rel="alternate" hreflang="it" href="https://soluklan.app/it/">
+<link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/">
+<link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/">
+<link rel="alternate" hreflang="ru" href="https://soluklan.app/ru/">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/soluklan.css?v=8c5589fa">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://soluklan.app/#kurulus","name":"Soluklan","url":"https://soluklan.app/","logo":{"@type":"ImageObject","url":"https://soluklan.app/assets/icon-512.png","width":512,"height":512},"email":"info@soluklan.app"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://soluklan.app/#site","name":"Soluklan","url":"https://soluklan.app/ar/","inLanguage":"ar","publisher":{"@id":"https://soluklan.app/#kurulus"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Soluklan","operatingSystem":"iOS 17.0+","applicationCategory":"HealthApplication","url":"https://soluklan.app/ar/","inLanguage":["tr","en","de","fr","es","it","ar","zh-Hans","ru"],"description":"تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.","image":"https://soluklan.app/assets/og.png","publisher":{"@id":"https://soluklan.app/#kurulus"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script>
+(function () {
+  var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it" };
+  if (location.pathname !== "/") return;          // yönlendirme yalnız kökte
+  try { if (localStorage.getItem("soluklan-dil")) return; } catch (e) { return; }
+  var istekler = navigator.languages || [navigator.language || ""];
+  var hedef = "";
+  for (var i = 0; i < istekler.length && !hedef; i++) {
+    var k = (istekler[i] || "").slice(0, 2).toLowerCase();
+    if (kokler.hasOwnProperty(k)) hedef = k;
+  }
+  if (!hedef) hedef = "en";
+  if (hedef === "tr") return;                     // kök zaten Türkçe
+  location.replace(kokler[hedef] + "/" + location.search + location.hash);
+})();
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/ar/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/ar/" aria-current="page">الرئيسية<i class="cizgi"></i></a>
+      <a href="/ar/dalil/">الدليل<i class="cizgi"></i></a>
+      <a href="/ar/dam.html">الدعم<i class="cizgi"></i></a>
+      <a href="/ar/khususiya.html">الخصوصية<i class="cizgi"></i></a>
+    </nav>
+    <button type="button" class="ara-ac" aria-label="بحث" title="بحث"
+            data-indeks="/ar/arama.json" data-baslik="ابحث في الموقع" data-ipucu="اكتب كلمة أو جملة أو موضوعًا"
+            data-yok="لا نتائج" data-kapat="إغلاق" data-sonuc="%s نتيجة"
+            data-yazi="مقالة" data-soru="سؤال" data-sayfa="صفحة" data-arac="أداة"
+            data-geri="رجوع" data-teknik="ابحث عن تمرين"
+            data-baslat="تشغيل" data-durdur="إيقاف">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    </button>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/" hreflang="en" lang="en">English</a>
+        <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+        <a href="/es/" hreflang="es" lang="es">Español</a>
+        <a href="/it/" hreflang="it" lang="it">Italiano</a>
+        <a href="/ar/" hreflang="ar" lang="ar" aria-current="true">العربية</a>
+        <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<div class="slaytlar">
+
+<section class="slayt hero" id="giris">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">لـ iPHONE و iPAD</p>
+      <h1>تطبيق <em>يسمع</em> نفَسك.</h1>
+      <p class="lede">أكثر التطبيقات تشغّل مؤقّتًا. أمّا Soluklan فيصغي إلى زفيرك وشهيقك عبر الميكروفون، ويريك دورةً دورةً مدى التزامك بالإيقاع.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://apps.apple.com/app/id6801880838">حمّله من App Store</a>
+        <a class="btn btn-ghost" href="/ar/dalil/">تصفّح الدليل</a>
+      </div>
+      <p class="small" style="margin-top:1.25rem">تمرين استرخاء وتركيز. لا يقدّم تشخيصًا طبيًّا ولا علاجًا ولا نصيحة طبية.</p>
+    </div>
+    <figure class="ring" style="margin:0">
+      <i></i><i></i><i></i><b></b>
+      <figcaption>شهيق 5.5 ثانية · زفير 5.5 ثانية</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="slayt vurgu-sahne" id="olcum">
+  <div class="prose beliren">
+    <p class="eyebrow" style="justify-content:center">ما الذي يُقاس</p>
+    <h2>التطبيق الذي لا يسمع نفَسك ليس إلا مؤقّتًا.</h2>
+    <p>في كل دورة يقيس Soluklan متى بدأ زفيرك، وكم دام، وكم كان صوته ثابتًا. وحين تنتهي الجلسة يبقى في يدك قياس، لا انطباع.</p>
+<figure class="cizim dalga beliren gorsel">
+  <svg viewBox="0 0 640 230" role="img" aria-label="قياس صوت النفَس: أرضية الضجيج، وخط العتبة، وأربع قمم زفير">
+    <defs>
+      <linearGradient id="dg" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--breath)"/><stop offset="1" stop-color="var(--glow)"/>
+      </linearGradient>
+    </defs>
+    <line class="taban" x1="20" y1="186" x2="620" y2="186"/>
+    <line class="esik" x1="20" y1="126" x2="620" y2="126"/>
+    <text class="etiket" x="24" y="118">العتبة</text>
+    <text class="etiket" x="24" y="204">أرضية الضجيج</text>
+    <path class="ses" d="M20 186 L60 186 Q70 184 78 180 Q92 172 100 186 L118 186
+      Q150 186 158 96 Q166 60 176 96 Q188 186 210 186 L250 186
+      Q262 184 270 179 Q284 170 292 186 L308 186
+      Q340 186 348 88 Q356 52 366 88 Q378 186 400 186 L440 186
+      Q452 184 460 179 Q474 170 482 186 L498 186
+      Q530 186 538 104 Q546 68 556 104 Q568 186 590 186 L620 186"/>
+    <g class="veris-isaret">
+      <circle cx="167" cy="70" r="4"/><circle cx="357" cy="62" r="4"/><circle cx="547" cy="78" r="4"/>
+    </g>
+    <text class="etiket vurgu" x="150" y="46">زفير</text>
+  </svg>
+  <figcaption>لا يحتفظ التطبيق بأي ملف صوتي. كل ما لديه هذا الخط: مستوى الصوت مقيسًا كل عشرين جزءًا من الألف من الثانية. والعتبة تُضبط على مقدار هدوء الغرفة.</figcaption>
+</figure>
+  </div>
+</section>
+
+<section class="slayt gorsel-sahne" id="nasil">
+  <div class="wrap ikili">
+   <div>
+    <p class="eyebrow">كيف يعمل</p>
+    <h2>يصغي، ويقيس، ويخبرك.</h2>
+    <ol class="steps" style="margin-top:2rem">
+      <li>
+        <div>
+          <h3>تتبع الدائرة</h3>
+          <p>شهيق وهي تكبر، وزفير وهي تصغر. والدائرة تفعل ما يقوله التمرين: تنتظر إن كان فيه حبس، وتصغر ببطء إن كان الزفير طويلًا.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>الميكروفون يسمع نفَسك</h3>
+          <p>لا يُستخرج من الصوت إلا مستواه اللحظي. في أي دورة تأخّرت، وكم دام زفيرك، وكم كان صوته ثابتًا، وهل تسرّب هواء أثناء الحبس — كل ذلك يُقاس.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>يأتي تقرير في النهاية</h3>
+          <p>درجة من مئة، وعنوان قصير، وما أحسنتَ فيه، وبضعة اقتراحات محدّدة. وإن شئت، افتح كل قياس واقرأها واحدًا واحدًا.</p>
+        </div>
+      </li>
+    </ol>
+   </div>
+   <figure class="cizim puan beliren gorsel">
+  <svg viewBox="0 0 220 220" role="img" aria-label="حلقة درجة الجلسة: سبعة مكوّنات">
+    <defs>
+      <linearGradient id="pg" x1="0" y1="1" x2="1" y2="0">
+        <stop offset="0" stop-color="var(--breath)"/><stop offset="1" stop-color="var(--glow)"/>
+      </linearGradient>
+    </defs>
+    <circle class="iz" cx="110" cy="110" r="86"/>
+    <circle class="dolu" cx="110" cy="110" r="86"/>
+    <text class="sayi" x="110" y="110">84</text>
+  </svg>
+  <figcaption>الدرجة ليست قياسًا واحدًا: مطابقة الإيقاع، والزفيرات المسموعة، وطول الزفير، والشهيق، وحجم النفَس، ومدى انسيابية الزفير، وإتمام الجلسة — تُحسب كلها معًا.</figcaption>
+</figure>
+  </div>
+</section>
+
+<section class="slayt gorsel-sahne" id="teknikler">
+  <div class="wrap ikili">
+   <div>
+    <p class="eyebrow">التمارين</p>
+    <h2>ستة عشر تمرينًا، وكلّها طرق معروفة.</h2>
+    <p class="lede">التنفس المتّسق، والمربّع، والمثلث، و«عميق وبطيء»، والزفير الطويل، والتنهيدة الفسيولوجية، و4-7-8، والشفاه المزمومة، ونفَس الطاقة، ونفَس النحلة، ونفَس المحيط، و«المنخران بالتناوب»، والمنخر الأيسر، والمنخر الأيمن، والنفَس المبرِّد، وكابالاباتي.</p>
+    <p>مع كل واحد منها: فيمَ يفيد، وكيف يُؤدَّى، والأخطاء الشائعة، وجولة واحدة موجَّهة لتجرّبه. وحيث يكون الدليل ضعيفًا نقول ذلك صراحةً.</p>
+
+    <p><a href="/ar/dalil/mawdu/at-tamarin.html">كل التمارين &#8594;</a></p>
+   </div>
+   <figure class="cizim ritim beliren gorsel">
+  <ul>
+    <li>
+      <span class="ad">المتّسق</span>
+      <span class="serit"><i class="al" style="flex:5.5"></i><i class="ver" style="flex:5.5"></i></span>
+      <span class="deger">5.5 · 5.5</span>
+    </li>
+    <li>
+      <span class="ad">المربّع</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:4"></i><i class="ver" style="flex:4"></i><i class="tut" style="flex:4"></i></span>
+      <span class="deger">4 · 4 · 4 · 4</span>
+    </li>
+    <li>
+      <span class="ad">الزفير الطويل</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:4"></i><i class="ver" style="flex:8"></i></span>
+      <span class="deger">4 · 4 · 8</span>
+    </li>
+    <li>
+      <span class="ad">4-7-8</span>
+      <span class="serit"><i class="al" style="flex:4"></i><i class="tut" style="flex:7"></i><i class="ver" style="flex:8"></i></span>
+      <span class="deger">4 · 7 · 8</span>
+    </li>
+    <li>
+      <span class="ad">التنهيدة</span>
+      <span class="serit"><i class="al" style="flex:2"></i><i class="tut" style="flex:1"></i><i class="al" style="flex:1.5"></i><i class="ver" style="flex:6"></i></span>
+      <span class="deger">2 · 1 · 1.5 · 6</span>
+    </li>
+  </ul>
+  <p class="anahtar"><span class="al"></span> شهيق <span class="tut"></span> حبس <span class="ver"></span> زفير</p>
+</figure>
+  </div>
+  <div class="wrap"><div class="dene" id="dene-panosu" data-teknikler='[{&quot;ad&quot;: &quot;عميق وبطيء&quot;, &quot;tempo&quot;: &quot;6 · 6&quot;, &quot;fazlar&quot;: [{&quot;tur&quot;: &quot;al&quot;, &quot;ad&quot;: &quot;شهيق&quot;, &quot;sn&quot;: 6}, {&quot;tur&quot;: &quot;ver&quot;, &quot;ad&quot;: &quot;زفير&quot;, &quot;sn&quot;: 6}]}, {&quot;ad&quot;: &quot;التنفس المثلث&quot;, &quot;tempo&quot;: &quot;4 · 4 · 4&quot;, &quot;fazlar&quot;: [{&quot;tur&quot;: &quot;al&quot;, &quot;ad&quot;: &quot;شهيق&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;tut&quot;, &quot;ad&quot;: &quot;حبس&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;ver&quot;, &quot;ad&quot;: &quot;زفير&quot;, &quot;sn&quot;: 4}]}, {&quot;ad&quot;: &quot;التنفس المربّع&quot;, &quot;tempo&quot;: &quot;4 · 4 · 4 · 4&quot;, &quot;fazlar&quot;: [{&quot;tur&quot;: &quot;al&quot;, &quot;ad&quot;: &quot;شهيق&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;tut&quot;, &quot;ad&quot;: &quot;حبس&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;ver&quot;, &quot;ad&quot;: &quot;زفير&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;tut&quot;, &quot;ad&quot;: &quot;حبس&quot;, &quot;sn&quot;: 4}]}, {&quot;ad&quot;: &quot;الزفير الطويل&quot;, &quot;tempo&quot;: &quot;4 · 4 · 8&quot;, &quot;fazlar&quot;: [{&quot;tur&quot;: &quot;al&quot;, &quot;ad&quot;: &quot;شهيق&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;tut&quot;, &quot;ad&quot;: &quot;حبس&quot;, &quot;sn&quot;: 4}, {&quot;tur&quot;: &quot;ver&quot;, &quot;ad&quot;: &quot;زفير&quot;, &quot;sn&quot;: 8}]}]' data-hazir="اضغط ابدأ" data-bitti="انتهى · %s دورة"><div class="dene-ust"><div class="dene-daire"><span class="dene-faz"></span></div><div class="dene-yan"><h3>جرّبه هنا</h3><p class="small">اختر تمرينًا. الدائرة تعمل كما في التطبيق: شهيق وهي تكبر، وزفير وهي تصغر. بلا صوت، وبلا قياس، ولا يُسجَّل شيء.</p><p class="dene-durum">اضغط ابدأ</p><button type="button" class="dene-dugme" data-basla="ابدأ" data-durdur="أوقف">ابدأ</button></div></div><div class="dene-secim dene-teknikler" role="group" aria-label="الدليل"><button type="button" data-teknik="0" aria-pressed="true">عميق وبطيء<span>6 · 6</span></button><button type="button" data-teknik="1" aria-pressed="false">التنفس المثلث<span>4 · 4 · 4</span></button><button type="button" data-teknik="2" aria-pressed="false">التنفس المربّع<span>4 · 4 · 4 · 4</span></button><button type="button" data-teknik="3" aria-pressed="false">الزفير الطويل<span>4 · 4 · 8</span></button></div></div></div>
+</section>
+
+<section class="slayt vurgu-sahne gorsel-sahne" id="programlar">
+  <div class="prose beliren">
+    <p class="eyebrow" style="justify-content:center">البرامج</p>
+    <h2>الجلسة الواحدة شيء، والشهر شيء آخر.</h2>
+    <p>أنشئ برنامجًا فتؤدّي التمرين نفسه بالمدّة نفسها كل يوم. ويتابع التطبيق في أي يوم أنت وينبّهك إن بدأتَ تتخلّف. وحين ينتهي يعرض يومًا بيوم ما جرى: أي الأيام فاتت، وكيف تحرّكت درجاتك، وأي الاقتراحات ظلّت تتكرّر.</p>
+<figure class="cizim takvim beliren gorsel">
+  <div class="gunler" aria-hidden="true">
+    <span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="bos"></span><span class="dolu"></span>
+    <span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span><span class="dolu"></span>
+    <span class="dolu"></span><span class="dolu"></span><span class="bugun"></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <figcaption>ثمانية وعشرون يومًا، خمس دقائق في اليوم. الأيام الممتلئة هي التي أدّيتها، والفارغة فاتت. واليوم هو اليوم السابع عشر.</figcaption>
+</figure>
+  </div>
+</section>
+
+<section class="slayt" id="aliskanlik">
+  <div class="wrap beliren">
+    <p class="eyebrow">الاستمرار</p>
+    <h2>يجعل العادة أسهل.</h2>
+    <ul class="cards" style="margin-top:2rem">
+      <li class="card kart-bagli beliren">
+        <h3><a href="/ar/dalil/as-silsila-wal-mahattat.html">السلسلة والمحطّات</a></h3>
+        <p>كم يومًا متتاليًا تمرّنت — يُعلَّم ذلك على التقويم. وفي الطريق محطّات: ثلاثة أيام، وأسبوع، وأسبوعان، وشهر؛ ويحتفي التطبيق بكل محطة تبلغها. وإلى جانب هذه المحطّات الجاهزة يمكنك وضع محطتك: قل «أربعون يومًا» فتُعلَّم هي أيضًا على التقويم.</p>
+      </li>
+      <li class="card kart-bagli beliren">
+        <h3><a href="/ar/dalil/min-ayna-tati-al-iqtirahat.html">اقتراحات مصنوعة لك</a></h3>
+        <p>المدّة المقترحة ليست رقمًا واحدًا بل نطاقًا يتحرّك مع خبرتك ومع جلساتك الأخيرة. وترتيب التمارين يتغيّر بحسب ما أدّيته اليوم.</p>
+      </li>
+      <li class="card kart-bagli beliren">
+        <h3><a href="/ar/dalil/at-tadhkirat-wal-ishaarat.html">التذكيرات بيدك</a></h3>
+        <p>أي يوم وفي أي ساعة، وكم تذكيرًا في اليوم على الأكثر، وساعات الهدوء، ووضع الإجازة، ونصوص تذكير تكتبها بنفسك.</p>
+      </li>
+    </ul>
+    <p style="margin-top:1.5rem"><a href="/ar/dalil/mawdu/kayfa-tastakhdimuh.html">تفصيل أكثر &#8594;</a></p>
+  </div>
+</section>
+
+<section class="slayt" id="gorunum">
+  <div class="wrap beliren" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">المظهر</p>
+    <h2>يتغيّر التطبيق مع مرور اليوم.</h2>
+    <p class="lede" style="margin-inline:auto;max-width:52ch">الخلفية فاتحة ومفتوحة من الشروق إلى الغروب، وبرتقالية دافئة في المساء، وداكنة مرصّعة بالنجوم ليلًا. والشروق والغروب يُحسبان على جهازك — ولا يُطلب إذن الموقع.</p>
+
+    <div class="gun-yolu" aria-hidden="true">
+      <svg viewBox="0 0 900 130" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="yay-g" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="var(--line)" stop-opacity="0"/>
+            <stop offset=".18" stop-color="var(--line)" stop-opacity="1"/>
+            <stop offset=".82" stop-color="var(--line)" stop-opacity="1"/>
+            <stop offset="1" stop-color="var(--line)" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="gunes-g"><stop offset="0" stop-color="#FFF6DC"/><stop offset=".6" stop-color="#FFC94F"/><stop offset="1" stop-color="#F0A038"/></radialGradient>
+        </defs>
+        <path class="yay" d="M20 126 Q450 -10 880 126"/>
+        <circle class="gunes" r="13" cx="0" cy="0"/>
+      </svg>
+    </div>
+
+    <ul class="temalar">
+      <li class="tema gunduz"><span class="pencere"></span><b>نهار</b></li>
+      <li class="tema aksam"><span class="pencere"></span><b>مساء</b></li>
+      <li class="tema gece"><span class="pencere"><i class="kayan"></i></span><b>ليل</b></li>
+      <li class="tema kis"><span class="pencere"><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i><i class="kar"></i></span><b>شتاء</b></li>
+      <li class="tema ilkbahar"><span class="pencere"><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i></span><b>ربيع</b></li>
+      <li class="tema sonbahar"><span class="pencere"><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i><i class="yaprak"></i></span><b>خريف</b></li>
+    </ul>
+
+    <p class="small" style="margin-top:2rem">وللصيف خلفيته، وللأيام الخاصة مثل رأس السنة مظاهرها. والفصل يأتي من التقويم، ولا يُجلب شيء من الإنترنت.</p>
+  </div>
+</section>
+
+<section class="slayt gorsel-sahne" id="platform">
+  <div class="prose beliren" style="text-align:center">
+    <p class="eyebrow" style="justify-content:center">الأجهزة المدعومة</p>
+    <h2>بحجمه الكامل على الهاتف وعلى اللوحي.</h2>
+    <p class="lede">إن كنت تحبّ الشاشة الكبيرة فهناك نسخة للّوحي أيضًا. التطبيق نفسه يرتّب نفسه ليناسب iPhone و iPad معًا. وكل بياناتك تتزامن بين الجهازين: سجلّ جلساتك وسلسلتك وإنجازاتك وإعداداتك تنتقل داخل حساب iCloud الخاص بك، فالجلسة التي أدّيتها على الهاتف تظهر معلَّمة على اللوحي كذلك.</p>
+    <div class="sahne3b">
+      <figure class="cihaz3b tablet beliren">
+        <div class="govde">
+          <span class="kamera"></span>
+          <div class="ekran"><img src="/assets/gorseller/tablet-home-en.png?v=ab5833f8" alt="Soluklan على iPad: الشاشة الرئيسية في تخطيط عريض" loading="lazy" width="899" height="1200"><span class="parlama"></span></div>
+        </div>
+      </figure>
+      <figure class="cihaz3b telefon beliren">
+        <div class="govde">
+          <span class="ada"></span>
+          <div class="ekran"><img src="/assets/gorseller/telefon-sure_bandi-en.png?v=6d378ece" alt="Soluklan على iPhone: شريط المدّة والنطاق المقترح" loading="lazy" width="414" height="900"><span class="parlama"></span></div>
+        </div>
+      </figure>
+    </div>
+    <p class="cihaz-adlari">iPad · iPhone</p>
+    <p class="small" style="margin-top:.9rem;margin-bottom:2.5rem">iOS 17 وما بعده. عناصر الواجهة والنشاط المباشر وجزيرة التفاعل تعمل على الأجهزة التي تدعمها.</p>
+  </div>
+</section>
+
+<section class="slayt" id="rehber">
+  <div class="prose beliren">
+    <p class="eyebrow">الدليل</p>
+    <h2>استفد من التطبيق إلى آخره.</h2>
+    <p class="lede">أربعون مقالة كُتبت لتخرج منه بأكثر ممّا تظنّ.</p>
+    <p>كيف تؤدّي جلستك الأولى، وكيف تقرأ تقريرك، وماذا تفعل إن لم يُسمَع نفَسك، وكيف تُنشئ برنامجًا، وكيف تستقرّ العادة. وما الذي تفعله كل ميزة وكيف يُؤدَّى كل تمرين، مكتوبًا واحدًا واحدًا.</p>
+    <p><a href="/ar/dalil/">إلى الدليل &#8594;</a></p>
+  </div>
+</section>
+
+<section class="slayt vurgu-sahne" id="gizlilik">
+  <div class="prose beliren">
+    <p class="eyebrow" style="justify-content:center">الخصوصية</p>
+    <h2>لا يُسجَّل الصوت أبدًا.</h2>
+    <p>يعمل الميكروفون أثناء الجلسة فقط، ولا يُستخرج منه إلا مستوى الصوت اللحظي. وملخّصات جلساتك تبقى على جهازك. لا إعلانات، ولا تتبّع، ولا تحليلات من طرف ثالث.</p>
+    <p><a href="/ar/khususiya.html">سياسة الخصوصية &#8594;</a></p>
+  </div>
+</section>
+
+<section class="slayt kapanis" id="kapanis">
+  <div class="parcaciklar" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="prose">
+    <figure class="ring kucuk" style="margin:0 auto 2rem"><i></i><i></i><i></i><b></b></figure>
+    <h2>الجلسة دقيقتان.</h2>
+    <p class="lede">لا تحتاج إلى أكثر من ذلك لتبدأ.</p>
+    <div class="actions" style="justify-content:center">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/id6801880838">حمّله من App Store</a>
+    </div>
+    <div class="note" style="margin-top:2.5rem;text-align:start">
+      <p><strong>Soluklan ليس تطبيقًا طبيًّا.</strong> لا يشخّص ولا يعالج. وإن شعرت بدوار أو ضيق نفَس أو توعّك فأوقف الجلسة وعُد إلى تنفّسك المعتاد. ومع الربو أو مرض في القلب أو الحمل أو ما شابه، استشر طبيبك قبل البدء بأي تمرين.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<a class="kaydir" aria-label="انزل إلى الأسفل"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+
+<script>
+/* The down arrow appears after a pause on a slide and hides on scroll. */
+/* In-page links scroll smoothly (automatic smooth scrolling is off: on page
+   changes it looked like the page was jumping upwards). */
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  var hedef = document.querySelector(a.getAttribute('href'));
+  if (!hedef) return;
+  e.preventDefault();
+  var yumusak = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* On phones, tapping the arrow scrolled a little then bounced back: smooth scrolling
+     and `scroll-snap-type: y mandatory` fight each other — snap pulls the scroll back to
+     the nearest slide before the motion finishes. Snap is switched off for the duration of
+     the scroll and switched back on when it ends. */
+  var kok = document.documentElement;
+  kok.classList.add('kaydiriyor');
+  hedef.scrollIntoView({ behavior: yumusak ? 'smooth' : 'auto', block: 'start' });
+  var bitti = function () { kok.classList.remove('kaydiriyor'); };
+  if ('onscrollend' in window) {
+    window.addEventListener('scrollend', bitti, { once: true });
+    setTimeout(bitti, 1200);            // safety net if scrollend never fires
+  } else {
+    setTimeout(bitti, 900);
+  }
+});
+
+(function () {
+  /* Tek ok, ekrana sabit: bulunduğun slayta göre hedefi değişiyor.
+     Eskiden her slaytın içinde ayrı bir ok vardı ve slayt içerikten uzun olunca ok
+     ekranın farklı yerlerinde çıkıyordu (Ali, 14 Eylül 2026). */
+  var BEKLEME = 3500;
+  var ok = document.querySelector('.kaydir');
+  var slaytlar = Array.prototype.slice.call(document.querySelectorAll('.slayt'));
+  if (!ok || !slaytlar.length) return;
+  var belirSayaci, tazeleSayaci;
+
+  function gizle() { ok.classList.remove('gorunur'); clearTimeout(belirSayaci); }
+
+  function bulunulan() {
+    var orta = window.innerHeight / 2;
+    for (var i = 0; i < slaytlar.length; i++) {
+      var k = slaytlar[i].getBoundingClientRect();
+      if (k.top <= orta && k.bottom > orta) return i;
+    }
+    return -1;
+  }
+
+  function tazele() {
+    var i = bulunulan();
+    var sonraki = i >= 0 ? slaytlar[i + 1] : null;
+    if (!sonraki || !sonraki.id) { gizle(); ok.removeAttribute('href'); return; }
+    /* Slayt ekrana sığmıyorsa ok çıkmıyor: sabit ok yazının üstüne biniyor ve zaten
+       devamın olduğu görülüyor (14 Eylül 2026). */
+    var k = slaytlar[i].getBoundingClientRect();
+    if (k.bottom > window.innerHeight + 4) { gizle(); return; }
+    ok.setAttribute('href', '#' + sonraki.id);
+    clearTimeout(belirSayaci);
+    belirSayaci = setTimeout(function () { ok.classList.add('gorunur'); }, BEKLEME);
+  }
+
+  window.addEventListener('scroll', function () {
+    gizle();
+    clearTimeout(tazeleSayaci);
+    tazeleSayaci = setTimeout(tazele, 120);
+  }, { passive: true });
+  window.addEventListener('resize', function () { gizle(); tazele(); }, { passive: true });
+  tazele();
+})();
+
+/* Mouse wheel: one notch, one slide — but with a smooth transition.
+   With `scroll-snap-type: mandatory`, one wheel notch produces a large, abrupt delta and
+   the browser looked like it was teleporting to the slide. A trackpad produces small
+   deltas, so native snap already feels right there; only **large** deltas are taken over
+   and small ones are left to the browser. It never engages on touch devices. */
+(function () {
+  var kok = document.documentElement;
+  if (!document.querySelector('.slaytlar')) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var kilit = false;
+
+  function duraklar() {
+    var d = [].slice.call(document.querySelectorAll('.slayt'));
+    var alt = document.querySelector('footer.site');
+    if (alt) d.push(alt);
+    return d;
+  }
+
+  window.addEventListener('wheel', function (e) {
+    if (e.ctrlKey) return;                                   // zoom
+    var buyuk = e.deltaMode !== 0 || Math.abs(e.deltaY) >= 50;
+    if (!buyuk) return;                                      // trackpad: native snap
+    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    if (kilit) { e.preventDefault(); return; }
+
+    var hedefler = duraklar();
+    var y = window.scrollY;
+    var simdi = 0;
+    hedefler.forEach(function (h, i) { if (h.offsetTop <= y + 4) simdi = i; });
+    var sonraki = hedefler[simdi + (e.deltaY > 0 ? 1 : -1)];
+    if (!sonraki) return;                                    // at the ends, leave it to the browser
+
+    e.preventDefault();
+    kilit = true;
+    kok.classList.add('kaydiriyor');                         // keep snap out of the way
+    var sonMu = sonraki.tagName === 'FOOTER';
+    sonraki.scrollIntoView({ behavior: 'smooth', block: sonMu ? 'end' : 'start' });
+    setTimeout(function () {
+      kilit = false;
+      kok.classList.remove('kaydiriyor');
+    }, 640);
+  }, { passive: false });
+})();
+</script>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/ar/dalil/">الدليل</a>
+      <a href="/ar/khususiya.html">الخصوصية</a>
+      <a href="/ar/dam.html">الدعم</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Site içi arama. İndeks (`arama.json`) yalnız arama ilk açıldığında indiriliyor; hiçbir
+   istek dışarıya gitmiyor. Eşleşme başlık, özet, konu ve **gövde metni** üzerinde: Ali
+   "içinde geçen kelimelere cümlelere konulara göre aratılsın" dedi (13 Eylül 2026).
+   Etkileşimli araçlar da indekste ve sayfanın içindeki çapaya götürüyor. */
+(function () {
+  var ac = document.querySelector('.ara-ac');
+  if (!ac) return;
+  var m = ac.dataset;
+  var kayitlar = null, katman, girdi, liste, sayac, secili = -1;
+
+  function sadelestir(x) {
+    return (x || '').toLocaleLowerCase('tr')
+      .replace(/[ıİ]/g, 'i')
+      .normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function kutuHtml() {
+    return '<div class="ara-ust">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>' +
+      '<input class="ara-girdi" type="search" autocomplete="off" spellcheck="false" placeholder="' +
+      m.ipucu + '" aria-label="' + m.baslik + '">' +
+      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
+      '</div><p class="ara-sayac"></p><ul class="ara-liste"></ul>';
+  }
+
+  /* Kutu içeriği araç modunda değişip geri dönebildiği için girdiler her seferinde
+     yeniden bağlanıyor. */
+  function bagla() {
+    girdi = katman.querySelector('.ara-girdi');
+    liste = katman.querySelector('.ara-liste');
+    sayac = katman.querySelector('.ara-sayac');
+    if (aracTempo) { aracTempo.dur(); aracTempo = null; }
+    girdi.addEventListener('input', function () { secili = -1; ara(); });
+    girdi.addEventListener('keydown', gezin);
+    girdi.focus();
+    ara();
+  }
+
+  function kur() {
+    katman = document.createElement('div');
+    katman.className = 'ara-katman';
+    katman.hidden = true;
+    katman.innerHTML = '<div class="ara-kutu" role="dialog" aria-modal="true" aria-label="' +
+                       m.baslik + '">' + kutuHtml() + '</div>';
+    document.body.appendChild(katman);
+    bagla();
+
+    katman.addEventListener('click', function (e) {
+      if (e.target === katman || e.target.closest('.ara-kapat')) return kapat();
+      if (e.target.closest('.ara-geri')) { katman.querySelector('.ara-kutu').innerHTML = kutuHtml(); bagla(); return; }
+      var t = e.target.closest('[data-teknik]');
+      if (t) { e.preventDefault(); return aracSec(+t.dataset.teknik); }
+      var a = e.target.closest('[data-arac]');
+      if (a) {
+        e.preventDefault();
+        var kayit = (kayitlar || []).filter(function (k) { return k.x === a.dataset.arac; })[0];
+        if (kayit) aracGoster(kayit);
+      }
+    });
+  }
+
+  function gezin(e) {
+      var ogeler = liste.querySelectorAll('li');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (!ogeler.length) return;
+        secili += (e.key === 'ArrowDown' ? 1 : -1);
+        if (secili < 0) secili = ogeler.length - 1;
+        if (secili >= ogeler.length) secili = 0;
+        ogeler.forEach(function (o, i) { o.setAttribute('aria-selected', String(i === secili)); });
+        ogeler[secili].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter') {
+        var hedef = ogeler[secili < 0 ? 0 : secili];
+        if (hedef) { e.preventDefault(); hedef.querySelector('a').click(); }
+      }
+  }
+
+  function kapat() {
+    if (katman) katman.hidden = true;
+    document.documentElement.style.overflow = '';
+  }
+
+  function indeksiAl() {
+    if (kayitlar) return Promise.resolve(kayitlar);
+    return fetch(m.indeks).then(function (c) { return c.json(); })
+      .then(function (v) { kayitlar = v; return v; })
+      .catch(function () { kayitlar = []; return kayitlar; });
+  }
+
+  function parca(metin, kelime) {
+    var d = sadelestir(metin), i = d.indexOf(kelime);
+    if (i < 0) return '';
+    var bas = Math.max(0, i - 55), son = Math.min(metin.length, i + kelime.length + 65);
+    var once = (bas > 0 ? '…' : '') + metin.slice(bas, i);
+    var orta = metin.slice(i, i + kelime.length);
+    var sonra = metin.slice(i + kelime.length, son) + (son < metin.length ? '…' : '');
+    var kacir = function (x) { return x.replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+    return kacir(once) + '<mark>' + kacir(orta) + '</mark>' + kacir(sonra);
+  }
+
+  function ara() {
+    var soru = sadelestir(girdi.value).trim();
+    if (!soru) { liste.innerHTML = ''; sayac.textContent = ''; return; }
+    var kelimeler = soru.split(/\s+/).filter(Boolean);
+    var bulunan = [];
+    (kayitlar || []).forEach(function (k) {
+      var b = sadelestir(k.b), o = sadelestir(k.o), g = sadelestir(k.g), kat = sadelestir(k.k);
+      var puan = 0, hepsi = true;
+      kelimeler.forEach(function (w) {
+        var p = 0;
+        if (b.indexOf(w) >= 0) p += b.indexOf(w) === 0 ? 12 : 8;
+        if (o.indexOf(w) >= 0) p += 4;
+        if (kat.indexOf(w) >= 0) p += 3;
+        if (g.indexOf(w) >= 0) p += 2;
+        if (!p) hepsi = false;
+        puan += p;
+      });
+      if (!hepsi) return;
+      if (kelimeler.length > 1 && g.indexOf(soru) >= 0) puan += 6;   // cümle olarak geçiyorsa
+      if (k.t === 'arac') puan += 2;
+      bulunan.push({ k: k, puan: puan });
+    });
+    bulunan.sort(function (a, b) { return b.puan - a.puan; });
+    bulunan = bulunan.slice(0, 20);
+
+    if (!bulunan.length) {
+      liste.innerHTML = '<li class="ara-bos">' + m.yok + '</li>';
+      sayac.textContent = '';
+      return;
+    }
+    sayac.textContent = m.sonuc.replace('%s', bulunan.length);
+    liste.innerHTML = bulunan.map(function (x) {
+      var k = x.k;
+      var alinti = parca(k.o, kelimeler[0]) || parca(k.g, kelimeler[0]) || '';
+      return '<li><a href="' + k.u + '"' + (k.x ? ' data-arac="' + k.x + '"' : '') +
+             '><span class="ara-tur">' + (m[k.t] || '') + '</span>' +
+             '<span class="ara-baslik">' + k.b.replace(/</g, '&lt;') + '</span>' +
+             (alinti ? '<span class="ara-parca">' + alinti + '</span>' : '') + '</a></li>';
+    }).join('');
+  }
+
+  /* "Ritmi gör" sonucuna basılınca sayfaya gitmek yerine aracın kendisi burada açılıyor;
+     hangi tekniğin ritmi görüleceği yine aynı kutudan aranıyor (Ali, 14 Eylül 2026). */
+  var aracVeri = null, aracGirdi, aracListe, aracSerit, aracTempo;
+
+  /* Şerit HTML'i: `data-fazlar` burada değil, DOM üzerinden atanıyor — JSON tırnakları
+     dizge içinde kaçırmaya çalışmak kırılgan (14 Eylül 2026). */
+  function seritHtml(t) {
+    var parcalar = t.fazlar.map(function (f) {
+      return '<i class="' + f.tur + '" style="flex:' + f.sn + '"></i>';
+    }).join('');
+    return '<div class="tempo">' +
+      '<div class="tempo-ust"><p class="tempo-baslik">' + t.ad +
+      ' <span class="tempo-deger">' + t.tempo + '</span></p>' +
+      '<button type="button" class="tempo-dugme" data-oynat="' + m.baslat +
+      '" data-durdur="' + m.durdur + '">' + m.baslat + '</button></div>' +
+      '<div class="tempo-serit"><span class="tempo-isaret"></span>' + parcalar + '</div>' +
+      '<p class="tempo-faz"></p></div>';
+  }
+
+  function aracListesi() {
+    var soru = sadelestir(aracGirdi.value).trim();
+    var uyan = aracVeri.filter(function (t) {
+      return !soru || sadelestir(t.ad).indexOf(soru) >= 0 || sadelestir(t.tempo).indexOf(soru) >= 0;
+    });
+    aracListe.innerHTML = uyan.map(function (t, i) {
+      return '<li><a href="#" data-teknik="' + aracVeri.indexOf(t) + '">' +
+             '<span class="ara-baslik">' + t.ad + '</span>' +
+             '<span class="ara-parca">' + t.tempo + '</span></a></li>';
+    }).join('') || '<li class="ara-bos">' + m.yok + '</li>';
+  }
+
+  function aracGoster(k) {
+    aracVeri = k.d || [];
+    katman.querySelector('.ara-kutu').innerHTML =
+      '<div class="ara-ust">' +
+      '<button type="button" class="ara-geri">&#8592; ' + m.geri + '</button>' +
+      '<input class="ara-girdi" type="search" autocomplete="off" placeholder="' + m.teknik + '" aria-label="' + m.teknik + '">' +
+      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
+      '</div><div class="ara-arac-kap"></div><ul class="ara-liste"></ul>';
+    aracGirdi = katman.querySelector('.ara-girdi');
+    aracListe = katman.querySelector('.ara-liste');
+    aracSerit = katman.querySelector('.ara-arac-kap');
+    aracGirdi.addEventListener('input', aracListesi);
+    aracListesi();
+    aracSec(0);
+    aracGirdi.focus();
+  }
+
+  function aracSec(i) {
+    var t = aracVeri[i];
+    if (!t) return;
+    if (aracTempo) aracTempo.dur();
+    aracSerit.innerHTML = seritHtml(t);
+    var el = aracSerit.querySelector('.tempo');
+    el.dataset.fazlar = JSON.stringify(t.fazlar);
+    el.dataset.toplam = t.fazlar.reduce(function (a, f) { return a + f.sn; }, 0);
+    aracTempo = window.SoluklanTempo(el);
+  }
+
+  function acKatman() {
+    if (!katman) kur();
+    katman.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    girdi.focus();
+    indeksiAl().then(ara);
+  }
+
+  ac.addEventListener('click', acKatman);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && katman && !katman.hidden) return kapat();
+    if (e.key === '/' && (!katman || katman.hidden)) {
+      var a = document.activeElement;
+      if (a && (a.tagName === 'INPUT' || a.tagName === 'TEXTAREA')) return;
+      e.preventDefault();
+      acKatman();
+    }
+  });
+})();
+
+/* "Burada dene": ana sayfada teknik ve süre seçilip sayfada gerçek bir tur çalışıyor.
+   Uygulamayı indirmeden önce ürünü denemek için. Hesap ve kayıt yok — yalnız daire,
+   tempo ve sonunda kaç tur yapıldığı (Ali, 13 Eylül 2026). */
+(function () {
+  var kap = document.querySelector('.dene');
+  if (!kap) return;
+  var teknikler;
+  try { teknikler = JSON.parse(kap.dataset.teknikler); } catch (e) { return; }
+  if (!teknikler || !teknikler.length) return;
+
+  var daire = kap.querySelector('.dene-daire');
+  var yazi = kap.querySelector('.dene-faz');
+  var durum = kap.querySelector('.dene-durum');
+  var dugme = kap.querySelector('.dene-dugme');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var secili = 0;
+  var calisiyor = false, indeks = 0, basladi = 0, acilis = 0, tur = 0, kare = 0, son = 0.55;
+
+  function fazlar() { return teknikler[secili].fazlar; }
+
+  function boy(faz, oran) {
+    if (azalt) return 0.8;
+    if (faz.tur === 'al') return 0.55 + 0.45 * oran;
+    if (faz.tur === 'ver') return 1 - 0.45 * oran;
+    return son;
+  }
+
+  function sure(sn) {
+    var d = Math.floor(sn / 60), s = Math.floor(sn % 60);
+    return d + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function ciz(t) {
+    var liste = fazlar();
+    var faz = liste[indeks];
+    var gecen = (t - basladi) / 1000;
+    if (gecen >= faz.sn) {
+      son = boy(faz, 1);
+      indeks = indeks + 1;
+      if (indeks >= liste.length) { indeks = 0; tur++; }
+      basladi = t;
+      gecen = 0;
+      faz = liste[indeks];
+    }
+    var oran = Math.min(1, gecen / faz.sn);
+    yazi.textContent = faz.ad + '\n' + Math.max(0, Math.ceil(faz.sn - gecen));
+    daire.style.transform = 'scale(' + boy(faz, oran).toFixed(3) + ')';
+    durum.textContent = sure((t - acilis) / 1000);
+    kare = requestAnimationFrame(ciz);
+  }
+
+  /* Süre seçimi yok (Ali, 14 Eylül 2026): Başlat'a basılınca dönüyor, Durdur'a basılınca
+     duruyor ve kaç tur yapıldığı yazıyor. Seçilecek bir şey azaldıkça pano da sadeleşti. */
+  function dur() {
+    calisiyor = false;
+    cancelAnimationFrame(kare);
+    dugme.textContent = dugme.dataset.basla;
+    dugme.setAttribute('aria-pressed', 'false');
+    yazi.textContent = '';
+    daire.style.transform = 'scale(.55)';
+    durum.textContent = tur ? kap.dataset.bitti.replace('%s', tur) : kap.dataset.hazir;
+  }
+
+  function basla() {
+    calisiyor = true;
+    indeks = 0; tur = 0; son = 0.55;
+    basladi = performance.now();
+    acilis = basladi;
+    dugme.textContent = dugme.dataset.durdur;
+    dugme.setAttribute('aria-pressed', 'true');
+    kare = requestAnimationFrame(ciz);
+  }
+
+  kap.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b === dugme) return calisiyor ? dur() : basla();
+    if (b.dataset.teknik !== undefined) {
+      if (calisiyor) dur();
+      secili = +b.dataset.teknik;
+      kap.querySelectorAll('[data-teknik]').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+    }
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && calisiyor) dur();
+  });
+})();
+
+/* Tempo şeridi: bir döngünün tamamı şeritte, üstünde ilerleyen bir işaret. Ses yok,
+   sekme gizlenince duruyor. Daire yerine şerit (Ali, 14 Eylül 2026).
+
+   Kurucu global: aynı şerit hem teknik yazısında hem arama kutusunun içindeki "ritmi gör"
+   aracında kullanılıyor, mantık iki yere kopyalanmasın. */
+window.SoluklanTempo = function (kap) {
+  var fazlar;
+  try { fazlar = JSON.parse(kap.dataset.fazlar); } catch (e) { return; }
+  if (!fazlar || !fazlar.length) return;
+
+  var toplam = +kap.dataset.toplam || fazlar.reduce(function (a, f) { return a + f.sn; }, 0);
+  var serit = kap.querySelector('.tempo-serit');
+  var isaret = kap.querySelector('.tempo-isaret');
+  var yazi = kap.querySelector('.tempo-faz');
+  var dugme = kap.querySelector('.tempo-dugme');
+  if (!serit || !isaret || !yazi || !dugme) return;
+  var calisiyor = false, basladi = 0, kare = 0;
+
+  function ciz(t) {
+    var gecen = ((t - basladi) / 1000) % toplam;
+    isaret.style.transform = 'translateX(' + (gecen / toplam * serit.clientWidth).toFixed(1) + 'px)';
+    var birikim = 0, faz = fazlar[0];
+    for (var i = 0; i < fazlar.length; i++) {
+      if (gecen < birikim + fazlar[i].sn) { faz = fazlar[i]; break; }
+      birikim += fazlar[i].sn;
+    }
+    yazi.textContent = faz.ad + ' ' + Math.max(0, Math.ceil(birikim + faz.sn - gecen));
+    if (calisiyor) kare = requestAnimationFrame(ciz);
+  }
+
+  function dur() {
+    calisiyor = false;
+    cancelAnimationFrame(kare);
+    kap.classList.remove('calisiyor');
+    dugme.textContent = dugme.dataset.oynat;
+    dugme.setAttribute('aria-pressed', 'false');
+    yazi.textContent = '';
+    isaret.style.transform = 'translateX(0)';
+  }
+
+  dugme.addEventListener('click', function () {
+    if (calisiyor) return dur();
+    calisiyor = true;
+    kap.classList.add('calisiyor');
+    basladi = performance.now();
+    dugme.textContent = dugme.dataset.durdur;
+    dugme.setAttribute('aria-pressed', 'true');
+    kare = requestAnimationFrame(ciz);
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && calisiyor) dur();
+  });
+  return { dur: dur };
+};
+
+(function () {
+  var kap = document.querySelector('.tempo');
+  if (kap) window.SoluklanTempo(kap);
+})();
+
+/* Puan panosu: kaydırıcılar oynayınca puanın nasıl kurulduğu görünüyor.
+   Hesabın kendisi uygulamadakiyle aynı sırayla yapılıyor — ağırlıklı ortalama, ritim
+   çarpanı, sonra yuvarlama; ve bir bileşen çökmüşse yuvarlama yok. Sayfa metni bunları
+   zaten anlatıyor, pano elle denetiyor (Ali, 13 Eylül 2026). */
+(function () {
+  var pano = document.querySelector('.puan-pano');
+  if (!pano) return;
+  var yuvarlamaEsigi = +pano.dataset.esik, cokenSiniri = +pano.dataset.cokenSiniri;
+  var satirlar = [].slice.call(pano.querySelectorAll('.puan-satirlar .puan-satir'));
+  var carpanSatir = pano.querySelector('.puan-carpan');
+  var carpanGirdi = carpanSatir.querySelector('input');
+  var sayi = pano.querySelector('.puan-sayi');
+  var yay = pano.querySelector('.puan-yay');
+  var toplamYazi = pano.querySelector('.puan-toplam');
+  var carpanYazi = pano.querySelector('.puan-carpan-not');
+  var not = pano.querySelector('.puan-not');
+  var cevre = 2 * Math.PI * 52;
+  var metin = pano.dataset;
+
+  function etkinler() {
+    return satirlar.filter(function (r) { return !r.hidden; });
+  }
+
+  function hesapla() {
+    var toplamAgirlik = 0, toplam = 0, coken = false;
+    etkinler().forEach(function (r) {
+      var g = r.querySelector('input'), a = +r.dataset.agirlik, v = +g.value;
+      r.querySelector('output').textContent = v;
+      r.classList.toggle('dusuk', v < cokenSiniri);
+      if (v < cokenSiniri) coken = true;
+      toplamAgirlik += a; toplam += a * v;
+    });
+    var agirlikli = toplamAgirlik ? toplam / toplamAgirlik : 0;
+    var f1 = +carpanGirdi.value / 100;
+    var carpan = 0.5 + 0.5 * f1;
+    carpanSatir.querySelector('output').textContent = carpanGirdi.value;
+    var ham = Math.min(100, Math.max(0, Math.round(agirlikli * carpan)));
+    var gosterilen = (ham >= yuvarlamaEsigi && !coken) ? 100 : ham;
+
+    sayi.textContent = gosterilen;
+    yay.style.strokeDashoffset = cevre * (1 - gosterilen / 100);
+    toplamYazi.textContent = metin.mToplam + ' ' + agirlikli.toFixed(1);
+    carpanYazi.textContent = metin.mCarpan.replace('%s', carpan.toFixed(2));
+    if (ham >= yuvarlamaEsigi && coken) { not.textContent = metin.mCoken; not.classList.add('uyari'); }
+    else if (gosterilen === 100 && ham < 100) { not.textContent = metin.mYuvarlama; not.classList.remove('uyari'); }
+    else { not.textContent = ''; not.classList.remove('uyari'); }
+  }
+
+  function teknik(tur) {
+    satirlar.forEach(function (r) {
+      if (r.dataset.tutus) r.hidden = (tur !== 'tutuslu');
+    });
+    pano.querySelectorAll('.puan-secim button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.teknik === tur));
+    });
+    hesapla();
+  }
+
+  var ornekler = {
+    kusursuz: { hepsi: 97, carpan: 98 },
+    orta:     { hepsi: 78, carpan: 74 },
+    ritimsiz: { hepsi: 88, carpan: 12 },
+    kisa:     { hepsi: 90, carpan: 95, tek: { 2: 48 } }
+  };
+
+  pano.addEventListener('input', function (e) {
+    if (e.target.type === 'range') hesapla();
+  });
+  pano.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.teknik) return teknik(b.dataset.teknik);
+    var o = ornekler[b.dataset.ornek];
+    if (!o) return;
+    satirlar.forEach(function (r, i) {
+      r.querySelector('input').value = (o.tek && o.tek[i] !== undefined) ? o.tek[i] : o.hepsi;
+    });
+    carpanGirdi.value = o.carpan;
+    hesapla();
+  });
+
+  teknik('tutuslu');
+})();
+
+/* Dil seçici: kullanıcının kendi dili listenin başında durur ve seçtiği dil hatırlanır.
+   Sıralama betikle yapılıyor çünkü sayfa statik: aynı HTML herkese gidiyor, "en üstte olan"
+   ise kişiye göre değişiyor. Seçim `localStorage`a yazılınca kökteki yönlendirme de bir daha
+   karışmıyor — kullanıcı kararını bir kez veriyor (Ali, 13 Eylül 2026). */
+(function () {
+  var liste = document.querySelector('.dil-liste');
+  if (!liste) return;
+  var baglar = [].slice.call(liste.querySelectorAll('a'));
+
+  baglar.forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('soluklan-dil', a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+
+  var tercih = '';
+  try { tercih = localStorage.getItem('soluklan-dil') || ''; } catch (e) {}
+  if (!tercih) {
+    var istekler = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < istekler.length && !tercih; i++) {
+      var k = (istekler[i] || '').slice(0, 2).toLowerCase();
+      if (baglar.some(function (a) { return a.getAttribute('hreflang') === k; })) tercih = k;
+    }
+  }
+  if (!tercih) return;
+  var ilk = baglar.filter(function (a) { return a.getAttribute('hreflang') === tercih; })[0];
+  if (ilk && ilk !== baglar[0]) liste.insertBefore(ilk, liste.firstChild);
+})();
+
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
+(function () {
+  var kok = document.documentElement;
+  var bekleyen = false;
+  function bak() {
+    bekleyen = false;
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+  bak();
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>
