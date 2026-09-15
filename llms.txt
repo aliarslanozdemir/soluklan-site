@@ -300,3 +300,147 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Respirazione quadrata](https://soluklan.app/it/guida/respirazione-quadrata.html): Quattro passaggi uguali: inspira, trattieni, espira, aspetta. Quattro respiri al minuto. La tecnica più insegnata nell’addestramento militare e nei servizi di emergenza.
 - [Respirazione triangolare](https://soluklan.app/it/guida/respirazione-triangolare.html): Quattro secondi inspirando, quattro di pausa, quattro espirando. La tecnica con pausa più semplice e il primo posto in cui incontri le pause nell’app.
 - [Respiro dalla narice sinistra e dalla narice destra](https://soluklan.app/it/guida/respiro-da-una-narice.html): Inspirare ed espirare da una sola narice. Le due tecniche più silenziose dell’app, cosa le distingue e dove le prove sono deboli.
+
+## العربية (ar)
+
+- [الرئيسية](https://soluklan.app/ar/): تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.
+- [الدليل](https://soluklan.app/ar/dalil/): كيف تستخدم التطبيق خطوة بخطوة، وما الذي تفعله كل ميزة، وكيف يُؤدَّى كل تمرين.
+- [الخصوصية](https://soluklan.app/ar/khususiya.html)
+- [الدعم](https://soluklan.app/ar/dam.html)
+- [التنفس المتّسق](https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html): خمسة أنفاس ونصف في الدقيقة. أكثرها دراسةً، وأسهلها تعلّمًا، ومفتوح من البداية في التطبيق. لماذا هذه السرعة، وما الذي يقوله الدليل فعلًا.
+- [التنفس المثلث](https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html): أربع ثوانٍ شهيقًا، وأربع حبسًا، وأربع زفيرًا. أبسط تمرين فيه حبس، وأول موضع تلقى فيه الحبس في التطبيق.
+- [التنفس المربّع](https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html): أربع خطوات متساوية: شهيق، وحبس، وزفير، وحبس. أربعة أنفاس في الدقيقة. وهو أكثر التمارين تعليمًا في تدريب الجيش وخدمات الطوارئ.
+- [التنهيدة الفسيولوجية](https://soluklan.app/ar/dalil/at-tanahhud-al-fisyuluji.html): شهيقان فوق بعضهما، ثم زفير واحد طويل. وهو التمرين صاحب أفضل دراسة مضبوطة بين تمارين التنفّس القصيرة. وهو أيضًا تمرين البرنامج.
+- [الزفير الطويل](https://soluklan.app/ar/dalil/az-zafir-at-taweel.html): أربع شهيقًا، وأربع حبسًا، وثمانٍ زفيرًا. ومدّ الزفير إلى ضعف الشهيق يقوم على واحد من أثبت الآثار المقيسة بين تمارين التنفّس.
+- [المنخران بالتناوب](https://soluklan.app/ar/dalil/at-tanaffus-al-mutanawib.html): شهيق من اليسرى، وزفير من اليمنى، وشهيق من اليمنى، وزفير من اليسرى. أكثر تمارين التطبيق طلبًا للتناسق، وكيف يستقرّ وضع الإصبع.
+- [النفَس المبرِّد](https://soluklan.app/ar/dalil/an-nafas-al-mubarrid.html): الهواء المسحوب بين الأسنان يترك برودة في الفم. والتقليد يسمّيه «مبرّدًا»، لكن القياس لا يؤيّد ذلك — ونكتب الأمرين.
+- [تنفّس 4-7-8](https://soluklan.app/ar/dalil/4-7-8.html): أربع شهيقًا، وسبع حبسًا، وثمانٍ زفيرًا. وأطول حبس في التطبيق هنا. تمرين شهرته تسبق دليله — ونحن نقول ذلك صراحةً.
+- [تنفّس الشفاه المزمومة](https://soluklan.app/ar/dalil/ash-shifah-al-maqbuda.html): ثلاث ثوانٍ شهيقًا من الأنف، وستّ ثوانٍ زفيرًا من شفتين مزمومتين. وهو التمرين الأساسي في إعادة التأهيل الرئوي وأكثر ما يُنصح به لضيق النفَس.
+- [عميق وبطيء](https://soluklan.app/ar/dalil/al-amiq-al-batee.html): ستّ ثوانٍ شهيقًا، وستّ ثوانٍ زفيرًا. بلا حبس وبلا زخرفة. وهو أفضل تمرين لتعلّم استعمال الحجاب الحاجز.
+- [كابالاباتي](https://soluklan.app/ar/dalil/kapalabhati.html): زفيرات سريعة قويّة من عضلات البطن. التمرين المتقدّم المنشّط الوحيد في التطبيق، وصاحب أطول قائمة بمن لا ينبغي أن يؤدّيه، والذي يقيسه الميكروفون على نحو آخر.
+- [نفَس الطاقة](https://soluklan.app/ar/dalil/nafas-at-taqa.html): ثانيتان شهيقًا وثانيتان زفيرًا. وهو التمرين الوحيد في التطبيق الذي مدّته مقفلة — لا يتجاوز دقيقة واحدة، ولذلك سبب وجيه.
+- [نفَس المحيط](https://soluklan.app/ar/dalil/nafas-al-muhit.html): حفيف الهواء وهو يمرّ في حلقك. شهيق صامت، وزفير كصدفة بحر. وإصابة الصوت هي التمرين نفسه.
+- [نفَس المنخر الأيسر والأيمن](https://soluklan.app/ar/dalil/tanaffus-fathat-wahida.html): شهيق وزفير من منخر واحد. أهدأ تمرينين في التطبيق، والفرق بينهما، وأين يضعف الدليل.
+- [نفَس النحلة](https://soluklan.app/ar/dalil/nafas-an-nahla.html): الفم مغلق، وعشر ثوانٍ من «ممم». وهو التمرين الوحيد في التطبيق الذي يُقاس فيه الصوت نفسه: فالميكروفون لا يبحث عن نفَس هادئ، بل عن اهتزاز.
+- [الخلفيات والفصول والوقت من اليوم](https://soluklan.app/ar/dalil/al-khalfiyat-wal-fusul.html): تغيّر الخلفية خلال اليوم ليس زينة. كيف تُحسب، ولماذا لا تطلب بيانات موقع، وماذا يظهر ومتى.
+- [على ماذا تتوقّف اقتراحاتك](https://soluklan.app/ar/dalil/min-ayna-tati-al-iqtirahat.html): التمرين المقترح والمدّة المقترحة ليسا ثابتين. إجابات تعارفك، وجلساتك السابقة، والوقت من اليوم، والمواضع التي تتقاطع فيها هذه كلها.
+- [كيف تُحسب درجة الجلسة](https://soluklan.app/ar/dalil/kayfa-tuhsab-ad-daraja.html): الرقم من مئة متوسّط مرجّح لعدّة قياسات منفصلة. كم يزن كل واحد منها، ولماذا، وما الذي لا تقوله الدرجة.
+- [كيف تُقاس العتبات على تسجيلات حقيقية](https://soluklan.app/ar/dalil/qiyas-al-atabat.html): ما الذي يُعدّ «زفيرًا» لا يُقرَّر بالتخمين بل من عيّنات صوتية حقيقية يرسلها المستخدمون. وكيف يجري ذلك العمل.
+- [كيف نقرأ الدليل](https://soluklan.app/ar/dalil/kayfa-naqra-ad-dalil.html): أكثر دراسات التنفّس صغيرة وغير مضبوطة وقصيرة. على ماذا تقوم كل جملة في التطبيق، وما الذي لا نكتبه عن قصد.
+- [كيف يسمع الميكروفون نفَسك](https://soluklan.app/ar/dalil/kayfa-yasma-al-mikrofon.html): إن كان الصوت لا يُسجَّل فكيف يقيس التطبيق نفَسك؟ أرضية الضجيج، وعتبة تتحرّك مع الغرفة، وكيف تُعرف بداية الزفير ونهايته.
+- [لا كود من طرف ثالث في التطبيق](https://soluklan.app/ar/dalil/la-kod-min-taraf-thalith.html): لا شبكة إعلانات، ولا أداة تحليلات، ولا مبلّغ أعطال، ولا مكتبة واجهة جاهزة. ماذا يعني ذلك وكم يكلّف.
+- [ماذا نفعل بالبيانات التي تشاركها](https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html): إن فعّلت ملخّص الجلسة المجهول والعيّنات الصوتية، فلأي شيء تصلنا تلك السجلّات، وماذا يجري لكل واحد منها، وإلى ماذا تنتهي.
+- [أكبر فائدة من التطبيق](https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html): شخصان يستعملان التطبيق نفسه ويخرجان بنتيجتين مختلفتين تمامًا. هذه عشرة أمور تصنع الفرق، وكيف تفعل كلًّا منها.
+- [أي تمرين ومتى](https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html): قبل النوم، وفي استراحة العمل، وعند التوتّر المفاجئ، وعند الخمول، وفي يوم حارّ — أي تمرين يناسب أي حال.
+- [إدارة بياناتك](https://soluklan.app/ar/dalil/idarat-bayanatik.html): ما الذي يبقى على جهازك، وما الذي يتزامن في iCloud، وما الذي يُرسَل إن فعّلت المشاركة — وكيف تحذف كل شيء.
+- [إن لم يُسمَع نفَسك](https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html): المسافة، والغرفة، والتمارين الخافتة، واللوحي، وسطر التقرير الذي يقول لك أين الخلل — وكيف تتمرّن بلا ميكروفون.
+- [إنشاء برنامج والاستمرار فيه](https://soluklan.app/ar/dalil/idad-barnamij.html): ما البرنامج، وكيف يُنشأ، وماذا يحدث إن فاتك يوم، وما الذي يعرضه سجلّ البرامج.
+- [إيجاد إيقاعك أنت](https://soluklan.app/ar/dalil/ijad-iqaaik.html): الخمس ثوانٍ ونصف متوسّط. كيف يقيس التطبيق إيقاع الرنين الخاص بك، ومتى يُعاد القياس.
+- [اختيار التمرين والمدّة](https://soluklan.app/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html): ماذا تعني العلامات على بطاقات التمارين، وما هو الشريط المضيء على مؤشّر المدّة، ومتى يتولّى البرنامج أمر المدّة.
+- [التذكيرات والإشعارات](https://soluklan.app/ar/dalil/at-tadhkirat-wal-ishaarat.html): التذكير اليومي، وتنبيه السلسلة، والإشعارات الخاصة بالتمارين، وساعات الهدوء، ووضع الإجازة، والسقف اليومي — وكيف تضبط كلًّا منها.
+- [التنقّل في التطبيق](https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html): الشاشة الرئيسية، ومختار التمارين، وشاشة «تعلّم»، والملف الشخصي، والإعدادات — ما الذي في كل موضع.
+- [السجلّ والملخّصات والإنجازات](https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html): سجلّ الجلسات، والملخّصات الأسبوعية، والملخّص الشخصي، والإنجازات — ما الذي في كل شاشة وكيف تُقرأ.
+- [السلسلة والمحطّات والتقويم](https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html): أي الجلسات تُحسب، وكيف تُضبط محطّة خاصة بك، وماذا يحدث حين تنكسر السلسلة، ولماذا وضع الإجازة يحفظها.
+- [بناء العادة: الثلاثون يومًا الأولى](https://soluklan.app/ar/dalil/bina-al-ada.html): خطة أربعة أسابيع: تمرين واحد، ثم القياسات، ثم تمرين ثانٍ، ثم برنامج — وماذا تفعل في الأيام التي تفوتك.
+- [جعل الواجهة أبسط أو أكمل](https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html): ثلاثة مستويات للواجهة: بسيطة، وقياسية، ومتقدّمة. ما الذي يتغيّر في كل واحد، ولمن يناسب.
+- [جلستك الأولى من أوّلها إلى آخرها](https://soluklan.app/ar/dalil/jalsatuk-al-ula.html): كل خطوة من فتح التطبيق أول مرّة إلى قراءة تقريرك الأول. ما الذي يُسأل عنه، ولماذا، وماذا تفعل في كل موضع.
+- [عناصر الواجهة والنشاط المباشر](https://soluklan.app/ar/dalil/al-widget-wan-nashat-al-mubashir.html): عنصر الشاشة الرئيسية، وعنصر شاشة القفل، والنشاط المباشر — كيف تُضاف وماذا تعرض.
+- [فتح التمارين المقفلة](https://soluklan.app/ar/dalil/fath-at-tamarin-al-muqfala.html): لماذا بعض التمارين مقفلة، وما الذي يُحسب في فتحها، وكيف يغيّر مستوى خبرتك عدد الجلسات المطلوبة.
+- [قراءة تقرير الجلسة](https://soluklan.app/ar/dalil/qiraat-at-taqrir.html): الدرجة، والقياسات، والسطور التقنية، والمكوّنات، ورسم مستوى الصوت — سطرًا سطرًا، وماذا تفعل حين يهبط أحدها.
+- [ماذا يوجد على شاشة الجلسة](https://soluklan.app/ar/dalil/shashat-al-jalsa.html): الدائرة، وموجة الصوت، والملاحظات القصيرة، وبطاقة الميكروفون، والاهتزازات، وقائمة الإيقاف المؤقّت — ماذا يفعل كل جزء.
+
+## 简体中文 (zh-Hans)
+
+- [首页](https://soluklan.app/zh/): 一款 iPhone 和 iPad 应用，用麦克风跟随你的呼吸节奏，并为这次练习打分。放松与专注的练习。
+- [指南](https://soluklan.app/zh/zhinan/): 如何一步步使用这个应用、每个功能有什么用，以及每种呼吸法怎么做。
+- [隐私](https://soluklan.app/zh/yinsi.html)
+- [支持](https://soluklan.app/zh/zhichi.html)
+- [4-7-8 呼吸](https://soluklan.app/zh/zhinan/4-7-8.html): 吸四、屏七、呼八。应用里最长的屏息在这里。这是一种名气跑在证据前面的呼吸法——我们直说。
+- [三角呼吸](https://soluklan.app/zh/zhinan/sanjiao-huxi.html): 吸四秒、屏四秒、呼四秒。最简单的带屏息的呼吸法，也是你在应用里第一次遇到屏息的地方。
+- [交替鼻孔](https://soluklan.app/zh/zhinan/jiaoti-bikong.html): 左吸、右呼、右吸、左呼。应用里最需要协调的一种，以及手指位置怎么安顿下来。
+- [共振呼吸](https://soluklan.app/zh/zhinan/gongzhen-huxi.html): 每分钟五次半。研究得最多、最好学，在应用里一开始就是开的。为什么是这个速度，以及证据究竟说了什么。
+- [圣光调息](https://soluklan.app/zh/zhinan/shengguang-tiaoxi.html): 由腹肌发力的快速有力的呼气。应用里唯一一种带刺激性的进阶呼吸法，禁忌名单最长的一种，也是麦克风用另一种方式来测的一种。
+- [左鼻孔与右鼻孔呼吸](https://soluklan.app/zh/zhinan/dan-bikong-huxi.html): 用一个鼻孔吸气和呼气。应用里最安静的两种呼吸法、它们之间的差别，以及证据薄弱在哪里。
+- [提神呼吸](https://soluklan.app/zh/zhinan/tishen-huxi.html): 吸两秒、呼两秒。应用里唯一一种时长被锁住的呼吸法——不能超过一分钟，而这有充分的理由。
+- [海洋呼吸](https://soluklan.app/zh/zhinan/haiyang-huxi.html): 空气经过喉咙时的沙沙声。无声的吸气，像海螺一样的呼气。把声音做对，就是这种呼吸法本身。
+- [深而慢](https://soluklan.app/zh/zhinan/shen-er-man.html): 吸六秒、呼六秒。不屏息，不加修饰。学会用横膈膜，它是最好的呼吸法。
+- [清凉呼吸](https://soluklan.app/zh/zhinan/qingliang-huxi.html): 从牙缝吸进来的空气会在口中留下清凉。传统说它“清凉”，但测量并不支持这一点——两边我们都写。
+- [生理性叹息](https://soluklan.app/zh/zhinan/shenglixing-tanxi.html): 两次叠着的吸气，然后一次长呼气。短呼吸练习里对照研究做得最好的一种。它也是计划用的呼吸法。
+- [箱式呼吸](https://soluklan.app/zh/zhinan/xiangshi-huxi.html): 四个相等的步骤：吸、屏、呼、屏。每分钟四次呼吸。它是军队和急救训练里教得最广的一种。
+- [缩唇呼吸](https://soluklan.app/zh/zhinan/suochun-huxi.html): 鼻子吸气三秒，从缩起的嘴唇呼气六秒。肺康复里教的核心呼吸法，也是气短时最被推荐的一种。
+- [蜂鸣呼吸](https://soluklan.app/zh/zhinan/fengming-huxi.html): 闭着嘴，十秒的“嗡——”。它是应用里唯一一种连声音本身都要测的呼吸法：麦克风找的不是安静的气流，而是振动。
+- [长呼气](https://soluklan.app/zh/zhinan/chang-huqi.html): 吸四、屏四、呼八。把呼气拉长到吸气的两倍，靠的是呼吸技巧里被测得最一致的效果之一。
+- [一次练习的分数怎么算](https://soluklan.app/zh/zhinan/fenshu-zenme-suan.html): 那个百分制的数字，是几项独立测量的加权平均。每一项占多少、为什么，以及分数没告诉你什么。
+- [你的建议取决于什么](https://soluklan.app/zh/zhinan/jianyi-cong-nali-lai.html): 建议的呼吸法和建议的时长都不是固定的。你的开场回答、过去的练习、一天中的时间，以及它们彼此交叉的地方。
+- [应用里没有第三方代码](https://soluklan.app/zh/zhinan/meiyou-disanfang-daima.html): 没有广告网络、没有分析工具、没有崩溃上报、没有现成的界面库。这意味着什么，代价是什么。
+- [我们怎么读证据](https://soluklan.app/zh/zhinan/zenme-du-zhengju.html): 呼吸研究大多样本小、没有对照、周期短。应用里每句话建立在什么之上，以及我们有意不写什么。
+- [我们拿分享的数据做什么](https://soluklan.app/zh/zhinan/fenxiang-de-shuju.html): 如果你打开了匿名练习摘要和声音样本，那些记录到我们这里是为了什么、每一条会经历什么、最后又变成什么。
+- [背景、季节和一天中的时间](https://soluklan.app/zh/zhinan/beijing-yu-jijie.html): 背景随着一天变化不是装饰。它是怎么算出来的、为什么不要位置数据，以及什么时候出现什么。
+- [阈值是怎么在真实录音上测出来的](https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html): 什么算作一次“呼气”，不是靠猜，而是从用户发来的真实声音样本里定出来的。这项工作是怎么做的。
+- [麦克风怎么听你的呼吸](https://soluklan.app/zh/zhinan/maikefeng-zenme-ting.html): 既然不录音，应用怎么测你的呼吸？底噪、随房间移动的阈值，以及呼气的起点和终点是怎么找到的。
+- [什么时候做什么](https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html): 睡前、工作间隙、突然紧张时、发懵时、大热天——什么情形配什么呼吸法。
+- [养成习惯：最初的三十天](https://soluklan.app/zh/zhinan/yangcheng-xiguan.html): 四周的计划：一种呼吸法，然后是测量，然后是第二种，然后是一个计划——以及断掉的日子怎么办。
+- [呼吸听不到的时候](https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html): 距离、房间、本来就轻的呼吸法、平板，以及报告里那行告诉你问题在哪的字——还有怎么不用麦克风练。
+- [在应用里怎么走](https://soluklan.app/zh/zhinan/app-daohang.html): 主屏幕、呼吸法选择、“学一学”界面、个人页和设置——每个地方有什么。
+- [小组件与实时活动](https://soluklan.app/zh/zhinan/xiao-zujian.html): 主屏幕小组件、锁屏小组件和实时活动——怎么添加，显示什么。
+- [建立一个计划并坚持下去](https://soluklan.app/zh/zhinan/jianli-jihua.html): 计划是什么、怎么建立、断了一天会怎样，以及计划历史里能看到什么。
+- [找到你自己的节奏](https://soluklan.app/zh/zhinan/ziji-de-jiezou.html): 五秒半是个平均值。应用怎么测出你的共振节奏，以及什么时候该重测。
+- [把界面调简单或调完整](https://soluklan.app/zh/zhinan/jiemian-cengji.html): 三个界面层级：简洁、标准、进阶。每一级变的是什么，适合谁。
+- [把这个应用用透](https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html): 两个人用同一个应用，拿到的结果可能差很远。造成差别的十件事，以及每一件具体怎么做。
+- [提醒与通知](https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html): 每日提醒、连续天数警示、针对呼吸法的通知、免打扰时段、假期模式和每日上限——每一项怎么设。
+- [第一次练习，从头到尾](https://soluklan.app/zh/zhinan/diyici-lianxi.html): 从第一次打开应用到读完第一份报告的每一步。会问你什么、为什么问，以及每个地方该做什么。
+- [管理你的数据](https://soluklan.app/zh/zhinan/guanli-shuju.html): 什么留在你的设备上、什么在 iCloud 里同步、打开分享后会发送什么——以及怎么把一切删掉。
+- [练习界面上都有什么](https://soluklan.app/zh/zhinan/lianxi-jiemian.html): 圆圈、声波、简短提示、麦克风卡片、震动和暂停菜单——每个部分各自做什么。
+- [解锁呼吸法](https://soluklan.app/zh/zhinan/jiesuo-huxifa.html): 为什么有些呼吸法锁着、什么算数，以及你的经验水平怎么改变所需的练习次数。
+- [记录、小结和成就](https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html): 练习记录、每周小结、个人总结和成就——每个界面里有什么，怎么读。
+- [读懂练习报告](https://soluklan.app/zh/zhinan/du-baogao.html): 分数、测量、技术行、组成部分和声音强度图——一行一行看，以及某一项掉下来时该怎么办。
+- [连续天数、里程碑和日历](https://soluklan.app/zh/zhinan/lianxu-tianshu.html): 哪些练习算数、怎么设自己的里程碑、断掉时会发生什么，以及假期模式为什么能保住它。
+- [选呼吸法和时长](https://soluklan.app/zh/zhinan/xuan-huxifa-he-shichang.html): 呼吸法卡片上的标记是什么意思、时长滑块上亮起的那段是什么，以及计划什么时候会接管时长。
+
+## Русский (ru)
+
+- [Главная](https://soluklan.app/ru/): Приложение для iPhone и iPad: следит за ритмом дыхания через микрофон и оценивает сессию. Упражнение для расслабления и сосредоточенности.
+- [Руководство](https://soluklan.app/ru/rukovodstvo/): Как пользоваться приложением шаг за шагом, что делает каждая функция и как выполняется каждая техника.
+- [Конфиденциальность](https://soluklan.app/ru/konfidencialnost.html)
+- [Поддержка](https://soluklan.app/ru/podderzhka.html)
+- [В приложении нет чужого кода](https://soluklan.app/ru/rukovodstvo/net-chuzhogo-koda.html): Ни рекламной сети, ни аналитики, ни сборщика отчётов о сбоях, ни готовой библиотеки интерфейса. Что это значит и чего стоит.
+- [Как микрофон слышит твоё дыхание](https://soluklan.app/ru/rukovodstvo/kak-slushaet-mikrofon.html): Если звук не записывается, как приложение измеряет дыхание? Шум комнаты, порог, который движется вместе с ней, и как находятся начало и конец выдоха.
+- [Как мы читаем исследования](https://soluklan.app/ru/rukovodstvo/kak-my-chitaem-issledovaniya.html): Большинство дыхательных исследований малы, неконтролируемы и коротки. На чём стоит каждая фраза в приложении и чего мы намеренно не пишем.
+- [Как пороги измеряются на настоящих записях](https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html): Что считать «выдохом», решается не наугад, а по настоящим образцам звука, которые присылают пользователи. Как устроена эта работа.
+- [Как считается оценка сессии](https://soluklan.app/ru/rukovodstvo/kak-schitaetsya-ocenka.html): Число из ста — это взвешенное среднее нескольких отдельных измерений. Сколько весит каждое, почему, и чего оценка не говорит.
+- [От чего зависят твои подсказки](https://soluklan.app/ru/rukovodstvo/otkuda-berutsya-sovety.html): Рекомендуемая техника и рекомендуемая длительность не фиксированы. Вступительные ответы, прошлые сессии, время суток и места, где всё это пересекается.
+- [Фоны, времена года и время суток](https://soluklan.app/ru/rukovodstvo/fony-i-sezony.html): То, что фон меняется в течение дня, — не украшение. Как он вычисляется, почему не просит геопозицию и что когда появляется.
+- [Что мы делаем с переданными данными](https://soluklan.app/ru/rukovodstvo/chto-my-delaem-s-dannymi.html): Если ты включил анонимную сводку сессии и образцы звука — зачем эти записи приходят к нам, что происходит с каждой и чем всё заканчивается.
+- [Виджеты и Live Activity](https://soluklan.app/ru/rukovodstvo/vidzhety.html): Виджет на экране «Домой», виджет на экране блокировки и Live Activity — как добавить и что они показывают.
+- [Выбор техники и длительности](https://soluklan.app/ru/rukovodstvo/vybor-tekhniki-i-dliny.html): Что значат отметки на карточках техник, что такое светлая полоса на ползунке и когда длительность забирает себе программа.
+- [Если дыхание не слышно](https://soluklan.app/ru/rukovodstvo/dyhanie-ne-slyshno.html): Расстояние, комната, тихие техники, планшет и строка в отчёте, которая говорит, в чём дело, — и как заниматься без микрофона.
+- [История, сводки и достижения](https://soluklan.app/ru/rukovodstvo/istoriya-svodki-dostizheniya.html): История сессий, недельные сводки, личная сводка и достижения — что на каждом экране и как это читать.
+- [Как взять от приложения максимум](https://soluklan.app/ru/rukovodstvo/maksimum-ot-prilozheniya.html): Двое пользуются одним и тем же приложением и получают очень разное. Десять вещей, которые решают дело, и как сделать каждую.
+- [Как завести программу и не бросить](https://soluklan.app/ru/rukovodstvo/kak-nastroit-programmu.html): Что такое программа, как её завести, что будет, если пропустить день, и что показывает история программ.
+- [Как закрепить привычку: первые тридцать дней](https://soluklan.app/ru/rukovodstvo/kak-zakrepit-privychku.html): План на четыре недели: одна техника, потом измерения, потом вторая техника, потом программа — и что делать с пропущенными днями.
+- [Как открываются техники](https://soluklan.app/ru/rukovodstvo/kak-otkryvayutsya-tekhniki.html): Почему часть техник закрыта, что засчитывается и как уровень опыта меняет число нужных сессий.
+- [Как устроено приложение](https://soluklan.app/ru/rukovodstvo/kak-ustroeno-prilozhenie.html): Главный экран, выбор техники, экран «Учиться», профиль и настройки — что где находится.
+- [Как читать отчёт сессии](https://soluklan.app/ru/rukovodstvo/kak-chitat-otchyot.html): Оценка, измерения, технические строки, составляющие и график уровня звука — строка за строкой, и что делать, если что-то просело.
+- [Какая техника и когда](https://soluklan.app/ru/rukovodstvo/kakaya-tekhnika-kogda.html): Перед сном, в рабочем перерыве, при внезапном напряжении, при вялости, в жару — какая техника под какой случай.
+- [Напоминания и уведомления](https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html): Ежедневное напоминание, предупреждение о серии, уведомления под конкретные техники, тихие часы, режим отпуска и дневной предел — как настроить каждое.
+- [Первая сессия от начала до конца](https://soluklan.app/ru/rukovodstvo/pervaya-sessiya.html): Каждый шаг: от первого запуска приложения до чтения первого отчёта. О чём спрашивают, зачем и что где делать.
+- [Свой темп](https://soluklan.app/ru/rukovodstvo/svoy-temp.html): Пять с половиной секунд — это среднее. Как приложение измеряет твой резонансный темп и когда стоит измерить заново.
+- [Сделать интерфейс проще или полнее](https://soluklan.app/ru/rukovodstvo/urovni-interfeysa.html): Три уровня интерфейса: простой, стандартный и расширенный. Что меняется на каждом и кому он подходит.
+- [Серия, вехи и календарь](https://soluklan.app/ru/rukovodstvo/seriya-i-vekhi.html): Какие сессии засчитываются, как поставить свою веху, что происходит при обрыве и почему режим отпуска её сохраняет.
+- [Управление данными](https://soluklan.app/ru/rukovodstvo/upravlenie-dannymi.html): Что остаётся на устройстве, что синхронизируется в iCloud, что отправляется при включённой передаче — и как удалить всё.
+- [Что на экране сессии](https://soluklan.app/ru/rukovodstvo/ekran-sessii.html): Круг, звуковая волна, короткие подсказки, карточка микрофона, тактильные отклики и меню паузы — что делает каждая часть.
+- [Бодрящее дыхание](https://soluklan.app/ru/rukovodstvo/bodryashchee-dyhanie.html): Вдох две секунды, выдох две. Единственная техника в приложении с закреплённой длительностью — она не идёт дальше минуты, и на это есть веская причина.
+- [Глубоко и медленно](https://soluklan.app/ru/rukovodstvo/gluboko-i-medlenno.html): Вдох шесть секунд, выдох шесть. Без задержек и без украшений. Лучшая техника, чтобы научиться работать диафрагмой.
+- [Долгий выдох](https://soluklan.app/ru/rukovodstvo/dolgiy-vydoh.html): Вдох четыре, задержка четыре, выдох восемь. Растянуть выдох вдвое против вдоха — это опирается на один из самых устойчиво измеренных эффектов среди дыхательных техник.
+- [Дыхание 4-7-8](https://soluklan.app/ru/rukovodstvo/4-7-8.html): Вдох четыре, задержка семь, выдох восемь. Самая долгая задержка в приложении — здесь. Техника, чья популярность обгоняет доказательства, и мы говорим это прямо.
+- [Дыхание левой и правой ноздрёй](https://soluklan.app/ru/rukovodstvo/odna-nozdrya.html): Вдох и выдох через одну ноздрю. Две самые тихие техники в приложении, разница между ними и то, где доказательства слабы.
+- [Дыхание пчелы](https://soluklan.app/ru/rukovodstvo/dyhanie-pchely.html): Рот закрыт, десять секунд «ммм». Единственная техника в приложении, где измеряется сам звук: микрофон ищет не тихое дыхание, а вибрацию.
+- [Дыхание сжатыми губами](https://soluklan.app/ru/rukovodstvo/szhatye-guby.html): Вдох носом три секунды, выдох через сжатые губы шесть. Основная техника лёгочной реабилитации и та, что чаще всего рекомендуется при одышке.
+- [Капалабхати](https://soluklan.app/ru/rukovodstvo/kapalabhati.html): Быстрые сильные выдохи от мышц живота. Единственная бодрящая продвинутая техника в приложении, с самым длинным списком противопоказаний, и её микрофон измеряет иначе.
+- [Квадратное дыхание](https://soluklan.app/ru/rukovodstvo/kvadratnoe-dyhanie.html): Четыре равных шага: вдох, задержка, выдох, задержка. Четыре дыхания в минуту. Техника, которой чаще всего учат в армии и в службах спасения.
+- [Когерентное дыхание](https://soluklan.app/ru/rukovodstvo/kogerentnoe-dyhanie.html): Пять с половиной дыханий в минуту. Самая изученная, самая простая в освоении и открытая с самого начала. Почему именно эта скорость и что на самом деле показывают исследования.
+- [Океаническое дыхание](https://soluklan.app/ru/rukovodstvo/okeanicheskoe-dyhanie.html): Шорох воздуха, проходящего через горло. Беззвучный вдох и выдох, как в морской раковине. Поймать звук — и есть сама техника.
+- [Охлаждающее дыхание](https://soluklan.app/ru/rukovodstvo/ohlazhdayushchee-dyhanie.html): Воздух, втянутый между зубами, оставляет во рту прохладу. Традиция называет это «охлаждением», но измерения этого не подтверждают — пишем и то и другое.
+- [Попеременные ноздри](https://soluklan.app/ru/rukovodstvo/poperemennye-nozdri.html): Вдох слева, выдох справа, вдох справа, выдох слева. Самая требовательная к координации техника в приложении и то, как устаканивается положение пальцев.
+- [Треугольное дыхание](https://soluklan.app/ru/rukovodstvo/treugolnoe-dyhanie.html): Вдох четыре секунды, задержка четыре, выдох четыре. Самая простая техника с задержкой и первое место, где ты встречаешь задержку.
+- [Физиологический вздох](https://soluklan.app/ru/rukovodstvo/fiziologicheskiy-vzdoh.html): Два вдоха один поверх другого, затем один долгий выдох. Техника с лучшим контролируемым исследованием среди коротких дыхательных упражнений. Она же — техника программы.
