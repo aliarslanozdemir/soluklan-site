@@ -1582,3 +1582,13 @@ html:has(.slaytlar) body::before {
   padding: .35rem .7rem; border-radius: 999px;
   border: 1px solid var(--line); background: var(--bg-2); color: var(--ink-2);
 }
+
+/* ---------------------------------------------------------------------------
+   Arapça: yön yalnız okuma alanında (`<main dir="rtl">`). Üst menü, logo, dil
+   seçici ve alt bilgi ötekilerle aynı duruyor — Ali "bu kadar da abartma, sadece
+   yazılar sağa hizalı olsun" dedi (16 Eylül 2026).
+
+   Buradaki tek istisna yazı yazılan ve yazıyı listeleyen yerler: arama kutusuna
+   Arapça yazılıyor, sonuçlar Arapça metin. Onlar başlıkta olsa da sağdan sola.
+   --------------------------------------------------------------------------- */
+html[lang="ar"] .ara-kutu { direction: rtl; }
