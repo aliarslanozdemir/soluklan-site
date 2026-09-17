@@ -1586,11 +1586,8 @@ html:has(.slaytlar) body::before {
 }
 
 /* ---------------------------------------------------------------------------
-   Arapça: yön yalnız okuma alanında (`<main dir="rtl">`). Üst menü, logo, dil
-   seçici ve alt bilgi ötekilerle aynı duruyor — Ali "bu kadar da abartma, sadece
-   yazılar sağa hizalı olsun" dedi (16 Eylül 2026).
-
-   Buradaki tek istisna yazı yazılan ve yazıyı listeleyen yerler: arama kutusuna
-   Arapça yazılıyor, sonuçlar Arapça metin. Onlar başlıkta olsa da sağdan sola.
+   Arapça: yön **kökte** (`<html dir="rtl">`), yani üst menü, logo, dil seçici ve
+   alt bilgi de dönüyor. 16 Eylül'de yalnız okuma alanı döndürülmüştü ("bu kadar da
+   abartma"), 17 Eylül'de Ali vazgeçti. Arama kutusu zaten kökle birlikte dönüyor,
+   ayrı kurala gerek kalmadı.
    --------------------------------------------------------------------------- */
-html[lang="ar"] .ara-kutu { direction: rtl; }
