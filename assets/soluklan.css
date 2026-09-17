@@ -1526,8 +1526,10 @@ html:has(.slaytlar) body::before {
      hiçbir şey yazılmamışken bile ekranı boydan boya kaplıyordu (Ali, 14 Eylül 2026). */
   display: flex; justify-content: center; align-items: flex-start;
   padding: clamp(1rem, 8vh, 5rem) 1rem 1rem;
-  background: color-mix(in srgb, var(--ink) 45%, transparent);
-  backdrop-filter: blur(3px);
+  /* Perde iki temada da koyu ve hafif. Eskiden `--ink` karışımıydı: karanlık temada
+     `--ink` beyaza yakın olduğu için büyüteci açınca sayfa ağarıyordu (Ali, 17 Eylül 2026). */
+  background: rgba(8, 18, 28, .34);
+  backdrop-filter: blur(2px);
 }
 .ara-katman[hidden] { display: none; }
 .ara-kutu {
