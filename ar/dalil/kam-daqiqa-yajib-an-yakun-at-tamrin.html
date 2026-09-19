@@ -313,14 +313,16 @@
       bulunan.push({ k: k, puan: puan });
     });
     bulunan.sort(function (a, b) { return b.puan - a.puan; });
-    bulunan = bulunan.slice(0, 20);
+    /* Sınır 20'den 50'ye çıktı; daha fazlası varsa sayaçta "50+" yazıyor (Ali, 20 Eylül 2026). */
+    var toplam = bulunan.length;
+    bulunan = bulunan.slice(0, 50);
 
     if (!bulunan.length) {
       liste.innerHTML = '<li class="ara-bos">' + m.yok + '</li>';
       sayac.textContent = '';
       return;
     }
-    sayac.textContent = m.sonuc.replace('%s', bulunan.length);
+    sayac.textContent = m.sonuc.replace('%s', toplam > bulunan.length ? bulunan.length + '+' : bulunan.length);
     liste.innerHTML = bulunan.map(function (x) {
       var k = x.k;
       var alinti = parca(k.o, kelimeler[0]) || parca(k.g, kelimeler[0]) || '';

@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=aa0202bb">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"iPad 上的 Soluklan","description":"iPad 屏幕更宽，麦克风更远。设备该怎么放、为什么比手机更难测，以及界面有什么变化。","url":"https://soluklan.app/zh/zhinan/ipad-shang-de-soluklan.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/zhinan/ipad-shang-de-soluklan.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"平台","dateModified":"2026-09-19T10:24:39+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"iPad 上的 Soluklan","description":"iPad 屏幕更宽，麦克风更远。设备该怎么放、为什么比手机更难测，以及界面有什么变化。","url":"https://soluklan.app/zh/zhinan/ipad-shang-de-soluklan.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/zhinan/ipad-shang-de-soluklan.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"平台","dateModified":"2026-09-19T12:34:16+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"指南","item":"https://soluklan.app/zh/zhinan/"},{"@type":"ListItem","position":2,"name":"平台","item":"https://soluklan.app/zh/zhinan/zhuti/pingtai.html"},{"@type":"ListItem","position":3,"name":"iPad 上的 Soluklan","item":"https://soluklan.app/zh/zhinan/ipad-shang-de-soluklan.html"}]}</script>
 <script>
 (function () {
@@ -308,14 +308,16 @@
       bulunan.push({ k: k, puan: puan });
     });
     bulunan.sort(function (a, b) { return b.puan - a.puan; });
-    bulunan = bulunan.slice(0, 20);
+    /* Sınır 20'den 50'ye çıktı; daha fazlası varsa sayaçta "50+" yazıyor (Ali, 20 Eylül 2026). */
+    var toplam = bulunan.length;
+    bulunan = bulunan.slice(0, 50);
 
     if (!bulunan.length) {
       liste.innerHTML = '<li class="ara-bos">' + m.yok + '</li>';
       sayac.textContent = '';
       return;
     }
-    sayac.textContent = m.sonuc.replace('%s', bulunan.length);
+    sayac.textContent = m.sonuc.replace('%s', toplam > bulunan.length ? bulunan.length + '+' : bulunan.length);
     liste.innerHTML = bulunan.map(function (x) {
       var k = x.k;
       var alinti = parca(k.o, kelimeler[0]) || parca(k.g, kelimeler[0]) || '';
