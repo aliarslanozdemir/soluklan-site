@@ -636,12 +636,24 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
   .brand svg { width: 1.4rem; height: 1.4rem; }
   nav.site { gap: .9rem; font-size: .85rem; }
 }
-/* Çok dar (küçük telefonlar): marka yazısı gizlenir, işaret kalır */
+/* Telefon: başlık iki satır. Tek satırda menü, arama ve dil düğmesi sığmıyordu; arama ile dil
+   ekranın dışına itiliyor, Almanca ve Rusçada menü de kesiliyordu (Ali, 23 Eylül 2026).
+   Üstte marka + arama + dil, altta tam genişlikte menü. */
+@media (max-width: 40rem) {
+  header.site .wrap { flex-wrap: wrap; row-gap: 0; min-height: 0; padding-block: .6rem 0; }
+  html.menu-kucuk header.site .wrap { min-height: 0; padding-block: .35rem 0; }
+  header.site .brand { order: 0; }
+  header.site .ara-ac { order: 1; margin-inline-start: auto; }
+  header.site .dil-sec { order: 2; }
+  nav.site { order: 3; flex-basis: 100%; margin-inline-start: 0; justify-content: space-between;
+             gap: .5rem; font-size: .88rem; overflow-x: auto; scrollbar-width: none; }
+  nav.site::-webkit-scrollbar { display: none; }
+  /* Rusçada "Конфиденциальность" uzun: menü dar ekranda biraz küçük */
+  :lang(ru) nav.site { font-size: .76rem; gap: .35rem; }
+}
+/* Çok dar (küçük telefonlar): menü aralıkları daralır */
 @media (max-width: 24rem) {
-  .brand span, .brand { font-size: 0; }
-  .brand svg { width: 1.6rem; height: 1.6rem; }
-  nav.site { gap: .75rem; font-size: .82rem; margin-inline-start: 0; }
-  header.site .wrap { justify-content: space-between; }
+  nav.site { font-size: .8rem; }
 }
 
 /* --- Dar ekran: giriş ve slaytlar --- */
