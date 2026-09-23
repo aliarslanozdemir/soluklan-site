@@ -51,8 +51,12 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Soluklan","operatingSystem":"iOS 17.0+","applicationCategory":"HealthApplication","url":"https://soluklan.app/ar/","inLanguage":["tr","en","de","fr","es","it","ar","zh-Hans","ru"],"description":"تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.","image":"https://soluklan.app/assets/og.png","publisher":{"@id":"https://soluklan.app/#kurulus"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
 <script>
 (function () {
-  var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it" };
+  var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it", ar: "/ar", zh: "/zh", ru: "/ru" };
   if (location.pathname !== "/") return;          // yönlendirme yalnız kökte
+  // Arama motorları yönlendirilmez: Googlebot İngilizce tarayıcı gibi geliyor, kök Türkçe
+  // sayfa ona hep /en/'e yönlenen sayfa görünüyor ve dizine girmiyordu (Search Console,
+  // 23 Eylül 2026). Dilleri motorlar hreflang'den zaten ayırıyor.
+  if (/bot|crawl|spider|slurp|lighthouse|inspectiontool/i.test(navigator.userAgent || "")) return;
   try { if (localStorage.getItem("soluklan-dil")) return; } catch (e) { return; }
   var istekler = navigator.languages || [navigator.language || ""];
   var hedef = "";
