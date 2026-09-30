@@ -121,26 +121,25 @@
     <h1>Mikrofon nefesi nasıl duyuyor</h1>
     <p class="lede">Ses kaydedilmiyorsa uygulama nefesi nasıl ölçüyor? Gürültü tabanı, ortama göre değişen eşik ve bir verişin başlangıcıyla bitişinin nasıl bulunduğu.</p>
     <p class="updated">6 dakikalık okuma</p>
-<p>Uygulama sesi kaydetmiyor. Mikrofondan gelen ses akışı diske hiç yazılmıyor; her yirmi milisaniyede bir o anki <strong>ses şiddeti</strong> hesaplanıyor ve geriye yalnız bu sayı kalıyor. Yani uygulamanın elinde bir ses dosyası değil, bir sayı dizisi var: yükselip alçalan bir çizgi.</p>
+<p>Uygulama ölçüm için sesi kaydetmiyor. Mikrofondan gelen ses akışı diske yazılmıyor (tek istisna, ayrıca onay verdiğin <a href="/rehber/paylasilan-veriyle-ne-yapiyoruz.html">ses örneği</a> paylaşımı). Her yirmi milisaniyede bir o anki <strong>ses şiddeti</strong> hesaplanıyor ve geriye yalnız bu sayı kalıyor. Yani uygulamanın elinde bir ses dosyası değil, bir sayı dizisi var: yükselip alçalan bir çizgi.</p>
 <p>Bütün ölçüm bu çizgi üzerinden yapılıyor.</p>
 <h2>Önce sessizlik ölçülüyor</h2>
 <p>Seans başlarken üç saniyelik bir dinleme var. Bu sürede odanın <strong>gürültü tabanı</strong> ölçülüyor: buzdolabının uğultusu, dışarıdaki trafik, cihazın kendi elektronik gürültüsü.</p>
-<p>Ortalama alınmıyor, o üç saniyenin <strong>en sessiz anlarına</strong> bakılıyor. Sebebi şu: kalibrasyon sırasında telefonu masaya koyman ya da birinin öksürmesi ortalamayı yukarı çekiyor ve bütün seans boyunca eşik yanlış kalıyordu. Gerçek bir kayıtta bu on dört desibellik hataya yol açmıştı.</p>
+<p>Ortalama alınmıyor, o üç saniyenin <strong>en sessiz anlarına</strong> bakılıyor. Böylece o sırada telefonu masaya koyman ya da birinin öksürmesi, bütün seansın eşiğini bozmuyor.</p>
 <p>Taban seans boyunca da güncelleniyor. Ortam sessizleşirse eşik aşağı iniyor, gürültü artarsa yukarı çıkıyor — ama sınırlı ölçüde, yoksa gürültülü bir ortamda uygulama kendi kendine sağırlaşır.</p>
 <h2>Eşik mutlak değil, tabana göre</h2>
 <p>Bir sesin "veriş" sayılması için belli bir desibeli aşması gerekmiyor. <strong>Tabanın belli bir miktar üstüne</strong> çıkması gerekiyor. Sessiz bir odada bu eşik alçak, gürültülü bir kafede yüksek.</p>
 <p>Eşiğin ne kadar üstünde olacağı tekniğe göre değişiyor. Ağızdan verilen bir nefes (uzun veriş, büzük dudak) yüksek çıkıyor. Burundan verilen sakin bir nefes (koherent, kutu) çok daha alçak. Tek burun deliğinden verilen nefes hepsinin en alçağı. Her teknik kendi eşiğiyle dinleniyor, hepsine aynı çubuğu koymak burun tekniklerini duyulmaz yapardı.</p>
 <h2>Bir verişin başı ve sonu</h2>
 <p>Ham ses şiddeti çok titrek, doğrudan kullanılamıyor. Önce yumuşatılıyor — her yeni ölçüm bir öncekiyle karıştırılıyor, böylece tek bir tıkırtı verişe dönüşmüyor.</p>
-<p>Yumuşatılmış çizgi eşiği geçtiğinde veriş başlıyor. Bitmesi için iki koşuldan biri yetiyor: çizgi eşiğin altına inip orada üçte bir saniye kalmalı, ya da verişin kendi tepesinden belli bir miktar aşağı düşmeli. İkinci koşul olmasa duyulur bir alış verişi uzatıyor, iki nefes tek nefes gibi ölçülüyordu.</p>
+<p>Yumuşatılmış çizgi eşiği geçtiğinde veriş başlıyor. Bitmesi için iki koşuldan biri yetiyor: çizgi eşiğin altına inip orada üçte bir saniye kalmalı, ya da verişin kendi tepesinden belli bir miktar aşağı düşmeli. İkinci koşul, hemen ardından gelen duyulur bir alışın verişi uzatıp iki nefesi tek nefes gibi göstermesini önlüyor.</p>
 <p>Çok kısa olaylar atılıyor. Bunun için yumuşatılmış çizgiye değil ham ölçüme bakılıyor: yumuşatma kısa bir tıkırtıyı uzatıyor ve olduğundan uzun gösteriyor.</p>
 <h2>Sessiz oda ve tablet meselesi</h2>
 <p>Eşiklerin tabana göre olması çoğu durumda işe yarıyor ama bir tuzağı var: taban gerçekten çok düşükse, göreli eşik aşırı hassaslaşıyor ve odadaki her çıtırtı veriş sayılabiliyor. Bu yüzden tabanın inebileceği bir alt sınır var.</p>
-<p>Bu sınır bir süre gereğinden yüksekti. Bir tablet kaydında gerçek gürültü tabanı çok daha aşağıda ölçüldü; sınır tabanı olduğundan yüksek varsaydığı için verişin payı eriyor ve hiçbir şey duyulmuyordu. Kişi tabletin bir karış önünde nefes verirken uygulama "cihazı yaklaştır" diyordu.</p>
-<p>Sınır yirmi bir gerçek kayıtla yeniden tarandı ve indirildi: yakalanan veriş sayısı arttı, yanlış algılama sayısı değişmedi. Bu tür kararlar tahminle değil, elimizdeki kayıtlarla veriliyor — <a href="/rehber/paylasilan-veriyle-ne-yapiyoruz.html">ses örneği</a> paylaşımının tek işi bu.</p>
+<p>Sınır yüksek kalırsa bu kez tersi oluyor: tablet gibi mikrofonu uzak cihazlarda verişin payı eriyor ve nefes duyulmuyor. Sınırın yeri bu yüzden tahminle değil, gerçek kayıtlarla belirleniyor. Nasıl yapıldığını <a href="/rehber/esikler-nasil-olculuyor.html">Eşikler gerçek kayıtlarla nasıl ölçülüyor</a> yazısında anlattık.</p>
 <h2>Hızlı nefesler ayrı iş</h2>
 <p>Bu yöntemin bir sınırı var: bir verişin bittiğini anlamak için ondan sonra kısa bir sessizlik gerekiyor. Saniyede birden hızlı nefes verilen bir teknikte o sessizlik hiç oluşmuyor.</p>
-<p>O yüzden <a href="/rehber/kapalabhati.html">Kapalabhati</a> ayrı bir yolla ölçülüyor. Verişleri tek tek ayırmaya çalışmak yerine ses çizgisinin <strong>tepe yaptığı anlar</strong> sayılıyor, aralarındaki düzenliliğe bakılıyor. Sayaç, bir tepe kapandıktan sonra çizginin eşiğin altına inmesini bekliyor — bu koşul olmadan her verişi iki kez sayıyordu.</p>
+<p>O yüzden <a href="/rehber/kapalabhati.html">Kapalabhati</a> ayrı bir yolla ölçülüyor. Verişleri tek tek ayırmaya çalışmak yerine ses çizgisinin <strong>tepe yaptığı anlar</strong> sayılıyor, aralarındaki düzenliliğe bakılıyor. Sayaç, bir tepe kapandıktan sonra çizginin eşiğin altına inmesini bekliyor. Böylece bir veriş iki kez sayılmıyor.</p>
     <p class="geri"><a href="/rehber/konu/perde-arkasi.html">&#8592; Perde arkası</a></p>
   </div>
 </article>
