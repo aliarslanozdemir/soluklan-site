@@ -1,8 +1,8 @@
 # Soluklan
 
-> Mikrofonla nefes ritmini takip eden, seansını puanlayan iPhone ve iPad uygulaması. Rahatlama ve odaklanma egzersizi.
+> Mikrofonla nefes ritmini takip eden, seansını puanlayan iPhone, iPad ve Apple Watch uygulaması. Rahatlama ve odaklanma egzersizi.
 
-Soluklan bir nefes egzersizi uygulamasıdır (iPhone ve iPad, iOS 17+). Mikrofonla
+Soluklan bir nefes egzersizi uygulamasıdır (iPhone ve iPad için iOS 17+, Apple Watch için watchOS 10+). Mikrofonla
 nefesin sesini dinler, ritme ne kadar uyduğunu ölçer ve seansı yüz üzerinden
 puanlar. **Tıbbi bir uygulama değildir:** tanı koymaz, tedavi etmez.
 
@@ -15,7 +15,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## Türkçe (tr)
 
-- [Ana sayfa](https://soluklan.app/): Mikrofonla nefes ritmini takip eden, seansını puanlayan iPhone ve iPad uygulaması. Rahatlama ve odaklanma egzersizi.
+- [Ana sayfa](https://soluklan.app/): Mikrofonla nefes ritmini takip eden, seansını puanlayan iPhone, iPad ve Apple Watch uygulaması. Rahatlama ve odaklanma egzersizi.
 - [Rehber](https://soluklan.app/rehber/): Uygulamayı adım adım nasıl kullanacağın, her özelliğin ne işe yaradığı ve tekniklerin tek tek nasıl yapıldığı.
 - [Gizlilik](https://soluklan.app/gizlilik.html)
 - [Destek](https://soluklan.app/destek.html)
@@ -74,7 +74,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## English (en)
 
-- [Home](https://soluklan.app/en/): An iPhone and iPad app that follows your breathing rhythm through the microphone and scores your session. A relaxation and focus exercise.
+- [Home](https://soluklan.app/en/): An iPhone, iPad and Apple Watch app that follows your breathing rhythm through the microphone and scores your session. A relaxation and focus exercise.
 - [Guide](https://soluklan.app/en/guide/): How to use the app step by step, what every feature does and how each technique is performed.
 - [Privacy](https://soluklan.app/en/privacy.html)
 - [Support](https://soluklan.app/en/support.html)
@@ -133,7 +133,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## Deutsch (de)
 
-- [Start](https://soluklan.app/de/): Eine iPhone- und iPad-App, die deinen Atemrhythmus über das Mikrofon verfolgt und deine Sitzung bewertet. Eine Übung für Entspannung und Konzentration.
+- [Start](https://soluklan.app/de/): Eine App für iPhone, iPad und Apple Watch, die deinen Atemrhythmus über das Mikrofon verfolgt und deine Sitzung bewertet. Eine Übung für Entspannung und Konzentration.
 - [Ratgeber](https://soluklan.app/de/ratgeber/): Wie du die App Schritt für Schritt benutzt, was jede Funktion macht und wie jede Technik geht.
 - [Datenschutz](https://soluklan.app/de/datenschutz.html)
 - [Hilfe](https://soluklan.app/de/hilfe.html)
@@ -192,7 +192,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## Français (fr)
 
-- [Accueil](https://soluklan.app/fr/): Une app iPhone et iPad qui suit ton rythme respiratoire au micro et note ta séance. Un exercice de détente et de concentration.
+- [Accueil](https://soluklan.app/fr/): Une app iPhone, iPad et Apple Watch qui suit ton rythme respiratoire au micro et note ta séance. Un exercice de détente et de concentration.
 - [Guide](https://soluklan.app/fr/guide/): Comment utiliser l’app pas à pas, à quoi sert chaque fonction et comment se fait chaque technique.
 - [Confidentialité](https://soluklan.app/fr/confidentialite.html)
 - [Aide](https://soluklan.app/fr/aide.html)
@@ -251,7 +251,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## Español (es)
 
-- [Inicio](https://soluklan.app/es/): Una app para iPhone y iPad que sigue tu ritmo respiratorio con el micrófono y puntúa tu sesión. Un ejercicio de relajación y concentración.
+- [Inicio](https://soluklan.app/es/): Una app para iPhone, iPad y Apple Watch que sigue tu ritmo respiratorio con el micrófono y puntúa tu sesión. Un ejercicio de relajación y concentración.
 - [Guía](https://soluklan.app/es/guia/): Cómo usar la app paso a paso, para qué sirve cada función y cómo se hace cada técnica.
 - [Privacidad](https://soluklan.app/es/privacidad.html)
 - [Ayuda](https://soluklan.app/es/ayuda.html)
@@ -310,7 +310,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## Italiano (it)
 
-- [Home](https://soluklan.app/it/): Un’app per iPhone e iPad che segue il tuo ritmo respiratorio con il microfono e dà un punteggio alla sessione. Un esercizio di rilassamento e concentrazione.
+- [Home](https://soluklan.app/it/): Un’app per iPhone, iPad e Apple Watch che segue il tuo ritmo respiratorio con il microfono e dà un punteggio alla sessione. Un esercizio di rilassamento e concentrazione.
 - [Guida](https://soluklan.app/it/guida/): Come usare l’app passo passo, a cosa serve ogni funzione e come si fa ogni tecnica.
 - [Privacy](https://soluklan.app/it/privacy.html)
 - [Assistenza](https://soluklan.app/it/assistenza.html)
@@ -369,7 +369,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## العربية (ar)
 
-- [الرئيسية](https://soluklan.app/ar/): تطبيق لـ iPhone و iPad يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.
+- [الرئيسية](https://soluklan.app/ar/): تطبيق لـ iPhone و iPad و Apple Watch يتابع إيقاع تنفّسك عبر الميكروفون ويمنح جلستك درجة. تمرين استرخاء وتركيز.
 - [الدليل](https://soluklan.app/ar/dalil/): كيف تستخدم التطبيق خطوة بخطوة، وما الذي تفعله كل ميزة، وكيف يُؤدَّى كل تمرين.
 - [الخصوصية](https://soluklan.app/ar/khususiya.html)
 - [الدعم](https://soluklan.app/ar/dam.html)
@@ -428,7 +428,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## 简体中文 (zh-Hans)
 
-- [首页](https://soluklan.app/zh/): 一款 iPhone 和 iPad 应用，用麦克风跟随你的呼吸节奏，并为这次练习打分。放松与专注的练习。
+- [首页](https://soluklan.app/zh/): 一款适用于 iPhone、iPad 和 Apple Watch 的应用，用麦克风跟随你的呼吸节奏，并为这次练习打分。放松与专注的练习。
 - [指南](https://soluklan.app/zh/zhinan/): 如何一步步使用这个应用、每个功能有什么用，以及每种呼吸法怎么做。
 - [隐私](https://soluklan.app/zh/yinsi.html)
 - [支持](https://soluklan.app/zh/zhichi.html)
@@ -487,7 +487,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 
 ## Русский (ru)
 
-- [Главная](https://soluklan.app/ru/): Приложение для iPhone и iPad: следит за ритмом дыхания через микрофон и оценивает сессию. Упражнение для расслабления и сосредоточенности.
+- [Главная](https://soluklan.app/ru/): Приложение для iPhone, iPad и Apple Watch: следит за ритмом дыхания через микрофон и оценивает сессию. Упражнение для расслабления и сосредоточенности.
 - [Руководство](https://soluklan.app/ru/rukovodstvo/): Как пользоваться приложением шаг за шагом, что делает каждая функция и как выполняется каждая техника.
 - [Конфиденциальность](https://soluklan.app/ru/konfidencialnost.html)
 - [Поддержка](https://soluklan.app/ru/podderzhka.html)
