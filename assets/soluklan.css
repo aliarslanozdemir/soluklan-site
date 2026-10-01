@@ -1603,3 +1603,45 @@ html:has(.slaytlar) body::before {
    abartma"), 17 Eylül'de Ali vazgeçti. Arama kutusu zaten kökle birlikte dönüyor,
    ayrı kurala gerek kalmadı.
    --------------------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------------------
+   Platform seçicisi (1 Ekim 2026): telefon, tablet ve hatırlatıcı yazılarında
+   "iPhone ve iPad" / "Android". Seçim kökte `data-platform` olarak duruyor, öteki
+   platformun blokları gizleniyor (HTML'de kalıyor). JS yokken seçici `hidden`, iki blok
+   da başlıklarıyla alt alta görünüyor. Yön mantıksal özelliklerle: Arapçada kendiliğinden
+   dönüyor.
+   --------------------------------------------------------------------------- */
+.platform-sec {
+  display: inline-flex; gap: 2px; padding: 3px; margin: 0 0 2rem;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--bg-2);
+}
+.platform-sec[hidden] { display: none; }
+.platform-sec button {
+  font: inherit; font-size: .85rem; line-height: 1.2; cursor: pointer;
+  padding: .45rem 1rem; border-radius: 999px; border: 1px solid transparent;
+  background: transparent; color: var(--ink-2);
+  transition: background-color .15s ease, color .15s ease;
+}
+.platform-sec button:hover { color: var(--ink); }
+.platform-sec button[aria-pressed="true"] {
+  background: var(--card); color: var(--breath); font-weight: 600;
+  border-color: var(--line); box-shadow: 0 1px 3px rgba(15, 30, 51, .12);
+}
+.platform-sec button:focus-visible { outline: 2px solid var(--breath); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .platform-sec button { transition: none; } }
+
+/* JS yokken: iki blok alt alta, kenar çizgisi ve küçük başlıkla */
+.platform-blok {
+  border-inline-start: 2px solid var(--line); padding-inline-start: 1rem; margin-block: 1.5rem;
+}
+/* Büyük harfe çevrilmiyor: Türkçede "İPHONE", "ANDROİD" çıkıyordu */
+.platform-ad {
+  font-family: var(--display); font-size: .82rem; font-weight: 600;
+  color: var(--ink-3); margin: 0 0 .25rem;
+}
+:root:not([data-platform]) .platform-ad + :is(h2, h3) { margin-block-start: .35rem; }
+/* Seçim yapılınca blok sıradan metin gibi okunuyor */
+:root[data-platform] .platform-blok { border: 0; padding: 0; margin: 0; }
+:root[data-platform] .platform-ad { display: none; }
+:root[data-platform="ios"] .platform-blok[data-platform="android"],
+:root[data-platform="android"] .platform-blok[data-platform="ios"] { display: none; }
