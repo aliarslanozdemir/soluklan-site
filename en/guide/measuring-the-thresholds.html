@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=dba1c533">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How the thresholds are measured against real recordings","description":"What counts as an \"exhale\" isn't decided by guesswork but from real audio samples sent by users. How that work runs.","url":"https://soluklan.app/en/guide/measuring-the-thresholds.html","inLanguage":"en","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/en/guide/measuring-the-thresholds.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Behind the scenes","dateModified":"2026-09-30T17:58:09+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How the thresholds are measured against real recordings","description":"What counts as an \"exhale\" isn't decided by guesswork but from real audio samples sent by users. How that work runs.","url":"https://soluklan.app/en/guide/measuring-the-thresholds.html","inLanguage":"en","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/en/guide/measuring-the-thresholds.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Behind the scenes","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/en/guide/"},{"@type":"ListItem","position":2,"name":"Behind the scenes","item":"https://soluklan.app/en/guide/topic/behind-the-scenes.html"},{"@type":"ListItem","position":3,"name":"How the thresholds are measured against real recordings","item":"https://soluklan.app/en/guide/measuring-the-thresholds.html"}]}</script>
 <script>
 (function () {
@@ -129,19 +129,16 @@
 <h2>How the measurement is done</h2>
 <p>From users who turn on anonymous sharing and <a href="/en/guide/what-we-do-with-shared-data.html">audio sample</a> sharing, the audio of a session arrives now and then. With it comes that session's report and raw timing: at which seconds the target exhales were expected, at which moments the app detected an exhale, and what the <a href="/en/guide/how-the-microphone-listens.html">noise floor</a> was.</p>
 <p>With those two together the measurement becomes possible. The audio file is run through the app's own detection code — the same code, the same arithmetic — but with the threshold changed. Then the question: <strong>at which threshold were how many target exhales caught, and how many false detections occurred?</strong></p>
-<p>The result is a table:</p>
-<div class="scroll-x"><table><thead><tr><th>threshold</th><th>exhales caught</th><th>extra events</th></tr></thead><tbody><tr><td>current</td><td>32/61</td><td>74</td></tr><tr><td>slightly lower</td><td>35/61</td><td>74</td></tr><tr><td>lower still</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>If catches rise and false detections don't, the threshold is lowered. If both rise, it is left alone.</p>
 <h2>A real example</h2>
 <p>The app has a lower bound on how far the noise floor can go: it stops the thresholds becoming over-sensitive in very quiet rooms.</p>
-<p>In one tablet recording the real noise floor measured far below that bound. Because the bound assumed the floor was higher than it was, the exhale's margin melted away and nothing was heard — someone breathing out a hand's width from the tablet was being told to "bring the device closer".</p>
-<p>It was scanned against twenty-one real recordings and the bound was lowered: the number of exhales caught went up, the number of false detections didn't change. That session alone went from zero out of four to two out of four.</p>
+<p>In sessions done with a tablet in a quiet room, this bound could make the breath inaudible: the room's noise floor was far below it. Looking at real recordings, the bound was lowered: more exhales were caught, and false detections didn't increase.</p>
 <p>A correction like this can't be found by guesswork. Without the recording we wouldn't even have known the problem existed.</p>
 <h2>This is the only job audio sample sharing does</h2>
 <p>The audio that is sent is listened to for this and nothing else: measuring the accuracy of breath detection. It isn't used for any other purpose, isn't given to third parties, and is deleted from your device once sent.</p>
 <p>If it is off, audio is never recorded in any session. The app works completely without this permission — new techniques' thresholds just stay guesses for longer.</p>
 <h2>Still unmeasured</h2>
-<p>At the time of writing, some techniques' thresholds are still running on their initial values: not enough recordings have built up. As they do, the same scan is run again and the values are updated.</p>
+<p>Some techniques' thresholds run on their initial values until enough recordings have built up. As they do, the same scan is run again and the values are updated.</p>
 <p>So the app's measurement accuracy grows along with the people using it.</p>
     <p class="geri"><a href="/en/guide/topic/behind-the-scenes.html">&#8592; Behind the scenes</a></p>
   </div>

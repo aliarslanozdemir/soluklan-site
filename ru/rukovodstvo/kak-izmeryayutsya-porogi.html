@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=dba1c533">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как пороги измеряются на настоящих записях","description":"Что считать «выдохом», решается не наугад, а по настоящим образцам звука, которые присылают пользователи. Как устроена эта работа.","url":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html","inLanguage":"ru","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"За кулисами","dateModified":"2026-09-30T17:58:09+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как пороги измеряются на настоящих записях","description":"Что считать «выдохом», решается не наугад, а по настоящим образцам звука, которые присылают пользователи. Как устроена эта работа.","url":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html","inLanguage":"ru","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"За кулисами","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Руководство","item":"https://soluklan.app/ru/rukovodstvo/"},{"@type":"ListItem","position":2,"name":"За кулисами","item":"https://soluklan.app/ru/rukovodstvo/tema/za-kulisami.html"},{"@type":"ListItem","position":3,"name":"Как пороги измеряются на настоящих записях","item":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html"}]}</script>
 <script>
 (function () {
@@ -129,19 +129,16 @@
 <h2>Как проводится измерение</h2>
 <p>От пользователей, включивших анонимную передачу и передачу <a href="/ru/rukovodstvo/chto-my-delaem-s-dannymi.html">образцов звука</a>, время от времени приходит звук сессии. Вместе с ним приходит отчёт этой сессии и сырые тайминги: на каких секундах ожидались целевые выдохи, в какие моменты приложение распознало выдох и каким был <a href="/ru/rukovodstvo/kak-slushaet-mikrofon.html">шум комнаты</a>.</p>
 <p>Когда есть и то и другое, измерение становится возможным. Звуковой файл прогоняется через собственный код распознавания приложения — тот же код, та же арифметика, — но с изменённым порогом. И дальше вопрос: <strong>при каком пороге сколько целевых выдохов поймано и сколько случилось ложных срабатываний?</strong></p>
-<p>Результат — таблица:</p>
-<div class="scroll-x"><table><thead><tr><th>порог</th><th>пойманные выдохи</th><th>лишние события</th></tr></thead><tbody><tr><td>текущий</td><td>32/61</td><td>74</td></tr><tr><td>чуть ниже</td><td>35/61</td><td>74</td></tr><tr><td>ещё ниже</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>Если пойманных становится больше, а ложных не прибавляется, порог опускают. Если растёт и то и другое, его оставляют.</p>
 <h2>Настоящий пример</h2>
 <p>У приложения есть нижняя граница того, насколько низко может опуститься шум комнаты: она не даёт порогам стать слишком чувствительными в очень тихих комнатах.</p>
-<p>В одной планшетной записи настоящий шум оказался намного ниже этой границы. Поскольку граница предполагала шум выше реального, запас выдоха растаял и слышно не было ничего — человеку, выдыхавшему в ладони от планшета, говорили «поднеси устройство ближе».</p>
-<p>Границу пересчитали на двадцати одной настоящей записи и опустили: число пойманных выдохов выросло, число ложных срабатываний не изменилось. Одна только та сессия перешла с нуля из четырёх на два из четырёх.</p>
+<p>В сессиях с планшетом в тихой комнате эта граница могла сделать дыхание неслышным: <a href="/ru/rukovodstvo/kak-slushaet-mikrofon.html">шум комнаты</a> был намного ниже её. Когда посмотрели на настоящие записи, границу опустили: пойманных выдохов стало больше, а ложных срабатываний не прибавилось.</p>
 <p>Такую поправку наугад не найти. Без записи мы бы даже не узнали, что проблема существует.</p>
 <h2>Это единственная работа передачи образцов звука</h2>
 <p>Присланный звук слушают только ради этого: измерить точность распознавания дыхания. Он не используется ни для чего другого, не передаётся третьим лицам и удаляется с твоего устройства сразу после отправки.</p>
 <p>Если она выключена, звук не записывается ни в одной сессии. Приложение прекрасно работает и без этого разрешения — просто пороги новых техник дольше остаются догадкой.</p>
 <h2>Что ещё не измерено</h2>
-<p>На момент написания пороги некоторых техник всё ещё работают на начальных значениях: записей накопилось недостаточно. По мере накопления та же проверка прогоняется снова, и значения обновляются.</p>
+<p>Пороги некоторых техник работают на начальных значениях, пока не накопится достаточно записей. По мере накопления та же проверка прогоняется снова, и значения обновляются.</p>
 <p>Так что точность измерений приложения растёт вместе с теми, кто им пользуется.</p>
     <p class="geri"><a href="/ru/rukovodstvo/tema/za-kulisami.html">&#8592; За кулисами</a></p>
   </div>

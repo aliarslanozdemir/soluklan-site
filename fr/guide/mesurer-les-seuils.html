@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=dba1c533">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Comment les seuils sont mesurés sur des enregistrements réels","description":"Ce qui compte comme une « expiration » n’est pas décidé au jugé mais à partir d’échantillons audio réels envoyés par des utilisateurs. Comment ce travail se déroule.","url":"https://soluklan.app/fr/guide/mesurer-les-seuils.html","inLanguage":"fr","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/fr/guide/mesurer-les-seuils.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Dans les coulisses","dateModified":"2026-09-30T17:58:09+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Comment les seuils sont mesurés sur des enregistrements réels","description":"Ce qui compte comme une « expiration » n’est pas décidé au jugé mais à partir d’échantillons audio réels envoyés par des utilisateurs. Comment ce travail se déroule.","url":"https://soluklan.app/fr/guide/mesurer-les-seuils.html","inLanguage":"fr","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/fr/guide/mesurer-les-seuils.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Dans les coulisses","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/fr/guide/"},{"@type":"ListItem","position":2,"name":"Dans les coulisses","item":"https://soluklan.app/fr/guide/sujet/dans-les-coulisses.html"},{"@type":"ListItem","position":3,"name":"Comment les seuils sont mesurés sur des enregistrements réels","item":"https://soluklan.app/fr/guide/mesurer-les-seuils.html"}]}</script>
 <script>
 (function () {
@@ -129,19 +129,16 @@
 <h2>Comment se fait la mesure</h2>
 <p>Chez les personnes qui activent le partage anonyme et le partage d’<a href="/fr/guide/ce-que-nous-faisons-des-donnees-partagees.html">échantillon audio</a>, le son d’une séance arrive de temps en temps. Avec lui viennent le rapport de cette séance et sa chronologie brute : à quelles secondes les expirations visées étaient attendues, à quels instants l’app a détecté une expiration, et quel était le <a href="/fr/guide/comment-le-micro-ecoute.html">plancher de bruit</a>.</p>
 <p>Avec les deux ensemble, la mesure devient possible. Le fichier audio est repassé dans le code de détection de l’app — le même code, la même arithmétique — mais avec le seuil modifié. Puis la question : <strong>à quel seuil combien d’expirations visées ont-elles été attrapées, et combien de fausses détections sont apparues ?</strong></p>
-<p>Le résultat est un tableau :</p>
-<div class="scroll-x"><table><thead><tr><th>seuil</th><th>expirations attrapées</th><th>événements en trop</th></tr></thead><tbody><tr><td>actuel</td><td>32/61</td><td>74</td></tr><tr><td>un peu plus bas</td><td>35/61</td><td>74</td></tr><tr><td>encore plus bas</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>Si les prises montent et que les fausses détections ne montent pas, le seuil est abaissé. Si les deux montent, on le laisse tel quel.</p>
 <h2>Un exemple réel</h2>
 <p>L’app a une borne basse sur la valeur que peut prendre le plancher de bruit : elle empêche les seuils de devenir trop sensibles dans les pièces très calmes.</p>
-<p>Dans un enregistrement sur tablette, le vrai plancher de bruit mesurait bien en dessous de cette borne. Comme la borne supposait le plancher plus haut qu’il n’était, la marge de l’expiration fondait et rien n’était entendu — on disait à quelqu’un qui expirait à une main de la tablette de « rapprocher l’appareil ».</p>
-<p>Cela a été balayé sur vingt et un enregistrements réels et la borne a été abaissée : le nombre d’expirations attrapées a monté, le nombre de fausses détections n’a pas changé. Cette séance-là est passée à elle seule de zéro sur quatre à deux sur quatre.</p>
+<p>Dans une pièce calme, lors des séances sur tablette, cette borne pouvait rendre le souffle inaudible : le <a href="/fr/guide/comment-le-micro-ecoute.html">plancher de bruit</a> de la pièce était bien en dessous. Après examen d’enregistrements réels, la borne a été abaissée : plus d’expirations attrapées, sans plus de fausses détections.</p>
 <p>Une correction pareille ne se trouve pas au jugé. Sans l’enregistrement, nous n’aurions même pas su que le problème existait.</p>
 <h2>C’est le seul travail que fait le partage d’échantillon audio</h2>
 <p>Le son envoyé est écouté pour cela et rien d’autre : mesurer la justesse de la détection du souffle. Il ne sert à aucun autre usage, n’est donné à aucun tiers, et il est effacé de ton appareil une fois envoyé.</p>
 <p>S’il est désactivé, aucun son n’est jamais enregistré dans aucune séance. L’app fonctionne parfaitement sans cette autorisation — les seuils des nouvelles techniques restent simplement des estimations plus longtemps.</p>
 <h2>Encore non mesurés</h2>
-<p>À l’heure où ces lignes sont écrites, les seuils de certaines techniques tournent encore sur leurs valeurs initiales : pas assez d’enregistrements se sont accumulés. À mesure qu’ils arrivent, le même balayage est refait et les valeurs sont mises à jour.</p>
+<p>Les seuils de certaines techniques tournent sur leurs valeurs initiales tant que les enregistrements ne sont pas assez nombreux. À mesure qu’ils arrivent, le même balayage est refait et les valeurs sont mises à jour.</p>
 <p>La justesse de mesure de l’app grandit donc en même temps que les gens qui s’en servent.</p>
     <p class="geri"><a href="/fr/guide/sujet/dans-les-coulisses.html">&#8592; Dans les coulisses</a></p>
   </div>

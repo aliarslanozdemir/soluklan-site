@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=dba1c533">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"阈值是怎么在真实录音上测出来的","description":"什么算作一次“呼气”，不是靠猜，而是从用户发来的真实声音样本里定出来的。这项工作是怎么做的。","url":"https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"幕后","dateModified":"2026-09-30T17:58:09+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"阈值是怎么在真实录音上测出来的","description":"什么算作一次“呼气”，不是靠猜，而是从用户发来的真实声音样本里定出来的。这项工作是怎么做的。","url":"https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"幕后","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"指南","item":"https://soluklan.app/zh/zhinan/"},{"@type":"ListItem","position":2,"name":"幕后","item":"https://soluklan.app/zh/zhinan/zhuti/muhou.html"},{"@type":"ListItem","position":3,"name":"阈值是怎么在真实录音上测出来的","item":"https://soluklan.app/zh/zhinan/yuzhi-zenme-ce.html"}]}</script>
 <script>
 (function () {
@@ -129,19 +129,16 @@
 <h2>测量怎么做</h2>
 <p>从打开了匿名分享和<a href="/zh/zhinan/fenxiang-de-shuju.html">声音样本</a>分享的用户那里，偶尔会有一次练习的声音到达。随它一起到的还有那次练习的报告和原始时间线：目标呼气原本预期在第几秒、应用在哪些时刻检测到了呼气，以及<a href="/zh/zhinan/maikefeng-zenme-ting.html">底噪</a>是多少。</p>
 <p>有了这两样，测量才成为可能。音频文件会被送进应用自己的检测代码——同样的代码、同样的算法——只是把阈值换掉。然后问：<strong>在哪个阈值下，捕捉到了多少次目标呼气，又出现了多少次误判？</strong></p>
-<p>结果是一张表：</p>
-<div class="scroll-x"><table><thead><tr><th>阈值</th><th>捕捉到的呼气</th><th>多出来的事件</th></tr></thead><tbody><tr><td>当前</td><td>32/61</td><td>74</td></tr><tr><td>略低</td><td>35/61</td><td>74</td></tr><tr><td>更低</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>如果捕捉数上升、误判没上升，就把阈值调低。如果两者都上升，就保持不动。</p>
 <h2>一个真实的例子</h2>
 <p>应用给底噪能低到多少设了一个下限：它防止阈值在非常安静的房间里变得过于灵敏。</p>
-<p>在一份平板录音里，真实的底噪测出来远低于那个下限。因为下限假定底噪比实际更高，呼气的余量被吃光了，什么都听不到——一个在离平板一掌远的地方呼气的人，被告知“把设备拿近些”。</p>
-<p>我们在二十一份真实录音上扫了一遍，把下限调低：捕捉到的呼气次数上升，误判的次数没有变化。单是那一次练习，就从四分之零变成了四分之二。</p>
+<p>在安静的房间里用平板练习时，这个下限可能让呼吸听不见：房间的<a href="/zh/zhinan/maikefeng-zenme-ting.html">底噪</a>远低于下限。拿真实录音一看，下限就调低了：捕捉到的呼气多了，误判没有增加。</p>
 <p>这样的修正靠猜是找不到的。没有那份录音，我们甚至不会知道问题存在。</p>
 <h2>这是声音样本分享唯一的用途</h2>
 <p>发送过来的声音只为这一件事被听：测量呼吸检测的准确度。它不用于任何其他目的，不交给第三方，发送后会从你的设备上删除。</p>
 <p>如果它是关着的，任何一次练习都不会录音。没有这项权限，应用照样完整地工作——只是新呼吸法的阈值会多当一阵子的猜测。</p>
 <h2>还没测的</h2>
-<p>写下这段时，仍有一些呼吸法的阈值跑在初始值上：录音还没积累够。随着积累，同样的扫描会再跑一遍，值也会更新。</p>
+<p>有些呼吸法的阈值在录音积累够之前，还跑在初始值上。录音积累起来后，同样的扫描会再跑一遍，值也会更新。</p>
 <p>所以应用的测量准确度，是跟着用它的人一起长起来的。</p>
     <p class="geri"><a href="/zh/zhinan/zhuti/muhou.html">&#8592; 幕后</a></p>
   </div>
