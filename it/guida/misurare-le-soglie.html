@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=dba1c533">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Come si misurano le soglie su registrazioni reali","description":"Ciò che conta come «espirazione» non si decide a occhio ma a partire da campioni audio reali inviati dagli utenti. Come funziona quel lavoro.","url":"https://soluklan.app/it/guida/misurare-le-soglie.html","inLanguage":"it","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/it/guida/misurare-le-soglie.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Dietro le quinte","dateModified":"2026-09-30T17:58:09+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Come si misurano le soglie su registrazioni reali","description":"Ciò che conta come «espirazione» non si decide a occhio ma a partire da campioni audio reali inviati dagli utenti. Come funziona quel lavoro.","url":"https://soluklan.app/it/guida/misurare-le-soglie.html","inLanguage":"it","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/it/guida/misurare-le-soglie.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Dietro le quinte","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guida","item":"https://soluklan.app/it/guida/"},{"@type":"ListItem","position":2,"name":"Dietro le quinte","item":"https://soluklan.app/it/guida/argomento/dietro-le-quinte.html"},{"@type":"ListItem","position":3,"name":"Come si misurano le soglie su registrazioni reali","item":"https://soluklan.app/it/guida/misurare-le-soglie.html"}]}</script>
 <script>
 (function () {
@@ -129,19 +129,16 @@
 <h2>Come si fa la misurazione</h2>
 <p>Dagli utenti che attivano la condivisione anonima e la condivisione del <a href="/it/guida/cosa-facciamo-con-i-dati-condivisi.html">campione audio</a> arriva ogni tanto l’audio di una sessione. Con esso arrivano il rapporto di quella sessione e la sua cronologia grezza: a quali secondi erano attese le espirazioni previste, in quali momenti l’app ha rilevato un’espirazione e qual era il <a href="/it/guida/come-ascolta-il-microfono.html">rumore di fondo</a>.</p>
 <p>Con le due cose insieme la misurazione diventa possibile. Il file audio viene rifatto passare nel codice di rilevamento dell’app — lo stesso codice, la stessa aritmetica — ma con la soglia cambiata. E poi la domanda: <strong>con quale soglia sono state prese quante espirazioni previste, e quanti falsi rilevamenti sono comparsi?</strong></p>
-<p>Il risultato è una tabella:</p>
-<div class="scroll-x"><table><thead><tr><th>soglia</th><th>espirazioni prese</th><th>eventi in più</th></tr></thead><tbody><tr><td>attuale</td><td>32/61</td><td>74</td></tr><tr><td>un po’ più bassa</td><td>35/61</td><td>74</td></tr><tr><td>ancora più bassa</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>Se le prese salgono e i falsi rilevamenti no, la soglia viene abbassata. Se salgono entrambi, si lascia com’è.</p>
 <h2>Un esempio reale</h2>
 <p>L’app ha un limite inferiore al valore che il rumore di fondo può assumere: impedisce alle soglie di diventare troppo sensibili in stanze molto silenziose.</p>
-<p>In una registrazione fatta su tablet, il rumore di fondo reale misurava molto sotto quel limite. Siccome il limite supponeva il fondo più alto di quanto fosse, il margine dell’espirazione si scioglieva e non si sentiva nulla: a chi espirava a un palmo dal tablet veniva detto «avvicina il dispositivo».</p>
-<p>È stato riesaminato su ventun registrazioni reali e il limite è stato abbassato: il numero di espirazioni prese è salito e quello dei falsi rilevamenti non è cambiato. Quella sessione da sola è passata da zero su quattro a due su quattro.</p>
+<p>Nelle sessioni fatte con un tablet in una stanza silenziosa, quel limite poteva rendere il respiro inudibile: il <a href="/it/guida/come-ascolta-il-microfono.html">rumore di fondo</a> della stanza stava molto sotto il limite. Guardando le registrazioni reali, il limite è stato abbassato: le espirazioni prese sono aumentate, i falsi rilevamenti no.</p>
 <p>Una correzione così non si trova a occhio. Senza la registrazione non avremmo nemmeno saputo che il problema esisteva.</p>
 <h2>È l’unico lavoro della condivisione del campione audio</h2>
 <p>L’audio che viene inviato viene ascoltato per questo e nient’altro: misurare la precisione del rilevamento del respiro. Non viene usato per nessun altro scopo, non viene dato a terzi e viene cancellato dal tuo dispositivo una volta inviato.</p>
 <p>Se è disattivata, in nessuna sessione viene mai registrato audio. L’app funziona perfettamente senza questo permesso: le soglie delle nuove tecniche restano semplicemente stime più a lungo.</p>
 <h2>Ancora non misurate</h2>
-<p>Mentre scriviamo, le soglie di alcune tecniche girano ancora sui loro valori iniziali: non si sono accumulate abbastanza registrazioni. Man mano che arrivano, si rifà lo stesso esame e i valori vengono aggiornati.</p>
+<p>Le soglie di alcune tecniche girano sui loro valori iniziali finché non si accumulano abbastanza registrazioni. Man mano che arrivano, si rifà lo stesso esame e i valori vengono aggiornati.</p>
 <p>Così la precisione di misura dell’app cresce insieme alle persone che la usano.</p>
     <p class="geri"><a href="/it/guida/argomento/dietro-le-quinte.html">&#8592; Dietro le quinte</a></p>
   </div>

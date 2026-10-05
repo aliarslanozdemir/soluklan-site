@@ -46,7 +46,7 @@
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/soluklan.css?v=dba1c533">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wie die Schwellen an echten Aufnahmen gemessen werden","description":"Was als „Ausatmung“ zählt, wird nicht geraten, sondern aus echten Tonproben bestimmt, die Nutzerinnen und Nutzer senden. Wie diese Arbeit abläuft.","url":"https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html","inLanguage":"de","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Hinter den Kulissen","dateModified":"2026-09-30T17:58:09+03:00"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wie die Schwellen an echten Aufnahmen gemessen werden","description":"Was als „Ausatmung“ zählt, wird nicht geraten, sondern aus echten Tonproben bestimmt, die Nutzerinnen und Nutzer senden. Wie diese Arbeit abläuft.","url":"https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html","inLanguage":"de","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Hinter den Kulissen","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ratgeber","item":"https://soluklan.app/de/ratgeber/"},{"@type":"ListItem","position":2,"name":"Hinter den Kulissen","item":"https://soluklan.app/de/ratgeber/thema/hinter-den-kulissen.html"},{"@type":"ListItem","position":3,"name":"Wie die Schwellen an echten Aufnahmen gemessen werden","item":"https://soluklan.app/de/ratgeber/wie-die-schwellen-gemessen-werden.html"}]}</script>
 <script>
 (function () {
@@ -129,19 +129,16 @@
 <h2>Wie gemessen wird</h2>
 <p>Von Nutzerinnen und Nutzern, die das anonyme Teilen und das Teilen von <a href="/de/ratgeber/was-wir-mit-geteilten-daten-machen.html">Tonproben</a> eingeschaltet haben, kommt ab und zu der Ton einer Sitzung an. Mit ihm kommt der Bericht dieser Sitzung und die rohe Zeitangabe: in welchen Sekunden die Zielausatmungen erwartet wurden, in welchen Momenten die App eine Ausatmung erkannt hat und wie hoch das <a href="/de/ratgeber/wie-das-mikrofon-hoert.html">Grundrauschen</a> war.</p>
 <p>Mit beidem zusammen wird die Messung möglich. Die Audiodatei läuft durch den Erkennungscode der App — derselbe Code, dieselbe Rechnung — aber mit veränderter Schwelle. Dann die Frage: <strong>bei welcher Schwelle wurden wie viele Zielausatmungen erfasst und wie viele Fehlerkennungen gab es?</strong></p>
-<p>Das Ergebnis ist eine Tabelle:</p>
-<div class="scroll-x"><table><thead><tr><th>Schwelle</th><th>erfasste Ausatmungen</th><th>zusätzliche Ereignisse</th></tr></thead><tbody><tr><td>aktuell</td><td>32/61</td><td>74</td></tr><tr><td>etwas niedriger</td><td>35/61</td><td>74</td></tr><tr><td>noch niedriger</td><td>35/61</td><td>74</td></tr></tbody></table></div>
 <p>Steigen die Treffer und die Fehlerkennungen nicht, wird die Schwelle gesenkt. Steigen beide, bleibt sie, wo sie ist.</p>
 <h2>Ein echtes Beispiel</h2>
 <p>Die App hat eine Untergrenze dafür, wie weit das Grundrauschen sinken darf: sie verhindert, dass die Schwellen in sehr stillen Räumen überempfindlich werden.</p>
-<p>In einer Tablet-Aufnahme wurde das echte Grundrauschen weit unter dieser Grenze gemessen. Weil die Grenze annahm, das Grundrauschen liege höher, als es lag, schmolz der Abstand der Ausatmung weg und es wurde nichts gehört — jemandem, der eine Handbreit vom Tablet entfernt ausatmete, wurde gesagt, er solle „das Gerät näher halten“.</p>
-<p>Es wurde an einundzwanzig echten Aufnahmen geprüft und die Grenze gesenkt: die Zahl der erfassten Ausatmungen stieg, die Zahl der Fehlerkennungen blieb gleich. Allein diese Sitzung ging von null von vier auf zwei von vier.</p>
+<p>Bei Sitzungen mit dem Tablet in einem stillen Raum konnte diese Grenze den Atem unhörbar machen: das Grundrauschen des Raums lag weit unter ihr. Nach einem Blick auf echte Aufnahmen wurde die Grenze gesenkt: es wurden mehr Ausatmungen erfasst, Fehlerkennungen nahmen nicht zu.</p>
 <p>So eine Korrektur lässt sich nicht erraten. Ohne die Aufnahme hätten wir nicht einmal gewusst, dass das Problem besteht.</p>
 <h2>Das ist die einzige Aufgabe des Teilens von Tonproben</h2>
 <p>Der gesendete Ton wird dafür und für nichts anderes angehört: um die Genauigkeit der Atemerkennung zu messen. Er wird für keinen anderen Zweck benutzt, nicht an Dritte gegeben und nach dem Senden von deinem Gerät gelöscht.</p>
 <p>Ist es aus, wird in keiner Sitzung Ton aufgenommen. Die App funktioniert vollständig ohne diese Erlaubnis — die Schwellen neuer Techniken bleiben dann nur länger Schätzungen.</p>
 <h2>Noch ungemessen</h2>
-<p>Zum Zeitpunkt dieses Textes laufen die Schwellen einiger Techniken noch auf ihren Ausgangswerten: es haben sich nicht genug Aufnahmen angesammelt. Sobald das der Fall ist, wird dieselbe Prüfung wieder gefahren und die Werte werden aktualisiert.</p>
+<p>Die Schwellen einiger Techniken laufen auf ihren Ausgangswerten, bis sich genug Aufnahmen angesammelt haben. Sobald das der Fall ist, wird dieselbe Prüfung wieder gefahren und die Werte werden aktualisiert.</p>
 <p>So wächst die Messgenauigkeit der App zusammen mit den Menschen, die sie benutzen.</p>
     <p class="geri"><a href="/de/ratgeber/thema/hinter-den-kulissen.html">&#8592; Hinter den Kulissen</a></p>
   </div>
