@@ -29,6 +29,11 @@ site/CNAME                 ← soluklan.app
 `scripts/site_build.py` ayrıca şunları üretiyor: `site/robots.txt`, `site/site.webmanifest`,
 `site/llms.txt` ve `site/.nojekyll`.
 
+Rehber yazılarının paylaşım görselleri (og:image, 1200×630 JPEG) de derlemede çiziliyor:
+`scripts/site_paylasim.swift` → `site/assets/paylasim/<dil>/<yazı>-<iz>.jpg`. Yalnız başlığı ya da
+özeti değişen yazının görseli yeniden çiziliyor. Klasör depoya girmiyor (`.gitignore`), yayın
+deposuna `rsync` ile gidiyor. Swift yoksa yazı `assets/og.png`yi gösteriyor.
+
 Simgeler ayrı bir betikle, `favicon.svg`den üretiliyor — logo değişirse tek komut yeter:
 
 ```

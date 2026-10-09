@@ -260,6 +260,18 @@ strong { font-weight: 650; }
 .btn-ghost:hover { border-color: var(--breath); color: var(--ink); }
 @media (prefers-reduced-motion: reduce) { .btn:hover { transform: none; } }
 
+/* Mağaza rozetleri: Apple'ın ve Google'ın resmî çizimi, ikisi aynı boyda. Apple en az 40 px
+   boy ve rozet boyunun dörtte biri kadar boşluk istiyor, Google da Play rozetinin öteki
+   rozetten küçük olmamasını. Sığmayınca alt alta iniyor; Arapçada sıra kendiliğinden dönüyor. */
+.actions:has(.rozetler) { align-items: center; gap: 1rem; }
+.rozetler { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.rozet { display: inline-flex; border-radius: .6rem; transition: transform .15s ease; }
+.rozet img { display: block; height: 3rem; width: auto; }
+.rozet:hover { transform: translateY(-2px); }
+.rozet:focus-visible { outline: 2px solid var(--breath); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .rozet:hover { transform: none; } }
+footer.site .marka-notu { flex-basis: 100%; margin: 0; font-size: .78rem; color: var(--ink-3); }
+
 /* --- Kartlar ve listeler --- */
 .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); margin: 0; padding: 0; list-style: none; }
 .card { background: var(--card); border: 1px solid var(--line-soft); border-radius: 16px; padding: 1.4rem; box-shadow: var(--shadow); position: relative; overflow: hidden; }
@@ -371,6 +383,15 @@ details.sss-tumu > .faq { margin-top: .5rem; }
 .yazi p { line-height: 1.75; }
 .yazi ul { padding-inline-start: 1.2rem; }
 .yazi li { margin-bottom: .55rem; line-height: 1.7; }
+/* Yazının sonundaki indirme bölümü: tek cümle ve mağaza rozetleri, yumuşak gradyanlı kutuda */
+.yazi .indir {
+  margin-block-start: 3rem; padding: 1.25rem 1.4rem; border-radius: 16px;
+  background: var(--gradient-soft); border: 1px solid var(--line-soft);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem;
+}
+.yazi .indir p { flex: 1 1 18rem; margin: 0; line-height: 1.6; color: var(--ink); }
+.yazi .indir .rozet img { height: 2.75rem; }
+.yazi .indir + .geri { margin-block-start: 2rem; }
 .yazi .geri { margin-block-start: 3rem; padding-block-start: 1.5rem; border-top: 1px solid var(--line-soft); font-size: .95rem; }
 
 .ilgili { padding-block: 0 clamp(3rem, 7vw, 5rem); border: 0; }
@@ -668,6 +689,7 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
   .ring { width: min(72%, 12rem); }
   .actions { gap: .6rem; }
   .btn { padding: .65rem 1.1rem; font-size: .95rem; }
+  .rozet img { height: 2.75rem; }
   .slayt { padding-block: clamp(4.5rem, 12vh, 6rem) clamp(4.5rem, 12vh, 6rem); }
   .steps li { grid-template-columns: 1.9rem 1fr; gap: .8rem; }
   .steps li::before { width: 1.9rem; height: 1.9rem; font-size: .78rem; }

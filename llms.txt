@@ -21,9 +21,9 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Destek](https://soluklan.app/destek.html)
 - [Alışkanlık kurmak: ilk otuz gün](https://soluklan.app/rehber/aliskanlik-kurmak.html): Uygulamayı bir hafta kullanıp bırakmakla otuz gün sürdürmek arasındaki fark nerede yapılıyor. Haftalara bölünmüş bir plan.
 - [Arayüzü sadeleştirmek ya da açmak](https://soluklan.app/rehber/arayuz-kademeleri.html): Basit, Standart ve İleri düzey. Üç kademede ne değişiyor, hangisi kime uygun ve nasıl geçiş yapılıyor.
-- [Diyafram nefesi nedir](https://soluklan.app/rehber/diyafram-nefesi.html): Diyafram nefesi bir teknik değil, nefesin alınma biçimi. Adı neden yanıltıyor, elinle nasıl kontrol edersin ve hangi tekniklerin içinde zaten var.
+- [Diyafram nefesi nedir](https://soluklan.app/rehber/diyafram-nefesi.html): Diyafram nefesi bir teknik değil, nefesin alınma biçimi. Adım adım nasıl yapılır, göğüs nefesinden farkı ne, ne kadar yapılır ve en sık yapılan hatalar.
 - [Geçmiş, özetler ve başarımlar](https://soluklan.app/rehber/ozetler-ve-basarimlar.html): Seans geçmişi, haftalık özet, kişisel özet ve başarımlar. Hangisi neyi gösteriyor ve ne zaman açılıyor.
-- [Hangi teknik ne zaman](https://soluklan.app/rehber/hangi-teknik-ne-zaman.html): Uyku öncesi, iş arası, öfke anı, sunumdan önce. Duruma göre hangi tekniği seçeceğin ve neden.
+- [Hangi teknik ne zaman](https://soluklan.app/rehber/hangi-teknik-ne-zaman.html): Uyku öncesi, masa başında mola, öfke anı, sınavdan ya da sunumdan önce. Duruma göre hangi tekniği seçeceğin ve neden.
 - [Hatırlatıcılar ve bildirimler](https://soluklan.app/rehber/hatirlaticilar.html): Günlük hatırlatıcı, seri uyarısı, tekniğe özel bildirimler, bildirimlerin tonu, sessiz saatler, tatil modu ve günlük sınır. Her birinin ne yaptığı ve nasıl ayarlandığı.
 - [Kaygılı bir anda nefes](https://soluklan.app/rehber/kaygili-bir-anda-nefes.html): Gergin bir anda nefesin ne yaptığı, verişi uzatmanın neden ilk adım olduğu, panik hâlinde tutuşun neden ters tepebileceği ve uygulamanın bu yüzden neyi caydırdığı.
 - [Kendi temponu bulmak](https://soluklan.app/rehber/kendi-temponu-bulmak.html): Koherent Nefes'in beş buçuk saniyesi bir ortalama. Sana en uygun nefes hızını ölçüp uygulamayı ona göre çalıştırabilirsin.
@@ -56,6 +56,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Soluklan Apple Watch'ta](https://soluklan.app/rehber/soluklan-apple-watchta.html): Saatte tek başına seans, telefonla ortak seans, nabız ve sağlık izni, bilekte titreşimle verilen ritim ve saatte hızlı başlatma.
 - [Soluklan tablette](https://soluklan.app/rehber/soluklan-tablette.html): Tablette ekran daha geniş, mikrofon daha uzak. Cihazı nereye koymalı, ölçüm neden telefondakinden zor ve neler aynı kalıyor.
 - [Soluklan telefonda](https://soluklan.app/rehber/soluklan-telefonda.html): Telefon uygulamanın ana cihazı: ölçüm burada en doğru. Neyin nerede olduğu, mikrofonun nereye baktığı ve verilerinin nerede durduğu.
+- [28 Günlük İç Çekiş](https://soluklan.app/rehber/28-gunluk-ic-cekis.html): Dört hafta boyunca her gün beş dakika Fizyolojik İç Çekiş. Programın bir günü nasıl geçiyor, kime uygun ve hangi çalışmaya dayanıyor.
 - [4-7-8 Nefesi](https://soluklan.app/rehber/dort-yedi-sekiz.html): Dört al, yedi tut, sekiz ver. Uygulamadaki en uzun tutuş burada. Popülerliği kanıtından fazla olan bir teknik ve bunu açıkça söylüyoruz.
 - [Arı Nefesi](https://soluklan.app/rehber/ari-nefesi.html): Ağzın kapalı, on iki saniye "mmm". Uygulamada mikrofon bu teknikte sessiz üflemeyi değil, titreşimi arıyor.
 - [Büzük Dudak Nefesi](https://soluklan.app/rehber/buzuk-dudak.html): Burnundan üç saniye al, dudaklarını büzüp altı saniye ver. Akciğer rehabilitasyonunda öğretilen temel teknik ve nefes darlığı hissinde en çok önerileni.
@@ -107,14 +108,15 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Shared session](https://soluklan.app/en/guide/shared-session.html): A session run by the phone and the watch together: how to start it, wrist down, when the watch joins later and when it doesn’t connect.
 - [Streak, milestones and the calendar](https://soluklan.app/en/guide/streak-and-milestones.html): How the streak works, which sessions count, how to set milestones of your own, and how to read the calendar.
 - [Unlocking techniques](https://soluklan.app/en/guide/unlocking-techniques.html): What opens the locks, what a locked card tells you, and how to start the session you need right away.
-- [What diaphragmatic breathing is](https://soluklan.app/en/guide/diaphragmatic-breathing.html): Diaphragmatic breathing is not a technique but a way of breathing. Why the name misleads, how to check it with your hand, and which techniques already contain it.
+- [What diaphragmatic breathing is](https://soluklan.app/en/guide/diaphragmatic-breathing.html): Diaphragmatic breathing is not a technique but a way of breathing. How to do it step by step, how it differs from chest breathing, how long to practise, and the most common mistakes.
 - [What's on the session screen](https://soluklan.app/en/guide/the-session-screen.html): The circle, the phase label, the sound wave, the short notes during a session, the microphone warning and the pause menu. What everything you see during a session is for.
-- [Which technique, and when](https://soluklan.app/en/guide/which-technique-when.html): Before sleep, during a work break, in a moment of anger, before a presentation. Which technique to pick for the situation, and why.
+- [Which technique, and when](https://soluklan.app/en/guide/which-technique-when.html): Before sleep, a break at your desk, a moment of anger, before an exam or a presentation. Which technique to pick for the situation, and why.
 - [Widgets and Live Activity](https://soluklan.app/en/guide/widgets-and-live-activity.html): Adding Home Screen and Lock Screen widgets, what each size shows, and the counter that appears on the Lock Screen during a session.
 - [Your first session, start to finish](https://soluklan.app/en/guide/your-first-session.html): Every step from opening the app for the first time to reading your first report. What you are asked, why you are asked it, and what to do where.
 - [Soluklan on Apple Watch](https://soluklan.app/en/guide/soluklan-on-apple-watch.html): Standalone sessions on the watch, shared sessions with the phone, heart rate and the Health permission, the rhythm tapped on your wrist, and quick start on the watch.
 - [Soluklan on a tablet](https://soluklan.app/en/guide/soluklan-on-a-tablet.html): On a tablet the screen is wider and the microphone is further away. Where to put the device, why measuring is harder than on the phone, and what stays the same.
 - [Soluklan on your phone](https://soluklan.app/en/guide/soluklan-on-your-phone.html): The phone is the app's main device: the measurement is most accurate here. What is where, where the microphone is looking and where your data is kept.
+- [28-Day Sighing](https://soluklan.app/en/guide/28-day-sighing.html): Four weeks of the Physiological Sigh, five minutes every day. How a day of the program goes, who it suits and which study it is based on.
 - [4-7-8 Breathing](https://soluklan.app/en/guide/four-seven-eight.html): Four in, seven held, eight out. The longest hold in the app is here. A technique whose popularity outruns its evidence — and we say so plainly.
 - [Alternate Nostril Breathing](https://soluklan.app/en/guide/alternate-nostril-breathing.html): In left, out right, in right, out left. The technique in the app that demands the most coordination, and how the finger position settles.
 - [Box Breathing](https://soluklan.app/en/guide/box-breathing.html): Four equal steps: in, hold, out, hold. Four breaths a minute. The technique most widely taught in military and emergency service training.
@@ -154,9 +156,9 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Technik und Dauer wählen](https://soluklan.app/de/ratgeber/technik-und-dauer-waehlen.html): Was die Zeichen in der Technikliste bedeuten, wofür das hervorgehobene Band auf dem Längenregler da ist, und die Rundenwahl, die bei Kapalabhati an die Stelle der Dauer tritt.
 - [Techniken freischalten](https://soluklan.app/de/ratgeber/techniken-freischalten.html): Was die Sperren öffnet, was dir eine gesperrte Karte sagt und wie du die nötige Sitzung sofort startest.
 - [Verlauf, Übersichten und Erfolge](https://soluklan.app/de/ratgeber/verlauf-uebersichten-erfolge.html): Sitzungsverlauf, Wochenübersicht, persönliche Übersicht und Erfolge. Was jedes zeigt und wann es aufgeht.
-- [Was Zwerchfellatmung ist](https://soluklan.app/de/ratgeber/zwerchfellatmung.html): Zwerchfellatmung ist keine Technik, sondern eine Art zu atmen. Warum der Name in die Irre führt, wie du sie mit der Hand prüfst und in welchen Techniken sie schon steckt.
+- [Was Zwerchfellatmung ist](https://soluklan.app/de/ratgeber/zwerchfellatmung.html): Zwerchfellatmung ist keine Technik, sondern eine Art zu atmen. Wie sie Schritt für Schritt geht, was sie von der Brustatmung unterscheidet, wie lange du übst und die häufigsten Fehler.
 - [Was auf dem Sitzungsbildschirm steht](https://soluklan.app/de/ratgeber/der-sitzungsbildschirm.html): Der Kreis, die Phasenangabe, die Tonwelle, die kurzen Hinweise während der Sitzung, die Mikrofonwarnung und das Pausenmenü. Wofür alles da ist, was du während einer Sitzung siehst.
-- [Welche Technik, und wann](https://soluklan.app/de/ratgeber/welche-technik-wann.html): Vor dem Schlafen, in der Arbeitspause, im Augenblick des Ärgers, vor einem Vortrag. Welche Technik zu welcher Lage passt, und warum.
+- [Welche Technik, und wann](https://soluklan.app/de/ratgeber/welche-technik-wann.html): Vor dem Schlafen, in der Pause am Schreibtisch, im Augenblick des Ärgers, vor einer Prüfung oder einem Vortrag. Welche Technik zu welcher Lage passt, und warum.
 - [Wenn dein Atem nicht gehört wird](https://soluklan.app/de/ratgeber/atem-wird-nicht-gehoert.html): Was du der Reihe nach versuchen kannst, wenn „Keine Ausatmung gehört“ erscheint. Abstand, der Raum, der Unterschied zwischen Geräten, und ohne Mikrofon weitermachen.
 - [Widgets und Live-Aktivität](https://soluklan.app/de/ratgeber/widgets-und-live-aktivitaet.html): Widgets für Home- und Sperrbildschirm hinzufügen, was jede Größe zeigt, und der Zähler, der während einer Sitzung auf dem Sperrbildschirm erscheint.
 - [Wie lang sollte eine Atemübung sein](https://soluklan.app/de/ratgeber/wie-lang-soll-eine-atemuebung-sein.html): Kurze Antwort: drei bis fünf Minuten am Tag. Die lange Antwort erklärt, wo Länge etwas bringt und wo nicht mehr.
@@ -174,6 +176,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Soluklan auf dem Tablet](https://soluklan.app/de/ratgeber/soluklan-auf-dem-tablet.html): Auf dem Tablet ist der Bildschirm breiter und das Mikrofon weiter weg. Wohin mit dem Gerät, warum das Messen schwerer ist als am Telefon und was gleich bleibt.
 - [Soluklan auf dem Telefon](https://soluklan.app/de/ratgeber/soluklan-auf-dem-telefon.html): Das Telefon ist das Hauptgerät: hier ist die Messung am genauesten. Was wo ist, wohin das Mikrofon schaut und wo deine Daten liegen.
 - [Soluklan auf der Apple Watch](https://soluklan.app/de/ratgeber/soluklan-auf-der-apple-watch.html): Sitzungen allein auf der Uhr, gemeinsame Sitzungen mit dem Telefon, Puls und Health-Berechtigung, der Rhythmus als Vibration am Handgelenk und der Schnellstart auf der Uhr.
+- [28 Tage Seufzer](https://soluklan.app/de/ratgeber/28-tage-seufzer.html): Vier Wochen lang jeden Tag fünf Minuten Physiologischer Seufzer. Wie ein Programmtag abläuft, für wen es passt und auf welcher Studie es beruht.
 - [4-7-8-Atmung](https://soluklan.app/de/ratgeber/vier-sieben-acht.html): Vier ein, sieben halten, acht aus. Die längste Atempause der App steckt hier. Eine Technik, deren Beliebtheit ihrer Studienlage vorauseilt — und das sagen wir klar.
 - [Bienenatem](https://soluklan.app/de/ratgeber/bienenatem.html): Mund zu, zwölf Sekunden „mmm“. Bei dieser Technik sucht das Mikrofon keinen leisen Atem, sondern eine Vibration.
 - [Box-Atmung](https://soluklan.app/de/ratgeber/box-atmung.html): Vier gleiche Schritte: ein, halten, aus, halten. Vier Atemzüge pro Minute. Die Technik, die in militärischen Ausbildungen und bei Rettungsdiensten am häufigsten gelehrt wird.
@@ -209,6 +212,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Soluklan sur Apple Watch](https://soluklan.app/fr/guide/soluklan-sur-apple-watch.html): Des séances seul sur la montre, des séances conjointes avec le téléphone, le pouls et l’autorisation Santé, le rythme donné au poignet et le départ rapide sur la montre.
 - [Soluklan sur le téléphone](https://soluklan.app/fr/guide/soluklan-sur-le-telephone.html): Le téléphone est l'appareil principal : la mesure y est la plus juste. Ce qui est où, où regarde le micro et où sont gardées tes données.
 - [Soluklan sur tablette](https://soluklan.app/fr/guide/soluklan-sur-tablette.html): Sur tablette l'écran est plus large et le micro plus loin. Où poser l'appareil, pourquoi mesurer est plus difficile que sur le téléphone et ce qui reste identique.
+- [Soupir en 28 jours](https://soluklan.app/fr/guide/soupir-en-28-jours.html): Quatre semaines de soupir physiologique, cinq minutes chaque jour. Comment se passe une journée du programme, à qui il convient et sur quelle étude il s’appuie.
 - [Expiration allongée](https://soluklan.app/fr/guide/expiration-allongee.html): Quatre d’inspiration, quatre de rétention, huit d’expiration. Étirer l’expiration au double de l’inspiration repose sur l’un des effets les plus constamment mesurés parmi les techniques de respiration.
 - [Kapalabhati](https://soluklan.app/fr/guide/kapalabhati.html): Des expirations rapides et puissantes venues des abdominaux. La seule technique avancée stimulante de l’app, celle qui a la plus longue liste de contre-indications, et celle que le micro mesure autrement.
 - [Le souffle de l’abeille](https://soluklan.app/fr/guide/souffle-de-labeille.html): Bouche fermée, douze secondes de « mmm ». Dans cette technique, le micro ne cherche pas un souffle discret, il cherche une vibration.
@@ -234,8 +238,8 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Installer l’habitude : les trente premiers jours](https://soluklan.app/fr/guide/installer-lhabitude.html): Là où se joue la différence entre utiliser l’app une semaine et tenir trente jours. Un plan découpé en semaines.
 - [Lire le rapport de ta séance](https://soluklan.app/fr/guide/lire-le-rapport.html): Ce que veut dire chaque ligne du rapport, et quoi faire d’une mesure qui est sortie basse.
 - [Mettre en place un programme et le tenir](https://soluklan.app/fr/guide/mettre-en-place-un-programme.html): Comment mettre en place un programme de vingt-huit jours, ce qui se passe quand tu rates un jour, ce que veut dire un programme terminé, et ce que tu vois à la fin.
-- [Qu'est-ce que la respiration diaphragmatique](https://soluklan.app/fr/guide/respiration-diaphragmatique.html): La respiration diaphragmatique n'est pas une technique mais une façon de respirer. Pourquoi le nom trompe, comment la vérifier avec la main et dans quelles techniques elle est déjà là.
-- [Quelle technique, et quand](https://soluklan.app/fr/guide/quelle-technique-et-quand.html): Avant de dormir, pendant une pause au travail, dans un moment de colère, avant une présentation. Quelle technique choisir pour la situation, et pourquoi.
+- [Qu'est-ce que la respiration diaphragmatique](https://soluklan.app/fr/guide/respiration-diaphragmatique.html): La respiration diaphragmatique n'est pas une technique mais une façon de respirer. Comment la faire étape par étape, ce qui la distingue de la respiration thoracique, combien de temps la pratiquer et les erreurs fréquentes.
+- [Quelle technique, et quand](https://soluklan.app/fr/guide/quelle-technique-et-quand.html): Avant de dormir, pendant une pause au bureau, dans un moment de colère, avant un examen ou une présentation. Quelle technique choisir pour la situation, et pourquoi.
 - [Rappels et notifications](https://soluklan.app/fr/guide/rappels-et-notifications.html): Le rappel quotidien, l’alerte de série, les notifications par technique, le ton des textes, les heures calmes, le mode vacances et le plafond quotidien. Ce que fait chacun et comment le régler.
 - [Rendre l’interface plus simple ou plus fournie](https://soluklan.app/fr/guide/niveaux-dinterface.html): Simple, Standard et Avancée. Ce qui change entre les trois niveaux, à qui chacun convient, et comment en changer.
 - [Respirer avant de dormir](https://soluklan.app/fr/guide/respiration-avant-de-dormir.html): Pourquoi le soir on choisit des techniques à expiration longue, au lit ou assis, à qui la rétention du 4-7-8 pose problème et ce qui a vraiment été mesuré sur l'endormissement.
@@ -267,9 +271,9 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Leer el informe de tu sesión](https://soluklan.app/es/guia/leer-el-informe.html): Qué significa cada línea del informe y qué hacer con una medida que ha salido baja.
 - [Montar un programa y sostenerlo](https://soluklan.app/es/guia/montar-un-programa.html): Cómo montar un programa de veintiocho días, qué pasa cuando te saltas un día, qué significa un programa terminado y qué ves al acabarlo.
 - [Moverse por la app](https://soluklan.app/es/guia/moverse-por-la-app.html): A qué pantalla se llega desde dónde. Un mapa de la pantalla de inicio, el Perfil, los Ajustes y la sección Aprender.
-- [Qué es la respiración diafragmática](https://soluklan.app/es/guia/respiracion-diafragmatica.html): La respiración diafragmática no es una técnica sino una forma de respirar. Por qué el nombre engaña, cómo comprobarla con la mano y en qué técnicas ya está.
+- [Qué es la respiración diafragmática](https://soluklan.app/es/guia/respiracion-diafragmatica.html): La respiración diafragmática no es una técnica sino una forma de respirar. Cómo hacerla paso a paso, en qué se diferencia de la torácica, cuánto tiempo practicarla y los errores más comunes.
 - [Qué hay en la pantalla de sesión](https://soluklan.app/es/guia/la-pantalla-de-sesion.html): El círculo, la etiqueta de fase, la onda de sonido, las notas cortas durante la sesión, el aviso del micrófono y el menú de pausa. Para qué sirve cada cosa que ves durante una sesión.
-- [Qué técnica, y cuándo](https://soluklan.app/es/guia/que-tecnica-y-cuando.html): Antes de dormir, en una pausa del trabajo, en un momento de enfado, antes de una presentación. Qué técnica elegir para cada situación, y por qué.
+- [Qué técnica, y cuándo](https://soluklan.app/es/guia/que-tecnica-y-cuando.html): Antes de dormir, en una pausa en el escritorio, en un momento de enfado, antes de un examen o una presentación. Qué técnica elegir para cada situación, y por qué.
 - [Racha, hitos y calendario](https://soluklan.app/es/guia/racha-e-hitos.html): Cómo funciona la racha, qué sesiones cuentan, cómo poner tus propios hitos y cómo leer el calendario.
 - [Recordatorios y notificaciones](https://soluklan.app/es/guia/recordatorios-y-notificaciones.html): El recordatorio diario, el aviso de racha, las notificaciones por técnica, el tono de los textos, las horas tranquilas, el modo vacaciones y el tope diario. Qué hace cada uno y cómo se ajusta.
 - [Respirar antes de dormir](https://soluklan.app/es/guia/respiracion-antes-de-dormir.html): Por qué de noche se eligen técnicas de espiración larga, en la cama o sentado, a quién le cuesta la retención del 4-7-8 y qué se ha medido de verdad sobre conciliar el sueño.
@@ -292,6 +296,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Soluklan en el Apple Watch](https://soluklan.app/es/guia/soluklan-en-el-apple-watch.html): Sesiones solo en el reloj, sesiones conjuntas con el teléfono, el pulso y el permiso de Salud, el ritmo marcado en la muñeca y el inicio rápido en el reloj.
 - [Soluklan en el teléfono](https://soluklan.app/es/guia/soluklan-en-el-telefono.html): El teléfono es el dispositivo principal: aquí la medición es más precisa. Qué hay dónde, hacia dónde mira el micrófono y dónde se guardan tus datos.
 - [Soluklan en la tableta](https://soluklan.app/es/guia/soluklan-en-la-tableta.html): En la tableta la pantalla es más ancha y el micrófono está más lejos. Dónde poner el dispositivo, por qué medir cuesta más que en el teléfono y qué sigue igual.
+- [Suspiro en 28 días](https://soluklan.app/es/guia/suspiro-en-28-dias.html): El suspiro fisiológico cada día durante cuatro semanas, cinco minutos al día. Cómo es un día del programa, a quién le va bien y en qué estudio se basa.
 - [El suspiro fisiológico](https://soluklan.app/es/guia/suspiro-fisiologico.html): Dos inspiraciones apiladas y luego una espiración larga. La técnica con el mejor estudio controlado entre los ejercicios de respiración cortos. Es además la técnica del programa.
 - [Espiración prolongada](https://soluklan.app/es/guia/espiracion-prolongada.html): Cuatro al inspirar, cuatro de retención, ocho al espirar. Estirar la espiración hasta el doble de la inspiración se apoya en uno de los efectos medidos con más constancia entre las técnicas de respiración.
 - [Kapalabhati](https://soluklan.app/es/guia/kapalabhati.html): Espiraciones rápidas y potentes desde los abdominales. La única técnica avanzada estimulante de la app, la que tiene la lista más larga de contraindicaciones y la que el micrófono mide de otra manera.
@@ -314,7 +319,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Guida](https://soluklan.app/it/guida/): Come usare l’app passo passo, a cosa serve ogni funzione e come si fa ogni tecnica.
 - [Privacy](https://soluklan.app/it/privacy.html)
 - [Assistenza](https://soluklan.app/it/assistenza.html)
-- [Che cos'è la respirazione diaframmatica](https://soluklan.app/it/guida/respirazione-diaframmatica.html): La respirazione diaframmatica non è una tecnica ma un modo di respirare. Perché il nome inganna, come verificarla con la mano e in quali tecniche è già dentro.
+- [Che cos'è la respirazione diaframmatica](https://soluklan.app/it/guida/respirazione-diaframmatica.html): La respirazione diaframmatica non è una tecnica ma un modo di respirare. Come si fa passo passo, in cosa differisce da quella toracica, quanto farla e gli errori più comuni.
 - [Come fare un esercizio di respirazione](https://soluklan.app/it/guida/come-fare-un-esercizio-di-respirazione.html): Un esercizio di respirazione è rallentare il respiro di proposito per qualche minuto. Le cinque cose per iniziare, il primo ritmo e gli errori più comuni.
 - [Cosa c’è nella schermata di sessione](https://soluklan.app/it/guida/la-schermata-di-sessione.html): Il cerchio, l’etichetta di fase, l’onda sonora, le note brevi durante la sessione, l’avviso del microfono e il menu di pausa. A cosa serve ogni cosa che vedi durante una sessione.
 - [Costruire l’abitudine: i primi trenta giorni](https://soluklan.app/it/guida/costruire-labitudine.html): Dove si decide la differenza fra usare l’app una settimana e tenere trenta giorni. Un piano diviso per settimane.
@@ -325,7 +330,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Leggere il rapporto della tua sessione](https://soluklan.app/it/guida/leggere-il-rapporto.html): Cosa significa ogni riga del rapporto e cosa fare con una misura uscita bassa.
 - [Orientarsi nell’app](https://soluklan.app/it/guida/orientarsi-nellapp.html): A quale schermata si arriva da dove. Una mappa della schermata iniziale, del Profilo, delle Impostazioni e della sezione Impara.
 - [Promemoria e notifiche](https://soluklan.app/it/guida/promemoria-e-notifiche.html): Il promemoria quotidiano, l’avviso della serie, le notifiche per tecnica, il tono dei testi, le ore tranquille, la modalità vacanza e il tetto giornaliero. Cosa fa ciascuno e come si regola.
-- [Quale tecnica, e quando](https://soluklan.app/it/guida/quale-tecnica-e-quando.html): Prima di dormire, in una pausa dal lavoro, in un momento di rabbia, prima di una presentazione. Quale tecnica scegliere per ogni situazione, e perché.
+- [Quale tecnica, e quando](https://soluklan.app/it/guida/quale-tecnica-e-quando.html): Prima di dormire, in pausa alla scrivania, in un momento di rabbia, prima di un esame o di una presentazione. Quale tecnica scegliere per ogni situazione, e perché.
 - [Quanto deve durare un esercizio di respirazione](https://soluklan.app/it/guida/quanto-deve-durare-un-esercizio.html): Risposta breve: tre-cinque minuti al giorno. Quella lunga spiega dove la durata serve e dove smette di rendere.
 - [Rendere l’interfaccia più semplice o più ricca](https://soluklan.app/it/guida/livelli-di-interfaccia.html): Semplice, Standard e Avanzata. Cosa cambia fra i tre livelli, a chi va bene ciascuno e come cambiarlo.
 - [Respirare in un momento di ansia](https://soluklan.app/it/guida/respirare-in-un-momento-di-ansia.html): Che cosa fa il respiro in un momento teso, perché allungare l'espirazione è il primo passo, perché le trattenute possono peggiorare il panico e cosa l'app sconsiglia per questo.
@@ -351,6 +356,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Soluklan su Apple Watch](https://soluklan.app/it/guida/soluklan-su-apple-watch.html): Sessioni solo sull’orologio, sessioni condivise con il telefono, battito e permesso di Salute, il ritmo dato al polso e l’avvio rapido sull’orologio.
 - [Soluklan sul tablet](https://soluklan.app/it/guida/soluklan-sul-tablet.html): Sul tablet lo schermo è più largo e il microfono più lontano. Dove mettere il dispositivo, perché misurare è più difficile che sul telefono e che cosa resta uguale.
 - [Soluklan sul telefono](https://soluklan.app/it/guida/soluklan-sul-telefono.html): Il telefono è il dispositivo principale dell'app: qui la misura è più precisa. Che cosa sta dove, dove guarda il microfono e dove restano i tuoi dati.
+- [Sospiro in 28 giorni](https://soluklan.app/it/guida/sospiro-in-28-giorni.html): Quattro settimane di sospiro fisiologico, cinque minuti ogni giorno. Come va una giornata del programma, a chi è adatto e su quale studio si basa.
 - [Espirazione prolungata](https://soluklan.app/it/guida/espirazione-prolungata.html): Quattro inspirando, quattro di pausa, otto espirando. Allungare l’espirazione al doppio dell’inspirazione poggia su uno degli effetti misurati con più costanza fra le tecniche di respirazione.
 - [Il respiro dell’ape](https://soluklan.app/it/guida/respiro-dellape.html): Bocca chiusa, dodici secondi di «mmm». In questa tecnica il microfono non cerca un respiro discreto, cerca una vibrazione.
 - [Il respiro dell’oceano](https://soluklan.app/it/guida/respiro-delloceano.html): Il fruscio dell’aria che passa nella gola. Un’inspirazione silenziosa, un’espirazione come una conchiglia. Trovare il suono giusto è la tecnica stessa.
@@ -373,6 +379,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [الدليل](https://soluklan.app/ar/dalil/): كيف تستخدم التطبيق خطوة بخطوة، وما الذي تفعله كل ميزة، وكيف يُؤدَّى كل تمرين.
 - [الخصوصية](https://soluklan.app/ar/khususiya.html)
 - [الدعم](https://soluklan.app/ar/dam.html)
+- [التنهيدة في 28 يومًا](https://soluklan.app/ar/dalil/at-tanahhud-fi-28-yawman.html): التنهيدة الفسيولوجية كل يوم خمس دقائق طوال أربعة أسابيع. كيف يمضي يوم من البرنامج، ولمن يناسب، وعلى أي دراسة يستند.
 - [التنفس المتّسق](https://soluklan.app/ar/dalil/at-tanaffus-al-muttasiq.html): خمسة أنفاس ونصف في الدقيقة. أكثرها دراسةً، وأسهلها تعلّمًا، ومفتوح من البداية في التطبيق. لماذا هذه السرعة، وما الذي يقوله الدليل فعلًا.
 - [التنفس المثلث](https://soluklan.app/ar/dalil/at-tanaffus-al-muthallath.html): أربع ثوانٍ شهيقًا، وأربع حبسًا، وأربع زفيرًا. أبسط تمرين فيه حبس، وأول موضع تلقى فيه الحبس في التطبيق.
 - [التنفس المربّع](https://soluklan.app/ar/dalil/at-tanaffus-al-murabba.html): أربع خطوات متساوية: شهيق، وحبس، وزفير، وحبس. أربعة أنفاس في الدقيقة. وهو أكثر التمارين تعليمًا في تدريب الجيش وخدمات الطوارئ.
@@ -402,7 +409,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [ماذا نفعل بالبيانات التي تشاركها](https://soluklan.app/ar/dalil/al-bayanat-allati-tusharikuha.html): إن فعّلت ملخّص الجلسة المجهول والعيّنات الصوتية، فلأي شيء تصلنا تلك السجلّات، وماذا يجري لكل واحد منها، وإلى ماذا تنتهي.
 - [معجم مصطلحات التنفّس](https://soluklan.app/ar/dalil/mustalahat-at-tanaffus.html): تعريفات قصيرة للمصطلحات المستعملة في عمل التنفّس وفي هذا الموقع، مع رابط للمقال الذي يشرح كلًا منها.
 - [أكبر فائدة من التطبيق](https://soluklan.app/ar/dalil/akbar-faida-min-at-tatbiq.html): شخصان يستعملان التطبيق نفسه ويخرجان بنتيجتين مختلفتين تمامًا. هذه عشرة أمور تصنع الفرق، وكيف تفعل كلًّا منها.
-- [أي تمرين ومتى](https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html): قبل النوم، وفي استراحة العمل، وعند التوتّر المفاجئ، وعند الخمول، وفي يوم حارّ — أي تمرين يناسب أي حال.
+- [أي تمرين ومتى](https://soluklan.app/ar/dalil/ayy-tamrin-wa-mata.html): قبل النوم، وفي استراحة على المكتب، وعند التوتّر المفاجئ، وقبل امتحان أو عرض تقديمي — أي تمرين يناسب أي حال، ولماذا.
 - [إدارة بياناتك](https://soluklan.app/ar/dalil/idarat-bayanatik.html): ما الذي يبقى على جهازك، وما الذي يتزامن في iCloud، وما الذي يُرسَل إن فعّلت المشاركة — وكيف تحذف كل شيء.
 - [إن لم يُسمَع نفَسك](https://soluklan.app/ar/dalil/idha-lam-yusma-nafasuk.html): المسافة، والغرفة، والتمارين الخافتة، واللوحي، وسطر التقرير الذي يقول لك أين الخلل — وكيف تتمرّن بلا ميكروفون.
 - [إنشاء برنامج والاستمرار فيه](https://soluklan.app/ar/dalil/idad-barnamij.html): ما البرنامج، وكيف يُنشأ، وماذا يحدث إن فاتك يوم، وما الذي يعرضه سجلّ البرامج.
@@ -414,7 +421,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [التنقّل في التطبيق](https://soluklan.app/ar/dalil/at-tanaqqul-fi-at-tatbiq.html): الشاشة الرئيسية، ومختار التمارين، وشاشة «تعلّم»، والملف الشخصي، والإعدادات — ما الذي في كل موضع.
 - [الجلسة المشتركة](https://soluklan.app/ar/dalil/al-jalsa-al-mushtaraka.html): جلسة يديرها الهاتف والساعة معًا: كيف تبدؤها، والمعصم المنخفض، وانضمام الساعة لاحقًا، وماذا تفعل إذا لم تتصل.
 - [السجلّ والملخّصات والإنجازات](https://soluklan.app/ar/dalil/as-sijill-wal-mulakhkhasat.html): سجلّ الجلسات، والملخّصات الأسبوعية، والملخّص الشخصي، والإنجازات — ما الذي في كل شاشة وكيف تُقرأ.
-- [السلسلة والمحطّات والتقويم](https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html): أي الجلسات تُحسب، وكيف تُضبط محطّة خاصة بك، وماذا يحدث حين تنكسر السلسلة، ولماذا وضع الإجازة يحفظها.
+- [السلسلة والمحطّات والتقويم](https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html): كيف تعمل السلسلة، وأي الجلسات تُحسب، وكيف تضع محطّاتك بنفسك، وكيف تقرأ التقويم.
 - [بناء العادة: الثلاثون يومًا الأولى](https://soluklan.app/ar/dalil/bina-al-ada.html): خطة أربعة أسابيع: تمرين واحد، ثم القياسات، ثم تمرين ثانٍ، ثم برنامج — وماذا تفعل في الأيام التي تفوتك.
 - [جعل الواجهة أبسط أو أكمل](https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html): ثلاثة مستويات للواجهة: بسيطة، وقياسية، ومتقدمة. ما الذي يتغيّر في كل واحد، ولمن يناسب.
 - [جلستك الأولى من أوّلها إلى آخرها](https://soluklan.app/ar/dalil/jalsatuk-al-ula.html): كل خطوة من فتح التطبيق أول مرّة إلى قراءة تقريرك الأول. ما الذي يُسأل عنه، ولماذا، وماذا تفعل في كل موضع.
@@ -423,7 +430,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [قراءة تقرير الجلسة](https://soluklan.app/ar/dalil/qiraat-at-taqrir.html): الدرجة، والقياسات، والسطور التقنية، والمكوّنات، ورسم مستوى الصوت — سطرًا سطرًا، وماذا تفعل حين يهبط أحدها.
 - [كم دقيقة ينبغي أن يستمرّ تمرين التنفّس](https://soluklan.app/ar/dalil/kam-daqiqa-yajib-an-yakun-at-tamrin.html): الجواب القصير: ثلاث إلى خمس دقائق يوميًا. والجواب الطويل يشرح أين تنفع المدّة وأين تتوقّف عن النفع.
 - [كيف تمارس تمرين تنفّس](https://soluklan.app/ar/dalil/kayfa-tumaris-tamrin-tanaffus.html): تمرين التنفّس ببساطة هو إبطاء النفَس عمدًا لبضع دقائق. خمسة أشياء للبداية، الإيقاع الأول، والأخطاء الشائعة.
-- [ما هو التنفّس الحجابي](https://soluklan.app/ar/dalil/at-tanaffus-al-hijabi.html): التنفّس الحجابي ليس تقنية بل طريقة في الشهيق. لماذا يضلّل اسمه، وكيف تتحقّق منه بيدك، وفي أي التقنيات هو موجود أصلًا.
+- [ما هو التنفّس الحجابي](https://soluklan.app/ar/dalil/at-tanaffus-al-hijabi.html): التنفّس الحجابي ليس تقنية بل طريقة في الشهيق. كيف تمارسه خطوة بخطوة، وما الفرق بينه وبين التنفس الصدري، وكم تمارسه، وأكثر الأخطاء شيوعًا.
 - [ماذا يوجد على شاشة الجلسة](https://soluklan.app/ar/dalil/shashat-al-jalsa.html): الدائرة، وموجة الصوت، والملاحظات القصيرة، وتنبيه الميكروفون، والاهتزازات، وقائمة الإيقاف المؤقّت — ماذا يفعل كل جزء.
 
 ## 简体中文 (zh-Hans)
@@ -460,8 +467,8 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Apple Watch 上的 Soluklan](https://soluklan.app/zh/zhinan/apple-watch-shang-de-soluklan.html): 手表上单独练习、与手机共同练习、心率和健康权限、手腕上的节奏震动，以及手表上的快速开始。
 - [平板上的 Soluklan](https://soluklan.app/zh/zhinan/pingban-shang-de-soluklan.html): 平板屏幕更宽，麦克风更远。设备该怎么放、为什么比手机更难测，以及哪些保持不变。
 - [手机上的 Soluklan](https://soluklan.app/zh/zhinan/shouji-shang-de-soluklan.html): 手机是应用的主力设备：这里的测量最准。什么在哪里，麦克风朝哪儿，你的数据存在哪里。
-- [什么时候做什么](https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html): 睡前、工作间隙、突然紧张时、发懵时、大热天——什么情形配什么呼吸法。
-- [什么是腹式呼吸](https://soluklan.app/zh/zhinan/fushi-huxi.html): 腹式呼吸不是一种技法，而是吸气的方式。名字为什么容易误导、怎么用手检查，以及它已经存在于哪些技法里。
+- [什么时候做什么](https://soluklan.app/zh/zhinan/shenme-shihou-zuo-shenme.html): 睡前、办公桌前歇一歇、突然紧张时、考试或演讲之前——什么情形配什么呼吸法，以及为什么。
+- [什么是腹式呼吸](https://soluklan.app/zh/zhinan/fushi-huxi.html): 腹式呼吸不是一种技法，而是吸气的方式。一步步怎么做、和胸式呼吸有什么区别、练多久，以及最常见的错误。
 - [共同练习](https://soluklan.app/zh/zhinan/gongtong-lianxi.html): 由手机和手表一起进行的练习：如何开始、放下手腕、手表稍后连接以及连接不上时怎么办。
 - [养成习惯：最初的三十天](https://soluklan.app/zh/zhinan/yangcheng-xiguan.html): 四周的计划：一种呼吸法，然后是测量，然后是第二种，然后是一个计划——以及断掉的日子怎么办。
 - [呼吸听不到的时候](https://soluklan.app/zh/zhinan/huxi-ting-bu-dao.html): 距离、房间、本来就轻的呼吸法、平板，以及报告里那行告诉你问题在哪的字——还有怎么不用麦克风练。
@@ -482,8 +489,9 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [解锁呼吸法](https://soluklan.app/zh/zhinan/jiesuo-huxifa.html): 锁按什么打开、锁着的卡片上有哪些信息，以及怎样马上开始所需的那次练习。
 - [记录、小结和成就](https://soluklan.app/zh/zhinan/jilu-zongjie-chengjiu.html): 练习记录、每周小结、个人总结和成就——每个界面里有什么，怎么读。
 - [读懂练习报告](https://soluklan.app/zh/zhinan/du-baogao.html): 分数、测量、技术行、组成部分和声音强度图——一行一行看，以及某一项掉下来时该怎么办。
-- [连续天数、里程碑和日历](https://soluklan.app/zh/zhinan/lianxu-tianshu.html): 哪些练习算数、怎么设自己的里程碑、断掉时会发生什么，以及假期模式为什么能保住它。
+- [连续天数、里程碑和日历](https://soluklan.app/zh/zhinan/lianxu-tianshu.html): 连续天数怎么算、哪些练习算数、怎么自己设里程碑，以及怎么看日历。
 - [选呼吸法和时长](https://soluklan.app/zh/zhinan/xuan-huxifa-he-shichang.html): 呼吸法卡片上的标记是什么意思、时长滑块上亮起的那段是什么，以及计划什么时候会接管时长。
+- [28 天叹息计划](https://soluklan.app/zh/zhinan/28-tian-tanxi-jihua.html): 四周里每天做五分钟生理性叹息。这个计划的一天怎么过、适合谁，以及它依据的是哪项研究。
 
 ## Русский (ru)
 
@@ -514,20 +522,21 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Как открываются техники](https://soluklan.app/ru/rukovodstvo/kak-otkryvayutsya-tekhniki.html): Почему часть техник закрыта, что засчитывается и как уровень опыта меняет число нужных сессий.
 - [Как устроено приложение](https://soluklan.app/ru/rukovodstvo/kak-ustroeno-prilozhenie.html): Главный экран, выбор техники, экран «Учиться», профиль и настройки — что где находится.
 - [Как читать отчёт сессии](https://soluklan.app/ru/rukovodstvo/kak-chitat-otchyot.html): Оценка, измерения, технические строки, составляющие и график уровня звука — строка за строкой, и что делать, если что-то просело.
-- [Какая техника и когда](https://soluklan.app/ru/rukovodstvo/kakaya-tekhnika-kogda.html): Перед сном, в рабочем перерыве, при внезапном напряжении, при вялости, в жару — какая техника под какой случай.
+- [Какая техника и когда](https://soluklan.app/ru/rukovodstvo/kakaya-tekhnika-kogda.html): Перед сном, в перерыве за рабочим столом, при внезапном напряжении, перед экзаменом или выступлением — какая техника под какой случай.
 - [Напоминания и уведомления](https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html): Ежедневное напоминание, предупреждение о серии, уведомления под конкретные техники, тихие часы, режим отпуска и дневной предел — как настроить каждое.
 - [Первая сессия от начала до конца](https://soluklan.app/ru/rukovodstvo/pervaya-sessiya.html): Каждый шаг: от первого запуска приложения до чтения первого отчёта. О чём спрашивают, зачем и что где делать.
 - [Свой темп](https://soluklan.app/ru/rukovodstvo/svoy-temp.html): Пять с половиной секунд — это среднее. Как приложение измеряет твой резонансный темп и когда стоит измерить заново.
 - [Сделать интерфейс проще или полнее](https://soluklan.app/ru/rukovodstvo/urovni-interfeysa.html): Три уровня интерфейса: простой, стандартный и продвинутый. Что меняется на каждом и кому он подходит.
-- [Серия, вехи и календарь](https://soluklan.app/ru/rukovodstvo/seriya-i-vekhi.html): Какие сессии засчитываются, как поставить свою веху, что происходит при обрыве и почему режим отпуска её сохраняет.
+- [Серия, вехи и календарь](https://soluklan.app/ru/rukovodstvo/seriya-i-vekhi.html): Как работает серия, какие сессии засчитываются, как поставить свои вехи и как читать календарь.
 - [Сколько должно длиться дыхательное упражнение](https://soluklan.app/ru/rukovodstvo/skolko-dolzhno-dlitsya-uprazhnenie.html): Короткий ответ: три-пять минут в день. Длинный объясняет, где длительность помогает, а где перестаёт что-либо давать.
 - [Совместная сессия](https://soluklan.app/ru/rukovodstvo/sovmestnaya-sessiya.html): Сессия, которую ведут телефон и часы вместе: как её начать, опущенное запястье, если часы подключатся позже и если не подключаются.
 - [Управление данными](https://soluklan.app/ru/rukovodstvo/upravlenie-dannymi.html): Что остаётся на устройстве, что синхронизируется в iCloud, что отправляется при включённой передаче — и как удалить всё.
 - [Что на экране сессии](https://soluklan.app/ru/rukovodstvo/ekran-sessii.html): Круг, звуковая волна, короткие подсказки, предупреждение о микрофоне, тактильные отклики и меню паузы — что делает каждая часть.
-- [Что такое диафрагмальное дыхание](https://soluklan.app/ru/rukovodstvo/diafragmalnoe-dyhanie.html): Диафрагмальное дыхание — не техника, а способ дышать. Почему название вводит в заблуждение, как проверить его рукой и в каких техниках оно уже есть.
+- [Что такое диафрагмальное дыхание](https://soluklan.app/ru/rukovodstvo/diafragmalnoe-dyhanie.html): Диафрагмальное дыхание — не техника, а способ дышать. Как делать его по шагам, чем оно отличается от грудного, сколько им заниматься и какие ошибки встречаются чаще всего.
 - [Soluklan на Apple Watch](https://soluklan.app/ru/rukovodstvo/soluklan-na-apple-watch.html): Сессии на одних часах, совместные сессии с телефоном, пульс и разрешение «Здоровья», ритм на запястье и быстрый старт на часах.
 - [Soluklan на планшете](https://soluklan.app/ru/rukovodstvo/soluklan-na-planshete.html): На планшете экран шире, а микрофон дальше. Куда положить устройство, почему измерять труднее, чем на телефоне, и что остаётся прежним.
 - [Soluklan на телефоне](https://soluklan.app/ru/rukovodstvo/soluklan-na-telefone.html): Телефон — основное устройство: измерение здесь точнее всего. Что где находится, куда смотрит микрофон и где хранятся твои данные.
+- [Вздох за 28 дней](https://soluklan.app/ru/rukovodstvo/vzdoh-za-28-dney.html): Четыре недели каждый день по пять минут физиологического вздоха. Как проходит день программы, кому она подходит и на каком исследовании построена.
 - [Бодрящее дыхание](https://soluklan.app/ru/rukovodstvo/bodryashchee-dyhanie.html): Вдох две секунды, выдох две. Единственная техника в приложении с закреплённой длительностью — она не идёт дальше минуты, и на это есть веская причина.
 - [Глубоко и медленно](https://soluklan.app/ru/rukovodstvo/gluboko-i-medlenno.html): Вдох шесть секунд, выдох шесть. Без задержек и без украшений. Лучшая техника, чтобы научиться работать диафрагмой.
 - [Долгий выдох](https://soluklan.app/ru/rukovodstvo/dolgiy-vydoh.html): Вдох четыре, задержка четыре, выдох восемь. Растянуть выдох вдвое против вдоха — это опирается на один из самых устойчиво измеренных эффектов среди дыхательных техник.
