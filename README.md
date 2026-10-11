@@ -2,11 +2,13 @@
 
 Sitenin kaynağı. Düz HTML, yapı adımı yok — GitHub Pages klasörü olduğu gibi yayınlıyor.
 
-Site dokuz dilde: Türkçe kökte, ötekiler `/en`, `/de`, `/fr`, `/es`, `/it`, `/ar`, `/zh`, `/ru`
-altında. Her dilin içeriği `content-<kod>/` klasöründe, adresleri kendi dilinde
+Site on dilde: Türkçe kökte, ötekiler `/en`, `/de`, `/fr`, `/es`, `/it`, `/ar`, `/zh`, `/ru`,
+`/ja` altında; Portekizce (`/pt`) ve Endonezce (`/id`) çevrilirken. Her dilin içeriği
+`content-<kod>/` klasöründe, adresleri kendi dilinde
 (`/rehber/kutu-nefes.html` ↔ `/ar/dalil/at-tanaffus-al-murabba.html`). Arapça sayfalar
-`dir="rtl"` ile çiziliyor. Bir dil, ancak `content-xx/anasayfa.html` yazıldığı gün yayına
-giriyor — o dosya yokken `site_build.py` o dili atlıyor ve dil seçicide görünmüyor.
+`dir="rtl"` ile çiziliyor. Bir dil, çevirisi bitip `site_build.py`deki `HAZIR_DILLER`e yazıldığı
+gün yayına giriyor — o zamana kadar `site_build.py` o dili atlıyor, dil seçicide, site haritasında
+ve hreflang'de görünmüyor (`--tum-diller` ile denenebilir, o derleme yayınlanmaz).
 
 **`site/` altındaki HTML dosyalarının hiçbiri elle düzenlenmez.** Hepsi üretiliyor:
 
