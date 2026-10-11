@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=2664ab8d">
+<link rel="stylesheet" href="/assets/soluklan.css?v=756172f5">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://soluklan.app/#kurulus","name":"Soluklan","url":"https://soluklan.app/","logo":{"@type":"ImageObject","url":"https://soluklan.app/assets/icon-512.png","width":512,"height":512},"email":"info@soluklan.app"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://soluklan.app/#site","name":"Soluklan","url":"https://soluklan.app/it/","inLanguage":"it","publisher":{"@id":"https://soluklan.app/#kurulus"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Soluklan","operatingSystem":"iOS 17.0+, watchOS 10.0+","applicationCategory":"HealthApplication","url":"https://soluklan.app/it/","inLanguage":["tr","en","de","fr","es","it","ar","zh-Hans","ru","ja","pt-BR","id"],"description":"Un’app per iPhone, iPad e Apple Watch che segue il tuo ritmo respiratorio con il microfono e dà un punteggio alla sessione. Un esercizio di rilassamento e concentrazione.","image":"https://soluklan.app/assets/og.png","publisher":{"@id":"https://soluklan.app/#kurulus"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
@@ -403,31 +403,6 @@
 
 <script>
 /* The down arrow appears after a pause on a slide and hides on scroll. */
-/* In-page links scroll smoothly (automatic smooth scrolling is off: on page
-   changes it looked like the page was jumping upwards). */
-document.addEventListener('click', function (e) {
-  var a = e.target.closest('a[href^="#"]');
-  if (!a) return;
-  var hedef = document.querySelector(a.getAttribute('href'));
-  if (!hedef) return;
-  e.preventDefault();
-  var yumusak = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  /* On phones, tapping the arrow scrolled a little then bounced back: smooth scrolling
-     and `scroll-snap-type: y mandatory` fight each other — snap pulls the scroll back to
-     the nearest slide before the motion finishes. Snap is switched off for the duration of
-     the scroll and switched back on when it ends. */
-  var kok = document.documentElement;
-  kok.classList.add('kaydiriyor');
-  hedef.scrollIntoView({ behavior: yumusak ? 'smooth' : 'auto', block: 'start' });
-  var bitti = function () { kok.classList.remove('kaydiriyor'); };
-  if ('onscrollend' in window) {
-    window.addEventListener('scrollend', bitti, { once: true });
-    setTimeout(bitti, 1200);            // safety net if scrollend never fires
-  } else {
-    setTimeout(bitti, 900);
-  }
-});
-
 (function () {
   /* Tek ok, ekrana sabit: bulunduğun slayta göre hedefi değişiyor.
      Eskiden her slaytın içinde ayrı bir ok vardı ve slayt içerikten uzun olunca ok
@@ -470,51 +445,249 @@ document.addEventListener('click', function (e) {
   window.addEventListener('resize', function () { gizle(); tazele(); }, { passive: true });
   tazele();
 })();
+</script>
 
-/* Mouse wheel: one notch, one slide — but with a smooth transition.
-   With `scroll-snap-type: mandatory`, one wheel notch produces a large, abrupt delta and
-   the browser looked like it was teleporting to the slide. A trackpad produces small
-   deltas, so native snap already feels right there; only **large** deltas are taken over
-   and small ones are left to the browser. It never engages on touch devices. */
+<script>
 (function () {
   var kok = document.documentElement;
-  if (!document.querySelector('.slaytlar')) return;
-  if (window.matchMedia('(pointer: coarse)').matches) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var kap = document.querySelector('.slaytlar');
+  if (!kap || !window.requestAnimationFrame || !window.matchMedia) return;
+  var SURE = 1000;      // bir slaytlık geçiş, ms
+  var BEKLEME = 350;    // geçiş bittikten sonra yeni harekete kapalı kalma
+  var ARA = 180;        // bu kadar ms tekerlek gelmezse yeni hareket sayılıyor
+  var ESIK = 4;         // bir hareketin slayt geçirmesi için gereken toplam delta, px
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var alcak = window.matchMedia('(max-height: 40rem)');
+  kok.classList.add('slayt-js');
 
-  var kilit = false;
+  function etkin() {
+    if (alcak.matches || kok.style.overflow === 'hidden') return false;
+    var vv = window.visualViewport;
+    return !(vv && vv.scale > 1.02);
+  }
+  function enAlt() { return Math.max(0, kok.scrollHeight - window.innerHeight); }
+  function ustY(el) { return el.getBoundingClientRect().top + window.scrollY; }
 
+  /* Duraklar küçükten büyüğe. Her durağın yeri `f()` ile o anda yeniden ölçülüyor: üst
+     menü küçülünce bütün slaytlar yukarı kayıyor, hedef geçiş sırasında güncel kalmalı. */
   function duraklar() {
-    var d = [].slice.call(document.querySelectorAll('.slayt'));
-    var alt = document.querySelector('footer.site');
-    if (alt) d.push(alt);
-    return d;
+    var vh = window.innerHeight, alt = enAlt();
+    var d = [{ y: 0, f: function () { return 0; } }];
+    var sl = kap.querySelectorAll('.slayt');
+    function ekle(el, ilk) {
+      var s = ustY(el), fazla = el.offsetHeight - vh;
+      if (!(ilk && s <= vh * 0.25)) d.push({ y: s, f: function () { return ustY(el); } });
+      if (fazla > vh * 0.1) {
+        var n = Math.ceil(fazla / (vh * 0.8));
+        for (var k = 1; k <= n; k++) (function (oran) {
+          d.push({ y: s + fazla * oran, f: function () {
+            return ustY(el) + (el.offsetHeight - window.innerHeight) * oran; } });
+        })(k / n);
+      }
+    }
+    for (var i = 0; i < sl.length; i++) ekle(sl[i], i === 0);
+    d.push({ y: alt, f: enAlt });                                    // alt bilgi
+    d.forEach(function (x) { x.y = Math.min(x.y, alt); });
+    d.sort(function (a, b) { return a.y - b.y; });
+    return d.filter(function (x, i) { return i === 0 || x.y - d[i - 1].y > 2; });
+  }
+  function komsu(y, yon) {
+    var d = duraklar(), pay = window.innerHeight * 0.08, i;
+    if (yon > 1) return d[d.length - 1];
+    if (yon < -1) return d[0];
+    if (yon > 0) { for (i = 0; i < d.length; i++) if (d[i].y > y + pay) return d[i]; }
+    else { for (i = d.length - 1; i >= 0; i--) if (d[i].y < y - pay) return d[i]; }
+    return null;
+  }
+  function enYakin(y) {
+    return duraklar().reduce(function (a, b) { return Math.abs(b.y - y) < Math.abs(a.y - y) ? b : a; });
   }
 
+  /* Geçiş. `v0` parmağın bırakıldığı andaki hız (px/ms): geçiş o hızla başlayıp yavaşça
+     duruyor, parmaktan kopuk bir sıçrama olmuyor. Tekerlek ve tuşta v0 = 0: yumuşak
+     başlayıp yumuşak biten eğri. */
+  var anim = 0, kilitBitis = 0;
+  function kilitli() { return anim !== 0 || performance.now() < kilitBitis; }
+  /* Varıştan sonra üst menü boyunu değiştirirse (sayfanın tepesinden inerken) durağa
+     yeniden oturtuyor. */
+  function otur(durak) {
+    requestAnimationFrame(function () { requestAnimationFrame(function () {
+      if (anim || dk) return;
+      var y = Math.min(durak.f(), enAlt());
+      if (Math.abs(y - window.scrollY) >= 1) window.scrollTo(0, y);
+    }); });
+  }
+  function git(durak, v0) {
+    var bas = window.scrollY;
+    var mesafe = Math.min(durak.f(), enAlt()) - bas;
+    if (Math.abs(mesafe) < 1 || azalt.matches) {
+      window.scrollTo(0, bas + mesafe);                              // Hareketi Azalt: anlık
+      kilitBitis = performance.now() + BEKLEME;
+      otur(durak);
+      return;
+    }
+    /* Bir ekran boyu yol 1 sn; kısa yol (alt bilgi, parmağın bıraktığı az bir kalan) daha
+       kısa ama yine yumuşak. */
+    var sure = SURE * Math.min(1, Math.sqrt(Math.abs(mesafe) / window.innerHeight));
+    var m0 = Math.max(0, Math.min(2.5, (v0 || 0) * sure / mesafe));
+    var t0 = performance.now();
+    function kare(simdi) {
+      var t = Math.max(0, Math.min(1, (simdi - t0) / sure));          // kare zamanı t0'dan önce olabilir
+      var p = t * t * (3 - 2 * t) + m0 * t * (1 - t) * (1 - t);
+      var hedef = Math.min(durak.f(), enAlt());
+      window.scrollTo(0, Math.round(bas + (hedef - bas) * p));
+      if (t < 1) { anim = requestAnimationFrame(kare); return; }
+      anim = 0;
+      kilitBitis = performance.now() + BEKLEME;
+      otur(durak);
+    }
+    anim = requestAnimationFrame(kare);
+  }
+
+  /* Olay sayfanın bir iç kaydırma kutusunda ya da sabit bir katmandaysa karışılmıyor. */
+  function disarida(el, dy) {
+    for (; el && el !== kok && el !== document.body; el = el.parentElement) {
+      var st = getComputedStyle(el);
+      if (st.position === 'fixed' && !el.classList.contains('kaydir')) return true;
+      if (dy && /(auto|scroll)/.test(st.overflowY) && el.scrollHeight > el.clientHeight + 1) {
+        if (dy > 0 ? el.scrollTop + el.clientHeight < el.scrollHeight - 1 : el.scrollTop > 0) return true;
+      }
+    }
+    return false;
+  }
+  function yatayKutu(el) {
+    for (; el && el !== kok && el !== document.body; el = el.parentElement) {
+      if (/(auto|scroll)/.test(getComputedStyle(el).overflowX) && el.scrollWidth > el.clientWidth + 1) return true;
+    }
+    return false;
+  }
+
+  /* Tekerlek ve izleme yüzeyi. Arka arkaya gelen olaylar (`ARA`dan sık) tek hareket:
+     izleme yüzeyinin süzülmesi, hızla çevrilen tekerlek ya da serbest dönen tekerlek tek
+     slayt geçiriyor. Satır/sayfa birimli delta piksele çevriliyor. */
+  var sonTeker = 0, birikim = 0, harcandi = false;
   window.addEventListener('wheel', function (e) {
-    if (e.ctrlKey) return;                                   // zoom
-    var buyuk = e.deltaMode !== 0 || Math.abs(e.deltaY) >= 50;
-    if (!buyuk) return;                                      // trackpad: native snap
-    if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
-    if (kilit) { e.preventDefault(); return; }
-
-    var hedefler = duraklar();
-    var y = window.scrollY;
-    var simdi = 0;
-    hedefler.forEach(function (h, i) { if (h.offsetTop <= y + 4) simdi = i; });
-    var sonraki = hedefler[simdi + (e.deltaY > 0 ? 1 : -1)];
-    if (!sonraki) return;                                    // at the ends, leave it to the browser
-
+    if (e.ctrlKey || e.defaultPrevented || !etkin()) return;           // ctrl: yakınlaştırma
+    var dy = e.deltaY * (e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? window.innerHeight : 1);
+    if (Math.abs(e.deltaX) > Math.abs(dy)) return;                     // yatay: tarayıcının
+    if (disarida(e.target, dy)) return;
     e.preventDefault();
-    kilit = true;
-    kok.classList.add('kaydiriyor');                         // keep snap out of the way
-    var sonMu = sonraki.tagName === 'FOOTER';
-    sonraki.scrollIntoView({ behavior: 'smooth', block: sonMu ? 'end' : 'start' });
-    setTimeout(function () {
-      kilit = false;
-      kok.classList.remove('kaydiriyor');
-    }, 640);
+    var simdi = performance.now();
+    if (simdi - sonTeker > ARA) { birikim = 0; harcandi = false; }
+    sonTeker = simdi;
+    if (kilitli()) { harcandi = true; return; }
+    if (harcandi || !dy) return;
+    birikim += dy;
+    if (Math.abs(birikim) < ESIK) return;
+    harcandi = true;
+    var d = komsu(window.scrollY, birikim > 0 ? 1 : -1);
+    if (d) git(d, 0);
   }, { passive: false });
+
+  /* Klavye: oklar, Page Up/Down, boşluk (Shift ile geri), Home/End. */
+  document.addEventListener('keydown', function (e) {
+    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || !etkin()) return;
+    var t = e.target && e.target.closest ? e.target : null;
+    if (t && t.closest('input, textarea, select, [contenteditable]:not([contenteditable="false"])')) return;
+    var k = e.key, yon = 0;
+    if (k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !e.shiftKey)) yon = 1;
+    else if (k === 'ArrowUp' || k === 'PageUp' || (k === ' ' && e.shiftKey)) yon = -1;
+    else if (k === 'End') yon = 2;
+    else if (k === 'Home') yon = -2;
+    if (!yon) return;
+    if (k === ' ' && t && t.closest('button, summary, [role="button"]')) return;
+    if (disarida(t, 0)) return;
+    e.preventDefault();
+    if (kilitli()) return;
+    var d = komsu(window.scrollY, yon);
+    if (d) git(d, 0);
+  });
+
+  /* Parmak: sayfa parmağı izliyor ama en çok bir durak öteye kadar; bırakınca hıza ya da
+     gidilen yola göre bir sonraki (ya da önceki) durağa yavaşça oturuyor, az kaydırmada
+     yerine dönüyor. Savurma ne kadar hızlı olursa olsun tek slayt. Tarayıcının kendi
+     kaydırması hiç başlamıyor: snap ile kavga, geri çekilme, adres çubuğunun açılıp
+     kapanmasıyla ekran boyunun değişmesi yok. Sayfanın tepesinde aşağı çekmek tarayıcıda
+     kalıyor (yenileme). */
+  var dk = null;
+  window.addEventListener('touchstart', function (e) {
+    dk = null;
+    if (e.touches.length !== 1 || !etkin() || disarida(e.target, 0)) return;
+    var p = e.touches[0];
+    dk = { x: p.clientX, y: p.clientY, y0: window.scrollY, eksen: '', kilitli: kilitli(),
+           iz: [[performance.now(), p.clientY]], el: e.target };
+  }, { passive: true });
+  window.addEventListener('touchmove', function (e) {
+    if (!dk) return;
+    if (e.touches.length !== 1) { dk = null; return; }                 // iki parmak
+    var p = e.touches[0], dx = p.clientX - dk.x, dy = dk.y - p.clientY; // dy > 0: sayfa aşağı
+    if (!dk.eksen) {
+      if (!dx && !dy) return;
+      if (Math.abs(dx) > Math.abs(dy) && yatayKutu(dk.el)) { dk = null; return; }
+      if (disarida(dk.el, dy) || (dk.y0 <= 0 && dy < 0 && !dk.kilitli)) { dk = null; return; }
+      dk.eksen = 'y';
+      var once = komsu(dk.y0, -1), sonra = komsu(dk.y0, 1);
+      dk.min = once ? once.y : 0;
+      dk.max = sonra ? sonra.y : enAlt();
+    }
+    if (e.cancelable) e.preventDefault();
+    dk.yol = Math.max(dk.yol || 0, Math.abs(dx), Math.abs(dy));
+    if (dk.kilitli || kilitli()) { dk.kilitli = true; return; }
+    /* Parmağın son konumdan bu yana yürüdüğü kadar: üst menü küçülürken tarayıcı sayfayı
+       birkaç piksel kaydırıyor (kaydırma çapası), mutlak konum onunla çekişirdi. */
+    var onceki = dk.iz[dk.iz.length - 1][1];
+    dk.iz.push([performance.now(), p.clientY]);
+    if (dk.iz.length > 8) dk.iz.shift();
+    window.scrollTo(0, Math.max(dk.min, Math.min(dk.max, window.scrollY + onceki - p.clientY)));
+  }, { passive: false });
+  function birak(e) {
+    var d = dk; dk = null;
+    if (!d || !d.eksen) return;
+    // Sürükleme tıklama sayılmasın; parmağın birkaç piksel kaydığı dokunuş ise tıklama kalsın.
+    if (d.yol >= 10 && e.cancelable) e.preventDefault();
+    if (d.kilitli) return;
+    var simdi = performance.now(), v = 0, son = d.iz[d.iz.length - 1];
+    if (simdi - son[0] < 90) {
+      for (var i = 0; i < d.iz.length - 1 && simdi - d.iz[i][0] > 110; i++) {}
+      var dt = son[0] - d.iz[i][0];
+      if (dt > 0) v = (d.iz[i][1] - son[1]) / dt;
+    }
+    var kayma = window.scrollY - d.y0, yon = 0;
+    if (Math.abs(v) > 0.3) yon = v > 0 ? 1 : -1;
+    else if (Math.abs(kayma) > window.innerHeight * 0.12) yon = kayma > 0 ? 1 : -1;
+    var durak = (yon && komsu(d.y0, yon)) || enYakin(window.scrollY);
+    git(durak, v);
+  }
+  window.addEventListener('touchend', birak, { passive: false });
+  window.addEventListener('touchcancel', birak, { passive: false });
+
+  /* Sayfa içi bağlantılar ve aşağı ok: aynı yavaş geçiş. Slayt düzeni kapalıyken
+     tarayıcının yumuşak kaydırması. (Kendiliğinden yumuşak kaydırma CSS'te kapalı:
+     sayfa değişiminde "yukarı kaydırma" gibi görünüyordu.) */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = decodeURIComponent(a.getAttribute('href').slice(1));
+    var hedef = id && document.getElementById(id);
+    if (!hedef) return;
+    e.preventDefault();
+    if (!etkin()) {
+      hedef.scrollIntoView({ behavior: azalt.matches ? 'auto' : 'smooth', block: 'start' });
+      return;
+    }
+    if (kilitli()) return;
+    git({ f: function () { return ustY(hedef); } }, 0);
+  });
+
+  /* Ekran boyu değişince (pencere, telefonu çevirme) en yakın durağa oturuyor. */
+  var boySayaci;
+  window.addEventListener('resize', function () {
+    clearTimeout(boySayaci);
+    boySayaci = setTimeout(function () {
+      if (!etkin() || anim || dk) return;
+      window.scrollTo(0, Math.min(enYakin(window.scrollY).f(), enAlt()));
+    }, 200);
+  }, { passive: true });
 })();
 </script>
 
