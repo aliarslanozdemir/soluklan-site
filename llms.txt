@@ -10,8 +10,7 @@ Sitedeki yazılar kanıtı üç düzeyde ayırır — ölçülmüş fizyolojik e
 çalışmada görülen sonuç ve geleneğin söylediği — ve kanıtın zayıf olduğu yerleri
 açıkça söyler. Alıntılarken bu ayrımı koruyun.
 
-Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr/,
-İspanyolca /es/, İtalyanca /it/. Her dilde aynı yazılar bulunur.
+Site 11 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español /es/, Italiano /it/, العربية /ar/, 简体中文 /zh/, Русский /ru/, 日本語 /ja/, Bahasa Indonesia /id/. Her dilde aynı yazılar bulunur.
 
 ## Türkçe (tr)
 
@@ -32,7 +31,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Nefes egzersizi nasıl yapılır](https://soluklan.app/rehber/nefes-egzersizi-nasil-yapilir.html): Nefes egzersizi, nefesi birkaç dakika boyunca bilerek yavaşlatmaktır. Başlamak için gereken beş şey, ilk ritim ve yapılan yaygın hatalar.
 - [Nefesin duyulmuyorsa](https://soluklan.app/rehber/nefesin-duyulmuyorsa.html): "Hiç veriş duyulmadı" yazısını görüyorsan sırayla denenecekler. Mesafe, ortam, cihaz farkı ve mikrofonsuz devam etme.
 - [Ortak seans](https://soluklan.app/rehber/ortak-seans.html): Telefonla saatin birlikte çalıştığı seans: nasıl açılır, bilek aşağıdayken, saat sonradan bağlanırsa ve saat bağlanmıyorsa.
-- [Program kurmak ve sürdürmek](https://soluklan.app/rehber/program-kurmak.html): Yirmi sekiz günlük bir programı nasıl kurarsın, gün kaçırınca ne oluyor, sonlanan program ne demek ve bitince ne görüyorsun.
+- [Program kurmak ve sürdürmek](https://soluklan.app/rehber/program-kurmak.html): Bir programı nasıl kurarsın, gün kaçırınca ne oluyor, sonlanan program ne demek ve bitince ne görüyorsun.
 - [Seans ekranında ne var](https://soluklan.app/rehber/seans-ekrani.html): Daire, faz yazısı, ses dalgası, seans sırasında çıkan kısa notlar, mikrofon uyarısı ve duraklatma menüsü. Seans sırasında gördüğün her şeyin ne işe yaradığı.
 - [Seans raporunu okumak](https://soluklan.app/rehber/raporu-okumak.html): Rapordaki her satırın ne anlama geldiği ve düşük çıkan bir ölçüm için ne yapman gerektiği.
 - [Seri, kilometre taşları ve takvim](https://soluklan.app/rehber/seri-ve-kilometre-taslari.html): Serinin nasıl işlediği, hangi seansın sayıldığı, kilometre taşlarını nasıl kendin koyduğun ve takvimi okumak.
@@ -104,7 +103,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Managing your data](https://soluklan.app/en/guide/managing-your-data.html): What is kept where, what syncs between devices, the sharing options, and deleting everything.
 - [Reading your session report](https://soluklan.app/en/guide/reading-the-report.html): What every line in the report means, and what to do about a measurement that came out low.
 - [Reminders and notifications](https://soluklan.app/en/guide/reminders-and-notifications.html): The daily reminder, the streak alert, technique-specific notifications, the tone of the texts, quiet hours, holiday mode and the daily cap. What each one does and how to set it.
-- [Setting up a program and keeping it](https://soluklan.app/en/guide/setting-up-a-program.html): How to set up a twenty-eight day program, what happens when you miss a day, what an ended program means, and what you see when it finishes.
+- [Setting up a program and keeping it](https://soluklan.app/en/guide/setting-up-a-program.html): How to set up a program, what happens when you miss a day, what an ended program means, and what you see when it finishes.
 - [Shared session](https://soluklan.app/en/guide/shared-session.html): A session run by the phone and the watch together: how to start it, wrist down, when the watch joins later and when it doesn’t connect.
 - [Streak, milestones and the calendar](https://soluklan.app/en/guide/streak-and-milestones.html): How the streak works, which sessions count, how to set milestones of your own, and how to read the calendar.
 - [Unlocking techniques](https://soluklan.app/en/guide/unlocking-techniques.html): What opens the locks, what a locked card tells you, and how to start the session you need right away.
@@ -147,7 +146,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Deinen Sitzungsbericht lesen](https://soluklan.app/de/ratgeber/den-bericht-lesen.html): Was jede Zeile im Bericht bedeutet und was du tun kannst, wenn eine Messung niedrig herauskam.
 - [Die Gewohnheit aufbauen: die ersten dreißig Tage](https://soluklan.app/de/ratgeber/die-gewohnheit-aufbauen.html): Wo sich entscheidet, ob die App eine Woche oder dreißig Tage lang benutzt wird. Ein Plan, in Wochen aufgeteilt.
 - [Die Oberfläche schlichter oder voller machen](https://soluklan.app/de/ratgeber/oberflaechen-stufen.html): Einfach, Standard und Fortgeschritten. Was sich zwischen den drei Stufen ändert, für wen jede passt und wie du wechselst.
-- [Ein Programm einrichten und dranbleiben](https://soluklan.app/de/ratgeber/ein-programm-einrichten.html): Wie du ein Programm über achtundzwanzig Tage einrichtest, was passiert, wenn du einen Tag auslässt, was ein beendetes Programm heißt und was du am Ende siehst.
+- [Ein Programm einrichten und dranbleiben](https://soluklan.app/de/ratgeber/ein-programm-einrichten.html): Wie du ein Programm einrichtest, was passiert, wenn du einen Tag auslässt, was ein beendetes Programm heißt und was du am Ende siehst.
 - [Erinnerungen und Mitteilungen](https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html): Die tägliche Erinnerung, der Serienhinweis, technikbezogene Mitteilungen, der Tonfall der Texte, stille Stunden, Urlaubsmodus und das Tageslimit. Was jede macht und wie du sie einstellst.
 - [Gemeinsame Sitzung](https://soluklan.app/de/ratgeber/gemeinsame-sitzung.html): Eine Sitzung, die Telefon und Uhr gemeinsam führen: wie du sie startest, gesenktes Handgelenk, späteres Verbinden und was tun, wenn die Uhr sich nicht verbindet.
 - [Mehr aus der App herausholen](https://soluklan.app/de/ratgeber/mehr-aus-der-app-herausholen.html): Zwei Menschen benutzen dieselbe App und bekommen sehr verschiedene Ergebnisse. Die zehn Dinge, die den Unterschied machen, und wie man jedes davon tut.
@@ -237,7 +236,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Historique, bilans et succès](https://soluklan.app/fr/guide/historique-bilans-et-succes.html): L’historique des séances, le bilan hebdomadaire, le bilan personnel et les succès. Ce que montre chacun et à quel moment il s’ouvre.
 - [Installer l’habitude : les trente premiers jours](https://soluklan.app/fr/guide/installer-lhabitude.html): Là où se joue la différence entre utiliser l’app une semaine et tenir trente jours. Un plan découpé en semaines.
 - [Lire le rapport de ta séance](https://soluklan.app/fr/guide/lire-le-rapport.html): Ce que veut dire chaque ligne du rapport, et quoi faire d’une mesure qui est sortie basse.
-- [Mettre en place un programme et le tenir](https://soluklan.app/fr/guide/mettre-en-place-un-programme.html): Comment mettre en place un programme de vingt-huit jours, ce qui se passe quand tu rates un jour, ce que veut dire un programme terminé, et ce que tu vois à la fin.
+- [Mettre en place un programme et le tenir](https://soluklan.app/fr/guide/mettre-en-place-un-programme.html): Comment mettre en place un programme, ce qui se passe quand tu rates un jour, ce que veut dire un programme terminé, et ce que tu vois à la fin.
 - [Qu'est-ce que la respiration diaphragmatique](https://soluklan.app/fr/guide/respiration-diaphragmatique.html): La respiration diaphragmatique n'est pas une technique mais une façon de respirer. Comment la faire étape par étape, ce qui la distingue de la respiration thoracique, combien de temps la pratiquer et les erreurs fréquentes.
 - [Quelle technique, et quand](https://soluklan.app/fr/guide/quelle-technique-et-quand.html): Avant de dormir, pendant une pause au bureau, dans un moment de colère, avant un examen ou une présentation. Quelle technique choisir pour la situation, et pourquoi.
 - [Rappels et notifications](https://soluklan.app/fr/guide/rappels-et-notifications.html): Le rappel quotidien, l’alerte de série, les notifications par technique, le ton des textes, les heures calmes, le mode vacances et le plafond quotidien. Ce que fait chacun et comment le régler.
@@ -269,7 +268,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Hacer la interfaz más simple o más completa](https://soluklan.app/es/guia/niveles-de-interfaz.html): Simple, Estándar y Avanzada. Qué cambia entre los tres niveles, a quién le va bien cada uno y cómo cambiarlo.
 - [Historial, resúmenes y logros](https://soluklan.app/es/guia/historial-resumenes-y-logros.html): El historial de sesiones, el resumen semanal, el resumen personal y los logros. Qué muestra cada uno y cuándo se abre.
 - [Leer el informe de tu sesión](https://soluklan.app/es/guia/leer-el-informe.html): Qué significa cada línea del informe y qué hacer con una medida que ha salido baja.
-- [Montar un programa y sostenerlo](https://soluklan.app/es/guia/montar-un-programa.html): Cómo montar un programa de veintiocho días, qué pasa cuando te saltas un día, qué significa un programa terminado y qué ves al acabarlo.
+- [Montar un programa y sostenerlo](https://soluklan.app/es/guia/montar-un-programa.html): Cómo montar un programa, qué pasa cuando te saltas un día, qué significa un programa terminado y qué ves al acabarlo.
 - [Moverse por la app](https://soluklan.app/es/guia/moverse-por-la-app.html): A qué pantalla se llega desde dónde. Un mapa de la pantalla de inicio, el Perfil, los Ajustes y la sección Aprender.
 - [Qué es la respiración diafragmática](https://soluklan.app/es/guia/respiracion-diafragmatica.html): La respiración diafragmática no es una técnica sino una forma de respirar. Cómo hacerla paso a paso, en qué se diferencia de la torácica, cuánto tiempo practicarla y los errores más comunes.
 - [Qué hay en la pantalla de sesión](https://soluklan.app/es/guia/la-pantalla-de-sesion.html): El círculo, la etiqueta de fase, la onda de sonido, las notas cortas durante la sesión, el aviso del micrófono y el menú de pausa. Para qué sirve cada cosa que ves durante una sesión.
@@ -325,7 +324,7 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Costruire l’abitudine: i primi trenta giorni](https://soluklan.app/it/guida/costruire-labitudine.html): Dove si decide la differenza fra usare l’app una settimana e tenere trenta giorni. Un piano diviso per settimane.
 - [Cronologia, riepiloghi e traguardi](https://soluklan.app/it/guida/cronologia-riepiloghi-e-traguardi.html): La cronologia delle sessioni, il riepilogo settimanale, il riepilogo personale e i traguardi. Cosa mostra ciascuno e quando si apre.
 - [Gestire i tuoi dati](https://soluklan.app/it/guida/gestire-i-tuoi-dati.html): Cosa viene conservato e dove, cosa si sincronizza fra dispositivi, le opzioni di condivisione e come cancellare tutto.
-- [Impostare un programma e portarlo avanti](https://soluklan.app/it/guida/impostare-un-programma.html): Come impostare un programma di ventotto giorni, cosa succede quando salti un giorno, cosa significa un programma terminato e cosa vedi alla fine.
+- [Impostare un programma e portarlo avanti](https://soluklan.app/it/guida/impostare-un-programma.html): Come impostare un programma, cosa succede quando salti un giorno, cosa significa un programma terminato e cosa vedi alla fine.
 - [La tua prima sessione, dall’inizio alla fine](https://soluklan.app/it/guida/la-tua-prima-sessione.html): Ogni passaggio, dall’apertura dell’app la prima volta alla lettura del tuo primo rapporto. Cosa ti viene chiesto, perché ti viene chiesto e cosa fare dove.
 - [Leggere il rapporto della tua sessione](https://soluklan.app/it/guida/leggere-il-rapporto.html): Cosa significa ogni riga del rapporto e cosa fare con una misura uscita bassa.
 - [Orientarsi nell’app](https://soluklan.app/it/guida/orientarsi-nellapp.html): A quale schermata si arriva da dove. Una mappa della schermata iniziale, del Profilo, delle Impostazioni e della sezione Impara.
@@ -552,3 +551,123 @@ Site altı dilde: Türkçe (kök), İngilizce /en/, Almanca /de/, Fransızca /fr
 - [Попеременные ноздри](https://soluklan.app/ru/rukovodstvo/poperemennye-nozdri.html): Вдох слева, выдох справа, вдох справа, выдох слева. Самая требовательная к координации техника в приложении и то, как устаканивается положение пальцев.
 - [Треугольное дыхание](https://soluklan.app/ru/rukovodstvo/treugolnoe-dyhanie.html): Вдох четыре секунды, задержка четыре, выдох четыре. Самая простая техника с задержкой и первое место, где ты встречаешь задержку.
 - [Физиологический вздох](https://soluklan.app/ru/rukovodstvo/fiziologicheskiy-vzdoh.html): Два вдоха один поверх другого, затем один долгий выдох. Техника с лучшим контролируемым исследованием среди коротких дыхательных упражнений. Она же — техника программы.
+
+## 日本語 (ja)
+
+- [ホーム](https://soluklan.app/ja/): マイクで呼吸のリズムを追い、セッションにスコアをつけるiPhone、iPad、Apple Watch用アプリ。リラックスと集中のための呼吸エクササイズです。
+- [ガイド](https://soluklan.app/ja/gaido/): アプリの使い方を一歩ずつ、各機能の役割、そして呼吸法ひとつひとつのやり方を紹介します。
+- [プライバシー](https://soluklan.app/ja/puraibashi.html)
+- [サポート](https://soluklan.app/ja/sapoto.html)
+- [Apple WatchでSoluklan](https://soluklan.app/ja/gaido/apple-watch-de-soluklan.html): Apple Watchだけで行うセッション、iPhoneと一緒のセッション、心拍数とヘルスケアの許可、手首の振動で伝わるリズム、Apple Watchでのクイックスタート。
+- [スマートフォンでSoluklan](https://soluklan.app/ja/gaido/sumatofon-de-soluklan.html): スマートフォンはアプリの中心となるデバイスで、測定がいちばん正確です。どこに何があるか、マイクがどこを向いているか、データがどこに保存されるか。
+- [タブレットでSoluklan](https://soluklan.app/ja/gaido/taburetto-de-soluklan.html): タブレットは画面が広く、マイクが遠くにあります。端末をどこに置くか、なぜスマートフォンより測定が難しいのか、何が同じなのか。
+- [28日間ため息プログラム](https://soluklan.app/ja/gaido/28-nichikan-tameiki.html): 4週間、毎日5分の生理的ため息。プログラムの1日の流れ、向いている人、もとになった研究。
+- [どの呼吸法をいつ行うか](https://soluklan.app/ja/gaido/dono-kokyuho-wo-itsu.html): 眠る前、デスクでの休憩、怒りを感じたとき、試験やプレゼンの前。状況に合わせてどの呼吸法を選ぶか、そしてその理由。
+- [はじめてのセッション：最初から最後まで](https://soluklan.app/ja/gaido/hajimete-no-sesshon.html): アプリをはじめて開いてから最初のレポートを読むまでの、すべてのステップ。何を聞かれるのか、なぜ聞かれるのか、どこで何をすればいいのか。
+- [アプリの画面を移動する](https://soluklan.app/ja/gaido/apuri-no-gamen-ido.html): どの画面にどこから行けるのか。ホーム画面、プロフィール、設定、「学ぶ」のマップ。
+- [アプリを最大限に活かすには](https://soluklan.app/ja/gaido/apuri-wo-ikasu-kotsu.html): 同じアプリでも、使う人によって得られるものは大きく違います。その差を生む10のことと、それぞれのやり方。
+- [ウィジェットとライブアクティビティ](https://soluklan.app/ja/gaido/wijetto-to-raibu-akutibiti.html): ホーム画面とロック画面のウィジェットの追加方法、それぞれに何が表示されるか、そしてセッション中にロック画面に表示されるカウンター。
+- [セッションレポートの読み方](https://soluklan.app/ja/gaido/repoto-no-yomikata.html): レポートの各行が何を意味するか、そして低く出た測定値に対して何をすればいいか。
+- [セッション画面にあるもの](https://soluklan.app/ja/gaido/sesshon-gamen.html): 円、フェーズの表示、音の波形、セッション中に出る短いメモ、マイクの警告、一時停止メニュー。セッション中に目にするすべてのものの役割。
+- [データの管理](https://soluklan.app/ja/gaido/deta-no-kanri.html): 何がどこに保存されているか、デバイス間で何が同期されるか、共有の選択肢、すべてを削除する方法。
+- [プログラムの設定と続け方](https://soluklan.app/ja/gaido/puroguramu-no-hajimekata.html): プログラムの設定方法、日を逃したときにどうなるか、「終了したプログラム」とは何か、そして最後まで続けると何が表示されるか。
+- [リマインダーと通知](https://soluklan.app/ja/gaido/rimainda-to-tsuchi.html): 毎日のリマインダー、連続記録アラート、呼吸法ごとの通知、通知のトーン、静かな時間帯、休暇モード、1日の上限。それぞれの役割と設定方法。
+- [ロックされた呼吸法を解除する](https://soluklan.app/ja/gaido/rokku-kaijo.html): ロックは何によって解除されるのか、ロックされたカードにはどんな情報があるのか、必要なセッションをすぐに始めるにはどうするか。
+- [一緒にセッション](https://soluklan.app/ja/gaido/issho-ni-sesshon.html): スマートフォンとApple Watchが一緒に動くセッション。オンにする方法、手首を下ろしているとき、Apple Watchがあとから接続されたとき、接続されないとき。
+- [不安なときの呼吸](https://soluklan.app/ja/gaido/fuan-na-toki-no-kokyu.html): 緊張した瞬間に呼吸がどうなるか、まず吐く息を長くする理由、パニックのときに息止めが逆効果になりうる理由、そしてアプリがそのために何を控えるようにしているか。
+- [呼吸が聞こえないとき](https://soluklan.app/ja/gaido/kokyu-ga-kikoenai-toki.html): 「吐く息がまったく聞こえませんでした」と表示されるときに、順に試すこと。距離、環境、デバイスの違い、マイクなしで続ける方法。
+- [呼吸エクササイズのやり方](https://soluklan.app/ja/gaido/kokyu-ekusasaizu-no-yarikata.html): 呼吸エクササイズとは、数分間、意識して呼吸をゆっくりにすることです。始めるのに必要な5つのこと、最初のリズム、よくある間違い。
+- [呼吸エクササイズは何分がいい？](https://soluklan.app/ja/gaido/kokyu-ekusasaizu-wa-nanpun.html): 短く答えると、1日3〜5分。長く答えると、時間が効いてくるところと、延ばしても見返りがないところがあります。
+- [呼吸法と長さの選び方](https://soluklan.app/ja/gaido/kokyuho-to-jikan-no-erabikata.html): 呼吸法のリストにある印の意味、長さのスライダーに表示される光る帯の意味、カパラバティで長さの代わりに選ぶラウンド数。
+- [履歴、まとめ、実績](https://soluklan.app/ja/gaido/rireki-matome-jisseki.html): セッション履歴、週間まとめ、あなたのまとめ、実績。それぞれが何を表示し、いつロックが解除されるか。
+- [横隔膜呼吸とは](https://soluklan.app/ja/gaido/okakumaku-kokyu.html): 横隔膜呼吸は呼吸法ではなく、息の吸い方そのものです。ステップごとのやり方、胸式呼吸との違い、行う長さ、よくある間違い。
+- [眠る前の呼吸エクササイズ](https://soluklan.app/ja/gaido/nemuru-mae-no-kokyu.html): 夜になぜ吐く息を長くする呼吸法を選ぶのか、ベッドで行うか座って行うか、4-7-8呼吸法の息止めが合わないのはどんな人か、寝つきについて何が調べられているか。
+- [習慣をつくる：最初の30日](https://soluklan.app/ja/gaido/shukan-zukuri.html): アプリを1週間使ってやめるか、30日続けるか。その差はどこで生まれるのか。週ごとに分けたプランです。
+- [自分のペースの見つけ方](https://soluklan.app/ja/gaido/jibun-no-pesu-no-mitsukekata.html): コヒーレント呼吸の5.5秒は平均値です。自分にいちばん合った呼吸の速さを測定して、アプリをそのペースで使えます。
+- [表示をシンプルにする、または広げる](https://soluklan.app/ja/gaido/hyoji-reberu.html): シンプル、スタンダード、アドバンス。3つのレベルで何が変わり、どれが誰に向いていて、どう切り替えるか。
+- [連続記録、マイルストーン、カレンダー](https://soluklan.app/ja/gaido/renzoku-kiroku-to-mairusuton.html): 連続記録のしくみ、どのセッションが数えられるか、自分でマイルストーンを置く方法、カレンダーの見方。
+- [4-7-8呼吸法](https://soluklan.app/ja/gaido/4-7-8-kokyuho.html): 4秒吸って、7秒止めて、8秒吐く。アプリでいちばん長い息止めがある呼吸法です。人気が根拠を上回っている呼吸法で、そのことをはっきりお伝えします。
+- [エナジー呼吸](https://soluklan.app/ja/gaido/enaji-kokyu.html): 2秒吸って、2秒吐く。アプリで唯一、時間がロックされている呼吸法です。1分を超えられないのには、ちゃんとした理由があります。
+- [カパラバティ](https://soluklan.app/ja/gaido/kapalabhati.html): おなかの筋肉を使った、速く力強い吐く息。アプリで唯一の刺激的な上級の呼吸法で、行ってはいけない場合がいちばん多く、マイクが別の方法で測る呼吸法です。
+- [クーリング呼吸](https://soluklan.app/ja/gaido/kuringu-kokyu.html): 歯のすき間から吸い込んだ空気が、口の中にひんやり感を残します。伝統的には「体を冷やす」と言われますが、測定はそれを裏づけていません。その両方を書いています。
+- [コヒーレント呼吸](https://soluklan.app/ja/gaido/kohirento-kokyu.html): 1分間に約5.5回の呼吸。もっとも研究が多く、もっとも覚えやすく、アプリで最初から使える呼吸法です。なぜこの速さなのか、何が裏づけられているのか。
+- [トライアングル呼吸](https://soluklan.app/ja/gaido/toraianguru-kokyu.html): 4秒吸って、4秒止めて、4秒吐く。息止めのある呼吸法の中で最もシンプルで、アプリで初めて息止めに出会う呼吸法です。
+- [ハミング呼吸](https://soluklan.app/ja/gaido/hamingu-kokyu.html): 口を閉じて、12秒間「ンー」。この呼吸法では、マイクは静かに吹く息ではなく振動を探しています。
+- [ボックス呼吸](https://soluklan.app/ja/gaido/bokkusu-kokyu.html): 4つの同じ長さのステップ：吸う、止める、吐く、止める。1分間に4回の呼吸。軍隊や救急隊の訓練でもっともよく教えられている呼吸法です。
+- [ロング呼気](https://soluklan.app/ja/gaido/rongu-koki.html): 4秒吸って、4秒止めて、8秒吐く。吐く息を吸う息の2倍に伸ばすこの方法は、呼吸法の中でも最も一貫して測定されている効果のひとつに基づいています。
+- [口すぼめ呼吸](https://soluklan.app/ja/gaido/kuchisubome-kokyu.html): 鼻から3秒吸い、唇をすぼめて6秒吐きます。呼吸リハビリテーションで教えられる基本の呼吸法で、息苦しさを感じるときにもっともよくすすめられるものです。
+- [左鼻呼吸と右鼻呼吸](https://soluklan.app/ja/gaido/katahana-kokyu.html): 片方の穴から吸って吐く。アプリでもっとも静かな2つの呼吸法と、その違い、そして裏づけが弱いところ。
+- [海の呼吸](https://soluklan.app/ja/gaido/umi-no-kokyu.html): のどを通る空気のこすれる音。吸う息は静かに、吐く息は貝殻の音のように。この呼吸法では、音を正しく調整することがそのまま呼吸法です。
+- [深くゆっくり呼吸](https://soluklan.app/ja/gaido/fukaku-yukkuri-kokyu.html): 6秒吸って、6秒吐く。息止めも飾りもありません。横隔膜の使い方を身につけるのに最も適した呼吸法です。
+- [片鼻交互呼吸](https://soluklan.app/ja/gaido/katahana-kogo-kokyu.html): 左で吸って右で吐き、右で吸って左で吐く。アプリでいちばん協調が必要な呼吸法と、指の置き方の身につけ方。
+- [生理的ため息](https://soluklan.app/ja/gaido/seiriteki-tameiki.html): 続けて2回吸い、長く1回吐く。短時間の呼吸エクササイズの中で、もっともよく管理された研究がある呼吸法です。プログラムの呼吸法もこれです。
+- [おすすめは何で決まるか](https://soluklan.app/ja/gaido/osusume-no-kimarikata.html): おすすめの呼吸法とおすすめの長さは固定ではありません。はじめのチェックの答え、これまでのセッション、時間帯、そしてそれらが互いに重なり合うところ。
+- [しきい値は実際の録音でどう測っているか](https://soluklan.app/ja/gaido/shikiichi-no-hakarikata.html): どの音を「吐く息」とみなすかは、推測ではなく、ユーザーから届いた実際の音声サンプルで決めています。その仕組みについて。
+- [アプリにサードパーティのコードはありません](https://soluklan.app/ja/gaido/sadopati-kodo-nashi.html): 広告ネットワーク、分析ツール、クラッシュレポーター、既製のUIライブラリ。どれも入っていません。それが何を意味し、何と引き換えなのか。
+- [セッションのスコアのつけ方](https://soluklan.app/ja/gaido/sukoa-no-keisan.html): 100点満点の数字は、いくつかの測定値の加重平均です。どの測定値にどれだけの重みがあるのか、なぜそうなのか、そしてスコアが語らないこと。
+- [マイクはどうやって呼吸を聞き取っているか](https://soluklan.app/ja/gaido/maiku-no-kikitorikata.html): 音を録音していないのに、アプリはどうやって呼吸を測っているのか。ノイズフロア、周囲の音に合わせて変わるしきい値、吐く息の始まりと終わりの見つけ方。
+- [共有されたデータをどう扱っているか](https://soluklan.app/ja/gaido/kyoyu-deta-no-atsukai.html): 匿名のセッション概要や音声サンプルの共有をオンにした場合、その記録が何のために届き、ひとつずつどう扱われ、最後にどうなるのか。
+- [呼吸の用語集](https://soluklan.app/ja/gaido/kokyu-yogoshu.html): 呼吸法やこのサイトに出てくる用語の短い説明。それぞれの下に、くわしく解説した記事へのリンクがあります。
+- [呼吸エクササイズは何に役立つのか](https://soluklan.app/ja/gaido/kokyu-ekusasaizu-wa-nani-ni-yakudatsu.html): ゆっくりした呼吸について測定された効果、測定されていない主張、そして最初の1週間で実際に気づくこと。
+- [根拠をどう読んでいるか](https://soluklan.app/ja/gaido/konkyo-no-yomikata.html): 呼吸に関する研究の多くは、小規模で、対照がなく、期間も短いものです。アプリのどの文を何にもとづいて書いているのか、そして何をあえて書いていないのか。
+- [背景、季節、時間帯](https://soluklan.app/ja/gaido/haikei-to-kisetsu.html): 背景が一日の中で変わるのは、飾りではありません。どう計算しているのか、なぜ位置情報を求めないのか、何がいつ表示されるのか。
+
+## Bahasa Indonesia (id)
+
+- [Beranda](https://soluklan.app/id/): Aplikasi iPhone, iPad, dan Apple Watch yang mengikuti ritme napasmu lewat mikrofon dan memberi skor pada sesimu. Latihan untuk relaksasi dan fokus.
+- [Panduan](https://soluklan.app/id/panduan/): Cara memakai aplikasi langkah demi langkah, fungsi setiap fitur, dan cara melakukan setiap teknik.
+- [Privasi](https://soluklan.app/id/privasi.html)
+- [Bantuan](https://soluklan.app/id/bantuan.html)
+- [Apa itu pernapasan diafragma](https://soluklan.app/id/panduan/pernapasan-diafragma.html): Pernapasan diafragma bukan teknik, melainkan cara bernapas. Langkah demi langkah cara melakukannya, bedanya dengan napas dada, berapa lama dilakukan, dan kesalahan yang paling sering terjadi.
+- [Apa saja yang ada di layar sesi](https://soluklan.app/id/panduan/layar-sesi.html): Lingkaran, tulisan fase, gelombang suara, catatan singkat selama sesi, peringatan mikrofon, dan menu jeda. Kegunaan semua yang kamu lihat selama sesi.
+- [Berapa menit latihan pernapasan sebaiknya](https://soluklan.app/id/panduan/berapa-lama-latihan-pernapasan.html): Jawaban singkatnya: tiga sampai lima menit sehari. Jawaban panjangnya menjelaskan kapan durasi berguna dan kapan tidak menambah apa-apa.
+- [Bernapas saat cemas](https://soluklan.app/id/panduan/bernapas-saat-cemas.html): Apa yang terjadi pada napas di saat tegang, kenapa memperpanjang embusan adalah langkah pertama, kenapa menahan napas bisa berbalik saat panik, dan karena itu apa yang dicegah aplikasi.
+- [Cara melakukan latihan pernapasan](https://soluklan.app/id/panduan/cara-melakukan-latihan-pernapasan.html): Latihan pernapasan berarti sengaja memperlambat napas selama beberapa menit. Lima hal yang kamu perlukan untuk mulai, ritme pertama, dan kesalahan yang sering terjadi.
+- [Jika napasmu tidak terdengar](https://soluklan.app/id/panduan/jika-napasmu-tidak-terdengar.html): Hal-hal yang bisa kamu coba satu per satu kalau melihat tulisan "Tidak ada embusan yang terdengar sama sekali". Jarak, ruangan, perbedaan perangkat, dan lanjut tanpa mikrofon.
+- [Latihan pernapasan sebelum tidur](https://soluklan.app/id/panduan/bernapas-sebelum-tidur.html): Kenapa di malam hari yang dipilih teknik dengan embusan panjang, sebaiknya di kasur atau sambil duduk, pada siapa tahanan napas 4-7-8 bisa jadi masalah, dan apa yang sudah diukur tentang jatuh tertidur.
+- [Memaksimalkan aplikasi](https://soluklan.app/id/panduan/memaksimalkan-aplikasi.html): Dua orang bisa memakai aplikasi yang sama dengan hasil yang sangat berbeda. Sepuluh hal yang membuat bedanya, dan cara melakukan semuanya.
+- [Membaca laporan sesi](https://soluklan.app/id/panduan/membaca-laporan.html): Arti setiap baris di laporan, dan apa yang perlu kamu lakukan kalau ada pengukuran yang rendah.
+- [Membangun kebiasaan: tiga puluh hari pertama](https://soluklan.app/id/panduan/membangun-kebiasaan.html): Di mana letak bedanya antara memakai aplikasi seminggu lalu berhenti dan bertahan sampai tiga puluh hari. Rencana yang dibagi per minggu.
+- [Membuka teknik yang terkunci](https://soluklan.app/id/panduan/membuka-teknik-terkunci.html): Berdasarkan apa kunci terbuka, informasi apa yang ada di kartu yang terkunci, dan bagaimana kamu bisa langsung memulai sesi yang dibutuhkan.
+- [Memilih teknik dan durasi](https://soluklan.app/id/panduan/memilih-teknik-dan-durasi.html): Arti tanda-tanda di daftar teknik, makna pita bercahaya di penggeser durasi, dan pilihan ronde yang menggantikan durasi di Kapalabhati.
+- [Menemukan tempomu sendiri](https://soluklan.app/id/panduan/menemukan-tempomu-sendiri.html): Lima setengah detik di Pernapasan Koheren adalah angka rata-rata. Kamu bisa mengukur kecepatan napas yang paling cocok untukmu dan menjalankan aplikasi sesuai dengan itu.
+- [Mengelola datamu](https://soluklan.app/id/panduan/mengelola-datamu.html): Apa disimpan di mana, apa yang disinkronkan antarperangkat, pilihan berbagi, dan cara menghapus semuanya.
+- [Menjelajahi aplikasi](https://soluklan.app/id/panduan/menjelajahi-aplikasi.html): Layar mana dibuka dari mana. Peta layar utama, Profil, Pengaturan, dan bagian Pelajari.
+- [Menyederhanakan atau membuka tampilan antarmuka](https://soluklan.app/id/panduan/tingkat-tampilan.html): Sederhana, Standar, dan Lanjutan. Apa yang berubah di tiga tingkat ini, mana yang cocok untuk siapa, dan cara berpindah di antaranya.
+- [Menyiapkan dan menjalani program](https://soluklan.app/id/panduan/menyiapkan-program.html): Cara menyiapkan program, apa yang terjadi kalau ada hari terlewat, apa arti program yang berakhir, dan apa yang kamu lihat saat program selesai.
+- [Pengingat dan notifikasi](https://soluklan.app/id/panduan/pengingat-dan-notifikasi.html): Pengingat harian, peringatan streak, notifikasi khusus teknik, gaya notifikasi, jam tenang, mode libur, dan batas harian. Apa fungsi masing-masing dan cara mengaturnya.
+- [Riwayat, ringkasan, dan pencapaian](https://soluklan.app/id/panduan/riwayat-ringkasan-dan-pencapaian.html): Riwayat sesi, ringkasan mingguan, Ringkasanmu, dan pencapaian. Apa yang ditunjukkan masing-masing dan kapan terbuka.
+- [Sesi bersama](https://soluklan.app/id/panduan/sesi-bersama.html): Sesi tempat ponsel dan jam tangan bekerja bersama: cara menyalakannya, saat pergelangan tangan turun, kalau jam tangan terhubung belakangan, dan kalau jam tangan tidak mau terhubung.
+- [Sesi pertamamu: dari awal sampai akhir](https://soluklan.app/id/panduan/sesi-pertamamu.html): Setiap langkah dari pertama kali kamu membuka aplikasi sampai membaca laporan pertamamu. Apa yang ditanyakan, kenapa ditanyakan, dan apa yang perlu kamu lakukan di setiap tahap.
+- [Streak, tonggak, dan kalender](https://soluklan.app/id/panduan/streak-dan-tonggak.html): Cara kerja streak, sesi mana yang dihitung, cara memasang tonggakmu sendiri, dan cara membaca kalender.
+- [Teknik mana dan kapan](https://soluklan.app/id/panduan/teknik-mana-dan-kapan.html): Sebelum tidur, rehat di meja kerja, saat marah, sebelum ujian atau presentasi. Teknik mana yang dipilih sesuai keadaan, dan kenapa.
+- [Widget dan Aktivitas Langsung](https://soluklan.app/id/panduan/widget-dan-aktivitas-langsung.html): Cara menambahkan widget Layar Utama dan Layar Terkunci, apa yang ditampilkan masing-masing, dan penghitung yang tampil di Layar Terkunci selama sesi.
+- [Apa yang kami lakukan dengan data yang kamu bagikan](https://soluklan.app/id/panduan/data-yang-kamu-bagikan.html): Kalau kamu menyalakan berbagi ringkasan sesi anonim dan sampel suara, untuk apa catatan itu dikirim ke kami, apa saja yang dilakukan satu per satu, dan apa yang terjadi pada akhirnya.
+- [Apa yang menentukan saran untukmu](https://soluklan.app/id/panduan/dari-mana-saran-berasal.html): Teknik dan durasi yang disarankan tidak tetap. Jawaban tes perkenalan, sesi-sesi sebelumnya, jam saat itu, dan titik-titik tempat semuanya saling bersilangan.
+- [Cara ambang diukur dengan rekaman nyata](https://soluklan.app/id/panduan/cara-mengukur-ambang-batas.html): Suara mana yang dihitung sebagai "embusan" tidak ditentukan dengan tebakan, melainkan dengan sampel suara nyata dari pengguna. Begini cara kerjanya.
+- [Cara kami membaca bukti](https://soluklan.app/id/panduan/cara-kami-membaca-bukti.html): Sebagian besar studi pernapasan kecil, tanpa kontrol, dan singkat. Kalimat mana di aplikasi yang kami tulis dan atas dasar apa, serta apa yang sengaja tidak kami tulis.
+- [Cara mikrofon mendengar napasmu](https://soluklan.app/id/panduan/cara-mikrofon-mendengar.html): Kalau suara tidak direkam, bagaimana aplikasi mengukur napas? Tingkat bising sekitar, ambang yang menyesuaikan diri dengan lingkungan, dan cara menemukan awal dan akhir sebuah embusan.
+- [Cara sebuah sesi diberi skor](https://soluklan.app/id/panduan/cara-skor-dihitung.html): Angka dari seratus itu adalah rata-rata berbobot dari beberapa pengukuran terpisah. Pengukuran mana yang paling berbobot, kenapa begitu, dan apa yang tidak dikatakan skor.
+- [Glosarium pernapasan](https://soluklan.app/id/panduan/glosarium-pernapasan.html): Penjelasan singkat istilah yang muncul dalam latihan pernapasan dan di situs ini, masing-masing dengan tautan ke tulisan yang membahasnya.
+- [Latar, musim, dan waktu dalam sehari](https://soluklan.app/id/panduan/latar-dan-musim.html): Latar yang berubah sepanjang hari bukan sekadar hiasan. Cara menghitungnya, kenapa tidak meminta informasi lokasi, dan apa yang tampil kapan.
+- [Tidak ada pihak ketiga di aplikasi](https://soluklan.app/id/panduan/tanpa-kode-pihak-ketiga.html): Jaringan iklan, alat analitik, pelapor crash, pustaka antarmuka siap pakai — tidak ada satu pun. Apa artinya, dan apa harganya.
+- [Untuk apa latihan pernapasan](https://soluklan.app/id/panduan/untuk-apa-latihan-pernapasan.html): Efek napas pelan yang sudah diukur, klaim yang belum diukur, dan hal yang benar-benar akan kamu rasakan di minggu pertama.
+- [Soluklan di Apple Watch](https://soluklan.app/id/panduan/soluklan-di-apple-watch.html): Sesi mandiri di jam tangan, sesi bersama dengan ponsel, detak jantung dan izin kesehatan, ritme lewat getaran di pergelangan, dan mulai cepat di jam tangan.
+- [Soluklan di ponsel](https://soluklan.app/id/panduan/soluklan-di-ponsel.html): Ponsel adalah perangkat utama aplikasi ini: di sinilah pengukurannya paling akurat. Apa ada di mana, ke mana mikrofon menghadap, dan di mana datamu disimpan.
+- [Soluklan di tablet](https://soluklan.app/id/panduan/soluklan-di-tablet.html): Di tablet layarnya lebih lebar, mikrofonnya lebih jauh. Di mana perangkat sebaiknya diletakkan, kenapa pengukurannya lebih sulit daripada di ponsel, dan apa saja yang tetap sama.
+- [28 Hari Desahan](https://soluklan.app/id/panduan/28-hari-desahan.html): Desahan Fisiologis lima menit setiap hari selama empat minggu. Seperti apa satu hari dalam program ini, cocok untuk siapa, dan penelitian apa yang mendasarinya.
+- [Dalam dan Lambat](https://soluklan.app/id/panduan/dalam-dan-lambat.html): Tarik napas enam detik, embuskan enam detik. Tanpa tahanan, tanpa hiasan. Teknik yang paling pas untuk belajar memakai diafragma.
+- [Desahan Fisiologis](https://soluklan.app/id/panduan/desahan-fisiologis.html): Dua tarikan beruntun, satu embusan panjang. Di antara latihan pernapasan singkat, inilah teknik dengan studi terkontrol terbaik. Program di aplikasi juga memakai teknik ini.
+- [Embusan Panjang](https://soluklan.app/id/panduan/embusan-panjang.html): Tarik empat, tahan empat, embuskan delapan. Memanjangkan embusan sampai dua kali tarikan bertumpu pada salah satu efek yang paling konsisten terukur di antara teknik pernapasan.
+- [Kapalabhati](https://soluklan.app/id/panduan/kapalabhati.html): Embusan cepat dan kuat dengan otot perut. Satu-satunya teknik lanjutan di aplikasi yang bersifat membangkitkan, teknik dengan paling banyak kondisi yang tidak boleh dilakukan, dan teknik yang diukur mikrofon dengan cara tersendiri.
+- [Napas Bibir Mengerucut](https://soluklan.app/id/panduan/napas-bibir-mengerucut.html): Tarik napas lewat hidung selama tiga detik, kerucutkan bibir, lalu embuskan selama enam detik. Teknik dasar yang diajarkan dalam rehabilitasi paru, dan yang paling sering disarankan saat napas terasa sesak.
+- [Napas Energi](https://soluklan.app/id/panduan/napas-energi.html): Tarik dua detik, embuskan dua detik. Satu-satunya teknik di aplikasi yang durasinya dikunci — tidak bisa lebih dari satu menit, dan alasannya kuat.
+- [Napas Hidung Bergantian](https://soluklan.app/id/panduan/napas-hidung-bergantian.html): Tarik dari kiri, embuskan ke kanan, tarik dari kanan, embuskan ke kiri. Teknik yang paling menuntut koordinasi di aplikasi, dan cara membiasakan posisi jarinya.
+- [Napas Hidung Kiri dan Napas Hidung Kanan](https://soluklan.app/id/panduan/napas-satu-lubang-hidung.html): Tarik dan embuskan lewat satu lubang. Dua teknik paling hening di aplikasi, apa bedanya, dan di mana buktinya masih lemah.
+- [Napas Lebah](https://soluklan.app/id/panduan/napas-lebah.html): Mulut tertutup, dua belas detik "mmm". Di aplikasi, mikrofon di teknik ini tidak mencari embusan tiupan yang hening, melainkan getaran.
+- [Napas Pendingin](https://soluklan.app/id/panduan/napas-pendingin.html): Udara yang ditarik lewat sela-sela gigi meninggalkan rasa sejuk di mulut. Tradisi menyebutnya "mendinginkan", tapi pengukuran tidak membuktikannya — kami menuliskan keduanya.
+- [Napas Samudra](https://soluklan.app/id/panduan/napas-samudra.html): Desir udara yang melewati tenggorokanmu. Tarikan napas tanpa suara, embusan seperti suara kerang laut. Di teknik ini, mengatur suara dengan tepat adalah inti tekniknya.
+- [Pernapasan 4-7-8](https://soluklan.app/id/panduan/pernapasan-4-7-8.html): Tarik empat, tahan tujuh, embuskan delapan. Tahanan napas terpanjang di aplikasi ada di sini. Teknik yang lebih populer daripada buktinya, dan kami mengatakannya terus terang.
+- [Pernapasan Koheren](https://soluklan.app/id/panduan/pernapasan-koheren.html): Lima setengah napas per menit. Teknik yang paling banyak diteliti, paling mudah dipelajari, dan sudah terbuka sejak awal di aplikasi. Kenapa kecepatan ini, dan apa saja yang ada buktinya.
+- [Pernapasan Kotak](https://soluklan.app/id/panduan/pernapasan-kotak.html): Empat langkah yang sama panjang: tarik, tahan, embuskan, tahan. Empat napas per menit. Teknik yang paling banyak diajarkan dalam pelatihan militer dan layanan darurat.
+- [Pernapasan Segitiga](https://soluklan.app/id/panduan/pernapasan-segitiga.html): Tarik empat detik, tahan empat, embuskan empat. Teknik paling sederhana yang punya tahanan napas, dan tempat pertama kamu berkenalan dengan tahanan di aplikasi.
