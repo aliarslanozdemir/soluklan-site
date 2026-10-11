@@ -10,7 +10,7 @@ Sitedeki yazılar kanıtı üç düzeyde ayırır — ölçülmüş fizyolojik e
 çalışmada görülen sonuç ve geleneğin söylediği — ve kanıtın zayıf olduğu yerleri
 açıkça söyler. Alıntılarken bu ayrımı koruyun.
 
-Site 11 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español /es/, Italiano /it/, العربية /ar/, 简体中文 /zh/, Русский /ru/, 日本語 /ja/, Bahasa Indonesia /id/. Her dilde aynı yazılar bulunur.
+Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español /es/, Italiano /it/, العربية /ar/, 简体中文 /zh/, Русский /ru/, 日本語 /ja/, Português (Brasil) /pt/, Bahasa Indonesia /id/. Her dilde aynı yazılar bulunur.
 
 ## Türkçe (tr)
 
@@ -611,6 +611,66 @@ Site 11 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [呼吸エクササイズは何に役立つのか](https://soluklan.app/ja/gaido/kokyu-ekusasaizu-wa-nani-ni-yakudatsu.html): ゆっくりした呼吸について測定された効果、測定されていない主張、そして最初の1週間で実際に気づくこと。
 - [根拠をどう読んでいるか](https://soluklan.app/ja/gaido/konkyo-no-yomikata.html): 呼吸に関する研究の多くは、小規模で、対照がなく、期間も短いものです。アプリのどの文を何にもとづいて書いているのか、そして何をあえて書いていないのか。
 - [背景、季節、時間帯](https://soluklan.app/ja/gaido/haikei-to-kisetsu.html): 背景が一日の中で変わるのは、飾りではありません。どう計算しているのか、なぜ位置情報を求めないのか、何がいつ表示されるのか。
+
+## Português (Brasil) (pt-BR)
+
+- [Início](https://soluklan.app/pt/): Um app para iPhone, iPad e Apple Watch que acompanha o ritmo da sua respiração pelo microfone e dá uma pontuação à sessão. Um exercício de respiração para relaxar e focar.
+- [Guia](https://soluklan.app/pt/guia/): Como usar o app passo a passo, para que serve cada recurso e como se faz cada técnica.
+- [Privacidade](https://soluklan.app/pt/privacidade.html)
+- [Suporte](https://soluklan.app/pt/suporte.html)
+- [Como lemos as evidências](https://soluklan.app/pt/guia/como-lemos-as-evidencias.html): A maioria dos estudos sobre respiração é pequena, sem controle e curta. Com base em que escrevemos cada frase no app e o que deixamos de escrever de propósito.
+- [Como o microfone ouve sua respiração](https://soluklan.app/pt/guia/como-o-microfone-escuta.html): Se o áudio não é gravado, como o app mede a respiração? O piso de ruído, o limiar que muda conforme o ambiente e como são encontrados o início e o fim de uma expiração.
+- [Como os limiares são medidos com gravações reais](https://soluklan.app/pt/guia/como-os-limiares-sao-medidos.html): Que som conta como "expiração" não é decidido por estimativa, e sim com amostras de áudio reais enviadas por quem usa o app. Como esse trabalho funciona.
+- [Como uma sessão é pontuada](https://soluklan.app/pt/guia/como-a-pontuacao-e-calculada.html): O número de 0 a 100 é a média ponderada de várias medições separadas. Quanto peso tem cada medição, por que é assim e o que a pontuação não diz.
+- [De onde vêm as suas sugestões](https://soluklan.app/pt/guia/de-onde-vem-as-sugestoes.html): A técnica sugerida e a duração sugerida não são fixas. As respostas do questionário inicial, suas sessões anteriores, a hora do dia e os pontos em que tudo isso se cruza.
+- [Fundos, estações e hora do dia](https://soluklan.app/pt/guia/fundos-e-estacoes.html): O fundo que muda ao longo do dia não é enfeite. Como ele é calculado, por que não pede sua localização e o que aparece em cada momento.
+- [Glossário da respiração](https://soluklan.app/pt/guia/glossario-da-respiracao.html): Explicações curtas dos termos que aparecem nas práticas de respiração e neste site; abaixo de cada um, um link para o artigo que trata do assunto.
+- [O que fazemos com os dados que você compartilha](https://soluklan.app/pt/guia/o-que-fazemos-com-os-dados-compartilhados.html): Se você ativou o compartilhamento do resumo anônimo de sessão e da amostra de áudio, para que esses registros chegam até nós, o que é feito com cada um e o que acontece com eles no fim.
+- [Para que servem os exercícios de respiração](https://soluklan.app/pt/guia/para-que-servem-os-exercicios-de-respiracao.html): Os efeitos medidos da respiração lenta, as promessas sem medição e o que você realmente vai notar na primeira semana.
+- [Sem código de terceiros no app](https://soluklan.app/pt/guia/sem-codigo-de-terceiros.html): Rede de anúncios, ferramenta de análise, relator de falhas, biblioteca de interface pronta — nada disso existe aqui. O que isso significa e quanto custa.
+- [Aproveitando ao máximo o app](https://soluklan.app/pt/guia/aproveitando-ao-maximo-o-app.html): Duas pessoas usam o mesmo app com aproveitamentos muito diferentes. As dez coisas que fazem a diferença e como fazer cada uma.
+- [Como fazer um exercício de respiração](https://soluklan.app/pt/guia/como-fazer-um-exercicio-de-respiracao.html): Exercício de respiração é desacelerar a respiração de propósito durante alguns minutos. As cinco coisas de que você precisa para começar, o primeiro ritmo e os erros mais comuns.
+- [Criando o hábito: os primeiros trinta dias](https://soluklan.app/pt/guia/criando-o-habito.html): Onde se decide a diferença entre usar o app por uma semana e largar, e manter por trinta dias. Um plano dividido em semanas.
+- [Deixar a interface mais simples ou mais completa](https://soluklan.app/pt/guia/niveis-de-interface.html): Simples, Padrão e Avançado. O que muda nos três níveis, para quem serve cada um e como trocar.
+- [Desbloquear técnicas](https://soluklan.app/pt/guia/desbloquear-tecnicas.html): Do que depende o desbloqueio, que informações um cartão bloqueado traz e como começar na hora a sessão necessária.
+- [Encontrando seu ritmo](https://soluklan.app/pt/guia/encontrando-seu-ritmo.html): Os cinco segundos e meio da Respiração Coerente são uma média. Você pode medir o ritmo de respiração que mais combina com você e fazer o app funcionar com ele.
+- [Escolher técnica e duração](https://soluklan.app/pt/guia/tecnica-e-duracao.html): O que significam as marcas na lista de técnicas, o que quer dizer a faixa iluminada no controle de duração e a escolha de ciclos, que substitui a duração no Kapalabhati.
+- [Exercício de respiração antes de dormir](https://soluklan.app/pt/guia/respirar-antes-de-dormir.html): Por que à noite se escolhem técnicas com expiração longa, se é melhor fazer na cama ou numa cadeira, para quem a retenção da 4-7-8 pode ser um problema e o que já foi medido sobre pegar no sono.
+- [Gerenciando seus dados](https://soluklan.app/pt/guia/gerenciando-seus-dados.html): Onde fica cada coisa, o que é sincronizado entre aparelhos, as opções de compartilhamento e como apagar tudo.
+- [Histórico, resumos e conquistas](https://soluklan.app/pt/guia/historico-resumos-e-conquistas.html): Histórico de sessões, resumo semanal, resumo pessoal e conquistas. O que cada um mostra e quando é liberado.
+- [Lembretes e notificações](https://soluklan.app/pt/guia/lembretes-e-notificacoes.html): Lembrete diário, alerta de sequência, notificações específicas por técnica, tom das notificações, horas de silêncio, modo férias e limite diário. O que cada um faz e como ajustar.
+- [Lendo o relatório da sessão](https://soluklan.app/pt/guia/lendo-o-relatorio.html): O que significa cada linha do relatório e o que fazer quando uma medição sai baixa.
+- [Montar um programa e mantê-lo](https://soluklan.app/pt/guia/montar-um-programa.html): Como montar um programa, o que acontece quando você perde um dia, o que significa um programa encerrado e o que você vê ao concluí-lo.
+- [Navegando pelo app](https://soluklan.app/pt/guia/navegando-pelo-app.html): Como chegar a cada tela. O mapa da tela inicial, do Perfil, dos Ajustes e da seção Aprender.
+- [O que há na tela da sessão](https://soluklan.app/pt/guia/a-tela-da-sessao.html): O círculo, o texto da fase, a onda sonora, as notas curtas que aparecem durante a sessão, o aviso do microfone e o menu de pausa. Para que serve tudo o que você vê durante a sessão.
+- [O que é a respiração diafragmática](https://soluklan.app/pt/guia/respiracao-diafragmatica.html): A respiração diafragmática não é uma técnica, é um jeito de respirar. Como fazer passo a passo, qual a diferença para a respiração torácica, por quanto tempo praticar e os erros mais comuns.
+- [Qual técnica e quando](https://soluklan.app/pt/guia/qual-tecnica-e-quando.html): Antes de dormir, uma pausa à mesa de trabalho, um momento de raiva, antes de uma prova ou apresentação. Qual técnica escolher em cada situação e por quê.
+- [Quanto tempo deve durar um exercício de respiração](https://soluklan.app/pt/guia/quanto-tempo-deve-durar-um-exercicio-de-respiracao.html): Resposta curta: de três a cinco minutos por dia. A resposta longa explica onde a duração ajuda e onde não acrescenta nada.
+- [Respirar num momento de ansiedade](https://soluklan.app/pt/guia/respirar-num-momento-de-ansiedade.html): O que a respiração faz num momento de tensão, por que alongar a expiração é o primeiro passo, por que a retenção pode sair pela culatra numa crise de pânico e o que o app desaconselha por isso.
+- [Se sua respiração não é ouvida](https://soluklan.app/pt/guia/se-sua-respiracao-nao-e-ouvida.html): Se você vê a mensagem "Nenhuma expiração foi ouvida", o que tentar, em ordem. Distância, ambiente, diferença entre aparelhos e continuar sem o microfone.
+- [Sequência, marcos e calendário](https://soluklan.app/pt/guia/sequencia-e-marcos.html): Como a sequência funciona, qual sessão conta, como você mesmo cria marcos e como ler o calendário.
+- [Sessão conjunta](https://soluklan.app/pt/guia/sessao-conjunta.html): A sessão em que o celular e o relógio trabalham juntos: como ativar, com o pulso abaixado, se o relógio se conectar depois e se o relógio não se conectar.
+- [Sua primeira sessão, do início ao fim](https://soluklan.app/pt/guia/sua-primeira-sessao.html): Cada passo, desde a primeira vez que você abre o app até ler o primeiro relatório. O que é perguntado, por que é perguntado e o que fazer em cada ponto.
+- [Widgets e Atividade ao Vivo](https://soluklan.app/pt/guia/widgets-e-atividade-ao-vivo.html): Como adicionar os widgets da Tela de Início e da Tela Bloqueada, o que cada um mostra e o contador que aparece na Tela Bloqueada durante a sessão.
+- [Soluklan no Apple Watch](https://soluklan.app/pt/guia/soluklan-no-apple-watch.html): Sessão sozinha no relógio, sessão conjunta com o celular, frequência cardíaca e permissão de saúde, ritmo marcado por vibração no pulso e início rápido no relógio.
+- [Soluklan no celular](https://soluklan.app/pt/guia/soluklan-no-celular.html): O celular é o aparelho principal do app: é nele que a medição é mais precisa. Onde fica cada coisa, para onde o microfone aponta e onde ficam seus dados.
+- [Soluklan no tablet](https://soluklan.app/pt/guia/soluklan-no-tablet.html): No tablet, a tela é maior e o microfone fica mais longe. Onde posicionar o aparelho, por que a medição é mais difícil que no celular e o que continua igual.
+- [Suspiro em 28 dias](https://soluklan.app/pt/guia/suspiro-em-28-dias.html): Cinco minutos de Suspiro Fisiológico todos os dias, durante quatro semanas. Como é um dia do programa, para quem ele serve e em que estudo se baseia.
+- [Expiração Prolongada](https://soluklan.app/pt/guia/expiracao-prolongada.html): Inspire por quatro, segure por quatro, expire por oito. Alongar a expiração até o dobro da inspiração se apoia em um dos efeitos medidos com mais consistência entre as técnicas de respiração.
+- [Kapalabhati](https://soluklan.app/pt/guia/kapalabhati.html): Expirações rápidas e fortes com os músculos da barriga. É a única técnica avançada estimulante do app, a que tem mais situações em que não deve ser feita e a que o microfone mede de um jeito próprio.
+- [Profunda e Lenta](https://soluklan.app/pt/guia/profunda-e-lenta.html): Inspire por seis segundos, expire por seis. Sem retenção, sem enfeites. A técnica mais indicada para aprender a usar o diafragma.
+- [Respiração 4-7-8](https://soluklan.app/pt/guia/quatro-sete-oito.html): Inspire por quatro, segure por sete, expire por oito. A retenção mais longa do app está aqui. Uma técnica mais popular do que comprovada, e dizemos isso abertamente.
+- [Respiração Coerente](https://soluklan.app/pt/guia/respiracao-coerente.html): Cinco respirações e meia por minuto. A técnica mais estudada, a mais fácil de aprender e a que vem desbloqueada desde o início no app. Por que esse ritmo e o que tem evidência.
+- [Respiração Energizante](https://soluklan.app/pt/guia/respiracao-energizante.html): Inspire por dois segundos, expire por dois segundos. É a única técnica do app com duração limitada — não passa de um minuto, e há um bom motivo para isso.
+- [Respiração Quadrada](https://soluklan.app/pt/guia/respiracao-quadrada.html): Quatro passos iguais: inspire, segure, expire, segure. Quatro respirações por minuto. A técnica mais ensinada em treinamentos militares e de serviços de emergência.
+- [Respiração Refrescante](https://soluklan.app/pt/guia/respiracao-refrescante.html): O ar puxado por entre os dentes deixa uma sensação fresca na boca. A tradição a chama de "refrescante", mas a medição não confirma isso — contamos os dois lados.
+- [Respiração Triangular](https://soluklan.app/pt/guia/respiracao-triangular.html): Inspire por quatro segundos, segure por quatro, expire por quatro. A técnica mais simples com retenção e, no app, o primeiro contato com a retenção.
+- [Respiração com Lábios Franzidos](https://soluklan.app/pt/guia/labios-franzidos.html): Inspire pelo nariz por três segundos, franza os lábios e expire por seis. A técnica básica ensinada na reabilitação pulmonar e a mais indicada para a sensação de falta de ar.
+- [Respiração da Abelha](https://soluklan.app/pt/guia/respiracao-da-abelha.html): Boca fechada, doze segundos de "mmm". Nesta técnica, o microfone do app não procura um sopro silencioso, e sim a vibração.
+- [Respiração do Oceano](https://soluklan.app/pt/guia/respiracao-do-oceano.html): O sussurro do ar passando pela garganta. Inspiração silenciosa, expiração com som de concha do mar. Nesta técnica, ajustar bem o som é a própria técnica.
+- [Respiração pela Narina Esquerda e pela Narina Direita](https://soluklan.app/pt/guia/respiracao-por-uma-narina.html): Inspire e expire por uma só narina. As duas técnicas mais silenciosas do app, a diferença entre elas e onde as evidências são fracas.
+- [Respiração por Narinas Alternadas](https://soluklan.app/pt/guia/narinas-alternadas.html): Inspire pela esquerda, expire pela direita, inspire pela direita, expire pela esquerda. A técnica do app que mais exige coordenação e como acertar a posição dos dedos.
+- [Suspiro Fisiológico](https://soluklan.app/pt/guia/suspiro-fisiologico.html): Duas inspirações seguidas e uma expiração longa. Entre os exercícios de respiração curtos, é a técnica com o melhor estudo controlado. E é também a técnica do programa.
 
 ## Bahasa Indonesia (id)
 
