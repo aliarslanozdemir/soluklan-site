@@ -407,7 +407,7 @@
   /* Tek ok, ekrana sabit: bulunduğun slayta göre hedefi değişiyor.
      Eskiden her slaytın içinde ayrı bir ok vardı ve slayt içerikten uzun olunca ok
      ekranın farklı yerlerinde çıkıyordu (Ali, 14 Eylül 2026). */
-  var BEKLEME = 3500;
+  var BEKLEME = 1200;   /* 3500 geç geliyordu (Ali, 11 Ekim 2026) */
   var ok = document.querySelector('.kaydir');
   var slaytlar = Array.prototype.slice.call(document.querySelectorAll('.slayt'));
   if (!ok || !slaytlar.length) return;
@@ -431,7 +431,9 @@
     /* Slayt ekrana sığmıyorsa ok çıkmıyor: sabit ok yazının üstüne biniyor ve zaten
        devamın olduğu görülüyor (14 Eylül 2026). */
     var k = slaytlar[i].getBoundingClientRect();
-    if (k.bottom > window.innerHeight + 4) { gizle(); return; }
+    /* İlk ekranda ok her zaman çıkıyor: giriş slaytı biraz taşsa da aşağıda devamı olduğu
+       görülmüyordu (Ali, 11 Ekim 2026). */
+    if (i > 0 && k.bottom > window.innerHeight + 4) { gizle(); return; }
     ok.setAttribute('href', '#' + sonraki.id);
     clearTimeout(belirSayaci);
     belirSayaci = setTimeout(function () { ok.classList.add('gorunur'); }, BEKLEME);
