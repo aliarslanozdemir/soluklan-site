@@ -453,8 +453,8 @@
   var kok = document.documentElement;
   var kap = document.querySelector('.slaytlar');
   if (!kap || !window.requestAnimationFrame || !window.matchMedia) return;
-  var SURE = 1000;      // bir slaytlık geçiş, ms
-  var BEKLEME = 350;    // geçiş bittikten sonra yeni harekete kapalı kalma
+  var SURE = 650;       // bir slaytlık geçiş, ms (1000 çok yavaştı, Ali 11 Ekim 2026)
+  var BEKLEME = 120;    // geçiş bittikten sonra yeni harekete kapalı kalma
   var ARA = 180;        // bu kadar ms tekerlek gelmezse yeni hareket sayılıyor
   var ESIK = 4;         // bir hareketin slayt geçirmesi için gereken toplam delta, px
   var azalt = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -567,6 +567,7 @@
      izleme yüzeyinin süzülmesi, hızla çevrilen tekerlek ya da serbest dönen tekerlek tek
      slayt geçiriyor. Satır/sayfa birimli delta piksele çevriliyor. */
   var sonTeker = 0, birikim = 0, harcandi = false;
+  var sonMutlak = 0, sonYon = 0;
   window.addEventListener('wheel', function (e) {
     if (e.ctrlKey || e.defaultPrevented || !etkin()) return;           // ctrl: yakınlaştırma
     var dy = e.deltaY * (e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? window.innerHeight : 1);
@@ -574,8 +575,13 @@
     if (disarida(e.target, dy)) return;
     e.preventDefault();
     var simdi = performance.now();
-    if (simdi - sonTeker > ARA) { birikim = 0; harcandi = false; }
-    sonTeker = simdi;
+    var mutlak = Math.abs(dy);
+    // Yeni hareket: tekerlek bir süre durduysa, yön döndüyse ya da touchpad'in sönen ataleti
+    // içinde delta yeniden belirgin biçimde büyüdüyse (parmak yeniden kaydırdı). Böylece
+    // ataletin bitmesini beklemeden ikinci hareket geçiyor (Ali: "bekleme süresi fazla").
+    if (simdi - sonTeker > ARA || (sonYon && dy * sonYon < 0) ||
+        (mutlak > 12 && mutlak > sonMutlak * 1.8)) { birikim = 0; harcandi = false; }
+    sonTeker = simdi; sonMutlak = mutlak; sonYon = dy > 0 ? 1 : dy < 0 ? -1 : sonYon;
     if (kilitli()) { harcandi = true; return; }
     if (harcandi || !dy) return;
     birikim += dy;
