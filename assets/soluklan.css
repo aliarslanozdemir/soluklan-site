@@ -473,13 +473,13 @@ details.sss-tumu > .faq { margin-top: .5rem; }
 /* Kaydırma kabı sayfanın kendisi: `scroll-snap-type` `.slaytlar`ta işe yaramıyordu, çünkü
    o kutunun kendi kaydırması yok. Yalnız ana sayfada geçerli olsun diye `:has()` ile. */
 /* Slayt düzeni: her kaydırma bir slayta oturuyor. Bir ara `proximity`ye çekilmişti,
-   sunum hissi kayboldu (Ali, 12 Eylül 2026) — `mandatory` geri geldi. Tekerleğin sert
-   atlaması snap'in değil, farenin tek tıkta büyük delta üretmesinin sonucuydu; o
-   ana sayfadaki betikte ele alınıyor (yumuşak, tek slaytlık geçiş). */
+   sunum hissi kayboldu (Ali, 12 Eylül 2026) — `mandatory` geri geldi. */
 html:has(.slaytlar) { scroll-snap-type: y mandatory; }
-/* Ok'a basınca yapılan yumuşak kaydırma boyunca snap kapalı: açıkken kaydırmayı yarıda
-   kesip geri çekiyordu (telefonda görülen hata, 11 Eylül 2026). */
-html.kaydiriyor:has(.slaytlar) { scroll-snap-type: none; }
+/* Betik çalışınca kaydırmayı o yönetiyor (`SLAYT_BETIGI`, scripts/site_build.py): fare,
+   izleme yüzeyi, parmak ve klavye aynı yavaş, tek slaytlık geçişi yapıyor. Snap açık
+   kalsa geçişi yarıda kesip geri çekiyor, Mac farenin 4 piksellik tıkını yutuyordu
+   (11 Ekim 2026). Yukarıdaki snap yalnız betik çalışmazsa yedek. */
+html.slayt-js:has(.slaytlar) { scroll-snap-type: none; overflow-anchor: none; }
 /* Alt bilgi slayt değil, o yüzden snap noktası yoktu: sayfa sonuna inince en son slayta
    geri çekiliyordu ve alt bilgiye bakılamıyordu (Ali, 12 Eylül 2026). Kendi durağı oldu. */
 html:has(.slaytlar) footer.site { scroll-snap-align: end; }
@@ -492,7 +492,8 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
   align-content: safe center;
   position: relative;
   scroll-snap-align: start;
-  /* Fare ve izleme yüzeyinde slayt atlanamıyor: sunum sırası korunuyor. */
+  /* Slayt atlanamıyor: sunum sırası korunuyor. Telefonda da (11 Ekim 2026'ya kadar
+     dokunmatikte `normal`dı, savurma birkaç slayt geçiyordu; Ali tek slayt istedi). */
   scroll-snap-stop: always;
   padding-block: clamp(4rem, 9vh, 6rem) clamp(5.5rem, 12vh, 8rem);
   border-top: 0;
@@ -502,13 +503,6 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
 .kapanis { text-align: center; }
 .kapanis .ring.kucuk { width: min(100%, 11rem); }
 .kapanis .ring figcaption { display: none; }
-
-/* Telefonda `scroll-snap-stop: always` her savurmayı tek slaytta kilitliyor ve gezinmek
-   yoruyordu. Dokunmatikte kalkıyor: savurma birkaç slayt geçebiliyor ama yine **bir
-   slayta** oturuyor — sunum hissi duruyor, hareket serbestleşiyor. */
-@media (pointer: coarse) {
-  .slayt { scroll-snap-stop: normal; }
-}
 
 /* İçerik ekrana sığmıyorsa slayt düzeni okumayı zorlaştırır: kapanıyor. */
 @media (max-height: 40rem) {
