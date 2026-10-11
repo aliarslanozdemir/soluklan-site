@@ -453,9 +453,9 @@
   var kok = document.documentElement;
   var kap = document.querySelector('.slaytlar');
   if (!kap || !window.requestAnimationFrame || !window.matchMedia) return;
-  var SURE = 650;       // bir slaytlık geçiş, ms (1000 çok yavaştı, Ali 11 Ekim 2026)
-  var BEKLEME = 120;    // geçiş bittikten sonra yeni harekete kapalı kalma
-  var ARA = 180;        // bu kadar ms tekerlek gelmezse yeni hareket sayılıyor
+  var SURE = 450;       // bir slaytlık geçiş, ms (1000 ve 650 yavaş geldi, Ali 11 Ekim 2026)
+  var BEKLEME = 40;     // geçiş bittikten sonra yeni harekete kapalı kalma
+  var ARA = 120;        // bu kadar ms tekerlek gelmezse yeni hareket sayılıyor
   var ESIK = 4;         // bir hareketin slayt geçirmesi için gereken toplam delta, px
   var azalt = window.matchMedia('(prefers-reduced-motion: reduce)');
   var alcak = window.matchMedia('(max-height: 40rem)');
