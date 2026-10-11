@@ -461,6 +461,7 @@
   var ESIK = 4;         // bir hareketin slayt geçirmesi için gereken toplam delta, px
   var azalt = window.matchMedia('(prefers-reduced-motion: reduce)');
   var alcak = window.matchMedia('(max-height: 40rem)');
+  var dokunmatik = window.matchMedia('(pointer: coarse)');
   kok.classList.add('slayt-js');
 
   function etkin() {
@@ -480,6 +481,13 @@
     function ekle(el, ilk) {
       var s = ustY(el), fazla = el.offsetHeight - vh;
       if (!(ilk && s <= vh * 0.25)) d.push({ y: s, f: function () { return ustY(el); } });
+      if (dokunmatik.matches) {
+        // Dokunmatikte uzun slaytın yalnız başı ve dibi durak; arası serbest
+        // Ekrandan çok az uzun slayt (%10'a kadar) kısa sayılıyor: iki kaydırma istemesin
+        if (fazla > vh * 0.1) d.push({ y: s + fazla, f: function () {
+          return ustY(el) + el.offsetHeight - window.innerHeight; } });
+        return;
+      }
       if (fazla > vh * 0.1) {
         var n = Math.ceil(fazla / (vh * 0.8));
         for (var k = 1; k <= n; k++) (function (oran) {
@@ -502,6 +510,17 @@
     else { for (i = d.length - 1; i >= 0; i--) if (d[i].y < y - pay) return d[i]; }
     return null;
   }
+  /* y, ekrandan uzun bir slaytın serbest aralığında mı (başı ile dibi arası)? */
+  function uzunBolge(y) {
+    var vh = window.innerHeight, sl = kap.querySelectorAll('.slayt');
+    for (var i = 0; i < sl.length; i++) {
+      if (sl[i].offsetHeight - vh <= vh * 0.1) continue;
+      var s = ustY(sl[i]), alt = Math.min(s + sl[i].offsetHeight - vh, enAlt());
+      if (i === 0 && s <= vh * 0.25) s = 0;
+      if (y >= s - 2 && y <= alt + 2) return { ust: s, alt: alt };
+    }
+    return null;
+  }
   function enYakin(y) {
     return duraklar().reduce(function (a, b) { return Math.abs(b.y - y) < Math.abs(a.y - y) ? b : a; });
   }
@@ -520,7 +539,25 @@
       if (Math.abs(y - window.scrollY) >= 1) window.scrollTo(0, y);
     }); });
   }
+  /* Parmak bırakılınca serbest kayma: hız yavaşça sönüyor, slaytın ucunda duruyor. */
+  var atalet = 0;
+  function ataletDur() { if (atalet) cancelAnimationFrame(atalet); atalet = 0; }
+  function suzul(v, min, max) {
+    var y = window.scrollY, onceki = performance.now();
+    function kare(simdi) {
+      var dt = Math.max(0, Math.min(50, simdi - onceki));
+      onceki = simdi;
+      y += v * dt;
+      v *= Math.exp(-dt / 325);
+      if (y <= min) { y = min; v = 0; }
+      if (y >= max) { y = max; v = 0; }
+      window.scrollTo(0, Math.round(y));
+      atalet = Math.abs(v) > 0.02 ? requestAnimationFrame(kare) : 0;
+    }
+    atalet = requestAnimationFrame(kare);
+  }
   function git(durak, v0) {
+    ataletDur();
     var bas = window.scrollY;
     var mesafe = Math.min(durak.f(), enAlt()) - bas;
     if (Math.abs(mesafe) < 1 || azalt.matches) {
@@ -614,13 +651,16 @@
 
   /* Parmak: sayfa parmağı izliyor ama en çok bir durak öteye kadar; bırakınca hıza ya da
      gidilen yola göre bir sonraki (ya da önceki) durağa yavaşça oturuyor, az kaydırmada
-     yerine dönüyor. Savurma ne kadar hızlı olursa olsun tek slayt. Tarayıcının kendi
+     yerine dönüyor. Savurma ne kadar hızlı olursa olsun tek slayt. Ekrandan uzun slaytın
+     içinde ise serbest: parmağı bire bir izliyor, bırakınca atalet slaytın ucunda duruyor;
+     uçtan dışarı doğru yeni kaydırma bir sonraki (önceki) slayta geçiyor. Tarayıcının kendi
      kaydırması hiç başlamıyor: snap ile kavga, geri çekilme, adres çubuğunun açılıp
      kapanmasıyla ekran boyunun değişmesi yok. Sayfanın tepesinde aşağı çekmek tarayıcıda
      kalıyor (yenileme). */
   var dk = null;
   window.addEventListener('touchstart', function (e) {
     dk = null;
+    ataletDur();
     if (e.touches.length !== 1 || !etkin() || disarida(e.target, 0)) return;
     var p = e.touches[0];
     dk = { x: p.clientX, y: p.clientY, y0: window.scrollY, eksen: '', kilitli: kilitli(),
@@ -635,9 +675,15 @@
       if (Math.abs(dx) > Math.abs(dy) && yatayKutu(dk.el)) { dk = null; return; }
       if (disarida(dk.el, dy) || (dk.y0 <= 0 && dy < 0 && !dk.kilitli)) { dk = null; return; }
       dk.eksen = 'y';
-      var once = komsu(dk.y0, -1), sonra = komsu(dk.y0, 1);
-      dk.min = once ? once.y : 0;
-      dk.max = sonra ? sonra.y : enAlt();
+      var b = uzunBolge(dk.y0);
+      // Uca 10 pikselden yakınsa uçta sayılıyor: görseller yüklenirken slayt boyu birkaç piksel oynuyor
+      if (b && !(dk.y0 >= b.alt - 10 && dy > 0) && !(dk.y0 <= b.ust + 10 && dy < 0)) {
+        dk.serbest = true; dk.min = b.ust; dk.max = b.alt;              // uzun slaytın içi
+      } else {
+        var once = komsu(dk.y0, -1), sonra = komsu(dk.y0, 1);
+        dk.min = once ? once.y : 0;
+        dk.max = sonra ? sonra.y : enAlt();
+      }
     }
     if (e.cancelable) e.preventDefault();
     dk.yol = Math.max(dk.yol || 0, Math.abs(dx), Math.abs(dy));
@@ -660,6 +706,10 @@
       for (var i = 0; i < d.iz.length - 1 && simdi - d.iz[i][0] > 110; i++) {}
       var dt = son[0] - d.iz[i][0];
       if (dt > 0) v = (d.iz[i][1] - son[1]) / dt;
+    }
+    if (d.serbest) {
+      if (!azalt.matches && Math.abs(v) > 0.05) suzul(v, d.min, d.max);
+      return;
     }
     var kayma = window.scrollY - d.y0, yon = 0;
     if (Math.abs(v) > 0.3) yon = v > 0 ? 1 : -1;
@@ -693,7 +743,8 @@
   window.addEventListener('resize', function () {
     clearTimeout(boySayaci);
     boySayaci = setTimeout(function () {
-      if (!etkin() || anim || dk) return;
+      if (!etkin() || anim || dk || atalet) return;
+      if (dokunmatik.matches && uzunBolge(window.scrollY)) return;  // uzun slaytın içinde kalıyor
       window.scrollTo(0, Math.min(enYakin(window.scrollY).f(), enAlt()));
     }, 200);
   }, { passive: true });
