@@ -5,7 +5,7 @@ değişikliği yapılmaz; yenisi çıkarsa aynı yerden yeniden indirilir.
 
 | Dosya | Kaynak |
 |---|---|
-| `app-store-<dil>.svg` | Apple Marketing Tools, siyah "Download on the App Store" rozeti: `https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/<yerel>` — yereller `tr-tr`, `en-us`, `de-de`, `fr-fr`, `es-es`, `it-it`, `ar-ar`, `zh-cn`, `ru-ru`, `ja-jp` (10 Ekim 2026; sitede ve uygulamada). Portekizce ve Endonezce rozet indirilmedi: o dillerde sayfa İngilizce rozeti İngilizce alt metinle gösteriyor (`site_build.py` → `rozet_dosyasi`), `app-store-pt.svg` / `app-store-id.svg` konursa kendiliğinden kullanılır |
+| `app-store-<dil>.svg` | Apple Marketing Tools, siyah "Download on the App Store" rozeti: `https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/<yerel>` — yereller `tr-tr`, `en-us`, `de-de`, `fr-fr`, `es-es`, `it-it`, `ar-ar`, `zh-cn`, `ru-ru`, `ja-jp` (10 Ekim 2026), `pt-br` → `app-store-pt.svg`, `id-id` → `app-store-id.svg` (11 Ekim 2026); sitede ve uygulamada |
 | `google-play-<dil>.svg` | Google Partner Marketing Hub → Google Play → Lockups, icons & badges → Get it on Google Play Badges → Digital → svg: `GetItOnGooglePlay_Badge_Web_color_<Dil>.svg` (Turkish, English, German, French, Spanish, Italian, Arabic-Saudi-Arabia, Chinese-China, Russian) |
 
 İndirme tarihi: 8 Ekim 2026. İki markanın kuralları:
