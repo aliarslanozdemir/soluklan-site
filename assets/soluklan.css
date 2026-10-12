@@ -1205,11 +1205,40 @@ html:has(.slaytlar) body::before {
 .cihaz3b.telefon .govde::before { top: 22%; height: 7%; }
 .cihaz3b.telefon .govde::after  { top: 32%; height: 11%; }
 
-/* Saat: Apple Watch Series 11 46 mm, Apple'ın resmî ürün çerçevesi (mağaza panoramasındakiyle
-   aynı) ve içinde saatin gerçek ekranı, tek görsel (`cihaz-saat*.png`). Telefonun önünde,
-   biraz daha yakında duruyor. */
-.cihaz3b.saat { width: clamp(5.5rem, 12vw, 8rem); margin-inline-start: clamp(-2.25rem, -3vw, -1rem); margin-bottom: -2.25rem; transform: rotateY(-9deg) rotateX(12deg) rotateZ(5deg) translateZ(90px); }
-.cihaz3b.saat img { display: block; width: 100%; height: auto; filter: drop-shadow(0 14px 18px rgba(15,30,51,.28)) drop-shadow(0 34px 40px rgba(15,30,51,.22)); }
+/* Saat: Apple Watch Series 11 46 mm, telefon ve tablet gibi CSS'le çizili gövde (12 Ekim 2026).
+   Eskiden Apple'ın çerçeve PNG'siydi: düz duruyordu, kordon uçları kesik ve solgun kalıyordu
+   (Ali: "kordon tam gözüksün, solmasın"). Kasa 39 × 46 mm oranında, ekran 416 × 496; görsel
+   yalnız ekran (`saat-ekran*.jpg`, 422 × 514 çekim, deliğe "cover" ile oturuyor). Spor kordon iki
+   parça: üstte pimli kısa uç, altta delikli uzun uç; ikisi de yuvarlak biter, hiçbir yerde
+   kesilmez ve solmaz. Kasa kordonun üstünde (z-index), eklem yerinde kasanın gölgesi var.
+   Telefonun önünde, biraz daha yakında duruyor. Genişlik kasa genişliği. */
+.cihaz3b.saat { width: clamp(4.75rem, 10vw, 6.75rem); margin-inline-start: clamp(-5rem, -6vw, -3rem); margin-bottom: -2rem; transform: rotateY(-9deg) rotateX(12deg) rotateZ(5deg) translateZ(90px);
+                display: flex; flex-direction: column; align-items: center; }
+.cihaz3b.saat .govde { width: 100%; padding: 6.2%; border-radius: 24% / 20.3%; z-index: 1; }
+.cihaz3b.saat .ekran { aspect-ratio: 416 / 496; border-radius: 21% / 17.6%; }
+/* Dijital taç (üstte, yivli) ve yan düğme */
+.cihaz3b.saat .tac, .cihaz3b.saat .dugme { position: absolute; right: -5.5%; width: 5.5%; border-radius: 0 2px 2px 0; }
+.cihaz3b.saat .tac { top: 22%; height: 16%; background: repeating-linear-gradient(180deg, #4A5462 0 1px, #1B222D 1px 3px); box-shadow: inset -1px 0 0 rgba(255,255,255,.12); }
+.cihaz3b.saat .dugme { top: 46%; height: 15%; background: linear-gradient(180deg, #4A5462, #232A34); }
+/* Kordon: siyah spor kordon, ortası hafif aydınlık (yuvarlak kesit), kenarları koyu */
+.cihaz3b.saat .kordon {
+  position: relative; z-index: 0; display: block; width: 58%;
+  background: linear-gradient(90deg, #0F1216 0%, #262B33 28%, #2C3139 50%, #252A32 72%, #0E1115 100%);
+  box-shadow: 0 2px 4px rgba(15,30,51,.2), 0 18px 36px rgba(15,30,51,.26);
+}
+.cihaz3b.saat .kordon::after { content: ""; position: absolute; left: 0; right: 0; }
+.cihaz3b.saat .kordon.ust { aspect-ratio: 58 / 80; margin-bottom: -4%; border-radius: 999px 999px 0 0; }
+.cihaz3b.saat .kordon.ust::after { bottom: 0; height: 14%; background: linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,0)); }
+.cihaz3b.saat .kordon.alt { aspect-ratio: 58 / 112; margin-top: -4%; border-radius: 0 0 999px 999px; }
+.cihaz3b.saat .kordon.alt::after { top: 0; height: 10%; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0)); }
+/* Üst uçta çelik pim, alt uçta dört delik */
+.cihaz3b.saat .kordon i { position: absolute; left: 50%; transform: translateX(-50%); border-radius: 999px; }
+.cihaz3b.saat .pim { top: 10%; width: 16%; height: 6%; background: linear-gradient(180deg, #A9B0BA, #6E7682 55%, #474E58); box-shadow: 0 1px 1px rgba(0,0,0,.6); }
+.cihaz3b.saat .kordon.alt i { width: 26%; height: 5%; background: #090B0E; box-shadow: inset 0 1px 1px rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.07); }
+.cihaz3b.saat .kordon.alt i:nth-child(1) { top: 50%; }
+.cihaz3b.saat .kordon.alt i:nth-child(2) { top: 60%; }
+.cihaz3b.saat .kordon.alt i:nth-child(3) { top: 70%; }
+.cihaz3b.saat .kordon.alt i:nth-child(4) { top: 80%; }
 
 /* Cihazlar ekrana girince eğimleri düzelerek yerine oturuyor — ve **orada kalıyor**.
    Eskiden kaydırmaya bağlıydı (`view()`), geri kaydırınca yeniden eğiliyorlardı
@@ -1238,7 +1267,7 @@ html:has(.slaytlar) body::before {
   .cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateX(12deg) rotateY(-10deg) rotateZ(5deg) translateZ(40px); }
   .cihaz3b.tablet { width: 56%; }
   .cihaz3b.telefon { width: 31%; margin-inline-start: -1.1rem; margin-bottom: 0; }
-  .cihaz3b.saat { width: 21%; margin-inline-start: -1.6rem; margin-bottom: -.75rem; }
+  .cihaz3b.saat { width: 18%; margin-inline-start: -1.5rem; margin-bottom: -.5rem; }
   .cihaz3b figcaption { font-size: .75rem; margin-top: .7rem; }
   .cihaz3b.telefon .govde::before,
   .cihaz3b.telefon .govde::after { display: none; }   /* yan düğmeler bu boyutta lekeye dönüşüyor */
