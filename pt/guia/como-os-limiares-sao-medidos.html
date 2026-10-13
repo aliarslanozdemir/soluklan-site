@@ -137,7 +137,7 @@
 <p>Quando uma técnica nova é adicionada, não temos nem uma única gravação dela. O limiar é herdado de técnicas parecidas: se é uma técnica de expiração pela boca, o valor de outra técnica de boca da mesma família; se é uma técnica pelo nariz, o da família nasal.</p>
 <p>Essa estimativa costuma estar mais ou menos certa, mas não exatamente.</p>
 <h2>Como a medição é feita</h2>
-<p>De quem ativa o compartilhamento anônimo e o compartilhamento de <a href="/pt/guia/o-que-fazemos-com-os-dados-compartilhados.html">amostra de áudio</a>, chega de vez em quando o áudio de uma sessão. Junto vêm o relatório dessa sessão e os dados brutos de tempo: em que segundos as expirações-alvo eram esperadas, em que momentos o app detectou uma expiração e qual era o piso de ruído.</p>
+<p>De quem ativa o compartilhamento anônimo e o compartilhamento de <a href="/pt/guia/o-que-fazemos-com-os-dados-compartilhados.html">amostra de áudio</a>, chega o áudio das sessões, no máximo dez sessões por dia para cada pessoa. Com cada uma vêm o relatório dessa sessão e os dados brutos de tempo: em que segundos as expirações-alvo eram esperadas, em que momentos o app detectou uma expiração e qual era o piso de ruído.</p>
 <p>Com as duas coisas juntas, a medição se torna possível. O arquivo de áudio passa pelo próprio código de detecção do app — o mesmo código, o mesmo cálculo —, mas com o valor do limiar alterado. Então se pergunta: <strong>com qual limiar quantas expirações-alvo foram captadas e quantas detecções falsas houve?</strong></p>
 <p>Se a captação aumenta e as detecções falsas não, o limiar é reduzido. Se as duas aumentam juntas, nada é mexido.</p>
 <h2>Um exemplo real</h2>
