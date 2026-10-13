@@ -137,7 +137,7 @@
 <p>When a new technique is added, we don't have a single recording of it. The threshold is taken over from similar techniques: for a technique breathed out through the mouth, the value of another mouth technique in the same family; for a nasal one, the nasal family's.</p>
 <p>That guess is usually roughly right but not exact.</p>
 <h2>How the measurement is done</h2>
-<p>From users who turn on anonymous sharing and <a href="/en/guide/what-we-do-with-shared-data.html">audio sample</a> sharing, the audio of a session arrives now and then. With it comes that session's report and raw timing: at which seconds the target exhales were expected, at which moments the app detected an exhale, and what the <a href="/en/guide/how-the-microphone-listens.html">noise floor</a> was.</p>
+<p>From users who turn on anonymous sharing and <a href="/en/guide/what-we-do-with-shared-data.html">audio sample</a> sharing, the audio of their sessions arrives, at most ten sessions a day per person. With each comes that session's report and raw timing: at which seconds the target exhales were expected, at which moments the app detected an exhale, and what the <a href="/en/guide/how-the-microphone-listens.html">noise floor</a> was.</p>
 <p>With those two together the measurement becomes possible. The audio file is run through the app's own detection code — the same code, the same arithmetic — but with the threshold changed. Then the question: <strong>at which threshold were how many target exhales caught, and how many false detections occurred?</strong></p>
 <p>If catches rise and false detections don't, the threshold is lowered. If both rise, it is left alone.</p>
 <h2>A real example</h2>
