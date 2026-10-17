@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="soluklan-paylasim" content="davet">
+<title>Soluklan</title>
+<meta property="og:title" content="Soluklan">
+<meta property="og:image" content="https://soluklan.app/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="stylesheet" href="/assets/soluklan.css?v=357a66dd">
+<script>
+(function () {
+  var app = "https://apps.apple.com/app/apple-store/id6801880838?pt=499375&ct=paylasim-davet&mt=8";
+  var play = "";
+  var kokler = {"ar": "/ar/", "de": "/de/", "en": "/en/", "es": "/es/", "fr": "/fr/", "id": "/id/", "it": "/it/", "ja": "/ja/", "pt": "/pt/", "ru": "/ru/", "tr": "/", "zh": "/zh/"};
+  var ua = navigator.userAgent || "";
+  // iPadOS Safari masaüstü tarayıcısı gibi görünüyor: dokunmatik Mac yok, ondan ayrılıyor
+  var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var hedef = "";
+  if (ios) hedef = app;
+  else if (/Android/i.test(ua) && play) hedef = play;
+  else {
+    var istekler = navigator.languages || [navigator.language || ""];
+    for (var i = 0; i < istekler.length && !hedef; i++) {
+      var k = (istekler[i] || "").split("-")[0].toLowerCase();
+      if (kokler.hasOwnProperty(k)) hedef = kokler[k];
+    }
+    if (!hedef) hedef = "/";
+  }
+  location.replace(hedef);
+})();
+</script>
+</head>
+<body>
+<main class="wrap">
+<p>Yönlendiriliyor…</p>
+<noscript>
+<p><a class="rozet" href="https://apps.apple.com/app/apple-store/id6801880838?pt=499375&amp;ct=paylasim-davet&amp;mt=8"><img src="/assets/rozetler/app-store-tr.svg" alt="App Store&#x27;dan indir" width="151" height="40"></a></p>
+<p><a href="/">soluklan.app</a></p>
+</noscript>
+</main>
+</body>
+</html>

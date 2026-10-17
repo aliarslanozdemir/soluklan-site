@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "RZD6H2LE2U.com.ozdemir.soluklan"
+        ],
+        "components": [
+          {
+            "/": "/d/",
+            "comment": "arkadaş daveti"
+          },
+          {
+            "/": "/d/*",
+            "comment": "arkadaş daveti"
+          }
+        ]
+      }
+    ]
+  }
+}
