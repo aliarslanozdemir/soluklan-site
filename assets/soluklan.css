@@ -33,6 +33,18 @@
   --gutter: clamp(1.25rem, 5vw, 2.5rem);
   --prose: 66ch;
   --wide: 74rem;
+
+  /* Sunum slaytlarındaki kartlar ve küçük işaretler: iki temada ayrı (gece teması aşağıda) */
+  --sahne-kart:   var(--card);
+  --sahne-kenar:  var(--line);
+  --sahne-golge:  rgba(15,30,51,.16);
+  --sahne-golge-2: rgba(15,30,51,.08);
+  --bos-nokta:    color-mix(in srgb, var(--ink) 8%, transparent);
+  --bos-kenar:    transparent;
+  --vurgu-1:      #1B6FB3;
+  --vurgu-2:      #18C1AE;
+  --secili-zemin: var(--card);
+  --onay-isaret:  white;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +61,16 @@
     --breath-2:  #6EC2F0;
     --glow:      #00E5CC;
     --shadow:    0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+    --sahne-kart:   #14223A;
+    --sahne-kenar:  rgba(255,255,255,.14);
+    --sahne-golge:  rgba(0,0,0,.5);
+    --sahne-golge-2: rgba(0,0,0,.3);
+    --bos-nokta:    rgba(255,255,255,.14);
+    --bos-kenar:    rgba(255,255,255,.22);
+    --vurgu-1:      #3E9BE0;
+    --vurgu-2:      #1FD8C2;
+    --secili-zemin: #2A3A55;
+    --onay-isaret:  #0F1E33;
   }
 }
 :root[data-theme="dark"] {
@@ -57,6 +79,16 @@
   --line: rgba(255,255,255,.10); --line-soft: rgba(255,255,255,.06);
   --breath: #4FB0E8; --breath-2: #6EC2F0; --glow: #00E5CC;
   --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 32px rgba(0,0,0,.35);
+  --sahne-kart:   #14223A;
+  --sahne-kenar:  rgba(255,255,255,.14);
+  --sahne-golge:  rgba(0,0,0,.5);
+  --sahne-golge-2: rgba(0,0,0,.3);
+  --bos-nokta:    rgba(255,255,255,.14);
+  --bos-kenar:    rgba(255,255,255,.22);
+  --vurgu-1:      #3E9BE0;
+  --vurgu-2:      #1FD8C2;
+  --secili-zemin: #2A3A55;
+  --onay-isaret:  #0F1E33;
   --gradient: linear-gradient(135deg, var(--breath) 0%, var(--breath-2) 45%, var(--glow) 100%);
   --gradient-soft: linear-gradient(135deg,
                     color-mix(in srgb, var(--breath) 16%, transparent) 0%,
@@ -1205,40 +1237,23 @@ html:has(.slaytlar) body::before {
 .cihaz3b.telefon .govde::before { top: 22%; height: 7%; }
 .cihaz3b.telefon .govde::after  { top: 32%; height: 11%; }
 
-/* Saat: Apple Watch Series 11 46 mm, telefon ve tablet gibi CSS'le çizili gövde (12 Ekim 2026).
-   Eskiden Apple'ın çerçeve PNG'siydi: düz duruyordu, kordon uçları kesik ve solgun kalıyordu
-   (Ali: "kordon tam gözüksün, solmasın"). Kasa 39 × 46 mm oranında, ekran 416 × 496; görsel
-   yalnız ekran (`saat-ekran*.jpg`, 422 × 514 çekim, deliğe "cover" ile oturuyor). Spor kordon iki
-   parça: üstte pimli kısa uç, altta delikli uzun uç; ikisi de yuvarlak biter, hiçbir yerde
-   kesilmez ve solmaz. Kasa kordonun üstünde (z-index), eklem yerinde kasanın gölgesi var.
-   Telefonun önünde, biraz daha yakında duruyor. Genişlik kasa genişliği. */
-.cihaz3b.saat { width: clamp(4.75rem, 10vw, 6.75rem); margin-inline-start: clamp(-5rem, -6vw, -3rem); margin-bottom: -2rem; transform: rotateY(-9deg) rotateX(12deg) rotateZ(5deg) translateZ(90px);
-                display: flex; flex-direction: column; align-items: center; }
-.cihaz3b.saat .govde { width: 100%; padding: 6.2%; border-radius: 24% / 20.3%; z-index: 1; }
-.cihaz3b.saat .ekran { aspect-ratio: 416 / 496; border-radius: 21% / 17.6%; }
-/* Dijital taç (üstte, yivli) ve yan düğme */
-.cihaz3b.saat .tac, .cihaz3b.saat .dugme { position: absolute; right: -5.5%; width: 5.5%; border-radius: 0 2px 2px 0; }
-.cihaz3b.saat .tac { top: 22%; height: 16%; background: repeating-linear-gradient(180deg, #4A5462 0 1px, #1B222D 1px 3px); box-shadow: inset -1px 0 0 rgba(255,255,255,.12); }
-.cihaz3b.saat .dugme { top: 46%; height: 15%; background: linear-gradient(180deg, #4A5462, #232A34); }
-/* Kordon: siyah spor kordon, ortası hafif aydınlık (yuvarlak kesit), kenarları koyu */
-.cihaz3b.saat .kordon {
-  position: relative; z-index: 0; display: block; width: 58%;
-  background: linear-gradient(90deg, #0F1216 0%, #262B33 28%, #2C3139 50%, #252A32 72%, #0E1115 100%);
-  box-shadow: 0 2px 4px rgba(15,30,51,.2), 0 18px 36px rgba(15,30,51,.26);
+/* Saat: Apple Watch, kasası ve bileği saran kordonuyla üç boyutlu çizim (19 Ekim 2026).
+   Gövde `saat-govde.svg`: `scripts/saat_cizimi.py` kasayı (bombeli yan yüz, Digital Crown, yan
+   düğme) ve kordonu (bileğin kesitinde arkaya kıvrılan tek parça halka, düz deniz mavisi)
+   ışığa göre boyayıp çiziyor. Ekran görüntüsü (`saat-ekran*.jpg`, her dilde kendi) camın
+   üstüne oturuyor: yeri ve eğimi betiğin yazdığı değerler (yüzdeler gövdenin kutusuna göre).
+   Çizim zaten eğik, CSS yalnız hafifçe döndürüp öne alıyor. Genişlik çizimin genişliği. */
+.cihaz3b.saat { width: clamp(6rem, 12.8vw, 8.6rem); margin-inline-start: clamp(-5rem, -6vw, -3rem); margin-bottom: -1.5rem; }
+.saat-cizim { position: relative; }
+.saat-cizim .saat-govde { display: block; width: 100%; height: auto; filter: drop-shadow(0 16px 22px var(--sahne-golge)) drop-shadow(0 3px 5px var(--sahne-golge-2)); }
+.cihaz3b.saat .ekran {
+  position: absolute; left: 11.204%; top: 17.188%; width: 65.960%; height: 60.322%; margin: 0;
+  transform-origin: 0 0; transform: matrix(0.8889, -0.0009, -0.0539, 0.9890, 0, 0);
+  border-radius: 21% / 17.6%; background: #000;
 }
-.cihaz3b.saat .kordon::after { content: ""; position: absolute; left: 0; right: 0; }
-.cihaz3b.saat .kordon.ust { aspect-ratio: 58 / 80; margin-bottom: -4%; border-radius: 999px 999px 0 0; }
-.cihaz3b.saat .kordon.ust::after { bottom: 0; height: 14%; background: linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,0)); }
-.cihaz3b.saat .kordon.alt { aspect-ratio: 58 / 112; margin-top: -4%; border-radius: 0 0 999px 999px; }
-.cihaz3b.saat .kordon.alt::after { top: 0; height: 10%; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0)); }
-/* Üst uçta çelik pim, alt uçta dört delik */
-.cihaz3b.saat .kordon i { position: absolute; left: 50%; transform: translateX(-50%); border-radius: 999px; }
-.cihaz3b.saat .pim { top: 10%; width: 16%; height: 6%; background: linear-gradient(180deg, #A9B0BA, #6E7682 55%, #474E58); box-shadow: 0 1px 1px rgba(0,0,0,.6); }
-.cihaz3b.saat .kordon.alt i { width: 26%; height: 5%; background: #090B0E; box-shadow: inset 0 1px 1px rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.07); }
-.cihaz3b.saat .kordon.alt i:nth-child(1) { top: 50%; }
-.cihaz3b.saat .kordon.alt i:nth-child(2) { top: 60%; }
-.cihaz3b.saat .kordon.alt i:nth-child(3) { top: 70%; }
-.cihaz3b.saat .kordon.alt i:nth-child(4) { top: 80%; }
+.cihaz3b.saat .ekran img { object-fit: cover; }
+[dir="rtl"] .saat-cizim .saat-govde { transform: scaleX(-1); }
+[dir="rtl"] .cihaz3b.saat .ekran { left: 30.165%; top: 17.140%; transform: matrix(0.8889, 0.0009, 0.0522, 1.0269, 0, 0); }
 
 /* Cihazlar ekrana girince eğimleri düzelerek yerine oturuyor — ve **orada kalıyor**.
    Eskiden kaydırmaya bağlıydı (`view()`), geri kaydırınca yeniden eğiliyorlardı
@@ -1246,16 +1261,16 @@ html:has(.slaytlar) body::before {
 .cihaz3b.beliren { opacity: 0; }
 .cihaz3b.tablet.beliren { transform: rotateY(26deg) rotateX(8deg) rotateZ(-3deg) translate3d(30px, 30px, -60px); }
 .cihaz3b.telefon.beliren { transform: rotateY(-22deg) rotateX(7deg) rotateZ(4deg) translate3d(-24px, 34px, 20px); }
-.cihaz3b.saat.beliren { transform: rotateY(-18deg) rotateX(6deg) rotateZ(8deg) translate3d(-20px, 40px, 50px); }
+.cihaz3b.saat.beliren { transform: rotateY(-10deg) rotateX(6deg) rotateZ(5deg) translate3d(-20px, 40px, 50px); }
 .cihaz3b.beliren.belirdi { opacity: 1; transition: opacity .9s ease, transform .9s cubic-bezier(.22,.7,.2,1); }
 .cihaz3b.tablet.beliren.belirdi { transform: rotateY(17deg) rotateX(14deg) rotateZ(-2deg) translateZ(-30px); }
 .cihaz3b.telefon.beliren.belirdi { transform: rotateY(-13deg) rotateX(14deg) rotateZ(3deg) translateZ(60px); transition-delay: .12s; }
-.cihaz3b.saat.beliren.belirdi { transform: rotateY(-9deg) rotateX(12deg) rotateZ(5deg) translateZ(90px); transition-delay: .24s; }
+.cihaz3b.saat.beliren.belirdi { transform: rotateY(4deg) rotateX(4deg) translateZ(90px); transition-delay: .24s; }
 @media (prefers-reduced-motion: reduce) {
   .cihaz3b.beliren { opacity: 1; }
   .cihaz3b.tablet.beliren { transform: rotateY(17deg) rotateX(14deg) rotateZ(-2deg) translateZ(-30px); }
   .cihaz3b.telefon.beliren { transform: rotateY(-13deg) rotateX(14deg) rotateZ(3deg) translateZ(60px); }
-  .cihaz3b.saat.beliren { transform: rotateY(-9deg) rotateX(12deg) rotateZ(5deg) translateZ(90px); }
+  .cihaz3b.saat.beliren { transform: rotateY(4deg) rotateX(4deg) translateZ(90px); }
 }
 /* Telefonda cihazlar küçücük kalıyor ve ekran görüntüleri okunmuyordu (Ali, 12 Eylül
    2026). Dar ekranda eğim kalkıyor, cihazlar büyüyor ve bindirme azalıyor: ekranlar
@@ -1264,10 +1279,10 @@ html:has(.slaytlar) body::before {
   .sahne3b { gap: 0; perspective: 900px; align-items: flex-end; }
   .cihaz3b.tablet, .cihaz3b.tablet.beliren.belirdi { transform: rotateX(16deg) rotateY(14deg) rotateZ(-3deg); }
   .cihaz3b.telefon, .cihaz3b.telefon.beliren.belirdi { transform: rotateX(16deg) rotateY(-12deg) rotateZ(3deg) translateZ(30px); }
-  .cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateX(12deg) rotateY(-10deg) rotateZ(5deg) translateZ(40px); }
+  .cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateY(4deg) rotateX(4deg) translateZ(40px); }
   .cihaz3b.tablet { width: 56%; }
   .cihaz3b.telefon { width: 31%; margin-inline-start: -1.1rem; margin-bottom: 0; }
-  .cihaz3b.saat { width: 18%; margin-inline-start: -1.5rem; margin-bottom: -.5rem; }
+  .cihaz3b.saat { width: 21%; margin-inline-start: -1.4rem; margin-bottom: -.5rem; }
   .cihaz3b figcaption { font-size: .75rem; margin-top: .7rem; }
   .cihaz3b.telefon .govde::before,
   .cihaz3b.telefon .govde::after { display: none; }   /* yan düğmeler bu boyutta lekeye dönüşüyor */
@@ -1771,20 +1786,29 @@ html:has(.slaytlar) body::before {
 .rapor-sahne .tel3b { width: 56%; margin-inline: auto; --rx: 14deg; --ry: -18deg; --rz: 5deg; }
 .rapor-kart {
   position: absolute; width: 60%; margin: 0; z-index: 2;
-  background: color-mix(in srgb, var(--card) 92%, transparent);
+  background: color-mix(in srgb, var(--sahne-kart) 92%, transparent);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  border: 1px solid var(--line); border-radius: 16px; padding: .8rem .95rem;
-  box-shadow: 0 18px 40px rgba(15,30,51,.18); font-size: .8rem; line-height: 1.4;
+  border: 1px solid var(--sahne-kenar); border-radius: 16px; padding: .8rem .95rem;
+  box-shadow: 0 18px 40px var(--sahne-golge); font-size: .8rem; line-height: 1.4;
 }
 .rapor-kart p { margin: 0 0 .45rem; font-weight: 600; font-size: .72rem; color: var(--ink-3); letter-spacing: .02em; }
 .rapor-kart ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .45rem; }
 .rapor-kart li { position: relative; padding-inline-start: 1.45rem; }
 .rapor-kart li::before {
   content: ""; position: absolute; inset-inline-start: 0; top: .1rem; width: 1rem; height: 1rem; border-radius: 50%;
-  background: var(--ink) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+  background: var(--ink);
 }
-.rapor-kart.daha li::before {
-  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='none' stroke='%23334' stroke-width='1.4'/%3E%3Cpath d='M5.5 10.5l5-5M6.5 5.5h4v4' fill='none' stroke='%23334' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+/* Onay işareti ve ok ayrı katmanda, rengi temadan (gece temasında zemin açık, işaret koyu) */
+.rapor-kart li::after {
+  content: ""; position: absolute; inset-inline-start: 0; top: .1rem; width: 1rem; height: 1rem; background: var(--onay-isaret);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-5' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 100% no-repeat;
+}
+.rapor-kart.daha li::before { background: transparent; }
+.rapor-kart.daha li::after {
+  background: var(--ink-2);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='none' stroke='black' stroke-width='1.4'/%3E%3Cpath d='M5.5 10.5l5-5M6.5 5.5h4v4' fill='none' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='none' stroke='black' stroke-width='1.4'/%3E%3Cpath d='M5.5 10.5l5-5M6.5 5.5h4v4' fill='none' stroke='black' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
 }
 .rapor-kart.iyi { inset-inline-start: -6%; top: 16%; transform: rotate(-2.5deg) translateZ(0); }
 .rapor-kart.daha { inset-inline-end: -8%; bottom: 12%; transform: rotate(2deg); }
@@ -1870,8 +1894,8 @@ html:has(.slaytlar) body::before {
 .tanima { margin: clamp(1.5rem, 4vw, 2.5rem) auto 0; max-width: 30rem; display: grid; gap: 1.1rem; }
 .tanima-sorular { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; justify-items: start; }
 .tanima-sorular li {
-  background: var(--card); border: 1px solid var(--line); border-radius: 14px 14px 14px 4px;
-  padding: .55rem .85rem; font-size: .9rem; text-align: start; box-shadow: 0 6px 16px rgba(15,30,51,.07);
+  background: var(--sahne-kart); border: 1px solid var(--sahne-kenar); border-radius: 14px 14px 14px 4px;
+  padding: .55rem .85rem; font-size: .9rem; text-align: start; box-shadow: 0 6px 16px var(--sahne-golge-2);
 }
 .tanima-sorular li:nth-child(even) { justify-self: end; border-radius: 14px 14px 4px 14px; }
 .tanima.beliren .tanima-sorular li { transition: opacity .5s ease calc(var(--i) * .45s), translate .5s cubic-bezier(.2,.8,.2,1) calc(var(--i) * .45s); }
@@ -1880,12 +1904,12 @@ html:has(.slaytlar) body::before {
 .sadelik p { margin: 0; font-size: .85rem; color: var(--ink-2); }
 .sadelik-anahtar {
   position: relative; display: grid; grid-template-columns: repeat(3, 1fr); padding: 4px;
-  border-radius: 999px; background: var(--line-soft); border: 1px solid var(--line); min-width: min(100%, 22rem);
+  border-radius: 999px; background: var(--line-soft); border: 1px solid var(--sahne-kenar); min-width: min(100%, 22rem);
 }
 .sadelik-anahtar span { position: relative; z-index: 1; text-align: center; padding: .45rem .8rem; font-size: .85rem; font-weight: 600; color: var(--ink-2); white-space: nowrap; }
 .sadelik-anahtar i {
   position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 8px) / 3); border-radius: 999px;
-  background: var(--card); box-shadow: 0 2px 8px rgba(15,30,51,.16); translate: 100% 0;
+  background: var(--secili-zemin); box-shadow: 0 2px 8px var(--sahne-golge), inset 0 0 0 1px var(--sahne-kenar); translate: 100% 0;
 }
 [dir="rtl"] .sadelik-anahtar i { left: auto; right: 4px; translate: -100% 0; }
 @media (prefers-reduced-motion: no-preference) {
@@ -1904,11 +1928,11 @@ html:has(.slaytlar) body::before {
 .kart-duzlem ul { list-style: none; margin: 0 auto; padding: 0; display: grid; gap: .6rem; max-width: 24rem; transform-style: preserve-3d; }
 .tkart {
   position: relative; transform-style: preserve-3d; color: var(--ink);
-  background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: .7rem .85rem;
+  background: var(--sahne-kart); border: 1px solid var(--sahne-kenar); border-radius: 16px; padding: .7rem .85rem;
   transform: translateZ(14px);
 }
 .tkart::before {   /* düzleme düşen gölge */
-  content: ""; position: absolute; inset: 8% 3% 0; border-radius: inherit; background: rgba(15,30,51,.3);
+  content: ""; position: absolute; inset: 8% 3% 0; border-radius: inherit; background: var(--sahne-golge);
   filter: blur(9px); transform: translateZ(-14px) translateY(4px); pointer-events: none;
 }
 .tkart::after {    /* seçili kartın dolgusu: uygulamadaki gibi koyu mavi (breathCardGradient) */
@@ -1991,9 +2015,9 @@ html:has(.slaytlar) body::before {
 /* --- Programlar: 28 gün bir halkada. Dolu günler, aksayan gün kesik çizgili, bugün parlak. --- */
 .program-halka { position: relative; width: min(100%, 17rem); margin-inline: auto; }
 .program-halka svg { display: block; width: 100%; height: auto; overflow: visible; }
-.program-halka circle { fill: var(--line-soft); stroke: var(--line); stroke-width: 1; }
+.program-halka circle { fill: var(--bos-nokta); stroke: var(--bos-kenar); stroke-width: 1; }
 .program-halka circle.dolu { fill: var(--breath); stroke: none; }
-.program-halka circle.bos { fill: none; stroke: color-mix(in srgb, var(--ink-3) 60%, transparent); stroke-dasharray: 2.5 2.5; }
+.program-halka circle.bos { fill: none; stroke: var(--ink-3); stroke-dasharray: 2.5 2.5; }
 .program-halka circle.bugun { fill: var(--card); stroke: var(--glow); stroke-width: 3; filter: drop-shadow(0 0 6px var(--glow)); }
 .ph-orta { position: absolute; inset: 22%; display: grid; place-content: center; text-align: center; gap: .3rem; }
 .ph-orta strong { font-family: var(--display); font-size: clamp(.95rem, .85rem + .4vw, 1.15rem); line-height: 1.2; }
@@ -2009,7 +2033,7 @@ html:has(.slaytlar) body::before {
    açık gri daire; kilometre taşına ulaşılan günün köşesinde taşın renginde bayrak (`DurakBayragi`,
    SF Symbols flag.fill) ve hücrede ince nane halka; altında ulaşılan taşlar sayı rozetiyle. --- */
 .seri-takvim { margin: 0 auto; width: 100%; max-width: 21rem; }
-.takvim-kart { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 1.1rem 1.1rem 1.2rem; box-shadow: var(--shadow); }
+.takvim-kart { background: var(--sahne-kart); border: 1px solid var(--sahne-kenar); border-radius: 22px; padding: 1.1rem 1.1rem 1.2rem; box-shadow: var(--shadow); }
 .tk-gunler { display: grid; grid-template-columns: repeat(7, 1fr); gap: .45rem; }
 .tk-gunler.tk-bas { margin-bottom: .35rem; }
 .tk-gunler.tk-bas b { text-align: center; font-weight: 400; font-size: .7rem; color: var(--ink-2); }
@@ -2040,8 +2064,8 @@ html:has(.slaytlar) body::before {
 .ozet-kartlar { margin: 0 auto; width: min(100%, 31rem); display: flex; justify-content: center; align-items: center;
                 gap: clamp(.4rem, 2vw, 1.2rem); perspective: 1100px; padding-block: 1rem 1.5rem; }
 .oz-kart {
-  flex: 1 1 0; min-width: 0; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: .9rem;
-  box-shadow: 0 22px 44px rgba(15,30,51,.16), 0 4px 10px rgba(15,30,51,.08); font-size: .72rem; line-height: 1.35;
+  flex: 1 1 0; min-width: 0; background: var(--sahne-kart); border: 1px solid var(--sahne-kenar); border-radius: 18px; padding: .9rem;
+  box-shadow: 0 22px 44px var(--sahne-golge), 0 4px 10px var(--sahne-golge-2); font-size: .72rem; line-height: 1.35;
 }
 .oz-kart.sol { transform: rotateY(24deg) rotateX(6deg); transform-origin: 100% 50%; }
 .oz-kart.sag { transform: rotateY(-24deg) rotateX(6deg); transform-origin: 0% 50%; }
@@ -2050,8 +2074,8 @@ html:has(.slaytlar) body::before {
 .oz-baslik { margin: 0 0 .65rem; font-family: var(--display); font-weight: 600; font-size: .9rem; text-align: center; }
 .oz-kutular { display: grid; grid-template-columns: repeat(3, 1fr); gap: .35rem; }
 .oz-kutular.dort { grid-template-columns: repeat(4, 1fr); margin-top: .7rem; }
-.oz-kutular span { display: grid; justify-items: center; gap: .1rem; background: color-mix(in srgb, var(--breath) 5%, var(--card));
-                   border: 1px solid var(--line); border-radius: 10px; padding: .4rem .2rem; text-align: center; }
+.oz-kutular span { display: grid; justify-items: center; gap: .1rem; background: color-mix(in srgb, var(--breath) 6%, var(--sahne-kart));
+                   border: 1px solid var(--sahne-kenar); border-radius: 10px; padding: .4rem .2rem; text-align: center; }
 .oz-kutular b { font-family: var(--display); font-size: 1rem; }
 .oz-kutular small { font-size: .58rem; color: var(--ink-2); line-height: 1.2; hyphens: auto; }
 .oz-ara { margin: .75rem 0 .35rem; font-size: .66rem; font-weight: 600; color: var(--ink-3); }
@@ -2059,13 +2083,13 @@ html:has(.slaytlar) body::before {
 .oz-gozlem li { position: relative; padding-inline-start: .9rem; }
 .oz-gozlem li::before { content: "+"; position: absolute; inset-inline-start: 0; color: var(--breath); font-weight: 700; }
 .oz-buyuk { display: grid; justify-items: center; }
-.oz-buyuk b { font-family: var(--display); font-size: 2rem; line-height: 1; background: linear-gradient(90deg, #1B6FB3, #18C1AE); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.oz-buyuk b { font-family: var(--display); font-size: 2rem; line-height: 1; background: linear-gradient(90deg, var(--vurgu-1), var(--vurgu-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; }
 .oz-buyuk small { font-size: .62rem; color: var(--ink-2); }
 .oz-hafta { display: flex; justify-content: center; gap: .3rem; margin-top: .6rem; }
 .oz-hafta span { display: grid; justify-items: center; gap: .15rem; }
-.oz-hafta small { font-size: .55rem; color: var(--ink-3); }
-.oz-hafta i { width: .7rem; height: .7rem; border-radius: 50%; background: color-mix(in srgb, var(--ink) 8%, transparent); }
-.oz-hafta .d i { background: linear-gradient(45deg, #1B6FB3, #18C1AE); }
+.oz-hafta small { font-size: .55rem; color: var(--ink-2); }
+.oz-hafta i { width: .7rem; height: .7rem; border-radius: 50%; background: var(--bos-nokta); box-shadow: inset 0 0 0 1px var(--bos-kenar); }
+.oz-hafta .d i { background: linear-gradient(45deg, var(--vurgu-1), var(--vurgu-2)); box-shadow: none; }
 @media (prefers-reduced-motion: no-preference) {
   .ozet-kartlar.beliren .oz-kart { transition: opacity .6s ease, translate .8s cubic-bezier(.2,.8,.2,1); }
   .ozet-kartlar.beliren .oz-kart.sag { transition-delay: .15s; }
@@ -2079,16 +2103,16 @@ html:has(.slaytlar) body::before {
   .oz-buyuk b { font-size: 1.6rem; }
 }
 
-/* --- Saat: telefonların olduğu yana dönük, hafif eğik (kordonu bilekte kıvrılıyor, `cihaz-saat*.png`) --- */
-.cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateY(26deg) rotateX(10deg) rotateZ(3deg) translateZ(90px); }
-.cihaz3b.saat.beliren { transform: rotateY(36deg) rotateX(14deg) rotateZ(6deg) translate3d(-20px, 40px, 50px); }
-[dir="rtl"] .cihaz3b.saat, [dir="rtl"] .cihaz3b.saat.beliren.belirdi { transform: rotateY(-26deg) rotateX(10deg) rotateZ(-3deg) translateZ(90px); }
+/* --- Saat: çizim kendi eğimiyle telefonlara dönük; CSS yalnız hafif döndürüp öne alıyor --- */
+.cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateY(4deg) rotateX(4deg) translateZ(90px); }
+.cihaz3b.saat.beliren { transform: rotateY(14deg) rotateX(10deg) rotateZ(4deg) translate3d(-20px, 40px, 50px); }
+[dir="rtl"] .cihaz3b.saat, [dir="rtl"] .cihaz3b.saat.beliren.belirdi { transform: rotateY(-4deg) rotateX(4deg) translateZ(90px); }
 @media (max-width: 40rem) {
-  .cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateY(24deg) rotateX(8deg) rotateZ(3deg) translateZ(40px); }
-  [dir="rtl"] .cihaz3b.saat, [dir="rtl"] .cihaz3b.saat.beliren.belirdi { transform: rotateY(-24deg) rotateX(8deg) rotateZ(-3deg) translateZ(40px); }
+  .cihaz3b.saat, .cihaz3b.saat.beliren.belirdi { transform: rotateY(4deg) rotateX(4deg) translateZ(40px); }
+  [dir="rtl"] .cihaz3b.saat, [dir="rtl"] .cihaz3b.saat.beliren.belirdi { transform: rotateY(-4deg) rotateX(4deg) translateZ(40px); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cihaz3b.saat.beliren { transform: rotateY(26deg) rotateX(10deg) rotateZ(3deg) translateZ(90px); }
+  .cihaz3b.saat.beliren { transform: rotateY(4deg) rotateX(4deg) translateZ(90px); }
 }
 /* Telefonda üçüncü adımın küçük halkası yeterli: büyük halka slaytı uzatıyordu */
 @media (max-width: 40rem) { #nasil .cizim.puan { display: none; } }
