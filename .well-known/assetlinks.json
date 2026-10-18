@@ -7,7 +7,8 @@
       "namespace": "android_app",
       "package_name": "app.soluklan",
       "sha256_cert_fingerprints": [
-        "A5:19:2F:B6:26:1C:9B:42:2A:43:39:8B:20:9F:86:D6:88:5E:DC:79:4F:9D:4E:20:EF:88:D1:FE:77:5B:C8:EE"
+        "A5:19:2F:B6:26:1C:9B:42:2A:43:39:8B:20:9F:86:D6:88:5E:DC:79:4F:9D:4E:20:EF:88:D1:FE:77:5B:C8:EE",
+        "0D:69:B4:1D:5C:E4:32:EA:66:A2:51:64:A7:38:81:CD:73:50:69:09:B9:A4:10:3D:E6:F7:01:18:C9:31:CB:18"
       ]
     }
   }
