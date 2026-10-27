@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Lire le rapport de ta séance","description":"Ce que veut dire chaque ligne du rapport, et quoi faire d’une mesure qui est sortie basse.","url":"https://soluklan.app/fr/guide/lire-le-rapport.html","inLanguage":"fr","image":"https://soluklan.app/assets/paylasim/fr/lire-le-rapport-8fe3c61540.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/fr/guide/lire-le-rapport.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Utilisation","dateModified":"2026-10-10T19:39:26+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/fr/guide/"},{"@type":"ListItem","position":2,"name":"Utilisation","item":"https://soluklan.app/fr/guide/sujet/utilisation.html"},{"@type":"ListItem","position":3,"name":"Lire le rapport de ta séance","item":"https://soluklan.app/fr/guide/lire-le-rapport.html"}]}</script>
 <script>
@@ -149,6 +149,7 @@
 <p><strong>Niveau de pic de l’expiration.</strong> Le point le plus haut de ton expiration et le <a href="/fr/guide/comment-le-micro-ecoute.html">plancher de bruit</a> de la pièce. Quelque chose comme « 20 dB au-dessus du plancher (plancher -66 dBFS) ».</p>
 <p>C’est la ligne la plus utile. <strong>Si l’écart est inférieur à 10 dB</strong>, ton expiration reste trop discrète pour être entendue : rapproche l’appareil. <strong>Si l’écart dépasse 40 dB</strong>, tu forces le souffle : laisse-le partir, ne le pousse pas.</p>
 <p><strong>Variation à l’intérieur de l’expiration.</strong> De combien le son a bougé pendant l’expiration. Un petit nombre veut dire une expiration stable ; un grand, une expiration hachée ou râpeuse.</p>
+<p><strong>La pièce a été remesurée.</strong> Le plancher de bruit est <a href="/fr/guide/comment-le-micro-ecoute.html">remesuré</a> pendant la séance. S’il a nettement bougé au cours de la séance, par exemple parce qu’un climatiseur s’est mis en marche au milieu, cette ligne indique le plancher mesuré au début et à la fin.</p>
 <h2>Les composantes</h2>
 <p>Les mesures qui composent le score, chacune sur cent. Regarder laquelle est basse te dit sur quoi travailler.</p>
 <p><strong>Si l’accord avec le rythme est bas</strong>, tes expirations partent en retard ou en avance sur le cercle. La correction : attends le moment où le cercle commence à rétrécir, et n’essaie pas de compter.</p>
@@ -159,6 +160,12 @@
 <p><strong>Si le volume du souffle est bas</strong>, tu expires soit trop discrètement, soit trop fort. La ligne de niveau de pic ci-dessus te dit laquelle des deux.</p>
 <p><strong>Si l’achèvement est bas</strong>, tu n’as pas terminé la séance. Prends une durée plus courte la prochaine fois.</p>
 <p>Dans trois techniques, le son fait partie de la technique, et il y a une composante de plus : <strong>Bourdonnement</strong> dans le <a href="/fr/guide/souffle-de-labeille.html">souffle de l’abeille</a>, <strong>Son de l’océan</strong> dans le <a href="/fr/guide/souffle-de-locean.html">souffle de l’océan</a>, <strong>Sifflement</strong> dans le <a href="/fr/guide/souffle-rafraichissant.html">souffle rafraîchissant</a>. Cette composante mesure le son propre à la technique et pèse lourd dans le score. Une expiration ordinaire, soufflée ou bruyante, ne compte ni comme bourdonnement ni comme son de l’océan. Si elle est basse, essaie de garder le son égal du début à la fin.</p>
+<h2>Les parties de la séance</h2>
+<p>Dans les séances de plus de deux minutes, <strong>Rapport détaillé</strong> contient une partie <strong>Les parties de la séance</strong>. La séance y est découpée en plusieurs parties, et chacune est notée à part, d’après ses propres mesures.</p>
+<p>S’il y a une différence nette entre les parties, une courte phrase apparaît en haut, comme « Au début ton rythme était en place, vers la fin il s’est défait. » ou « Dans la dernière partie, tes expirations ont raccourci. »</p>
+<p>Le score en haut n’est pas la moyenne des parties, il est calculé sur toute la séance. Les parties sont là pour que tu voies ce qui s’est passé à chaque moment de la séance.</p>
+<p>Sur l’interface Avancée, les valeurs de chaque partie sont aussi écrites dans les lignes techniques : le score de la partie, l’accord avec le rythme, le nombre d’expirations entendues, la durée moyenne des expirations et, dans les techniques avec rétention, le nombre de rétentions propres.</p>
+<p>Sur l’interface Simple, les parties n’apparaissent pas.</p>
 <h2>Le niveau sonore</h2>
 <p>Sur l’interface Avancée, sous les composantes, il y a un graphique : le <strong>niveau sonore</strong> entendu par le micro pendant la séance.</p>
 <p>Deux lignes en pointillé le traversent. La plus basse est le <a href="/fr/guide/comment-le-micro-ecoute.html">plancher de bruit</a> de la pièce, la plus haute est le <strong>seuil</strong> qu’un son doit dépasser pour compter comme expiration. Les pics sont tes souffles : chaque pic au-dessus du seuil est une expiration que le rapport a entendue.</p>
@@ -179,7 +186,7 @@
 <p>Si tu as mis la séance en pause plusieurs fois, une note distincte à ce sujet apparaît aussi.</p>
 <h2>Ce que tu vois sur l’interface Simple</h2>
 <p>Si ton <a href="/fr/guide/niveaux-dinterface.html">niveau d’interface</a> est Simple, le rapport se réduit à une seule phrase. Pour voir chaque mesure, règle <strong>Interface</strong> sur Standard ou Avancée dans les Réglages.</p>
-    <aside class="indir"><p>Soluklan est une app gratuite d’exercices de respiration : le micro écoute ta respiration et montre à quel point tu suis le rythme.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-raporu-okumak&amp;mt=8"><img src="/assets/rozetler/app-store-fr.svg?v=efe192af" alt="Télécharger dans l’App Store" width="127" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan est une app gratuite d’exercices de respiration : le micro écoute ta respiration et montre à quel point tu suis le rythme.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-raporu-okumak&amp;mt=8"><img src="/assets/rozetler/app-store-fr.svg?v=efe192af" alt="Télécharger dans l’App Store" width="127" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=fr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-raporu-okumak"><img src="/assets/rozetler/google-play-fr.svg?v=429d4c53" alt="Disponible sur Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/fr/guide/sujet/utilisation.html">&#8592; Utilisation</a></p>
   </div>
 </article>
@@ -192,10 +199,11 @@
       <a href="/fr/guide/">Guide</a>
       <a href="/fr/confidentialite.html">Confidentialité</a>
       <a href="/fr/accessibilite.html">Accessibilité</a>
+      <a href="/fr/nouveautes.html">Nouveautés</a>
       <a href="/fr/aide.html">Aide</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple et le logo Apple sont des marques d’Apple Inc., déposées aux États-Unis et dans d’autres pays. App Store est une marque de service d’Apple Inc.</p>
+    <p class="marka-notu">Apple et le logo Apple sont des marques d’Apple Inc., déposées aux États-Unis et dans d’autres pays. App Store est une marque de service d’Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
   </div>
 </footer>
 <script>

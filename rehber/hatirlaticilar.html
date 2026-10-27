@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Hatırlatıcılar ve bildirimler","description":"Günlük hatırlatıcı, seri uyarısı, tekniğe özel bildirimler, bildirimlerin tonu, sessiz saatler, tatil modu ve günlük sınır. Her birinin ne yaptığı ve nasıl ayarlandığı.","url":"https://soluklan.app/rehber/hatirlaticilar.html","inLanguage":"tr","image":"https://soluklan.app/assets/paylasim/tr/hatirlaticilar-33b5942991.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/rehber/hatirlaticilar.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Nasıl kullanılır","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Rehber","item":"https://soluklan.app/rehber/"},{"@type":"ListItem","position":2,"name":"Nasıl kullanılır","item":"https://soluklan.app/rehber/konu/nasil-kullanilir.html"},{"@type":"ListItem","position":3,"name":"Hatırlatıcılar ve bildirimler","item":"https://soluklan.app/rehber/hatirlaticilar.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Hatırlatıcılar ve bildirimler</h1>
     <p class="lede">Günlük hatırlatıcı, seri uyarısı, tekniğe özel bildirimler, bildirimlerin tonu, sessiz saatler, tatil modu ve günlük sınır. Her birinin ne yaptığı ve nasıl ayarlandığı.</p>
     <p class="updated">8 dakikalık okuma</p>
+<div class="platform-sec" role="group" aria-label="Cihazını seç" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone ve iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Bildirimlerin tamamı <strong>Profil → Ayarlar → Bildirim seçenekleri</strong> altında. Hepsi cihazında planlanıyor: sunucudan bildirim gönderilmiyor.</p>
 <h2>Günlük hatırlatıcı</h2>
 <p>En temel hatırlatıcı bu. Haftanın her günü için ayrı saat seçebiliyorsun, bir güne birden çok saat de ekleyebiliyorsun. Bir günü boş bırakırsan o gün hatırlatma gelmiyor.</p>
@@ -141,6 +171,9 @@
 <h2>Seri uyarısı</h2>
 <p>Serin tehlikedeyken, yani o gün henüz seans yapmadıysan ve gün bitmek üzereyken gelen uyarı. <strong>İlk uyarı saatini</strong> kendin seçiyorsun.</p>
 <p>Seri kalkanın o günü koruyacaksa uyarı gelmiyor. Serin bozulduysa onarım süresinin ilk günü, son günü ve süre uzunsa bir kez de ortasında <a href="/rehber/seri-ve-kilometre-taslari.html">onarımı</a> hatırlatan bir bildirim geliyor. Bu günlerde, günlük hatırlatıcın varsa onun yerine geliyor. Seri uyarısını kapatırsan onarım bildirimleri de gelmiyor.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Android'de bir de gün sonu sayacı var: o gün henüz seans yapmadıysan akşam gece yarısına geri sayan bir bildirim çıkıyor ve serin ya da kalkanın için ne kadar zaman kaldığını gösteriyor. Seansı yapınca kendiliğinden kalkıyor. <strong>Hemen başla</strong> hızlı başlatmayı açıyor. Bildirimi kaydırıp kapatırsan o gün bir daha çıkmıyor. Hiç görmek istemiyorsan bildirim ayarlarındaki <strong>Gün sonu sayacı</strong> anahtarını kapat.</p>
+</div>
 <p>Uyarının tekrarı da ayrı bir seçenek: tek uyarı, saatte bir ya da beş dakikaya kadar inen aralıklarla. Seansı yapınca tekrar duruyor.</p>
 <p>Bu uyarı varsayılan olarak <strong>günlük sınırın dışında</strong>: sınır dolu diye serini kaybetmeyesin. İstersen sınıra dahil edebiliyorsun.</p>
 <h2>Tekniğe özel bildirimler</h2>
@@ -160,7 +193,7 @@
 <p>Rahatsız edilmek istemediğin aralık. Bu saatlerde uygulamanın kendi önerdiği bildirimler gelmiyor.</p>
 <p>Kendi kurduğun bir hatırlatma sessiz saatlere denk geliyorsa uygulama bunu gösteriyor ama o hatırlatma yine geliyor: saatini sen seçtin.</p>
 <h2>Uzun süre ara verirsen</h2>
-<p>Bir süre seans yapmazsan geri dönmeni hatırlatan ayrı bir bildirim başlıyor. Ne sıklıkla geleceğini sen seçiyorsun: günde birden haftada bire kadar. İstemiyorsan kapatılıyor.</p>
+<p>Serin bozulunca bildirimler geri dönüş mesajına dönüşüyor. Günlük hatırlatıcın yine kendi saatinde geliyor, bu kez seni geri çağırıyor. Hatırlatıcın yoksa uygulama gün içinde kendisi hatırlatıyor. Bir seans yapınca bildirimler eski hâline dönüyor.</p>
 <p>Uzun süre hiç seans yapmazsan bildirimler tamamen duruyor, bir seans yapınca yeniden başlıyor.</p>
 <h2>Günlük bildirim sınırı</h2>
 <p>Günde en fazla kaç bildirim gelebileceğini sen belirliyorsun. Sınır doluysa yeni bir bildirim türü açmaya çalıştığında uygulama uyarıyor ve <strong>"Sınırı 2 yap ve aç"</strong> gibi tek dokunuşluk bir çözüm sunuyor.</p>
@@ -170,9 +203,15 @@
 <p>Ayarların altında son gönderilen bildirimler metni ve saatiyle listeleniyor. Bir bildirimi kaçırdıysan ya da ne zaman geldiğini merak ediyorsan buraya bak.</p>
 <h2>Ayarları sıfırlamak</h2>
 <p>Kurcalaya kurcalaya karıştırdıysan <strong>Bildirim ayarlarını sıfırla</strong> hepsini başlangıç hâline döndürüyor: saatler, sınır, sessiz saatler ve kendi yazdığın metinler dahil.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Android'de izin ve pil ayarları</h2>
+<p>Android 13 ve sonrasında bildirim göstermek için izin gerekiyor. Uygulama bu izni tanıma testinin sonunda ve bildirimleri açtığında soruyor. İzni vermediysen <strong>Android Ayarlar → Uygulamalar → Soluklan → Bildirimler</strong>'den açabilirsin.</p>
+<p>Bazı üreticiler pili korumak için arka plandaki uygulamaları kısıtlıyor: Samsung, Xiaomi, Huawei, Oppo, OnePlus ve başkaları. Bu kısıtlama hatırlatıcıları geciktirebiliyor ya da hiç göstermeyebiliyor. Hatırlatıcıların zamanında gelmesi için Soluklan'ı pil optimizasyonunun dışında tut: <strong>Ayarlar → Uygulamalar → Soluklan → Pil</strong> altında <strong>Kısıtlamasız</strong> ya da <strong>Optimize edilmemiş</strong> seçeneğini seç. Menülerin adı markaya ve Android sürümüne göre değişiyor. Bulamazsan Ayarlar'ın arama kutusuna "pil" yaz.</p>
+<p>Android 12 ve sonrasında sistem pili korumak için hatırlatıcıları birkaç dakika geciktirebiliyor. Bu kadarlık bir kayma normal.</p>
+</div>
 <h2>Hiç bildirim istemiyorsan</h2>
 <p>Hepsini kapatabilirsin. Uygulama bildirim olmadan da tamamen çalışıyor; seri, programlar ve <a href="/rehber/seri-ve-kilometre-taslari.html">kilometre taşları</a> aynen işliyor.</p>
-    <aside class="indir"><p>Soluklan ücretsiz bir nefes egzersizi uygulaması: mikrofon nefesini dinler ve ritme ne kadar uyduğunu gösterir.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/tr/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-tr.svg?v=6aee7c3d" alt="App Store&#x27;dan indir" width="151" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan ücretsiz bir nefes egzersizi uygulaması: mikrofon nefesini dinler ve ritme ne kadar uyduğunu gösterir.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/tr/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-tr.svg?v=6aee7c3d" alt="App Store&#x27;dan indir" width="151" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=tr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-tr.svg?v=805b69aa" alt="Google Play&#x27;den indir" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/rehber/konu/nasil-kullanilir.html">&#8592; Nasıl kullanılır</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/rehber/">Rehber</a>
       <a href="/gizlilik.html">Gizlilik</a>
       <a href="/erisilebilirlik.html">Erişilebilirlik</a>
+      <a href="/yenilikler.html">Yenilikler</a>
       <a href="/destek.html">Destek</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple ve Apple logosu, Apple Inc.'in ABD'de ve diğer ülkelerde tescilli ticari markalarıdır. App Store, Apple Inc.'in hizmet markasıdır.</p>
+    <p class="marka-notu">Apple ve Apple logosu, Apple Inc.'in ABD'de ve diğer ülkelerde tescilli ticari markalarıdır. App Store, Apple Inc.'in hizmet markasıdır. Google Play ve Google Play logosu, Google LLC'nin ticari markalarıdır.</p>
   </div>
 </footer>
 <script>

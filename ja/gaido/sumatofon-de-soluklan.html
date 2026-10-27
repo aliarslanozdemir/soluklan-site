@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"スマートフォンでSoluklan","description":"スマートフォンはアプリの中心となるデバイスで、測定がいちばん正確です。どこに何があるか、マイクがどこを向いているか、データがどこに保存されるか。","url":"https://soluklan.app/ja/gaido/sumatofon-de-soluklan.html","inLanguage":"ja","image":"https://soluklan.app/assets/paylasim/ja/sumatofon-de-soluklan-cb2391ae1e.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ja/gaido/sumatofon-de-soluklan.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"デバイス","dateModified":"2026-10-11T12:48:52+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ガイド","item":"https://soluklan.app/ja/gaido/"},{"@type":"ListItem","position":2,"name":"デバイス","item":"https://soluklan.app/ja/gaido/tema/debaisu.html"},{"@type":"ListItem","position":3,"name":"スマートフォンでSoluklan","item":"https://soluklan.app/ja/gaido/sumatofon-de-soluklan.html"}]}</script>
 <script>
@@ -131,24 +131,78 @@
     <h1>スマートフォンでSoluklan</h1>
     <p class="lede">スマートフォンはアプリの中心となるデバイスで、測定がいちばん正確です。どこに何があるか、マイクがどこを向いているか、データがどこに保存されるか。</p>
     <p class="updated">約5分で読めます</p>
+<div class="platform-sec" role="group" aria-label="デバイスを選ぶ" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhoneとiPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Soluklanは3つのデバイスで動きますが、3つで同じことが起きるわけではありません。スマートフォンは測定がいちばん正確な場所です。マイクが口にいちばん近いのがここだからです。</p>
 <h2>マイクの位置</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
 <p>iPhoneの通話用マイクは<strong>下端</strong>、充電口の横にあります。スマートフォンを机に置くなら、画面を上にして、下端を自分のほうへ向けてください。手で持つなら20〜30センチ離せば十分です。口に押し当てないでください。そうすると息の音が割れて、アプリが「近すぎます」と知らせます。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Androidスマートフォンでは、マイクの位置がメーカーや機種によって違います。多くは通話用マイクが<strong>下端</strong>、充電口の横にあり、上端にある機種もあります。スマートフォンの説明書や、側面の小さな穴で位置を確かめられます。</p>
+<p>スマートフォンは口と鼻から<strong>10〜15センチ</strong>離して持ち、マイクのある側を自分のほうへ向けてください。口に押し当てないでください。そうすると息の音が割れて、アプリが「近すぎます」と知らせます。</p>
+<p>スマートフォンによっては、音をアプリに渡す前に処理するものがあります。ノイズを抑えたり、音量を自動で上げたりします。この処理で息の音まで小さくなることがあります。アプリはスマートフォンが提供するいちばん処理の少ない音を使っています。そのため、同じ距離でも2台の違うスマートフォンでは、息の音の大きさが違って聞こえることがあります。</p>
+</div>
 <p>吐く息が聞き取れないとき、原因はたいてい<a href="/ja/gaido/kokyu-ga-kikoenai-toki.html">距離、部屋、または呼吸法そのもの</a>にあります。マイクも<a href="/ja/gaido/maiku-no-kikitorikata.html">まず部屋の静けさを測り、それに合わせてしきい値を決めています</a>。</p>
 <h2>スマートフォンでできること</h2>
 <p>アプリのすべてがここにあります。ホーム画面の中央に「はじめる」ボタンがあり、その下に連続記録とセッション数があります。<a href="/ja/gaido/apuri-no-gamen-ido.html">どのアイコンがどこを開くか</a>は別の記事で説明しています。「はじめる」を押すと、まず<a href="/ja/gaido/kokyuho-to-jikan-no-erabikata.html">呼吸法と長さを選び</a>、次に<a href="/ja/gaido/sesshon-gamen.html">セッション画面</a>が開きます。円、音の波形、必要なときの短いお知らせはそこに表示されます。</p>
 <p>セッションが終わるとすぐにレポートが出ます。レポートでは<a href="/ja/gaido/repoto-no-yomikata.html">各行の意味</a>がわかり、<a href="/ja/gaido/sukoa-no-keisan.html">スコアの組み立て方も別の記事</a>にあります。時間とともにたまっていくもの、つまり<a href="/ja/gaido/rireki-matome-jisseki.html">履歴、週間まとめ、実績</a>と<a href="/ja/gaido/renzoku-kiroku-to-mairusuton.html">連続記録とマイルストーン</a>は、プロフィール画面にまとまっています。</p>
 <p>規則正しく続けたいなら<a href="/ja/gaido/puroguramu-no-hajimekata.html">プログラムを組めます</a>。忘れてしまいそうなら<a href="/ja/gaido/rimainda-to-tsuchi.html">リマインダーを設定できます</a>。</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
 <p>アプリを開かずに確かめたいときは、<a href="/ja/gaido/wijetto-to-raibu-akutibiti.html">ウィジェットとライブアクティビティ</a>が役に立ちます。どちらもスマートフォンとタブレットだけにあります。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>アプリを開かずに確かめたいときは、ホーム画面にSoluklanのウィジェットを追加できます。ウィジェットには連続記録が表示され、タップすると呼吸法の選択画面でアプリが開きます。</p>
+</div>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
 <h2>消音モード、イヤホン、着信</h2>
 <p>スマートフォンが消音モードのときは呼吸とカウントダウンの音は鳴りませんが、振動と画面は変わりません。イヤホンをつないでいると、マイクがイヤホンのマイクに切り替わることがあります。そうなると距離が変わるため測定も変わるので、イヤホンは外すのがいちばんです。セッション中に着信があるとセッションは一時停止し、通話のあとに一時停止メニューからサイクルをやり直します。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>振動</h2>
+<p><strong>セッションのリズム振動</strong>がオンのときは、リズムがスマートフォンの振動でも伝えられます。振動の感じ方はスマートフォンによって違います。ハイエンドのスマートフォンでは細かくはっきりした振動になり、手頃な価格のスマートフォンでは粗く感じられます。振動が弱かったりはっきりしなかったりするときは、画面の円でリズムを追ってください。</p>
+</div>
 <h2>アプリを離れたとき</h2>
 <p>アプリを離れたり画面をロックしたりすると、セッションは一時停止します。戻ると一時停止メニューが開いていて、そこからサイクルをやり直します。測定はバックグラウンドでは続かず、アプリはバックグラウンドでマイクをオンにしたままにしません。</p>
 <h2>データの保存場所</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
 <p>セッション履歴はデバイスと自分のiCloudアカウントに保存されます。同じAppleアカウントで開いたiPadにも表示されます。詳しくは<a href="/ja/gaido/deta-no-kanri.html">データの管理</a>の記事で。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>セッション履歴、連続記録、設定はスマートフォンに保存されます。Androidの自動バックアップがこれらをGoogleアカウントにバックアップするので、新しいAndroidスマートフォンに移るとバックアップと一緒に戻ってきます。iCloudは使いません。</p>
+<p>履歴はiPhoneとAndroidのあいだでは移りません。iPhoneからAndroidに移った場合や両方を使う場合は、それぞれのデバイスが自分の履歴を持ちます。</p>
+</div>
 <h2>タブレットで変わること</h2>
 <p>タブレットでは測定が難しくなります。<a href="/ja/gaido/taburetto-de-soluklan.html">タブレットではマイクの位置もレイアウトも変わります</a>。</p>
-    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ja&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-telefonda"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ja/gaido/tema/debaisu.html">&#8592; デバイス</a></p>
   </div>
 </article>
@@ -161,10 +215,11 @@
       <a href="/ja/gaido/">ガイド</a>
       <a href="/ja/puraibashi.html">プライバシー</a>
       <a href="/ja/akusesibiriti.html">アクセシビリティ</a>
+      <a href="/ja/koshin-rireki.html">更新履歴</a>
       <a href="/ja/sapoto.html">サポート</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。</p>
+    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。 Google Play および Google Play ロゴは Google LLC の商標です。</p>
   </div>
 </footer>
 <script>

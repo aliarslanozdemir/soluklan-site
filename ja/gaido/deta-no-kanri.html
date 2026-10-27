@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"データの管理","description":"何がどこに保存されているか、デバイス間で何が同期されるか、共有の選択肢、すべてを削除する方法。","url":"https://soluklan.app/ja/gaido/deta-no-kanri.html","inLanguage":"ja","image":"https://soluklan.app/assets/paylasim/ja/deta-no-kanri-1c7b4175ce.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ja/gaido/deta-no-kanri.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"使い方","dateModified":"2026-10-10T19:29:52+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ガイド","item":"https://soluklan.app/ja/gaido/"},{"@type":"ListItem","position":2,"name":"使い方","item":"https://soluklan.app/ja/gaido/tema/tsukaikata.html"},{"@type":"ListItem","position":3,"name":"データの管理","item":"https://soluklan.app/ja/gaido/deta-no-kanri.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>データの管理</h1>
     <p class="lede">何がどこに保存されているか、デバイス間で何が同期されるか、共有の選択肢、すべてを削除する方法。</p>
     <p class="updated">約5分で読めます</p>
+<div class="platform-sec" role="group" aria-label="デバイスを選ぶ" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhoneとiPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>アプリが保存しているものがどこにあるのか、何を自分で管理できるのかをまとめます。</p>
 <h2>デバイスに保存されるデータ</h2>
 <p>セッションの概要（日付、呼吸法、長さ、スコア、レポート）、<a href="/ja/gaido/hajimete-no-sesshon.html">はじめのチェック</a>の回答、設定、通知の設定はデバイスに保存されます。</p>
@@ -139,6 +169,18 @@
 <h2>音声</h2>
 <p><strong>音声は録音されません。</strong> マイクはセッション中だけ動き、音声からはその瞬間の音量だけが計算されます。音声ファイルがディスクに書き込まれることはありません。</p>
 <p>唯一の例外は、下で説明する<a href="/ja/gaido/kyoyu-deta-no-atsukai.html">音声サンプル</a>の許可です。この許可をオンにしていなければ、どのセッションでも音声は録音されません。</p>
+<h2>ヘルスケアへのマインドフルネスの時間</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
+<p>設定 → Appleヘルスケアに、<strong>マインドフルネスの時間をヘルスケアに書き込む</strong>のスイッチがあります。オンにすると、数えられたセッションがすべて、マインドフルネスの時間としてヘルスケアAppに書き込まれます。書き込まれるのは開始時刻と終了時刻だけです。スイッチは最初はオフです。オンにすると、ヘルスケアはこの書き込みの許可だけを求めます。許可しなければ、スイッチはオフのままです。</p>
+<p>このことは一度だけおたずねします。「記録しない」を選べば、二度とたずねません。</p>
+<p>書き込まれるのは数えられたセッションだけで、Apple Watchだけで行ったセッションも含まれます。</p>
+<p>書き込まれた時間はヘルスケアに残ります。「データを削除」ではそれらは消えません。消したい場合はヘルスケアAppから削除できます。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>アップデート済みのAndroid 14以降では、設定に<strong>マインドフルネスの時間をヘルスコネクトに記録</strong>のスイッチがあります。オンにすると、数えられたセッションがすべて、マインドフルネスの時間としてヘルスコネクトに書き込まれます。書き込まれるのは開始時刻と終了時刻だけです。スイッチは最初はオフです。オンにすると、この書き込みの許可だけが求められます。許可しなければ、スイッチはオフのままです。</p>
+<p>このことは一度だけおたずねします。「記録しない」を選べば、二度とたずねません。</p>
+<p>書き込まれるのは数えられたセッションだけです。書き込まれた時間はヘルスコネクトに残り、「データを削除」ではそれらは消えません。</p>
+</div>
 <h2>任意の共有</h2>
 <p>設定 → プライバシーには、4つのスイッチがあります。どれも最初はオフで、どれにも「匿名」と付いていて、ひとつずつ確認されます。</p>
 <p><strong>匿名のセッション概要。</strong> ランダムに作られたID、日付と時刻、呼吸法、長さ、スコア、完了したかどうか、マイクを使ったかどうか、アプリのバージョン、レポートの技術的な値。名前、メールアドレス、位置情報、デバイスID、健康についての回答が送られることは<strong>一切ありません</strong>。</p>
@@ -158,7 +200,7 @@
 <p>以前に共有した匿名の記録を削除してほしい場合は、サポートの連絡先に連絡するだけで大丈夫です。</p>
 <h2>アプリを削除した場合</h2>
 <p>デバイス上のデータは削除されます。iCloudのコピーはAppleのルールに従ってしばらく残ります。アプリを入れ直せば、履歴が戻ってきます。</p>
-    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ja&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-verilerini-yonetmek"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ja/gaido/tema/tsukaikata.html">&#8592; 使い方</a></p>
   </div>
 </article>
@@ -171,10 +213,11 @@
       <a href="/ja/gaido/">ガイド</a>
       <a href="/ja/puraibashi.html">プライバシー</a>
       <a href="/ja/akusesibiriti.html">アクセシビリティ</a>
+      <a href="/ja/koshin-rireki.html">更新履歴</a>
       <a href="/ja/sapoto.html">サポート</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。</p>
+    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。 Google Play および Google Play ロゴは Google LLC の商標です。</p>
   </div>
 </footer>
 <script>

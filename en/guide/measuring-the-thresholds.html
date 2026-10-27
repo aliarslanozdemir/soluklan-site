@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How the thresholds are measured against real recordings","description":"What counts as an \"exhale\" isn't decided by guesswork but from real audio samples sent by users. How that work runs.","url":"https://soluklan.app/en/guide/measuring-the-thresholds.html","inLanguage":"en","image":"https://soluklan.app/assets/paylasim/en/measuring-the-thresholds-34386330a1.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/en/guide/measuring-the-thresholds.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Behind the scenes","dateModified":"2026-10-10T19:39:26+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/en/guide/"},{"@type":"ListItem","position":2,"name":"Behind the scenes","item":"https://soluklan.app/en/guide/topic/behind-the-scenes.html"},{"@type":"ListItem","position":3,"name":"How the thresholds are measured against real recordings","item":"https://soluklan.app/en/guide/measuring-the-thresholds.html"}]}</script>
 <script>
@@ -144,13 +144,15 @@
 <p>The app has a lower bound on how far the noise floor can go: it stops the thresholds becoming over-sensitive in very quiet rooms.</p>
 <p>In sessions done with a tablet in a quiet room, this bound could make the breath inaudible: the room's noise floor was far below it. Looking at real recordings, the bound was lowered: more exhales were caught, and false detections didn't increase.</p>
 <p>A correction like this can't be found by guesswork. Without the recording we wouldn't even have known the problem existed.</p>
+<h2>If the room changes during a session</h2>
+<p>The floor is also <a href="/en/guide/how-the-microphone-listens.html">re-measured</a> throughout the session. This was tested against the same recordings too: with an air conditioner's hum, talking or a door added on top, the exhales are still heard.</p>
 <h2>This is the only job audio sample sharing does</h2>
 <p>The audio that is sent is listened to for this and nothing else: measuring the accuracy of breath detection. It isn't used for any other purpose, isn't given to third parties, and is deleted from your device once sent.</p>
 <p>If it is off, audio is never recorded in any session. The app works completely without this permission.</p>
 <h2>Thresholds are updated over time</h2>
 <p>As recordings build up, the same scan is run again and the values are updated.</p>
 <p>So the app's measurement accuracy grows along with the people using it.</p>
-    <aside class="indir"><p>Soluklan is a free breathing exercise app: the microphone listens to your breath and shows how closely you follow the rhythm.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-esikler-nasil-olculuyor&amp;mt=8"><img src="/assets/rozetler/app-store-en.svg?v=2f2fe1cb" alt="Download on the App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan is a free breathing exercise app: the microphone listens to your breath and shows how closely you follow the rhythm.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-esikler-nasil-olculuyor&amp;mt=8"><img src="/assets/rozetler/app-store-en.svg?v=2f2fe1cb" alt="Download on the App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=en&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-esikler-nasil-olculuyor"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/en/guide/topic/behind-the-scenes.html">&#8592; Behind the scenes</a></p>
   </div>
 </article>
@@ -163,10 +165,11 @@
       <a href="/en/guide/">Guide</a>
       <a href="/en/privacy.html">Privacy</a>
       <a href="/en/accessibility.html">Accessibility</a>
+      <a href="/en/whats-new.html">What’s new</a>
       <a href="/en/support.html">Support</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+    <p class="marka-notu">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
   </div>
 </footer>
 <script>

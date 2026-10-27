@@ -20,6 +20,8 @@ content/makaleler/*.md     → site/rehber/*.html
 content/sss.md             → site/rehber/sik-sorulanlar.html
 docs/gizlilik.md           → site/gizlilik.html
 docs/destek.md             → site/destek.html
+docs/surum_notlari.json    → site/yenilikler.html (+ docs/asc_surum_metinleri.json,
+                             android/play/surum_notu_*.txt; yalnız yayındaki sürümler)
                            → site/sitemap.xml
                            → build/site-onizleme.html (tek dosya, paylaşmak için)
 
@@ -97,6 +99,10 @@ Bağlantıları, simge dosyalarını, `canonical`/`og:image`/hreflang etiketleri
 verinin geçerli JSON olduğunu ve site haritasının sayfalarla örtüştüğünü sınar. Bunların
 hiçbiri gözle görülmüyor: `canonical` düşse ya da `/favicon.ico` 404 verse sayfa normal
 açılıyor, hata yalnız arama sonucunda haftalar sonra çıkıyor.
+
+Görsellerde `alt` boş olamaz: içerik görseli ne gösterdiğini kısa bir cümleyle söyler. Kendi
+başına bir şey anlatmayan süs görseli (saat gövdesi çizimi gibi) açıkça işaretlenir:
+`alt="" aria-hidden="true" data-sus`. İşaretsiz boş `alt`'ı denetim hata sayıyor.
 
 ## Yayına alma
 

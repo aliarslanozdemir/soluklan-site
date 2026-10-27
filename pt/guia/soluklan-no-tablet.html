@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan no tablet","description":"No tablet, a tela é maior e o microfone fica mais longe. Onde posicionar o aparelho, por que a medição é mais difícil que no celular e o que continua igual.","url":"https://soluklan.app/pt/guia/soluklan-no-tablet.html","inLanguage":"pt-BR","image":"https://soluklan.app/assets/paylasim/pt/soluklan-no-tablet-a7a53734e6.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/pt/guia/soluklan-no-tablet.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Plataformas","dateModified":"2026-10-11T12:36:45+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guia","item":"https://soluklan.app/pt/guia/"},{"@type":"ListItem","position":2,"name":"Plataformas","item":"https://soluklan.app/pt/guia/tema/plataformas.html"},{"@type":"ListItem","position":3,"name":"Soluklan no tablet","item":"https://soluklan.app/pt/guia/soluklan-no-tablet.html"}]}</script>
 <script>
@@ -131,19 +131,66 @@
     <h1>Soluklan no tablet</h1>
     <p class="lede">No tablet, a tela é maior e o microfone fica mais longe. Onde posicionar o aparelho, por que a medição é mais difícil que no celular e o que continua igual.</p>
     <p class="updated">4 min de leitura</p>
+<div class="platform-sec" role="group" aria-label="Escolha seu aparelho" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>No tablet, o app está completo: as mesmas técnicas, a mesma medição, o mesmo relatório. Duas coisas mudam — a largura da tela e o lugar do microfone.</p>
 <h2>Onde fica o microfone no tablet</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <p>O microfone do iPad fica na <strong>borda de cima</strong> do aparelho (se você o segura na horizontal, fica em cima ou na lateral, conforme o modelo). Ou seja, diferente do celular, ele não fica voltado para a boca: em geral aponta para cima e fica mais longe.</p>
 <p>Por isso, no tablet a expiração é ouvida bem mais baixa do que no celular. O app escolhe, no tablet, o microfone mais próximo da boca, mas a diferença não desaparece por completo.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Nos tablets Android, o lugar do microfone varia conforme o modelo: na maioria fica na borda de cima, em alguns na lateral. Seja onde for, ele não fica voltado para a boca como no celular e fica mais longe do rosto.</p>
+<p>Por isso, no tablet a expiração é ouvida bem mais baixa do que no celular.</p>
+</div>
 <p>Na prática: <strong>segure o tablet mais perto.</strong> Em vez de deixá-lo na mesa e se inclinar para a frente, apoie-o no colo ou num suporte e vire para você a borda onde fica o microfone. Se ainda assim a respiração não for ouvida, é preciso <a href="/pt/guia/se-sua-respiracao-nao-e-ouvida.html">descartar a distância e o ambiente, um de cada vez</a>. <a href="/pt/guia/como-os-limiares-sao-medidos.html">Os próprios limiares são medidos com gravações reais</a>.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Vibração</h2>
+<p>A maioria dos tablets Android não tem motor de vibração. Por isso, mesmo com a vibração no ritmo da sessão ativada, você pode não senti-la no tablet. Acompanhe o ritmo pelo círculo na tela: inspire enquanto ele cresce, expire enquanto ele diminui.</p>
+</div>
 <h2>Tudo o que continua igual</h2>
 <p>A pontuação, o relatório, a sequência, os programas, os lembretes e as conquistas são exatamente iguais aos do celular — <a href="/pt/guia/como-a-pontuacao-e-calculada.html">Como uma sessão é pontuada</a>, <a href="/pt/guia/historico-resumos-e-conquistas.html">Histórico, resumos e conquistas</a>, <a href="/pt/guia/montar-um-programa.html">Montar um programa e mantê-lo</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <p>O histórico de sessões é sincronizado entre os aparelhos pelo iCloud, então a sessão feita no celular também aparece no iPad: <a href="/pt/guia/gerenciando-seus-dados.html">Gerenciando seus dados</a>.</p>
 <p><a href="/pt/guia/widgets-e-atividade-ao-vivo.html">Widgets e Atividade ao Vivo</a> também funcionam no iPad.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>No Android, o histórico de sessões não é sincronizado entre aparelhos: o tablet guarda o próprio histórico e faz o backup dele na sua conta Google pelo backup automático do Android. A sessão feita no celular não aparece no tablet.</p>
+</div>
 <h2>Se você está abrindo pela primeira vez no tablet</h2>
 <p>Se é a primeira vez que você usa o app no tablet, o questionário inicial também aparece ali, e a <a href="/pt/guia/sua-primeira-sessao.html">primeira sessão segue o mesmo fluxo do começo ao fim</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <p>Se você fez o questionário no celular, suas respostas e seus ajustes, inclusive o <a href="/pt/guia/niveis-de-interface.html">nível da interface</a>, chegam ao iPad pelo iCloud.</p>
-    <aside class="indir"><p>O Soluklan é um app gratuito de exercícios de respiração: o microfone escuta a sua respiração e mostra o quanto você acompanha o ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-pt.svg?v=e8b2875e" alt="Baixar na App Store" width="120" height="40"></a></span></aside>
+</div>
+    <aside class="indir"><p>O Soluklan é um app gratuito de exercícios de respiração: o microfone escuta a sua respiração e mostra o quanto você acompanha o ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-pt.svg?v=e8b2875e" alt="Baixar na App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=pt-BR&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/pt/guia/tema/plataformas.html">&#8592; Plataformas</a></p>
   </div>
 </article>
@@ -156,10 +203,11 @@
       <a href="/pt/guia/">Guia</a>
       <a href="/pt/privacidade.html">Privacidade</a>
       <a href="/pt/acessibilidade.html">Acessibilidade</a>
+      <a href="/pt/novidades.html">Novidades</a>
       <a href="/pt/suporte.html">Suporte</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple e o logotipo da Apple são marcas comerciais da Apple Inc., registradas nos EUA e em outros países. App Store é uma marca de serviço da Apple Inc.</p>
+    <p class="marka-notu">Apple e o logotipo da Apple são marcas comerciais da Apple Inc., registradas nos EUA e em outros países. App Store é uma marca de serviço da Apple Inc. Google Play e o logotipo do Google Play são marcas da Google LLC.</p>
   </div>
 </footer>
 <script>

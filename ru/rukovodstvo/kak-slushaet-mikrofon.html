@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как микрофон слышит твоё дыхание","description":"Если звук не записывается, как приложение измеряет дыхание? Шум комнаты, порог, который движется вместе с ней, и как находятся начало и конец выдоха.","url":"https://soluklan.app/ru/rukovodstvo/kak-slushaet-mikrofon.html","inLanguage":"ru","image":"https://soluklan.app/assets/paylasim/ru/kak-slushaet-mikrofon-dfe33120f9.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/rukovodstvo/kak-slushaet-mikrofon.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"За кулисами","dateModified":"2026-10-06T18:31:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Руководство","item":"https://soluklan.app/ru/rukovodstvo/"},{"@type":"ListItem","position":2,"name":"За кулисами","item":"https://soluklan.app/ru/rukovodstvo/tema/za-kulisami.html"},{"@type":"ListItem","position":3,"name":"Как микрофон слышит твоё дыхание","item":"https://soluklan.app/ru/rukovodstvo/kak-slushaet-mikrofon.html"}]}</script>
 <script>
@@ -136,7 +136,12 @@
 <h2>Сначала измеряется тишина</h2>
 <p>В начале сессии идёт трёхсекундное слушание. За это время измеряется <strong>шум комнаты</strong>: гул холодильника, машины за окном, собственный электронный шум устройства.</p>
 <p>Это не среднее — смотрят на <strong>самые тихие моменты</strong> этих трёх секунд. Так, если в это время положить телефон на стол или кто-то кашлянет, <a href="/ru/rukovodstvo/kak-izmeryayutsya-porogi.html">порог</a> не сбивается на всю сессию.</p>
-<p>Шум обновляется и во время сессии. Комната стала тише — порог опускается; шум вырос — поднимается, но только в пределах, иначе приложение оглохло бы в шумной комнате.</p>
+<h2>Комната заново измеряется во время сессии</h2>
+<p>Комната может измениться посреди сессии: включается кондиционер, закрывается окно. Поэтому шум заново измеряется и во время сессии. Сессия не останавливается, и от тебя ничего не требуется.</p>
+<p>Время от времени приложение смотрит на <strong>самые тихие моменты</strong> между дыханиями и заново измеряет шум. Сам выдох в это измерение не входит.</p>
+<p>Короткие звуки шум не сдвигают: если кто-то на миг заговорил или хлопнула дверь, порог не поднимается. Когда комната меняется надолго, например включается или выключается кондиционер, шум подстраивается под неё.</p>
+<p>Как бы ни шумела комната, порог не поднимается настолько, чтобы твои выдохи стало не слышно.</p>
+<p>Подсказки во время сессии вроде «Дыхание слышно с трудом» или «Дыхание приходит очень сильным» и громкость дыхания в отчёте измеряют каждый выдох относительно шума в тот момент. Подсказки и отчёт смотрят на одно и то же число.</p>
 <h2>Порог не абсолютный, он относительно шума</h2>
 <p>Чтобы звук считался «выдохом», ему не нужно перейти какой-то определённый уровень децибел. Ему нужно подняться <strong>на определённую величину над шумом</strong>. В тихой комнате этот порог низкий, в шумном кафе — высокий.</p>
 <p>Насколько выше шума — зависит от техники. Выдох через рот (долгий выдох, сжатые губы) выходит громким. Спокойный выдох через нос (когерентное, квадратное) намного ниже. Дыхание одной ноздрёй — самое тихое из всех. Каждую технику слушают её собственным порогом; мерить всех одной меркой значило бы сделать носовые техники неслышимыми.</p>
@@ -150,7 +155,7 @@
 <h2>Быстрое дыхание — отдельная задача</h2>
 <p>У этого метода есть предел: чтобы понять, что выдох закончился, нужна короткая тишина после него. В технике, где выдыхают чаще раза в секунду, такой тишины не возникает.</p>
 <p>Поэтому <a href="/ru/rukovodstvo/kapalabhati.html">капалабхати</a> измеряется иначе. Вместо того чтобы разделять выдохи по одному, приложение считает <strong>моменты, когда звуковая линия даёт пик</strong>, и смотрит, насколько ровны промежутки. Один выдох не считается дважды.</p>
-    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-mikrofon-nasil-dinliyor&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-mikrofon-nasil-dinliyor&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ru&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-mikrofon-nasil-dinliyor"><img src="/assets/rozetler/google-play-ru.svg?v=ed1a8c66" alt="Доступно в Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ru/rukovodstvo/tema/za-kulisami.html">&#8592; За кулисами</a></p>
   </div>
 </article>
@@ -163,10 +168,11 @@
       <a href="/ru/rukovodstvo/">Руководство</a>
       <a href="/ru/konfidencialnost.html">Конфиденциальность</a>
       <a href="/ru/dostupnost.html">Универсальный доступ</a>
+      <a href="/ru/chto-novogo.html">Что нового</a>
       <a href="/ru/podderzhka.html">Поддержка</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc.</p>
+    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc. Google Play и логотип Google Play являются товарными знаками Google LLC.</p>
   </div>
 </footer>
 <script>

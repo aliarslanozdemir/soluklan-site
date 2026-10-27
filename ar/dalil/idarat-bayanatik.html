@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"إدارة بياناتك","description":"ما الذي يبقى على جهازك، وما الذي يتزامن في iCloud، وما الذي يُرسَل إن فعّلت المشاركة — وكيف تحذف كل شيء.","url":"https://soluklan.app/ar/dalil/idarat-bayanatik.html","inLanguage":"ar","image":"https://soluklan.app/assets/paylasim/ar/idarat-bayanatik-93bf6bcc61.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ar/dalil/idarat-bayanatik.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"كيف تستخدمه","dateModified":"2026-10-10T19:39:26+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الدليل","item":"https://soluklan.app/ar/dalil/"},{"@type":"ListItem","position":2,"name":"كيف تستخدمه","item":"https://soluklan.app/ar/dalil/mawdu/kayfa-tastakhdimuh.html"},{"@type":"ListItem","position":3,"name":"إدارة بياناتك","item":"https://soluklan.app/ar/dalil/idarat-bayanatik.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>إدارة بياناتك</h1>
     <p class="lede">ما الذي يبقى على جهازك، وما الذي يتزامن في iCloud، وما الذي يُرسَل إن فعّلت المشاركة — وكيف تحذف كل شيء.</p>
     <p class="updated">قراءة 5 دقيقة</p>
+<div class="platform-sec" role="group" aria-label="اختر جهازك" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone وiPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>هنا يسكن فعلًا كل ما يحتفظ به التطبيق، وهنا ما تستطيع التحكّم فيه.</p>
 <h2>البيانات التي تبقى على جهازك</h2>
 <p>ملخّصات جلساتك (التاريخ، والتمرين، والمدّة، والدرجة، والتقرير)، و<a href="/ar/dalil/jalsatuk-al-ula.html">إجابات تعارفك</a>، وإعداداتك، وتفضيلات إشعاراتك — كلها مخزّنة على جهازك.</p>
@@ -139,6 +169,18 @@
 <h2>الصوت</h2>
 <p><strong>الصوت لا يُسجَّل.</strong> يعمل الميكروفون أثناء الجلسة فقط، ولا يُستخرج منه إلا مستوى الصوت اللحظي. ولا يُكتب أي ملف صوتي على القرص.</p>
 <p>والاستثناء الوحيد إذن <a href="/ar/dalil/al-bayanat-allati-tusharikuha.html">العيّنة الصوتية</a> أدناه — فإن لم تفعّله لم يُسجَّل الصوت في أي جلسة أبدًا.</p>
+<h2>دقائق اليقظة الذهنية في تطبيق الصحة</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
+<p>في الإعدادات ← Apple Health يوجد مفتاح <strong>تسجيل دقائق اليقظة الذهنية في تطبيق الصحة</strong>. إذا فعّلته تُكتب كل جلسة محتسبة في تطبيق الصحة كدقائق يقظة ذهنية، بوقت بدايتها ونهايتها فقط. يبدأ المفتاح مطفأً. عند تفعيله يطلب تطبيق الصحة إذن الكتابة هذا فقط، وإن لم تمنحه يبقى المفتاح مطفأً.</p>
+<p>ونسألك عن ذلك أيضًا مرة واحدة. إن قلت «لا، شكرًا» فلن نسأل مرة أخرى.</p>
+<p>لا تُكتب إلا الجلسات المحتسبة، ومنها ما تؤدّيه على Apple Watch وحدها.</p>
+<p>تبقى الدقائق في تطبيق الصحة. «حذف بياناتي» لا يمسّها، ويمكنك حذفها من تطبيق الصحة.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>على Android 14 وما بعده المحدَّث يوجد في الإعدادات مفتاح <strong>تسجيل دقائق اليقظة الذهنية في Health Connect</strong>. إذا فعّلته تُكتب كل جلسة محتسبة في Health Connect كدقائق يقظة ذهنية، بوقت بدايتها ونهايتها فقط. يبدأ المفتاح مطفأً. عند تفعيله يُطلب إذن الكتابة هذا فقط، وإن لم تمنحه يبقى المفتاح مطفأً.</p>
+<p>ونسألك عن ذلك أيضًا مرة واحدة. إن قلت «لا، شكرًا» فلن نسأل مرة أخرى.</p>
+<p>لا تُكتب إلا الجلسات المحتسبة. تبقى الدقائق في Health Connect، و«حذف بياناتي» لا يمسّها.</p>
+</div>
 <h2>المشاركة الاختيارية</h2>
 <p>في الإعدادات ← الخصوصية أربعة مفاتيح منفصلة. كلها مطفأة في البداية، وكلها تصف مشاركة مجهولة الهوية، ويُسأل عن كل واحد منها على حدة.</p>
 <p><strong>ملخص جلسة مجهول الهوية.</strong> معرّف عشوائي، والتاريخ والساعة، والتمرين، والمدة، والتقييم، وهل اكتملت الجلسة، وهل استُخدم الميكروفون، وإصدار التطبيق، والقيم التقنية للتقرير. اسمك وبريدك وموقعك ومعرّف جهازك وإجاباتك الصحية <strong>لا تُرسل أبدًا</strong>.</p>
@@ -158,7 +200,7 @@
 <p>وإن أردت حذف السجلّات التي شاركتها مجهولةً كذلك، تكفي رسالة إلى عنوان الدعم.</p>
 <h2>إن حذفت التطبيق</h2>
 <p>تُحذف البيانات الموجودة على الجهاز. وتبقى نسخة iCloud مدّةً بحسب قواعد Apple؛ فإن أعدت تثبيت التطبيق عاد سجلّك.</p>
-    <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ar&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-verilerini-yonetmek"><img src="/assets/rozetler/google-play-ar.svg?v=711ccb2f" alt="احصل عليه من Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ar/dalil/mawdu/kayfa-tastakhdimuh.html">&#8592; كيف تستخدمه</a></p>
   </div>
 </article>
@@ -171,10 +213,11 @@
       <a href="/ar/dalil/">الدليل</a>
       <a href="/ar/khususiya.html">الخصوصية</a>
       <a href="/ar/imkaniyat-al-wusul.html">إمكانية الوصول</a>
+      <a href="/ar/al-jadid.html">ما الجديد</a>
       <a href="/ar/dam.html">الدعم</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple وشعار Apple علامتان تجاريتان لشركة Apple Inc.، مسجّلتان في الولايات المتحدة وبلدان أخرى. App Store علامة خدمة لشركة Apple Inc.</p>
+    <p class="marka-notu">Apple وشعار Apple علامتان تجاريتان لشركة Apple Inc.، مسجّلتان في الولايات المتحدة وبلدان أخرى. App Store علامة خدمة لشركة Apple Inc. Google Play وشعار Google Play علامتان تجاريتان لشركة Google LLC.</p>
   </div>
 </footer>
 <script>

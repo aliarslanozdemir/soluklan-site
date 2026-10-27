@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan على الهاتف","description":"الهاتف هو الجهاز الأساسي للتطبيق: القياس هنا أدقّ. أين يقع كل شيء، وإلى أين ينظر الميكروفون، وأين تُحفظ بياناتك.","url":"https://soluklan.app/ar/dalil/soluklan-ala-al-hatif.html","inLanguage":"ar","image":"https://soluklan.app/assets/paylasim/ar/soluklan-ala-al-hatif-a69877d3fe.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ar/dalil/soluklan-ala-al-hatif.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"المنصّات","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الدليل","item":"https://soluklan.app/ar/dalil/"},{"@type":"ListItem","position":2,"name":"المنصّات","item":"https://soluklan.app/ar/dalil/mawdu/al-minassat.html"},{"@type":"ListItem","position":3,"name":"Soluklan على الهاتف","item":"https://soluklan.app/ar/dalil/soluklan-ala-al-hatif.html"}]}</script>
 <script>
@@ -131,22 +131,76 @@
     <h1>Soluklan على الهاتف</h1>
     <p class="lede">الهاتف هو الجهاز الأساسي للتطبيق: القياس هنا أدقّ. أين يقع كل شيء، وإلى أين ينظر الميكروفون، وأين تُحفظ بياناتك.</p>
     <p class="updated">قراءة 5 دقيقة</p>
+<div class="platform-sec" role="group" aria-label="اختر جهازك" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone وiPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>يعمل Soluklan على ثلاثة أجهزة، ولا يتصرّف بالطريقة نفسها في الثلاثة. الهاتف هو المكان الذي يكون فيه القياس أدقّ: الميكروفون هنا أقرب إلى فمك.</p>
 <h2>أين الميكروفون</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <p>ميكروفون المكالمات في iPhone عند <strong>الحافة السفلية</strong>، بجوار منفذ الشحن. وإن وضعت الهاتف على الطاولة فليكن وجهه إلى أعلى وحافته السفلية نحوك. وإن أمسكته بيدك فعشرون إلى ثلاثين سنتيمترًا تكفي. ولا تلصقه بفمك: فعندها يتشبّع صوت النفَس ويعرض التطبيق تنبيه "قريب جدًا".</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>يختلف موضع الميكروفون في هواتف Android باختلاف العلامة التجارية والطراز. ففي معظمها يقع ميكروفون المكالمات عند <strong>الحافة السفلية</strong> بجوار منفذ الشحن، وفي بعضها عند الحافة العلوية. ويمكنك أن تعرف موضعه من دليل هاتفك أو من الثقوب الصغيرة على حوافه.</p>
+<p>أمسك الهاتف على بعد <strong>10 إلى 15 سنتيمترًا</strong> من فمك وأنفك، وحافة الميكروفون نحوك. ولا تلصقه بفمك: فعندها يتشبّع صوت النفَس ويعرض التطبيق تنبيه "قريب جدًا".</p>
+<p>بعض الهواتف تعالج الصوت قبل أن تسلّمه إلى التطبيق: تكتم الضجيج وترفع مستوى الصوت من تلقاء نفسها. وقد تخفض هذه المعالجة صوت نفَسك أيضًا. ويستعمل التطبيق أقلّ صوت معالَج يوفّره الهاتف. ولهذا قد يسمع هاتفان مختلفان نفَسك على المسافة نفسها بمستويين مختلفين.</p>
+</div>
 <p>وحين لا يُسمع الزفير يكون السبب غالبًا <a href="/ar/dalil/idha-lam-yusma-nafasuk.html">المسافة أو الغرفة أو التقنية نفسها</a>. والميكروفون <a href="/ar/dalil/kayfa-yasma-al-mikrofon.html">يقيس سكون الغرفة أولًا ويبني العتبة عليه</a>.</p>
 <h2>ما الذي يعيش على الهاتف</h2>
 <ul><li><strong>الشاشة الرئيسية والجلسة:</strong> <a href="/ar/dalil/at-tanaqqul-fi-at-tatbiq.html">التنقّل في التطبيق</a>، <a href="/ar/dalil/shashat-al-jalsa.html">ماذا يوجد على شاشة الجلسة</a></li><li><strong>اختيار التقنية والمدّة:</strong> <a href="/ar/dalil/ikhtiyar-at-tamrin-wal-mudda.html">اختيار التمرين والمدّة</a></li><li><strong>التقرير والدرجة:</strong> <a href="/ar/dalil/qiraat-at-taqrir.html">قراءة تقرير الجلسة</a>، <a href="/ar/dalil/kayfa-tuhsab-ad-daraja.html">كيف تُحسب درجة الجلسة</a></li><li><strong>السجلّ والملخّصات والإنجازات:</strong> <a href="/ar/dalil/as-sijill-wal-mulakhkhasat.html">السجلّ والملخّصات والإنجازات</a>، <a href="/ar/dalil/as-silsila-wal-mahattat.html">السلسلة والمحطّات والتقويم</a></li><li><strong>البرامج:</strong> <a href="/ar/dalil/idad-barnamij.html">إنشاء برنامج والاستمرار فيه</a></li><li><strong>التذكيرات:</strong> <a href="/ar/dalil/at-tadhkirat-wal-ishaarat.html">التذكيرات والإشعارات</a></li></ul>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <p>وإن أردت أن تلقي نظرة دون فتح التطبيق فـ<a href="/ar/dalil/al-widget-wan-nashat-al-mubashir.html">عنصر الواجهة والنشاط المباشر</a> يؤدّيان المهمّة. وهما على الهاتف واللوح فقط.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>وإن أردت أن تلقي نظرة دون فتح التطبيق فأضف عنصر واجهة Soluklan إلى الشاشة الرئيسية. يعرض العنصر سلسلتك، ولمسه يفتح التطبيق على اختيار التقنية.</p>
+</div>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <h2>الوضع الصامت والسمّاعات والمكالمات</h2>
 <p>في الوضع الصامت لا تُعزف أصوات التنفس والعد التنازلي، ويبقى الاهتزاز والشاشة كما هما. وإن كانت السمّاعات موصولة فقد ينتقل الإدخال إلى ميكروفونها. فتتغيّر المسافة ويتغيّر القياس معها، والأسلم نزعها. وإن جاءت مكالمة في منتصف الجلسة توقّفت الجلسة مؤقّتًا، وبعد المكالمة تعيد الجولة من بدايتها من قائمة الإيقاف المؤقّت.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>الاهتزاز</h2>
+<p>حين يكون <strong>اهتزاز إيقاع الجلسة</strong> مفعّلًا يصلك الإيقاع عبر اهتزاز الهاتف أيضًا. ويختلف إحساس الاهتزاز من هاتف إلى آخر. ففي الهواتف الراقية يأتي نقرات دقيقة وواضحة، وفي الهواتف الاقتصادية يكون أخشن. وإن جاء الاهتزاز ضعيفًا أو غير واضح فتابع الإيقاع بالدائرة على الشاشة.</p>
+</div>
 <h2>حين تغادر التطبيق</h2>
 <p>إن خرجت من التطبيق أو قفلت الشاشة توقّفت الجلسة مؤقّتًا. وحين تعود تجد قائمة الإيقاف المؤقّت مفتوحة، ومنها تعيد الجولة من بدايتها. ولا يستمرّ القياس في الخلفية، ولا يُبقي التطبيق الميكروفون مفتوحًا فيها.</p>
 <h2>أين تُحفظ بياناتك</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <p>يُحفظ سجلّ جلساتك على جهازك وفي حساب iCloud الخاص بك. ويظهر أيضًا على iPad المسجَّل بحساب Apple نفسه. والتفاصيل في مقال <a href="/ar/dalil/idarat-bayanatik.html">إدارة بياناتك</a>.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>يُحفظ سجلّ جلساتك وسلسلتك وإعداداتك على هاتفك. والنسخ الاحتياطي التلقائي في Android يحفظها في حسابك على Google، فتعود مع النسخة الاحتياطية حين تنتقل إلى هاتف Android جديد. ولا يُستعمل iCloud.</p>
+<p>ولا ينتقل السجلّ بين iPhone وAndroid. فإن انتقلت من iPhone إلى Android أو استعملت الاثنين معًا احتفظ كل جهاز بسجلّه الخاص.</p>
+</div>
 <h2>ما الذي يتغيّر على اللوح</h2>
 <p>القياس على اللوح أصعب: <a href="/ar/dalil/soluklan-ala-al-lawhi.html">موضع الميكروفون والتخطيط كلاهما يتغيّران هناك</a>.</p>
-    <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ar&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-telefonda"><img src="/assets/rozetler/google-play-ar.svg?v=711ccb2f" alt="احصل عليه من Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ar/dalil/mawdu/al-minassat.html">&#8592; المنصّات</a></p>
   </div>
 </article>
@@ -159,10 +213,11 @@
       <a href="/ar/dalil/">الدليل</a>
       <a href="/ar/khususiya.html">الخصوصية</a>
       <a href="/ar/imkaniyat-al-wusul.html">إمكانية الوصول</a>
+      <a href="/ar/al-jadid.html">ما الجديد</a>
       <a href="/ar/dam.html">الدعم</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple وشعار Apple علامتان تجاريتان لشركة Apple Inc.، مسجّلتان في الولايات المتحدة وبلدان أخرى. App Store علامة خدمة لشركة Apple Inc.</p>
+    <p class="marka-notu">Apple وشعار Apple علامتان تجاريتان لشركة Apple Inc.، مسجّلتان في الولايات المتحدة وبلدان أخرى. App Store علامة خدمة لشركة Apple Inc. Google Play وشعار Google Play علامتان تجاريتان لشركة Google LLC.</p>
   </div>
 </footer>
 <script>

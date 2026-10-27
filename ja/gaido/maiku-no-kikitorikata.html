@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"マイクはどうやって呼吸を聞き取っているか","description":"音を録音していないのに、アプリはどうやって呼吸を測っているのか。ノイズフロア、周囲の音に合わせて変わるしきい値、吐く息の始まりと終わりの見つけ方。","url":"https://soluklan.app/ja/gaido/maiku-no-kikitorikata.html","inLanguage":"ja","image":"https://soluklan.app/assets/paylasim/ja/maiku-no-kikitorikata-48501155b7.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ja/gaido/maiku-no-kikitorikata.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"舞台裏","dateModified":"2026-10-10T19:29:52+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ガイド","item":"https://soluklan.app/ja/gaido/"},{"@type":"ListItem","position":2,"name":"舞台裏","item":"https://soluklan.app/ja/gaido/tema/butaiura.html"},{"@type":"ListItem","position":3,"name":"マイクはどうやって呼吸を聞き取っているか","item":"https://soluklan.app/ja/gaido/maiku-no-kikitorikata.html"}]}</script>
 <script>
@@ -136,7 +136,12 @@
 <h2>まず静けさを測る</h2>
 <p>セッションの始まりに、3秒間聞き取る時間があります。この間に部屋の<strong>ノイズフロア</strong>、つまり周囲の音を測ります。冷蔵庫のうなり、外の車の音、デバイス自体の電子ノイズ。</p>
 <p>平均をとるのではなく、その3秒間の<strong>いちばん静かな瞬間</strong>を見ます。こうすれば、その間にスマートフォンを机に置いたり、誰かが咳をしたりしても、セッション全体のしきい値が狂うことはありません。</p>
-<p>ノイズフロアはセッション中も更新されます。周囲が静かになればしきい値は下がり、騒がしくなれば上がります。ただし範囲には限りがあります。そうしないと、騒がしい場所ではアプリが勝手に耳をふさいでしまいます。</p>
+<h2>セッション中に部屋を測り直す</h2>
+<p>部屋の状態はセッション中に変わることがあります。エアコンがついたり、窓が閉まったり。そのため、ノイズフロアはセッション中も測り直されます。セッションは止まらず、何かを求められることもありません。</p>
+<p>アプリはセッション中、ときどき呼吸と呼吸の間の<strong>いちばん静かな瞬間</strong>を見て、ノイズフロアを測り直します。吐く息そのものは、この測定には入りません。</p>
+<p>短い音ではノイズフロアは動きません。誰かが一瞬話したり、ドアがバタンと閉まったりしても、しきい値は上がりません。エアコンがついたり消えたりするなど、部屋の状態がずっと変わったときには、ノイズフロアがそれに合わせます。</p>
+<p>部屋がどれだけ騒がしくても、しきい値が吐く息を聞き取れなくなるほど上がることはありません。</p>
+<p>セッション中に出る「呼吸が聞き取りにくい」や「少し離して」といった注意と、レポートの呼吸の音は、どちらも吐く息ひとつひとつをその時点のノイズフロアと比べて測っています。2つは同じ数値を見ています。</p>
 <h2>しきい値は絶対ではなく、ノイズフロアが基準</h2>
 <p>音が「吐く息」と数えられるために、決まったデシベルを超える必要はありません。必要なのは<strong>ノイズフロアより一定量上に</strong>出ることです。静かな部屋ではこのしきい値は低く、騒がしいカフェでは高くなります。</p>
 <p>しきい値をどれだけ上にするかは、呼吸法によって変わります。口から吐く息（ロング呼気、口すぼめ呼吸）は大きく出ます。鼻から吐く穏やかな息（コヒーレント呼吸、ボックス呼吸）はずっと小さくなります。片方の鼻から吐く息は、そのどれよりも小さい音です。呼吸法ごとにそれぞれのしきい値で聞いています。すべてに同じ基準を当てはめると、鼻の呼吸法が聞き取れなくなってしまうからです。</p>
@@ -150,7 +155,7 @@
 <h2>速い呼吸は別扱い</h2>
 <p>この方法には限界があります。吐く息が終わったことを知るには、そのあとに短い静けさが必要です。1秒に1回より速く吐く呼吸法では、その静けさがまったく生まれません。</p>
 <p>そのため<a href="/ja/gaido/kapalabhati.html">カパラバティ</a>は別の方法で測っています。吐く息をひとつずつ切り分けようとするのではなく、音の線が<strong>ピークに達した瞬間</strong>を数え、その間隔がどれだけ規則的かを見ます。1回の吐く息が2回数えられることはありません。</p>
-    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-mikrofon-nasil-dinliyor&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-mikrofon-nasil-dinliyor&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ja&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-mikrofon-nasil-dinliyor"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ja/gaido/tema/butaiura.html">&#8592; 舞台裏</a></p>
   </div>
 </article>
@@ -163,10 +168,11 @@
       <a href="/ja/gaido/">ガイド</a>
       <a href="/ja/puraibashi.html">プライバシー</a>
       <a href="/ja/akusesibiriti.html">アクセシビリティ</a>
+      <a href="/ja/koshin-rireki.html">更新履歴</a>
       <a href="/ja/sapoto.html">サポート</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。</p>
+    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。 Google Play および Google Play ロゴは Google LLC の商標です。</p>
   </div>
 </footer>
 <script>

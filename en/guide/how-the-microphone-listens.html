@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How the microphone hears your breath","description":"If audio isn't recorded, how does the app measure your breath? The noise floor, a threshold that moves with the room, and how the start and end of an exhale are found.","url":"https://soluklan.app/en/guide/how-the-microphone-listens.html","inLanguage":"en","image":"https://soluklan.app/assets/paylasim/en/how-the-microphone-listens-fd15ca37a0.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/en/guide/how-the-microphone-listens.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Behind the scenes","dateModified":"2026-10-06T18:31:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/en/guide/"},{"@type":"ListItem","position":2,"name":"Behind the scenes","item":"https://soluklan.app/en/guide/topic/behind-the-scenes.html"},{"@type":"ListItem","position":3,"name":"How the microphone hears your breath","item":"https://soluklan.app/en/guide/how-the-microphone-listens.html"}]}</script>
 <script>
@@ -136,7 +136,12 @@
 <h2>Silence is measured first</h2>
 <p>There is a three-second listen at the start of a session. In that time the room's <strong>noise floor</strong> is measured: the hum of the fridge, traffic outside, the device's own electronic noise.</p>
 <p>It isn't an average — it looks at the <strong>quietest moments</strong> of those three seconds. That way, putting the phone down on a table at that moment, or someone coughing, doesn't throw off the <a href="/en/guide/measuring-the-thresholds.html">threshold</a> for the whole session.</p>
-<p>The floor is updated during the session too. If the room goes quieter the threshold comes down; if noise rises it goes up — but only within limits, otherwise the app would deafen itself in a noisy room.</p>
+<h2>The room is re-measured during the session</h2>
+<p>The room can change during a session: an air conditioner comes on, a window gets closed. So the floor is re-measured throughout the session too. The session doesn't stop, and nothing is asked of you.</p>
+<p>Every so often during the session the app looks at the <strong>quietest moments</strong> between your breaths and re-measures the floor. The exhale itself doesn't go into this measurement.</p>
+<p>Short sounds don't move the floor: someone talking for a moment or a door slamming doesn't raise the threshold. When the room changes for good, say an air conditioner comes on or goes off, the floor follows it.</p>
+<p>However noisy the room gets, the threshold never rises so high that your exhales can't be heard.</p>
+<p>The warnings during the session, such as "Your breath is hard to hear" or "move the device a little further away", and the breath volume in the report measure each exhale against the floor at that moment. Both look at the same number.</p>
 <h2>The threshold isn't absolute, it is relative to the floor</h2>
 <p>For a sound to count as an "exhale" it doesn't have to pass a particular decibel level. It has to rise <strong>a certain amount above the floor</strong>. In a quiet room that threshold is low; in a noisy café it is high.</p>
 <p>How far above the floor depends on the technique. A breath out through the mouth (extended exhale, pursed lip) comes out loud. A calm breath out through the nose (coherent, box) is much lower. A breath through a single nostril is the lowest of all. Every technique is listened to with its own threshold; holding them all to the same bar would make the nasal techniques inaudible.</p>
@@ -150,7 +155,7 @@
 <h2>Fast breathing is a separate job</h2>
 <p>This method has a limit: telling that an exhale has ended needs a short silence afterwards. In a technique breathing out faster than once a second, that silence never appears.</p>
 <p>So <a href="/en/guide/kapalabhati.html">Kapalabhati</a> is measured a different way. Rather than trying to separate the exhales one by one, the app counts the <strong>moments when the sound line peaks</strong> and looks at how regular the gaps are. One exhale isn't counted twice.</p>
-    <aside class="indir"><p>Soluklan is a free breathing exercise app: the microphone listens to your breath and shows how closely you follow the rhythm.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-mikrofon-nasil-dinliyor&amp;mt=8"><img src="/assets/rozetler/app-store-en.svg?v=2f2fe1cb" alt="Download on the App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan is a free breathing exercise app: the microphone listens to your breath and shows how closely you follow the rhythm.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-mikrofon-nasil-dinliyor&amp;mt=8"><img src="/assets/rozetler/app-store-en.svg?v=2f2fe1cb" alt="Download on the App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=en&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-mikrofon-nasil-dinliyor"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/en/guide/topic/behind-the-scenes.html">&#8592; Behind the scenes</a></p>
   </div>
 </article>
@@ -163,10 +168,11 @@
       <a href="/en/guide/">Guide</a>
       <a href="/en/privacy.html">Privacy</a>
       <a href="/en/accessibility.html">Accessibility</a>
+      <a href="/en/whats-new.html">What’s new</a>
       <a href="/en/support.html">Support</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+    <p class="marka-notu">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
   </div>
 </footer>
 <script>
