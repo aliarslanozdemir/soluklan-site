@@ -296,6 +296,27 @@ strong { font-weight: 650; }
    boy ve rozet boyunun dörtte biri kadar boşluk istiyor, Google da Play rozetinin öteki
    rozetten küçük olmamasını. Sığmayınca alt alta iniyor; Arapçada sıra kendiliğinden dönüyor. */
 .actions:has(.rozetler) { align-items: center; gap: 1rem; }
+/* Mağaza düğmelerinin altında tek satır: ücretsiz, hesap ve reklam yok (Ali, 25 Ekim 2026).
+   2.0'da hesap gelince cümle değişecek. */
+.ucretsiz { margin: .9rem 0 0; font-size: .95rem; font-weight: 600; color: var(--ink-2); }
+.kapanis .ucretsiz { text-align: center; }
+/* Teknik yazısının kaynak listesinin altında kanıt yazısına giden cümle; ana sayfanın teknikler
+   slaytında da aynısı (25 Ekim 2026) */
+.kanit-notu { margin-top: 1rem; font-size: .92rem; color: var(--ink-2); }
+.kanit-bag { font-size: .95rem; color: var(--ink-2); }
+/* Yenilikler sayfası: sürüm başına başlık, tarih ve madde listesi (25 Ekim 2026) */
+.yenilikler .surum-notu { margin-top: 2rem; padding-block: 1.5rem 0; border-top: 1px solid var(--line); }
+.yenilikler .surum-notu::before { content: none; }
+.yenilikler .surum-notu h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .9rem; margin: 0 0 .9rem; }
+.yenilikler .surum-tarih { font-family: var(--body); font-size: .9rem; font-weight: 500; color: var(--ink-2); letter-spacing: 0; }
+.yenilikler .surum-notu ul { margin: 0; padding-inline-start: 1.2rem; }
+.yenilikler .surum-notu li { margin-bottom: .6rem; }
+.yenilikler .surum-notu li strong { display: block; }
+.yenilikler .surum-notu li span { color: var(--ink-2); }
+.yenilikler .surum-eski { margin-top: 2.5rem; }
+/* İçerik görselleri WebP/AVIF için `<picture>` içinde: kutu yerleşime girmesin, görsel eskisi gibi
+   doğrudan kabın çocuğu sayılsın (`.ekran img { width: 100% }` gibi kurallar aynen çalışsın) */
+picture { display: contents; }
 .rozetler { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
 .rozet { display: inline-flex; border-radius: .6rem; transition: transform .15s ease; }
 .rozet img { display: block; height: 3rem; width: auto; }

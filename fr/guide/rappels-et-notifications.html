@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Rappels et notifications","description":"Le rappel quotidien, l’alerte de série, les notifications par technique, le ton des textes, les heures calmes, le mode vacances et le plafond quotidien. Ce que fait chacun et comment le régler.","url":"https://soluklan.app/fr/guide/rappels-et-notifications.html","inLanguage":"fr","image":"https://soluklan.app/assets/paylasim/fr/rappels-et-notifications-0d7799340d.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/fr/guide/rappels-et-notifications.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Utilisation","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/fr/guide/"},{"@type":"ListItem","position":2,"name":"Utilisation","item":"https://soluklan.app/fr/guide/sujet/utilisation.html"},{"@type":"ListItem","position":3,"name":"Rappels et notifications","item":"https://soluklan.app/fr/guide/rappels-et-notifications.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Rappels et notifications</h1>
     <p class="lede">Le rappel quotidien, l’alerte de série, les notifications par technique, le ton des textes, les heures calmes, le mode vacances et le plafond quotidien. Ce que fait chacun et comment le régler.</p>
     <p class="updated">8 min de lecture</p>
+<div class="platform-sec" role="group" aria-label="Choisis ton appareil" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone et iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Toutes les notifications vivent sous <strong>Profil → Réglages → Options de notification</strong>. Elles sont toutes programmées sur ton appareil : rien n’est poussé depuis un serveur.</p>
 <h2>Le rappel quotidien</h2>
 <p>Le plus élémentaire. Tu peux choisir une heure différente pour chaque jour de la semaine, et ajouter plusieurs heures à un même jour. Un jour laissé vide ne reçoit aucun rappel.</p>
@@ -141,6 +171,9 @@
 <h2>L’alerte de série</h2>
 <p>L’alerte qui arrive quand ta série est en danger — c’est-à-dire quand tu n’as pas fait de séance ce jour-là et que la journée touche à sa fin. Tu choisis toi-même l’<strong>heure de la première alerte</strong>.</p>
 <p>Si un bouclier de série va protéger ce jour-là, aucune alerte n’arrive. Si ta série a cassé, une notification te rappelle la <a href="/fr/guide/serie-et-jalons.html">réparation</a> le premier jour du délai, le dernier jour et, si le délai est long, une fois au milieu. Ces jours-là, elle arrive à la place de ton rappel quotidien, si tu en as un. Si tu coupes l’alerte de série, les notifications de réparation ne viennent pas non plus.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Sur Android, il y a aussi un compte à rebours de fin de journée : si tu n’as pas encore fait de séance ce jour-là, une notification apparaît le soir et décompte jusqu’à minuit, en montrant le temps qui reste à ta série ou à ton bouclier. Elle disparaît d’elle-même une fois la séance faite. <strong>Commencer</strong> ouvre le démarrage rapide. Si tu balaies la notification, elle ne revient pas ce jour-là. Si tu ne veux pas le voir du tout, désactive <strong>Compte à rebours de fin de journée</strong> dans les réglages des notifications.</p>
+</div>
 <p>Sa répétition est un réglage à part : une alerte, toutes les heures, ou jusqu’à toutes les cinq minutes. Les répétitions s’arrêtent dès que tu fais la séance.</p>
 <p>Par défaut cette alerte reste <strong>hors de ton plafond quotidien</strong> : un plafond plein ne doit pas te coûter ta série. Tu peux la faire compter dedans si tu préfères.</p>
 <h2>Les notifications par technique</h2>
@@ -160,7 +193,7 @@
 <p>La fenêtre pendant laquelle tu ne veux pas être dérangé. Les notifications que l’app propose d’elle-même n’arrivent pas pendant ces heures.</p>
 <p>Si un rappel que tu as réglé toi-même tombe dans les heures calmes, l’app te le signale, mais ce rappel arrive quand même : c’est toi qui en as choisi l’heure.</p>
 <h2>Si tu fais une longue pause</h2>
-<p>Si tu ne fais pas de séance pendant un moment, une notification à part commence à te rappeler de revenir. Tu choisis à quelle fréquence elle arrive : d’une fois par jour à une fois par semaine. Elle peut être désactivée.</p>
+<p>Quand ta série casse, les notifications deviennent des messages de retour. Ton rappel quotidien arrive toujours à son heure, cette fois pour te faire revenir. Si tu n’as pas de rappel, l’application te le rappelle elle-même dans la journée. Dès que tu fais une séance, les notifications redeviennent comme avant.</p>
 <p>Si tu ne fais aucune séance pendant longtemps, les notifications s’arrêtent complètement, et elles reprennent dès que tu fais une séance.</p>
 <h2>Le plafond quotidien</h2>
 <p>Tu décides combien de notifications peuvent arriver au maximum dans une journée. Si le plafond est atteint quand tu essaies d’en activer une nouvelle sorte, l’app t’avertit et propose une correction en un geste, du type <strong>« Monter le plafond à 2 et l’activer »</strong>.</p>
@@ -170,9 +203,15 @@
 <p>Au bas des réglages, les dernières notifications envoyées sont listées avec leur texte et leur heure. Si tu en as manqué une ou si tu te demandes quand elle est arrivée, regarde ici.</p>
 <h2>Remettre les réglages à zéro</h2>
 <p>Si tu as tout touché et que tu t’y perds, <strong>Réinitialiser les réglages de notification</strong> remet tout à l’état de départ : heures, plafond, heures calmes et les textes que tu as écrits toi-même.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Autorisation et batterie sur Android</h2>
+<p>À partir d’Android 13, l’affichage des notifications demande ton autorisation. L’app la demande à la fin du questionnaire de départ et quand tu actives les notifications. Si tu ne l’as pas accordée, active-la dans <strong>Paramètres Android → Applications → Soluklan → Notifications</strong>.</p>
+<p>Certains fabricants limitent les apps en arrière-plan pour économiser la batterie : Samsung, Xiaomi, Huawei, Oppo, OnePlus et d’autres. Cette limitation peut retarder les rappels, voire les empêcher de s’afficher. Pour que les rappels arrivent à l’heure, sors Soluklan de l’optimisation de la batterie : dans <strong>Paramètres → Applications → Soluklan → Batterie</strong>, choisis <strong>Non restreinte</strong> ou <strong>Non optimisée</strong>. Le nom des menus varie selon la marque et la version d’Android. Si tu ne le trouves pas, tape « batterie » dans le champ de recherche des Paramètres.</p>
+<p>À partir d’Android 12, le système peut décaler les rappels de quelques minutes pour économiser la batterie. Un décalage de cet ordre est normal.</p>
+</div>
 <h2>Si tu ne veux aucune notification</h2>
 <p>Tu peux toutes les désactiver. L’app fonctionne parfaitement sans ; ta série, tes programmes et tes <a href="/fr/guide/serie-et-jalons.html">jalons</a> continuent pareil.</p>
-    <aside class="indir"><p>Soluklan est une app gratuite d’exercices de respiration : le micro écoute ta respiration et montre à quel point tu suis le rythme.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-fr.svg?v=efe192af" alt="Télécharger dans l’App Store" width="127" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan est une app gratuite d’exercices de respiration : le micro écoute ta respiration et montre à quel point tu suis le rythme.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-fr.svg?v=efe192af" alt="Télécharger dans l’App Store" width="127" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=fr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-fr.svg?v=429d4c53" alt="Disponible sur Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/fr/guide/sujet/utilisation.html">&#8592; Utilisation</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/fr/guide/">Guide</a>
       <a href="/fr/confidentialite.html">Confidentialité</a>
       <a href="/fr/accessibilite.html">Accessibilité</a>
+      <a href="/fr/nouveautes.html">Nouveautés</a>
       <a href="/fr/aide.html">Aide</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple et le logo Apple sont des marques d’Apple Inc., déposées aux États-Unis et dans d’autres pays. App Store est une marque de service d’Apple Inc.</p>
+    <p class="marka-notu">Apple et le logo Apple sont des marques d’Apple Inc., déposées aux États-Unis et dans d’autres pays. App Store est une marque de service d’Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
   </div>
 </footer>
 <script>

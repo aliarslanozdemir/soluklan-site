@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Erinnerungen und Mitteilungen","description":"Die tägliche Erinnerung, der Serienhinweis, technikbezogene Mitteilungen, der Tonfall der Texte, stille Stunden, Urlaubsmodus und das Tageslimit. Was jede macht und wie du sie einstellst.","url":"https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html","inLanguage":"de","image":"https://soluklan.app/assets/paylasim/de/erinnerungen-und-mitteilungen-941500e5b6.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Anwendung","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ratgeber","item":"https://soluklan.app/de/ratgeber/"},{"@type":"ListItem","position":2,"name":"Anwendung","item":"https://soluklan.app/de/ratgeber/thema/anwendung.html"},{"@type":"ListItem","position":3,"name":"Erinnerungen und Mitteilungen","item":"https://soluklan.app/de/ratgeber/erinnerungen-und-mitteilungen.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Erinnerungen und Mitteilungen</h1>
     <p class="lede">Die tägliche Erinnerung, der Serienhinweis, technikbezogene Mitteilungen, der Tonfall der Texte, stille Stunden, Urlaubsmodus und das Tageslimit. Was jede macht und wie du sie einstellst.</p>
     <p class="updated">8 Min. Lesezeit</p>
+<div class="platform-sec" role="group" aria-label="Wähle dein Gerät" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone und iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Alle Mitteilungen liegen unter <strong>Profil → Einstellungen → Mitteilungsoptionen</strong>. Sie werden alle auf deinem Gerät geplant: nichts wird von einem Server geschickt.</p>
 <h2>Die tägliche Erinnerung</h2>
 <p>Die grundlegendste. Du kannst für jeden Wochentag eine eigene Zeit wählen und einem Tag auch mehrere Zeiten geben. Lässt du einen Tag leer, kommt an dem Tag keine Erinnerung.</p>
@@ -141,6 +171,9 @@
 <h2>Der Serienhinweis</h2>
 <p>Der Hinweis, der kommt, wenn deine Serie in Gefahr ist — also wenn du an diesem Tag keine Sitzung gemacht hast und der Tag fast vorbei ist. Die <strong>Zeit des ersten Hinweises</strong> wählst du selbst.</p>
 <p>Schützt ein Serienschild den Tag, kommt kein Hinweis. Ist deine Serie gerissen, erinnert dich eine Mitteilung an die <a href="/de/ratgeber/serie-und-meilensteine.html">Reparatur</a>: am ersten Tag der Reparaturfrist, am letzten Tag und, wenn die Frist lang ist, einmal in der Mitte. An diesen Tagen kommt sie anstelle deiner täglichen Erinnerung, falls du eine hast. Schaltest du den Serienhinweis aus, kommen auch die Mitteilungen zur Reparatur nicht.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Auf Android gibt es außerdem einen Countdown zum Tagesende: Hast du an dem Tag noch keine Sitzung gemacht, erscheint abends eine Mitteilung, die bis Mitternacht herunterzählt und zeigt, wie viel Zeit deiner Serie oder deinem Schild bleibt. Nach der Sitzung verschwindet sie von selbst. <strong>Jetzt starten</strong> öffnet den Schnellstart. Wischst du die Mitteilung weg, kommt sie an dem Tag nicht wieder. Willst du ihn gar nicht sehen, schalte in den Mitteilungseinstellungen <strong>Countdown zum Tagesende</strong> aus.</p>
+</div>
 <p>Ob er sich wiederholt, ist eine eigene Einstellung: ein Hinweis, stündlich, oder bis hinunter zu alle fünf Minuten. Die Wiederholungen hören auf, sobald du die Sitzung machst.</p>
 <p>Standardmäßig steht dieser Hinweis <strong>außerhalb deines Tageslimits</strong>, damit ein volles Limit dich nicht deine Serie kostet. Du kannst ihn aber mitzählen lassen.</p>
 <h2>Technikbezogene Mitteilungen</h2>
@@ -160,7 +193,7 @@
 <p>Das Zeitfenster, in dem du nicht gestört werden willst. In diesen Stunden kommen die Mitteilungen nicht, die die App von sich aus vorschlägt.</p>
 <p>Fällt eine Erinnerung, die du selbst gesetzt hast, in die stillen Stunden, zeigt die App das an, aber die Erinnerung kommt trotzdem: die Uhrzeit hast du gewählt.</p>
 <h2>Wenn du lange pausierst</h2>
-<p>Übst du eine Weile nicht, beginnt eine eigene Mitteilung, die dich zurückholt. Wie oft sie kommt, wählst du: von einmal am Tag bis einmal in der Woche. Sie lässt sich abschalten.</p>
+<p>Ist deine Serie gerissen, werden die Mitteilungen zu Willkommen-zurück-Mitteilungen. Deine tägliche Erinnerung kommt weiter zu ihrer Zeit und ruft dich jetzt zurück. Hast du keine Erinnerung, erinnert dich die App selbst im Lauf des Tages. Sobald du eine Sitzung machst, sind die Mitteilungen wieder wie vorher.</p>
 <p>Übst du lange gar nicht, hören die Mitteilungen ganz auf. Sobald du eine Sitzung machst, fangen sie wieder an.</p>
 <h2>Das Tageslimit</h2>
 <p>Du entscheidest, wie viele Mitteilungen höchstens an einem Tag kommen dürfen. Ist das Limit voll, wenn du eine neue Art einschalten willst, warnt dich die App und bietet eine Lösung mit einem Tipp an, etwa <strong>„Limit auf 2 erhöhen und einschalten“</strong>.</p>
@@ -170,9 +203,15 @@
 <p>Unten in den Einstellungen sind die zuletzt gesendeten Mitteilungen mit Text und Uhrzeit aufgelistet. Hast du eine Mitteilung verpasst oder fragst du dich, wann sie kam, schau hier nach.</p>
 <h2>Die Einstellungen zurücksetzen</h2>
 <p>Wenn du überall herumgestellt hast und den Überblick verloren hast, bringt <strong>Mitteilungseinstellungen zurücksetzen</strong> alles in den Anfangszustand: Zeiten, Limit, stille Stunden und die Texte, die du selbst geschrieben hast.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Berechtigung und Akku-Einstellungen unter Android</h2>
+<p>Ab Android 13 brauchen Mitteilungen deine Erlaubnis. Die App fragt danach am Ende des Einstiegs und wenn du Mitteilungen einschaltest. Hast du sie nicht erlaubt, schalte sie unter <strong>Android-Einstellungen → Apps → Soluklan → Benachrichtigungen</strong> ein.</p>
+<p>Manche Hersteller schränken Apps im Hintergrund ein, um Akku zu sparen: Samsung, Xiaomi, Huawei, Oppo, OnePlus und andere. Diese Einschränkung kann Erinnerungen verzögern oder ganz verhindern. Damit Erinnerungen pünktlich kommen, nimm Soluklan von der Akku-Optimierung aus: Wähle unter <strong>Einstellungen → Apps → Soluklan → Akku</strong> die Option <strong>Uneingeschränkt</strong> oder <strong>Nicht optimiert</strong>. Die Namen der Menüs unterscheiden sich je nach Marke und Android-Version. Findest du sie nicht, gib in das Suchfeld der Einstellungen „Akku“ ein.</p>
+<p>Ab Android 12 kann das System Erinnerungen um ein paar Minuten zurückhalten, um Akku zu sparen. Eine Verschiebung in dieser Größe ist normal.</p>
+</div>
 <h2>Wenn du gar keine Mitteilungen willst</h2>
 <p>Du kannst sie alle abschalten. Die App funktioniert vollständig ohne sie; Serie, Programme und <a href="/de/ratgeber/serie-und-meilensteine.html">Meilensteine</a> laufen genau gleich weiter.</p>
-    <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=de&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-de.svg?v=e9e3a4fd" alt="Jetzt bei Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/de/ratgeber/thema/anwendung.html">&#8592; Anwendung</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/de/ratgeber/">Ratgeber</a>
       <a href="/de/datenschutz.html">Datenschutz</a>
       <a href="/de/barrierefreiheit.html">Barrierefreiheit</a>
+      <a href="/de/neuigkeiten.html">Neuigkeiten</a>
       <a href="/de/hilfe.html">Hilfe</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple und das Apple Logo sind Marken der Apple Inc., die in den USA und weiteren Ländern eingetragen sind. App Store ist eine Dienstleistungsmarke der Apple Inc.</p>
+    <p class="marka-notu">Apple und das Apple Logo sind Marken der Apple Inc., die in den USA und weiteren Ländern eingetragen sind. App Store ist eine Dienstleistungsmarke der Apple Inc. Google Play und das Google Play-Logo sind Marken von Google LLC.</p>
   </div>
 </footer>
 <script>

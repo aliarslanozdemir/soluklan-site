@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan على الجهاز اللوحي","description":"على الجهاز اللوحي الشاشة أوسع والميكروفون أبعد. أين تضع الجهاز، ولماذا القياس أصعب من الهاتف، وما الذي يبقى كما هو.","url":"https://soluklan.app/ar/dalil/soluklan-ala-al-lawhi.html","inLanguage":"ar","image":"https://soluklan.app/assets/paylasim/ar/soluklan-ala-al-lawhi-6c42fcd89d.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ar/dalil/soluklan-ala-al-lawhi.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"المنصّات","dateModified":"2026-10-01T18:26:33+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الدليل","item":"https://soluklan.app/ar/dalil/"},{"@type":"ListItem","position":2,"name":"المنصّات","item":"https://soluklan.app/ar/dalil/mawdu/al-minassat.html"},{"@type":"ListItem","position":3,"name":"Soluklan على الجهاز اللوحي","item":"https://soluklan.app/ar/dalil/soluklan-ala-al-lawhi.html"}]}</script>
 <script>
@@ -131,19 +131,66 @@
     <h1>Soluklan على الجهاز اللوحي</h1>
     <p class="lede">على الجهاز اللوحي الشاشة أوسع والميكروفون أبعد. أين تضع الجهاز، ولماذا القياس أصعب من الهاتف، وما الذي يبقى كما هو.</p>
     <p class="updated">قراءة 4 دقيقة</p>
+<div class="platform-sec" role="group" aria-label="اختر جهازك" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone وiPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>على الجهاز اللوحي كل شيء موجود: التقنيات نفسها، والقياس نفسه، والتقرير نفسه. ويتغيّر أمران — عرض الشاشة وموضع الميكروفون.</p>
 <h2>أين الميكروفون في الجهاز اللوحي</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <p>ميكروفون iPad عند <strong>الحافة العلوية</strong> (وإن أمسكته بالعرض صار في الأعلى أو على الجانب بحسب الطراز). وخلافًا للهاتف فهو ليس متّجهًا إلى فمك، بل ينظر غالبًا إلى أعلى، وهو أبعد.</p>
 <p>ولهذا يُسمَع الزفير على اللوح أخفض بوضوح منه على الهاتف. والتطبيق يختار في اللوح أقرب ميكروفون إلى الفم، لكن الفجوة لا تُغلق تمامًا.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>يختلف موضع الميكروفون في الأجهزة اللوحية العاملة بنظام Android باختلاف الطراز: ففي معظمها يقع عند الحافة العلوية، وفي بعضها عند حافة جانبية. وأينما كان فهو ليس متّجهًا إلى فمك كما في الهاتف، ويبقى أبعد عن وجهك.</p>
+<p>ولهذا يُسمَع الزفير على اللوح أخفض بوضوح منه على الهاتف.</p>
+</div>
 <p>والنتيجة العملية: <strong>قرّب الجهاز اللوحي إليك.</strong> بدل وضعه على الطاولة والانحناء فوقه، خذه في حِجرك أو ضعه على حامل وحافة الميكروفون نحوك. وإن ظلّ غير مسموع فاستبعد <a href="/ar/dalil/idha-lam-yusma-nafasuk.html">المسافة أولًا ثم الغرفة</a>. و<a href="/ar/dalil/qiyas-al-atabat.html">العتبات نفسها تُضبط على تسجيلات حقيقية</a>.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>الاهتزاز</h2>
+<p>معظم الأجهزة اللوحية العاملة بنظام Android ليس فيها محرّك اهتزاز. ولهذا قد لا تشعر بشيء على اللوح حتى لو كان اهتزاز إيقاع الجلسة مفعّلًا. فتابع الإيقاع بالدائرة على الشاشة: خذ الشهيق وهي تكبر، وأخرج الزفير وهي تصغر.</p>
+</div>
 <h2>كل ما يبقى كما هو</h2>
 <p>الدرجة والتقرير والسلسلة والبرامج والتذكيرات والإنجازات مطابقة للهاتف — <a href="/ar/dalil/kayfa-tuhsab-ad-daraja.html">كيف تُحسب درجة الجلسة</a>، <a href="/ar/dalil/as-sijill-wal-mulakhkhasat.html">السجلّ والملخّصات والإنجازات</a>، <a href="/ar/dalil/idad-barnamij.html">إنشاء برنامج والاستمرار فيه</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <p>وسجلّ الجلسات يتزامن بين الأجهزة عبر iCloud، فالجلسة التي أدّيتها على الهاتف تظهر على iPad — و<a href="/ar/dalil/idarat-bayanatik.html">أين تقيم هذه البيانات وكيف تُمحى</a> في مقال آخر.</p>
 <p>و<a href="/ar/dalil/al-widget-wan-nashat-al-mubashir.html">عنصر الواجهة والنشاط المباشر</a> موجودان على iPad أيضًا.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>في Android لا يتزامن سجلّ الجلسات بين الأجهزة: يحتفظ الجهاز اللوحي بسجلّه الخاص، ويحفظه النسخ الاحتياطي التلقائي في Android في حسابك على Google. والجلسة التي أدّيتها على الهاتف لا تظهر على اللوح.</p>
+</div>
 <h2>إن كانت هذه أول مرة على الجهاز اللوحي</h2>
 <p>إن كنت تستعمل التطبيق لأول مرة على جهاز لوحي فاختبار التعارف يظهر هنا أيضًا و<a href="/ar/dalil/jalsatuk-al-ula.html">تجري الجلسة الأولى بالمسار نفسه</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
 <p>وإن أجريت الاختبار على الهاتف فإجاباتك وإعداداتك، ومنها <a href="/ar/dalil/mustawayat-al-wajiha.html">مستوى الواجهة</a>، تصل إلى iPad عبر iCloud.</p>
-    <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a></span></aside>
+</div>
+    <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ar&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-ar.svg?v=711ccb2f" alt="احصل عليه من Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ar/dalil/mawdu/al-minassat.html">&#8592; المنصّات</a></p>
   </div>
 </article>
@@ -156,10 +203,11 @@
       <a href="/ar/dalil/">الدليل</a>
       <a href="/ar/khususiya.html">الخصوصية</a>
       <a href="/ar/imkaniyat-al-wusul.html">إمكانية الوصول</a>
+      <a href="/ar/al-jadid.html">ما الجديد</a>
       <a href="/ar/dam.html">الدعم</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple وشعار Apple علامتان تجاريتان لشركة Apple Inc.، مسجّلتان في الولايات المتحدة وبلدان أخرى. App Store علامة خدمة لشركة Apple Inc.</p>
+    <p class="marka-notu">Apple وشعار Apple علامتان تجاريتان لشركة Apple Inc.، مسجّلتان في الولايات المتحدة وبلدان أخرى. App Store علامة خدمة لشركة Apple Inc. Google Play وشعار Google Play علامتان تجاريتان لشركة Google LLC.</p>
   </div>
 </footer>
 <script>

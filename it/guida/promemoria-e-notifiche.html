@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Promemoria e notifiche","description":"Il promemoria quotidiano, l’avviso della serie, le notifiche per tecnica, il tono dei testi, le ore tranquille, la modalità vacanza e il tetto giornaliero. Cosa fa ciascuno e come si regola.","url":"https://soluklan.app/it/guida/promemoria-e-notifiche.html","inLanguage":"it","image":"https://soluklan.app/assets/paylasim/it/promemoria-e-notifiche-4bdbcd15c8.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/it/guida/promemoria-e-notifiche.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Come si usa","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guida","item":"https://soluklan.app/it/guida/"},{"@type":"ListItem","position":2,"name":"Come si usa","item":"https://soluklan.app/it/guida/argomento/come-si-usa.html"},{"@type":"ListItem","position":3,"name":"Promemoria e notifiche","item":"https://soluklan.app/it/guida/promemoria-e-notifiche.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Promemoria e notifiche</h1>
     <p class="lede">Il promemoria quotidiano, l’avviso della serie, le notifiche per tecnica, il tono dei testi, le ore tranquille, la modalità vacanza e il tetto giornaliero. Cosa fa ciascuno e come si regola.</p>
     <p class="updated">8 min di lettura</p>
+<div class="platform-sec" role="group" aria-label="Scegli il tuo dispositivo" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Tutte le notifiche stanno in <strong>Profilo → Impostazioni → Opzioni di notifica</strong>. Sono tutte programmate sul tuo dispositivo: niente viene inviato da un server.</p>
 <h2>Il promemoria quotidiano</h2>
 <p>Il più elementare. Puoi scegliere un orario diverso per ogni giorno della settimana, e anche aggiungere più orari allo stesso giorno. Un giorno lasciato vuoto non riceve promemoria.</p>
@@ -141,6 +171,9 @@
 <h2>L’avviso della serie</h2>
 <p>L’avviso che arriva quando la tua serie è a rischio, cioè quando non hai fatto sessione quel giorno e la giornata sta finendo. L’<strong>ora del primo avviso</strong> la scegli tu.</p>
 <p>Se uno scudo della serie proteggerà quel giorno, l’avviso non arriva. Se la serie si è interrotta, una notifica ti ricorda la <a href="/it/guida/serie-e-tappe.html">riparazione</a> il primo giorno in cui puoi farla, l’ultimo e, se il tempo a disposizione è lungo, una volta a metà. In quei giorni arriva al posto del promemoria quotidiano, se ne hai uno. Se spegni l’avviso della serie, non arrivano nemmeno le notifiche di riparazione.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Su Android c’è anche un conto alla rovescia di fine giornata: se quel giorno non hai ancora fatto una sessione, la sera compare una notifica che conta fino a mezzanotte e mostra quanto tempo resta alla tua serie o al tuo scudo. Sparisce da sola appena fai la sessione. <strong>Inizia ora</strong> apre l’avvio rapido. Se scorri via la notifica, quel giorno non ricompare. Se non vuoi vederlo affatto, disattiva <strong>Conto alla rovescia di fine giornata</strong> nelle impostazioni delle notifiche.</p>
+</div>
 <p>Se si ripeta è un’impostazione a parte: un avviso, ogni ora, o fino a ogni cinque minuti. Le ripetizioni si fermano appena fai la sessione.</p>
 <p>Di serie questo avviso sta <strong>fuori dal tetto giornaliero</strong>, così un tetto pieno non ti costa la serie. Se preferisci, puoi farlo contare dentro.</p>
 <h2>Le notifiche per tecnica</h2>
@@ -160,7 +193,7 @@
 <p>La fascia in cui non vuoi essere disturbato. In quelle ore non arrivano le notifiche che l’app propone da sé.</p>
 <p>Se un promemoria che hai impostato cade dentro le ore tranquille, l’app te lo mostra, ma quel promemoria arriva lo stesso: l’orario l’hai scelto tu.</p>
 <h2>Se fai una lunga pausa</h2>
-<p>Se per un po’ non fai sessioni, parte una notifica a parte che ti richiama. Scegli tu ogni quanto arriva: da una volta al giorno a una volta a settimana. Si può disattivare.</p>
+<p>Quando la serie si interrompe, le notifiche diventano messaggi di ritorno. Il promemoria quotidiano arriva sempre alla sua ora, stavolta per richiamarti. Se non hai un promemoria, è l’app a ricordartelo durante la giornata. Appena fai una sessione, le notifiche tornano come prima.</p>
 <p>Se a lungo non fai nessuna sessione, le notifiche si fermano del tutto e riprendono appena fai una sessione.</p>
 <h2>Il tetto giornaliero</h2>
 <p>Decidi tu quante notifiche possono arrivare al massimo in un giorno. Se il tetto è pieno quando provi ad attivarne un tipo nuovo, l’app ti avvisa e propone una correzione in un tocco, del tipo <strong>«Alza il tetto a 2 e attivala»</strong>.</p>
@@ -170,9 +203,15 @@
 <p>In fondo alle impostazioni le notifiche inviate di recente sono elencate con il loro testo e l’ora. Se ne hai persa una o ti chiedi quando è arrivata, guarda qui.</p>
 <h2>Rimettere a posto le impostazioni</h2>
 <p>Se hai toccato tutto e non ti ci ritrovi più, <strong>Reimposta le notifiche</strong> riporta ogni cosa allo stato iniziale: orari, tetto, ore tranquille e i testi che hai scritto tu.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Permesso e batteria su Android</h2>
+<p>Da Android 13 in poi, per mostrare le notifiche serve il tuo permesso. L’app te lo chiede alla fine del questionario iniziale e quando attivi le notifiche. Se non l’hai concesso, attivalo in <strong>Impostazioni Android → App → Soluklan → Notifiche</strong>.</p>
+<p>Alcuni produttori limitano le app in background per risparmiare batteria: Samsung, Xiaomi, Huawei, Oppo, OnePlus e altri. Questa limitazione può ritardare i promemoria o impedire del tutto che compaiano. Per ricevere i promemoria in orario, escludi Soluklan dall’ottimizzazione della batteria: in <strong>Impostazioni → App → Soluklan → Batteria</strong> scegli <strong>Senza restrizioni</strong> o <strong>Non ottimizzata</strong>. I nomi dei menu cambiano a seconda della marca e della versione di Android. Se non li trovi, scrivi «batteria» nella casella di ricerca delle Impostazioni.</p>
+<p>Da Android 12 in poi il sistema può ritardare i promemoria di qualche minuto per risparmiare batteria. Uno scarto di questo tipo è normale.</p>
+</div>
 <h2>Se non vuoi nessuna notifica</h2>
 <p>Puoi disattivarle tutte. L’app funziona perfettamente senza; la tua serie, i tuoi programmi e le tue <a href="/it/guida/serie-e-tappe.html">tappe</a> proseguono allo stesso modo.</p>
-    <aside class="indir"><p>Soluklan è un’app gratuita di esercizi di respirazione: il microfono ascolta il tuo respiro e mostra quanto segui il ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-it.svg?v=9ac509df" alt="Scarica su App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan è un’app gratuita di esercizi di respirazione: il microfono ascolta il tuo respiro e mostra quanto segui il ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-it.svg?v=9ac509df" alt="Scarica su App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=it&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-it.svg?v=46b6768c" alt="Disponibile su Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/it/guida/argomento/come-si-usa.html">&#8592; Come si usa</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/it/guida/">Guida</a>
       <a href="/it/privacy.html">Privacy</a>
       <a href="/it/accessibilita.html">Accessibilità</a>
+      <a href="/it/novita.html">Novità</a>
       <a href="/it/assistenza.html">Assistenza</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple e il logo Apple sono marchi di Apple Inc., registrati negli Stati Uniti e in altri Paesi. App Store è un marchio di servizio di Apple Inc.</p>
+    <p class="marka-notu">Apple e il logo Apple sono marchi di Apple Inc., registrati negli Stati Uniti e in altri Paesi. App Store è un marchio di servizio di Apple Inc. Google Play e il logo Google Play sono marchi di Google LLC.</p>
   </div>
 </footer>
 <script>

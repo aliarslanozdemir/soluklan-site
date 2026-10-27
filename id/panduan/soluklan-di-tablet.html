@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan di tablet","description":"Di tablet layarnya lebih lebar, mikrofonnya lebih jauh. Di mana perangkat sebaiknya diletakkan, kenapa pengukurannya lebih sulit daripada di ponsel, dan apa saja yang tetap sama.","url":"https://soluklan.app/id/panduan/soluklan-di-tablet.html","inLanguage":"id","image":"https://soluklan.app/assets/paylasim/id/soluklan-di-tablet-ebf0c631f0.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/id/panduan/soluklan-di-tablet.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Platform","dateModified":"2026-10-11T12:28:16+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Panduan","item":"https://soluklan.app/id/panduan/"},{"@type":"ListItem","position":2,"name":"Platform","item":"https://soluklan.app/id/panduan/topik/platform.html"},{"@type":"ListItem","position":3,"name":"Soluklan di tablet","item":"https://soluklan.app/id/panduan/soluklan-di-tablet.html"}]}</script>
 <script>
@@ -131,19 +131,66 @@
     <h1>Soluklan di tablet</h1>
     <p class="lede">Di tablet layarnya lebih lebar, mikrofonnya lebih jauh. Di mana perangkat sebaiknya diletakkan, kenapa pengukurannya lebih sulit daripada di ponsel, dan apa saja yang tetap sama.</p>
     <p class="updated">4 menit membaca</p>
+<div class="platform-sec" role="group" aria-label="Pilih perangkatmu" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone dan iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Di tablet, aplikasinya lengkap: teknik yang sama, pengukuran yang sama, laporan yang sama. Yang berbeda ada dua — lebar layar dan letak mikrofon.</p>
 <h2>Di mana mikrofon di tablet</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone dan iPad</p>
 <p>Mikrofon iPad ada di <strong>tepi atas</strong> perangkat (kalau kamu memegangnya mendatar, letaknya di atas atau di tepi samping, tergantung modelnya). Jadi, berbeda dengan ponsel, mikrofonnya tidak menghadap mulutmu, biasanya mengarah ke atas dan letaknya lebih jauh.</p>
 <p>Karena itu, di tablet embusan terdengar jauh lebih pelan daripada di ponsel. Di tablet, aplikasi memilih mikrofon yang paling dekat dengan mulut, tapi selisihnya tidak hilang sepenuhnya.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Di tablet Android, letak mikrofon berbeda-beda menurut model: pada kebanyakan tablet ada di tepi atas, pada sebagian di tepi samping. Di mana pun letaknya, mikrofon tidak menghadap mulutmu seperti di ponsel dan posisinya lebih jauh dari wajahmu.</p>
+<p>Karena itu, di tablet embusan terdengar jauh lebih pelan daripada di ponsel.</p>
+</div>
 <p>Kesimpulan praktisnya: <strong>pegang tablet lebih dekat.</strong> Daripada menaruhnya di meja lalu mencondongkan badan, pangku tabletnya atau taruh di dudukan dan arahkan tepi tempat mikrofon berada kepadamu. Kalau tetap tidak terdengar, <a href="/id/panduan/jika-napasmu-tidak-terdengar.html">periksa jarak dan ruangan satu per satu</a>. <a href="/id/panduan/cara-mengukur-ambang-batas.html">Ambangnya sendiri juga diukur dengan rekaman nyata</a>.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Getaran</h2>
+<p>Kebanyakan tablet Android tidak punya motor getar. Karena itu, meski getaran ritme sesi menyala, kamu mungkin tidak merasakannya di tablet. Ikuti ritme dari lingkaran di layar: tarik napas saat lingkaran membesar, embuskan saat mengecil.</p>
+</div>
 <h2>Semua yang tetap sama</h2>
 <p>Skor, laporan, streak, program, pengingat, dan pencapaian sama persis dengan di ponsel — <a href="/id/panduan/cara-skor-dihitung.html">Cara sebuah sesi diberi skor</a>, <a href="/id/panduan/riwayat-ringkasan-dan-pencapaian.html">Riwayat, ringkasan, dan pencapaian</a>, <a href="/id/panduan/menyiapkan-program.html">Menyiapkan dan menjalani program</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone dan iPad</p>
 <p>Riwayat sesi diselaraskan antarperangkat lewat iCloud, jadi sesi yang kamu jalani di ponsel juga muncul di iPad: <a href="/id/panduan/mengelola-datamu.html">Mengelola datamu</a>.</p>
 <p><a href="/id/panduan/widget-dan-aktivitas-langsung.html">Widget dan Aktivitas Langsung</a> juga berfungsi di iPad.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Di Android, riwayat sesi tidak diselaraskan antarperangkat: tablet menyimpan riwayatnya sendiri dan mencadangkannya ke akun Google lewat pencadangan otomatis Android. Sesi yang kamu jalani di ponsel tidak muncul di tablet.</p>
+</div>
 <h2>Kalau baru pertama kali membukanya di tablet</h2>
 <p>Kalau kamu baru pertama kali memakai aplikasi di tablet, tes perkenalan juga muncul di sini, dan <a href="/id/panduan/sesi-pertamamu.html">sesi pertamamu berjalan dengan alur yang sama dari awal sampai akhir</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone dan iPad</p>
 <p>Kalau kamu sudah mengerjakan latihannya di ponsel, jawaban dan pengaturanmu, termasuk <a href="/id/panduan/tingkat-tampilan.html">tingkat tampilan antarmuka</a>, dikirim ke iPad lewat iCloud.</p>
-    <aside class="indir"><p>Soluklan adalah aplikasi latihan pernapasan gratis: mikrofon mendengarkan napasmu dan menunjukkan seberapa pas kamu mengikuti ritmenya.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-id.svg?v=9b95aa41" alt="Unduh di App Store" width="120" height="40"></a></span></aside>
+</div>
+    <aside class="indir"><p>Soluklan adalah aplikasi latihan pernapasan gratis: mikrofon mendengarkan napasmu dan menunjukkan seberapa pas kamu mengikuti ritmenya.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-id.svg?v=9b95aa41" alt="Unduh di App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=id&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/id/panduan/topik/platform.html">&#8592; Platform</a></p>
   </div>
 </article>
@@ -156,10 +203,11 @@
       <a href="/id/panduan/">Panduan</a>
       <a href="/id/privasi.html">Privasi</a>
       <a href="/id/aksesibilitas.html">Aksesibilitas</a>
+      <a href="/id/yang-baru.html">Yang baru</a>
       <a href="/id/bantuan.html">Bantuan</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple dan logo Apple adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain. App Store adalah merek layanan Apple Inc.</p>
+    <p class="marka-notu">Apple dan logo Apple adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain. App Store adalah merek layanan Apple Inc. Google Play dan logo Google Play adalah merek dagang Google LLC.</p>
   </div>
 </footer>
 <script>

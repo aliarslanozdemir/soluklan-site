@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"平板上的 Soluklan","description":"平板屏幕更宽，麦克风更远。设备该怎么放、为什么比手机更难测，以及哪些保持不变。","url":"https://soluklan.app/zh/zhinan/pingban-shang-de-soluklan.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/paylasim/zh/pingban-shang-de-soluklan-d9b1bbfb3b.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/zhinan/pingban-shang-de-soluklan.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"平台","dateModified":"2026-10-01T18:26:33+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"指南","item":"https://soluklan.app/zh/zhinan/"},{"@type":"ListItem","position":2,"name":"平台","item":"https://soluklan.app/zh/zhinan/zhuti/pingtai.html"},{"@type":"ListItem","position":3,"name":"平板上的 Soluklan","item":"https://soluklan.app/zh/zhinan/pingban-shang-de-soluklan.html"}]}</script>
 <script>
@@ -131,19 +131,66 @@
     <h1>平板上的 Soluklan</h1>
     <p class="lede">平板屏幕更宽，麦克风更远。设备该怎么放、为什么比手机更难测，以及哪些保持不变。</p>
     <p class="updated">阅读约 4 分钟</p>
+<div class="platform-sec" role="group" aria-label="选择你的设备" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone 和 iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>平板上功能是齐的：一样的技法、一样的测量、一样的报告。变的有两件事——屏幕的宽度和麦克风的位置。</p>
 <h2>平板的麦克风在哪里</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <p>iPad 的麦克风在<strong>顶边</strong>（横着拿时，按机型会落在上方或侧边）。和手机不同，它并不朝向你的嘴，通常朝上，而且更远。</p>
 <p>所以在平板上，呼气听起来明显比在手机上轻。应用会挑离嘴最近的麦克风，但差距并不能完全抹平。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Android 平板的麦克风位置因机型而异：大多在顶边，也有些在侧边。不管在哪里，它都不像手机那样朝向你的嘴，离你的脸也更远。</p>
+<p>所以在平板上，呼气听起来明显比在手机上轻。</p>
+</div>
 <p>实际做法：<strong>把平板拿近一点。</strong> 与其放在桌上再俯身，不如放在腿上，或者立在支架上、让有麦克风的那条边朝向你。还是听不到，就先排除<a href="/zh/zhinan/huxi-ting-bu-dao.html">距离，再排除房间</a>。<a href="/zh/zhinan/yuzhi-zenme-ce.html">阈值本身也是在真实录音上定的</a>。</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>振动</h2>
+<p>大多数 Android 平板没有振动马达。所以即使打开了练习节奏触感，在平板上你也可能什么都感觉不到。跟着屏幕上的圆圈走：圆圈变大时吸气，变小时呼气。</p>
+</div>
 <h2>保持不变的部分</h2>
 <p>分数、报告、连续天数、计划、提醒和成就与手机完全一致——<a href="/zh/zhinan/fenshu-zenme-suan.html">一次练习的分数怎么算</a>、<a href="/zh/zhinan/jilu-zongjie-chengjiu.html">记录、小结和成就</a>、<a href="/zh/zhinan/jianli-jihua.html">建立一个计划并坚持下去</a>。</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <p>练习记录通过 iCloud 在设备间同步，所以在手机上做的练习，iPad 上也看得到——<a href="/zh/zhinan/guanli-shuju.html">这些数据存在哪里、怎么删除</a>另写了一篇。</p>
 <p><a href="/zh/zhinan/xiao-zujian.html">小组件和实时活动</a>在 iPad 上也有。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>在 Android 上，练习记录不会在设备之间同步：平板保存自己的记录，并通过 Android 自带的自动备份把它备份到你的 Google 账户。在手机上做的练习，平板上看不到。</p>
+</div>
 <h2>第一次在平板上打开</h2>
 <p>如果你是第一次在平板上用这个应用，开场问题这里也会出现，<a href="/zh/zhinan/diyici-lianxi.html">第一次练习也走同一套流程</a>。</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <p>如果你已经在手机上答过，你的回答和设置，包括<a href="/zh/zhinan/jiemian-cengji.html">界面层级</a>，会通过 iCloud 同步到 iPad。</p>
-    <aside class="indir"><p>Soluklan 是一款免费的呼吸练习应用：麦克风会听你的呼吸，告诉你跟节奏跟得有多准。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-zh.svg?v=53dc3388" alt="在 App Store 下载" width="109" height="40"></a></span></aside>
+</div>
+    <aside class="indir"><p>Soluklan 是一款免费的呼吸练习应用：麦克风会听你的呼吸，告诉你跟节奏跟得有多准。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-zh.svg?v=53dc3388" alt="在 App Store 下载" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=zh-CN&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-zh.svg?v=203833c8" alt="去 Google Play 商店下载" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/zh/zhinan/zhuti/pingtai.html">&#8592; 平台</a></p>
   </div>
 </article>
@@ -156,10 +203,11 @@
       <a href="/zh/zhinan/">指南</a>
       <a href="/zh/yinsi.html">隐私</a>
       <a href="/zh/wuzhangai.html">无障碍</a>
+      <a href="/zh/gengxin.html">更新内容</a>
       <a href="/zh/zhichi.html">支持</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple 和 Apple 标志是 Apple Inc. 在美国和其他国家和地区注册的商标。App Store 是 Apple Inc. 的服务商标。</p>
+    <p class="marka-notu">Apple 和 Apple 标志是 Apple Inc. 在美国和其他国家和地区注册的商标。App Store 是 Apple Inc. 的服务商标。 Google Play 和 Google Play 徽标是 Google LLC 的商标。</p>
   </div>
 </footer>
 <script>

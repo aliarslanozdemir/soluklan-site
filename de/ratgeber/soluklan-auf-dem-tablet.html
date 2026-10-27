@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan auf dem Tablet","description":"Auf dem Tablet ist der Bildschirm breiter und das Mikrofon weiter weg. Wohin mit dem Gerät, warum das Messen schwerer ist als am Telefon und was gleich bleibt.","url":"https://soluklan.app/de/ratgeber/soluklan-auf-dem-tablet.html","inLanguage":"de","image":"https://soluklan.app/assets/paylasim/de/soluklan-auf-dem-tablet-0ad5c3e97d.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/de/ratgeber/soluklan-auf-dem-tablet.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Plattformen","dateModified":"2026-10-01T18:26:33+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ratgeber","item":"https://soluklan.app/de/ratgeber/"},{"@type":"ListItem","position":2,"name":"Plattformen","item":"https://soluklan.app/de/ratgeber/thema/plattformen.html"},{"@type":"ListItem","position":3,"name":"Soluklan auf dem Tablet","item":"https://soluklan.app/de/ratgeber/soluklan-auf-dem-tablet.html"}]}</script>
 <script>
@@ -131,19 +131,66 @@
     <h1>Soluklan auf dem Tablet</h1>
     <p class="lede">Auf dem Tablet ist der Bildschirm breiter und das Mikrofon weiter weg. Wohin mit dem Gerät, warum das Messen schwerer ist als am Telefon und was gleich bleibt.</p>
     <p class="updated">4 Min. Lesezeit</p>
+<div class="platform-sec" role="group" aria-label="Wähle dein Gerät" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone und iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Auf dem Tablet ist alles da: dieselben Techniken, dieselbe Messung, derselbe Bericht. Zwei Dinge ändern sich — die Breite des Bildschirms und der Ort des Mikrofons.</p>
 <h2>Wo das Mikrofon am Tablet sitzt</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
 <p>Das Mikrofon des iPads liegt an der <strong>Oberkante</strong> (quer gehalten landet es je nach Modell oben oder an der Seite). Anders als beim Telefon zeigt es nicht zu deinem Mund, sondern meist nach oben — und ist weiter weg.</p>
 <p>Deshalb kommt die Ausatmung auf dem Tablet deutlich leiser an als auf dem Telefon. Die App wählt auf dem Tablet das Mikrofon, das dem Mund am nächsten ist, aber der Unterschied verschwindet nicht ganz.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Bei Android-Tablets hängt die Lage des Mikrofons vom Modell ab: Bei den meisten sitzt es an der Oberkante, bei manchen an einer Seitenkante. Wo es auch sitzt, es zeigt nicht wie beim Telefon zu deinem Mund und bleibt weiter von deinem Gesicht entfernt.</p>
+<p>Deshalb kommt die Ausatmung auf dem Tablet deutlich leiser an als auf dem Telefon.</p>
+</div>
 <p>Praktische Folge: <strong>halte das Tablet näher.</strong> Statt es auf den Tisch zu legen und dich darüberzubeugen, nimm es auf den Schoß oder stell es auf einen Ständer, sodass die Kante mit dem Mikrofon zu dir zeigt. Wird die Ausatmung trotzdem nicht gehört, schließe <a href="/de/ratgeber/atem-wird-nicht-gehoert.html">erst den Abstand, dann den Raum</a> aus. <a href="/de/ratgeber/wie-die-schwellen-gemessen-werden.html">Die Schwellen selbst werden an echten Aufnahmen gesetzt</a>.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Vibration</h2>
+<p>Die meisten Android-Tablets haben keinen Vibrationsmotor. Auch wenn die Haptik im Sitzungsrhythmus an ist, spürst du auf dem Tablet deshalb vielleicht nichts. Folge dem Rhythmus mit dem Kreis auf dem Bildschirm: einatmen, während er wächst, ausatmen, während er schrumpft.</p>
+</div>
 <h2>Was gleich bleibt</h2>
 <p>Bewertung, Bericht, Serie, Programme, Erinnerungen und Erfolge sind identisch mit dem Telefon — <a href="/de/ratgeber/wie-bewertet-wird.html">Wie eine Sitzung bewertet wird</a>, <a href="/de/ratgeber/verlauf-uebersichten-erfolge.html">Verlauf, Übersichten und Erfolge</a>, <a href="/de/ratgeber/ein-programm-einrichten.html">Ein Programm einrichten und dranbleiben</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
 <p>Der Sitzungsverlauf gleicht sich über iCloud zwischen den Geräten ab: Was du am Telefon gemacht hast, steht auch auf dem iPad. Mehr dazu in <a href="/de/ratgeber/deine-daten-verwalten.html">Deine Daten verwalten</a>.</p>
 <p><a href="/de/ratgeber/widgets-und-live-aktivitaet.html">Widget und Live-Aktivität</a> gibt es auf dem iPad ebenfalls.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Unter Android gleicht sich der Sitzungsverlauf nicht zwischen den Geräten ab. Das Tablet führt seinen eigenen Verlauf und sichert ihn über die automatische Sicherung von Android in deinem Google-Konto. Eine Sitzung, die du am Telefon gemacht hast, erscheint nicht auf dem Tablet.</p>
+</div>
 <h2>Wenn du das Tablet zum ersten Mal öffnest</h2>
 <p>Nutzt du die App zum ersten Mal auf dem Tablet, erscheint der Einstieg auch hier, und <a href="/de/ratgeber/deine-erste-sitzung.html">die erste Sitzung läuft nach demselben Ablauf</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
 <p>Hast du den Einstieg schon am Telefon gemacht, kommen deine Antworten und Einstellungen, auch die <a href="/de/ratgeber/oberflaechen-stufen.html">Oberflächenstufe</a>, über iCloud auf das iPad.</p>
-    <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a></span></aside>
+</div>
+    <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=de&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-de.svg?v=e9e3a4fd" alt="Jetzt bei Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/de/ratgeber/thema/plattformen.html">&#8592; Plattformen</a></p>
   </div>
 </article>
@@ -156,10 +203,11 @@
       <a href="/de/ratgeber/">Ratgeber</a>
       <a href="/de/datenschutz.html">Datenschutz</a>
       <a href="/de/barrierefreiheit.html">Barrierefreiheit</a>
+      <a href="/de/neuigkeiten.html">Neuigkeiten</a>
       <a href="/de/hilfe.html">Hilfe</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple und das Apple Logo sind Marken der Apple Inc., die in den USA und weiteren Ländern eingetragen sind. App Store ist eine Dienstleistungsmarke der Apple Inc.</p>
+    <p class="marka-notu">Apple und das Apple Logo sind Marken der Apple Inc., die in den USA und weiteren Ländern eingetragen sind. App Store ist eine Dienstleistungsmarke der Apple Inc. Google Play und das Google Play-Logo sind Marken von Google LLC.</p>
   </div>
 </footer>
 <script>

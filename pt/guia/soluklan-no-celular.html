@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan no celular","description":"O celular é o aparelho principal do app: é nele que a medição é mais precisa. Onde fica cada coisa, para onde o microfone aponta e onde ficam seus dados.","url":"https://soluklan.app/pt/guia/soluklan-no-celular.html","inLanguage":"pt-BR","image":"https://soluklan.app/assets/paylasim/pt/soluklan-no-celular-d1bd88d413.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/pt/guia/soluklan-no-celular.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Plataformas","dateModified":"2026-10-11T12:50:53+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guia","item":"https://soluklan.app/pt/guia/"},{"@type":"ListItem","position":2,"name":"Plataformas","item":"https://soluklan.app/pt/guia/tema/plataformas.html"},{"@type":"ListItem","position":3,"name":"Soluklan no celular","item":"https://soluklan.app/pt/guia/soluklan-no-celular.html"}]}</script>
 <script>
@@ -131,24 +131,78 @@
     <h1>Soluklan no celular</h1>
     <p class="lede">O celular é o aparelho principal do app: é nele que a medição é mais precisa. Onde fica cada coisa, para onde o microfone aponta e onde ficam seus dados.</p>
     <p class="updated">5 min de leitura</p>
+<div class="platform-sec" role="group" aria-label="Escolha seu aparelho" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>O Soluklan funciona em três aparelhos, e não é a mesma coisa em todos. O celular é onde a medição é mais precisa: é nele que o microfone fica mais perto da boca.</p>
 <h2>Onde fica o microfone</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <p>O microfone de voz do iPhone fica na <strong>borda de baixo</strong>, ao lado da entrada de carregamento. Se você deixar o celular na mesa, a tela deve ficar para cima e a borda de baixo, virada para você. Se segurar na mão, vinte a trinta centímetros bastam. Não encoste na boca: aí o som da respiração estoura, e o app mostra o aviso "muito perto".</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Nos celulares Android, o lugar do microfone varia conforme a marca e o modelo. Na maioria, o microfone de voz fica na <strong>borda de baixo</strong>, ao lado da entrada de carregamento, e em alguns modelos fica na borda de cima. Você pode ver onde ele fica no manual do celular ou nos furinhos das bordas.</p>
+<p>Segure o celular a <strong>10-15 centímetros</strong> da boca e do nariz, com a borda do microfone virada para você. Não encoste na boca: aí o som da respiração estoura, e o app mostra o aviso "muito perto".</p>
+<p>Alguns celulares processam o som antes de entregá-lo ao app: abafam o ruído e aumentam o volume sozinhos. Esse processamento pode baixar também o som da respiração. O app usa o som menos processado que o celular oferece. Por isso, à mesma distância, dois celulares diferentes podem ouvir sua respiração em volumes diferentes.</p>
+</div>
 <p>Quando a expiração não é ouvida, o problema costuma estar <a href="/pt/guia/se-sua-respiracao-nao-e-ouvida.html">na distância, no ambiente ou na própria técnica</a>. E o microfone <a href="/pt/guia/como-o-microfone-escuta.html">mede primeiro o silêncio do ambiente e define o limiar com base nele</a>.</p>
 <h2>O que tem no celular</h2>
 <p>O app completo está aqui. Na tela inicial ficam o botão Começar, no centro, e a sequência e o número de sessões, logo abaixo. <a href="/pt/guia/navegando-pelo-app.html">Qual ícone abre o quê</a> está explicado num artigo à parte. Quando você toca em Começar, primeiro <a href="/pt/guia/tecnica-e-duracao.html">escolhe a técnica e a duração</a> e depois abre a <a href="/pt/guia/a-tela-da-sessao.html">própria tela da sessão</a>: o círculo, a onda sonora e, quando necessário, avisos curtos ficam ali.</p>
 <p>Assim que a sessão termina, aparece o relatório. <a href="/pt/guia/lendo-o-relatorio.html">O que cada linha significa</a> está explicado, e <a href="/pt/guia/como-a-pontuacao-e-calculada.html">como a pontuação é montada</a> está num artigo à parte. Tudo o que se acumula com o tempo — <a href="/pt/guia/historico-resumos-e-conquistas.html">o histórico, os resumos semanais e as conquistas</a> e <a href="/pt/guia/sequencia-e-marcos.html">a sequência e os marcos</a> — fica reunido na tela de perfil.</p>
 <p>Se quiser ter regularidade, você pode <a href="/pt/guia/montar-um-programa.html">montar um programa</a> e, se tem medo de esquecer, <a href="/pt/guia/lembretes-e-notificacoes.html">criar um lembrete para você</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <p>Quando quiser dar uma olhada sem abrir o app, os <a href="/pt/guia/widgets-e-atividade-ao-vivo.html">widgets e a Atividade ao Vivo</a> resolvem. Os dois só existem no celular e no tablet.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Quando quiser dar uma olhada sem abrir o app, você pode adicionar o widget do Soluklan à tela inicial. O widget mostra sua sequência e, ao tocar, abre o app na escolha da técnica.</p>
+</div>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <h2>Modo silencioso, fones de ouvido, ligações</h2>
 <p>Com o celular no silencioso, os sons de respiração e de contagem regressiva não tocam, e a vibração e a tela continuam iguais. Com fones de ouvido conectados, o microfone pode passar a ser o dos fones. Aí, como a distância muda, a medição também muda, e o melhor é tirar os fones. Se chegar uma ligação durante a sessão, a sessão é pausada, e depois da ligação você recomeça o ciclo pelo menu de pausa.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Vibração</h2>
+<p>Com a <strong>Vibração no ritmo da sessão</strong> ativada, o ritmo também é marcado pela vibração do celular. A sensação da vibração muda de celular para celular. Nos aparelhos topo de linha, ela vem em toques finos e nítidos, e nos mais baratos é sentida de forma mais grosseira. Se a vibração vier fraca ou confusa, acompanhe o ritmo pelo círculo na tela.</p>
+</div>
 <h2>Ao sair do app</h2>
 <p>Se você sair do app ou bloquear a tela, a sessão é pausada. Ao voltar, o menu de pausa está aberto, e por ali você recomeça o ciclo. A medição não continua em segundo plano, e o app não mantém o microfone ligado em segundo plano.</p>
 <h2>Onde ficam seus dados</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
 <p>Seu histórico de sessões fica no seu aparelho e na sua própria conta do iCloud. Ele também aparece no iPad aberto com a mesma conta Apple. Os detalhes estão no artigo <a href="/pt/guia/gerenciando-seus-dados.html">Gerenciando seus dados</a>.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Seu histórico de sessões, sua sequência e seus ajustes ficam no seu celular. O backup automático do Android os salva na sua conta Google: quando você troca de celular Android, eles voltam junto com o backup. O iCloud não é usado.</p>
+<p>O histórico não passa entre iPhone e Android. Se você trocar o iPhone por um Android, ou usar os dois, cada aparelho guarda o próprio histórico.</p>
+</div>
 <h2>O que muda no tablet</h2>
 <p>No tablet, a medição é mais difícil: <a href="/pt/guia/soluklan-no-tablet.html">o lugar do microfone e o layout mudam no tablet</a>.</p>
-    <aside class="indir"><p>O Soluklan é um app gratuito de exercícios de respiração: o microfone escuta a sua respiração e mostra o quanto você acompanha o ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-pt.svg?v=e8b2875e" alt="Baixar na App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>O Soluklan é um app gratuito de exercícios de respiração: o microfone escuta a sua respiração e mostra o quanto você acompanha o ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-pt.svg?v=e8b2875e" alt="Baixar na App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=pt-BR&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-telefonda"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/pt/guia/tema/plataformas.html">&#8592; Plataformas</a></p>
   </div>
 </article>
@@ -161,10 +215,11 @@
       <a href="/pt/guia/">Guia</a>
       <a href="/pt/privacidade.html">Privacidade</a>
       <a href="/pt/acessibilidade.html">Acessibilidade</a>
+      <a href="/pt/novidades.html">Novidades</a>
       <a href="/pt/suporte.html">Suporte</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple e o logotipo da Apple são marcas comerciais da Apple Inc., registradas nos EUA e em outros países. App Store é uma marca de serviço da Apple Inc.</p>
+    <p class="marka-notu">Apple e o logotipo da Apple são marcas comerciais da Apple Inc., registradas nos EUA e em outros países. App Store é uma marca de serviço da Apple Inc. Google Play e o logotipo do Google Play são marcas da Google LLC.</p>
   </div>
 </footer>
 <script>

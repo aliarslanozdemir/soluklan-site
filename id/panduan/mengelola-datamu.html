@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Mengelola datamu","description":"Apa disimpan di mana, apa yang disinkronkan antarperangkat, pilihan berbagi, dan cara menghapus semuanya.","url":"https://soluklan.app/id/panduan/mengelola-datamu.html","inLanguage":"id","image":"https://soluklan.app/assets/paylasim/id/mengelola-datamu-a6454485f2.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/id/panduan/mengelola-datamu.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Cara pakai","dateModified":"2026-10-11T12:28:16+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Panduan","item":"https://soluklan.app/id/panduan/"},{"@type":"ListItem","position":2,"name":"Cara pakai","item":"https://soluklan.app/id/panduan/topik/cara-pakai.html"},{"@type":"ListItem","position":3,"name":"Mengelola datamu","item":"https://soluklan.app/id/panduan/mengelola-datamu.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Mengelola datamu</h1>
     <p class="lede">Apa disimpan di mana, apa yang disinkronkan antarperangkat, pilihan berbagi, dan cara menghapus semuanya.</p>
     <p class="updated">5 menit membaca</p>
+<div class="platform-sec" role="group" aria-label="Pilih perangkatmu" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone dan iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Di sini kami tuliskan di mana semua yang disimpan aplikasi berada dan apa saja yang bisa kamu kendalikan.</p>
 <h2>Data yang ada di perangkatmu</h2>
 <p>Ringkasan sesimu (tanggal, teknik, durasi, skor, laporan), jawaban <a href="/id/panduan/sesi-pertamamu.html">tes perkenalan</a>, pengaturan, dan pilihan notifikasimu disimpan di perangkatmu.</p>
@@ -139,6 +169,18 @@
 <h2>Suara</h2>
 <p><strong>Suara tidak direkam.</strong> Mikrofon hanya bekerja selama sesi, dan dari suara itu hanya tingkat suara sesaat yang dihitung. Tidak ada satu pun file suara yang ditulis ke penyimpanan.</p>
 <p>Satu-satunya pengecualian adalah izin <a href="/id/panduan/data-yang-kamu-bagikan.html">sampel suara</a> di bawah — kalau izin itu tidak kamu nyalakan, suara tidak direkam di sesi mana pun.</p>
+<h2>Menit mindful ke Kesehatan</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone dan iPad</p>
+<p>Di Pengaturan → Apple Kesehatan ada sakelar <strong>Tulis menit mindful ke Kesehatan</strong>. Kalau kamu menyalakannya, setiap sesi yang terhitung ditulis ke app Kesehatan sebagai menit mindful, hanya dengan jam mulai dan jam selesainya. Sakelarnya mati sejak awal. Saat kamu menyalakannya, Kesehatan hanya meminta izin menulis ini, dan kalau tidak kamu izinkan, sakelarnya tetap mati.</p>
+<p>Kami juga menanyakannya satu kali. Kalau kamu menjawab "Tidak usah", kami tidak bertanya lagi.</p>
+<p>Hanya sesi yang terhitung yang ditulis, termasuk yang kamu lakukan sendiri di Apple Watch.</p>
+<p>Menit yang sudah ditulis tetap ada di Kesehatan. Hapus dataku tidak menyentuhnya, dan kalau mau, kamu bisa menghapusnya dari app Kesehatan.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Di Android 14 dan yang lebih baru, di Pengaturan ada sakelar <strong>Catat menit mindful ke Health Connect</strong>. Kalau kamu menyalakannya, setiap sesi yang terhitung ditulis ke Health Connect sebagai menit mindful, hanya dengan jam mulai dan jam selesainya. Sakelarnya mati sejak awal. Saat kamu menyalakannya, hanya izin menulis ini yang diminta, dan kalau tidak kamu izinkan, sakelarnya tetap mati.</p>
+<p>Kami juga menanyakannya satu kali. Kalau kamu menjawab "Tidak usah", kami tidak bertanya lagi.</p>
+<p>Hanya sesi yang terhitung yang ditulis. Menit yang sudah ditulis tetap ada di Health Connect, dan Hapus dataku tidak menyentuhnya.</p>
+</div>
 <h2>Berbagi yang opsional</h2>
 <p>Di Pengaturan → Privasi ada empat sakelar terpisah. Semuanya mati sejak awal, semuanya diawali kata "anonim", dan masing-masing ditanyakan terpisah.</p>
 <p><strong>Ringkasan sesi anonim.</strong> ID yang dibuat secara acak, tanggal dan jam, teknik, durasi, skor, apakah sesi selesai, apakah mikrofon dipakai, versi aplikasi, dan nilai-nilai teknis dari laporan. Namamu, emailmu, lokasimu, ID perangkatmu, dan jawaban kesehatanmu <strong>tidak pernah</strong> dikirim.</p>
@@ -158,7 +200,7 @@
 <p>Kalau ingin catatan anonim yang pernah kamu bagikan dihapus, cukup tulis ke alamat dukungan.</p>
 <h2>Kalau aplikasinya kamu hapus</h2>
 <p>Data di perangkat ikut terhapus. Salinan di iCloud tetap ada selama beberapa waktu sesuai aturan Apple. Kalau aplikasinya kamu pasang lagi, riwayatmu kembali.</p>
-    <aside class="indir"><p>Soluklan adalah aplikasi latihan pernapasan gratis: mikrofon mendengarkan napasmu dan menunjukkan seberapa pas kamu mengikuti ritmenya.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-id.svg?v=9b95aa41" alt="Unduh di App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan adalah aplikasi latihan pernapasan gratis: mikrofon mendengarkan napasmu dan menunjukkan seberapa pas kamu mengikuti ritmenya.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-id.svg?v=9b95aa41" alt="Unduh di App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=id&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-verilerini-yonetmek"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/id/panduan/topik/cara-pakai.html">&#8592; Cara pakai</a></p>
   </div>
 </article>
@@ -171,10 +213,11 @@
       <a href="/id/panduan/">Panduan</a>
       <a href="/id/privasi.html">Privasi</a>
       <a href="/id/aksesibilitas.html">Aksesibilitas</a>
+      <a href="/id/yang-baru.html">Yang baru</a>
       <a href="/id/bantuan.html">Bantuan</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple dan logo Apple adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain. App Store adalah merek layanan Apple Inc.</p>
+    <p class="marka-notu">Apple dan logo Apple adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain. App Store adalah merek layanan Apple Inc. Google Play dan logo Google Play adalah merek dagang Google LLC.</p>
   </div>
 </footer>
 <script>

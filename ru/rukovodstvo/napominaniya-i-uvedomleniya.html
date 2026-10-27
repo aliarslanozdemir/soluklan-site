@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Напоминания и уведомления","description":"Ежедневное напоминание, предупреждение о серии, уведомления под конкретные техники, тихие часы, режим отпуска и дневной предел — как настроить каждое.","url":"https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html","inLanguage":"ru","image":"https://soluklan.app/assets/paylasim/ru/napominaniya-i-uvedomleniya-9caede90df.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Как пользоваться","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Руководство","item":"https://soluklan.app/ru/rukovodstvo/"},{"@type":"ListItem","position":2,"name":"Как пользоваться","item":"https://soluklan.app/ru/rukovodstvo/tema/kak-polzovatsya.html"},{"@type":"ListItem","position":3,"name":"Напоминания и уведомления","item":"https://soluklan.app/ru/rukovodstvo/napominaniya-i-uvedomleniya.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Напоминания и уведомления</h1>
     <p class="lede">Ежедневное напоминание, предупреждение о серии, уведомления под конкретные техники, тихие часы, режим отпуска и дневной предел — как настроить каждое.</p>
     <p class="updated">8 мин чтения</p>
+<div class="platform-sec" role="group" aria-label="Выбери устройство" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone и iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Все уведомления живут в <strong>Профиль → Настройки → Параметры уведомлений</strong>. Все они планируются на твоём устройстве: с сервера ничего не приходит.</p>
 <h2>Ежедневное напоминание</h2>
 <p>Самое простое. Для каждого дня недели можно выбрать своё время, а в один день можно добавить и несколько. Оставленный пустым день остаётся без напоминания.</p>
@@ -141,6 +171,9 @@
 <h2>Предупреждение о серии</h2>
 <p>Приходит, когда серия под угрозой: сессия за день не сделана, а день почти закончился. <strong>Время первого предупреждения</strong> выбираешь ты.</p>
 <p>Если этот день сохранит щит серии, предупреждение не приходит. Если серия прервалась, уведомление напоминает о <a href="/ru/rukovodstvo/seriya-i-vekhi.html">восстановлении</a> в первый день срока, в последний и, если срок длинный, один раз в середине. В эти дни оно приходит вместо ежедневного напоминания, если оно у тебя есть. Если выключить предупреждение о серии, уведомления о восстановлении тоже не приходят.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>На Android есть ещё отсчёт до конца дня: если в этот день ты ещё не провёл сессию, вечером появляется уведомление с обратным отсчётом до полуночи. Оно показывает, сколько времени осталось у серии или щита, и исчезает само, как только сессия сделана. <strong>Начать сейчас</strong> открывает быстрый старт. Если смахнуть уведомление, в этот день оно больше не появится. Если он тебе совсем не нужен, выключи <strong>Отсчёт до конца дня</strong> в настройках уведомлений.</p>
+</div>
 <p>Повторяться ли ему — отдельная настройка: одно предупреждение, раз в час или вплоть до каждых пяти минут. Повторы прекращаются, как только ты занимаешься.</p>
 <p>По умолчанию это предупреждение <strong>не входит в дневной предел</strong>, так что заполненный предел не может стоить тебе серии. При желании его можно включить в предел.</p>
 <h2>Уведомления под конкретные техники</h2>
@@ -160,7 +193,7 @@
 <p>Окно, когда тебя не хотят беспокоить. В эти часы не приходят уведомления, которые предлагает само приложение.</p>
 <p>Если напоминание, которое ты сам поставил, попадает в тихие часы, приложение это покажет, но напоминание всё равно придёт: время выбрал ты.</p>
 <h2>Если перерыв затянулся</h2>
-<p>Если какое-то время не заниматься, начинает приходить отдельное уведомление, которое мягко зовёт вернуться. Частоту выбираешь ты: от раза в день до раза в неделю. Его можно выключить.</p>
+<p>Если серия прервалась, уведомления превращаются в приглашения вернуться. Ежедневное напоминание по-прежнему приходит в своё время, только теперь зовёт вернуться. Если напоминания нет, приложение само напомнит в течение дня. После первой же сессии уведомления снова становятся прежними.</p>
 <p>Если долго не будет ни одной сессии, уведомления прекращаются совсем, а после первой же сессии возобновляются.</p>
 <h2>Дневной предел</h2>
 <p>Сколько уведомлений максимум может прийти за день, решаешь ты. Если при попытке включить новый вид предел уже заполнен, приложение предупредит и предложит решение в одно касание вроде <strong>«Поднять предел до 2 и включить»</strong>.</p>
@@ -170,9 +203,15 @@
 <p>Внизу настроек перечислены недавно отправленные уведомления, с текстом и временем. Если пропустил уведомление или хочешь знать, когда оно пришло, загляни сюда.</p>
 <h2>Сброс настроек</h2>
 <p>Если ты перебрал всё и запутался, <strong>Сбросить настройки уведомлений</strong> вернёт всё в исходное состояние: времена, предел, тихие часы и написанные тобой тексты.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Разрешение и настройки батареи на Android</h2>
+<p>На Android 13 и новее для показа уведомлений нужно твоё разрешение. Приложение спрашивает его в конце вводного теста и когда ты включаешь уведомления. Если ты его не дал, включи его в <strong>Настройках Android → Приложения → Soluklan → Уведомления</strong>.</p>
+<p>Некоторые производители ограничивают приложения в фоне, чтобы беречь батарею: Samsung, Xiaomi, Huawei, Oppo, OnePlus и другие. Из-за этого напоминания могут приходить с опозданием или не появляться вовсе. Чтобы они приходили вовремя, исключи Soluklan из оптимизации батареи: в <strong>Настройки → Приложения → Soluklan → Батарея</strong> выбери <strong>«Без ограничений»</strong> или <strong>«Не оптимизировать»</strong>. Названия пунктов зависят от марки и версии Android. Если не находишь, введи «батарея» в поиске Настроек.</p>
+<p>На Android 12 и новее система может задерживать напоминания на несколько минут, чтобы беречь батарею. Такой сдвиг нормален.</p>
+</div>
 <h2>Если уведомления не нужны вовсе</h2>
 <p>Их можно выключить полностью. Приложение работает и без них; серия, программы и <a href="/ru/rukovodstvo/seriya-i-vekhi.html">вехи</a> идут своим чередом.</p>
-    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ru&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-ru.svg?v=ed1a8c66" alt="Доступно в Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ru/rukovodstvo/tema/kak-polzovatsya.html">&#8592; Как пользоваться</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/ru/rukovodstvo/">Руководство</a>
       <a href="/ru/konfidencialnost.html">Конфиденциальность</a>
       <a href="/ru/dostupnost.html">Универсальный доступ</a>
+      <a href="/ru/chto-novogo.html">Что нового</a>
       <a href="/ru/podderzhka.html">Поддержка</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc.</p>
+    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc. Google Play и логотип Google Play являются товарными знаками Google LLC.</p>
   </div>
 </footer>
 <script>

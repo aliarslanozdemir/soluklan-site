@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pengingat dan notifikasi","description":"Pengingat harian, peringatan streak, notifikasi khusus teknik, gaya notifikasi, jam tenang, mode libur, dan batas harian. Apa fungsi masing-masing dan cara mengaturnya.","url":"https://soluklan.app/id/panduan/pengingat-dan-notifikasi.html","inLanguage":"id","image":"https://soluklan.app/assets/paylasim/id/pengingat-dan-notifikasi-aa9a628594.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/id/panduan/pengingat-dan-notifikasi.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Cara pakai","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Panduan","item":"https://soluklan.app/id/panduan/"},{"@type":"ListItem","position":2,"name":"Cara pakai","item":"https://soluklan.app/id/panduan/topik/cara-pakai.html"},{"@type":"ListItem","position":3,"name":"Pengingat dan notifikasi","item":"https://soluklan.app/id/panduan/pengingat-dan-notifikasi.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Pengingat dan notifikasi</h1>
     <p class="lede">Pengingat harian, peringatan streak, notifikasi khusus teknik, gaya notifikasi, jam tenang, mode libur, dan batas harian. Apa fungsi masing-masing dan cara mengaturnya.</p>
     <p class="updated">8 menit membaca</p>
+<div class="platform-sec" role="group" aria-label="Pilih perangkatmu" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone dan iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Semua notifikasi ada di <strong>Profil → Pengaturan → Pilihan notifikasi</strong>. Semuanya dijadwalkan di perangkatmu: tidak ada notifikasi yang dikirim dari server.</p>
 <h2>Pengingat harian</h2>
 <p>Ini pengingat yang paling dasar. Kamu bisa memilih jam yang berbeda untuk tiap hari dalam seminggu, dan menambahkan lebih dari satu jam untuk satu hari. Kalau satu hari kamu biarkan kosong, hari itu tidak ada pengingat.</p>
@@ -141,6 +171,9 @@
 <h2>Peringatan streak</h2>
 <p>Peringatan yang datang saat streak-mu terancam, yaitu ketika hari itu kamu belum melakukan sesi dan harinya hampir habis. <strong>Waktu peringatan pertama</strong> kamu pilih sendiri.</p>
 <p>Kalau perisai streak akan melindungi hari itu, peringatan tidak datang. Kalau streak-mu rusak, notifikasi yang mengingatkan soal <a href="/id/panduan/streak-dan-tonggak.html">perbaikan</a> datang pada hari pertama dan hari terakhir masa perbaikan, dan sekali lagi di tengahnya kalau masanya panjang. Pada hari-hari itu, notifikasi ini datang menggantikan pengingat harianmu kalau kamu punya. Kalau peringatan streak kamu matikan, notifikasi perbaikan juga tidak datang.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Di Android ada juga hitung mundur akhir hari: kalau hari itu kamu belum melakukan sesi, di sore hari muncul notifikasi yang menghitung mundur ke tengah malam dan menunjukkan berapa lama lagi waktu untuk streak atau perisaimu. Begitu sesi selesai, notifikasi ini hilang sendiri. <strong>Mulai sekarang</strong> membuka mulai cepat. Kalau notifikasinya kamu geser untuk menutup, hari itu ia tidak muncul lagi. Kalau sama sekali tidak mau melihatnya, matikan tombol <strong>Hitung mundur akhir hari</strong> di pengaturan notifikasi.</p>
+</div>
 <p>Pengulangan peringatan juga punya pilihan sendiri: sekali saja, tiap jam, atau dengan jeda yang makin rapat sampai lima menit. Begitu sesi selesai, pengulangan berhenti.</p>
 <p>Secara bawaan peringatan ini <strong>tidak dihitung dalam batas harian</strong>, supaya streak-mu tidak hilang hanya karena batasnya penuh. Kalau mau, kamu bisa memasukkannya ke dalam batas.</p>
 <h2>Notifikasi khusus teknik</h2>
@@ -160,7 +193,7 @@
 <p>Rentang waktu saat kamu tidak ingin diganggu. Pada jam-jam ini, notifikasi yang disarankan oleh aplikasi sendiri tidak datang.</p>
 <p>Kalau pengingat yang kamu atur sendiri jatuh di jam tenang, aplikasi menunjukkannya, tapi pengingat itu tetap datang: jamnya kan kamu yang pilih.</p>
 <h2>Kalau lama tidak berlatih</h2>
-<p>Kalau beberapa waktu kamu tidak melakukan sesi, notifikasi terpisah mulai datang untuk mengajakmu kembali. Seberapa sering datangnya kamu pilih sendiri: dari sekali sehari sampai sekali seminggu. Kalau tidak mau, bisa dimatikan.</p>
+<p>Kalau streak-mu rusak, notifikasi berubah jadi pesan untuk kembali. Pengingat harianmu tetap datang di jamnya sendiri, kali ini mengajakmu kembali. Kalau kamu tidak punya pengingat, aplikasi sendiri yang mengingatkan sepanjang hari. Begitu kamu melakukan satu sesi, notifikasi kembali seperti biasa.</p>
 <p>Kalau lama sekali tidak ada sesi, notifikasi berhenti sepenuhnya, lalu mulai lagi begitu kamu melakukan satu sesi.</p>
 <h2>Batas notifikasi harian</h2>
 <p>Berapa notifikasi paling banyak yang boleh datang dalam sehari, kamu yang tentukan. Kalau batasnya penuh dan kamu mencoba menyalakan jenis notifikasi baru, aplikasi memberi peringatan dan menawarkan jalan keluar sekali sentuh seperti <strong>"Jadikan batas 2 dan aktifkan"</strong>.</p>
@@ -170,9 +203,15 @@
 <p>Di bagian bawah pengaturan, notifikasi yang terakhir dikirim tercantum lengkap dengan teks dan jamnya. Kalau ada notifikasi yang terlewat atau kamu penasaran kapan ia datang, lihat di sini.</p>
 <h2>Mengatur ulang pengaturan</h2>
 <p>Kalau semuanya jadi berantakan karena terlalu banyak diutak-atik, <strong>Atur ulang pengaturan notifikasi</strong> mengembalikan semuanya ke kondisi awal: termasuk jam, batas, jam tenang, dan teks yang kamu tulis sendiri.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Izin dan pengaturan baterai di Android</h2>
+<p>Di Android 13 ke atas, menampilkan notifikasi butuh izin. Aplikasi meminta izin ini di akhir tes perkenalan dan saat kamu menyalakan notifikasi. Kalau belum kamu berikan, nyalakan dari <strong>Pengaturan Android → Aplikasi → Soluklan → Notifikasi</strong>.</p>
+<p>Beberapa produsen membatasi aplikasi di latar belakang untuk menghemat baterai: Samsung, Xiaomi, Huawei, Oppo, OnePlus, dan lainnya. Pembatasan ini bisa membuat pengingat terlambat atau tidak muncul sama sekali. Supaya pengingat datang tepat waktu, keluarkan Soluklan dari optimasi baterai: di <strong>Pengaturan → Aplikasi → Soluklan → Baterai</strong>, pilih <strong>Tidak dibatasi</strong> atau <strong>Tidak dioptimalkan</strong>. Nama menunya berbeda menurut merek dan versi Android. Kalau tidak ketemu, ketik "baterai" di kotak pencarian Pengaturan.</p>
+<p>Di Android 12 ke atas, sistem bisa menunda pengingat beberapa menit untuk menghemat baterai. Pergeseran sebesar ini normal.</p>
+</div>
 <h2>Kalau sama sekali tidak mau notifikasi</h2>
 <p>Semuanya bisa kamu matikan. Aplikasi tetap berjalan penuh tanpa notifikasi. Streak, program, dan <a href="/id/panduan/streak-dan-tonggak.html">tonggak</a> tetap berjalan seperti biasa.</p>
-    <aside class="indir"><p>Soluklan adalah aplikasi latihan pernapasan gratis: mikrofon mendengarkan napasmu dan menunjukkan seberapa pas kamu mengikuti ritmenya.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-id.svg?v=9b95aa41" alt="Unduh di App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan adalah aplikasi latihan pernapasan gratis: mikrofon mendengarkan napasmu dan menunjukkan seberapa pas kamu mengikuti ritmenya.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-id.svg?v=9b95aa41" alt="Unduh di App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=id&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/id/panduan/topik/cara-pakai.html">&#8592; Cara pakai</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/id/panduan/">Panduan</a>
       <a href="/id/privasi.html">Privasi</a>
       <a href="/id/aksesibilitas.html">Aksesibilitas</a>
+      <a href="/id/yang-baru.html">Yang baru</a>
       <a href="/id/bantuan.html">Bantuan</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple dan logo Apple adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain. App Store adalah merek layanan Apple Inc.</p>
+    <p class="marka-notu">Apple dan logo Apple adalah merek dagang Apple Inc., yang terdaftar di AS dan negara lain. App Store adalah merek layanan Apple Inc. Google Play dan logo Google Play adalah merek dagang Google LLC.</p>
   </div>
 </footer>
 <script>

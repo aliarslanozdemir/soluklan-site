@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Как пороги измеряются на настоящих записях","description":"Что считать «выдохом», решается не наугад, а по настоящим образцам звука, которые присылают пользователи. Как устроена эта работа.","url":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html","inLanguage":"ru","image":"https://soluklan.app/assets/paylasim/ru/kak-izmeryayutsya-porogi-18e449d0f0.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"За кулисами","dateModified":"2026-10-10T19:39:26+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Руководство","item":"https://soluklan.app/ru/rukovodstvo/"},{"@type":"ListItem","position":2,"name":"За кулисами","item":"https://soluklan.app/ru/rukovodstvo/tema/za-kulisami.html"},{"@type":"ListItem","position":3,"name":"Как пороги измеряются на настоящих записях","item":"https://soluklan.app/ru/rukovodstvo/kak-izmeryayutsya-porogi.html"}]}</script>
 <script>
@@ -144,13 +144,15 @@
 <p>У приложения есть нижняя граница того, насколько низко может опуститься шум комнаты: она не даёт порогам стать слишком чувствительными в очень тихих комнатах.</p>
 <p>В сессиях с планшетом в тихой комнате эта граница могла сделать дыхание неслышным: <a href="/ru/rukovodstvo/kak-slushaet-mikrofon.html">шум комнаты</a> был намного ниже её. Когда посмотрели на настоящие записи, границу опустили: пойманных выдохов стало больше, а ложных срабатываний не прибавилось.</p>
 <p>Такую поправку наугад не найти. Без записи мы бы даже не узнали, что проблема существует.</p>
+<h2>Если комната меняется посреди сессии</h2>
+<p>Шум комнаты <a href="/ru/rukovodstvo/kak-slushaet-mikrofon.html">заново измеряется</a> и во время сессии. Это тоже проверено на тех же записях: и на записях с добавленным гулом кондиционера, разговором или звуком двери выдохи по-прежнему слышны.</p>
 <h2>Это единственная работа передачи образцов звука</h2>
 <p>Присланный звук слушают только ради этого: измерить точность распознавания дыхания. Он не используется ни для чего другого, не передаётся третьим лицам и удаляется с твоего устройства сразу после отправки.</p>
 <p>Если она выключена, звук не записывается ни в одной сессии. Приложение прекрасно работает и без этого разрешения.</p>
 <h2>Пороги со временем обновляются</h2>
 <p>По мере накопления записей та же проверка прогоняется снова, и значения обновляются.</p>
 <p>Так что точность измерений приложения растёт вместе с теми, кто им пользуется.</p>
-    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-esikler-nasil-olculuyor&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-esikler-nasil-olculuyor&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ru&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-esikler-nasil-olculuyor"><img src="/assets/rozetler/google-play-ru.svg?v=ed1a8c66" alt="Доступно в Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ru/rukovodstvo/tema/za-kulisami.html">&#8592; За кулисами</a></p>
   </div>
 </article>
@@ -163,10 +165,11 @@
       <a href="/ru/rukovodstvo/">Руководство</a>
       <a href="/ru/konfidencialnost.html">Конфиденциальность</a>
       <a href="/ru/dostupnost.html">Универсальный доступ</a>
+      <a href="/ru/chto-novogo.html">Что нового</a>
       <a href="/ru/podderzhka.html">Поддержка</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc.</p>
+    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc. Google Play и логотип Google Play являются товарными знаками Google LLC.</p>
   </div>
 </footer>
 <script>

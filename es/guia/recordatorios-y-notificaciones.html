@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Recordatorios y notificaciones","description":"El recordatorio diario, el aviso de racha, las notificaciones por técnica, el tono de los textos, las horas tranquilas, el modo vacaciones y el tope diario. Qué hace cada uno y cómo se ajusta.","url":"https://soluklan.app/es/guia/recordatorios-y-notificaciones.html","inLanguage":"es","image":"https://soluklan.app/assets/paylasim/es/recordatorios-y-notificaciones-3ad5102f26.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/es/guia/recordatorios-y-notificaciones.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Cómo se usa","dateModified":"2026-10-15T23:20:32+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guía","item":"https://soluklan.app/es/guia/"},{"@type":"ListItem","position":2,"name":"Cómo se usa","item":"https://soluklan.app/es/guia/tema/como-se-usa.html"},{"@type":"ListItem","position":3,"name":"Recordatorios y notificaciones","item":"https://soluklan.app/es/guia/recordatorios-y-notificaciones.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Recordatorios y notificaciones</h1>
     <p class="lede">El recordatorio diario, el aviso de racha, las notificaciones por técnica, el tono de los textos, las horas tranquilas, el modo vacaciones y el tope diario. Qué hace cada uno y cómo se ajusta.</p>
     <p class="updated">8 min de lectura</p>
+<div class="platform-sec" role="group" aria-label="Elige tu dispositivo" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone y iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Todas las notificaciones viven en <strong>Perfil → Ajustes → Opciones de notificación</strong>. Todas se programan en tu dispositivo: nada se envía desde un servidor.</p>
 <h2>El recordatorio diario</h2>
 <p>El más básico. Puedes elegir una hora distinta para cada día de la semana, y también añadir más de una hora a un mismo día. Un día que dejes vacío no recibe recordatorio.</p>
@@ -141,6 +171,9 @@
 <h2>El aviso de racha</h2>
 <p>El aviso que llega cuando tu racha está en peligro, es decir, cuando no has hecho sesión ese día y el día está acabando. La <strong>hora del primer aviso</strong> la eliges tú.</p>
 <p>Si un escudo de racha va a proteger ese día, no llega ningún aviso. Si tu racha se ha roto, una notificación te recuerda la <a href="/es/guia/racha-e-hitos.html">reparación</a> el primer día del plazo, el último día y, si el plazo es largo, una vez a mitad. Esos días llega en lugar de tu recordatorio diario, si tienes uno. Si apagas el aviso de racha, tampoco llegan las notificaciones de reparación.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>En Android hay además una cuenta atrás del fin del día: si ese día aún no has hecho una sesión, por la tarde aparece una notificación que cuenta hacia la medianoche y muestra cuánto tiempo les queda a tu racha o a tu escudo. Desaparece sola en cuanto haces la sesión. <strong>Empezar ya</strong> abre el inicio rápido. Si deslizas la notificación para quitarla, ese día no vuelve a aparecer. Si no quieres verla nunca, desactiva <strong>Cuenta atrás del fin del día</strong> en los ajustes de notificaciones.</p>
+</div>
 <p>Que se repita es otro ajuste: un aviso, cada hora, o hasta cada cinco minutos. Las repeticiones paran en cuanto haces la sesión.</p>
 <p>Por defecto este aviso queda <strong>fuera de tu tope diario</strong>, para que un tope lleno no te cueste la racha. Si lo prefieres, puedes contarlo dentro.</p>
 <h2>Las notificaciones por técnica</h2>
@@ -160,7 +193,7 @@
 <p>La franja en la que no quieres que te molesten. En esas horas no llegan las notificaciones que propone la propia app.</p>
 <p>Si un recordatorio que has puesto tú cae dentro de las horas tranquilas, la app te lo señala, pero ese recordatorio llega igual: la hora la elegiste tú.</p>
 <h2>Si haces una pausa larga</h2>
-<p>Si pasas un tiempo sin hacer sesiones, empieza una notificación aparte que te recuerda volver. Tú eliges con qué frecuencia llega: de una vez al día a una vez por semana. Se puede desactivar.</p>
+<p>Cuando tu racha se rompe, las notificaciones se convierten en mensajes de regreso. Tu recordatorio diario sigue llegando a su hora, ahora para invitarte a volver. Si no tienes recordatorio, la app te lo recuerda ella misma durante el día. En cuanto haces una sesión, las notificaciones vuelven a ser como antes.</p>
 <p>Si pasas mucho tiempo sin ninguna sesión, las notificaciones se detienen por completo, y vuelven en cuanto haces una sesión.</p>
 <h2>El tope diario</h2>
 <p>Tú decides cuántas notificaciones pueden llegar como mucho en un día. Si el tope está lleno cuando intentas activar un tipo nuevo, la app te avisa y ofrece un arreglo de un toque, del tipo <strong>«Subir el tope a 2 y activarlo»</strong>.</p>
@@ -170,9 +203,15 @@
 <p>Al final de los ajustes aparecen las últimas notificaciones enviadas, con su texto y su hora. Si te perdiste una o quieres saber cuándo llegó, mira aquí.</p>
 <h2>Volver a dejar los ajustes como estaban</h2>
 <p>Si has tocado todo y ya no sabes dónde estás, <strong>Restablecer los ajustes de notificación</strong> lo devuelve todo al estado inicial: horas, tope, horas tranquilas y los textos que hayas escrito tú.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Permiso y batería en Android</h2>
+<p>En Android 13 y posteriores, mostrar notificaciones requiere tu permiso. La app lo pide al final del cuestionario inicial y cuando activas las notificaciones. Si no lo diste, actívalo en <strong>Ajustes de Android → Aplicaciones → Soluklan → Notificaciones</strong>.</p>
+<p>Algunos fabricantes limitan las apps en segundo plano para ahorrar batería: Samsung, Xiaomi, Huawei, Oppo, OnePlus y otros. Esa limitación puede retrasar los recordatorios o impedir que aparezcan. Para que lleguen a su hora, deja Soluklan fuera de la optimización de batería: en <strong>Ajustes → Aplicaciones → Soluklan → Batería</strong>, elige <strong>Sin restricciones</strong> o <strong>No optimizada</strong>. Los nombres de los menús cambian según la marca y la versión de Android. Si no lo encuentras, escribe «batería» en el buscador de Ajustes.</p>
+<p>En Android 12 y posteriores, el sistema puede retrasar los recordatorios unos minutos para ahorrar batería. Un desfase así es normal.</p>
+</div>
 <h2>Si no quieres ninguna notificación</h2>
 <p>Puedes desactivarlas todas. La app funciona perfectamente sin ellas; tu racha, tus programas y tus <a href="/es/guia/racha-e-hitos.html">hitos</a> siguen igual.</p>
-    <aside class="indir"><p>Soluklan es una app gratuita de ejercicios de respiración: el micrófono escucha tu respiración y te muestra cuánto sigues el ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-es.svg?v=b3bca9d8" alt="Descargar en la App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan es una app gratuita de ejercicios de respiración: el micrófono escucha tu respiración y te muestra cuánto sigues el ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-hatirlaticilar&amp;mt=8"><img src="/assets/rozetler/app-store-es.svg?v=b3bca9d8" alt="Descargar en la App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=es&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-hatirlaticilar"><img src="/assets/rozetler/google-play-es.svg?v=ed3b4ff9" alt="Disponible en Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/es/guia/tema/como-se-usa.html">&#8592; Cómo se usa</a></p>
   </div>
 </article>
@@ -185,10 +224,11 @@
       <a href="/es/guia/">Guía</a>
       <a href="/es/privacidad.html">Privacidad</a>
       <a href="/es/accesibilidad.html">Accesibilidad</a>
+      <a href="/es/novedades.html">Novedades</a>
       <a href="/es/ayuda.html">Ayuda</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple y el logotipo de Apple son marcas comerciales de Apple Inc., registradas en EE. UU. y en otros países. App Store es una marca de servicio de Apple Inc.</p>
+    <p class="marka-notu">Apple y el logotipo de Apple son marcas comerciales de Apple Inc., registradas en EE. UU. y en otros países. App Store es una marca de servicio de Apple Inc. Google Play y el logotipo de Google Play son marcas de Google LLC.</p>
   </div>
 </footer>
 <script>

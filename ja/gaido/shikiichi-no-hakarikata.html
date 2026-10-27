@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"しきい値は実際の録音でどう測っているか","description":"どの音を「吐く息」とみなすかは、推測ではなく、ユーザーから届いた実際の音声サンプルで決めています。その仕組みについて。","url":"https://soluklan.app/ja/gaido/shikiichi-no-hakarikata.html","inLanguage":"ja","image":"https://soluklan.app/assets/paylasim/ja/shikiichi-no-hakarikata-3071266022.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ja/gaido/shikiichi-no-hakarikata.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"舞台裏","dateModified":"2026-10-10T19:29:52+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ガイド","item":"https://soluklan.app/ja/gaido/"},{"@type":"ListItem","position":2,"name":"舞台裏","item":"https://soluklan.app/ja/gaido/tema/butaiura.html"},{"@type":"ListItem","position":3,"name":"しきい値は実際の録音でどう測っているか","item":"https://soluklan.app/ja/gaido/shikiichi-no-hakarikata.html"}]}</script>
 <script>
@@ -144,13 +144,15 @@
 <p>アプリには、ノイズフロアが下がれる下限があります。とても静かな部屋で、しきい値が敏感になりすぎるのを防ぐためのものです。</p>
 <p>静かな部屋でタブレットを使ったセッションでは、この下限のせいで呼吸が聞き取れなくなることがありました。部屋の<a href="/ja/gaido/maiku-no-kikitorikata.html">ノイズフロア</a>が下限よりずっと低かったのです。実際の録音で確かめたうえで下限を下げたところ、とらえられる吐く息が増え、誤検出は増えませんでした。</p>
 <p>こうした修正は、推測では見つけられません。録音がなければ、問題があることにさえ気づけなかったでしょう。</p>
+<h2>セッション中に部屋の音が変わったら</h2>
+<p>ノイズフロアはセッション中も<a href="/ja/gaido/maiku-no-kikitorikata.html">測り直されます</a>。これも同じ録音で試しました。エアコンのうなり、話し声、ドアの音を重ねた録音でも、吐く息は引き続き聞き取れています。</p>
 <h2>音声サンプルの共有の目的はこれだけ</h2>
 <p>送られた音声は、このためだけに聞きます。呼吸検出の正確さを測ることです。ほかの目的には使わず、第三者に渡すこともなく、送信後は端末から削除されます。</p>
 <p>オフにしていれば、どのセッションでも音声は録音されません。この許可がなくても、アプリはすべての機能を使えます。</p>
 <h2>しきい値は少しずつ更新されます</h2>
 <p>録音がたまるたびに同じ確認をくり返し、値を更新します。</p>
 <p>つまり、アプリの測定の正確さは、使う人とともに高まっていきます。</p>
-    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-esikler-nasil-olculuyor&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-esikler-nasil-olculuyor&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ja&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-esikler-nasil-olculuyor"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ja/gaido/tema/butaiura.html">&#8592; 舞台裏</a></p>
   </div>
 </article>
@@ -163,10 +165,11 @@
       <a href="/ja/gaido/">ガイド</a>
       <a href="/ja/puraibashi.html">プライバシー</a>
       <a href="/ja/akusesibiriti.html">アクセシビリティ</a>
+      <a href="/ja/koshin-rireki.html">更新履歴</a>
       <a href="/ja/sapoto.html">サポート</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。</p>
+    <p class="marka-notu">Apple、Appleのロゴは、米国その他の国で登録されたApple Inc.の商標です。App StoreはApple Inc.のサービスマークです。 Google Play および Google Play ロゴは Google LLC の商標です。</p>
   </div>
 </footer>
 <script>

@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"手机上的 Soluklan","description":"手机是应用的主力设备：这里的测量最准。什么在哪里，麦克风朝哪儿，你的数据存在哪里。","url":"https://soluklan.app/zh/zhinan/shouji-shang-de-soluklan.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/paylasim/zh/shouji-shang-de-soluklan-ca8fe8a050.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/zhinan/shouji-shang-de-soluklan.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"平台","dateModified":"2026-10-05T19:18:35+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"指南","item":"https://soluklan.app/zh/zhinan/"},{"@type":"ListItem","position":2,"name":"平台","item":"https://soluklan.app/zh/zhinan/zhuti/pingtai.html"},{"@type":"ListItem","position":3,"name":"手机上的 Soluklan","item":"https://soluklan.app/zh/zhinan/shouji-shang-de-soluklan.html"}]}</script>
 <script>
@@ -131,22 +131,76 @@
     <h1>手机上的 Soluklan</h1>
     <p class="lede">手机是应用的主力设备：这里的测量最准。什么在哪里，麦克风朝哪儿，你的数据存在哪里。</p>
     <p class="updated">阅读约 5 分钟</p>
+<div class="platform-sec" role="group" aria-label="选择你的设备" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone 和 iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Soluklan 在三种设备上运行，三者的表现并不相同。手机是测量最准的地方：这里的麦克风离你的嘴最近。</p>
 <h2>麦克风在哪里</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <p>iPhone 的通话麦克风在<strong>底部边缘</strong>，挨着充电口。把手机放在桌上时，屏幕朝上、底边朝向你。拿在手里二三十厘米就够。别贴到嘴边：那样呼吸声会过载，应用会提示“太近了”。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Android 手机的麦克风位置因品牌和机型而异。大多数手机的通话麦克风在<strong>底部边缘</strong>，挨着充电口，也有些机型在顶部边缘。看看手机说明书或机身边缘的小孔，就能找到它的位置。</p>
+<p>让手机离你的嘴和鼻子 <strong>10–15 厘米</strong>，有麦克风的那条边朝向你。别贴到嘴边：那样呼吸声会过载，应用会提示“太近了”。</p>
+<p>有些手机在把声音交给应用之前会先处理一遍：压低噪音，自动提高音量。这样的处理也可能把你的呼吸声压下去。应用会用手机提供的处理得最少的声音。所以同样的距离，两部不同的手机听到的呼吸声高低也可能不一样。</p>
+</div>
 <p>呼气听不到时，原因通常出在<a href="/zh/zhinan/huxi-ting-bu-dao.html">距离、房间或技法本身</a>。麦克风会<a href="/zh/zhinan/maikefeng-zenme-ting.html">先测房间的安静程度，再据此设定阈值</a>。</p>
 <h2>手机上有什么</h2>
 <ul><li><strong>主界面与练习：</strong><a href="/zh/zhinan/app-daohang.html">在应用里怎么走</a>、<a href="/zh/zhinan/lianxi-jiemian.html">练习界面上都有什么</a></li><li><strong>选技法和时长：</strong><a href="/zh/zhinan/xuan-huxifa-he-shichang.html">选呼吸法和时长</a></li><li><strong>报告与分数：</strong><a href="/zh/zhinan/du-baogao.html">读懂练习报告</a>、<a href="/zh/zhinan/fenshu-zenme-suan.html">一次练习的分数怎么算</a></li><li><strong>记录、小结、成就：</strong><a href="/zh/zhinan/jilu-zongjie-chengjiu.html">记录、小结和成就</a>、<a href="/zh/zhinan/lianxu-tianshu.html">连续天数、里程碑和日历</a></li><li><strong>计划：</strong><a href="/zh/zhinan/jianli-jihua.html">建立一个计划并坚持下去</a></li><li><strong>提醒：</strong><a href="/zh/zhinan/tixing-yu-tongzhi.html">提醒与通知</a></li></ul>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <p>不打开应用也想看一眼时，<a href="/zh/zhinan/xiao-zujian.html">小组件与实时活动</a>就够用了。两者只有手机和平板上才有。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>不打开应用也想看一眼时，可以把 Soluklan 小组件加到主屏幕。小组件显示你的连续天数，点一下就会打开应用，直接进入技法选择。</p>
+</div>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <h2>静音、耳机、来电</h2>
 <p>手机静音时呼吸与倒计时提示音不会响，振动和画面照常。接了耳机后输入可能切到耳机麦克风。那样距离变了，测量也跟着变，最稳妥是摘掉。练习中途来电，练习会暂停，通话结束后在暂停菜单里重新开始这一轮。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>振动</h2>
+<p>打开<strong>练习节奏触感</strong>后，节奏也会通过手机的振动传给你。振动的手感因手机而异。高端手机上是细腻、清晰的轻触，平价手机上感觉会粗一些。如果振动显得微弱或模糊，就跟着屏幕上的圆圈走。</p>
+</div>
 <h2>离开应用时</h2>
 <p>退出应用或锁屏时，练习会暂停。回来时暂停菜单是打开的，你从那里重新开始这一轮。测量不会在后台继续，应用也不会在后台开着麦克风。</p>
 <h2>你的数据存在哪里</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
 <p>你的练习记录保存在设备上和你自己的 iCloud 账户里。用同一个 Apple 账户登录的 iPad 上也看得到。详情见<a href="/zh/zhinan/guanli-shuju.html">管理你的数据</a>。</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>你的练习记录、连续天数和设置都保存在手机上。Android 自带的自动备份会把它们备份到你的 Google 账户，换一部新的 Android 手机时，它们会随备份一起回来。这里不使用 iCloud。</p>
+<p>练习记录不会在 iPhone 和 Android 之间转移。如果你从 iPhone 换到 Android，或者两者同时用，每台设备都各自保存自己的记录。</p>
+</div>
 <h2>平板上有什么不同</h2>
 <p>在平板上测量更难：<a href="/zh/zhinan/pingban-shang-de-soluklan.html">麦克风的位置和界面布局在平板上都不一样</a>。</p>
-    <aside class="indir"><p>Soluklan 是一款免费的呼吸练习应用：麦克风会听你的呼吸，告诉你跟节奏跟得有多准。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-zh.svg?v=53dc3388" alt="在 App Store 下载" width="109" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan 是一款免费的呼吸练习应用：麦克风会听你的呼吸，告诉你跟节奏跟得有多准。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-zh.svg?v=53dc3388" alt="在 App Store 下载" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=zh-CN&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-telefonda"><img src="/assets/rozetler/google-play-zh.svg?v=203833c8" alt="去 Google Play 商店下载" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/zh/zhinan/zhuti/pingtai.html">&#8592; 平台</a></p>
   </div>
 </article>
@@ -159,10 +213,11 @@
       <a href="/zh/zhinan/">指南</a>
       <a href="/zh/yinsi.html">隐私</a>
       <a href="/zh/wuzhangai.html">无障碍</a>
+      <a href="/zh/gengxin.html">更新内容</a>
       <a href="/zh/zhichi.html">支持</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple 和 Apple 标志是 Apple Inc. 在美国和其他国家和地区注册的商标。App Store 是 Apple Inc. 的服务商标。</p>
+    <p class="marka-notu">Apple 和 Apple 标志是 Apple Inc. 在美国和其他国家和地区注册的商标。App Store 是 Apple Inc. 的服务商标。 Google Play 和 Google Play 徽标是 Google LLC 的商标。</p>
   </div>
 </footer>
 <script>

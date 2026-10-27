@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan on a tablet","description":"On a tablet the screen is wider and the microphone is further away. Where to put the device, why measuring is harder than on the phone, and what stays the same.","url":"https://soluklan.app/en/guide/soluklan-on-a-tablet.html","inLanguage":"en","image":"https://soluklan.app/assets/paylasim/en/soluklan-on-a-tablet-43cb0a088b.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/en/guide/soluklan-on-a-tablet.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Platforms","dateModified":"2026-10-01T18:26:33+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guide","item":"https://soluklan.app/en/guide/"},{"@type":"ListItem","position":2,"name":"Platforms","item":"https://soluklan.app/en/guide/topic/platforms.html"},{"@type":"ListItem","position":3,"name":"Soluklan on a tablet","item":"https://soluklan.app/en/guide/soluklan-on-a-tablet.html"}]}</script>
 <script>
@@ -131,19 +131,66 @@
     <h1>Soluklan on a tablet</h1>
     <p class="lede">On a tablet the screen is wider and the microphone is further away. Where to put the device, why measuring is harder than on the phone, and what stays the same.</p>
     <p class="updated">4 min read</p>
+<div class="platform-sec" role="group" aria-label="Choose your device" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone and iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Everything is there on a tablet: the same techniques, the same measurement, the same report. Two things change — the width of the screen and the place of the microphone.</p>
 <h2>Where the microphone is on a tablet</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone and iPad</p>
 <p>The iPad's microphone sits on the <strong>top edge</strong> (held in landscape it ends up on the top or the side, depending on the model). Unlike the phone, it is not turned towards your mouth; it usually faces up, and it is further away.</p>
 <p>So on a tablet the exhale is heard noticeably more quietly than on the phone. The app picks the microphone closest to your mouth on a tablet, but the gap does not close completely.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>On Android tablets the microphone's position depends on the model: on most it is on the top edge, on some on a side edge. Wherever it is, it is not turned towards your mouth the way a phone's is, and it stays further from your face.</p>
+<p>So on a tablet the exhale is heard noticeably more quietly than on the phone.</p>
+</div>
 <p>Practical consequence: <strong>hold the tablet closer.</strong> Instead of putting it on a table and leaning over it, take it on your lap or put it on a stand with the microphone edge turned towards you. If it still isn't heard, rule out <a href="/en/guide/breath-not-heard.html">the distance and then the room</a>. <a href="/en/guide/measuring-the-thresholds.html">The thresholds themselves are set from real recordings</a>.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Vibration</h2>
+<p>Most Android tablets have no vibration motor. So even with session rhythm haptics on, you may not feel anything on a tablet. Follow the rhythm with the circle on the screen: breathe in as it grows, out as it shrinks.</p>
+</div>
 <h2>Everything that stays the same</h2>
 <p>Scoring, the report, the streak, programs, reminders and badges are identical to the phone — <a href="/en/guide/how-scoring-works.html">How a session is scored</a>, <a href="/en/guide/history-summaries-achievements.html">History, summaries and achievements</a>, <a href="/en/guide/setting-up-a-program.html">Setting up a program and keeping it</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone and iPad</p>
 <p>Session history syncs between devices through iCloud, so a session you did on the phone shows up on the iPad: <a href="/en/guide/managing-your-data.html">Managing your data</a>.</p>
 <p><a href="/en/guide/widgets-and-live-activity.html">Widgets and Live Activity</a> work on iPad as well.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>On Android, session history does not sync between devices: the tablet keeps its own history and backs it up to your Google account through Android's automatic backup. A session you did on the phone does not show up on the tablet.</p>
+</div>
 <h2>If this is your first time on a tablet</h2>
 <p>If you're using the app on a tablet for the first time, the intake quiz appears here too, and <a href="/en/guide/your-first-session.html">the first session runs through the same flow</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone and iPad</p>
 <p>If you did the intake on the phone, your answers and settings, including the <a href="/en/guide/interface-levels.html">interface level</a>, come over to the iPad through iCloud.</p>
-    <aside class="indir"><p>Soluklan is a free breathing exercise app: the microphone listens to your breath and shows how closely you follow the rhythm.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-en.svg?v=2f2fe1cb" alt="Download on the App Store" width="120" height="40"></a></span></aside>
+</div>
+    <aside class="indir"><p>Soluklan is a free breathing exercise app: the microphone listens to your breath and shows how closely you follow the rhythm.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-en.svg?v=2f2fe1cb" alt="Download on the App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=en&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/en/guide/topic/platforms.html">&#8592; Platforms</a></p>
   </div>
 </article>
@@ -156,10 +203,11 @@
       <a href="/en/guide/">Guide</a>
       <a href="/en/privacy.html">Privacy</a>
       <a href="/en/accessibility.html">Accessibility</a>
+      <a href="/en/whats-new.html">What’s new</a>
       <a href="/en/support.html">Support</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
+    <p class="marka-notu">Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
   </div>
 </footer>
 <script>

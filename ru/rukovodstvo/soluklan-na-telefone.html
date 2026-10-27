@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan на телефоне","description":"Телефон — основное устройство: измерение здесь точнее всего. Что где находится, куда смотрит микрофон и где хранятся твои данные.","url":"https://soluklan.app/ru/rukovodstvo/soluklan-na-telefone.html","inLanguage":"ru","image":"https://soluklan.app/assets/paylasim/ru/soluklan-na-telefone-d44f4bc283.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/rukovodstvo/soluklan-na-telefone.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Платформы","dateModified":"2026-10-11T12:43:31+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Руководство","item":"https://soluklan.app/ru/rukovodstvo/"},{"@type":"ListItem","position":2,"name":"Платформы","item":"https://soluklan.app/ru/rukovodstvo/tema/platformy.html"},{"@type":"ListItem","position":3,"name":"Soluklan на телефоне","item":"https://soluklan.app/ru/rukovodstvo/soluklan-na-telefone.html"}]}</script>
 <script>
@@ -131,24 +131,78 @@
     <h1>Soluklan на телефоне</h1>
     <p class="lede">Телефон — основное устройство: измерение здесь точнее всего. Что где находится, куда смотрит микрофон и где хранятся твои данные.</p>
     <p class="updated">5 мин чтения</p>
+<div class="platform-sec" role="group" aria-label="Выбери устройство" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone и iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Soluklan работает на трёх устройствах и ведёт себя на них по-разному. Телефон — место, где измерение точнее всего: микрофон здесь ближе всего ко рту.</p>
 <h2>Где микрофон</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
 <p>Разговорный микрофон iPhone — на <strong>нижней грани</strong>, рядом с разъёмом зарядки. Если кладёшь телефон на стол, экраном вверх и нижней гранью к себе. В руке хватает двадцати-тридцати сантиметров. Не подноси телефон ко рту: тогда звук дыхания перегружает вход, и приложение предупредит, что он «слишком близко».</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>На телефонах Android место микрофона зависит от марки и модели. У большинства разговорный микрофон на <strong>нижней грани</strong>, рядом с разъёмом зарядки, у некоторых — на верхней. Где он, подскажет инструкция к телефону или маленькие отверстия на гранях.</p>
+<p>Держи телефон в <strong>10–15 сантиметрах</strong> ото рта и носа, гранью с микрофоном к себе. Не подноси телефон ко рту: тогда звук дыхания перегружает вход, и приложение предупредит, что он «слишком близко».</p>
+<p>Некоторые телефоны обрабатывают звук, прежде чем отдать его приложению: подавляют шум и сами поднимают громкость. Такая обработка может приглушить и дыхание. Приложение берёт наименее обработанный звук, какой даёт телефон. Поэтому два разных телефона на одном расстоянии могут слышать твоё дыхание по-разному громко.</p>
+</div>
 <p>Когда выдох не слышен, причина обычно <a href="/ru/rukovodstvo/dyhanie-ne-slyshno.html">в расстоянии, в комнате или в самой технике</a>. Микрофон <a href="/ru/rukovodstvo/kak-slushaet-mikrofon.html">сначала измеряет тишину комнаты и от неё строит порог</a>.</p>
 <h2>Что живёт на телефоне</h2>
 <p>Всё приложение. На главном экране посередине кнопка «Старт», под ней серия и число сессий. <a href="/ru/rukovodstvo/kak-ustroeno-prilozhenie.html">Что открывает каждый значок</a>, рассказано отдельно. После нажатия на «Старт» сначала <a href="/ru/rukovodstvo/vybor-tekhniki-i-dliny.html">выбираются техника и длительность</a>, потом открывается <a href="/ru/rukovodstvo/ekran-sessii.html">экран самой сессии</a>: там круг, звуковая волна и, когда нужно, короткие предупреждения.</p>
 <p>Отчёт появляется сразу после конца сессии. <a href="/ru/rukovodstvo/kak-chitat-otchyot.html">Что значит каждая строка отчёта</a> и <a href="/ru/rukovodstvo/kak-schitaetsya-ocenka.html">из каких измерений складывается оценка</a>, описано отдельно. Всё, что копится со временем, — <a href="/ru/rukovodstvo/istoriya-svodki-dostizheniya.html">история, недельные сводки и достижения</a> вместе с <a href="/ru/rukovodstvo/seriya-i-vekhi.html">серией и вехами</a> — собрано в профиле.</p>
 <p>Если хочешь заниматься регулярно, можно <a href="/ru/rukovodstvo/kak-nastroit-programmu.html">завести программу</a>, а если боишься забыть — <a href="/ru/rukovodstvo/napominaniya-i-uvedomleniya.html">поставить себе напоминание</a>.</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
 <p>Чтобы заглянуть, не открывая приложение, есть <a href="/ru/rukovodstvo/vidzhety.html">виджет и Live Activity</a>. Они есть только на телефоне и планшете.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Чтобы заглянуть, не открывая приложение, добавь на главный экран виджет Soluklan. Он показывает твою серию, а по касанию открывает приложение на выборе техники.</p>
+</div>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
 <h2>Беззвучный режим, наушники, звонки</h2>
 <p>В беззвучном режиме звуки дыхания и обратного отсчёта не играют, вибрация и экран остаются прежними. Если подключены наушники, вход может переключиться на их микрофон. Тогда меняется расстояние, а с ним и измерение, так что надёжнее их снять. Если посреди сессии приходит звонок, сессия встаёт на паузу, а после звонка ты начинаешь цикл заново из меню паузы.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<h2>Вибрация</h2>
+<p>Когда включена <strong>Вибрация ритма сессии</strong>, ритм передаётся и вибрацией телефона. Как она ощущается, зависит от телефона. На телефонах высокого класса это тонкие чёткие толчки, на недорогих вибрация грубее. Если она слабая или размытая, следи за ритмом по кругу на экране.</p>
+</div>
 <h2>Если выйти из приложения</h2>
 <p>Если выйти из приложения или заблокировать экран, сессия встаёт на паузу. Когда вернёшься, будет открыто меню паузы, и оттуда ты начинаешь цикл заново. В фоне измерение не идёт, и микрофон приложение открытым не держит.</p>
 <h2>Где хранятся твои данные</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
 <p>История сессий хранится на твоём устройстве и в твоём собственном iCloud. Она видна и на iPad, где выполнен вход с тем же Аккаунтом Apple. Подробности — в статье <a href="/ru/rukovodstvo/upravlenie-dannymi.html">Управление данными</a>.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>История сессий, серия и настройки хранятся на твоём телефоне. Автоматическое резервное копирование Android сохраняет их в твой аккаунт Google, и при переходе на новый телефон Android они возвращаются вместе с резервной копией. iCloud не используется.</p>
+<p>История не переносится между iPhone и Android. Если ты переходишь с iPhone на Android или пользуешься обоими, каждое устройство ведёт свою историю.</p>
+</div>
 <h2>Что меняется на планшете</h2>
 <p>На планшете измерять труднее: <a href="/ru/rukovodstvo/soluklan-na-planshete.html">там меняются и место микрофона, и вёрстка</a>.</p>
-    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-telefonda&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ru&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-telefonda"><img src="/assets/rozetler/google-play-ru.svg?v=ed1a8c66" alt="Доступно в Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ru/rukovodstvo/tema/platformy.html">&#8592; Платформы</a></p>
   </div>
 </article>
@@ -161,10 +215,11 @@
       <a href="/ru/rukovodstvo/">Руководство</a>
       <a href="/ru/konfidencialnost.html">Конфиденциальность</a>
       <a href="/ru/dostupnost.html">Универсальный доступ</a>
+      <a href="/ru/chto-novogo.html">Что нового</a>
       <a href="/ru/podderzhka.html">Поддержка</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc.</p>
+    <p class="marka-notu">Apple и логотип Apple являются товарными знаками Apple Inc., зарегистрированными в США и других странах. App Store является знаком обслуживания Apple Inc. Google Play и логотип Google Play являются товарными знаками Google LLC.</p>
   </div>
 </footer>
 <script>

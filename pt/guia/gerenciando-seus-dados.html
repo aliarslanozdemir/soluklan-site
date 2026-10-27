@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=89363e8c">
+<link rel="stylesheet" href="/assets/soluklan.css?v=602d45b9">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Gerenciando seus dados","description":"Onde fica cada coisa, o que é sincronizado entre aparelhos, as opções de compartilhamento e como apagar tudo.","url":"https://soluklan.app/pt/guia/gerenciando-seus-dados.html","inLanguage":"pt-BR","image":"https://soluklan.app/assets/paylasim/pt/gerenciando-seus-dados-0506c9f579.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/pt/guia/gerenciando-seus-dados.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"articleSection":"Como usar","dateModified":"2026-10-11T12:50:53+03:00"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Guia","item":"https://soluklan.app/pt/guia/"},{"@type":"ListItem","position":2,"name":"Como usar","item":"https://soluklan.app/pt/guia/tema/como-usar.html"},{"@type":"ListItem","position":3,"name":"Gerenciando seus dados","item":"https://soluklan.app/pt/guia/gerenciando-seus-dados.html"}]}</script>
 <script>
@@ -131,6 +131,36 @@
     <h1>Gerenciando seus dados</h1>
     <p class="lede">Onde fica cada coisa, o que é sincronizado entre aparelhos, as opções de compartilhamento e como apagar tudo.</p>
     <p class="updated">5 min de leitura</p>
+<div class="platform-sec" role="group" aria-label="Escolha seu aparelho" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  var secim = "";
+  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") {
+    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  }
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Vamos explicar onde fica tudo o que o app guarda e o que você pode controlar.</p>
 <h2>Dados que ficam no seu aparelho</h2>
 <p>Os resumos das suas sessões (data, técnica, duração, pontuação, relatório), suas respostas do <a href="/pt/guia/sua-primeira-sessao.html">questionário inicial</a>, seus ajustes e suas preferências de notificação ficam guardados no seu aparelho.</p>
@@ -139,6 +169,18 @@
 <h2>Áudio</h2>
 <p><strong>O áudio não é gravado.</strong> O microfone funciona só durante a sessão, e do som é calculado apenas o volume de cada instante. Nenhum arquivo de áudio é gravado em disco.</p>
 <p>A única exceção é a permissão de <a href="/pt/guia/o-que-fazemos-com-os-dados-compartilhados.html">amostra de áudio</a> descrita abaixo — se você não a ativou, o áudio não é gravado em nenhuma sessão.</p>
+<h2>Minutos de atenção plena no Saúde</h2>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
+<p>Em Ajustes → Apple Health há a chave <strong>Registrar minutos de atenção plena no Saúde</strong>. Se você a ativar, cada sessão que conta é registrada no app Saúde como minutos de atenção plena, só com o horário de início e de término. A chave começa desativada. Quando você a ativa, o Saúde pede apenas essa permissão de gravação; se você não permitir, a chave continua desativada.</p>
+<p>Também perguntamos isso uma vez. Se você responder "Agora não", não perguntamos de novo.</p>
+<p>Só as sessões que contam são registradas, inclusive as que você faz sozinho no Apple Watch.</p>
+<p>Os minutos registrados ficam no Saúde. Apagar meus dados não mexe neles; se quiser, você pode apagá-los pelo app Saúde.</p>
+</div>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>No Android 14 ou mais recente, há em Ajustes a chave <strong>Registrar minutos de atenção plena no Health Connect</strong>. Se você a ativar, cada sessão que conta é registrada no Health Connect como minutos de atenção plena, só com o horário de início e de término. A chave começa desativada. Quando você a ativa, é pedida apenas essa permissão de gravação; se você não permitir, a chave continua desativada.</p>
+<p>Também perguntamos isso uma vez. Se você responder "Agora não", não perguntamos de novo.</p>
+<p>Só as sessões que contam são registradas. Os minutos registrados ficam no Health Connect, e Apagar meus dados não mexe neles.</p>
+</div>
 <h2>Compartilhamento opcional</h2>
 <p>Em Ajustes → Privacidade há quatro chaves separadas. Todas começam desativadas, todas têm "anônimo" no nome e cada uma é perguntada separadamente.</p>
 <p><strong>Resumo anônimo de sessão.</strong> Um identificador gerado aleatoriamente, data e hora, técnica, duração, pontuação, se a sessão foi concluída, se o microfone foi usado, a versão do app e os valores técnicos do relatório. Seu nome, seu e-mail, sua localização, o identificador do seu aparelho e suas respostas de saúde <strong>nunca</strong> são enviados.</p>
@@ -158,7 +200,7 @@
 <p>Se quiser que os registros anônimos que você já compartilhou sejam apagados, basta escrever para o endereço de suporte.</p>
 <h2>Se você apagar o app</h2>
 <p>Os dados do aparelho são apagados. A cópia no iCloud continua lá por um tempo, conforme as regras da Apple; se você instalar o app de novo, seu histórico volta.</p>
-    <aside class="indir"><p>O Soluklan é um app gratuito de exercícios de respiração: o microfone escuta a sua respiração e mostra o quanto você acompanha o ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-pt.svg?v=e8b2875e" alt="Baixar na App Store" width="120" height="40"></a></span></aside>
+    <aside class="indir"><p>O Soluklan é um app gratuito de exercícios de respiração: o microfone escuta a sua respiração e mostra o quanto você acompanha o ritmo.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-verilerini-yonetmek&amp;mt=8"><img src="/assets/rozetler/app-store-pt.svg?v=e8b2875e" alt="Baixar na App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=pt-BR&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-verilerini-yonetmek"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/pt/guia/tema/como-usar.html">&#8592; Como usar</a></p>
   </div>
 </article>
@@ -171,10 +213,11 @@
       <a href="/pt/guia/">Guia</a>
       <a href="/pt/privacidade.html">Privacidade</a>
       <a href="/pt/acessibilidade.html">Acessibilidade</a>
+      <a href="/pt/novidades.html">Novidades</a>
       <a href="/pt/suporte.html">Suporte</a>
       <a href="mailto:info@soluklan.app">info@soluklan.app</a>
     </nav>
-    <p class="marka-notu">Apple e o logotipo da Apple são marcas comerciais da Apple Inc., registradas nos EUA e em outros países. App Store é uma marca de serviço da Apple Inc.</p>
+    <p class="marka-notu">Apple e o logotipo da Apple são marcas comerciais da Apple Inc., registradas nos EUA e em outros países. App Store é uma marca de serviço da Apple Inc. Google Play e o logotipo do Google Play são marcas da Google LLC.</p>
   </div>
 </footer>
 <script>
