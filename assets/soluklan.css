@@ -223,6 +223,7 @@ footer.site::before { content: ""; position: absolute; inset-inline: 0; top: 0; 
 footer.site .wrap { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: baseline; }
 footer.site nav { display: flex; gap: 1.25rem; margin-inline-start: auto; flex-wrap: wrap; }
 footer.site a { color: var(--ink-2); }
+footer.site a.youtube svg { display: inline-block; width: 1.15em; height: .82em; margin-inline-end: .4em; vertical-align: -.06em; }
 
 /* --- Tipografi --- */
 h1, h2, h3 { font-family: var(--display); font-weight: 600; letter-spacing: -.02em; line-height: 1.15; text-wrap: balance; margin: 0 0 .5em; }
@@ -1308,7 +1309,24 @@ html:has(.slaytlar) body::before {
   .cihaz3b.telefon .govde::before,
   .cihaz3b.telefon .govde::after { display: none; }   /* yan düğmeler bu boyutta lekeye dönüşüyor */
 }
-.cihaz-adlari { margin-top: 1.35rem; font-family: var(--data); font-size: .8rem; color: var(--ink-3); letter-spacing: .06em; }
+/* Cihaz adları her cihazın kendi altında: telefonun altında yalnız telefonlar, tabletin
+   altında yalnız tabletler (Ali, 27 Ekim 2026; tek satır "iPad · iPhone · Apple Watch ·
+   Android" cihazlarla hizalanmıyordu). Sütun ölçüleri .sahne3b'deki cihazlarınkiyle aynı. */
+.cihaz-adlari {
+  display: flex; justify-content: center; align-items: flex-start; gap: clamp(0rem, 2vw, 2rem);
+  margin-top: 1.35rem; font-family: var(--data); font-size: .8rem; line-height: 1.55;
+  color: var(--ink-3); letter-spacing: .03em;
+}
+.cihaz-adlari > span { flex: none; text-align: center; white-space: nowrap; }
+.cihaz-adlari .ad-tablet { width: clamp(13rem, 33vw, 20.5rem); }
+.cihaz-adlari .ad-telefon { width: clamp(8rem, 19vw, 12rem); margin-inline-start: clamp(-3rem, -5vw, -1.5rem); }
+.cihaz-adlari .ad-saat { width: clamp(6rem, 12.8vw, 8.6rem); margin-inline-start: clamp(-5rem, -6vw, -3rem); }
+@media (max-width: 40rem) {
+  .cihaz-adlari { gap: 0; font-size: .68rem; letter-spacing: 0; }
+  .cihaz-adlari .ad-tablet { width: 56%; }
+  .cihaz-adlari .ad-telefon { width: 31%; margin-inline-start: -1.1rem; }
+  .cihaz-adlari .ad-saat { width: 21%; margin-inline-start: -1.4rem; }
+}
 
 /* Kaynak listesi: dış bağlantılar ayırt edilsin */
 .yazi h2 + ul a[href^="https://"]::after,
