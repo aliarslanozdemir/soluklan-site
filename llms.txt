@@ -32,6 +32,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Nefesin duyulmuyorsa](https://soluklan.app/rehber/nefesin-duyulmuyorsa.html): "Hiç veriş duyulmadı" yazısını görüyorsan sırayla denenecekler. Mesafe, ortam, cihaz farkı ve mikrofonsuz devam etme.
 - [Ortak seans](https://soluklan.app/rehber/ortak-seans.html): Telefonla saatin birlikte çalıştığı seans: nasıl açılır, bilek aşağıdayken, saat sonradan bağlanırsa ve saat bağlanmıyorsa.
 - [Paylaşma kartları](https://soluklan.app/rehber/paylasma-kartlari.html): Seansını, serini ve kilometre taşlarını bir kartla paylaşmak: nereden açıldığı, kartta ne olduğu ve neyin paylaşılmadığı.
+- [Pil tasarrufu](https://soluklan.app/rehber/pil-tasarrufu.html): Seans sırasında pil tasarrufu neyi değiştirir, ne zaman kendiliğinden açılır, nereden açılıp kapanır ve uzun bir seansta pili korumak için ne yapabilirsin.
 - [Program kurmak ve sürdürmek](https://soluklan.app/rehber/program-kurmak.html): Bir programı nasıl kurarsın, gün kaçırınca ne oluyor, sonlanan program ne demek ve bitince ne görüyorsun.
 - [Seans ekranında ne var](https://soluklan.app/rehber/seans-ekrani.html): Daire, faz yazısı, ses dalgası, seans sırasında çıkan kısa notlar, mikrofon uyarısı ve duraklatma menüsü. Seans sırasında gördüğün her şeyin ne işe yaradığı.
 - [Seans raporunu okumak](https://soluklan.app/rehber/raporu-okumak.html): Rapordaki her satırın ne anlama geldiği ve düşük çıkan bir ölçüm için ne yapman gerektiği.
@@ -92,6 +93,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [What breathing exercises are good for](https://soluklan.app/en/guide/what-breathing-exercises-are-good-for.html): The measured effects of slow breathing, the claims nobody measured, and what you will actually notice in the first week.
 - [What we do with the data you share](https://soluklan.app/en/guide/what-we-do-with-shared-data.html): If you turned on the anonymous session summary and audio samples, what those records come to us for, what happens to each one, and what becomes of them in the end.
 - [What your suggestions depend on](https://soluklan.app/en/guide/how-suggestions-work.html): The suggested technique and the suggested length aren't fixed. Your intake answers, your past sessions, the time of day, and the places where these intersect.
+- [Battery saving](https://soluklan.app/en/guide/battery-saving.html): What battery saving changes during a session, when it turns on by itself, where to turn it on and off, and what you can do to save battery in a long session.
 - [Breathing before sleep](https://soluklan.app/en/guide/breathing-before-sleep.html): Why evening techniques stretch the exhale, whether to do it in bed or sitting, who struggles with the 4-7-8 hold, and what has actually been measured about falling asleep.
 - [Breathing in an anxious moment](https://soluklan.app/en/guide/breathing-in-an-anxious-moment.html): What breathing does in a tense moment, why lengthening the exhale is the first step, why holds can backfire in panic, and what the app discourages because of it.
 - [Building the habit: the first thirty days](https://soluklan.app/en/guide/building-the-habit.html): Where the difference is made between using the app for a week and keeping it up for thirty days. A plan broken into weeks.
@@ -146,6 +148,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Ratgeber](https://soluklan.app/de/ratgeber/): Wie du die App Schritt für Schritt benutzt, was jede Funktion macht und wie jede Technik geht.
 - [Datenschutz](https://soluklan.app/de/datenschutz.html)
 - [Hilfe](https://soluklan.app/de/hilfe.html)
+- [Akku sparen](https://soluklan.app/de/ratgeber/akku-sparen.html): Was das Akkusparen während einer Sitzung ändert, wann es sich von selbst einschaltet, wo du es ein- und ausschaltest und was du in einer langen Sitzung für den Akku tun kannst.
 - [Atemübung vor dem Schlafen](https://soluklan.app/de/ratgeber/atemuebung-vor-dem-schlafen.html): Warum abends Techniken mit langem Ausatem gewählt werden, ob im Bett oder sitzend, wem das Halten bei 4-7-8 Mühe macht und was zum Einschlafen tatsächlich gemessen wurde.
 - [Atmen in einem Angstmoment](https://soluklan.app/de/ratgeber/atmen-in-einem-angstmoment.html): Was der Atem in einem angespannten Moment tut, warum das Verlängern des Ausatems der erste Schritt ist, warum Halten bei Panik nach hinten losgehen kann und was die App deshalb abrät.
 - [Dein eigenes Tempo finden](https://soluklan.app/de/ratgeber/dein-eigenes-tempo-finden.html): Die fünfeinhalb Sekunden der Kohärenten Atmung sind ein Durchschnitt. Du kannst die Atemgeschwindigkeit messen, die dir am besten passt, und die App damit laufen lassen.
@@ -267,6 +270,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Tirer le meilleur de l’app](https://soluklan.app/fr/guide/tirer-le-meilleur-de-lapp.html): Deux personnes utilisent la même app et en tirent des résultats très différents. Les dix choses qui font la différence, et comment faire chacune d’elles.
 - [Trouver ton propre rythme](https://soluklan.app/fr/guide/trouver-ton-rythme.html): Les cinq secondes et demie de la respiration cohérente sont une moyenne. Tu peux mesurer la vitesse respiratoire qui te convient le mieux et faire tourner l’app à ce rythme.
 - [Widgets et activité en direct](https://soluklan.app/fr/guide/widgets-et-activite-en-direct.html): Ajouter des widgets à l’écran d’accueil et à l’écran verrouillé, ce que montre chaque taille, et le compteur qui apparaît sur l’écran verrouillé pendant une séance.
+- [Économie de batterie](https://soluklan.app/fr/guide/economie-de-batterie.html): Ce que l’économie de batterie change pendant une séance, quand elle s’active d’elle-même, où l’activer et la désactiver, et ce que tu peux faire pour ménager la batterie pendant une longue séance.
 
 ## Español (es)
 
@@ -274,6 +278,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Guía](https://soluklan.app/es/guia/): Cómo usar la app paso a paso, para qué sirve cada función y cómo se hace cada técnica.
 - [Privacidad](https://soluklan.app/es/privacidad.html)
 - [Ayuda](https://soluklan.app/es/ayuda.html)
+- [Ahorro de batería](https://soluklan.app/es/guia/ahorro-de-bateria.html): Qué cambia el ahorro de batería durante una sesión, cuándo se activa solo, dónde activarlo y desactivarlo y qué puedes hacer para cuidar la batería en una sesión larga.
 - [Crear el hábito: los primeros treinta días](https://soluklan.app/es/guia/crear-el-habito.html): Dónde se decide la diferencia entre usar la app una semana y aguantar treinta días. Un plan repartido por semanas.
 - [Cuánto debe durar un ejercicio de respiración](https://soluklan.app/es/guia/cuanto-debe-durar-un-ejercicio-de-respiracion.html): Respuesta corta: de tres a cinco minutos al día. La larga explica dónde sirve la duración y dónde deja de rendir.
 - [Cómo hacer un ejercicio de respiración](https://soluklan.app/es/guia/como-hacer-un-ejercicio-de-respiracion.html): Un ejercicio de respiración es frenar el aliento a propósito durante unos minutos. Las cinco cosas para empezar, el primer ritmo y los errores más comunes.
@@ -354,6 +359,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Rendere l’interfaccia più semplice o più ricca](https://soluklan.app/it/guida/livelli-di-interfaccia.html): Semplice, Standard e Avanzata. Cosa cambia fra i tre livelli, a chi va bene ciascuno e come cambiarlo.
 - [Respirare in un momento di ansia](https://soluklan.app/it/guida/respirare-in-un-momento-di-ansia.html): Che cosa fa il respiro in un momento teso, perché allungare l'espirazione è il primo passo, perché le trattenute possono peggiorare il panico e cosa l'app sconsiglia per questo.
 - [Respirare prima di dormire](https://soluklan.app/it/guida/respirazione-prima-di-dormire.html): Perché la sera si scelgono tecniche con espirazione lunga, a letto o seduti, a chi dà fastidio la trattenuta del 4-7-8 e cosa è stato davvero misurato sull'addormentarsi.
+- [Risparmio batteria](https://soluklan.app/it/guida/risparmio-batteria.html): Cosa cambia il risparmio batteria durante una sessione, quando si attiva da solo, dove si accende e si spegne e cosa puoi fare per proteggere la batteria in una sessione lunga.
 - [Sbloccare le tecniche](https://soluklan.app/it/guida/sbloccare-le-tecniche.html): Cosa apre i blocchi, cosa ti dice una scheda bloccata e come iniziare subito la sessione che serve.
 - [Scegliere una tecnica e una durata](https://soluklan.app/it/guida/tecnica-e-durata.html): Cosa significano i segni della lista delle tecniche, a cosa serve la fascia illuminata del cursore della durata e il selettore di serie che sostituisce la durata nel Kapalabhati.
 - [Schede da condividere](https://soluklan.app/it/guida/schede-da-condividere.html): Condividere con una scheda la tua sessione, la tua serie e le tue tappe: da dove si apre, cosa c’è sulla scheda e cosa non viene condiviso.
@@ -449,6 +455,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [السلسلة والمحطّات والتقويم](https://soluklan.app/ar/dalil/as-silsila-wal-mahattat.html): كيف تعمل السلسلة، وأي الجلسات تُحسب، وكيف تضع محطّاتك بنفسك، وكيف تقرأ التقويم.
 - [بطاقات المشاركة](https://soluklan.app/ar/dalil/bitaqat-al-musharaka.html): مشاركة جلستك وسلسلتك ومحطّاتك في بطاقة: من أين تُفتح، وماذا في البطاقة، وما الذي لا يُشارَك.
 - [بناء العادة: الثلاثون يومًا الأولى](https://soluklan.app/ar/dalil/bina-al-ada.html): خطة أربعة أسابيع: تمرين واحد، ثم القياسات، ثم تمرين ثانٍ، ثم برنامج — وماذا تفعل في الأيام التي تفوتك.
+- [توفير البطارية](https://soluklan.app/ar/dalil/tawfir-al-battariya.html): ما الذي يغيّره توفير البطارية أثناء الجلسة، ومتى يُفعَّل من تلقاء نفسه، ومن أين يُفعَّل ويُوقَف، وما الذي يمكنك فعله لحماية البطارية في جلسة طويلة.
 - [جعل الواجهة أبسط أو أكمل](https://soluklan.app/ar/dalil/mustawayat-al-wajiha.html): ثلاثة مستويات للواجهة: بسيطة، وقياسية، ومتقدمة. ما الذي يتغيّر في كل واحد، ولمن يناسب.
 - [جلستك الأولى من أوّلها إلى آخرها](https://soluklan.app/ar/dalil/jalsatuk-al-ula.html): كل خطوة من فتح التطبيق أول مرّة إلى قراءة تقريرك الأول. ما الذي يُسأل عنه، ولماذا، وماذا تفعل في كل موضع.
 - [سمات الصوت](https://soluklan.app/ar/dalil/simat-as-sawt.html): اختيار أصوات التنفس والعد التنازلي في الجلسة وأصوات الإشعارات كلًّا على حدة: السمات، ومن أين تُختار، والمعاينة، والوضع الصامت.
@@ -512,6 +519,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [把这个应用用透](https://soluklan.app/zh/zhinan/yong-de-geng-chedi.html): 两个人用同一个应用，拿到的结果可能差很远。造成差别的十件事，以及每一件具体怎么做。
 - [提醒与通知](https://soluklan.app/zh/zhinan/tixing-yu-tongzhi.html): 每日提醒、连续天数警示、针对呼吸法的通知、免打扰时段、假期模式和每日上限——每一项怎么设。
 - [焦虑时的呼吸](https://soluklan.app/zh/zhinan/jiaolv-shi-de-huxi.html): 紧张时呼吸会怎样、为什么先把呼气拉长、惊恐状态下屏息为什么可能更糟，以及应用因此劝阻什么。
+- [省电](https://soluklan.app/zh/zhinan/shengdian.html): 练习中省电改变什么、什么时候自动开启、在哪里打开和关闭，以及长时间练习时你能怎样保护电量。
 - [睡前的呼吸练习](https://soluklan.app/zh/zhinan/shuiqian-huxi.html): 为什么晚上选呼气更长的技法、躺着还是坐着、4-7-8 的屏息对谁不合适，以及关于入睡到底测到了什么。
 - [第一次练习，从头到尾](https://soluklan.app/zh/zhinan/diyici-lianxi.html): 从第一次打开应用到读完第一份报告的每一步。会问你什么、为什么问，以及每个地方该做什么。
 - [管理你的数据](https://soluklan.app/zh/zhinan/guanli-shuju.html): 什么留在你的设备上、什么在 iCloud 里同步、打开分享后会发送什么——以及怎么把一切删掉。
@@ -567,6 +575,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Управление данными](https://soluklan.app/ru/rukovodstvo/upravlenie-dannymi.html): Что остаётся на устройстве, что синхронизируется в iCloud, что отправляется при включённой передаче — и как удалить всё.
 - [Что на экране сессии](https://soluklan.app/ru/rukovodstvo/ekran-sessii.html): Круг, звуковая волна, короткие подсказки, предупреждение о микрофоне, тактильные отклики и меню паузы — что делает каждая часть.
 - [Что такое диафрагмальное дыхание](https://soluklan.app/ru/rukovodstvo/diafragmalnoe-dyhanie.html): Диафрагмальное дыхание — не техника, а способ дышать. Как делать его по шагам, чем оно отличается от грудного, сколько им заниматься и какие ошибки встречаются чаще всего.
+- [Экономия заряда](https://soluklan.app/ru/rukovodstvo/ekonomiya-zaryada.html): Что экономия заряда меняет во время сессии, когда она включается сама, где её включать и выключать и что можно сделать, чтобы сберечь заряд в долгой сессии.
 - [Soluklan на Apple Watch](https://soluklan.app/ru/rukovodstvo/soluklan-na-apple-watch.html): Сессии на одних часах, совместные сессии с телефоном, пульс и разрешение «Здоровья», ритм на запястье и быстрый старт на часах.
 - [Soluklan на iPhone Duo](https://soluklan.app/ru/rukovodstvo/soluklan-na-iphone-duo.html): Три положения на складном iPhone Duo: быстрый старт на внешнем экране, широкая раскладка на внутреннем, экран сессии, который делится надвое на столе в полусложенном виде. Что происходит с сессией при складывании.
 - [Soluklan на планшете](https://soluklan.app/ru/rukovodstvo/soluklan-na-planshete.html): На планшете экран шире, а микрофон дальше. Куда положить устройство, почему измерять труднее, чем на телефоне, и что остаётся прежним.
@@ -619,6 +628,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [呼吸法と長さの選び方](https://soluklan.app/ja/gaido/kokyuho-to-jikan-no-erabikata.html): 呼吸法のリストにある印の意味、長さのスライダーに表示される光る帯の意味、カパラバティで長さの代わりに選ぶラウンド数。
 - [履歴、まとめ、実績](https://soluklan.app/ja/gaido/rireki-matome-jisseki.html): セッション履歴、週間まとめ、あなたのまとめ、実績。それぞれが何を表示し、いつロックが解除されるか。
 - [横隔膜呼吸とは](https://soluklan.app/ja/gaido/okakumaku-kokyu.html): 横隔膜呼吸は呼吸法ではなく、息の吸い方そのものです。ステップごとのやり方、胸式呼吸との違い、行う長さ、よくある間違い。
+- [省電力](https://soluklan.app/ja/gaido/shodenryoku.html): セッション中に省電力が何を変えるか、いつ自動でオンになるか、どこでオン・オフできるか、そして長いセッションでバッテリーを守るためにできること。
 - [眠る前の呼吸エクササイズ](https://soluklan.app/ja/gaido/nemuru-mae-no-kokyu.html): 夜になぜ吐く息を長くする呼吸法を選ぶのか、ベッドで行うか座って行うか、4-7-8呼吸法の息止めが合わないのはどんな人か、寝つきについて何が調べられているか。
 - [習慣をつくる：最初の30日](https://soluklan.app/ja/gaido/shukan-zukuri.html): アプリを1週間使ってやめるか、30日続けるか。その差はどこで生まれるのか。週ごとに分けたプランです。
 - [自分のペースの見つけ方](https://soluklan.app/ja/gaido/jibun-no-pesu-no-mitsukekata.html): コヒーレント呼吸の5.5秒は平均値です。自分にいちばん合った呼吸の速さを測定して、アプリをそのペースで使えます。
@@ -674,6 +684,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Criando o hábito: os primeiros trinta dias](https://soluklan.app/pt/guia/criando-o-habito.html): Onde se decide a diferença entre usar o app por uma semana e largar, e manter por trinta dias. Um plano dividido em semanas.
 - [Deixar a interface mais simples ou mais completa](https://soluklan.app/pt/guia/niveis-de-interface.html): Simples, Padrão e Avançado. O que muda nos três níveis, para quem serve cada um e como trocar.
 - [Desbloquear técnicas](https://soluklan.app/pt/guia/desbloquear-tecnicas.html): Do que depende o desbloqueio, que informações um cartão bloqueado traz e como começar na hora a sessão necessária.
+- [Economia de bateria](https://soluklan.app/pt/guia/economia-de-bateria.html): O que a economia de bateria muda durante a sessão, quando ela é ativada sozinha, onde ativar e desativar e o que você pode fazer para poupar a bateria numa sessão longa.
 - [Encontrando seu ritmo](https://soluklan.app/pt/guia/encontrando-seu-ritmo.html): Os cinco segundos e meio da Respiração Coerente são uma média. Você pode medir o ritmo de respiração que mais combina com você e fazer o app funcionar com ele.
 - [Escolher técnica e duração](https://soluklan.app/pt/guia/tecnica-e-duracao.html): O que significam as marcas na lista de técnicas, o que quer dizer a faixa iluminada no controle de duração e a escolha de ciclos, que substitui a duração no Kapalabhati.
 - [Exercício de respiração antes de dormir](https://soluklan.app/pt/guia/respirar-antes-de-dormir.html): Por que à noite se escolhem técnicas com expiração longa, se é melhor fazer na cama ou numa cadeira, para quem a retenção da 4-7-8 pode ser um problema e o que já foi medido sobre pegar no sono.
@@ -727,6 +738,7 @@ Site 12 dilde: Türkçe /, English /en/, Deutsch /de/, Français /fr/, Español 
 - [Berapa menit latihan pernapasan sebaiknya](https://soluklan.app/id/panduan/berapa-lama-latihan-pernapasan.html): Jawaban singkatnya: tiga sampai lima menit sehari. Jawaban panjangnya menjelaskan kapan durasi berguna dan kapan tidak menambah apa-apa.
 - [Bernapas saat cemas](https://soluklan.app/id/panduan/bernapas-saat-cemas.html): Apa yang terjadi pada napas di saat tegang, kenapa memperpanjang embusan adalah langkah pertama, kenapa menahan napas bisa berbalik saat panik, dan karena itu apa yang dicegah aplikasi.
 - [Cara melakukan latihan pernapasan](https://soluklan.app/id/panduan/cara-melakukan-latihan-pernapasan.html): Latihan pernapasan berarti sengaja memperlambat napas selama beberapa menit. Lima hal yang kamu perlukan untuk mulai, ritme pertama, dan kesalahan yang sering terjadi.
+- [Hemat baterai](https://soluklan.app/id/panduan/hemat-baterai.html): Apa yang diubah hemat baterai selama sesi, kapan menyala sendiri, di mana menyalakan dan mematikannya, dan apa yang bisa kamu lakukan untuk menjaga baterai di sesi panjang.
 - [Jika napasmu tidak terdengar](https://soluklan.app/id/panduan/jika-napasmu-tidak-terdengar.html): Hal-hal yang bisa kamu coba satu per satu kalau melihat tulisan "Tidak ada embusan yang terdengar sama sekali". Jarak, ruangan, perbedaan perangkat, dan lanjut tanpa mikrofon.
 - [Kartu berbagi](https://soluklan.app/id/panduan/kartu-berbagi.html): Membagikan sesi, streak, dan tonggakmu dengan sebuah kartu: dari mana dibuka, apa isi kartunya, dan apa yang tidak dibagikan.
 - [Latihan pernapasan sebelum tidur](https://soluklan.app/id/panduan/bernapas-sebelum-tidur.html): Kenapa di malam hari yang dipilih teknik dengan embusan panjang, sebaiknya di kasur atau sambil duduk, pada siapa tahanan napas 4-7-8 bisa jadi masalah, dan apa yang sudah diukur tentang jatuh tertidur.

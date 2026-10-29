@@ -133,18 +133,29 @@
     <p class="lede">Что остаётся на устройстве, что синхронизируется в iCloud, что отправляется при включённой передаче — и как удалить всё.</p>
     <p class="updated">5 мин чтения</p>
 <div class="platform-sec" role="group" aria-label="Выбери устройство" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone и iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -171,7 +182,7 @@
 <p><strong>Звук не записывается.</strong> Микрофон работает только во время сессии, и из него вычисляется лишь мгновенный уровень громкости. На диск не пишется никакой звуковой файл.</p>
 <p>Единственное исключение — разрешение на <a href="/ru/rukovodstvo/chto-my-delaem-s-dannymi.html">образец звука</a> ниже; если оно не включено, звук не записывается ни в одной сессии.</p>
 <h2>Минуты осознанности в «Здоровье»</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>В «Настройки → Apple Health» есть переключатель <strong>Записывать минуты осознанности в «Здоровье»</strong>. Если его включить, каждая засчитанная сессия записывается в приложение «Здоровье» как минуты осознанности, только с временем начала и конца. Сначала переключатель выключен. При включении «Здоровье» запрашивает только это разрешение на запись, и если его не дать, переключатель остаётся выключенным.</p>
 <p>Мы также один раз спросим об этом. Если ответить «Нет, спасибо», больше не спросим.</p>
 <p>Записываются только засчитанные сессии, в том числе сделанные только на Apple Watch.</p>

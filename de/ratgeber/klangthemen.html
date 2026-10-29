@@ -133,18 +133,29 @@
     <p class="lede">Die Atem- und Countdown-Klänge der Sitzung und die Mitteilungstöne getrennt wählen: die Themen, wo du sie wählst, die Vorschau und der Lautlos-Modus.</p>
     <p class="updated">4 Min. Lesezeit</p>
 <div class="platform-sec" role="group" aria-label="Wähle dein Gerät" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone und iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -172,7 +183,7 @@
 <p>Für Mitteilungen gibt es zwölf Themen: dieselben wie für die Sitzung, ohne Klassisch. Jedes Thema hat drei Töne: einen für Erinnerungen und die übrigen Mitteilungen, einen für den Serienhinweis und einen für die Mitteilung, die kommt, wenn du eine Weile pausiert hast.</p>
 <p>So wählst du: <strong>Einstellungen → Mitteilungsoptionen → Häufigkeit und Tonfall</strong>. Ist der <strong>Mitteilungston</strong> an, erscheint darunter die Zeile <strong>Mitteilungstöne</strong>. Tippst du auf ein Thema, spielt es die drei Töne nacheinander. Wechselst du das Thema, werden die anstehenden Mitteilungen mit dem neuen Ton neu eingerichtet. In der Stufe Einfach liegt dieser Bereich hinter <strong>Erweiterte Optionen</strong>. Der Rest der Mitteilungen steht in <a href="/de/ratgeber/erinnerungen-und-mitteilungen.html">Erinnerungen</a>.</p>
 <h2>Lautlos-Modus</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Ist das Telefon auf lautlos, erklingen die Sitzungsklänge nicht, Vibration und Bildschirm bleiben gleich. Auch beim Anhören der Themen ist die Vorschau nicht zu hören, wenn das Telefon auf lautlos steht: Schalte zuerst den Lautlos-Schalter aus.</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
@@ -180,7 +191,7 @@
 <p>Android erlaubt nicht, den Ton eines Mitteilungskanals nachträglich zu ändern. Deshalb legt die App beim Wechsel des Themas neue Kanäle an und überträgt deine alten Einstellungen darauf. Daher siehst du in den Mitteilungseinstellungen deines Telefons mehrere Kanäle von Soluklan.</p>
 </div>
 <p>In der Nachtansicht werden die Klänge von selbst leiser.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <h2>Auf der Apple Watch</h2>
 <p>Sind am Telefon die Atem- und Countdown-Klänge an, spielt auch die Uhr das Thema, das du am Telefon gewählt hast; sind sie aus, spielt die Uhr keinen Ton. In der gemeinsamen Sitzung spielt das Telefon die Klänge, die Uhr vibriert nur. Mitteilungen kommen auf der Uhr mit dem eigenen Ton der Uhr. Der Rest zur Uhr steht in <a href="/de/ratgeber/soluklan-auf-der-apple-watch.html">Soluklan auf der Apple Watch</a>.</p>
 </div>

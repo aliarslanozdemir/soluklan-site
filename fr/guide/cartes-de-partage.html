@@ -133,18 +133,29 @@
     <p class="lede">Partager ta séance, ta série et tes jalons avec une carte : d’où elle s’ouvre, ce qu’il y a sur la carte et ce qui n’est pas partagé.</p>
     <p class="updated">3 min de lecture</p>
 <div class="platform-sec" role="group" aria-label="Choisis ton appareil" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone et iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -178,7 +189,7 @@
 <h2>Sur Android</h2>
 <p>Les cartes et les boutons sont aux mêmes endroits. L’aperçu s’ouvre depuis le bas de l’écran, et la carte est remise au menu de partage du téléphone sous forme d’image. Si l’image ne peut pas être dessinée pour une raison quelconque, seuls la phrase et le lien partent.</p>
 </div>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone et iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Il n’y a pas de carte de partage sur l’Apple Watch.</p>
 </div>
     <aside class="indir"><p>Soluklan est une app gratuite d’exercices de respiration : le micro écoute ta respiration et montre à quel point tu suis le rythme.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-paylasma-kartlari&amp;mt=8"><img src="/assets/rozetler/app-store-fr.svg?v=efe192af" alt="Télécharger dans l’App Store" width="127" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=fr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-paylasma-kartlari"><img src="/assets/rozetler/google-play-fr.svg?v=429d4c53" alt="Disponible sur Google Play" width="135" height="40"></a></span></aside>

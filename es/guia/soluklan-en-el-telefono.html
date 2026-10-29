@@ -133,18 +133,29 @@
     <p class="lede">El teléfono es el dispositivo principal: aquí la medición es más precisa. Qué hay dónde, hacia dónde mira el micrófono y dónde se guardan tus datos.</p>
     <p class="updated">5 min de lectura</p>
 <div class="platform-sec" role="group" aria-label="Elige tu dispositivo" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone y iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,13 +169,13 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
 <p>Soluklan funciona en tres dispositivos y no se comporta igual en los tres. El teléfono es donde la medición es más precisa: aquí el micrófono está más cerca de tu boca.</p>
 <h2>Dónde está el micrófono</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone y iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>El micrófono de voz del iPhone está en el <strong>borde inferior</strong>, junto al puerto de carga. Si dejas el teléfono en la mesa, ponlo con la pantalla hacia arriba y el borde inferior mirando hacia ti. En la mano bastan de veinte a treinta centímetros. No lo pegues a los labios: el aliento satura y la app avisa de que está «demasiado cerca».</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
@@ -177,13 +188,13 @@
 <p>Toda la app. En la pantalla de inicio, el botón Empezar está en el centro, con tu racha y el número de sesiones debajo. <a href="/es/guia/moverse-por-la-app.html">Para qué sirve cada pantalla</a> lo contamos aparte. Al tocar Empezar llegas primero a <a href="/es/guia/tecnica-y-duracion.html">elegir una técnica y una duración</a> y después a <a href="/es/guia/la-pantalla-de-sesion.html">la pantalla de sesión</a>, donde están el círculo, la onda de sonido y, cuando hace falta, algún aviso breve.</p>
 <p>El informe aparece en cuanto termina la sesión. Explicamos aparte <a href="/es/guia/leer-el-informe.html">qué significa cada línea del informe</a> y <a href="/es/guia/como-se-calcula-la-puntuacion.html">de qué mediciones sale la puntuación</a>. Todo lo que se acumula con el tiempo, es decir, <a href="/es/guia/historial-resumenes-y-logros.html">el historial, los resúmenes semanales y los logros</a> junto con <a href="/es/guia/racha-e-hitos.html">la racha y sus hitos</a>, se reúne en el perfil.</p>
 <p>Si quieres practicar con regularidad, puedes <a href="/es/guia/montar-un-programa.html">montar un programa</a>, y si se te olvida, puedes <a href="/es/guia/recordatorios-y-notificaciones.html">ponerte un recordatorio</a>.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone y iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Para echar un vistazo sin abrir la app están <a href="/es/guia/widgets-y-actividad-en-vivo.html">el widget y la actividad en vivo</a>. Los dos existen solo en el teléfono y en la tableta.</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
 <p>Para echar un vistazo sin abrir la app, añade el widget de Soluklan a la pantalla de inicio. Muestra tu racha y, al tocarlo, la app se abre en la elección de técnica.</p>
 </div>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone y iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <h2>Silencio, auriculares, llamadas</h2>
 <p>Con el teléfono en silencio los sonidos de respiración y cuenta atrás no suenan, y vibración y pantalla siguen igual. Si hay auriculares conectados la entrada puede pasar a su micrófono. Entonces cambia la distancia y con ella la medición, así que lo más seguro es quitárselos. Si entra una llamada a mitad de sesión, la sesión se pausa, y después de la llamada reinicias el ciclo desde el menú de pausa.</p>
 </div>
@@ -194,7 +205,7 @@
 <h2>Al salir de la app</h2>
 <p>Si sales de la app o bloqueas la pantalla, la sesión se pausa. Al volver, el menú de pausa está abierto y desde ahí reinicias el ciclo. La medición no sigue en segundo plano y la app no mantiene el micrófono abierto en segundo plano.</p>
 <h2>Dónde se guardan tus datos</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone y iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Tu historial de sesiones se guarda en tu dispositivo y en tu propia cuenta de iCloud. También aparece en un iPad con la misma cuenta de Apple. Los detalles están en <a href="/es/guia/gestionar-tus-datos.html">Gestionar tus datos</a>.</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
