@@ -315,6 +315,25 @@ strong { font-weight: 650; }
 .yenilikler .surum-notu li strong { display: block; }
 .yenilikler .surum-notu li span { color: var(--ink-2); }
 .yenilikler .surum-eski { margin-top: 2.5rem; }
+/* Sürüm başlığı kendi yazısına gidiyor (29 Ekim 2026) */
+.yenilikler .surum-notu h2 a { color: inherit; text-decoration: none; }
+.yenilikler .surum-notu h2 a:hover { color: var(--breath); }
+.yenilikler .surum-ozet { margin: 0; color: var(--ink-2); }
+.yenilikler .surum-devam { margin: .4rem 0 0; font-size: .95rem; }
+.yenilikler .surum-devam a::after { content: " →"; }
+[dir="rtl"] .yenilikler .surum-devam a::after { content: " ←"; }
+/* Sürüm yazısının altında önceki/sonraki sürüm */
+.surum-gezinti { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-top: 2.5rem; }
+.surum-gezinti a { display: grid; gap: .2rem; padding: .9rem 1rem; border: 1px solid var(--line);
+                   border-radius: 12px; text-decoration: none; color: var(--ink); }
+.surum-gezinti a:hover { border-color: var(--breath); }
+.surum-gezinti span { font-size: .82rem; color: var(--ink-2); }
+.surum-gezinti strong { font-weight: 600; line-height: 1.35; }
+.surum-gezinti .sonraki { grid-column: 2; text-align: end; }
+@media (max-width: 34rem) {
+  .surum-gezinti { grid-template-columns: 1fr; }
+  .surum-gezinti .sonraki { grid-column: auto; }
+}
 /* İçerik görselleri WebP/AVIF için `<picture>` içinde: kutu yerleşime girmesin, görsel eskisi gibi
    doğrudan kabın çocuğu sayılsın (`.ekran img { width: 100% }` gibi kurallar aynen çalışsın) */
 picture { display: contents; }
