@@ -133,18 +133,29 @@
     <p class="lede">Onde fica cada coisa, o que é sincronizado entre aparelhos, as opções de compartilhamento e como apagar tudo.</p>
     <p class="updated">5 min de leitura</p>
 <div class="platform-sec" role="group" aria-label="Escolha seu aparelho" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -171,7 +182,7 @@
 <p><strong>O áudio não é gravado.</strong> O microfone funciona só durante a sessão, e do som é calculado apenas o volume de cada instante. Nenhum arquivo de áudio é gravado em disco.</p>
 <p>A única exceção é a permissão de <a href="/pt/guia/o-que-fazemos-com-os-dados-compartilhados.html">amostra de áudio</a> descrita abaixo — se você não a ativou, o áudio não é gravado em nenhuma sessão.</p>
 <h2>Minutos de atenção plena no Saúde</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Em Ajustes → Apple Health há a chave <strong>Registrar minutos de atenção plena no Saúde</strong>. Se você a ativar, cada sessão que conta é registrada no app Saúde como minutos de atenção plena, só com o horário de início e de término. A chave começa desativada. Quando você a ativa, o Saúde pede apenas essa permissão de gravação; se você não permitir, a chave continua desativada.</p>
 <p>Também perguntamos isso uma vez. Se você responder "Agora não", não perguntamos de novo.</p>
 <p>Só as sessões que contam são registradas, inclusive as que você faz sozinho no Apple Watch.</p>

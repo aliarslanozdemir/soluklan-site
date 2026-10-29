@@ -133,18 +133,29 @@
     <p class="lede">Cosa viene conservato e dove, cosa si sincronizza fra dispositivi, le opzioni di condivisione e come cancellare tutto.</p>
     <p class="updated">5 min di lettura</p>
 <div class="platform-sec" role="group" aria-label="Scegli il tuo dispositivo" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -171,7 +182,7 @@
 <p><strong>L’audio non viene registrato.</strong> Il microfono funziona solo durante una sessione e da esso si ricava soltanto il livello sonoro istantaneo. Nessun file audio viene scritto sul disco.</p>
 <p>L’unica eccezione è il permesso per il <a href="/it/guida/cosa-facciamo-con-i-dati-condivisi.html">campione audio</a> qui sotto: se non l’hai attivato, in nessuna sessione viene mai registrato audio.</p>
 <h2>Minuti di consapevolezza in Salute</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>In Impostazioni → Apple Health c’è l’interruttore <strong>Registra i minuti di consapevolezza in Salute</strong>. Se lo attivi, ogni sessione che conta viene scritta nell’app Salute come minuti di consapevolezza, solo con l’ora di inizio e di fine. L’interruttore parte spento. Quando lo attivi, Salute chiede solo questo permesso di scrittura, e se non lo concedi l’interruttore resta spento.</p>
 <p>Te lo chiediamo anche una volta. Se rispondi «No, grazie», non lo chiediamo più.</p>
 <p>Vengono scritte solo le sessioni che contano, anche quelle fatte solo sull’Apple Watch.</p>

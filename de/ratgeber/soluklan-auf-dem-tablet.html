@@ -133,18 +133,29 @@
     <p class="lede">Auf dem Tablet ist der Bildschirm breiter und das Mikrofon weiter weg. Wohin mit dem Gerät, warum das Messen schwerer ist als am Telefon und was gleich bleibt.</p>
     <p class="updated">4 Min. Lesezeit</p>
 <div class="platform-sec" role="group" aria-label="Wähle dein Gerät" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone und iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,13 +169,13 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
 <p>Auf dem Tablet ist alles da: dieselben Techniken, dieselbe Messung, derselbe Bericht. Zwei Dinge ändern sich — die Breite des Bildschirms und der Ort des Mikrofons.</p>
 <h2>Wo das Mikrofon am Tablet sitzt</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Das Mikrofon des iPads liegt an der <strong>Oberkante</strong> (quer gehalten landet es je nach Modell oben oder an der Seite). Anders als beim Telefon zeigt es nicht zu deinem Mund, sondern meist nach oben — und ist weiter weg.</p>
 <p>Deshalb kommt die Ausatmung auf dem Tablet deutlich leiser an als auf dem Telefon. Die App wählt auf dem Tablet das Mikrofon, das dem Mund am nächsten ist, aber der Unterschied verschwindet nicht ganz.</p>
 </div>
@@ -179,7 +190,7 @@
 </div>
 <h2>Was gleich bleibt</h2>
 <p>Bewertung, Bericht, Serie, Programme, Erinnerungen und Erfolge sind identisch mit dem Telefon — <a href="/de/ratgeber/wie-bewertet-wird.html">Wie eine Sitzung bewertet wird</a>, <a href="/de/ratgeber/verlauf-uebersichten-erfolge.html">Verlauf, Übersichten und Erfolge</a>, <a href="/de/ratgeber/ein-programm-einrichten.html">Ein Programm einrichten und dranbleiben</a>.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Der Sitzungsverlauf gleicht sich über iCloud zwischen den Geräten ab: Was du am Telefon gemacht hast, steht auch auf dem iPad. Mehr dazu in <a href="/de/ratgeber/deine-daten-verwalten.html">Deine Daten verwalten</a>.</p>
 <p><a href="/de/ratgeber/widgets-und-live-aktivitaet.html">Widget und Live-Aktivität</a> gibt es auf dem iPad ebenfalls.</p>
 </div>
@@ -188,7 +199,7 @@
 </div>
 <h2>Wenn du das Tablet zum ersten Mal öffnest</h2>
 <p>Nutzt du die App zum ersten Mal auf dem Tablet, erscheint der Einstieg auch hier, und <a href="/de/ratgeber/deine-erste-sitzung.html">die erste Sitzung läuft nach demselben Ablauf</a>.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone und iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Hast du den Einstieg schon am Telefon gemacht, kommen deine Antworten und Einstellungen, auch die <a href="/de/ratgeber/oberflaechen-stufen.html">Oberflächenstufe</a>, über iCloud auf das iPad.</p>
 </div>
     <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=de&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-de.svg?v=e9e3a4fd" alt="Jetzt bei Google Play" width="135" height="40"></a></span></aside>

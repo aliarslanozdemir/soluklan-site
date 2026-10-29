@@ -133,18 +133,29 @@
     <p class="lede">スマートフォンはアプリの中心となるデバイスで、測定がいちばん正確です。どこに何があるか、マイクがどこを向いているか、データがどこに保存されるか。</p>
     <p class="updated">約5分で読めます</p>
 <div class="platform-sec" role="group" aria-label="デバイスを選ぶ" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhoneとiPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,13 +169,13 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
 <p>Soluklanは3つのデバイスで動きますが、3つで同じことが起きるわけではありません。スマートフォンは測定がいちばん正確な場所です。マイクが口にいちばん近いのがここだからです。</p>
 <h2>マイクの位置</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>iPhoneの通話用マイクは<strong>下端</strong>、充電口の横にあります。スマートフォンを机に置くなら、画面を上にして、下端を自分のほうへ向けてください。手で持つなら20〜30センチ離せば十分です。口に押し当てないでください。そうすると息の音が割れて、アプリが「近すぎます」と知らせます。</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
@@ -177,13 +188,13 @@
 <p>アプリのすべてがここにあります。ホーム画面の中央に「はじめる」ボタンがあり、その下に連続記録とセッション数があります。<a href="/ja/gaido/apuri-no-gamen-ido.html">どのアイコンがどこを開くか</a>は別の記事で説明しています。「はじめる」を押すと、まず<a href="/ja/gaido/kokyuho-to-jikan-no-erabikata.html">呼吸法と長さを選び</a>、次に<a href="/ja/gaido/sesshon-gamen.html">セッション画面</a>が開きます。円、音の波形、必要なときの短いお知らせはそこに表示されます。</p>
 <p>セッションが終わるとすぐにレポートが出ます。レポートでは<a href="/ja/gaido/repoto-no-yomikata.html">各行の意味</a>がわかり、<a href="/ja/gaido/sukoa-no-keisan.html">スコアの組み立て方も別の記事</a>にあります。時間とともにたまっていくもの、つまり<a href="/ja/gaido/rireki-matome-jisseki.html">履歴、週間まとめ、実績</a>と<a href="/ja/gaido/renzoku-kiroku-to-mairusuton.html">連続記録とマイルストーン</a>は、プロフィール画面にまとまっています。</p>
 <p>規則正しく続けたいなら<a href="/ja/gaido/puroguramu-no-hajimekata.html">プログラムを組めます</a>。忘れてしまいそうなら<a href="/ja/gaido/rimainda-to-tsuchi.html">リマインダーを設定できます</a>。</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>アプリを開かずに確かめたいときは、<a href="/ja/gaido/wijetto-to-raibu-akutibiti.html">ウィジェットとライブアクティビティ</a>が役に立ちます。どちらもスマートフォンとタブレットだけにあります。</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
 <p>アプリを開かずに確かめたいときは、ホーム画面にSoluklanのウィジェットを追加できます。ウィジェットには連続記録が表示され、タップすると呼吸法の選択画面でアプリが開きます。</p>
 </div>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <h2>消音モード、イヤホン、着信</h2>
 <p>スマートフォンが消音モードのときは呼吸とカウントダウンの音は鳴りませんが、振動と画面は変わりません。イヤホンをつないでいると、マイクがイヤホンのマイクに切り替わることがあります。そうなると距離が変わるため測定も変わるので、イヤホンは外すのがいちばんです。セッション中に着信があるとセッションは一時停止し、通話のあとに一時停止メニューからサイクルをやり直します。</p>
 </div>
@@ -194,7 +205,7 @@
 <h2>アプリを離れたとき</h2>
 <p>アプリを離れたり画面をロックしたりすると、セッションは一時停止します。戻ると一時停止メニューが開いていて、そこからサイクルをやり直します。測定はバックグラウンドでは続かず、アプリはバックグラウンドでマイクをオンにしたままにしません。</p>
 <h2>データの保存場所</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhoneとiPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>セッション履歴はデバイスと自分のiCloudアカウントに保存されます。同じAppleアカウントで開いたiPadにも表示されます。詳しくは<a href="/ja/gaido/deta-no-kanri.html">データの管理</a>の記事で。</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>

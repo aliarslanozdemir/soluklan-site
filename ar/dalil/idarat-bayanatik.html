@@ -133,18 +133,29 @@
     <p class="lede">ما الذي يبقى على جهازك، وما الذي يتزامن في iCloud، وما الذي يُرسَل إن فعّلت المشاركة — وكيف تحذف كل شيء.</p>
     <p class="updated">قراءة 5 دقيقة</p>
 <div class="platform-sec" role="group" aria-label="اختر جهازك" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone وiPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -171,7 +182,7 @@
 <p><strong>الصوت لا يُسجَّل.</strong> يعمل الميكروفون أثناء الجلسة فقط، ولا يُستخرج منه إلا مستوى الصوت اللحظي. ولا يُكتب أي ملف صوتي على القرص.</p>
 <p>والاستثناء الوحيد إذن <a href="/ar/dalil/al-bayanat-allati-tusharikuha.html">العيّنة الصوتية</a> أدناه — فإن لم تفعّله لم يُسجَّل الصوت في أي جلسة أبدًا.</p>
 <h2>دقائق اليقظة الذهنية في تطبيق الصحة</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone وiPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>في الإعدادات ← Apple Health يوجد مفتاح <strong>تسجيل دقائق اليقظة الذهنية في تطبيق الصحة</strong>. إذا فعّلته تُكتب كل جلسة محتسبة في تطبيق الصحة كدقائق يقظة ذهنية، بوقت بدايتها ونهايتها فقط. يبدأ المفتاح مطفأً. عند تفعيله يطلب تطبيق الصحة إذن الكتابة هذا فقط، وإن لم تمنحه يبقى المفتاح مطفأً.</p>
 <p>ونسألك عن ذلك أيضًا مرة واحدة. إن قلت «لا، شكرًا» فلن نسأل مرة أخرى.</p>
 <p>لا تُكتب إلا الجلسات المحتسبة، ومنها ما تؤدّيه على Apple Watch وحدها.</p>

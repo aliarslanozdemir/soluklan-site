@@ -133,18 +133,29 @@
     <p class="lede">Scegliere separatamente i suoni del respiro e del conto alla rovescia della sessione e i suoni delle notifiche: i temi, dove si scelgono, l’anteprima e la modalità silenziosa.</p>
     <p class="updated">4 min di lettura</p>
 <div class="platform-sec" role="group" aria-label="Scegli il tuo dispositivo" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone e iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -172,7 +183,7 @@
 <p>Per le notifiche ci sono dodici temi: gli stessi della sessione, tranne Classico. Ogni tema ha tre suoni: uno per i promemoria e le altre notifiche, uno per l’avviso della serie e uno per la notifica di ritorno che arriva quando hai fatto una pausa per un po’.</p>
 <p>Per sceglierlo: <strong>Impostazioni → Opzioni di notifica → Frequenza e tono</strong>. Con <strong>Suono della notifica</strong> attivo, sotto compare la riga <strong>Suoni delle notifiche</strong>. Quando tocchi un tema, suonano i tre suoni uno dopo l’altro. Quando cambi tema, le notifiche in attesa vengono reimpostate con il nuovo suono. Nell’interfaccia Semplice questa sezione è dietro <strong>Opzioni avanzate</strong>. Il resto delle notifiche è nell’articolo <a href="/it/guida/promemoria-e-notifiche.html">Promemoria e notifiche</a>.</p>
 <h2>Modalità silenziosa</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Quando il telefono è in silenzioso, i suoni della sessione non suonano; le vibrazioni e lo schermo restano uguali. Anche mentre ascolti i temi, se il telefono è in silenzioso l’anteprima non si sente: prima togli il silenzioso dall’interruttore.</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
@@ -180,7 +191,7 @@
 <p>Android non permette di cambiare in seguito il suono di un canale di notifica. Per questo, quando cambi tema, l’app apre nuovi canali e ci sposta le tue vecchie impostazioni. È per questo che nelle impostazioni delle notifiche del telefono si vedono diversi canali di Soluklan.</p>
 </div>
 <p>Con l’aspetto notturno i suoni si abbassano da soli.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone e iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <h2>Su Apple Watch</h2>
 <p>Se sul telefono i suoni del respiro e del conto alla rovescia sono attivi, anche l’orologio suona il tema che hai scelto sul telefono; se sono spenti, l’orologio non suona. Nella sessione condivisa i suoni li suona il telefono, l’orologio vibra soltanto. Sull’orologio le notifiche arrivano con il suono dell’orologio stesso. Il resto dell’orologio è nell’articolo <a href="/it/guida/soluklan-su-apple-watch.html">Soluklan su Apple Watch</a>.</p>
 </div>

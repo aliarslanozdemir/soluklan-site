@@ -133,18 +133,29 @@
     <p class="lede">分别选择练习中的呼吸与倒计时声音和通知声音：主题、在哪里选、试听和静音模式。</p>
     <p class="updated">阅读约 4 分钟</p>
 <div class="platform-sec" role="group" aria-label="选择你的设备" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone 和 iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -172,7 +183,7 @@
 <p>通知有十二个主题：和练习主题相同，只是没有经典。每个主题有三种声音：一种用于提醒和其他通知，一种用于连续天数警示，还有一种用于你停了一阵子之后到来的回归通知。</p>
 <p>在哪里选：<strong>设置 → 通知选项 → 频率和措辞</strong>。打开<strong>通知声音</strong>后，下面会出现<strong>通知音效</strong>一行。点一个主题，它会依次播放三种声音。换了主题，等待中的通知会用新的声音重新排期。在简洁层级里，这一部分在<strong>高级选项</strong>后面。通知的其余内容在<a href="/zh/zhinan/tixing-yu-tongzhi.html">提醒与通知</a>一文里。</p>
 <h2>静音模式</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>手机静音时，练习声音不会响，震动和画面保持不变。试听主题时，如果手机是静音的，也听不到预览：先把静音开关拨开。</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
@@ -180,7 +191,7 @@
 <p>Android 不允许事后更改通知渠道的声音。所以你换主题时，应用会新建渠道，并把你原来的设置搬过去。在手机的通知设置里看到 Soluklan 有好几个渠道，就是这个原因。</p>
 </div>
 <p>在夜间视图里，声音会自动调低。</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone 和 iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <h2>在 Apple Watch 上</h2>
 <p>手机上的呼吸与倒计时提示音打开时，手表也会播放你在手机上选的主题；关闭时，手表不响声音。共同练习时，声音由手机播放，手表只震动。通知在手表上用手表自己的声音到来。手表的其余内容在<a href="/zh/zhinan/apple-watch-shang-de-soluklan.html">Apple Watch 上的 Soluklan</a>一文里。</p>
 </div>

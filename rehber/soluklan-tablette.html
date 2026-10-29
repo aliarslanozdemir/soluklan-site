@@ -133,18 +133,29 @@
     <p class="lede">Tablette ekran daha geniş, mikrofon daha uzak. Cihazı nereye koymalı, ölçüm neden telefondakinden zor ve neler aynı kalıyor.</p>
     <p class="updated">4 dakikalık okuma</p>
 <div class="platform-sec" role="group" aria-label="Cihazını seç" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone ve iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,13 +169,13 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
 <p>Tablette uygulamanın tamamı var: aynı teknikler, aynı ölçüm, aynı rapor. Değişen iki şey var — ekranın genişliği ve mikrofonun yeri.</p>
 <h2>Mikrofon tablette nerede</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone ve iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>iPad'in mikrofonu cihazın <strong>üst kenarında</strong> (yatay tutuyorsan üstte ya da yan kenarda kalır, modele göre değişir). Yani telefondan farklı olarak ağzına dönük değil, genelde yukarı bakıyor ve daha uzakta.</p>
 <p>Bu yüzden veriş tablette telefondakinden belirgin biçimde daha alçak duyuluyor. Uygulama tablette ağza en yakın mikrofonu seçiyor ama fark tamamen kapanmıyor.</p>
 </div>
@@ -179,7 +190,7 @@
 </div>
 <h2>Aynı kalan her şey</h2>
 <p>Puanlama, rapor, seri, programlar, hatırlatıcılar ve başarımlar telefondakiyle birebir aynı — <a href="/rehber/puan-nasil-hesaplaniyor.html">Bir seans nasıl puanlanıyor</a>, <a href="/rehber/ozetler-ve-basarimlar.html">Geçmiş, özetler ve başarımlar</a>, <a href="/rehber/program-kurmak.html">Program kurmak ve sürdürmek</a>.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone ve iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Seans geçmişi iCloud üzerinden cihazların arasında eşitleniyor, yani telefonda yaptığın seans iPad'de de görünüyor: <a href="/rehber/verilerini-yonetmek.html">Verilerini yönetmek</a>.</p>
 <p><a href="/rehber/widget-ve-canli-etkinlik.html">Widget ve Canlı Etkinlik</a> iPad'de de çalışıyor.</p>
 </div>
@@ -188,7 +199,7 @@
 </div>
 <h2>Tablette ilk kez açıyorsan</h2>
 <p>Uygulamayı ilk kez tablette kullanıyorsan tanıma testi burada da çıkıyor ve <a href="/rehber/ilk-seansin.html">ilk seans baştan sona aynı akışla</a> geçiyor.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone ve iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Telefonda testi yaptıysan cevapların ve ayarların, <a href="/rehber/arayuz-kademeleri.html">arayüz kademesi</a> de dahil, iCloud üzerinden iPad'e geliyor.</p>
 </div>
     <aside class="indir"><p>Soluklan ücretsiz bir nefes egzersizi uygulaması: mikrofon nefesini dinler ve ritme ne kadar uyduğunu gösterir.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/tr/app/id6801880838?pt=499375&amp;ct=site-soluklan-tablette&amp;mt=8"><img src="/assets/rozetler/app-store-tr.svg?v=6aee7c3d" alt="App Store&#x27;dan indir" width="151" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=tr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-soluklan-tablette"><img src="/assets/rozetler/google-play-tr.svg?v=805b69aa" alt="Google Play&#x27;den indir" width="135" height="40"></a></span></aside>

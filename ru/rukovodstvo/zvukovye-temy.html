@@ -133,18 +133,29 @@
     <p class="lede">Как отдельно выбрать звуки дыхания и обратного отсчёта во время сессии и звуки уведомлений: темы, где их выбирать, предпрослушивание и беззвучный режим.</p>
     <p class="updated">4 мин чтения</p>
 <div class="platform-sec" role="group" aria-label="Выбери устройство" hidden>
-      <button type="button" data-platform="ios" aria-pressed="true">iPhone и iPad</button>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
       <button type="button" data-platform="android" aria-pressed="false">Android</button>
     </div>
     <script>
 (function () {
   var secici = document.currentScript.previousElementSibling;
   var kok = document.documentElement;
-  var secim = "";
-  try { secim = localStorage.getItem("soluklan-platform") || ""; } catch (e) {}
-  if (secim !== "ios" && secim !== "android") {
-    secim = /android/i.test(navigator.userAgent || "") ? "android" : "ios";
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
   }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
   function uygula(p) {
     kok.setAttribute("data-platform", p);
     [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
@@ -158,7 +169,7 @@
     if (!b) return;
     var p = b.getAttribute("data-platform");
     uygula(p);
-    try { localStorage.setItem("soluklan-platform", p); } catch (e2) {}
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
   });
 })();
     </script>
@@ -172,7 +183,7 @@
 <p>Для уведомлений есть двенадцать тем: те же, что для сессии, кроме Классического. У каждой темы три звука: один для напоминаний и остальных уведомлений, один для предупреждения о серии и один для уведомления о возвращении, которое приходит, когда ты какое-то время не занимался.</p>
 <p>Где выбрать: <strong>Настройки → Настройки уведомлений → Частота и формулировки</strong>. Когда включён <strong>Звук уведомления</strong>, под ним появляется строка <strong>Звуки уведомлений</strong>. Когда ты нажимаешь на тему, она по очереди проигрывает три звука. Когда ты меняешь тему, ожидающие уведомления заново ставятся с новым звуком. На простом уровне этот раздел спрятан за кнопкой <strong>Расширенные настройки</strong>. Остальное об уведомлениях — в статье <a href="/ru/rukovodstvo/napominaniya-i-uvedomleniya.html">Напоминания и уведомления</a>.</p>
 <h2>Беззвучный режим</h2>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <p>Когда телефон в беззвучном режиме, звуки сессии не играют, а вибрация и экран остаются прежними. Если телефон в беззвучном режиме, при прослушивании тем предпрослушивание тоже не слышно: сначала выключи беззвучный режим переключателем.</p>
 </div>
 <div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
@@ -180,7 +191,7 @@
 <p>Android не позволяет потом менять звук канала уведомлений. Поэтому, когда ты меняешь тему, приложение открывает новые каналы и переносит в них прежние настройки. Из-за этого в настройках уведомлений телефона видно несколько каналов Soluklan.</p>
 </div>
 <p>В ночном виде звуки сами становятся тише.</p>
-<div class="platform-blok" data-platform="ios"><p class="platform-ad">iPhone и iPad</p>
+<div class="platform-blok" data-platform="ios"><p class="platform-ad">iOS</p>
 <h2>На Apple Watch</h2>
 <p>Если на телефоне включены звуки дыхания и обратного отсчёта, часы тоже играют тему, выбранную на телефоне; если выключены, часы звук не играют. В совместной сессии звуки играет телефон, а часы только вибрируют. Уведомления приходят на часы со звуком самих часов. Остальное о часах — в статье <a href="/ru/rukovodstvo/soluklan-na-apple-watch.html">Soluklan на Apple Watch</a>.</p>
 </div>
