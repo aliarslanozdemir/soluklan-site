@@ -306,22 +306,51 @@ strong { font-weight: 650; }
 .kanit-notu { margin-top: 1rem; font-size: .92rem; color: var(--ink-2); }
 .kanit-bag { font-size: .95rem; color: var(--ink-2); }
 /* Yenilikler sayfası: sürüm başına başlık, tarih ve madde listesi (25 Ekim 2026) */
-.yenilikler .surum-notu { margin-top: 2rem; padding-block: 1.5rem 0; border-top: 1px solid var(--line); }
-.yenilikler .surum-notu::before { content: none; }
-.yenilikler .surum-notu h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: .35rem .9rem; margin: 0 0 .9rem; }
-.yenilikler .surum-tarih { font-family: var(--body); font-size: .9rem; font-weight: 500; color: var(--ink-2); letter-spacing: 0; }
-.yenilikler .surum-notu ul { margin: 0; padding-inline-start: 1.2rem; }
-.yenilikler .surum-notu li { margin-bottom: .6rem; }
-.yenilikler .surum-notu li strong { display: block; }
-.yenilikler .surum-notu li span { color: var(--ink-2); }
-.yenilikler .surum-eski { margin-top: 2.5rem; }
-/* Sürüm başlığı kendi yazısına gidiyor (29 Ekim 2026) */
+/* Yenilikler: dikey zaman çizelgesi, yeniden eskiye (Ali, 29 Ekim 2026). Solda (sağdan sola
+   dillerde sağda) ince bir çizgi, her sürümde bir nokta, nokta yanında yalnız başlıktan oluşan kart.
+   Kartın tamamı sürümün yazısına gidiyor: tek bağlantı başlıkta, ::after kartı kaplıyor. */
+.yenilikler .cizelge { list-style: none; margin: 2.25rem 0 0; padding: 0; padding-inline-start: 3.4rem; position: relative; }
+.yenilikler .cizelge::before { content: ""; position: absolute; inset-inline-start: 1.35rem; top: 1rem; bottom: 1rem;
+  width: 2px; margin-inline-start: -1px; border-radius: 2px; background: var(--line); }
+.yenilikler .cizelge-grup { position: relative; margin: 0 0 1.4rem; padding: 0; }
+.yenilikler .cizelge-grup::marker, .yenilikler .grup-kartlar > li::marker { content: none; }
+/* Ana sürümün etiketi çizginin üstünde, grubun ilk kartının hizasında; en yeni grubunki dolu */
+.yenilikler .cizelge-etiket { position: absolute; inset-inline-start: -2.05rem; top: 1rem; transform: translateX(-50%);
+  min-width: 2.5rem; padding: .18rem .45rem; border-radius: 999px; text-align: center;
+  font-family: var(--display); font-size: .8rem; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums;
+  color: var(--breath); background: var(--bg); border: 1.5px solid var(--breath); }
+[dir="rtl"] .yenilikler .cizelge-etiket { transform: translateX(50%); }
+.yenilikler .cizelge-grup:first-child .cizelge-etiket { color: #fff; background: var(--breath);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--breath) 22%, transparent); }
+.yenilikler .grup-kartlar { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.yenilikler .grup-kartlar > li { margin: 0; padding: 0; }
+/* Ara sürüm: ana kartın altında, biraz içeride ve daha sade */
+.yenilikler .surum-notu.card.ara-surum { margin-inline-start: 1.1rem; padding: .7rem 1rem; box-shadow: none;
+  background: transparent; }
+.yenilikler .surum-notu.ara-surum h3 { margin: 0; font-size: .98rem; line-height: 1.3; }
+.yenilikler .surum-notu.ara-surum h3 a { color: inherit; text-decoration: none; }
+.yenilikler .surum-notu.ara-surum h3 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.yenilikler .surum-notu.ara-surum h3 a:focus-visible { outline: none; }
+.yenilikler .surum-notu.ara-surum .surum-ad { font-size: .9rem; }
+.yenilikler .surum-notu.ara-surum .surum-tarih { margin-top: .3rem; font-size: .8rem; }
+.yenilikler .surum-notu.card { margin: 0; padding: 1rem 1.25rem; }
+.yenilikler .surum-notu.card::before { content: ""; }
+.yenilikler .surum-notu h2 { margin: 0; font-size: 1.15rem; line-height: 1.3; }
 .yenilikler .surum-notu h2 a { color: inherit; text-decoration: none; }
-.yenilikler .surum-notu h2 a:hover { color: var(--breath); }
-.yenilikler .surum-ozet { margin: 0; color: var(--ink-2); }
-.yenilikler .surum-devam { margin: .4rem 0 0; font-size: .95rem; }
-.yenilikler .surum-devam a::after { content: " →"; }
-[dir="rtl"] .yenilikler .surum-devam a::after { content: " ←"; }
+.yenilikler .surum-notu h2 a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.yenilikler .surum-notu.kart-bagli:hover h2 a, .yenilikler .surum-notu.kart-bagli:hover .surum-no { color: var(--breath); }
+.yenilikler .surum-notu h2 a:focus-visible { outline: none; }
+.yenilikler .surum-no { display: block; font-family: var(--display); font-weight: 700; }
+.yenilikler .surum-ad { display: block; margin-top: .2rem; font-family: var(--body); font-size: 1rem; font-weight: 500;
+  color: var(--ink-2); letter-spacing: 0; }
+.yenilikler .surum-tarih { margin: .45rem 0 0; font-size: .85rem; color: var(--ink-2); }
+@media (max-width: 34rem) {
+  .yenilikler .cizelge { padding-inline-start: 3rem; }
+  .yenilikler .cizelge::before { inset-inline-start: 1.2rem; }
+  .yenilikler .cizelge-etiket { inset-inline-start: -1.8rem; min-width: 2.3rem; padding: .15rem .35rem; font-size: .75rem; }
+  .yenilikler .surum-notu.card { padding: .9rem 1rem; }
+  .yenilikler .surum-notu.card.ara-surum { margin-inline-start: .7rem; padding: .65rem .85rem; }
+}
 /* Sürüm yazısının altında önceki/sonraki sürüm */
 .surum-gezinti { display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; margin-top: 2.5rem; }
 .surum-gezinti a { display: grid; gap: .2rem; padding: .9rem 1rem; border: 1px solid var(--line);
