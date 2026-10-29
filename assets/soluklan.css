@@ -718,11 +718,33 @@ html:has(.slaytlar) footer.site { scroll-snap-align: end; }
              gap: .5rem; font-size: .88rem; overflow-x: auto; scrollbar-width: none; }
   nav.site::-webkit-scrollbar { display: none; }
   /* Rusçada "Конфиденциальность" uzun: menü dar ekranda biraz küçük */
-  :lang(ru) nav.site { font-size: .76rem; gap: .35rem; }
+  :lang(ru) nav.site, html.menu-kucuk :lang(ru) nav.site { font-size: .76rem; gap: .35rem; }
+  /* Kaydırınca küçülen menünün yazısı telefonda büyümesin (kucuk kuralı daha özgül) */
+  html.menu-kucuk nav.site { font-size: .88rem; }
 }
-/* Çok dar (küçük telefonlar): menü aralıkları daralır */
+/* Sığmayan dilde (Rusça) kısa ad (site_build.py, `nav_kisa`): telefonda ve tablet dikeyde;
+   geniş ekranda tam ad. Rusça menü 641–830 px arasında da başlıktan taşıyordu. */
+nav.site .ad-kisa { display: none; }
+@media (max-width: 56rem) {
+  nav.site .ad-tam { display: none; }
+  nav.site .ad-kisa { display: inline; }
+}
+/* Tek satırlı başlığın en dar hâli (641–736 px): Yenilikler beşinci öğe olunca Almanca,
+   Fransızca ve Japoncada menü birkaç piksel taşıyordu; aralıklar biraz daralıyor */
+@media (min-width: 40.0625rem) and (max-width: 46rem) {
+  header.site .wrap { gap: .75rem; }
+  nav.site { gap: .65rem; }
+  nav.site, html.menu-kucuk nav.site { font-size: .9rem; }
+  .dil-sec { margin-inline-start: .6rem; }
+}
+@media (min-width: 40.0625rem) and (max-width: 56rem) {
+  :lang(ru) nav.site, html.menu-kucuk :lang(ru) nav.site { font-size: .86rem; gap: .7rem; }
+}
+/* Çok dar (küçük telefonlar): Yenilikler beşinci öğe olunca Almanca, Fransızca, Japonca
+   ve Endonezcede 320 px'e sığmıyordu: yazı ve aralık biraz daha küçük (28 Ekim 2026) */
 @media (max-width: 24rem) {
-  nav.site { font-size: .8rem; }
+  nav.site, html.menu-kucuk nav.site { font-size: .75rem; gap: .375rem; }
+  :lang(ru) nav.site, html.menu-kucuk :lang(ru) nav.site { font-size: .72rem; gap: .3rem; }
 }
 
 /* --- Dar ekran: giriş ve slaytlar --- */
