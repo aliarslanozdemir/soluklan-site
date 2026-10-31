@@ -140,6 +140,7 @@
         <a class="btn btn-ghost" href="/en/guide/">Browse the guide</a>
       </div>
       <p class="ucretsiz">Free. No account, no ads.</p>
+      <div class="tanitim-video"><button type="button" data-id="jdNRWyD1DRk" aria-label="Watch the video"><img src="/assets/video/jdNRWyD1DRk.jpg?v=f62d3ef0" alt="" aria-hidden="true" data-sus width="480" height="360" loading="lazy"><span>▶ Watch the video</span></button></div>
       <p class="small" style="margin-top:1.25rem">A relaxation and focus exercise. It does not offer medical diagnosis, treatment or advice.</p>
     </div>
     <figure class="ring" style="margin:0">
@@ -698,7 +699,7 @@
     }, 200);
   }, { passive: true });
 })();
-</script>
+document.querySelectorAll('.tanitim-video button').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');b.parentNode.replaceChild(f,b);});});</script>
 
 </main>
 <footer class="site">

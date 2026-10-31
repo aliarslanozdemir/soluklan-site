@@ -140,6 +140,7 @@
         <a class="btn btn-ghost" href="/rehber/">Rehbere göz at</a>
       </div>
       <p class="ucretsiz">Ücretsiz. Hesap ve reklam yok.</p>
+      <div class="tanitim-video"><button type="button" data-id="YvpGLKGd_7g" aria-label="Videoyu izle"><img src="/assets/video/YvpGLKGd_7g.jpg?v=e19e7499" alt="" aria-hidden="true" data-sus width="480" height="360" loading="lazy"><span>▶ Videoyu izle</span></button></div>
       <p class="small" style="margin-top:1.25rem">Rahatlama ve odaklanma egzersizi. Tıbbi tanı, tedavi ya da tavsiye sunmaz.</p>
     </div>
     <figure class="ring" style="margin:0">
@@ -698,7 +699,7 @@
     }, 200);
   }, { passive: true });
 })();
-</script>
+document.querySelectorAll('.tanitim-video button').forEach(function(b){b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');b.parentNode.replaceChild(f,b);});});</script>
 
 </main>
 <footer class="site">
