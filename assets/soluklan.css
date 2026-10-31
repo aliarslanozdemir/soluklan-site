@@ -485,6 +485,23 @@ details.sss-tumu > .faq { margin-top: .5rem; }
 .yazi p { line-height: 1.75; }
 .yazi ul { padding-inline-start: 1.2rem; }
 .yazi li { margin-bottom: .55rem; line-height: 1.7; }
+/* Ana sayfadaki tanıtım videosu: basılana kadar yalnız kapak, sonra çerezsiz YouTube oynatıcısı */
+.tanitim-video { margin-top: 1.25rem; max-width: 30rem; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; background: var(--card); border: 1px solid var(--line-soft); }
+.tanitim-video button { all: unset; cursor: pointer; position: relative; display: block; width: 100%; height: 100%; }
+.tanitim-video button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.tanitim-video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tanitim-video span { position: absolute; inset-inline-start: .75rem; bottom: .75rem; padding: .4rem .8rem; border-radius: 999px; background: rgba(0,0,0,.65); color: #fff; font-weight: 600; }
+.tanitim-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+/* Teknik yazısının başındaki video bağlantısı (gömme yok, kapak resmi siteden) */
+.yazi .video-bag {
+  display: flex; align-items: center; gap: 1rem; margin-block: 1.5rem; padding: .75rem;
+  border: 1px solid var(--line-soft); border-radius: 14px; background: var(--card);
+  color: var(--ink); text-decoration: none;
+}
+.yazi .video-bag img { width: 8rem; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 10px; flex: none; }
+.yazi .video-bag span { display: grid; gap: .2rem; line-height: 1.4; }
+.yazi .video-bag strong::before { content: "▶ "; }
+.yazi .video-bag:hover, .yazi .video-bag:focus-visible { border-color: var(--line); }
 /* Yazının sonundaki indirme bölümü: tek cümle ve mağaza rozetleri, yumuşak gradyanlı kutuda */
 .yazi .indir {
   margin-block-start: 3rem; padding: 1.25rem 1.4rem; border-radius: 16px;
