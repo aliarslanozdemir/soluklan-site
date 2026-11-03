@@ -344,6 +344,30 @@ strong { font-weight: 650; }
 .yenilikler .surum-ad { display: block; margin-top: .2rem; font-family: var(--body); font-size: 1rem; font-weight: 500;
   color: var(--ink-2); letter-spacing: 0; }
 .yenilikler .surum-tarih { margin: .45rem 0 0; font-size: .85rem; color: var(--ink-2); }
+/* Platforma özgü madde (Ali, 3 Kasım 2026: ayrı bölüm yok, rehberdeki cihaz seçicisine bağlı): kartta ve
+   ara sürüm bölümünde `.platform-blok` satırı. Seçici kökte `data-platform` kurunca yalnız seçilen platformun
+   satırı kalıyor; JS yokken satır küçük platform adıyla görünüyor. Yazıdaki bloğun çizgisi ve boşluğu burada yok. */
+.yenilikler .surum-platform { list-style: none; margin: .5rem 0 0; padding: 0; display: grid; gap: .3rem; }
+.yenilikler .surum-platform li, .ara-surum-bolum li.platform-blok { font-size: .85rem; line-height: 1.4; color: var(--ink-2); }
+.yenilikler .surum-platform li.platform-blok, .ara-surum-bolum li.platform-blok { border: 0; padding: 0; margin: 0; }
+.ara-surum-bolum li.platform-blok { font-size: inherit; color: inherit; }
+.surum-platform .platform-ad, .ara-surum-bolum .platform-ad { display: inline-block; margin: 0; margin-inline-end: .4rem;
+  padding: .05rem .45rem; border: 1px solid var(--line); border-radius: 999px; font-size: .75rem; }
+:root[data-platform] :is(.surum-platform, .ara-surum-bolum) .platform-ad { display: none; }
+.yenilikler .platform-sec { margin-bottom: 1.5rem; }
+/* Sürümün türü (ilk sürüm / büyük güncelleme / güncelleme / ara sürüm): numaranın yanında küçük, sakin bir hap */
+.yenilikler .tur-etiket { display: inline-block; margin-inline-start: .5rem; padding: .05rem .5rem;
+  border: 1px solid var(--line); border-radius: 999px; font-family: var(--body); font-size: .72rem;
+  font-weight: 600; line-height: 1.45; color: var(--ink-2); vertical-align: .12em; letter-spacing: 0; }
+.yenilikler .tur-etiket:is(.tur-ilk, .tur-buyuk) { border-color: color-mix(in srgb, var(--breath) 45%, transparent); color: var(--breath); }
+.yenilikler .ara-surum .tur-etiket { font-size: .68rem; }
+/* Sürüm yazısının altında ara sürümler */
+.ara-surumler { margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+.prose .ara-surumler > h2 { margin: 0 0 .75rem; }
+.ara-surum-bolum { margin-top: 1rem; scroll-margin-top: 5rem; }
+.prose .ara-surum-bolum h3 { margin: 0; font-variant-numeric: tabular-nums; }
+.ara-surum-bolum .surum-tarih { margin: .15rem 0 .4rem; font-size: .85rem; color: var(--ink-2); }
+.prose .ara-surum-bolum ul { margin: 0; }
 @media (max-width: 34rem) {
   .yenilikler .cizelge { padding-inline-start: 3rem; }
   .yenilikler .cizelge::before { inset-inline-start: 1.2rem; }

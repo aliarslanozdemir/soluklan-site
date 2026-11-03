@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.8: lange Sitzungen, iPhone Duo und Akku sparen","description":"Sitzungen bis zu zwanzig Minuten je nach Technik, Unterstützung für das faltbare iPhone Duo, ein verständlicherer Bericht, Akku sparen, Achtsamkeitsminuten in Health und drei neue Sprachen. Auch die erste Version für Android.","url":"https://soluklan.app/de/neuigkeiten/1-8.html","inLanguage":"de","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/de/neuigkeiten/1-8.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-22"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Neuigkeiten","item":"https://soluklan.app/de/neuigkeiten.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.8: lange Sitzungen, iPhone Duo und Akku sparen","item":"https://soluklan.app/de/neuigkeiten/1-8.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.8: lange Sitzungen, iPhone Duo und Akku sparen</h1>
     <p class="lede">Sitzungen bis zu zwanzig Minuten je nach Technik, Unterstützung für das faltbare iPhone Duo, ein verständlicherer Bericht, Akku sparen, Achtsamkeitsminuten in Health und drei neue Sprachen. Auch die erste Version für Android.</p>
     <p class="updated">22. Oktober 2026</p>
+<div class="platform-sec" role="group" aria-label="Wähle dein Gerät" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>Ausgangspunkt von 1.8 waren längere Sitzungen. Eine Sitzung von fünf Minuten passt gut zwischen zwei Dinge des Tages, aber nach einer Weile wollen manche länger sitzen. Lange Sitzungen brachten weitere Aufgaben mit sich: merken, wie die Zeit vergeht, eine lange Sitzung Abschnitt für Abschnitt lesen, den Akku schonen.</p>
 <h2>Lange Sitzungen</h2>
 <p>Die Sitzungsdauer endet nicht mehr bei jeder Technik an derselben Grenze. Bei der Kohärenten Atmung kannst du bis zu zwanzig Minuten gehen, bei ruhigen Techniken wie Tief und Langsam, Langer Ausatem und Ozeanatem bis zu fünfzehn Minuten. Bei schnellen oder intensiven Techniken blieb die Grenze kürzer.</p>
@@ -148,8 +189,9 @@
 <p>Mit einem Schalter in den Einstellungen kannst du deine Sitzungen, die zählen, als Achtsamkeitsminuten in die Health-App schreiben lassen. Der Schalter ist zuerst aus, und eingetragen werden nur Beginn und Ende der Sitzung. Das steht in <a href="/de/ratgeber/deine-daten-verwalten.html">Deine Daten verwalten</a>.</p>
 <h2>Japanisch, Portugiesisch und Indonesisch</h2>
 <p>Mit Japanisch, Portugiesisch (Brasilien) und Indonesisch gibt es die App und diese Website in zwölf Sprachen.</p>
-<h2>Auf Android</h2>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
 <p>Version 1.8 ist am 27. Oktober 2026 auch bei Google Play erschienen. Sie ist die erste Version von Soluklan für Android und enthält das meiste von dieser Seite: lange Sitzungen, den Bericht mit Abschnitten, Akku sparen und zwölf Sprachen. Achtsamkeitsminuten werden ab Android 14 in Health Connect geschrieben. Nur auf Android gibt es den <strong>Countdown zum Tagesende</strong> in neuer Gestalt: Läuft deine Serie und hast du an dem Tag noch keine Sitzung gemacht, zeigt er abends die verbleibende Zeit bis Mitternacht; das steht in <a href="/de/ratgeber/erinnerungen-und-mitteilungen.html">Erinnerungen</a>. Was es nur auf dem iPhone Duo und der Apple Watch gibt, fehlt auf Android.</p>
+</div>
     <nav class="surum-gezinti"><a class="onceki" href="/de/neuigkeiten/1-7.html"><span>Vorherige Version</span><strong>Soluklan 1.7: Serienschild, Klangthemen und Karten zum Teilen</strong></a><a class="sonraki" href="/de/neuigkeiten/1-9.html"><span>Nächste Version</span><strong>Soluklan 1.9: Programme, Schlafwert und die Messung des ersten Atemzugs</strong></a></nav>
     <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-8&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=de&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-8"><img src="/assets/rozetler/google-play-de.svg?v=e9e3a4fd" alt="Jetzt bei Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/de/neuigkeiten.html">&#8592; Alle Versionen</a></p>

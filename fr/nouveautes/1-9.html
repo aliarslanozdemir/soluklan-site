@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9 : programmes, score de sommeil et mesure de la première respiration","description":"Huit nouveaux programmes, un plan pour chaque jour et une carte du programme, une suggestion du programme qui te convient, si tu le souhaites un score de sommeil à partir de tes données de sommeil et de pouls, la première respiration de la séance mesurée elle aussi, et l’évaluation et l’avis dans Réglages.","url":"https://soluklan.app/fr/nouveautes/1-9.html","inLanguage":"fr","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/fr/nouveautes/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Nouveautés","item":"https://soluklan.app/fr/nouveautes.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9 : programmes, score de sommeil et mesure de la première respiration","item":"https://soluklan.app/fr/nouveautes/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9 : programmes, score de sommeil et mesure de la première respiration</h1>
     <p class="lede">Huit nouveaux programmes, un plan pour chaque jour et une carte du programme, une suggestion du programme qui te convient, si tu le souhaites un score de sommeil à partir de tes données de sommeil et de pouls, la première respiration de la séance mesurée elle aussi, et l’évaluation et l’avis dans Réglages.</p>
     <p class="updated">30 octobre 2026</p>
+<div class="platform-sec" role="group" aria-label="Choisis ton appareil" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>La 1.8 a allongé les séances. Dans la 1.9, la question était : comment quelqu’un qui fait de bonnes séances une par une en fait-il un chemin de plusieurs semaines ? La réponse, ce sont les programmes. Avant, il n’y avait que le <a href="/fr/guide/soupir-en-28-jours.html">Soupir en 28 jours</a>. Il y a maintenant neuf programmes pour des objectifs différents, et chacun avance jour après jour.</p>
 <h2>Huit nouveaux programmes</h2>
 <ul><li><strong><a href="/fr/guide/4-semaines-de-respiration-carree.html">4 semaines de respiration carrée</a> :</strong> le volet respiration carrée de l’étude sur laquelle repose le Soupir en 28 jours, cinq minutes par jour.</li><li><strong><a href="/fr/guide/lequilibre-en-trois-etapes.html">L’équilibre en trois étapes</a> :</strong> trois étapes chaque jour pendant trois semaines : respiration cohérente, souffle de l’océan, puis respiration cohérente avec une expiration un peu plus longue.</li><li><strong><a href="/fr/guide/routine-du-coucher.html">Routine du coucher</a> :</strong> une respiration lente avant de dormir pendant trente soirs, avec un écran sombre et calme.</li><li><strong><a href="/fr/guide/les-bases-du-souffle.html">Les bases du souffle</a> :</strong> un parcours pour débuter, qui avance leçon après leçon.</li><li><strong><a href="/fr/guide/trouve-ton-propre-rythme.html">Trouve ton propre rythme</a> :</strong> on trouve d’abord le rythme qui te semble le plus confortable, puis la respiration cohérente à ce rythme.</li><li><strong><a href="/fr/guide/preparer-un-grand-jour.html">Préparer un grand jour</a> :</strong> une courte préparation chaque jour jusqu’à un jour comme un examen, une présentation ou un entretien.</li><li><strong><a href="/fr/guide/souffle-long.html">Souffle long</a> :</strong> pendant six semaines, tu t’entraînes à expirer plus longtemps, plus lentement et avec plus de contrôle. Une fois par semaine, tu mesures ta plus longue expiration confortable avec un « mmm » bouche fermée. Convient aussi à celles et ceux qui chantent, jouent d’un instrument à vent ou manquent de souffle en parlant.</li><li><strong><a href="/fr/guide/respiration-de-labeille-en-28-jours.html">Respiration de l’abeille en 28 jours</a> :</strong> le <a href="/fr/guide/souffle-de-labeille.html">souffle de l’abeille</a> chaque jour pendant quatre semaines. La séance commence à cinq minutes et passe à huit au fil des semaines.</li></ul>
@@ -150,8 +191,13 @@
 <p>Le rapport s’exprime aussi avec un peu plus de prudence. Si une inspiration n’a pas été entendue, il ne dit pas « toutes les inspirations ont été entendues ». Il distingue les rétentions avec une petite fuite par « presque toutes étaient propres », et dans les séances où l’inspiration reste un peu courte, il donne une suggestion en douceur. C’est dans <a href="/fr/guide/lire-le-rapport.html">Lire le rapport</a>.</p>
 <h2>Évaluer, partager et envoyer un avis dans Réglages</h2>
 <p>Il y a trois nouvelles lignes dans Réglages : <strong>Évaluer Soluklan</strong> ouvre la fenêtre d’évaluation du store, <strong>Partager Soluklan</strong> te permet d’envoyer le lien de l’app à quelqu’un, et <strong>Envoyer un avis</strong> te permet de nous écrire directement par e-mail.</p>
-<h2>Sur Android</h2>
-<p>La 1.9 est aussi sortie sur Google Play le 30 octobre 2026 et contient tout ce qui est sur cette page. Sur Android, les données de sommeil et de pouls sont lues depuis Health Connect, avec les mêmes règles : l’interrupteur est désactivé au départ et les données ne quittent pas l’appareil.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>La version Android n’est pas encore sortie sur Google Play.</p>
+</div>
+    <div class="ara-surumler">
+      <h2>Mises à jour mineures</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2 novembre 2026</p><ul><li>Vidéo de présentation — Dans « À propos », une vidéo présente Soluklan du début à la fin (en anglais)</li><li>Corrections de bugs et finitions</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/fr/nouveautes/1-8.html"><span>Version précédente</span><strong>Soluklan 1.8 : séances longues, iPhone Duo et économie de batterie</strong></a></nav>
     <aside class="indir"><p>Soluklan est une app gratuite d’exercices de respiration : le micro écoute ta respiration et montre à quel point tu suis le rythme.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-fr.svg?v=efe192af" alt="Télécharger dans l’App Store" width="127" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=fr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-fr.svg?v=429d4c53" alt="Disponible sur Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/fr/nouveautes.html">&#8592; Toutes les versions</a></p>
