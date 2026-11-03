@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9: Programme, Schlafwert und die Messung des ersten Atemzugs","description":"Acht neue Programme, ein eigener Plan für jeden Tag und eine Programmkarte, ein Vorschlag für das Programm, das zu dir passt, auf Wunsch ein Schlafwert aus deinen Schlaf- und Pulsdaten, auch der erste Atemzug der Sitzung wird gemessen, und Bewerten und Feedback in den Einstellungen.","url":"https://soluklan.app/de/neuigkeiten/1-9.html","inLanguage":"de","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/de/neuigkeiten/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Neuigkeiten","item":"https://soluklan.app/de/neuigkeiten.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9: Programme, Schlafwert und die Messung des ersten Atemzugs","item":"https://soluklan.app/de/neuigkeiten/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9: Programme, Schlafwert und die Messung des ersten Atemzugs</h1>
     <p class="lede">Acht neue Programme, ein eigener Plan für jeden Tag und eine Programmkarte, ein Vorschlag für das Programm, das zu dir passt, auf Wunsch ein Schlafwert aus deinen Schlaf- und Pulsdaten, auch der erste Atemzug der Sitzung wird gemessen, und Bewerten und Feedback in den Einstellungen.</p>
     <p class="updated">30. Oktober 2026</p>
+<div class="platform-sec" role="group" aria-label="Wähle dein Gerät" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>1.8 hat die Sitzungen länger gemacht. In 1.9 lautete die Frage: Wie macht jemand, der einzeln gute Sitzungen macht, daraus einen Weg über mehrere Wochen? Die Antwort waren Programme. Bisher gab es nur <a href="/de/ratgeber/28-tage-seufzer.html">28 Tage Seufzer</a>. Jetzt gibt es neun Programme für unterschiedliche Ziele, und jedes geht Tag für Tag weiter.</p>
 <h2>Acht neue Programme</h2>
 <ul><li><strong><a href="/de/ratgeber/4-wochen-box-atmung.html">4 Wochen Box-Atmung</a>:</strong> der Box-Atmungs-Arm der Studie, auf der 28 Tage Seufzer beruht, fünf Minuten am Tag.</li><li><strong><a href="/de/ratgeber/balance-in-drei-schritten.html">Balance in drei Schritten</a>:</strong> drei Wochen lang jeden Tag drei Schritte: Kohärente Atmung, Ozeanatem, dann Kohärente Atmung mit etwas längerer Ausatmung.</li><li><strong><a href="/de/ratgeber/abendroutine-vor-dem-schlafen.html">Abendroutine vor dem Schlafen</a>:</strong> dreißig Abende lang langsames Atmen vor dem Schlafengehen, mit einem dunklen, ruhigen Bildschirm.</li><li><strong><a href="/de/ratgeber/atem-grundlagen.html">Atem-Grundlagen</a>:</strong> ein Weg für Einsteiger, der Lektion für Lektion weitergeht.</li><li><strong><a href="/de/ratgeber/finde-dein-eigenes-tempo.html">Finde dein eigenes Tempo</a>:</strong> zuerst wird das Tempo gefunden, das sich für dich am angenehmsten anfühlt, dann Kohärente Atmung in diesem Tempo.</li><li><strong><a href="/de/ratgeber/vorbereitung-auf-den-grossen-tag.html">Vorbereitung auf den großen Tag</a>:</strong> bis zu einem Tag wie einer Prüfung, einer Präsentation oder einem Vorstellungsgespräch jeden Tag eine kurze Vorbereitung.</li><li><strong><a href="/de/ratgeber/langer-atem.html">Langer Atem</a>:</strong> sechs Wochen lang übst du, länger, langsamer und kontrollierter auszuatmen. Einmal pro Woche misst du deine längste bequeme Ausatmung mit einem „mmm“ bei geschlossenem Mund. Passt auch für Menschen, die singen, ein Blasinstrument spielen oder beim Sprechen außer Atem kommen.</li><li><strong><a href="/de/ratgeber/28-tage-bienenatem.html">28 Tage Bienenatem</a>:</strong> vier Wochen lang jeden Tag <a href="/de/ratgeber/bienenatem.html">Bienenatem</a>. Die Sitzung beginnt mit fünf Minuten und wächst über die Wochen auf acht.</li></ul>
@@ -150,8 +191,13 @@
 <p>Auch der Bericht formuliert etwas vorsichtiger. Wurde eine Einatmung nicht gehört, sagt er nicht „alle Einatmungen wurden gehört“. Pausen mit nur wenig Luftverlust weist er als „fast alle sauber“ aus, und in Sitzungen, in denen die Einatmung etwas kurz bleibt, gibt er einen sanften Hinweis. Mehr dazu in <a href="/de/ratgeber/den-bericht-lesen.html">Den Bericht lesen</a>.</p>
 <h2>Bewerten, teilen und Feedback senden in den Einstellungen</h2>
 <p>In den Einstellungen gibt es drei neue Zeilen: <strong>Soluklan bewerten</strong> öffnet das Bewertungsfenster des Stores, mit <strong>Soluklan teilen</strong> schickst du den Link zur App an jemanden, und mit <strong>Feedback senden</strong> schreibst du uns direkt eine E-Mail.</p>
-<h2>Auf Android</h2>
-<p>1.9 ist am 30. Oktober 2026 auch bei Google Play erschienen und enthält alles auf dieser Seite. Schlaf- und Pulsdaten werden auf Android aus Health Connect gelesen, mit denselben Regeln: Der Schalter ist zu Beginn aus, und die Daten verlassen das Gerät nicht.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Die Android-Version ist noch nicht bei Google Play erschienen.</p>
+</div>
+    <div class="ara-surumler">
+      <h2>Zwischenversionen</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2. November 2026</p><ul><li>Einführungsvideo — Unter „Über die App“ findest du ein Video, das Soluklan von Anfang bis Ende zeigt (auf Englisch)</li><li>Abgeschnittene Überschriften auf Deutsch korrigiert</li><li>Fehlerbehebungen und Feinschliff</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/de/neuigkeiten/1-8.html"><span>Vorherige Version</span><strong>Soluklan 1.8: lange Sitzungen, iPhone Duo und Akku sparen</strong></a></nav>
     <aside class="indir"><p>Soluklan ist eine kostenlose App für Atemübungen: Das Mikrofon hört deinen Atem und zeigt, wie genau du dem Rhythmus folgst.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-de.svg?v=e7c052f7" alt="Im App Store laden" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=de&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-de.svg?v=e9e3a4fd" alt="Jetzt bei Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/de/neuigkeiten.html">&#8592; Alle Versionen</a></p>

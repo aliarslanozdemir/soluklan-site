@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9: programlar, uyku puanı ve ilk nefesin ölçülmesi","description":"Sekiz yeni program, her günün kendi planı ve program haritası, sana uyan programın önerilmesi, istersen uyku ve nabız verinle uyku puanı, seansın ilk nefesinin de ölçülmesi ve Ayarlar'da değerlendirme ve geri bildirim.","url":"https://soluklan.app/yenilikler/1-9.html","inLanguage":"tr","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/yenilikler/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Yenilikler","item":"https://soluklan.app/yenilikler.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9: programlar, uyku puanı ve ilk nefesin ölçülmesi","item":"https://soluklan.app/yenilikler/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9: programlar, uyku puanı ve ilk nefesin ölçülmesi</h1>
     <p class="lede">Sekiz yeni program, her günün kendi planı ve program haritası, sana uyan programın önerilmesi, istersen uyku ve nabız verinle uyku puanı, seansın ilk nefesinin de ölçülmesi ve Ayarlar'da değerlendirme ve geri bildirim.</p>
     <p class="updated">30 Ekim 2026</p>
+<div class="platform-sec" role="group" aria-label="Cihazını seç" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>1.8 seansları uzattı. 1.9'da soru şuydu: tek tek iyi seanslar yapan biri, bunları haftalar süren bir yola nasıl çevirir? Cevap programlar oldu. Önceden yalnız <a href="/rehber/28-gunluk-ic-cekis.html">28 Günlük İç Çekiş</a> vardı. Şimdi farklı amaçlar için dokuz program var ve her biri gün gün ilerliyor.</p>
 <h2>Sekiz yeni program</h2>
 <ul><li><strong><a href="/rehber/4-haftalik-kutu-nefes.html">4 Haftalık Kutu Nefes</a>:</strong> 28 Günlük İç Çekiş'in dayandığı çalışmanın kutu nefes kolu, günde beş dakika.</li><li><strong><a href="/rehber/uc-adimda-denge.html">Üç Adımda Denge</a>:</strong> üç hafta boyunca her gün üç adım: Koherent Nefes, Okyanus Nefesi, sonra verişi biraz uzun Koherent Nefes.</li><li><strong><a href="/rehber/uyku-oncesi-rutini.html">Uyku Öncesi Rutini</a>:</strong> otuz akşam yatmadan önce yavaş nefes, karanlık ve sakin bir ekranla.</li><li><strong><a href="/rehber/nefes-temeli.html">Nefes Temeli</a>:</strong> yeni başlayanlar için ders ders ilerleyen bir yol.</li><li><strong><a href="/rehber/kendi-temponu-bul.html">Kendi Temponu Bul</a>:</strong> önce sana en rahat gelen tempo bulunuyor, sonra o tempoda Koherent Nefes.</li><li><strong><a href="/rehber/onemli-gun-hazirligi.html">Önemli Gün Hazırlığı</a>:</strong> sınav, sunum ya da görüşme gibi bir güne kadar her gün kısa bir hazırlık.</li><li><strong><a href="/rehber/uzun-nefes.html">Uzun Nefes</a>:</strong> altı hafta boyunca nefesini daha uzun, yavaş ve kontrollü vermeyi çalışıyorsun. Haftada bir, ağzın kapalı "mmm" sesiyle en uzun rahat verişini ölçüyorsun. Şarkı söyleyenler, nefesli çalgı çalanlar ve konuşurken nefesi yetmeyenler için de uygun.</li><li><strong><a href="/rehber/28-gunluk-ari-nefesi.html">28 Günlük Arı Nefesi</a>:</strong> dört hafta her gün <a href="/rehber/ari-nefesi.html">Arı Nefesi</a>. Seans beş dakikayla başlıyor, haftalar içinde sekiz dakikaya uzuyor.</li></ul>
@@ -150,8 +191,13 @@
 <p>Rapor da biraz daha dikkatli konuşuyor. Bir alış duyulmadıysa "alışların hepsi duyuldu" demiyor. Az kaçaklı tutuşları "neredeyse hepsi temizdi" diye ayırıyor, alışın biraz kısa kaldığı seanslarda nazik bir öneri veriyor. <a href="/rehber/raporu-okumak.html">Raporu okumak</a> yazısında var.</p>
 <h2>Ayarlar'da değerlendir, paylaş, geri bildirim gönder</h2>
 <p>Ayarlar'da üç yeni satır var: <strong>Soluklan'ı değerlendir</strong> mağazadaki değerlendirme penceresini açıyor, <strong>Soluklan'ı paylaş</strong> uygulamanın bağlantısını bir arkadaşına göndermeni sağlıyor, <strong>Geri bildirim gönder</strong> de bize doğrudan e-posta yazmanı.</p>
-<h2>Android'de</h2>
-<p>1.9, 30 Ekim 2026'da Google Play'de de yayımlandı ve bu sayfadakilerin hepsini içeriyor. Uyku ve nabız verileri Android'de Health Connect'ten okunuyor, aynı kurallarla: anahtar kapalı başlıyor, veriler cihazdan çıkmıyor.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Android sürümü Google Play'de henüz yayımlanmadı.</p>
+</div>
+    <div class="ara-surumler">
+      <h2>Ara sürümler</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2 Kasım 2026</p><ul><li>Tanıtım videosu — Hakkında&#x27;dan Soluklan&#x27;ı baştan sona anlatan videoyu açabilirsin</li><li>Hata düzeltmeleri ve cila</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/yenilikler/1-8.html"><span>Önceki sürüm</span><strong>Soluklan 1.8: uzun seanslar, iPhone Duo ve pil tasarrufu</strong></a></nav>
     <aside class="indir"><p>Soluklan ücretsiz bir nefes egzersizi uygulaması: mikrofon nefesini dinler ve ritme ne kadar uyduğunu gösterir.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/tr/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-tr.svg?v=6aee7c3d" alt="App Store&#x27;dan indir" width="151" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=tr&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-tr.svg?v=805b69aa" alt="Google Play&#x27;den indir" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/yenilikler.html">&#8592; Tüm sürümler</a></p>

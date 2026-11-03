@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9：プログラム、睡眠スコア、最初の呼吸の計測","description":"8つの新しいプログラム、毎日の専用プラン、プログラムマップ、あなたに合うプログラムのおすすめ、希望すれば睡眠と心拍のデータからの睡眠スコア、セッション最初の呼吸の計測、設定からの評価とフィードバック。","url":"https://soluklan.app/ja/koshin-rireki/1-9.html","inLanguage":"ja","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ja/koshin-rireki/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"更新履歴","item":"https://soluklan.app/ja/koshin-rireki.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9：プログラム、睡眠スコア、最初の呼吸の計測","item":"https://soluklan.app/ja/koshin-rireki/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9：プログラム、睡眠スコア、最初の呼吸の計測</h1>
     <p class="lede">8つの新しいプログラム、毎日の専用プラン、プログラムマップ、あなたに合うプログラムのおすすめ、希望すれば睡眠と心拍のデータからの睡眠スコア、セッション最初の呼吸の計測、設定からの評価とフィードバック。</p>
     <p class="updated">2026年10月30日</p>
+<div class="platform-sec" role="group" aria-label="デバイスを選ぶ" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>1.8ではセッションが長くなりました。1.9での問いは、ひとつひとつ良いセッションをしている人が、それを何週間も続く道にどう変えるか、でした。答えはプログラムです。これまでは<a href="/ja/gaido/28-nichikan-tameiki.html">28日間ため息プログラム</a>だけでした。いまは目的の違う9つのプログラムがあり、どれも1日ずつ進んでいきます。</p>
 <h2>8つの新しいプログラム</h2>
 <ul><li><strong><a href="/ja/gaido/4-shukan-bokkusu-kokyu.html">4週間ボックス</a>：</strong> 28日間ため息プログラムのもとになった研究のボックス呼吸グループ。1日5分。</li><li><strong><a href="/ja/gaido/3-suteppu-no-baransu.html">3ステップのバランス</a>：</strong> 3週間、毎日3つのステップ。コヒーレント呼吸、海の呼吸、そして吐く息を少し長くしたコヒーレント呼吸。</li><li><strong><a href="/ja/gaido/nemuru-mae-no-shukan.html">眠る前の習慣</a>：</strong> 30晩、寝る前にゆっくりした呼吸。暗く落ち着いた画面で行います。</li><li><strong><a href="/ja/gaido/kokyu-no-kihon.html">呼吸の基本</a>：</strong> 初めての人のための、レッスンごとに進む道のり。</li><li><strong><a href="/ja/gaido/jibun-no-pesu-wo-mitsukeru.html">自分のペースを見つける</a>：</strong> まずいちばんラクなペースを見つけ、そのペースでコヒーレント呼吸をします。</li><li><strong><a href="/ja/gaido/taisetsu-na-hi-no-junbi.html">大切な日の準備</a>：</strong> 試験、プレゼン、面接などの日まで、毎日短い準備をします。</li><li><strong><a href="/ja/gaido/rongu-buresu.html">ロングブレス</a>：</strong> 6週間、より長く、ゆっくり、コントロールして吐く練習をします。週に1回、口を閉じた「ンー」の音で、いちばん長いラクな吐く息を測ります。歌う人、管楽器を演奏する人、話していて息が続かない人にも向いています。</li><li><strong><a href="/ja/gaido/28-nichikan-hamingu-kokyu.html">28日間ハミング呼吸プログラム</a>：</strong> 4週間、毎日<a href="/ja/gaido/hamingu-kokyu.html">ハミング呼吸</a>。セッションは5分から始まり、週を追うごとに8分まで伸びます。</li></ul>
@@ -150,8 +191,13 @@
 <p>レポートの言い方も少し慎重になりました。吸う息がひとつでも聞こえなかったときは「吸う息はすべて聞こえました」とは言いません。わずかに漏れた息止めは「ほとんどがきれいでした」と区別し、吸う息が少し短めだったセッションではやさしい提案をします。<a href="/ja/gaido/repoto-no-yomikata.html">レポートの読み方</a>にあります。</p>
 <h2>設定から評価・共有・フィードバック</h2>
 <p>設定に新しい行が3つあります。<strong>Soluklanを評価</strong> はストアの評価ウィンドウを開き、<strong>Soluklanを共有</strong> はアプリのリンクを誰かに送れます。<strong>フィードバックを送る</strong> からは私たちに直接メールできます。</p>
-<h2>Androidでは</h2>
-<p>1.9は2026年10月30日にGoogle Playでも公開され、このページの内容がすべて入っています。Androidでは睡眠と心拍のデータをHealth Connectから読み込みます。ルールは同じで、スイッチは最初オフ、データはデバイスの外に出ません。</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Android版はまだGoogle Playで公開されていません。</p>
+</div>
+    <div class="ara-surumler">
+      <h2>マイナーアップデート</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2026年11月2日</p><ul><li>紹介動画 — 「概要」から、Soluklan を最初から最後まで紹介する動画（英語）を開けます</li><li>バグ修正と改善</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/ja/koshin-rireki/1-8.html"><span>前のバージョン</span><strong>Soluklan 1.8：長いセッション、iPhone Duo、省電力</strong></a></nav>
     <aside class="indir"><p>Soluklanは無料の呼吸エクササイズアプリです。マイクが呼吸を聞き取り、リズムにどれだけ合っているかを示します。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-ja.svg?v=bd473ec0" alt="App Storeからダウンロード" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ja&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-en.svg?v=42a4d4c1" alt="Get it on Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ja/koshin-rireki.html">&#8592; すべてのバージョン</a></p>

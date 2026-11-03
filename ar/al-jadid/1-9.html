@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9: برامج، ودرجة للنوم، وقياس النفَس الأول","description":"ثمانية برامج جديدة، وخطة خاصة لكل يوم وخريطة للبرنامج، واقتراح البرنامج المناسب لك، ودرجة للنوم من بيانات نومك ونبضك إن أردت، وقياس النفَس الأول من الجلسة أيضًا، والتقييم والملاحظات من الإعدادات.","url":"https://soluklan.app/ar/al-jadid/1-9.html","inLanguage":"ar","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ar/al-jadid/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ما الجديد","item":"https://soluklan.app/ar/al-jadid.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9: برامج، ودرجة للنوم، وقياس النفَس الأول","item":"https://soluklan.app/ar/al-jadid/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9: برامج، ودرجة للنوم، وقياس النفَس الأول</h1>
     <p class="lede">ثمانية برامج جديدة، وخطة خاصة لكل يوم وخريطة للبرنامج، واقتراح البرنامج المناسب لك، ودرجة للنوم من بيانات نومك ونبضك إن أردت، وقياس النفَس الأول من الجلسة أيضًا، والتقييم والملاحظات من الإعدادات.</p>
     <p class="updated">30 أكتوبر 2026</p>
+<div class="platform-sec" role="group" aria-label="اختر جهازك" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>جعل الإصدار 1.8 الجلسات أطول. وكان السؤال في 1.9: كيف يحوّل من يؤدي جلسات جيدة واحدة تلو الأخرى هذه الجلسات إلى طريق يمتد أسابيع؟ وكان الجواب البرامج. في السابق لم يكن هناك إلا <a href="/ar/dalil/at-tanahhud-fi-28-yawman.html">التنهيدة في 28 يومًا</a>. أما الآن فهناك تسعة برامج لأهداف مختلفة، وكل واحد منها يتقدّم يومًا بعد يوم.</p>
 <h2>ثمانية برامج جديدة</h2>
 <ul><li><strong><a href="/ar/dalil/at-tanaffus-al-murabba-fi-4-asabi.html">تنفس الصندوق في 4 أسابيع</a>:</strong> مجموعة تنفس الصندوق من الدراسة التي يستند إليها برنامج التنهيدة في 28 يومًا، خمس دقائق في اليوم.</li><li><strong><a href="/ar/dalil/at-tawazun-fi-thalath-khutuwat.html">التوازن في ثلاث خطوات</a>:</strong> ثلاث خطوات كل يوم لمدة ثلاثة أسابيع: التنفس المتّسق، ثم نفَس المحيط، ثم التنفس المتّسق بزفير أطول قليلًا.</li><li><strong><a href="/ar/dalil/rutin-ma-qabla-an-nawm.html">روتين ما قبل النوم</a>:</strong> تنفس بطيء قبل النوم لثلاثين مساءً، مع شاشة داكنة وهادئة.</li><li><strong><a href="/ar/dalil/asasiyyat-at-tanaffus.html">أساسيات التنفس</a>:</strong> طريق للمبتدئين يتقدّم درسًا بعد درس.</li><li><strong><a href="/ar/dalil/ithar-ala-iqaik.html">اعثر على إيقاعك</a>:</strong> أولًا يُعثر على الإيقاع الأكثر راحة لك، ثم التنفس المتّسق بهذا الإيقاع.</li><li><strong><a href="/ar/dalil/al-istidad-li-yawm-muhimm.html">الاستعداد ليوم مهم</a>:</strong> استعداد قصير كل يوم حتى يوم مثل امتحان أو عرض أو مقابلة.</li><li><strong><a href="/ar/dalil/an-nafas-at-taweel.html">النفَس الطويل</a>:</strong> ستة أسابيع تتدرّب فيها على إخراج النفَس بشكل أطول وأبطأ وأكثر تحكّمًا. مرة في الأسبوع تقيس أطول زفير مريح لديك بصوت «ممم» والفم مغلق. ويناسب أيضًا من يغنّي أو يعزف على آلة نفخ أو ينقطع نفَسه أثناء الكلام.</li><li><strong><a href="/ar/dalil/nafas-an-nahla-fi-28-yawman.html">نفَس النحلة في 28 يومًا</a>:</strong> <a href="/ar/dalil/nafas-an-nahla.html">نفَس النحلة</a> كل يوم لمدة أربعة أسابيع. تبدأ الجلسة بخمس دقائق وتطول إلى ثماني دقائق مع مرور الأسابيع.</li></ul>
@@ -150,8 +191,13 @@
 <p>وصار التقرير يتكلّم بحذر أكبر قليلًا. إذا لم يُسمع شهيق واحد فلن يقول «سُمع كل شهيق». ويميّز حالات الحبس التي فيها تسرّب بسيط بعبارة «كلها تقريبًا كانت نظيفة»، وفي الجلسات التي يبقى فيها الشهيق أقصر قليلًا يقدّم اقتراحًا لطيفًا. التفاصيل في مقال <a href="/ar/dalil/qiraat-at-taqrir.html">قراءة التقرير</a>.</p>
 <h2>التقييم والمشاركة وإرسال الملاحظات من الإعدادات</h2>
 <p>في الإعدادات ثلاثة أسطر جديدة: <strong>قيّم Soluklan</strong> يفتح نافذة التقييم في المتجر، و<strong>شارك Soluklan</strong> يتيح لك إرسال رابط التطبيق إلى شخص ما، و<strong>أرسل ملاحظاتك</strong> يتيح لك مراسلتنا مباشرة بالبريد الإلكتروني.</p>
-<h2>على Android</h2>
-<p>صدر الإصدار 1.9 أيضًا على Google Play في 30 أكتوبر 2026، وفيه كل ما في هذه الصفحة. على Android تُقرأ بيانات النوم والنبض من Health Connect بالقواعد نفسها: يكون المفتاح مطفأً في البداية، ولا تغادر البيانات الجهاز.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>نسخة Android لم تصدر بعد على Google Play.</p>
+</div>
+    <div class="ara-surumler">
+      <h2>التحديثات الفرعية</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2 نوفمبر 2026</p><ul><li>فيديو تعريفي — من «عن التطبيق» يمكنك فتح فيديو يعرض Soluklan من البداية إلى النهاية (بالإنجليزية)</li><li>إصلاح الأخطاء وتحسينات</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/ar/al-jadid/1-8.html"><span>الإصدار السابق</span><strong>Soluklan 1.8: جلسات طويلة وiPhone Duo وتوفير البطارية</strong></a></nav>
     <aside class="indir"><p>Soluklan تطبيق مجاني لتمارين التنفّس: يستمع الميكروفون إلى نفَسك ويُريك مدى مجاراتك للإيقاع.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-ar.svg?v=a6aa77ba" alt="حمّله من App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ar&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-ar.svg?v=711ccb2f" alt="احصل عليه من Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ar/al-jadid.html">&#8592; كل الإصدارات</a></p>

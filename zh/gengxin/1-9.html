@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9：计划、睡眠评分和第一口呼吸的测量","description":"八个新计划，每一天都有自己的安排，还有计划地图；推荐适合你的计划；如果你愿意，可以根据睡眠和心率数据得出睡眠评分；练习的第一口呼吸也会被测量；还能在设置里评分和发送反馈。","url":"https://soluklan.app/zh/gengxin/1-9.html","inLanguage":"zh-Hans","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/zh/gengxin/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"更新内容","item":"https://soluklan.app/zh/gengxin.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9：计划、睡眠评分和第一口呼吸的测量","item":"https://soluklan.app/zh/gengxin/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9：计划、睡眠评分和第一口呼吸的测量</h1>
     <p class="lede">八个新计划，每一天都有自己的安排，还有计划地图；推荐适合你的计划；如果你愿意，可以根据睡眠和心率数据得出睡眠评分；练习的第一口呼吸也会被测量；还能在设置里评分和发送反馈。</p>
     <p class="updated">2026年10月30日</p>
+<div class="platform-sec" role="group" aria-label="选择你的设备" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>1.8 让练习变长了。1.9 要回答的问题是：一个能一次次做好单次练习的人，怎样把它们变成一条持续几周的路？答案就是计划。以前只有<a href="/zh/zhinan/28-tian-tanxi-jihua.html">28 天叹息计划</a>。现在有九个面向不同目标的计划，每一个都一天一天往前走。</p>
 <h2>八个新计划</h2>
 <ul><li><strong><a href="/zh/zhinan/4-zhou-xiangshi-huxi.html">4 周箱式呼吸</a>：</strong> 来自 28 天叹息计划所依据的那项研究中的箱式呼吸组，每天五分钟。</li><li><strong><a href="/zh/zhinan/sanbu-pingheng.html">三步平衡</a>：</strong> 连续三周，每天三步：共振呼吸、海洋呼吸，然后是呼气稍长一点的共振呼吸。</li><li><strong><a href="/zh/zhinan/shuiqian-lianxi.html">睡前练习</a>：</strong> 连续三十个晚上，睡前慢慢呼吸，画面昏暗而安静。</li><li><strong><a href="/zh/zhinan/huxi-jichu.html">呼吸基础</a>：</strong> 为初学者准备的一条路，一课一课往前走。</li><li><strong><a href="/zh/zhinan/zhaodao-ziji-de-jiezou.html">找到你自己的节奏</a>：</strong> 先找到你觉得最舒服的节奏，再按这个节奏做共振呼吸。</li><li><strong><a href="/zh/zhinan/zhongyao-rizi-zhunbei.html">重要日子准备</a>：</strong> 在考试、演讲或面试这样的日子到来前，每天做一点简短的准备。</li><li><strong><a href="/zh/zhinan/youchang-huxi.html">悠长呼吸</a>：</strong> 用六周时间练习把气呼得更长、更慢、更可控。每周一次，用闭着嘴的“嗯——”声测量你最长的舒适呼气。也适合唱歌、吹奏管乐器或说话时容易气不够的人。</li><li><strong><a href="/zh/zhinan/28-tian-fengming-huxi-jihua.html">28 天蜂鸣呼吸计划</a>：</strong> 连续四周，每天做<a href="/zh/zhinan/fengming-huxi.html">蜂鸣呼吸</a>。练习从五分钟开始，随着时间推移增加到八分钟。</li></ul>
@@ -150,8 +191,13 @@
 <p>报告的措辞也更谨慎了一点。如果有一次吸气没有被听到，它不会说“每次吸气都听到了”。只有一点漏气的屏息会被单独标为“几乎都很干净”；如果某次练习中吸气偏短一点，它会给出温和的建议。见<a href="/zh/zhinan/du-baogao.html">读报告</a>。</p>
 <h2>在设置里评分、分享、发送反馈</h2>
 <p>设置里新增了三行：<strong>给 Soluklan 评分</strong> 会打开商店的评分窗口，<strong>分享 Soluklan</strong> 可以把应用链接发给别人，<strong>发送反馈</strong> 可以直接给我们写邮件。</p>
-<h2>在 Android 上</h2>
-<p>1.9 也于 2026 年 10 月 30 日在 Google Play 上发布，包含本页的全部内容。在 Android 上，睡眠和心率数据从 Health Connect 读取，规则相同：开关默认关闭，数据不会离开设备。</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Android 版尚未在 Google Play 上发布。</p>
+</div>
+    <div class="ara-surumler">
+      <h2>小版本更新</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2026年11月2日</p><ul><li>介绍视频 — 在“关于”中可以打开从头到尾介绍 Soluklan 的视频（英文）</li><li>错误修复与细节改进</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/zh/gengxin/1-8.html"><span>上一个版本</span><strong>Soluklan 1.8：长时间练习、iPhone Duo 和省电</strong></a></nav>
     <aside class="indir"><p>Soluklan 是一款免费的呼吸练习应用：麦克风会听你的呼吸，告诉你跟节奏跟得有多准。</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-zh.svg?v=53dc3388" alt="在 App Store 下载" width="109" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=zh-CN&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-zh.svg?v=203833c8" alt="去 Google Play 商店下载" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/zh/gengxin.html">&#8592; 所有版本</a></p>

@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=da889bcb">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Soluklan 1.9: программы, оценка сна и измерение первого вдоха","description":"Восемь новых программ, свой план на каждый день и карта программы, подсказка, какая программа тебе подходит, по желанию оценка сна по данным о сне и пульсе, измерение и первого вдоха сессии, а также оценка приложения и отзыв в Настройках.","url":"https://soluklan.app/ru/chto-novogo/1-9.html","inLanguage":"ru","image":"https://soluklan.app/assets/og.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://soluklan.app/ru/chto-novogo/1-9.html"},"author":{"@id":"https://soluklan.app/#kurulus"},"publisher":{"@id":"https://soluklan.app/#kurulus"},"isAccessibleForFree":true,"datePublished":"2026-10-30"}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Что нового","item":"https://soluklan.app/ru/chto-novogo.html"},{"@type":"ListItem","position":2,"name":"Soluklan 1.9: программы, оценка сна и измерение первого вдоха","item":"https://soluklan.app/ru/chto-novogo/1-9.html"}]}</script>
 <script>
@@ -132,6 +132,47 @@
     <h1>Soluklan 1.9: программы, оценка сна и измерение первого вдоха</h1>
     <p class="lede">Восемь новых программ, свой план на каждый день и карта программы, подсказка, какая программа тебе подходит, по желанию оценка сна по данным о сне и пульсе, измерение и первого вдоха сессии, а также оценка приложения и отзыв в Настройках.</p>
     <p class="updated">30 октября 2026 г.</p>
+<div class="platform-sec" role="group" aria-label="Выбери устройство" hidden>
+      <button type="button" data-platform="ios" aria-pressed="true">iOS</button>
+      <button type="button" data-platform="android" aria-pressed="false">Android</button>
+    </div>
+    <script>
+(function () {
+  var secici = document.currentScript.previousElementSibling;
+  var kok = document.documentElement;
+  // Seçim her ziyarette cihaza göre başlar (Ali, 29 Ekim 2026). Elle seçilen yalnız o ziyaret
+  // boyunca, yazıdan yazıya taşınır (sessionStorage); eskiden kalıcı tutulan anahtar silinir.
+  try { localStorage.removeItem("soluklan-platform"); } catch (e) {}
+  function cihaz() {
+    var n = navigator, ua = n.userAgent || "", dokunma = n.maxTouchPoints || 0;
+    var uad = n.userAgentData && n.userAgentData.platform;
+    if (uad === "Android" || /android/i.test(ua)) return "android";
+    // iPadOS masaüstü UA'sı Mac gibi görünür: Macintosh + dokunmatik = iPad
+    if (/iPhone|iPad|iPod|Macintosh/i.test(ua)) return "ios";
+    // Masaüstü modundaki Android tablet: Linux + çok noktalı dokunma, Windows/Chrome OS değil
+    if (/Linux/i.test(ua) && !/CrOS|Windows/i.test(ua) && dokunma > 1) return "android";
+    return "ios";
+  }
+  var secim = "";
+  try { secim = sessionStorage.getItem("soluklan-platform") || ""; } catch (e) {}
+  if (secim !== "ios" && secim !== "android") secim = cihaz();
+  function uygula(p) {
+    kok.setAttribute("data-platform", p);
+    [].forEach.call(document.querySelectorAll(".platform-sec button"), function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-platform") === p ? "true" : "false");
+    });
+  }
+  uygula(secim);
+  secici.hidden = false;
+  secici.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-platform]");
+    if (!b) return;
+    var p = b.getAttribute("data-platform");
+    uygula(p);
+    try { sessionStorage.setItem("soluklan-platform", p); } catch (e2) {}
+  });
+})();
+    </script>
 <p>В 1.8 сессии стали длиннее. В 1.9 вопрос был такой: как человеку, который делает хорошие сессии по одной, превратить их в путь на несколько недель? Ответом стали программы. Раньше была только одна программа — <a href="/ru/rukovodstvo/vzdoh-za-28-dney.html">Вздох за 28 дней</a>. Теперь программ девять, для разных целей, и каждая идёт вперёд день за днём.</p>
 <h2>Восемь новых программ</h2>
 <ul><li><strong><a href="/ru/rukovodstvo/kvadratnoe-dyhanie-za-4-nedeli.html">Квадратное дыхание за 4 недели</a>:</strong> группа квадратного дыхания из исследования, на котором основана программа «Вздох за 28 дней», пять минут в день.</li><li><strong><a href="/ru/rukovodstvo/balans-v-tri-shaga.html">Баланс в три шага</a>:</strong> три недели каждый день три шага: когерентное дыхание, океаническое дыхание, затем когерентное дыхание с чуть более длинным выдохом.</li><li><strong><a href="/ru/rukovodstvo/ritual-pered-snom.html">Ритуал перед сном</a>:</strong> медленное дыхание перед сном тридцать вечеров подряд, с тёмным и спокойным экраном.</li><li><strong><a href="/ru/rukovodstvo/osnovy-dyhaniya.html">Основы дыхания</a>:</strong> путь для начинающих, который идёт урок за уроком.</li><li><strong><a href="/ru/rukovodstvo/naydi-svoy-temp.html">Найди свой темп</a>:</strong> сначала находится самый удобный для тебя темп, затем когерентное дыхание в этом темпе.</li><li><strong><a href="/ru/rukovodstvo/podgotovka-k-vazhnomu-dnyu.html">Подготовка к важному дню</a>:</strong> короткая подготовка каждый день до такого дня, как экзамен, выступление или собеседование.</li><li><strong><a href="/ru/rukovodstvo/dlinnoe-dyhanie.html">Длинное дыхание</a>:</strong> шесть недель ты тренируешься выдыхать дольше, медленнее и под контролем. Раз в неделю ты измеряешь свой самый длинный комфортный выдох со звуком «ммм» при закрытом рте. Подходит и тем, кто поёт, играет на духовом инструменте или задыхается, когда говорит.</li><li><strong><a href="/ru/rukovodstvo/dyhanie-pchely-za-28-dney.html">Дыхание пчелы за 28 дней</a>:</strong> <a href="/ru/rukovodstvo/dyhanie-pchely.html">дыхание пчелы</a> каждый день четыре недели. Сессия начинается с пяти минут и за несколько недель вырастает до восьми.</li></ul>
@@ -150,8 +191,13 @@
 <p>Отчёт тоже стал говорить чуть осторожнее. Если один вдох не был услышан, он не пишет «все вдохи были услышаны». Задержки с небольшой утечкой он отмечает как «почти все были чистыми», а в сессиях, где вдох получается немного коротким, мягко советует. Подробнее — в статье <a href="/ru/rukovodstvo/kak-chitat-otchyot.html">Как читать отчёт</a>.</p>
 <h2>Оценить, поделиться и отправить отзыв в Настройках</h2>
 <p>В Настройках появились три новые строки: <strong>Оценить Soluklan</strong> открывает окно оценки в магазине, <strong>Поделиться Soluklan</strong> позволяет отправить ссылку на приложение кому-нибудь, а <strong>Отправить отзыв</strong> — написать нам письмо напрямую.</p>
-<h2>На Android</h2>
-<p>1.9 также вышла в Google Play 30 октября 2026 года, и в ней есть всё, что описано на этой странице. На Android данные сна и пульса читаются из Health Connect по тем же правилам: переключатель по умолчанию выключен, данные не покидают устройство.</p>
+<div class="platform-blok" data-platform="android"><p class="platform-ad">Android</p>
+<p>Версия для Android в Google Play ещё не вышла.</p>
+</div>
+    <div class="ara-surumler">
+      <h2>Небольшие обновления</h2>
+      <div class="ara-surum-bolum" id="ara-1-9-1"><h3>1.9.1</h3><p class="surum-tarih">2 ноября 2026 г.</p><ul><li>Видео о приложении — В разделе «О приложении» есть видео, которое показывает Soluklan от начала до конца (на английском)</li><li>Исправления ошибок и улучшения</li></ul></div>
+    </div>
     <nav class="surum-gezinti"><a class="onceki" href="/ru/chto-novogo/1-8.html"><span>Предыдущая версия</span><strong>Soluklan 1.8: долгие сессии, iPhone Duo и экономия заряда</strong></a></nav>
     <aside class="indir"><p>Soluklan — бесплатное приложение для дыхательных упражнений: микрофон слушает твоё дыхание и показывает, насколько точно ты держишь ритм.</p><span class="rozetler"><a class="rozet" href="https://apps.apple.com/app/id6801880838?pt=499375&amp;ct=site-surum-1-9&amp;mt=8"><img src="/assets/rozetler/app-store-ru.svg?v=af5274a6" alt="Скачать в App Store" width="120" height="40"></a><a class="rozet" href="https://play.google.com/store/apps/details?id=app.soluklan&amp;hl=ru&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dsite-surum-1-9"><img src="/assets/rozetler/google-play-ru.svg?v=ed1a8c66" alt="Доступно в Google Play" width="135" height="40"></a></span></aside>
     <p class="geri"><a href="/ru/chto-novogo.html">&#8592; Все версии</a></p>
