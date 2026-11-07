@@ -3,8 +3,8 @@
        Gövde çizgisi hem açık hem koyu sekmede okunsun diye orta tonda; `prefers-color-scheme`
        destekleyen tarayıcıda ayrıca koyu zeminde açılıyor. -->
   <defs>
-    <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#2A86CC"/><stop offset="1" stop-color="#43AEE4"/></linearGradient>
-    <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+    <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#2A86CC"/><stop offset="1" stop-color="#43AEE4"/></linearGradient>
+    <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
   </defs>
   <style>
     .stem { stroke: #4E86A8; }
