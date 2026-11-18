@@ -42,7 +42,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/gizlilik.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/gizlilik.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -70,7 +70,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/yenilikler.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/yenilikler.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -210,7 +210,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/yenilikler/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/yenilikler/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -1200,7 +1200,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/en/privacy.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/en/privacy.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -1228,7 +1228,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/en/whats-new.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/en/whats-new.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -1368,7 +1368,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/en/whats-new/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/en/whats-new/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -1381,6 +1381,8 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://soluklan.app/ru/chto-novogo/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-9.html"/>
+  </url>
+  <url><loc>https://soluklan.app/en/press.html</loc><lastmod>2026-11-18</lastmod>
   </url>
   <url><loc>https://soluklan.app/en/guide/28-day-humming-bee.html</loc><lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/dalil/nafas-an-nahla-fi-28-yawman.html"/>
@@ -2358,7 +2360,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/de/datenschutz.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/de/datenschutz.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -2386,7 +2388,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/de/neuigkeiten.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/de/neuigkeiten.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -2526,7 +2528,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/de/neuigkeiten/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/de/neuigkeiten/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -3516,7 +3518,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/fr/confidentialite.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/fr/confidentialite.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -3544,7 +3546,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/fr/nouveautes.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/fr/nouveautes.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -3684,7 +3686,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/fr/nouveautes/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/fr/nouveautes/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -4674,7 +4676,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/es/privacidad.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/es/privacidad.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -4702,7 +4704,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/es/novedades.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/es/novedades.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -4842,7 +4844,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/es/novedades/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/es/novedades/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -5832,7 +5834,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/it/privacy.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/it/privacy.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -5860,7 +5862,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/it/novita.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/it/novita.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -6000,7 +6002,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/it/novita/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/it/novita/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -6990,7 +6992,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/khususiya.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/ar/khususiya.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -7018,7 +7020,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/al-jadid.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/ar/al-jadid.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -7158,7 +7160,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/ar/al-jadid/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/ar/al-jadid/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -8148,7 +8150,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/yinsi.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/zh/yinsi.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -8176,7 +8178,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/gengxin.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/zh/gengxin.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -8316,7 +8318,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/zh/gengxin/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/zh/gengxin/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -9306,7 +9308,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/konfidencialnost.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/ru/konfidencialnost.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -9334,7 +9336,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/chto-novogo.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/ru/chto-novogo.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -9474,7 +9476,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/ru/chto-novogo/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/ru/chto-novogo/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -10464,7 +10466,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/ja/puraibashi.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/ja/puraibashi.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -10492,7 +10494,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/ja/koshin-rireki.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/ja/koshin-rireki.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -10632,7 +10634,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/ja/koshin-rireki/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/ja/koshin-rireki/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -11622,7 +11624,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/pt/privacidade.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/pt/privacidade.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -11650,7 +11652,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/pt/novidades.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/pt/novidades.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -11790,7 +11792,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/pt/novidades/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/pt/novidades/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>
@@ -12780,7 +12782,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/destek.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/zhichi.html"/>
   </url>
-  <url><loc>https://soluklan.app/id/privasi.html</loc><lastmod>2026-11-01</lastmod>
+  <url><loc>https://soluklan.app/id/privasi.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/khususiya.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/datenschutz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/privacy.html"/>
@@ -12808,7 +12810,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/erisilebilirlik.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/wuzhangai.html"/>
   </url>
-  <url><loc>https://soluklan.app/id/yang-baru.html</loc><lastmod>2026-11-02</lastmod>
+  <url><loc>https://soluklan.app/id/yang-baru.html</loc><lastmod>2026-11-17</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new.html"/>
@@ -12948,7 +12950,7 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://soluklan.app/yenilikler/1-8.html"/>
     <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://soluklan.app/zh/gengxin/1-8.html"/>
   </url>
-  <url><loc>https://soluklan.app/id/yang-baru/1-9.html</loc><lastmod>2026-11-03</lastmod>
+  <url><loc>https://soluklan.app/id/yang-baru/1-9.html</loc><lastmod>2026-11-10</lastmod>
     <xhtml:link rel="alternate" hreflang="ar" href="https://soluklan.app/ar/al-jadid/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://soluklan.app/de/neuigkeiten/1-9.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://soluklan.app/en/whats-new/1-9.html"/>

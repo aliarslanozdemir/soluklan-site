@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Press kit — Soluklan</title>
+<meta name="description" content="Soluklan press kit: a breathing exercise app for iPhone, iPad, Apple Watch and Android that measures your breathing. Features, what&#x27;s new in 2.0, privacy and contact.">
+<link rel="canonical" href="https://soluklan.app/en/press.html">
+<meta name="theme-color" content="#0F1E33" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<meta name="apple-itunes-app" content="app-id=6801880838">
+<meta property="og:title" content="Press kit — Soluklan">
+<meta property="og:description" content="Soluklan press kit: a breathing exercise app for iPhone, iPad, Apple Watch and Android that measures your breathing. Features, what&#x27;s new in 2.0, privacy and contact.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://soluklan.app/en/press.html">
+<meta property="og:site_name" content="Soluklan">
+<meta property="og:image" content="https://soluklan.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Press kit — Soluklan">
+<meta name="twitter:description" content="Soluklan press kit: a breathing exercise app for iPhone, iPad, Apple Watch and Android that measures your breathing. Features, what&#x27;s new in 2.0, privacy and contact.">
+<meta name="twitter:image" content="https://soluklan.app/assets/og.png">
+<link rel="alternate" hreflang="en" href="https://soluklan.app/en/press.html">
+<link rel="alternate" hreflang="x-default" href="https://soluklan.app/en/press.html">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
+<script>
+(function () {
+  var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it", ar: "/ar", zh: "/zh", ru: "/ru", ja: "/ja", pt: "/pt", id: "/id" };
+  if (location.pathname !== "/") return;          // yönlendirme yalnız kökte
+  // Arama motorları yönlendirilmez: Googlebot İngilizce tarayıcı gibi geliyor, kök Türkçe
+  // sayfa ona hep /en/'e yönlenen sayfa görünüyor ve dizine girmiyordu (Search Console,
+  // 23 Eylül 2026). Dilleri motorlar hreflang'den zaten ayırıyor.
+  if (/bot|crawl|spider|slurp|lighthouse|inspectiontool/i.test(navigator.userAgent || "")) return;
+  try { if (localStorage.getItem("soluklan-dil")) return; } catch (e) { return; }
+  var istekler = navigator.languages || [navigator.language || ""];
+  var hedef = "";
+  for (var i = 0; i < istekler.length && !hedef; i++) {
+    var k = (istekler[i] || "").slice(0, 2).toLowerCase();
+    if (kokler.hasOwnProperty(k)) hedef = k;
+  }
+  if (!hedef) hedef = "en";
+  if (hedef === "tr") return;                     // kök zaten Türkçe
+  location.replace(kokler[hedef] + "/" + location.search + location.hash);
+})();
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/en/">
+      <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="gl" x1="20" y1="80" x2="80" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#1B6FB3"/><stop offset="1" stop-color="#2A9BD6"/></linearGradient>
+          <linearGradient id="gm" x1="20" y1="80" x2="80" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#18C1AE"/><stop offset="1" stop-color="#5FC6EE"/></linearGradient>
+        </defs>
+        <path d="M46 26 C30 27 18 46 24 68 C40 70 50 54 46 26Z" fill="url(#gl)"/>
+        <path d="M54 26 C70 27 82 46 76 68 C60 70 50 54 54 26Z" fill="url(#gm)"/>
+        <path class="stem" d="M50 14 V72" stroke-width="3" stroke-linecap="round" stroke-opacity=".85"/>
+      </svg>
+      Soluklan
+    </a>
+    <nav class="site">
+      <a href="/en/">Home<i class="cizgi"></i></a>
+      <a href="/en/guide/">Guide<i class="cizgi"></i></a>
+      <a href="/en/whats-new.html">What’s new<i class="cizgi"></i></a>
+      <a href="/en/support.html">Support<i class="cizgi"></i></a>
+      <a href="/en/privacy.html">Privacy<i class="cizgi"></i></a>
+    </nav>
+    <button type="button" class="ara-ac" aria-label="Search" title="Search"
+            data-indeks="/en/arama.json" data-baslik="Search the site" data-ipucu="Type a word, a phrase or a topic"
+            data-yok="No results" data-kapat="Close" data-sonuc="%s results"
+            data-yazi="article" data-soru="question" data-sayfa="page" data-arac="tool"
+            data-geri="Back" data-teknik="Search a technique"
+            data-baslat="Play" data-durdur="Stop">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    </button>
+    <details class="dil-sec">
+      <summary aria-label="Dil / Language" title="Dil / Language"><svg class="kure" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18"/></svg></summary>
+      <div class="dil-liste">
+        <a href="/" hreflang="tr" lang="tr">Türkçe</a>
+        <a href="/en/press.html" hreflang="en" lang="en" aria-current="true">English</a>
+        <a href="/de/" hreflang="de" lang="de">Deutsch</a>
+        <a href="/fr/" hreflang="fr" lang="fr">Français</a>
+        <a href="/es/" hreflang="es" lang="es">Español</a>
+        <a href="/it/" hreflang="it" lang="it">Italiano</a>
+        <a href="/ar/" hreflang="ar" lang="ar">العربية</a>
+        <a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+        <a href="/ru/" hreflang="ru" lang="ru">Русский</a>
+        <a href="/ja/" hreflang="ja" lang="ja">日本語</a>
+        <a href="/pt/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+        <a href="/id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+      </div>
+    </details>
+  </div>
+</header>
+<main>
+<section class="doc">
+  <div class="prose">
+    <h1>Soluklan press kit</h1>
+<h2>In one paragraph</h2>
+<p>Soluklan is a breathing exercise app for iPhone, iPad, Apple Watch and Android that measures your breathing instead of only showing an animation. During a session the microphone follows your breath and scores how closely you kept the rhythm; afterwards a short report explains, in plain words, what went well and what to change next time. Sixteen techniques, from Box Breathing and 4-7-8 to Humming Bee and Kapalabhati, sit alongside nine programs that move forward with your results. With version 2.0, Soluklan can also measure your breathing while you lie back with your phone on your belly and your eyes closed, and lets you breathe together with a friend in real time. It is a relaxation and focus exercise app, not a medical device. Soluklan is made by an independent developer in Türkiye, with no ads and no tracking.</p>
+<h2>At a glance</h2>
+<ul><li><strong>Category:</strong> Health &amp; Fitness (breathing exercises)</li><li><strong>Platforms:</strong> iPhone and iPad (iOS / iPadOS 17 or later), Apple Watch (watchOS 10 or later), Android phones and tablets (Android 8.0 or later)</li><li><strong>Languages:</strong> 16 — English, Turkish, German, French, Spanish, Italian, Arabic, Simplified Chinese, Russian, Japanese, Portuguese (Brazil), Indonesian, and, new in 2.0, Korean, Polish, Thai and Vietnamese</li><li><strong>Version:</strong> 2.0, early December 2026, on iOS and Android at the same time</li><li><strong>Developer:</strong> independent developer, Türkiye</li><li><strong>Website:</strong> soluklan.app</li></ul>
+<p>Items marked <strong>New in 2.0</strong> or <strong>Improved in 2.0</strong> are described in more detail under <a href="#whats-new-in-20">What's new in 2.0</a>.</p>
+<h2>Features</h2>
+<h3>Measurement</h3>
+<ul><li><strong>Breath tracking with the microphone.</strong> The app hears your exhales during a session. No audio is recorded: only the moment-to-moment sound level is worked out, on the device.</li><li><strong>Lying-down breathing — New in 2.0.</strong> Lie back with the phone on your belly and close your eyes: the motion sensors measure your breathing without the microphone, quiet nasal breathing included.</li><li><strong>A score for every session.</strong> Rhythm match, exhales heard, exhale length, the inhale, breath volume, how smooth the exhale was and whether you finished, with rhythm match weighing most.</li><li><strong>Room measurement.</strong> The room's sound is measured before the session and again during it, so a door opening or the air conditioning switching off doesn't throw the measurement.</li><li><strong>Holds measured.</strong> In techniques with a hold, such as 4-7-8 and Box Breathing, the app notices air slipping out; <strong>gradual holds</strong> that start short and grow are available to everyone in 2.0.</li><li><strong>Your own pace — Improved in 2.0.</strong> A pace test finds your resonance pace to a tenth of a breath per minute, sitting, lying down or together with Apple Watch.</li><li><strong>No microphone? No problem.</strong> Every session can be done with the microphone off; with lying-down breathing you still get a full measurement.</li></ul>
+<h3>Sixteen techniques</h3>
+<p>Box Breathing, 4-7-8, Coherent Breathing, Physiological Sigh, Triangle Breathing, Extended Exhale, Deep and Slow, Energizing Breath, Alternate Nostril, Pursed Lip, Humming Bee, Ocean Breath (Ujjayi), Cooling Breath, Left Nostril Breath, Right Nostril Breath and Kapalabhati. Each one has a learn page with how to do it, common slips and a guided practice step. Techniques open through use, not through payment. Eleven of them can be done lying down (New in 2.0).</p>
+<h3>Programs</h3>
+<p>Nine programs that run for weeks: <strong>28-Day Sighing</strong>, <strong>4-Week Box Breathing</strong>, <strong>Balance in Three Steps</strong>, <strong>Bedtime Routine</strong>, <strong>Breathing Basics</strong>, <strong>Find Your Own Pace</strong>, <strong>Big Day Prep</strong> (for an exam, a presentation, an interview and many other occasions), <strong>Long Breath</strong> (a longer, slower exhale over six weeks, with a weekly measurement) and <strong>28-Day Humming Bee</strong>. Each day is set up on its own: lengths grow after strong sessions and ease off after a hard day, special days (silent, eyes closed, unguided ending) appear along the way, and a program map shows the path. <strong>Improved in 2.0:</strong> a sky-coloured time dial for choosing the program time, and lying-down days where they fit (Bedtime Routine, Breathing Basics, Long Breath).</p>
+<h3>Reports and summaries</h3>
+<ul><li><strong>Session report — Improved in 2.0:</strong> what happened, where it happened and how to fix it. Every suggestion comes with a short how-to and a button that opens the right place, and the report compares the session with your usual results.</li><li><strong>Report in parts</strong> for sessions over two minutes, so you can see whether you struggled at the start or drifted at the end.</li><li><strong>Breath chart</strong> with marked moments (Advanced level) and <strong>heart rate chart</strong> in shared sessions with Apple Watch.</li><li><strong>Personal summary</strong> (common slips, technique comparison, your best time of day) and <strong>weekly summaries</strong> with tags, filters, search and pinning.</li><li><strong>Program summary</strong> when a program ends.</li><li><strong>Sleep score</strong> from your sleep and heart rate data in Health, compared only with your own usual nights. Off by default; processed in memory on the device.</li><li><strong>Share cards</strong> for a session, a streak or a milestone, drawn on the device.</li></ul>
+<h3>Streak and milestones</h3>
+<p>A daily streak, <strong>streak shields</strong> that cover a missed day automatically (up to three), <strong>streak repair</strong> when it breaks (<strong>redesigned in 2.0</strong>: your waiting streak, the days left and each session's progress at a glance), an <strong>end-of-day countdown</strong> (New in 2.0 on iOS as a Live Activity), milestones on the calendar that you can name and colour, and achievements.</p>
+<h3>Friends — New in 2.0</h3>
+<p>Optional accounts (email, Sign in with Apple, Google, or your username), friends by link, QR code, six-digit code or username, gentle nudges and break suggestions, programs followed together and <strong>Breathe together</strong>: a live session for two where each of you sees the other's breath. No leaderboards and no rankings; blocking and reporting are built in.</p>
+<h3>Apple Watch</h3>
+<p>A watch app where the rhythm comes as taps on the wrist and your heart rate is measured, and a <strong>shared session</strong>: the phone hears your breath while the watch reads your heart rate, with both in one report. <strong>Improved in 2.0:</strong> a redesigned watch app that follows the time of day, a Start complication, and heart rate in lying-down sessions.</p>
+<h3>Widgets, Live Activities and shortcuts</h3>
+<p>Streak and Start widgets from small to extra large, Lock Screen widgets, a Quick Start widget and Control Center button (iOS 18), a Live Activity during the session, Home Screen icon shortcuts and Siri shortcuts. <strong>New in 2.0:</strong> Glow widgets with a ring for the week and a Friends widget. On Android, a streak widget and an end-of-day countdown notification.</p>
+<h3>Make it yours</h3>
+<ul><li><strong>Three interface levels:</strong> Simple (only Start on the home screen), Standard and Advanced.</li><li><strong>A line above Start.</strong> A single sentence above the Start button changes every time you come back to the home screen and is chosen for you: a fact from your own sessions, a gentle tip for the technique you struggle with, where you are in your program, how close the next milestone is, a nudge to try a technique that suits this hour, a short note on a special day, what a friend is up to, and much more. Tap the technique it mentions and it is selected for you.</li><li><strong>Settings in sections</strong> with four personal suggestions at the top (Improved in 2.0).</li><li><strong>Dynamic appearance</strong> that follows the time of day, the season and special days, or Light, Dark and System. Special days change with your language and region: each user sees the celebrations of their own culture, such as national days, Christmas, Lunar New Year or Ramadan, with the right date for their country. <strong>New in 2.0:</strong> a glowing breathing circle that takes on the day's theme, session scenes, and new themes such as a Ramadan theme for the whole month.</li><li><strong>Session sounds and notification sounds:</strong> thirteen sound sets for the guide during a session and twelve for notifications.</li><li><strong>Long sessions</strong> of up to twenty minutes, depending on the technique, with a soft interval chime.</li><li><strong>Sessions with the screen off</strong> in most techniques (New in 2.0), with Pause and Resume on the Lock Screen.</li><li><strong>Battery saving</strong> when the battery is low or the device is warm; measurement and score stay the same.</li><li><strong>iPad</strong> layout and support for the foldable <strong>iPhone Duo</strong>, including a split session screen when half-folded.</li></ul>
+<h3>Health and Health Connect</h3>
+<p>Mindful minutes can be written to Apple Health or Health Connect (Android 14 and later); the switch starts off. Heart rate is read from Apple Watch in shared sessions. Sleep and heart rate data can be read for the sleep score.</p>
+<h3>Reminders</h3>
+<p>Reminders that vary their time and technique instead of repeating the same message, quiet hours, a streak reminder and a reminder at your program time, set with the new time dial (Improved in 2.0).</p>
+<h3>Accessibility</h3>
+<ul><li>VoiceOver labels on buttons, and VoiceOver announcements of each phase during a session.</li><li>Larger text up to the accessibility sizes (AX3); increased contrast with the system setting.</li><li>Reduce Motion stops decorative motion (the breathing circle keeps moving, because it shows the rhythm).</li><li>Voice Control; information never relies on colour alone; dark interface, including on Apple Watch.</li><li>Sessions can be followed without looking: haptic taps and tones on the phone, taps on the wrist on Apple Watch, and, new in 2.0, lying-down sessions on a dimmed screen guided by tones.</li><li>A Simple interface level, and sessions without the microphone.</li></ul>
+<h2 id="whats-new-in-20">What's new in 2.0</h2>
+<p>Soluklan 2.0 is the biggest update since launch.</p>
+<h3>Lying-down breathing</h3>
+<p>Lie back, place your phone screen-up on your belly and close your eyes. The motion sensors follow the rise and fall of your belly, so breathing is measured without the microphone, quiet nasal breathing included. The screen dims right down to a simple breathing circle and tones guide each phase. At the end, a short card shows how your belly breathing changed through the session. It works in eleven techniques, including 4-7-8, Coherent Breathing and Box Breathing, and switches on by itself when the phone lies flat and moves with your breath. Motion data stays on the device and needs no permission. On iPad, lying-down breathing is hidden by default.</p>
+<h3>Apple Watch, heart rate and your own pace</h3>
+<ul><li>Heart rate from Apple Watch joins lying-down sessions: breath sound, belly movement and heart rate in one session, with the guidance as taps on the wrist.</li><li>The pace test can be done lying down or together with the watch, and gives your resonance pace to a tenth of a breath per minute (for example 5.6), within a 4.5 to 6.5 range.</li><li>A redesigned watch app and a <strong>watch complication</strong> that shows your streak and opens Start.</li></ul>
+<h3>Breathe with friends</h3>
+<p>Accounts are optional and arrive with 2.0 (email, Sign in with Apple, Google; sign in with your username too). With an account you can add friends by link, QR code or six-digit code, or find them by username. Friends can see whether you breathed today, your streak, your weekly minutes and your current program, each of which you can hide; scores are never shared. You can nudge a friend, suggest a break, congratulate them, follow a program together and see when a friend is breathing right now. <strong>Breathe together</strong> starts a live session for two: a shared waiting room, a 3-2-1 countdown, and each of you sees the other's breath on screen. There are no leaderboards and no rankings. Blocking, reporting and muting are built in, and social features are off for children under 13.</p>
+<h3>Reports that show you how</h3>
+<p>Every suggestion in the report now comes with a short how-to, and a button that opens the right place: the technique, its learn page, a setting or a program. Lying-down sessions get their own measures.</p>
+<h3>Sessions with the screen off</h3>
+<p>In most techniques the session keeps going when the phone locks, guided by tones or by Apple Watch, with Pause and Resume on the Lock Screen. The report notes how many minutes were done with the screen off.</p>
+<h3>Keeping the habit</h3>
+<ul><li>An <strong>end-of-day countdown</strong> in a Live Activity shows how long is left until midnight when your streak is waiting. It respects Focus.</li><li>A redesigned <strong>streak repair</strong>, and partial sessions now add up towards the day.</li><li>A <strong>discovery week</strong> for new users: a different easy technique every day, ending with the one that suits you.</li><li>A short <strong>setup path</strong> and an <strong>update tour</strong>.</li></ul>
+<h3>A new look</h3>
+<p>The whole app is redesigned: a new colour, a glowing breathing circle that takes on the day's theme, screens that flow into one another from Start to the end of a session, <strong>Glow widgets</strong> with a ring for the week, a <strong>Friends widget</strong>, a sky-coloured time dial for setting program times, and Settings organised into sections with personal suggestions. New themes: morning light, a Ramadan theme for the whole month, and cultural days such as Christmas, Advent, Easter (Western and Orthodox), Halloween, Thanksgiving and Día de Muertos, depending on language and region.</p>
+<h3>Four new languages</h3>
+<p>Korean, Polish, Thai and Vietnamese, for 16 languages in total.</p>
+<h2>Privacy</h2>
+<ul><li><strong>No ads, no tracking, no third-party analytics.</strong> The app uses only Apple's and Google's own frameworks.</li><li><strong>No audio recordings.</strong> The microphone runs only during a session and only the sound level is processed. The one exception is an audio sample you can choose to share, under separate permission, to help improve measurement; it is deleted once sent.</li><li><strong>Your answers stay on your device.</strong> Age range and health notes are used to adjust techniques and warnings and are never sent anywhere.</li><li><strong>Your history is yours.</strong> Without an account, sessions sync only in your own iCloud (on Android, your own Google backup). Soluklan works without an internet connection.</li><li><strong>Accounts are optional.</strong> With an account, your session history (numbers only), streak and settings sync through Soluklan's server; health information does not. Friends see only the few values you allow; in Breathe together the server passes on live breath events without storing them.</li><li><strong>Anonymous sharing only with consent</strong>, and you can delete what you shared from Settings.</li><li><strong>Health data is processed on the device.</strong> Sleep and heart rate data for the sleep score is processed in memory and isn't written to disk, backed up or sent.</li></ul>
+<h2>About the developer</h2>
+<p>Soluklan is made by an independent developer in Türkiye. It has grown, one small release at a time, from eleven techniques in September 2026 to an app on iPhone, iPad, Apple Watch and Android in sixteen languages with version 2.0.</p>
+<h2>Health note</h2>
+<p>Soluklan offers relaxation and focus exercises. It is not a medical device and does not diagnose or treat any condition.</p>
+<h2>Press contact</h2>
+<ul><li>Email: <a href="mailto:info@soluklan.app">info@soluklan.app</a></li></ul>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>© 2026 Soluklan</span>
+    <nav>
+      <a href="/en/guide/">Guide</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/en/accessibility.html">Accessibility</a>
+      <a href="/en/whats-new.html">What’s new</a>
+      <a href="/en/support.html">Support</a>
+      <a class="youtube" href="https://www.youtube.com/@Soluklan" rel="me noopener"><svg aria-hidden="true" focusable="false" viewBox="0 0 28 20" width="17" height="12"><path fill="currentColor" fill-rule="evenodd" d="M27.4 3.1A3.5 3.5 0 0 0 24.9.6C22.7 0 14 0 14 0S5.3 0 3.1.6A3.5 3.5 0 0 0 .6 3.1C0 5.3 0 10 0 10s0 4.7.6 6.9a3.5 3.5 0 0 0 2.5 2.5C5.3 20 14 20 14 20s8.7 0 10.9-.6a3.5 3.5 0 0 0 2.5-2.5C28 14.7 28 10 28 10s0-4.7-.6-6.9ZM11.2 14.3V5.7l7.3 4.3-7.3 4.3Z"/></svg>YouTube</a>
+      <a href="mailto:info@soluklan.app">info@soluklan.app</a>
+    </nav>
+  </div>
+</footer>
+<script>
+/* Menü çizgisi sayfadan sayfaya kayıyor. Görünüm geçişi desteklenmeyen tarayıcıda da
+   çalışsın diye önceki sayfanın hangi menüde olduğu oturumda tutuluyor: yeni sayfa
+   açılırken çubuk oradan başlayıp yerine kayıyor. */
+(function () {
+  var nav = document.querySelector('nav.site');
+  if (!nav) return;
+  var baglar = [].slice.call(nav.querySelectorAll('a'));
+  var etkin = nav.querySelector('a[aria-current="page"]');
+  if (!etkin) return;
+  var cubuk = document.createElement('span');
+  cubuk.className = 'menu-kaydirak';
+  nav.appendChild(cubuk);
+
+  function yerlestir(hedef, animasyonlu) {
+    var k = hedef.getBoundingClientRect(), n = nav.getBoundingClientRect();
+    cubuk.style.transition = animasyonlu ? 'transform .42s cubic-bezier(.32,.72,0,1), width .42s cubic-bezier(.32,.72,0,1)' : 'none';
+    cubuk.style.width = k.width + 'px';
+    cubuk.style.transform = 'translateX(' + (k.left - n.left) + 'px)';
+  }
+
+  var yeniIndeks = baglar.indexOf(etkin);
+  var eski = sessionStorage.getItem('menu-indeks');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (eski !== null && +eski !== yeniIndeks && baglar[+eski] && !azalt) {
+    yerlestir(baglar[+eski], false);
+    cubuk.style.opacity = '1';
+    requestAnimationFrame(function () { requestAnimationFrame(function () { yerlestir(etkin, true); }); });
+  } else {
+    yerlestir(etkin, false);
+    cubuk.style.opacity = '1';
+  }
+  sessionStorage.setItem('menu-indeks', yeniIndeks);
+
+  var zamanlayici;
+  window.addEventListener('resize', function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(function () { yerlestir(etkin, false); }, 120);
+  });
+})();
+
+/* Site içi arama. İndeks (`arama.json`) yalnız arama ilk açıldığında indiriliyor; hiçbir
+   istek dışarıya gitmiyor. Eşleşme başlık, özet, konu ve **gövde metni** üzerinde: Ali
+   "içinde geçen kelimelere cümlelere konulara göre aratılsın" dedi (13 Eylül 2026).
+   Etkileşimli araçlar da indekste ve sayfanın içindeki çapaya götürüyor. */
+(function () {
+  var ac = document.querySelector('.ara-ac');
+  if (!ac) return;
+  var m = ac.dataset;
+  var kayitlar = null, katman, girdi, liste, sayac, secili = -1;
+
+  function sadelestir(x) {
+    return (x || '').toLocaleLowerCase('tr')
+      .replace(/[ıİ]/g, 'i')
+      .normalize('NFD').replace(/[̀-ͯ]/g, '');
+  }
+
+  function kutuHtml() {
+    return '<div class="ara-ust">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>' +
+      '<input class="ara-girdi" type="search" autocomplete="off" spellcheck="false" placeholder="' +
+      m.ipucu + '" aria-label="' + m.baslik + '">' +
+      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
+      '</div><p class="ara-sayac"></p><ul class="ara-liste"></ul>';
+  }
+
+  /* Kutu içeriği araç modunda değişip geri dönebildiği için girdiler her seferinde
+     yeniden bağlanıyor. */
+  function bagla() {
+    girdi = katman.querySelector('.ara-girdi');
+    liste = katman.querySelector('.ara-liste');
+    sayac = katman.querySelector('.ara-sayac');
+    if (aracTempo) { aracTempo.dur(); aracTempo = null; }
+    girdi.addEventListener('input', function () { secili = -1; ara(); });
+    girdi.addEventListener('keydown', gezin);
+    girdi.focus();
+    ara();
+  }
+
+  function kur() {
+    katman = document.createElement('div');
+    katman.className = 'ara-katman';
+    katman.hidden = true;
+    katman.innerHTML = '<div class="ara-kutu" role="dialog" aria-modal="true" aria-label="' +
+                       m.baslik + '">' + kutuHtml() + '</div>';
+    document.body.appendChild(katman);
+    bagla();
+
+    katman.addEventListener('click', function (e) {
+      if (e.target === katman || e.target.closest('.ara-kapat')) return kapat();
+      if (e.target.closest('.ara-geri')) { katman.querySelector('.ara-kutu').innerHTML = kutuHtml(); bagla(); return; }
+      var t = e.target.closest('[data-teknik]');
+      if (t) { e.preventDefault(); return aracSec(+t.dataset.teknik); }
+      var a = e.target.closest('[data-arac]');
+      if (a) {
+        e.preventDefault();
+        var kayit = (kayitlar || []).filter(function (k) { return k.x === a.dataset.arac; })[0];
+        if (kayit) aracGoster(kayit);
+      }
+    });
+  }
+
+  function gezin(e) {
+      var ogeler = liste.querySelectorAll('li');
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (!ogeler.length) return;
+        secili += (e.key === 'ArrowDown' ? 1 : -1);
+        if (secili < 0) secili = ogeler.length - 1;
+        if (secili >= ogeler.length) secili = 0;
+        ogeler.forEach(function (o, i) { o.setAttribute('aria-selected', String(i === secili)); });
+        ogeler[secili].scrollIntoView({ block: 'nearest' });
+      } else if (e.key === 'Enter') {
+        var hedef = ogeler[secili < 0 ? 0 : secili];
+        if (hedef) { e.preventDefault(); hedef.querySelector('a').click(); }
+      }
+  }
+
+  function kapat() {
+    if (katman) katman.hidden = true;
+    document.documentElement.style.overflow = '';
+  }
+
+  function indeksiAl() {
+    if (kayitlar) return Promise.resolve(kayitlar);
+    return fetch(m.indeks).then(function (c) { return c.json(); })
+      .then(function (v) { kayitlar = v; return v; })
+      .catch(function () { kayitlar = []; return kayitlar; });
+  }
+
+  function parca(metin, kelime) {
+    var d = sadelestir(metin), i = d.indexOf(kelime);
+    if (i < 0) return '';
+    var bas = Math.max(0, i - 55), son = Math.min(metin.length, i + kelime.length + 65);
+    var once = (bas > 0 ? '…' : '') + metin.slice(bas, i);
+    var orta = metin.slice(i, i + kelime.length);
+    var sonra = metin.slice(i + kelime.length, son) + (son < metin.length ? '…' : '');
+    var kacir = function (x) { return x.replace(/&/g, '&amp;').replace(/</g, '&lt;'); };
+    return kacir(once) + '<mark>' + kacir(orta) + '</mark>' + kacir(sonra);
+  }
+
+  function ara() {
+    var soru = sadelestir(girdi.value).trim();
+    if (!soru) { liste.innerHTML = ''; sayac.textContent = ''; return; }
+    var kelimeler = soru.split(/\s+/).filter(Boolean);
+    var bulunan = [];
+    (kayitlar || []).forEach(function (k) {
+      var b = sadelestir(k.b), o = sadelestir(k.o), g = sadelestir(k.g), kat = sadelestir(k.k);
+      var puan = 0, hepsi = true;
+      kelimeler.forEach(function (w) {
+        var p = 0;
+        if (b.indexOf(w) >= 0) p += b.indexOf(w) === 0 ? 12 : 8;
+        if (o.indexOf(w) >= 0) p += 4;
+        if (kat.indexOf(w) >= 0) p += 3;
+        if (g.indexOf(w) >= 0) p += 2;
+        if (!p) hepsi = false;
+        puan += p;
+      });
+      if (!hepsi) return;
+      if (kelimeler.length > 1 && g.indexOf(soru) >= 0) puan += 6;   // cümle olarak geçiyorsa
+      if (k.t === 'arac') puan += 2;
+      bulunan.push({ k: k, puan: puan });
+    });
+    bulunan.sort(function (a, b) { return b.puan - a.puan; });
+    /* Sınır 20'den 50'ye çıktı; daha fazlası varsa sayaçta "50+" yazıyor (Ali, 20 Eylül 2026). */
+    var toplam = bulunan.length;
+    bulunan = bulunan.slice(0, 50);
+
+    if (!bulunan.length) {
+      liste.innerHTML = '<li class="ara-bos">' + m.yok + '</li>';
+      sayac.textContent = '';
+      return;
+    }
+    sayac.textContent = m.sonuc.replace('%s', toplam > bulunan.length ? bulunan.length + '+' : bulunan.length);
+    liste.innerHTML = bulunan.map(function (x) {
+      var k = x.k;
+      var alinti = parca(k.o, kelimeler[0]) || parca(k.g, kelimeler[0]) || '';
+      return '<li><a href="' + k.u + '"' + (k.x ? ' data-arac="' + k.x + '"' : '') +
+             '><span class="ara-tur">' + (m[k.t] || '') + '</span>' +
+             '<span class="ara-baslik">' + k.b.replace(/</g, '&lt;') + '</span>' +
+             (alinti ? '<span class="ara-parca">' + alinti + '</span>' : '') + '</a></li>';
+    }).join('');
+  }
+
+  /* "Ritmi gör" sonucuna basılınca sayfaya gitmek yerine aracın kendisi burada açılıyor;
+     hangi tekniğin ritmi görüleceği yine aynı kutudan aranıyor (Ali, 14 Eylül 2026). */
+  var aracVeri = null, aracGirdi, aracListe, aracSerit, aracTempo;
+
+  /* Şerit HTML'i: `data-fazlar` burada değil, DOM üzerinden atanıyor — JSON tırnakları
+     dizge içinde kaçırmaya çalışmak kırılgan (14 Eylül 2026). */
+  function seritHtml(t) {
+    var parcalar = t.fazlar.map(function (f) {
+      return '<i class="' + f.tur + '" style="flex:' + f.sn + '"></i>';
+    }).join('');
+    return '<div class="tempo">' +
+      '<div class="tempo-ust"><p class="tempo-baslik">' + t.ad +
+      ' <span class="tempo-deger">' + t.tempo + '</span></p>' +
+      '<button type="button" class="tempo-dugme" data-oynat="' + m.baslat +
+      '" data-durdur="' + m.durdur + '">' + m.baslat + '</button></div>' +
+      '<div class="tempo-serit"><span class="tempo-isaret"></span>' + parcalar + '</div>' +
+      '<p class="tempo-faz"></p></div>';
+  }
+
+  function aracListesi() {
+    var soru = sadelestir(aracGirdi.value).trim();
+    var uyan = aracVeri.filter(function (t) {
+      return !soru || sadelestir(t.ad).indexOf(soru) >= 0 || sadelestir(t.tempo).indexOf(soru) >= 0;
+    });
+    aracListe.innerHTML = uyan.map(function (t, i) {
+      return '<li><a href="#" data-teknik="' + aracVeri.indexOf(t) + '">' +
+             '<span class="ara-baslik">' + t.ad + '</span>' +
+             '<span class="ara-parca">' + t.tempo + '</span></a></li>';
+    }).join('') || '<li class="ara-bos">' + m.yok + '</li>';
+  }
+
+  function aracGoster(k) {
+    aracVeri = k.d || [];
+    katman.querySelector('.ara-kutu').innerHTML =
+      '<div class="ara-ust">' +
+      '<button type="button" class="ara-geri">&#8592; ' + m.geri + '</button>' +
+      '<input class="ara-girdi" type="search" autocomplete="off" placeholder="' + m.teknik + '" aria-label="' + m.teknik + '">' +
+      '<button type="button" class="ara-kapat">' + m.kapat + '</button>' +
+      '</div><div class="ara-arac-kap"></div><ul class="ara-liste"></ul>';
+    aracGirdi = katman.querySelector('.ara-girdi');
+    aracListe = katman.querySelector('.ara-liste');
+    aracSerit = katman.querySelector('.ara-arac-kap');
+    aracGirdi.addEventListener('input', aracListesi);
+    aracListesi();
+    aracSec(0);
+    aracGirdi.focus();
+  }
+
+  function aracSec(i) {
+    var t = aracVeri[i];
+    if (!t) return;
+    if (aracTempo) aracTempo.dur();
+    aracSerit.innerHTML = seritHtml(t);
+    var el = aracSerit.querySelector('.tempo');
+    el.dataset.fazlar = JSON.stringify(t.fazlar);
+    el.dataset.toplam = t.fazlar.reduce(function (a, f) { return a + f.sn; }, 0);
+    aracTempo = window.SoluklanTempo(el);
+  }
+
+  function acKatman() {
+    if (!katman) kur();
+    katman.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    girdi.focus();
+    indeksiAl().then(ara);
+  }
+
+  ac.addEventListener('click', acKatman);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && katman && !katman.hidden) return kapat();
+    if (e.key === '/' && (!katman || katman.hidden)) {
+      var a = document.activeElement;
+      if (a && (a.tagName === 'INPUT' || a.tagName === 'TEXTAREA')) return;
+      e.preventDefault();
+      acKatman();
+    }
+  });
+})();
+
+/* "Burada dene": ana sayfada teknik ve süre seçilip sayfada gerçek bir tur çalışıyor.
+   Uygulamayı indirmeden önce ürünü denemek için. Hesap ve kayıt yok — yalnız daire,
+   tempo ve sonunda kaç tur yapıldığı (Ali, 13 Eylül 2026). */
+(function () {
+  var kap = document.querySelector('.dene');
+  if (!kap) return;
+  var teknikler;
+  try { teknikler = JSON.parse(kap.dataset.teknikler); } catch (e) { return; }
+  if (!teknikler || !teknikler.length) return;
+
+  var daire = kap.querySelector('.dene-daire');
+  var yazi = kap.querySelector('.dene-faz');
+  var durum = kap.querySelector('.dene-durum');
+  var dugme = kap.querySelector('.dene-dugme');
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var secili = 0;
+  var calisiyor = false, indeks = 0, basladi = 0, acilis = 0, tur = 0, kare = 0, son = 0.55;
+
+  function fazlar() { return teknikler[secili].fazlar; }
+
+  function boy(faz, oran) {
+    if (azalt) return 0.8;
+    if (faz.tur === 'al') return 0.55 + 0.45 * oran;
+    if (faz.tur === 'ver') return 1 - 0.45 * oran;
+    return son;
+  }
+
+  function sure(sn) {
+    var d = Math.floor(sn / 60), s = Math.floor(sn % 60);
+    return d + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  function ciz(t) {
+    var liste = fazlar();
+    var faz = liste[indeks];
+    var gecen = (t - basladi) / 1000;
+    if (gecen >= faz.sn) {
+      son = boy(faz, 1);
+      indeks = indeks + 1;
+      if (indeks >= liste.length) { indeks = 0; tur++; }
+      basladi = t;
+      gecen = 0;
+      faz = liste[indeks];
+    }
+    var oran = Math.min(1, gecen / faz.sn);
+    yazi.textContent = faz.ad + '\n' + Math.max(0, Math.ceil(faz.sn - gecen));
+    daire.style.transform = 'scale(' + boy(faz, oran).toFixed(3) + ')';
+    durum.textContent = sure((t - acilis) / 1000);
+    kare = requestAnimationFrame(ciz);
+  }
+
+  /* Süre seçimi yok (Ali, 14 Eylül 2026): Başlat'a basılınca dönüyor, Durdur'a basılınca
+     duruyor ve kaç tur yapıldığı yazıyor. Seçilecek bir şey azaldıkça pano da sadeleşti. */
+  function dur() {
+    calisiyor = false;
+    cancelAnimationFrame(kare);
+    dugme.textContent = dugme.dataset.basla;
+    dugme.setAttribute('aria-pressed', 'false');
+    yazi.textContent = '';
+    daire.style.transform = 'scale(.55)';
+    durum.textContent = tur ? kap.dataset.bitti.replace('%s', tur) : kap.dataset.hazir;
+  }
+
+  function basla() {
+    calisiyor = true;
+    indeks = 0; tur = 0; son = 0.55;
+    basladi = performance.now();
+    acilis = basladi;
+    dugme.textContent = dugme.dataset.durdur;
+    dugme.setAttribute('aria-pressed', 'true');
+    kare = requestAnimationFrame(ciz);
+  }
+
+  kap.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b === dugme) return calisiyor ? dur() : basla();
+    if (b.dataset.teknik !== undefined) {
+      if (calisiyor) dur();
+      secili = +b.dataset.teknik;
+      kap.querySelectorAll('[data-teknik]').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+    }
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && calisiyor) dur();
+  });
+})();
+
+/* Tempo şeridi: bir döngünün tamamı şeritte, üstünde ilerleyen bir işaret. Ses yok,
+   sekme gizlenince duruyor. Daire yerine şerit (Ali, 14 Eylül 2026).
+
+   Kurucu global: aynı şerit hem teknik yazısında hem arama kutusunun içindeki "ritmi gör"
+   aracında kullanılıyor, mantık iki yere kopyalanmasın. */
+window.SoluklanTempo = function (kap) {
+  var fazlar;
+  try { fazlar = JSON.parse(kap.dataset.fazlar); } catch (e) { return; }
+  if (!fazlar || !fazlar.length) return;
+
+  var toplam = +kap.dataset.toplam || fazlar.reduce(function (a, f) { return a + f.sn; }, 0);
+  var serit = kap.querySelector('.tempo-serit');
+  var isaret = kap.querySelector('.tempo-isaret');
+  var yazi = kap.querySelector('.tempo-faz');
+  var dugme = kap.querySelector('.tempo-dugme');
+  if (!serit || !isaret || !yazi || !dugme) return;
+  var calisiyor = false, basladi = 0, kare = 0;
+
+  function ciz(t) {
+    var gecen = ((t - basladi) / 1000) % toplam;
+    isaret.style.transform = 'translateX(' + (gecen / toplam * serit.clientWidth).toFixed(1) + 'px)';
+    var birikim = 0, faz = fazlar[0];
+    for (var i = 0; i < fazlar.length; i++) {
+      if (gecen < birikim + fazlar[i].sn) { faz = fazlar[i]; break; }
+      birikim += fazlar[i].sn;
+    }
+    yazi.textContent = faz.ad + ' ' + Math.max(0, Math.ceil(birikim + faz.sn - gecen));
+    if (calisiyor) kare = requestAnimationFrame(ciz);
+  }
+
+  function dur() {
+    calisiyor = false;
+    cancelAnimationFrame(kare);
+    kap.classList.remove('calisiyor');
+    dugme.textContent = dugme.dataset.oynat;
+    dugme.setAttribute('aria-pressed', 'false');
+    yazi.textContent = '';
+    isaret.style.transform = 'translateX(0)';
+  }
+
+  dugme.addEventListener('click', function () {
+    if (calisiyor) return dur();
+    calisiyor = true;
+    kap.classList.add('calisiyor');
+    basladi = performance.now();
+    dugme.textContent = dugme.dataset.durdur;
+    dugme.setAttribute('aria-pressed', 'true');
+    kare = requestAnimationFrame(ciz);
+  });
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden && calisiyor) dur();
+  });
+  return { dur: dur };
+};
+
+(function () {
+  var kap = document.querySelector('.tempo');
+  if (kap) window.SoluklanTempo(kap);
+})();
+
+/* Puan panosu: kaydırıcılar oynayınca puanın nasıl kurulduğu görünüyor.
+   Hesabın kendisi uygulamadakiyle aynı sırayla yapılıyor — ağırlıklı ortalama, ritim
+   çarpanı, sonra yuvarlama; ve bir bileşen çökmüşse yuvarlama yok. Sayfa metni bunları
+   zaten anlatıyor, pano elle denetiyor (Ali, 13 Eylül 2026). */
+(function () {
+  var pano = document.querySelector('.puan-pano');
+  if (!pano) return;
+  var yuvarlamaEsigi = +pano.dataset.esik, cokenSiniri = +pano.dataset.cokenSiniri;
+  var satirlar = [].slice.call(pano.querySelectorAll('.puan-satirlar .puan-satir'));
+  var carpanSatir = pano.querySelector('.puan-carpan');
+  var carpanGirdi = carpanSatir.querySelector('input');
+  var sayi = pano.querySelector('.puan-sayi');
+  var yay = pano.querySelector('.puan-yay');
+  var toplamYazi = pano.querySelector('.puan-toplam');
+  var carpanYazi = pano.querySelector('.puan-carpan-not');
+  var not = pano.querySelector('.puan-not');
+  var cevre = 2 * Math.PI * 52;
+  var metin = pano.dataset;
+
+  function etkinler() {
+    return satirlar.filter(function (r) { return !r.hidden; });
+  }
+
+  function hesapla() {
+    var toplamAgirlik = 0, toplam = 0, coken = false;
+    etkinler().forEach(function (r) {
+      var g = r.querySelector('input'), a = +r.dataset.agirlik, v = +g.value;
+      r.querySelector('output').textContent = v;
+      r.classList.toggle('dusuk', v < cokenSiniri);
+      if (v < cokenSiniri) coken = true;
+      toplamAgirlik += a; toplam += a * v;
+    });
+    var agirlikli = toplamAgirlik ? toplam / toplamAgirlik : 0;
+    var f1 = +carpanGirdi.value / 100;
+    var carpan = 0.5 + 0.5 * f1;
+    carpanSatir.querySelector('output').textContent = carpanGirdi.value;
+    var ham = Math.min(100, Math.max(0, Math.round(agirlikli * carpan)));
+    var gosterilen = (ham >= yuvarlamaEsigi && !coken) ? 100 : ham;
+
+    sayi.textContent = gosterilen;
+    yay.style.strokeDashoffset = cevre * (1 - gosterilen / 100);
+    toplamYazi.textContent = metin.mToplam + ' ' + agirlikli.toFixed(1);
+    carpanYazi.textContent = metin.mCarpan.replace('%s', carpan.toFixed(2));
+    if (ham >= yuvarlamaEsigi && coken) { not.textContent = metin.mCoken; not.classList.add('uyari'); }
+    else if (gosterilen === 100 && ham < 100) { not.textContent = metin.mYuvarlama; not.classList.remove('uyari'); }
+    else { not.textContent = ''; not.classList.remove('uyari'); }
+  }
+
+  function teknik(tur) {
+    satirlar.forEach(function (r) {
+      if (r.dataset.tutus) r.hidden = (tur !== 'tutuslu');
+    });
+    pano.querySelectorAll('.puan-secim button').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.teknik === tur));
+    });
+    hesapla();
+  }
+
+  var ornekler = {
+    kusursuz: { hepsi: 97, carpan: 98 },
+    orta:     { hepsi: 78, carpan: 74 },
+    ritimsiz: { hepsi: 88, carpan: 12 },
+    kisa:     { hepsi: 90, carpan: 95, tek: { 2: 48 } }
+  };
+
+  pano.addEventListener('input', function (e) {
+    if (e.target.type === 'range') hesapla();
+  });
+  pano.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.teknik) return teknik(b.dataset.teknik);
+    var o = ornekler[b.dataset.ornek];
+    if (!o) return;
+    satirlar.forEach(function (r, i) {
+      r.querySelector('input').value = (o.tek && o.tek[i] !== undefined) ? o.tek[i] : o.hepsi;
+    });
+    carpanGirdi.value = o.carpan;
+    hesapla();
+  });
+
+  teknik('tutuslu');
+})();
+
+/* Dil seçici: kullanıcının kendi dili listenin başında durur ve seçtiği dil hatırlanır.
+   Sıralama betikle yapılıyor çünkü sayfa statik: aynı HTML herkese gidiyor, "en üstte olan"
+   ise kişiye göre değişiyor. Seçim `localStorage`a yazılınca kökteki yönlendirme de bir daha
+   karışmıyor — kullanıcı kararını bir kez veriyor (Ali, 13 Eylül 2026). */
+(function () {
+  var liste = document.querySelector('.dil-liste');
+  if (!liste) return;
+  var baglar = [].slice.call(liste.querySelectorAll('a'));
+
+  baglar.forEach(function (a) {
+    a.addEventListener('click', function () {
+      try { localStorage.setItem('soluklan-dil', a.getAttribute('hreflang')); } catch (e) {}
+    });
+  });
+
+  var tercih = '';
+  try { tercih = localStorage.getItem('soluklan-dil') || ''; } catch (e) {}
+  if (!tercih) {
+    var istekler = navigator.languages || [navigator.language || ''];
+    for (var i = 0; i < istekler.length && !tercih; i++) {
+      var k = (istekler[i] || '').slice(0, 2).toLowerCase();
+      if (baglar.some(function (a) { return a.getAttribute('hreflang') === k; })) tercih = k;
+    }
+  }
+  if (!tercih) return;
+  var ilk = baglar.filter(function (a) { return a.getAttribute('hreflang') === tercih; })[0];
+  if (ilk && ilk !== baglar[0]) liste.insertBefore(ilk, liste.firstChild);
+})();
+
+/* Üst menü: sayfanın başındayken tam boy, aşağı inince küçülüyor. Önceki hâli menüyü
+   tamamen gizliyordu; yukarı kaydırınca geri gelmiyordu, çünkü yön birikimine bakan
+   mantık sunum sayfasındaki sıçramalı kaydırmada şaşıyordu. Şimdi tek eşik var:
+   80 pikselin altındaysa büyük, üstündeyse küçük (Ali, 12 Eylül 2026). */
+(function () {
+  var kok = document.documentElement;
+  var bekleyen = false;
+  function bak() {
+    bekleyen = false;
+    kok.classList.toggle('menu-kucuk', Math.max(0, window.scrollY) > 80);
+  }
+  window.addEventListener('scroll', function () {
+    if (bekleyen) return;
+    bekleyen = true;
+    requestAnimationFrame(bak);
+  }, { passive: true });
+  bak();
+})();
+
+/* Sık sorulanlar: bir soru açılınca öteki kapanıyor, açılış yumuşak. "Tümünü gör"
+   basılınca kayboluyor, açılan listenin altındaki ok hepsini kapatıyor. */
+(function () {
+  var kaplar = document.querySelectorAll('.faq');
+  if (!kaplar.length) return;
+  kaplar.forEach(function (kap) {
+    kap.addEventListener('toggle', function (e) {
+      var d = e.target;
+      if (d.tagName !== 'DETAILS' || !d.open) return;
+      // Gizli gruptaki soru da kapanır: iki kap ayrı ama liste kullanıcıya tek liste
+      document.querySelectorAll('.faq > details[open]').forEach(function (o) {
+        if (o !== d) o.open = false;
+      });
+    }, true);
+  });
+
+  var tumu = document.querySelector('details.sss-tumu');
+  if (!tumu) return;
+  var kapat = document.createElement('button');
+  kapat.type = 'button';
+  kapat.className = 'sss-kapat';
+  kapat.setAttribute('aria-label', 'Soruları kapat');
+  kapat.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+  kapat.addEventListener('click', function () {
+    tumu.open = false;
+    tumu.scrollIntoView({ block: 'nearest' });
+  });
+  tumu.appendChild(kapat);
+})();
+
+/* Kaydırdıkça ortaya çıkma: bir kere göründü mü hep durur (geri kaydırınca kaybolmaz). */
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  var azalt = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hedefler = document.querySelectorAll('.beliren');
+  if (!hedefler.length) return;
+  if (azalt) {
+    hedefler.forEach(function (h) { h.classList.add('belirdi'); });
+    return;
+  }
+  var izleyici = new IntersectionObserver(function (girisler) {
+    girisler.forEach(function (g) {
+      if (!g.isIntersecting) return;
+      g.target.classList.add('belirdi');
+      izleyici.unobserve(g.target);
+    });
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  hedefler.forEach(function (h) { izleyici.observe(h); });
+})();
+</script>
+</body>
+</html>
