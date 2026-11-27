@@ -2267,3 +2267,89 @@ html:has(.slaytlar) body::before {
 /* Telefonda üçüncü adımın küçük halkası yeterli: büyük halka slaytı uzatıyordu */
 @media (max-width: 40rem) { #nasil .cizim.puan { display: none; } }
 @media (max-width: 40rem) { .oz-kutular.dort { grid-template-columns: repeat(2, 1fr); } }
+
+/* --- Destek: "Bize yaz" formu (20 Kasım 2026) ----------------------------------
+   Konu seçimi platform seçicisinin hap düzeninde (gerçek radyo düğmeleri: ok tuşlarıyla geçilir),
+   alanlar sitenin kart dilinde. Tuzak alanı ekran dışında; ekran okuyucudan da gizli.
+   Yön mantıksal özelliklerle: Arapçada kendiliğinden dönüyor.
+   --------------------------------------------------------------------------- */
+.bize-yaz { margin-block: 0 .5rem; }
+.by-form {
+  margin-top: 1rem; padding: clamp(1.1rem, 3vw, 1.6rem);
+  border: 1px solid var(--line); border-radius: 20px;
+  background: var(--card); box-shadow: var(--shadow);
+}
+.by-form[hidden] { display: none; }
+.by-alanlar[hidden], .by-bitti[hidden], .by-alan-hata[hidden], .by-hata[hidden] { display: none; }
+.by-konu { border: 0; margin: 0 0 1.25rem; padding: 0; min-width: 0; }
+.by-konu legend, .by-alan > label {
+  display: block; padding: 0; margin-bottom: .45rem;
+  font-family: var(--display); font-weight: 600; font-size: .95rem; color: var(--ink);
+}
+.by-secim {
+  display: inline-flex; flex-wrap: wrap; gap: 2px; padding: 3px;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--bg-2);
+}
+.by-secim label { position: relative; cursor: pointer; }
+.by-secim input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
+.by-secim span {
+  display: block; padding: .45rem 1.05rem; border-radius: 999px; border: 1px solid transparent;
+  font-size: .9rem; line-height: 1.2; color: var(--ink-2);
+  transition: background-color .15s ease, color .15s ease;
+}
+.by-secim label:hover span { color: var(--ink); }
+.by-secim input:checked + span {
+  background: var(--card); color: var(--breath); font-weight: 600;
+  border-color: var(--line); box-shadow: 0 1px 3px rgba(15, 30, 51, .12);
+}
+.by-secim input:focus-visible + span { outline: 2px solid var(--breath); outline-offset: 2px; }
+.by-alan { margin-bottom: 1.15rem; }
+.by-alan textarea, .by-alan input {
+  display: block; width: 100%; font: inherit; font-size: 1rem; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 14px;
+  padding: .75rem .9rem; transition: border-color .15s ease, box-shadow .15s ease;
+}
+.by-alan textarea { min-height: 9.5rem; resize: vertical; line-height: 1.5; }
+.by-alan textarea::placeholder, .by-alan input::placeholder { color: var(--ink-3); opacity: 1; }
+.by-alan textarea:focus, .by-alan input:focus {
+  outline: none; border-color: var(--breath);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--breath) 22%, transparent);
+}
+.by-alan [aria-invalid="true"], .by-alan [aria-invalid="true"]:focus { border-color: #C2413A; }
+.by-alan [aria-invalid="true"]:focus { box-shadow: 0 0 0 3px color-mix(in srgb, #C2413A 20%, transparent); }
+.by-alt, .by-sayac { margin: .4rem 0 0; font-size: .85rem; color: var(--ink-3); }
+.by-sayac { text-align: end; font-family: var(--data); font-size: .78rem; }
+.by-sayac:empty { display: none; }
+.by-alan-hata, .by-hata { margin: .45rem 0 0; font-size: .9rem; color: #C2413A; }
+.by-hata {
+  margin: 0 0 1rem; padding: .7rem .9rem; border-radius: 12px;
+  background: color-mix(in srgb, #C2413A 9%, transparent);
+}
+.by-form button.btn { cursor: pointer; }
+.by-form button.btn-ghost { background: transparent; }
+.by-form button.btn:focus-visible { outline: 2px solid var(--breath); outline-offset: 3px; }
+.by-form button[aria-disabled="true"] { opacity: .75; cursor: progress; }
+.by-bitti { text-align: center; padding: 1.25rem 0 .5rem; }
+.by-bitti p {
+  margin: 0 0 1.1rem; font-family: var(--display); font-weight: 600; font-size: 1.15rem; color: var(--ink);
+}
+.by-bitti p:focus { outline: none; }
+.by-bitti p::before {
+  content: ""; display: block; width: 2.75rem; height: 2.75rem; margin: 0 auto .8rem; border-radius: 50%;
+  background-position: center; background-repeat: no-repeat; background-size: 1.3rem, 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E"), var(--gradient);
+}
+.by-gizlilik { margin-top: .9rem; font-size: .85rem; color: var(--ink-3); }
+.by-noscript { padding: .8rem 1rem; border-radius: 12px; background: var(--bg-2); color: var(--ink-2); }
+.by-form { position: relative; }
+.by-tuzak {
+  position: absolute !important; top: 0; left: 0; width: 1px; height: 1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap; opacity: 0; pointer-events: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .by-alan [aria-invalid="true"] { border-color: #F07A72; }
+  :root:not([data-theme="light"]) .by-alan-hata, :root:not([data-theme="light"]) .by-hata { color: #F49A93; }
+}
+:root[data-theme="dark"] .by-alan [aria-invalid="true"] { border-color: #F07A72; }
+:root[data-theme="dark"] .by-alan-hata, :root[data-theme="dark"] .by-hata { color: #F49A93; }
+@media (prefers-reduced-motion: reduce) { .by-secim span, .by-alan textarea, .by-alan input { transition: none; } }

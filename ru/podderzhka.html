@@ -52,7 +52,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/assets/soluklan.css?v=7e788456">
+<link rel="stylesheet" href="/assets/soluklan.css?v=0d48349d">
 <script>
 (function () {
   var kokler = { tr: "", en: "/en", de: "/de", fr: "/fr", es: "/es", it: "/it", ar: "/ar", zh: "/zh", ru: "/ru", ja: "/ja", pt: "/pt", id: "/id" };
@@ -129,6 +129,207 @@
     <h1>Поддержка</h1>
     
 <p>Что-то не работает или есть предложение? Напиши нам — мы читаем.</p>
+<div class="bize-yaz" role="region" aria-labelledby="by-baslik">
+<h2 id="by-baslik">Напиши нам</h2>
+<noscript><p class="by-noscript">Для формы нужен JavaScript. Можно также написать на info@soluklan.app.</p></noscript>
+<form id="bize-yaz" class="by-form" data-api="https://api.soluklan.app/v1" novalidate hidden>
+  <div class="by-alanlar">
+    <fieldset class="by-konu">
+      <legend>Тема</legend>
+      <div class="by-secim"><label><input type="radio" name="konu" value="oneri" checked><span>Предложение</span></label><label><input type="radio" name="konu" value="hata"><span>Ошибка</span></label><label><input type="radio" name="konu" value="soru"><span>Вопрос</span></label></div>
+    </fieldset>
+    <div class="by-alan">
+      <label for="by-mesaj">Сообщение</label>
+      <textarea id="by-mesaj" name="mesaj" rows="6" maxlength="4000" required placeholder="Что хочешь рассказать?" aria-describedby="by-mesaj-hata"></textarea>
+      <p class="by-alan-hata" id="by-mesaj-hata" hidden></p>
+      <p class="by-sayac" aria-hidden="true"></p>
+    </div>
+    <div class="by-alan">
+      <label for="by-eposta">Почта для ответа</label>
+      <input id="by-eposta" name="eposta" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="name@example.com" aria-describedby="by-eposta-alt by-eposta-hata" dir="ltr">
+      <p class="by-alt" id="by-eposta-alt">Необязательно. Нужна только для ответа тебе.</p>
+      <p class="by-alan-hata" id="by-eposta-hata" hidden></p>
+    </div>
+    <div class="by-tuzak" aria-hidden="true">
+      <label for="by-site">Оставь это поле пустым</label>
+      <input id="by-site" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <p class="by-hata" role="alert" hidden></p>
+    <button type="submit" class="btn btn-primary">Отправить</button>
+  </div>
+  <div class="by-bitti" role="status" hidden>
+    <p tabindex="-1">Сообщение дошло. Спасибо!</p>
+    <button type="button" class="btn btn-ghost">Написать ещё</button>
+  </div>
+</form>
+<p class="by-gizlilik">Сообщение уходит на сервер Soluklan и используется только для ответа тебе и улучшения приложения; через год оно удаляется. Подробнее — на странице <a href="/ru/konfidencialnost.html">Конфиденциальность</a>.</p>
+<script>
+(function () {
+  var f = document.getElementById('bize-yaz');
+  if (!f || !window.fetch || !window.Promise || !window.Uint32Array) return;
+  var M = {"gonder": "Отправить", "gonderiliyor": "Отправка…", "bos": "Сначала напиши что-нибудь.", "uzun": "Сообщение слишком длинное; можешь немного сократить?", "hata_eposta": "Адрес почты выглядит неправильно.", "ag": "Не удалось отправить. Проверь подключение к интернету и попробуй снова.", "sik": "Слишком много сообщений за короткое время. Попробуй чуть позже."}, API = f.getAttribute('data-api'), DIL = document.documentElement.lang.slice(0, 2);
+  var ta = f.querySelector('#by-mesaj'), ep = f.querySelector('#by-eposta'), tz = f.querySelector('#by-site');
+  var dugme = f.querySelector('button[type=submit]'), hataKutu = f.querySelector('.by-hata'),
+      sayac = f.querySelector('.by-sayac'), alanlar = f.querySelector('.by-alanlar'),
+      bitti = f.querySelector('.by-bitti');
+  var K = new Uint32Array([0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,
+    0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,
+    0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,
+    0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,
+    0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
+    0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,
+    0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2]);
+  var w = new Uint32Array(64);
+  /* SHA-256'nın ilk 32 biti (yalnız ASCII metin) */
+  function ozet(s) {
+    var n = s.length, bl = ((n + 8) >> 6) + 1, W = new Uint32Array(bl * 16), i, j;
+    for (i = 0; i < n; i++) W[i >> 2] |= s.charCodeAt(i) << (24 - (i & 3) * 8);
+    W[n >> 2] |= 0x80 << (24 - (n & 3) * 8);
+    W[bl * 16 - 1] = n * 8;
+    var h0 = 0x6a09e667, h1 = 0xbb67ae85, h2 = 0x3c6ef372, h3 = 0xa54ff53a,
+        h4 = 0x510e527f, h5 = 0x9b05688c, h6 = 0x1f83d9ab, h7 = 0x5be0cd19;
+    for (j = 0; j < bl; j++) {
+      for (i = 0; i < 16; i++) w[i] = W[j * 16 + i];
+      for (i = 16; i < 64; i++) {
+        var x = w[i - 15], y = w[i - 2];
+        w[i] = (((x >>> 7) | (x << 25)) ^ ((x >>> 18) | (x << 14)) ^ (x >>> 3)) + w[i - 7] +
+               (((y >>> 17) | (y << 15)) ^ ((y >>> 19) | (y << 13)) ^ (y >>> 10)) + w[i - 16];
+      }
+      var a = h0, b = h1, c = h2, d = h3, e = h4, g = h5, h = h6, k = h7;
+      for (i = 0; i < 64; i++) {
+        var t1 = (k + (((e >>> 6) | (e << 26)) ^ ((e >>> 11) | (e << 21)) ^ ((e >>> 25) | (e << 7))) +
+                  ((e & g) ^ (~e & h)) + K[i] + w[i]) | 0;
+        var t2 = ((((a >>> 2) | (a << 30)) ^ ((a >>> 13) | (a << 19)) ^ ((a >>> 22) | (a << 10))) +
+                  ((a & b) ^ (a & c) ^ (b & c))) | 0;
+        k = h; h = g; g = e; e = (d + t1) | 0; d = c; c = b; b = a; a = (t1 + t2) | 0;
+      }
+      h0 = (h0 + a) | 0; h1 = (h1 + b) | 0; h2 = (h2 + c) | 0; h3 = (h3 + d) | 0;
+      h4 = (h4 + e) | 0; h5 = (h5 + g) | 0; h6 = (h6 + h) | 0; h7 = (h7 + k) | 0;
+    }
+    return h0 >>> 0;
+  }
+  function isBul(b, z) {
+    return new Promise(function (tamam) {
+      var i = 0;
+      (function adim() {
+        for (var son = i + 4000; i < son; i++) {
+          if (z <= 0 || (ozet(b + ':' + i) >>> (32 - z)) === 0) return tamam(String(i));
+        }
+        setTimeout(adim, 0);
+      })();
+    });
+  }
+  function istek(yol, govde) {
+    return fetch(API + yol, { method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(govde), credentials: 'omit', cache: 'no-store', referrerPolicy: 'no-referrer' });
+  }
+
+  var bel = null;   /* {b, is, alindi, bekle} */
+  var beklenen = null;
+  function belirtec() {
+    if (bel && Date.now() - bel.alindi > 25 * 60000) bel = null;   /* sunucuda 30 dk */
+    if (bel) return Promise.resolve(bel);
+    if (!beklenen) {
+      beklenen = istek('/bize-yaz/meydan', { platform: 'web' }).then(function (r) {
+        if (r.status === 429) throw { sik: true };
+        if (!r.ok) throw {};
+        return r.json();
+      }).then(function (j) {
+        var alindi = Date.now();
+        return isBul(j.belirtec, j.zorluk).then(function (is) {
+          bel = { b: j.belirtec, is: is, alindi: alindi, bekle: j.bekle || 3000 };
+          beklenen = null;
+          return bel;
+        });
+      }, function (e) { beklenen = null; throw e; });
+    }
+    return beklenen;
+  }
+  /* Form ilk kez kullanılınca belirteç alınır, iş arka planda biter */
+  function hazirla() { if (!alanlar.hidden && !gidiyor) belirtec().catch(function () {}); }
+  f.addEventListener('focusin', hazirla);
+  f.addEventListener('input', hazirla);
+
+  function alanHatasi(alan, metin) {
+    var not = document.getElementById(alan.id + '-hata');
+    not.textContent = metin;
+    not.hidden = false;
+    alan.setAttribute('aria-invalid', 'true');
+    alan.focus();
+  }
+  function temizle() {
+    [ta, ep].forEach(function (a) {
+      a.removeAttribute('aria-invalid');
+      var not = document.getElementById(a.id + '-hata');
+      not.textContent = ''; not.hidden = true;
+    });
+    hataKutu.textContent = ''; hataKutu.hidden = true;
+  }
+  function genelHata(metin) { hataKutu.textContent = metin; hataKutu.hidden = false; }
+  var gidiyor = false;
+  function mesgul(evet) {
+    gidiyor = evet;
+    dugme.setAttribute('aria-disabled', evet ? 'true' : 'false');
+    dugme.textContent = evet ? M.gonderiliyor : M.gonder;
+    f.setAttribute('aria-busy', evet ? 'true' : 'false');
+  }
+  function sayacYaz() {
+    var n = ta.value.length;
+    sayac.textContent = n > 3500 ? n + ' / 4000' : '';
+  }
+  ta.addEventListener('input', sayacYaz);
+
+  function gonder(deneme) {
+    var konu = f.querySelector('input[name=konu]:checked').value;
+    return belirtec().then(function (x) {
+      var kalan = x.bekle + 250 - (Date.now() - x.alindi);
+      return new Promise(function (t) { setTimeout(function () { t(x); }, Math.max(0, kalan)); });
+    }).then(function (x) {
+      bel = null;   /* tek kullanımlık */
+      var g = { konu: konu, mesaj: ta.value, platform: 'web', dil: DIL, belirtec: x.b, is: x.is, tuzak: tz.value };
+      if (ep.value.trim()) g.eposta = ep.value.trim();
+      return istek('/bize-yaz', g);
+    }).then(function (r) {
+      if (r.status === 200 || r.status === 201) return 'tamam';
+      if (r.status === 429) return 'sik';
+      if (r.status === 403 && deneme < 2) return gonder(deneme + 1);   /* belirteç geçmedi: yenisiyle bir kez daha */
+      if (r.status === 400) return r.json().then(function (j) { return 'alan:' + (j.neden || ''); }, function () { return 'ag'; });
+      return 'ag';
+    }, function (e) { return e && e.sik ? 'sik' : 'ag'; });
+  }
+
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (gidiyor) return;
+    temizle();
+    if (!ta.value.trim()) return alanHatasi(ta, M.bos);
+    if (ta.value.length > 4000) return alanHatasi(ta, M.uzun);
+    var adr = ep.value.trim();
+    if (adr && (adr.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(adr))) return alanHatasi(ep, M.hata_eposta);
+    mesgul(true);
+    gonder(1).then(function (s) {
+      mesgul(false);
+      if (s === 'tamam') {
+        alanlar.hidden = true;
+        bitti.hidden = false;
+        bitti.querySelector('p').focus();
+        f.reset(); sayacYaz();
+      } else if (s === 'sik') genelHata(M.sik);
+      else if (s === 'alan:eposta') alanHatasi(ep, M.hata_eposta);
+      else if (s === 'alan:mesaj') alanHatasi(ta, M.bos);
+      else if (s === 'alan:mesaj_uzun') alanHatasi(ta, M.uzun);
+      else genelHata(M.ag);
+    });
+  });
+  bitti.querySelector('button').addEventListener('click', function () {
+    bitti.hidden = true;
+    alanlar.hidden = false;
+    ta.focus();
+  });
+  f.hidden = false;
+})();
+</script>
+</div>
 <h2>Почта</h2>
 <p><strong>info@soluklan.app</strong></p>
 <p>Ответ обычно приходит в течение нескольких дней. Писать можно по-русски, по-английски или по-турецки.</p>
