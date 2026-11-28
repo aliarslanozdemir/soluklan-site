@@ -13,6 +13,14 @@
           {
             "/": "/d/*",
             "comment": "arkadaş daveti"
+          },
+          {
+            "/": "/g/",
+            "comment": "e-postayla kodla giriş (kod ve jeton # sonrasında)"
+          },
+          {
+            "/": "/g/*",
+            "comment": "e-postayla kodla giriş"
           }
         ]
       }

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<title>Soluklan giriş kodu</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="stylesheet" href="/assets/soluklan.css">
+<!-- E-postayla kodla giriş (Ali, 28 Kasım 2026): e-postadaki "Soluklan'da aç" bağlantısı
+     (https://soluklan.app/g/#k=<kod>&j=<jeton>). Uygulamanın olduğu telefonda Universal Link / App Link uygulamayı açar
+     ve girişi tamamlar; bu sayfa yalnız başka bir cihazda (ya da uygulama yokken) açılır: kodu gösterir, giriş olmaz.
+     Kod ve jeton # sonrasında: sunucuya ve günlüğe gitmez; sayfa ağa hiçbir şey göndermez. Elle yazılır
+     (site_build.py üretmez). -->
+<style>
+  .giris { max-width: 28rem; margin: 18vh auto 4rem; padding: 0 1rem; text-align: center; }
+  .giris h1 { font-size: 1.5rem; margin: 0 0 .5rem; }
+  .giris p { margin: .4rem 0; }
+  .giris .kod { font: 700 2.4rem/1.2 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .35em;
+    margin: 1.4rem 0; padding: 1rem .5rem 1rem 1rem; border-radius: 1rem; background: rgba(7, 123, 136, .08);
+    border: 1px solid rgba(7, 123, 136, .25); direction: ltr; }
+  .giris .soluk { opacity: .7; font-size: .95rem; }
+</style>
+</head>
+<body>
+<main class="giris">
+  <h1 id="baslik">Bu kodu telefonunda yaz</h1>
+  <div class="kod" id="kod" aria-live="polite">––––––</div>
+  <p id="alt">Soluklan'da giriş ekranındaki kod kutusuna yaz. Bu sayfada giriş yapılmaz.</p>
+  <p class="soluk" id="uyari">Sen istemediysen yok say, kimseyle paylaşma.</p>
+  <p class="soluk"><a href="/">soluklan.app</a></p>
+</main>
+<script>
+(function () {
+  var dil = ((navigator.languages && navigator.languages[0]) || navigator.language || "").toLowerCase();
+  if (dil.indexOf("tr") !== 0) {
+    document.documentElement.lang = "en";
+    document.title = "Soluklan sign-in code";
+    document.getElementById("baslik").textContent = "Enter this code on your phone";
+    document.getElementById("alt").textContent = "Type it into the code boxes on the Soluklan sign-in screen. You can't sign in on this page.";
+    document.getElementById("uyari").textContent = "If you didn't ask for this, ignore it and don't share it with anyone.";
+  }
+  var p = new URLSearchParams((location.hash || "").replace(/^#/, ""));
+  var k = (p.get("k") || "").replace(/[^0-9]/g, "");
+  if (k.length === 6) document.getElementById("kod").textContent = k;
+  // Kod ekranda; adres çubuğunda ve geçmişte kalmasın
+  if (history.replaceState) history.replaceState(null, "", location.pathname);
+})();
+</script>
+</body>
+</html>
